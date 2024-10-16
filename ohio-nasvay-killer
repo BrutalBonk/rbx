@@ -1,9 +1,11 @@
 local ImGui = loadstring(game:HttpGet('https://github.com/depthso/Roblox-ImGUI/raw/main/ImGui.lua'))()
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
+
+local NoBoxes = true
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "НасвайСОФТ | Version 1.4",
+	Title = "НасвайСОФТ | Version 1.41",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
@@ -107,16 +109,33 @@ GameTab:Button({
 	Callback = function(self)
 		for i, v in pairs(workspace.Game.Entities.ItemPickup:GetChildren()) do
 			local name = v:GetAttribute('itemName')
-			if name then
-				remove_cooldown()
-				local Character = Player.Character
-				local RootPart = Character.PrimaryPart
-				RootPart.CFrame = v.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
-				break
+			if NoBoxes then
+					if not contains(name, "Box") then
+						remove_cooldown()
+						local Character = Player.Character
+						local RootPart = Character.PrimaryPart
+						RootPart.CFrame = v.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+						break
+					end
+				else
+					remove_cooldown()
+					local Character = Player.Character
+					local RootPart = Character.PrimaryPart
+					RootPart.CFrame = v.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+					break
 			end
 		end
 	end,
 })
 
+local Header = Tab:CollapsingHeader({
+	Title = "Excludes"
+})
 
-
+Header:Checkbox({
+	Label = "No boxes",
+	Value = true,
+	Callback = function(self, Value)
+		print(self.Name, Value)
+	end,
+})
