@@ -178,7 +178,7 @@ GameTab:Button({
 					end
 					game.StarterGui:SetCore("SendNotification", {
 						Title = "Notification",
-						Text = "You collected "..name,
+						Text = "You teleported "..name,
 						Duration = 5,
 					})
 				end
