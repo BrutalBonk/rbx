@@ -4,6 +4,7 @@ local Player = Players.LocalPlayer
 
 local NoBoxes = true
 local AutoPickup = false
+local AutoTpAfterCollect = false
 --// Window 
 local Window = ImGui:CreateWindow({
 	Title = "НасвайСОФТ | Version 1.42",
@@ -117,6 +118,14 @@ GameTab:Checkbox({
 	Value = false,
 	Callback = function(self, Value)
 		AutoPickup = Value
+	end,
+})
+
+GameTab:Checkbox({
+	Label = "AutoTpAfterCollect",
+	Value = false,
+	Callback = function(self, Value)
+		AutoTpAfterCollect = Value
 	end,
 })
 
