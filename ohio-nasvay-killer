@@ -105,12 +105,14 @@ GameTab:Button({
 GameTab:Button({
 	Text = "Teleport to any item",
 	Callback = function(self)
-		local Primary = check_in_world(workspace.Game.Entities, "Chest", "ProximityPrompt")
-		if Primary then
-			remove_cooldown()
-			local Character = Player.Character
-			local RootPart = Character.PrimaryPart
-			RootPart.CFrame = Primary.CFrame + Vector3.new(0, 5, 0)
+		for i, v in pairs(workspace.Game.Entities.ItemPickup:GetChildren()) do
+			local name = v:GetAttribute('ItemName')
+			if name then
+				remove_cooldown()
+				local Character = Player.Character
+				local RootPart = Character.PrimaryPart
+				RootPart.CFrame = Primary.CFrame + Vector3.new(0, 5, 0)
+			end
 		end
 	end,
 })
