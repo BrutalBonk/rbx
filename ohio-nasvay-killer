@@ -178,8 +178,8 @@ GameTab:Button({
 
 		-- Keep teleporting if AutoTpAfterCollect is enabled
 		if AutoTpAfterCollect then
-			while AutoTpAfterCollect do
-				wait(0.5)  -- Adjust delay between teleports as needed
+			for i=0, 10 do
+				wait(2)
 				teleportToRandomItem()
 			end
 		end
