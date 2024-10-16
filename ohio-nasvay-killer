@@ -104,6 +104,18 @@ GameTab:Button({
 	end,
 })
 
+local Header = GameTab:CollapsingHeader({
+	Title = "Excludes"
+})
+
+Header:Checkbox({
+	Label = "No boxes",
+	Value = true,
+	Callback = function(self, Value)
+		NoBoxes = Value
+	end,
+})
+
 GameTab:Button({
 	Text = "Teleport to any item",
 	Callback = function(self)
@@ -128,14 +140,4 @@ GameTab:Button({
 	end,
 })
 
-local Header = GameTab:CollapsingHeader({
-	Title = "Excludes"
-})
 
-Header:Checkbox({
-	Label = "No boxes",
-	Value = true,
-	Callback = function(self, Value)
-		print(self.Name, Value)
-	end,
-})
