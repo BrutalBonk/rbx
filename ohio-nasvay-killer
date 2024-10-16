@@ -104,11 +104,7 @@ GameTab:Button({
 	end,
 })
 
-local Header = GameTab:CollapsingHeader({
-	Title = "Excludes"
-})
-
-Header:Checkbox({
+GameTab:Checkbox({
 	Label = "No boxes",
 	Value = true,
 	Callback = function(self, Value)
