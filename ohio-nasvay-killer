@@ -172,7 +172,6 @@ GameTab:Button({
 					local ClickDetector = selectedItem.PrimaryPart:FindFirstChildOfClass('ClickDetector')
 					if ClickDetector then
 						for m = 0, 1 do
-							ClickDetector.MaxActivationDistance = math.huge
 							fireclickdetector(ClickDetector)
 						end
 					end
