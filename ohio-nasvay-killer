@@ -171,7 +171,7 @@ GameTab:Button({
 				if AutoPickup then
 					local ClickDetector = selectedItem.PrimaryPart:FindFirstChildOfClass('ClickDetector')
 					if ClickDetector then
-						for m = 0, 100 do
+						for m = 0, 10 do
 							ClickDetector.MaxActivationDistance = math.huge
 							fireclickdetector(ClickDetector)
 						end
