@@ -158,6 +158,7 @@ GameTab:Button({
 				remove_cooldown()
 				local Character = Player.Character
 				local RootPart = Character.PrimaryPart
+				local name = selectedItem:GetAttribute('itemName')
 
 				RootPart.CFrame = selectedItem.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
 				task.wait(0.1)
@@ -175,6 +176,11 @@ GameTab:Button({
 							fireclickdetector(ClickDetector)
 						end
 					end
+					StarterGui:SetCore("SendNotification", {
+						Title = "Notification",
+						Text = "You collected "..name..,
+						Duration = 5,
+					})
 				end
 				
 			end
