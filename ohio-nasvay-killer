@@ -7,7 +7,7 @@ local AutoPickup = false
 local AutoTpAfterCollect = false
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "НасвайСОФТ | Version 1.42",
+	Title = "НасвайСОФТ | Version 1.43",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
@@ -159,6 +159,11 @@ GameTab:Button({
 				local Character = Player.Character
 				local RootPart = Character.PrimaryPart
 
+				RootPart.CFrame = selectedItem.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
+				time.wait(0.3)
+				RootPart.CFrame = selectedItem.PrimaryPart.CFrame + Vector3.new(10, 5, 10)
+				time.wait(0.3)
+				RootPart.CFrame = selectedItem.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
 				if AutoPickup then
 					local ClickDetector = selectedItem.PrimaryPart:FindFirstChildOfClass('ClickDetector')
 					if ClickDetector then
@@ -169,7 +174,6 @@ GameTab:Button({
 					end
 				end
 				
-				RootPart.CFrame = selectedItem.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
 			end
 		end
 
@@ -179,7 +183,7 @@ GameTab:Button({
 		-- Keep teleporting if AutoTpAfterCollect is enabled
 		if AutoTpAfterCollect then
 			for i=0, 10 do
-				wait(2)
+				wait(5)
 				teleportToRandomItem()
 			end
 		end
