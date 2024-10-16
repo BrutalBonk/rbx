@@ -1,0 +1,105 @@
+local ImGui = loadstring(game:HttpGet('https://github.com/depthso/Roblox-ImGUI/raw/main/ImGui.lua'))()
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+--// Window 
+local Window = ImGui:CreateWindow({
+	Title = "НасвайСОФТ | Version 1.3",
+	Size = UDim2.new(0, 350, 0, 370),
+	Position = UDim2.new(0.5, 0, 0, 70)
+})
+Window:Center()
+
+local GameTab = Window:CreateTab({
+	Name = "Game"
+})
+
+function contains(word, tofind)
+    if string.find(word, tofind) then
+        return true
+    end
+end
+
+function check_in_world(Path, value, value2)
+	for i, v in pairs(Path:GetChildren()) do
+		if contains(v.Name, value) then
+			if v:FindFirstChildOfClass('Model') then
+				if value2 then
+					for j, k in pairs(v:FindFirstChildOfClass('Model'):GetDescendants()) do
+						if k:IsA("ProximityPrompt") then
+							local Primary = v:FindFirstChildOfClass('Model').PrimaryPart
+							if Primary then
+								return Primary
+							end
+						end
+					end
+				else
+					local Primary = v:FindFirstChildOfClass('Model').PrimaryPart
+					if Primary then
+						return Primary
+					end
+				end
+			end
+		end
+	end
+end
+function remove_cooldown()
+	for n, k in pairs(workspace.GetDescendants()) do
+		if k:IsA('ProximityPrompt') then
+			k.HoldDuration = 0
+		end 
+	end
+end
+GameTab:Label({
+	Text = "Safe/Chest TP"
+})
+GameTab:Separator()
+GameTab:Button({
+	Text = "Teleport to any safe",
+	Callback = function(self)
+		local Primary = check_in_world(workspace.Game.Entities, "Safe", "ProximityPrompt")
+		if Primary then
+			remove_cooldown()
+			local Character = Player.Character
+			local RootPart = Character.PrimaryPart
+			RootPart.CFrame = Primary.CFrame + Vector3.new(0, 5, 0)
+		end
+	end,
+})
+GameTab:Button({
+	Text = "Teleport to any chest",
+	Callback = function(self)
+		local Primary = check_in_world(workspace.Game.Entities, "Chest", "ProximityPrompt")
+		if Primary then
+			remove_cooldown()
+			local Character = Player.Character
+			local RootPart = Character.PrimaryPart
+			RootPart.CFrame = Primary.CFrame + Vector3.new(0, 5, 0)
+		end
+	end,
+})
+GameTab:Label({
+	Text = "Item teleport"
+})
+GameTab:Separator()
+GameTab:Button({
+	Text = "Remove cooldown(optional)",
+	Callback = function(self)
+		remove_cooldown()
+	end,
+})
+
+GameTab:Button({
+	Text = "Teleport to any item",
+	Callback = function(self)
+		local Primary = check_in_world(workspace.Game.Entities, "Chest", "ProximityPrompt")
+		if Primary then
+			remove_cooldown()
+			local Character = Player.Character
+			local RootPart = Character.PrimaryPart
+			RootPart.CFrame = Primary.CFrame + Vector3.new(0, 5, 0)
+		end
+	end,
+})
+
+
+
