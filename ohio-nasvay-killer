@@ -3,9 +3,10 @@ local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 
 local NoBoxes = true
+local AutoPickup = false
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "НасвайСОФТ | Version 1.41",
+	Title = "НасвайСОФТ | Version 1.42",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
@@ -111,6 +112,13 @@ GameTab:Checkbox({
 		NoBoxes = Value
 	end,
 })
+GameTab:Checkbox({
+	Label = "Auto pickup",
+	Value = false,
+	Callback = function(self, Value)
+		AutoPickup = Value
+	end,
+})
 
 GameTab:Button({
 	Text = "Teleport to a random item",
@@ -140,6 +148,11 @@ GameTab:Button({
 			remove_cooldown()
 			local Character = Player.Character
 			local RootPart = Character.PrimaryPart
+			if AutoPickup then
+				local ClickDetector = selectedItem:FindFirstChildOfClass('ClickDetector')
+				ClickDetector.MaxActivationDistance = math.huge
+				fireclickdetector(ClickDetector)
+			end
 			RootPart.CFrame = selectedItem.PrimaryPart.CFrame + Vector3.new(0, 5, 0)
 		end
 	end,
