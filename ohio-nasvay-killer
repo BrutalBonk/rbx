@@ -106,7 +106,7 @@ GameTab:Button({
 	Text = "Teleport to any item",
 	Callback = function(self)
 		for i, v in pairs(workspace.Game.Entities.ItemPickup:GetChildren()) do
-			local name = v:GetAttribute('ItemName')
+			local name = v:GetAttribute('itemName')
 			if name then
 				remove_cooldown()
 				local Character = Player.Character
