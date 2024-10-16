@@ -128,7 +128,7 @@ GameTab:Button({
 	end,
 })
 
-local Header = Tab:CollapsingHeader({
+local Header = GameTab:CollapsingHeader({
 	Title = "Excludes"
 })
 
