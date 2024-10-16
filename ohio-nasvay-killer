@@ -3,7 +3,7 @@ local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "НасвайСОФТ | Version 1.35",
+	Title = "НасвайСОФТ | Version 1.36",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
