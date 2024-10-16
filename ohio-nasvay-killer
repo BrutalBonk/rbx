@@ -176,7 +176,7 @@ GameTab:Button({
 							fireclickdetector(ClickDetector)
 						end
 					end
-					StarterGui:SetCore("SendNotification", {
+					game.StarterGui:SetCore("SendNotification", {
 						Title = "Notification",
 						Text = "You collected "..name..,
 						Duration = 5,
