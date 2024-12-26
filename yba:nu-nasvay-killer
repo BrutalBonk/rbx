@@ -1,0 +1,91 @@
+local RunService: RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local IsStudio = RunService:IsStudio()
+
+--// Fetch library
+local ImGui
+if IsStudio then
+	ImGui = require(ReplicatedStorage.ImGui)
+else
+	local SourceURL = 'https://github.com/depthso/Roblox-ImGUI/raw/main/ImGui.lua'
+	ImGui = loadstring(game:HttpGet(SourceURL))()
+end
+local Window = ImGui:CreateWindow({
+	Title = "YBA:NU CHEAT XMAS 2024 | HOKJHa",
+	Size = UDim2.new(0, 350, 0, 370),
+	Position = UDim2.new(0.5, 0, 0, 70)
+})
+
+local Tab = Window:CreateTab({
+	Name = "Main"
+})
+local TestCheckbox = Tab:Checkbox({
+	Label = "FARM",
+	Value = false,
+	Callback = function(self, Value)
+		_G.hack = Value
+	end,
+})
+
+Window:Center()
+game.StarterGui:SetCore("SendNotification", {
+    Title = "TITLE";
+    Text = if _G.hack then 'FARM ON' else
+		'FARM OFF';
+    Duration = 3;
+})
+	local me = game.Players.LocalPlayer
+local chr = me.Character
+function bigmack()
+	local tbl = {
+		NPC = 'Door';
+		Dialogue = 'Dialogue1';
+	}
+	tbl.Option = 'Option1'
+	chr.RemoteEvent:FireServer("EndDialogue", tbl)
+end
+function pepsi()
+	local tbl = {
+		NPC = 'Christmas Gift';
+		Dialogue = 'Dialogue2';
+	}
+	tbl.Option = 'Option1'
+	chr.RemoteEvent:FireServer("EndDialogue", tbl)
+end
+function lucky()
+	local me = game.Players.LocalPlayer
+	local chr = me.Character
+	local tbl = {
+		NPC = 'LuckyDoor';
+		Dialogue = 'Dialogue1';
+	}
+	tbl.Option = 'Option1'
+	chr.RemoteEvent:FireServer("EndDialogue", tbl)
+end
+while wait() do
+	if me.PlayerGui:FindFirstChild('Dialogue') then
+		if game:GetService("Players").LocalPlayer.PlayerGui.Dialogue.Dialogues.Dialogue1.Value == '*Door opens* Hello! Merry Christmas!' then
+			bigmack()
+		elseif me.PlayerGui.Dialogue.DialogueName.Value == 'LuckyDoor' then
+			lucky()
+		end
+		if game:GetService("Players").LocalPlayer.PlayerGui.Dialogue.Dialogues.Dialogue1.Value == 'Do you want to open this gift?' then
+			pepsi()
+		end
+	end
+		if _G.hack then
+
+if _G.hack then
+for i, v in ipairs(workspace.DoorInteractors:GetChildren()) do
+if v.ProximityPrompt.ActionText == 'Ring!' then
+	chr.PrimaryPart.CFrame = v.CFrame + v.CFrame.LookVector * 3
+	spawn(function()
+		fireproximityprompt(v.ProximityPrompt)
+	end)
+		break
+end
+end
+
+end	
+end
+end
