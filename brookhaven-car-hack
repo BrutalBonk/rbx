@@ -99,7 +99,7 @@ Tab2:Button({
 					Label = "Length",
 					Value = obj.FreeLength,
 					MinValue = 0,
-					MaxValue = 10,
+					MaxValue = 30,
 					ReadOnly = false,
 
 					Callback = function(self, Value)
