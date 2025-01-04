@@ -1,12 +1,122 @@
+--// Services 
+local RunService: RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local IsStudio = RunService:IsStudio()
+
+local Speed = 1000
+local Turbo = 11.3
+
 local self = game.Players.LocalPlayer
-for i, v in pairs(workspace.Vehicles:GetChildren()) do
-	if string.find(v.Name, self.Name) then
-		for k, j in pairs(v:GetDescendants()) do
-			if j:IsA('VehicleSeat') then
-				j.TopSpeed.Value = _G.Speed_v
-				j.Turbo.Value = _G.Turbo_v
-				self.Character.PrimaryPart.CFrame = j.CFrame
+
+--// Fetch library
+local ImGui
+if IsStudio then
+	ImGui = require(ReplicatedStorage.ImGui)
+else
+	local SourceURL = 'https://github.com/depthso/Roblox-ImGUI/raw/main/ImGui.lua'
+	ImGui = loadstring(game:HttpGet(SourceURL))()
+end
+
+--// Window 
+local Window = ImGui:CreateWindow({
+	Title = "Brookhaven car hack | HOKJHa",
+	Size = UDim2.new(0, 350, 0, 370),
+	Position = UDim2.new(0.5, 0, 0, 70)
+})
+Window:Center()
+
+
+local Tab = Window:CreateTab({
+	Name = "Speed"
+})
+
+Tab:Slider({
+	Label = "Max Speed",
+	Format = "%.d/%s",
+	Value = 1000,
+	MinValue = 0,
+	MaxValue = 10000,
+	ReadOnly = false,
+
+	Callback = function(self, Value)
+		Speed = Value
+	end,
+})
+Tab:Slider({
+	Label = "Turbo",
+	Format = "%.d/%s",
+	Value = 11.3,
+	MinValue = 0,
+	MaxValue = 1000,
+	ReadOnly = false,
+
+	Callback = function(self, Value)
+		Turbo = Value
+	end,
+})
+Tab:Button({
+	Text = 'Load',
+	Callback = function()
+		for i, v in pairs(workspace.Vehicles:GetChildren()) do
+			if string.find(v.Name, self.Name) then
+				for k, j in pairs(v:GetDescendants()) do
+					if j:IsA('VehicleSeat') then
+						self.Character.PrimaryPart.CFrame = CFrame.new(j.CFrame * Vector3.new(0, 0, 0))
+						repeat
+							wait()
+							j.TopSpeed.Value = Speed
+							j.Turbo.Value = Turbo
+						until self.Character.Sit == false
+						j.TopSpeed.Value = Speed
+						j.Turbo.Value = Turbo
+					end
+				end
 			end
 		end
 	end
-end
+})
+
+local Tab2 = Window:CreateTab({
+	Name = "Suspension"
+})
+
+Tab2:Label({
+	Text = 'See a settings'
+})
+Tab2:Button({
+	Text = 'Show',
+	Callback = function()
+		local W1 = ImGui:CreateModal({
+			Title = "Suspension",
+			AutoSize = "Y"
+		})
+		for index, obj in pairs(workspace.Vehicles[self.Name..'Car'].Chassis.Platform:GetChildren()) do
+			if string.find(obj.Name, 'Spring') then
+				W1:Label({
+					Text = obj.Name
+				})
+				W1:Slider({
+					Label = "Length",
+					Value = obj.FreeLength,
+					MinValue = 0,
+					MaxValue = 10,
+					ReadOnly = false,
+
+					Callback = function(self, Value)
+						obj.MaxLength = Value + 1
+						obj.FreeLength = Value
+					end,
+				})
+			end
+		end
+		W1:Button({
+			Text = "Remove",
+			Callback = function()
+				W1:Close()
+			end,
+		})
+	end
+})
+
+
+
