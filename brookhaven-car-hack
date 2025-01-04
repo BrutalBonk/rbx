@@ -105,6 +105,7 @@ Tab2:Button({
 					Callback = function(self, Value)
 						obj.MaxLength = Value + 1
 						obj.FreeLength = Value
+						obj.MinLength = Value + 1
 					end,
 				})
 			end
