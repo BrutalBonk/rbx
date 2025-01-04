@@ -94,6 +94,7 @@ Tab2:Button({
 			if string.find(obj.Name, 'Spring') then
 				local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
 				local cyl = car['Cylindrical'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
+				local at = car['Attachment'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
 				W1:Label({
 					Text = obj.Name
 				})
@@ -121,6 +122,20 @@ Tab2:Button({
 
 					Callback = function(self2, Value)
 						cyl.InclinationAngle = Value
+					end,
+				})
+				local Header = Tab:CollapsingHeader({
+					Title = "Position"
+				})
+				Header:Slider({
+					Label = "X",
+					Value = at.CFrame.X,
+					MinValue = -5,
+					MaxValue = 5,
+					ReadOnly = false,
+
+					Callback = function(self2, Value)
+						at.CFrame = CFrame.new(at.CFrame.X + Value, at.CFrame.Y, at.CFrame.Z)
 					end,
 				})
 			end
