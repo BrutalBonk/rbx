@@ -92,6 +92,8 @@ Tab2:Button({
 		})
 		for index, obj in pairs(workspace.Vehicles[self.Name..'Car'].Chassis.Platform:GetChildren()) do
 			if string.find(obj.Name, 'Spring') then
+				local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
+				local cyl = car['Cylindrical'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
 				W1:Label({
 					Text = obj.Name
 				})
@@ -103,13 +105,22 @@ Tab2:Button({
 					ReadOnly = false,
 
 					Callback = function(self2, Value)
-						local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
-						local cyl = car['Cylindrical'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
 						cyl.UpperLimit = Value + 300
 						obj.Visible = true
 						obj.MaxLength = Value + 100
 						obj.FreeLength = Value
 						obj.MinLength = 0
+					end,
+				})
+				W1:Slider({
+					Label = "Wheel Rotation",
+					Value = cyl.InclinationAngle,
+					MinValue = -180,
+					MaxValue = 180,
+					ReadOnly = false,
+
+					Callback = function(self2, Value)
+						cyl.InclinationAngle = Value
 					end,
 				})
 			end
