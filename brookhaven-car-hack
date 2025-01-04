@@ -103,6 +103,9 @@ Tab2:Button({
 					ReadOnly = false,
 
 					Callback = function(self, Value)
+						local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
+						local cyl = car['Cylindrical'..string.sub(obj.Name, string.len(obj.Name) - 2, string.len(obj.Name))]
+						cyl.UpperLimit = Value + 300
 						obj.MaxLength = Value + 100
 						obj.FreeLength = Value
 						obj.MinLength = 0
