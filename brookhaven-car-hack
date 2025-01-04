@@ -173,32 +173,3 @@ Tab2:Button({
 		end
 	end
 })
-Tab2:Label({
-	Text = 'Move wheels to local player'
-})
-local v_1 = false
-Tab2:Checkbox({
-	Text = 'Toggle',
-	Callback = function(__, Value)
-		for index, obj in pairs(workspace.Vehicles[self.Name..'Car'].Chassis.Platform:GetChildren()) do
-			if string.find(obj.Name, 'Spring') then
-				local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
-				local cyl = car['Cylindrical'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
-				local at = car['Attachment'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
-				v_1 = Value
-			end
-		end
-	end
-})
-while task.wait() do
-	if v_1 then
-		for index, obj in pairs(workspace.Vehicles[self.Name..'Car'].Chassis.Platform:GetChildren()) do
-			if string.find(obj.Name, 'Spring') then
-				local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
-				local cyl = car['Cylindrical'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
-				local at = car['Attachment'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
-				at.CFrame = self.Character.PrimaryPart.CFrame
-			end
-		end
-	end
-end
