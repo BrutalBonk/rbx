@@ -1,0 +1,12 @@
+local self = game.Players.LocalPlayer
+for i, v in pairs(workspace.Vehicles:GetChildren()) do
+	if string.find(v.Name, self.Name) then
+		for k, j in pairs(v:GetDescendants()) do
+			if j:IsA('VehicleSeat') then
+				j.TopSpeed.Value = _G.Speed_v
+				j.Turbo.Value = _G.Turbo_v
+				self.Character.PrimaryPart.CFrame = j.CFrame
+			end
+		end
+	end
+end
