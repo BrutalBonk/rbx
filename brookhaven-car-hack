@@ -19,7 +19,7 @@ end
 
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "Brookhaven car hack | HOKJHa",
+	Title = "Brookhaven car hack | HOKJHa(BuhMenSj)",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
