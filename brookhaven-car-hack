@@ -90,6 +90,12 @@ Tab2:Button({
 			Title = "Suspension",
 			AutoSize = "Y"
 		})
+		W1:Button({
+			Text = "Remove",
+			Callback = function()
+				W1:Close()
+			end,
+		})
 		for index, obj in pairs(workspace.Vehicles[self.Name..'Car'].Chassis.Platform:GetChildren()) do
 			if string.find(obj.Name, 'Spring') then
 				local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
@@ -116,35 +122,83 @@ Tab2:Button({
 				W1:Slider({
 					Label = "Wheel Rotation",
 					Value = cyl.InclinationAngle,
-					MinValue = -180,
-					MaxValue = 180,
+					MinValue = -90,
+					MaxValue = 90,
 					ReadOnly = false,
 
 					Callback = function(self2, Value)
 						cyl.InclinationAngle = Value
 					end,
 				})
-				local Header = Tab:CollapsingHeader({
+				local Header = W1:CollapsingHeader({
 					Title = "Position"
 				})
 				Header:Slider({
 					Label = "X",
-					Value = at.CFrame.X,
-					MinValue = -5,
-					MaxValue = 5,
+					Format = '%s',
+					Value = at.Position.X,
+					MinValue = -20,
+					MaxValue = 20,
 					ReadOnly = false,
 
 					Callback = function(self2, Value)
-						at.CFrame = CFrame.new(at.CFrame.X + Value, at.CFrame.Y, at.CFrame.Z)
+						at.Position = Vector3.new(Value, at.Position.Y, at.Position.Z)
+					end,
+				})
+				Header:Slider({
+					Label = "Y",
+					Format = '%s',
+					Value = at.Position.Y,
+					MinValue = -20,
+					MaxValue = 20,
+					ReadOnly = false,
+
+					Callback = function(self2, Value)
+						at.Position = Vector3.new(at.Position.X, Value, at.Position.Z)
+					end,
+				})
+				Header:Slider({
+					Label = "Z",
+					Format = '%s',
+					Value = at.Position.Z,
+					MinValue = -20,
+					MaxValue = 20,
+					ReadOnly = false,
+
+					Callback = function(self2, Value)
+						at.Position = Vector3.new(at.Position.X, at.Position.Y, Value)
 					end,
 				})
 			end
 		end
-		W1:Button({
-			Text = "Remove",
-			Callback = function()
-				W1:Close()
-			end,
-		})
 	end
 })
+Tab2:Label({
+	Text = 'Move wheels to local player'
+})
+local v_1 = false
+Tab2:Checkbox({
+	Text = 'Toggle',
+	Callback = function(__, Value)
+		for index, obj in pairs(workspace.Vehicles[self.Name..'Car'].Chassis.Platform:GetChildren()) do
+			if string.find(obj.Name, 'Spring') then
+				local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
+				local cyl = car['Cylindrical'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
+				local at = car['Attachment'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
+				v_1 = Value
+			end
+		end
+	end
+})
+while task.wait() do
+	if v_1 then
+		for index, obj in pairs(workspace.Vehicles[self.Name..'Car'].Chassis.Platform:GetChildren()) do
+			if string.find(obj.Name, 'Spring') then
+				local car = workspace.Vehicles[self.Name..'Car'].Chassis.Platform
+				local cyl = car['Cylindrical'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
+				local at = car['Attachment'..string.sub(obj.Name, string.len(obj.Name) - 1, string.len(obj.Name))]
+				at.CFrame = self.Character.PrimaryPart.CFrame
+			end
+		end
+	end
+end
