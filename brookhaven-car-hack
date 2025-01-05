@@ -19,15 +19,18 @@ end
 
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "Brookhaven car hack | HOKJHa(BuhMenSj)",
+	Title = "Brookhaven troll | HOKJHa",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
 Window:Center()
 
+local CarHack = Window:CreateTab({
+	Name = "CAR"
+})
 
-local Tab = Window:CreateTab({
-	Name = "Speed"
+local Tab = CarHack:CollapsingHeader({
+	Title = "Speed"
 })
 
 Tab:Slider({
@@ -76,10 +79,9 @@ Tab:Button({
 	end
 })
 
-local Tab2 = Window:CreateTab({
-	Name = "Suspension"
+local Tab2 = CarHack:CollapsingHeader({
+	Title = "Suspension"
 })
-
 Tab2:Label({
 	Text = 'See a settings'
 })
@@ -173,3 +175,638 @@ Tab2:Button({
 		end
 	end
 })
+local v_1 = false
+local character = self.Character
+local PlrHack = Window:CreateTab({
+	Name = "TROLL"
+})
+local PlrHack1 = PlrHack:CollapsingHeader({
+	Title = "Player"
+})
+PlrHack1:Label({
+	Text = 'Bring script'
+})
+
+PlrHack1:Button({
+	Text = 'Select player',
+	Callback = function()
+		local W1 = ImGui:CreateModal({
+			Title = "Selection",
+			AutoSize = "Y"
+		})
+		W1:Button({
+				Text = 'Decline',
+				Callback = function()
+					W1:Close()
+				end
+			})
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v ~= self then
+				W1:Button({
+				Text = v.Name..if v.Character.Humanoid.Sit then ' [Sitting]' else '',
+				Callback = function()
+					local hum = self.Character.Humanoid
+					local v_3 = self.Character.PrimaryPart.CFrame
+					self.Character.PrimaryPart.CFrame = workspace.WorkspaceCom["003_CouchGiveTool"].Main.CFrame
+					hum:UnequipTools()
+					local cart = game:GetService("Players").LocalPlayer.Backpack.Couch
+					local occ = cart.Seat1
+					local occ2 = cart.Seat2
+					task.spawn(function()
+						hum:EquipTool(cart)
+						task.wait(0.1)
+						repeat
+							task.wait(0.05)
+							hum:EquipTool(cart)
+							local rootPart = character:FindFirstChild("HumanoidRootPart")
+							self.Character.PrimaryPart.CFrame = CFrame.new(
+								v.Character.PrimaryPart.CFrame.Position - Vector3.new(0, 3, 0)
+								+ v.Character.PrimaryPart.CFrame.LookVector * 2 -- Move backward
+							)
+
+							if hum.Health == 0 then
+								break
+							end
+						until occ.Occupant ~= nil or occ2.Occupant ~= nil
+						task.wait()
+						self.Character.PrimaryPart.CFrame = v_3
+						task.spawn(function()
+							self.Character.PrimaryPart.CFrame = v_3
+							--hum.Health = 0
+							task.wait(1)
+							self.Character.PrimaryPart.CFrame = v_3
+							hum:UnequipTools()
+						end)
+						
+					end)
+					W1:Close()
+				end,
+			})
+			end
+		end
+	end
+})
+
+PlrHack1:Label({
+	Text = 'Kill script'
+})
+
+PlrHack1:Button({
+	Text = 'Select player',
+	Callback = function()
+		local W1 = ImGui:CreateModal({
+			Title = "Selection",
+			AutoSize = "Y"
+		})
+		W1:Button({
+				Text = 'Decline',
+				Callback = function()
+					W1:Close()
+				end
+			})
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v ~= self then
+				W1:Button({
+				Text = v.Name..if v.Character.Humanoid.Sit then ' [Sitting]' else '',
+				Callback = function()
+					local v_4 = self.Character.PrimaryPart.CFrame
+					self.Character.PrimaryPart.CFrame = CFrame.new(Vector3.new(0, 99999, 0))
+					local hum = self.Character.Humanoid
+					local v_3 = self.Character.PrimaryPart.CFrame
+					self.Character.PrimaryPart.CFrame = workspace.WorkspaceCom["003_CouchGiveTool"].Main.CFrame
+					hum:UnequipTools()
+					local cart = game:GetService("Players").LocalPlayer.Backpack.Couch
+					local occ = cart.Seat1
+					local occ2 = cart.Seat2
+					task.spawn(function()
+						hum:EquipTool(cart)
+						task.wait(0.1)
+						repeat
+							task.wait(0.05)
+							hum:EquipTool(cart)
+						self.Character.PrimaryPart.CFrame = CFrame.new(
+								v.Character.PrimaryPart.CFrame.Position - Vector3.new(0, 3, 0)
+								+ v.Character.PrimaryPart.CFrame.LookVector * 2 -- Move backward
+							)
+
+							if hum.Health == 0 then
+								break
+							end
+						until occ.Occupant ~= nil or occ2.Occupant ~= nil
+						self.Character.PrimaryPart.CFrame = v_3
+						task.spawn(function()
+							self.Character.PrimaryPart.CFrame = v_3
+							task.wait(2)
+							self.Character.PrimaryPart.CFrame = v_3
+							hum.Health = 0
+						end)
+						task.wait(3)
+						self.Character.PrimaryPart.CFrame = v_4
+						
+					end)
+					W1:Close()
+				end,
+			})
+			end
+		end
+	end
+})
+
+PlrHack1:Label({
+	Text = 'Attach to player'
+})
+local attached = false
+local at_plr = nil
+PlrHack1:Button({
+	Text = 'Select player',
+	Callback = function()
+		local W1 = ImGui:CreateModal({
+			Title = "Selection",
+			AutoSize = "Y"
+		})
+		W1:Button({
+				Text = 'Decline',
+				Callback = function()
+					W1:Close()
+				end
+			})
+		for i, v in pairs(game.Players:GetPlayers()) do
+			if v ~= self then
+				W1:Button({
+				Text = v.Name..if v.Character.Humanoid.Sit then ' [Sitting]' else '',
+				Callback = function()
+				if attached and at_plr ~= nil then
+					W1:Close()
+					attached = false
+					at_plr = nil
+				else
+					attached = not attached
+					at_plr = v	
+					W1:Close()
+				end
+				end,
+			})
+			end
+		end
+	end
+})
+PlrHack1:Label({
+	Text = 'Invisible'
+})
+local invis = false
+local function size(value)
+	local args = {
+		[1] = "CharacterSizeUp",
+		[2] = value
+	}
+
+	game:GetService("ReplicatedStorage").RE["1Clothe1s"]:FireServer(unpack(args))
+end
+PlrHack1:Button({
+	Text = 'Invisible',
+	Callback = function()
+		size(3)
+		wait(0.3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Size = Vector3.new(2, 6, 2)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Transparency = 0.8
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Material = Enum.Material.Rubber
+		wait(0.8)
+		game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+		game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+	end
+})
+PlrHack1:Button({
+	Text = 'Visible',
+	Callback = function()
+		size(1)
+		wait(0.3)
+		game.Players.LocalPlayer.Character.UpperTorso.CanCollide = true
+		game.Players.LocalPlayer.Character.LowerTorso.CanCollide = true
+	end
+})
+local PlrHack2 = PlrHack:CollapsingHeader({
+	Title = "Item"
+})
+
+PlrHack2:Button({
+	Text = 'B1gD1ck',
+	Callback = function()
+		local function clearTools()
+			local args = {
+				[1] = "ClearAllTools"
+			}
+
+			game:GetService("ReplicatedStorage").RE["1Clea1rTool1s"]:FireServer(unpack(args))
+		end
+		local function grab(item)
+			local args = {
+				[1] = "AcceptedToolToServer",
+				[2] = item,
+				[3] = game:GetService("Players").LocalPlayer
+			}
+
+			game:GetService("ReplicatedStorage").RE["1Playe1rTrigge1rEven1t"]:FireServer(unpack(args))
+		end
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		-- Function to equip up to 5 tools from the backpack
+		local function equipTools()
+			local equippedCount = 0
+
+			-- Iterate through the tools in the backpack
+			for _, tool in ipairs(backpack:GetChildren()) do
+				if tool:IsA("Tool") then
+					-- Move the tool to the character and equip it
+					tool.Parent = character
+					equippedCount += 1
+
+					-- Stop after equipping 5 tools
+					if equippedCount >= 5 then
+						break
+					end
+				end
+			end
+		end
+
+		local function progress(value)
+			PB:SetPercentage(value % 100)
+		end
+		local character = self.Character
+		local hum = character.Humanoid
+		local boxes = workspace.WorkspaceCom["001_GiveTools"].Box
+		local pos = character.PrimaryPart.CFrame 
+		local attempts = 0 -- Количество попыток
+		clearTools()
+		while attempts < 5 do
+			-- Увеличиваем количество попыток
+			attempts += 1
+
+			-- Делаем паузу 5 раз
+			for i = 1, 5 do
+				task.wait()
+			end
+
+			-- Перемещаем персонажа к объекту
+			character.PrimaryPart.CFrame = boxes.CFrame
+
+			-- Активируем ClickDetector
+			fireclickdetector(boxes.ClickDetector)
+			task.wait(0.1)
+
+			-- Делаем инструмент доступным для сброса
+			local tool = character:FindFirstChildOfClass('Tool')
+			if tool then
+				tool.CanBeDropped = true
+			end
+			-- Ожидаем, пока инструмент не будет сброшен
+			repeat
+				task.wait()
+			until not character:FindFirstChildOfClass('Tool')
+
+			task.wait(0.3)
+
+			-- Снова перемещаем персонажа к объекту
+			character.PrimaryPart.CFrame = boxes.CFrame
+			fireclickdetector(boxes.ClickDetector)
+		end
+		hum:UnequipTools()
+		task.wait(0.2)
+		for i, v in pairs(workspace:GetChildren()) do
+			if v:IsA('Tool') and v.Name == 'Box' then
+				v.Parent = self.Backpack
+			end
+		end
+		hum:UnequipTools()
+		task.wait(0.1)
+		for i, tool in pairs(self.Backpack:GetChildren()) do
+			warn(i)
+			local grips = {
+				CFrame.new(-0.6, 0.7, -0.15) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+				CFrame.new(-0.6, 0.7, 1.6) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+				CFrame.new(-2.3, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+				CFrame.new(-4.1, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+				CFrame.new(-5.9, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+			}
+			tool.Grip = grips[i]
+		end
+		task.wait(1)
+		task.spawn(function()
+			grab('FireX')
+			wait(0.3)
+			character.FireX.Grip = CFrame.new(0, 0, -1) * CFrame.Angles(math.rad(125), math.rad(210), math.rad(-90)) 
+
+		end)
+		task.wait(1)
+		character.PrimaryPart.CFrame = pos
+		hum:UnequipTools()
+		equipTools()
+		task.wait()
+		equipTools()
+		self.Backpack.FireX.Parent = character
+	end
+})
+PlrHack2:Button({
+	Text = 'Sm@allD1ck',
+	Callback = function()
+		local function clearTools()
+			local args = {
+				[1] = "ClearAllTools"
+			}
+
+			game:GetService("ReplicatedStorage").RE["1Clea1rTool1s"]:FireServer(unpack(args))
+		end
+		local function grab(item)
+			local args = {
+				[1] = "AcceptedToolToServer",
+				[2] = item,
+				[3] = game:GetService("Players").LocalPlayer
+			}
+
+			game:GetService("ReplicatedStorage").RE["1Playe1rTrigge1rEven1t"]:FireServer(unpack(args))
+		end
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		-- Function to equip up to 5 tools from the backpack
+		local function equipTools()
+			local equippedCount = 0
+
+			-- Iterate through the tools in the backpack
+			for _, tool in ipairs(backpack:GetChildren()) do
+				if tool:IsA("Tool") then
+					-- Move the tool to the character and equip it
+					tool.Parent = character
+					equippedCount += 1
+
+					-- Stop after equipping 5 tools
+					if equippedCount >= 5 then
+						break
+					end
+				end
+			end
+		end
+		local function stopAllAnimations()
+			local humanoid = character:FindFirstChildOfClass("Humanoid") -- Get the humanoid
+			if humanoid then
+				local animator = humanoid:FindFirstChildOfClass("Animator") -- Get the animator
+				if animator then
+					for _, track in ipairs(animator:GetPlayingAnimationTracks()) do
+						track:Stop() -- Stop the animation track
+					end
+				else
+					warn("Animator not found in humanoid.")
+				end
+			else
+				warn("Humanoid not found in character.")
+			end
+		end
+
+		-- Call the function to stop all animations
+		stopAllAnimations()
+
+		local function progress(value)
+			PB:SetPercentage(value % 100)
+		end
+		local character = self.Character
+		local hum = character.Humanoid
+		local boxes = workspace.WorkspaceCom["001_GiveTools"].Banana
+		local boxes2 = workspace.WorkspaceCom["001_GiveTools"].Apple
+		local pos = character.PrimaryPart.CFrame 
+		local attempts = 0 -- Количество попыток
+		clearTools()
+		-- Перемещаем персонажа к объекту
+		character.PrimaryPart.CFrame = boxes.CFrame - Vector3.new(0, 1, 0)
+		fireclickdetector(boxes.ClickDetector)
+		task.wait(1)
+		hum:UnequipTools()
+		task.wait(0.2)
+		while attempts < 1 do
+			-- Увеличиваем количество попыток
+			attempts += 1
+
+			-- Делаем паузу 5 раз
+			for i = 1, 2 do
+				task.wait()
+			end
+
+			-- Перемещаем персонажа к объекту
+			character.PrimaryPart.CFrame = boxes2.CFrame -  Vector3.new(0, 2, 0)
+
+			-- Активируем ClickDetector
+			fireclickdetector(boxes2.ClickDetector)
+			task.wait(1)
+
+			-- Делаем инструмент доступным для сброса
+			local tool = character:FindFirstChildOfClass('Tool')
+			if tool then
+				tool.CanBeDropped = true
+			end
+			-- Ожидаем, пока инструмент не будет сброшен
+			repeat
+				task.wait()
+			until not character:FindFirstChildOfClass('Tool')
+
+			task.wait(0.3)
+
+			-- Снова перемещаем персонажа к объекту
+			character.PrimaryPart.CFrame = boxes2.CFrame
+			fireclickdetector(boxes2.ClickDetector)
+		end
+		hum:UnequipTools()
+		task.wait(0.2)
+		for i, v in pairs(workspace:GetChildren()) do
+			if v:IsA('Tool') and v.Name == 'Apple' then
+				v.Parent = self.Backpack
+			end
+		end
+		hum:UnequipTools()
+		self.Backpack.Banana.Parent = character
+		character.Banana.Grip = CFrame.new(-1.4, -0.5, 0) * CFrame.Angles(math.rad(-25), math.rad(180), math.rad(0))
+		task.wait(0.3)
+		for i, tool in pairs(self.Backpack:GetChildren()) do
+			warn(i)
+			local grips = {
+				CFrame.new(1.2, -0.1, 0) * CFrame.Angles(math.rad(-25), math.rad(180), math.rad(180)),
+				CFrame.new(1.6, -0.1, 0) * CFrame.Angles(math.rad(-25), math.rad(180), math.rad(180))
+			}
+			tool.Grip = grips[i]
+		end
+		character.PrimaryPart.CFrame = pos
+		hum:UnequipTools()
+		task.wait()
+		equipTools()
+		task.wait(0.2)
+		stopAllAnimations()
+	end
+})
+PlrHack2:Button({
+	Text = 'Equip Tools',
+	Callback = function()
+		local function clearTools()
+			local args = {
+				[1] = "ClearAllTools"
+			}
+
+			game:GetService("ReplicatedStorage").RE["1Clea1rTool1s"]:FireServer(unpack(args))
+		end
+		local function grab(item)
+			local args = {
+				[1] = "AcceptedToolToServer",
+				[2] = item,
+				[3] = game:GetService("Players").LocalPlayer
+			}
+
+			game:GetService("ReplicatedStorage").RE["1Playe1rTrigge1rEven1t"]:FireServer(unpack(args))
+		end
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		-- Function to equip up to 5 tools from the backpack
+		local function equipTools()
+			local equippedCount = 0
+
+			-- Iterate through the tools in the backpack
+			for _, tool in ipairs(backpack:GetChildren()) do
+				if tool:IsA("Tool") then
+					-- Move the tool to the character and equip it
+					tool.Parent = character
+					equippedCount += 1
+
+					-- Stop after equipping 5 tools
+					if equippedCount >= 5 then
+						break
+					end
+				end
+			end
+		end
+		local function stopAllAnimations()
+			local humanoid = character:FindFirstChildOfClass("Humanoid") -- Get the humanoid
+			if humanoid then
+				local animator = humanoid:FindFirstChildOfClass("Animator") -- Get the animator
+				if animator then
+					for _, track in ipairs(animator:GetPlayingAnimationTracks()) do
+						track:Stop() -- Stop the animation track
+					end
+				else
+					warn("Animator not found in humanoid.")
+				end
+			else
+				warn("Humanoid not found in character.")
+			end
+		end
+
+		-- Call the function to stop all animations
+		
+		character.Humanoid:UnequipTools()
+		wait(0.3)
+		equipTools()
+		wait(0.6)
+		stopAllAnimations()
+	end
+})
+
+local PlrHack2P = PlrHack2:CollapsingHeader({
+	Title = "Grip"
+})
+PlrHack2P:Button({
+	Text = '-X',
+	Callback = function()
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		character:FindFirstChildOfClass('Tool').Grip -= Vector3.new(0.1, 0, 0)
+	end
+})
+PlrHack2P:Button({
+	Text = '-Y',
+	Callback = function()
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		character:FindFirstChildOfClass('Tool').Grip -= Vector3.new(0, 0.1, 0)
+	end
+})
+PlrHack2P:Button({
+	Text = '-Z',
+	Callback = function()
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		character:FindFirstChildOfClass('Tool').Grip -= Vector3.new(0, 0, 0.1)
+	end
+})
+
+PlrHack2P:Button({
+	Text = '+X',
+	Callback = function()
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		character:FindFirstChildOfClass('Tool').Grip += Vector3.new(0.1, 0, 0)
+	end
+})
+PlrHack2P:Button({
+	Text = '+Y',
+	Callback = function()
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		character:FindFirstChildOfClass('Tool').Grip += Vector3.new(0, 0.1, 0)
+	end
+})
+PlrHack2P:Button({
+	Text = '+Z',
+	Callback = function()
+		local player = game.Players.LocalPlayer -- Get the local player
+		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
+		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+
+		character:FindFirstChildOfClass('Tool').Grip += Vector3.new(0, 0, 0.1)
+	end
+})
+local PlrHack3 = PlrHack:CollapsingHeader({
+	Title = "House"
+})
+local v_5 = false
+PlrHack3:Checkbox({
+	Label = "Remove all house-ban",
+	Value = false,
+	Callback = function(s, value)
+		v_5 = value
+	end
+})
+coroutine.wrap(function()
+	while true do
+	task.wait()
+		if v_5 then
+			for i, v in pairs(workspace["001_Lots"]:GetChildren()) do
+				if string.find(v.Name, "House") then
+					local houseModel = v:FindFirstChild("HousePickedByPlayer") and v.HousePickedByPlayer:FindFirstChild("HouseModel")
+					if houseModel then
+						-- Ищем все объекты, содержащие "Banned" в имени
+						for _, bannedObject in pairs(houseModel:GetChildren()) do
+							if string.find(bannedObject.Name, "Banned") then
+								bannedObject:Destroy() -- Удаляем объект
+							end
+						end
+					end
+				end
+			end
+		end
+		if attached then
+			task.spawn(function()
+				self.Character.PrimaryPart.CFrame = at_plr.Character.PrimaryPart.CFrame
+			end)
+		end
+	end
+end)()
+
