@@ -118,6 +118,9 @@ for i, v in pairs(list) do
 	GameTab2:Button({
 		Text = 'Buy',
 		Callback = function(self, vv)
+		local Character = Player.Character
+		local RootPart = Character.PrimaryPart
+local Pos = RootPart.CFrame
 			local le, path = list[i],  workspace
 			for i1, v in pairs(path:GetDescendants()) do
 				if v:IsA('StringValue') then
