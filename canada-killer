@@ -120,7 +120,7 @@ for i, v in pairs(list) do
 		Callback = function(self, vv)
 		local Character = Player.Character
 		local RootPart = Character.PrimaryPart
-local Pos = RootPart.CFrame
+local Posaaa = RootPart.CFrame
 			local le, path = list[i],  workspace
 			for i1, v in pairs(path:GetDescendants()) do
 				if v:IsA('StringValue') then
@@ -132,7 +132,7 @@ local Pos = RootPart.CFrame
 						v.Parent.BuyEventyer:FireServer()
 						Character.Humanoid:UnequipTools()
 						task.wait(0.5)
-						RootPart.CFrame = Pos
+						RootPart.CFrame = Posaaa
 						
 					end
 				end
