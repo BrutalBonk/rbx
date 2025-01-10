@@ -122,5 +122,30 @@ PlrTab:Button({
 		end
 	end,
 })
+PlrTab:Button({
+	Text = "Ultra Damage",
+	Callback = function(self)
+		local Chr = Player.Character
+		local sec = task.wait
+		Chr.Humanoid:UnequipTools()
+		Player.Backpack.Fists.Parent = Chr
+		local Fists = Chr.Fists
+		if Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript') then
+			local AntiCheat = Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript')
+			AntiCheat:Destroy()
+		end
+		sec(0.1)
+		if not Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript') then
+			local Hitbox = Fists.Hitbox
+			if Hitbox then
+				local Con = Fists.Configuration
+				Con.MaxDamage.Value = 50
+				Con.MinDamage.Value = 50
+				notification('готово')
+			end
+		end
+	end,
+})
+
 
 
