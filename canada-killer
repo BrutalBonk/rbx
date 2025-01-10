@@ -7,11 +7,15 @@ local AutoPickup = false
 local AutoTpAfterCollect = false
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "canada чикатило | Version 1.45",
+	Title = "canada чикатило | ADMIN",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
 Window:Center()
+
+local AutoBuyTab = Window:CreateTab({
+	Name = "AutoBuy"
+})
 
 local GameTab = Window:CreateTab({
 	Name = "Game"
@@ -41,11 +45,27 @@ end
 function remove_cooldown()
 	for n, k in pairs(workspace:GetDescendants()) do
 		if k:IsA('ProximityPrompt') then
-			k.HoldDuration = 0
+			if k.Parent.Parent.Parent.Name ~= 'ATM' then
+				k.HoldDuration = 0
+			else
+				k.HoldDuration = 0.1
+			end
 		end 
 	end
 end
+local sound = function()
+	if Player.Character:FindFirstChild('sss') then
+		local audio = Player.Character.sss
+		audio.SoundId = "rbxassetid://3997124966"
+		audio:Play()
+	else
+		local audio = Instance.new("Sound", Player.Character)
+		audio.SoundId = "rbxassetid://3997124966"
+		audio:Play()
+		audio.Name ='sss'
+	end
 
+end
 local notification = function(text)
 	local ModalWindow = ImGui:CreateModal({ --// Returns a Tab class
 		Title = "Success",
@@ -62,23 +82,90 @@ local notification = function(text)
 			ModalWindow:Close()
 		end,
 	})
-	local audio = Instance.new("Sound", Player.Character)
-	audio.SoundId = "rbxassetid://3997124966"
-	audio:Play()
+	sound()
 end
 GameTab:Label({
 	Text = "Safe TP"
 })
 GameTab:Button({
-	Text = "Teleport to any safe",
-	Callback = function(self)
+	Text = "CrackSafe",
+	Callback = function(self, vv)
 		local Primary = check_in_world(workspace.NotableMapStuff, "SayayafeDoor", false)
 		if Primary then
-			remove_cooldown()
 			local Character = Player.Character
 			local RootPart = Character.PrimaryPart
 			RootPart.CFrame = Primary.CFrame + Vector3.new(0, 3, 0)
+			game:GetService("ReplicatedStorage").Events.DoorAttack:FireServer(Primary, Primary.Name, "PRYOPEN", 1)
+			task.wait(0.5)
+			for i, g in pairs(Primary.Parent.Parent:GetDescendants()) do
+				if g:IsA('Part') and g.Name == 'Buck' then
+					task.wait(0.01)
+					g:FindFirstChildOfClass('RemoteEvent'):FireServer()
+				end
+			end
 		end
+		sound()
+	end,
+})
+local list = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17 9x19", "J-9 Meretta 9x19", "GS-17 SMART GUN 9x19", "RugRug-Mark1 22lr.", "RugRug-Mark2 22lr.", "RugRug-LCP 38.SPCL", "TEKE-9 9x19", "TK-99 9x19", "JS-22 22lr", "JS-44 44.MAGN", "BUXXBERG590 Shotgun Shells", "RugRug-Mini Ranch Rifle 223.REM", "RugRug-Survival Rifle 22lr.", "BEAGLE 50.AE", "MAK-11 45ACP", "HW2000 556NETO", "HW45-USP 45ACP", "Wenry45 45.ACP", "RR-LCP 38.", "ZKZ 7.62x39", "JS-1200 ShotgunShells", "KALIKO M90 45acp", "ROSEN NAGANT 7.62x39", "JS-11 ShotgunShells", "JS-2 COMPETITOR 308.WIN"}
+local list2 = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17", "J-9 Meretta", "GS-17", "RugRug-Mark1.", "RugRug-Mark2", "RugRug-LCP", "TEKE-9", "TK-99", "JS-22", "JS-44", "BUXXBERG590", "RugRug-Mini Ranch Rifle", "RugRug-Survival Rifle.", "BEAGLE", "MAK-11", "HW2000", "HW45-USP", "Wenry45", "RR-LCP", "ZKZ", "JS-1200", "KALIKO M90", "ROSEN NAGANT", "JS-11", "JS-2"}
+
+for i, v in pairs(list) do
+	local GameTab2 = AutoBuyTab:CollapsingHeader({
+		Title = list[i]
+	})
+	local cost = 0
+	GameTab2:Button({
+		Text = 'Buy',
+		Callback = function(self, vv)
+			local le, path = list[i],  workspace
+			for i1, v in pairs(path:GetDescendants()) do
+				if v:IsA('StringValue') then
+					if v.Value == le then
+						local Character = Player.Character
+						local RootPart = Character.PrimaryPart
+						RootPart.CFrame = v.Parent.CFrame + Vector3.new(0, 0, 0)
+						task.wait(0.1)
+						v.Parent.BuyEventyer:FireServer()
+						Character.Humanoid:UnequipTools()
+						task.wait(0.5)
+						RootPart.CFrame = Pos
+						
+					end
+				end
+			end
+			sound()
+		end,
+	})
+	local le, path = list[i],  workspace
+		for i, v in pairs(path:GetDescendants()) do
+			if v:IsA('StringValue') then
+				if v.Value == le then
+					cost = v.Parent.Price.Value
+				end
+			end
+		end
+	GameTab2:Label({
+		Text = "Cost: "..tostring(cost)
+	})
+end
+
+GameTab:Button({
+	Text = "Max Ammo",
+	Callback = function(self, vv)
+		local Character = Player.Character
+		local ch = Character.PlayerAmmoAmount
+		for i, v in pairs(ch:GetChildren()) do
+			if not string.find(v.Name, 'Max') then
+				local maxObject = ch:FindFirstChild(v.Name..'Max')
+				if maxObject then
+					v.Value = maxObject.Value
+				else
+					warn("Не найден объект: "..v.Name..'Max')
+				end
+			end
+		end
+		sound()
 	end,
 })
 
