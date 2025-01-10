@@ -1,0 +1,126 @@
+local ImGui = loadstring(game:HttpGet('https://github.com/depthso/Roblox-ImGUI/raw/main/ImGui.lua'))()
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+
+local NoBoxes = true
+local AutoPickup = false
+local AutoTpAfterCollect = false
+--// Window 
+local Window = ImGui:CreateWindow({
+	Title = "canada чикатило | Version 1.45",
+	Size = UDim2.new(0, 350, 0, 370),
+	Position = UDim2.new(0.5, 0, 0, 70)
+})
+Window:Center()
+
+local GameTab = Window:CreateTab({
+	Name = "Game"
+})
+
+local PlrTab = Window:CreateTab({
+	Name = "Player"
+})
+function contains(word, tofind)
+    if string.find(word, tofind) then
+        return true
+    end
+end
+
+function check_in_world(Path, value, value2)
+	for i, v in pairs(Path:GetDescendants()) do
+		if contains(v.Name, value)  then
+			if not v.DESTROYED.Value then
+				local Primary = v
+				if Primary then
+					return Primary
+				end
+			end
+		end
+	end
+end
+function remove_cooldown()
+	for n, k in pairs(workspace:GetDescendants()) do
+		if k:IsA('ProximityPrompt') then
+			k.HoldDuration = 0
+		end 
+	end
+end
+
+local notification = function(text)
+	local ModalWindow = ImGui:CreateModal({ --// Returns a Tab class
+		Title = "Success",
+		AutoSize = "Y"
+	})
+
+	ModalWindow:Label({
+		Text = text
+	})
+
+	ModalWindow:Button({
+		Text = "ок",
+		Callback = function()
+			ModalWindow:Close()
+		end,
+	})
+	local audio = Instance.new("Sound", Player.Character)
+	audio.SoundId = "rbxassetid://3997124966"
+	audio:Play()
+end
+GameTab:Label({
+	Text = "Safe TP"
+})
+GameTab:Button({
+	Text = "Teleport to any safe",
+	Callback = function(self)
+		local Primary = check_in_world(workspace.NotableMapStuff, "SayayafeDoor", false)
+		if Primary then
+			remove_cooldown()
+			local Character = Player.Character
+			local RootPart = Character.PrimaryPart
+			RootPart.CFrame = Primary.CFrame + Vector3.new(0, 3, 0)
+		end
+	end,
+})
+
+GameTab:Button({
+	Text = "Remove cooldown(optional)",
+	Callback = function(self)
+		remove_cooldown()
+	end,
+})
+
+PlrTab:Label({
+	Text = "Super ARMS"
+})
+
+PlrTab:Button({
+	Text = "5x5x5 Hitbox",
+	Callback = function(self)
+		local Chr = Player.Character
+		local sec = task.wait
+		Chr.Humanoid:UnequipTools()
+		Player.Backpack.Fists.Parent = Chr
+		local Fists = Chr.Fists
+		if Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript') then
+			local AntiCheat = Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript')
+			AntiCheat:Destroy()
+		end
+		sec(0.1)
+		if not Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript') then
+			local Hitbox = Fists.Hitbox
+			if Hitbox then
+				Hitbox.Size = Vector3.new(5, 5, 5)
+				Hitbox.Transparency = 0.5
+				Hitbox.Material = 'Neon'
+				for i, v in pairs(workspace:GetDescendants()) do
+					if v.Name == '_glass' and v:IsA('Part') then
+						v.Name = 'removed'
+					end
+				end
+				notification('готово')
+			end
+		end
+	end,
+})
+
+
