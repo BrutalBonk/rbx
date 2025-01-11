@@ -324,13 +324,19 @@ PlrTab:Button({
 })
 local fe = false
 PlrTab:Label({
-	Text = 'Rainbow gun [FE]'
+	Text = 'Gun change'
 })
 PlrTab:Checkbox({
-	Label = "Enabled",
+	Label = "Rainbow gun",
 	Value = false,
 	Callback = function(self, vv)
 		fe = vv
+	end,
+})
+PlrTab:Button({
+	Text = "Russia stickers",
+	Callback = function(self, vv)
+		game:GetService("Players").LocalPlayer.PlayerGui.GunGUI.AttachmentPlaces.yarg2.ScrollingFrame.Stickers.Option1.ImageButton.Image = 'http://www.roblox.com/asset/?id=13575554982'
 	end,
 })
 local hue = 0
