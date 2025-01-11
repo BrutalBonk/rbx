@@ -5,6 +5,10 @@ local Player = Players.LocalPlayer
 local NoBoxes = true
 local AutoPickup = false
 local AutoTpAfterCollect = false
+
+local list = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17 9x19", "J-9 Meretta 9x19", "GS-17 SMART GUN 9x19", "RugRug-Mark1 22lr.", "RugRug-Mark2 22lr.", "RugRug-LCP 38.SPCL", "TEKE-9 9x19", "TK-99 9x19", "JS-22 22lr", "JS-44 44.MAGN", "BUXXBERG590 Shotgun Shells", "RugRug-Mini Ranch Rifle 223.REM", "RugRug-Survival Rifle 22lr.", "BEAGLE 50.AE", "MAK-11 45ACP", "HW2000 556NETO", "HW45-USP 45ACP", "Wenry45 45.ACP", "RR-LCP 38.", "ZKZ 7.62x39", "JS-1200 ShotgunShells", "KALIKO M90 45acp", "ROSEN NAGANT 7.62x39", "JS-11 ShotgunShells", "JS-2 COMPETITOR 308.WIN"}
+local list2 = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17", "J-9 Meretta", "GS-17", "RugRug-Mark1.", "RugRug-Mark2", "RugRug-LCP", "TEKE-9", "TK-99", "JS-22", "JS-44", "BUXXBERG590", "RugRug-Mini Ranch Rifle", "RugRug-Survival Rifle.", "BEAGLE", "MAK-11", "HW2000", "HW45-USP", "Wenry45", "RR-LCP", "ZKZ", "JS-1200", "KALIKO M90", "ROSEN NAGANT", "JS-11", "COMPETITOR-JS2"}
+
 --// Window 
 local Window = ImGui:CreateWindow({
 	Title = "canada чикатило | ADMIN",
@@ -38,6 +42,16 @@ function check_in_world(Path, value, value2)
 				if Primary then
 					return Primary
 				end
+			end
+		end
+	end
+end
+function check_in_world_normal(Path, value, value2)
+	for i, v in pairs(Path:GetDescendants()) do
+		if contains(v.Name, value)  then
+			local Primary = v
+			if Primary then
+				return Primary
 			end
 		end
 	end
@@ -107,9 +121,6 @@ GameTab:Button({
 		sound()
 	end,
 })
-local list = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17 9x19", "J-9 Meretta 9x19", "GS-17 SMART GUN 9x19", "RugRug-Mark1 22lr.", "RugRug-Mark2 22lr.", "RugRug-LCP 38.SPCL", "TEKE-9 9x19", "TK-99 9x19", "JS-22 22lr", "JS-44 44.MAGN", "BUXXBERG590 Shotgun Shells", "RugRug-Mini Ranch Rifle 223.REM", "RugRug-Survival Rifle 22lr.", "BEAGLE 50.AE", "MAK-11 45ACP", "HW2000 556NETO", "HW45-USP 45ACP", "Wenry45 45.ACP", "RR-LCP 38.", "ZKZ 7.62x39", "JS-1200 ShotgunShells", "KALIKO M90 45acp", "ROSEN NAGANT 7.62x39", "JS-11 ShotgunShells", "JS-2 COMPETITOR 308.WIN"}
-local list2 = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17", "J-9 Meretta", "GS-17", "RugRug-Mark1.", "RugRug-Mark2", "RugRug-LCP", "TEKE-9", "TK-99", "JS-22", "JS-44", "BUXXBERG590", "RugRug-Mini Ranch Rifle", "RugRug-Survival Rifle.", "BEAGLE", "MAK-11", "HW2000", "HW45-USP", "Wenry45", "RR-LCP", "ZKZ", "JS-1200", "KALIKO M90", "ROSEN NAGANT", "JS-11", "JS-2"}
-
 for i, v in pairs(list) do
 	local GameTab2 = AutoBuyTab:CollapsingHeader({
 		Title = list[i]
@@ -118,9 +129,25 @@ for i, v in pairs(list) do
 	GameTab2:Button({
 		Text = 'Buy',
 		Callback = function(self, vv)
-		local Character = Player.Character
-		local RootPart = Character.PrimaryPart
-local Posaaa = RootPart.CFrame
+			--[[local le, path = 'Delta',  workspace.WIPFolder
+			local Character = Player.Character
+			local RootPart = Character.PrimaryPart
+			local Pos = RootPart.CFrame
+			for i, v in pairs(path:GetDescendants()) do
+				if v:IsA('StringValue') then
+					if v.Value == le then
+						local Character = Player.Character
+						local RootPart = Character.PrimaryPart
+						RootPart.CFrame = v.Parent.CFrame + Vector3.new(0, 0, 0)
+						task.wait(0.1)
+						v.Parent.BuyEventyer:FireServer()
+						task.wait(0.1)
+						Character.Humanoid:UnequipTools()
+						break
+						
+					end
+				end
+			end]]
 			local le, path = list[i],  workspace
 			for i1, v in pairs(path:GetDescendants()) do
 				if v:IsA('StringValue') then
@@ -130,9 +157,13 @@ local Posaaa = RootPart.CFrame
 						RootPart.CFrame = v.Parent.CFrame + Vector3.new(0, 0, 0)
 						task.wait(0.1)
 						v.Parent.BuyEventyer:FireServer()
-						Character.Humanoid:UnequipTools()
 						task.wait(0.5)
-						RootPart.CFrame = Posaaa
+						Character.Humanoid:UnequipTools()
+						--task.wait(1)
+						--local gun = Player.Backpack[list2[i]]
+						--gun.AttachmentEvents.Scope:FireServer("DELTA", Player.Backpack.Delta)
+						task.wait(0.5)
+						RootPart.CFrame = Pos
 						
 					end
 				end
@@ -152,7 +183,7 @@ local Posaaa = RootPart.CFrame
 		Text = "Cost: "..tostring(cost)
 	})
 end
-
+local pas = false
 GameTab:Button({
 	Text = "Max Ammo",
 	Callback = function(self, vv)
@@ -162,13 +193,22 @@ GameTab:Button({
 			if not string.find(v.Name, 'Max') then
 				local maxObject = ch:FindFirstChild(v.Name..'Max')
 				if maxObject then
+					maxObject.Value = 300
 					v.Value = maxObject.Value
-				else
-					warn("Не найден объект: "..v.Name..'Max')
 				end
 			end
 		end
 		sound()
+	end,
+})
+GameTab:Label({
+	Text = "Passive Farm"
+})
+GameTab:Checkbox({
+	Label = "Enabled",
+	Value = false,
+	Callback = function(self, vv)
+		pas = vv
 	end,
 })
 
@@ -236,6 +276,91 @@ PlrTab:Button({
 		end
 	end,
 })
+PlrTab:Label({
+	Text = 'Transaction'
+})
+PlrTab:Button({
+	Text = 'Deposit (ALL)',
+	Callback = function()
+	if Player.Character.Money.Value >= 1 then
+		game:GetService("ReplicatedStorage").NATMEVENTERRERERE:FireServer(tostring(Player.Character.Money.Value), "deposit")
+		sound()
+	end
+	end
+})
+PlrTab:Button({
+	Text = 'Withdraw (1000$)',
+	Callback = function()
+	if Player.Character.Money.Value >= 1 then
+		game:GetService("ReplicatedStorage").NATMEVENTERRERERE:FireServer(tostring('1000'), "withdraw")
+		sound()
+	end
+	end
+})
+PlrTab:Label({
+	Text = 'Other'
+})
+PlrTab:Button({
+	Text = 'Get Water',
+	Callback = function()
+		local Primary = check_in_world_normal(workspace.NotableMapStuff["23Cash"].Glass.GlassModil.CashierTest.CashierTesting, "waterbotl", false)
+		if Primary:FindFirstChildOfClass('RemoteEvent') then
+		task.wait(0.1)
 
+			Primary:FindFirstChildOfClass('RemoteEvent'):FireServer()
+		end
+	end
+})
+PlrTab:Button({
+	Text = 'Get Choco',
+	Callback = function()
+		local Primary = check_in_world_normal(workspace.NotableMapStuff["23Cash"].Glass.GlassModil.CashierTest.CashierTesting, "Hermshy", false)
+		if Primary:FindFirstChildOfClass('RemoteEvent') then
+		task.wait(0.1)
 
+			Primary:FindFirstChildOfClass('RemoteEvent'):FireServer()
+		end
+	end
+})
+local fe = false
+PlrTab:Label({
+	Text = 'Rainbow gun [FE]'
+})
+PlrTab:Checkbox({
+	Label = "Enabled",
+	Value = false,
+	Callback = function(self, vv)
+		fe = vv
+	end,
+})
+local hue = 0
+local function hueToColor(h)
+	return Color3.fromHSV(h, 1, 1) -- Полная насыщенность и яркость
+end
+while wait() do
+	if pas then
+		pcall(function()
+			if workspace:FindFirstChild('CashDrop') then
+				workspace.CashDrop.Buck:FindFirstChildOfClass('RemoteEvent'):FireServer()
+				sound()
+			elseif workspace:FindFirstChild('CoinDrop') then
+				workspace.CoinDrop.Buck:FindFirstChildOfClass('RemoteEvent'):FireServer()
+				sound()
+			end
+		end)
+	end
+	--[[if Player.Character:FindFirstChild('Tool'):FindFirstChild('EventFolders') then
+		game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Tool').EventFolders:FindFirstChild("DJDFOSFDSOFASDKBN"):FireServer("NORMAL")
+	end]]
+	if fe then
+		pcall(function()
+			game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').AttachmentEvents.MainColory:FireServer(hueToColor(hue))
+			
+			hue = hue + 0.01
+			if hue > 1 then
+				hue = 0
+			end	
+		end)
+	end
+end
 
