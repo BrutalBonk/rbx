@@ -104,7 +104,8 @@ GameTab:Label({
 GameTab:Button({
 	Text = "CrackSafe",
 	Callback = function(self, vv)
-		local Primary = check_in_world(workspace.NotableMapStuff, "SayayafeDoor", false)
+		for i = 0, 20 do
+			local Primary = check_in_world(workspace.NotableMapStuff, "SayayafeDoor", false)
 		if Primary then
 			local Character = Player.Character
 			local RootPart = Character.PrimaryPart
@@ -117,6 +118,8 @@ GameTab:Button({
 					g:FindFirstChildOfClass('RemoteEvent'):FireServer()
 				end
 			end
+		end
+		
 		end
 		sound()
 	end,
@@ -193,7 +196,7 @@ GameTab:Button({
 			if not string.find(v.Name, 'Max') then
 				local maxObject = ch:FindFirstChild(v.Name..'Max')
 				if maxObject then
-					maxObject.Value = 300
+					maxObject.Value = 1e+1000
 					v.Value = maxObject.Value
 				end
 			end
@@ -322,6 +325,7 @@ PlrTab:Button({
 		end
 	end
 })
+local plc = false
 local fe = false
 PlrTab:Label({
 	Text = 'Gun change'
@@ -337,6 +341,28 @@ PlrTab:Button({
 	Text = "Russia stickers",
 	Callback = function(self, vv)
 		game:GetService("Players").LocalPlayer.PlayerGui.GunGUI.AttachmentPlaces.yarg2.ScrollingFrame.Stickers.Option1.ImageButton.Image = 'http://www.roblox.com/asset/?id=13575554982'
+		sound()
+	end,
+})
+PlrTab:Button({
+	Text = "Infinity Ammo",
+	Callback = function(self, vv)
+		game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Tool').GunValues.YAmmmoPerMagazine.Value = 100000000000000000
+		sound()
+	end,
+})
+PlrTab:Button({
+	Text = "No recoil",
+	Callback = function(self, vv)
+		game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Tool').GunValues.RecoilValues.Recoil.Value = 0
+		sound()
+	end,
+})
+PlrTab:Checkbox({
+	Label = "No gun-effects",
+	Value = false,
+	Callback = function(self, vv)
+		plc = vv
 	end,
 })
 local hue = 0
@@ -366,6 +392,11 @@ while wait() do
 			if hue > 1 then
 				hue = 0
 			end	
+		end)
+	end
+	if plc then
+		pcall(function()
+			game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool'):WaitForChild('Union').GunMuzzlePoint1.Name = 'noeffectsorry'
 		end)
 	end
 end
