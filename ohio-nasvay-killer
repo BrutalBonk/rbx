@@ -7,7 +7,7 @@ local AutoPickup = false
 local AutoTpAfterCollect = false
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "НасвайСОФТ | Version 1.45",
+	Title = "НасвайСОФТ | Version 1.46",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
@@ -47,7 +47,7 @@ function check_in_world(Path, value, value2)
 	end
 end
 function remove_cooldown()
-	for n, k in pairs(workspace.GetDescendants()) do
+	for n, k in pairs(workspace:GetDescendants()) do
 		if k:IsA('ProximityPrompt') then
 			k.HoldDuration = 0
 		end 
@@ -198,7 +198,3 @@ GameTab:Button({
 		end
 	end,
 })
-
-
-
-
