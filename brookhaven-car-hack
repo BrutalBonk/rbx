@@ -507,9 +507,10 @@ ph1:Checkbox({
 		}
 
 		local switch = 1
-
+	
 		task.spawn(function()
 			while wait(1) do
+				if v then
 				-- Define Arabic characters
 				local arabicLetters = {
 				    "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"
@@ -534,10 +535,25 @@ ph1:Checkbox({
 				}
 				
 				game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
-				
+				end
 				end
 		end)
 
+	end
+})
+local ph2 = PlrHack1:CollapsingHeader({
+	Title = 'Effects'
+})
+
+ph2:Button({
+	Text = 'Fire',
+	Callback = function()
+		local args = {
+		    [1] = "wear",
+		    [2] = 132809431
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
 	end
 })
 local PlrHack2 = PlrHack:CollapsingHeader({
