@@ -509,23 +509,33 @@ ph1:Checkbox({
 		local switch = 1
 
 		task.spawn(function()
-			while wait(3) do
-				if v then
-					for _, tool in pairs(self.Character:GetChildren()) do
-						if tool:IsA("Tool") and tool.Name == 'SignRed' then
-							-- Сравниваем текущий Grip инструмента с массивом grips
-							for _, gripData in pairs(grips) do
-								if tool.Grip == gripData[1] then
-									-- Меняем состояние переключателя
-									switch = switch == 1 and 2 or 1
-
-									tool.ToolSound:FireServer('SignRed', "SignWords", gripData[1 + switch])
-								end
-							end
-						end
-					end
+			while wait(1) do
+				-- Define Arabic characters
+				local arabicLetters = {
+				    "ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"
+				}
+				
+				-- Function to generate a random Arabic word
+				local function generateRandomArabicWord(length)
+				    local word = ""
+				    for i = 1, length do
+				        local randomIndex = math.random(1, #arabicLetters)
+				        word = word .. arabicLetters[randomIndex]
+				    end
+				    return word
 				end
-			end
+				
+				-- Example usage
+				local wordLength = 5  -- Change this to the desired word length
+				local randomWord = generateRandomArabicWord(wordLength)
+				local args = {
+				    [1] = "RolePlayName",
+				    [2] = randomWord
+				}
+				
+				game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+				
+				end
 		end)
 
 	end
