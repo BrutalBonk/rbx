@@ -1,5 +1,5 @@
 local Sound = Instance.new("Sound", game.Players.LocalPlayer.Character)
-Sound.SoundId = 'rbxassetid://5611362342'
+Sound.SoundId = 'rbxassetid://87440193768707'
 Sound:Play()
 
 
