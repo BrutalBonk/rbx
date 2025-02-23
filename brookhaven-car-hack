@@ -650,6 +650,18 @@ ph1:Checkbox({
 
 	end
 })
+PlrHack1:Button({
+	Text = 'Trollface Gun'
+	Callback = function()
+		local args = {
+		    [1] = "RequestingGunSkins",
+		    [2] = "13298102229"
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Clea1rTool1s"):FireServer(unpack(args))
+
+	end
+})
 local ph2 = PlrHack1:CollapsingHeader({
 	Title = 'Effects'
 })
