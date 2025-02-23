@@ -392,7 +392,10 @@ local function size(value)
 
 	game:GetService("ReplicatedStorage").RE["1Clothe1s"]:FireServer(unpack(args))
 end
-PlrHack1:Button({
+local mt1 = PlrHack1:CollapsingHeader({
+	Title = 'Invis Method1'
+})
+mt1:Button({
 	Text = 'Invisible',
 	Callback = function()
 		size(3)
@@ -405,13 +408,77 @@ PlrHack1:Button({
 		game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
 	end
 })
-PlrHack1:Button({
+mt1:Button({
 	Text = 'Visible',
 	Callback = function()
 		size(1)
 		wait(0.3)
 		game.Players.LocalPlayer.Character.UpperTorso.CanCollide = true
 		game.Players.LocalPlayer.Character.LowerTorso.CanCollide = true
+	end
+})
+local mt2 = PlrHack1:CollapsingHeader({
+	Title = 'Invis Method2'
+})
+mt2:Button({
+	Text = 'NoBundle',
+	Callback = function()
+		local args = {
+			[1] = "CharacterChange",
+			[2] = {
+				[1] = "15312911732",
+				[2] = "14532583477",
+				[3] = "14532583469",
+				[4] = "14532583517",
+				[5] = "14532583483",
+				[6] = "134082579"
+			},
+			[3] = "Gaze"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+	end
+})
+mt2:Button({
+	Text = 'NoArmBundle',
+	Callback = function()
+		local args = {
+			[1] = "CharacterChange",
+			[2] = {
+				[1] = "0",
+				[2] = "14532583477",
+				[3] = "0",
+				[4] = "0",
+				[5] = "0",
+				[6] = "0"
+			},
+			[3] = "Gaze"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+	end
+})
+mt2:Button({
+	Text = 'ManBundle',
+	Callback = function()
+		local args = {
+			[1] = "CharacterChange",
+			[2] = {
+				[1] = 86500008,
+				[2] = 86500036,
+				[3] = 86500054,
+				[4] = 86500078,
+				[5] = 86500064,
+				[6] = 86498048
+			},
+			[3] = "Man"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+
 	end
 })
 local ph1 = PlrHack1:CollapsingHeader({
