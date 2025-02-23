@@ -529,12 +529,14 @@ ph1:Checkbox({
 				-- Example usage
 				local wordLength = 5  -- Change this to the desired word length
 				local randomWord = generateRandomArabicWord(wordLength)
-				local args = {
-				    [1] = "RolePlayName",
-				    [2] = randomWord
-				}
-				
-				game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+				if v then
+					local args = {
+						[1] = "RolePlayName",
+						[2] = randomWord
+					}
+					
+					game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+				end
 				end
 				end
 		end)
@@ -546,7 +548,7 @@ local ph2 = PlrHack1:CollapsingHeader({
 })
 
 ph2:Button({
-	Text = 'Fire',
+	Text = 'Fire1',
 	Callback = function()
 		local args = {
 		    [1] = "wear",
@@ -554,6 +556,18 @@ ph2:Button({
 		}
 		
 		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+	end
+})
+ph2:Button({
+	Text = 'Fire2',
+	Callback = function()
+		local args = {
+			[1] = "wear",
+			[2] = 183468963
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+
 	end
 })
 local PlrHack2 = PlrHack:CollapsingHeader({
@@ -1109,4 +1123,4 @@ coroutine.wrap(function()
 			end)
 		end
 	end
-end)()
+end)() 
