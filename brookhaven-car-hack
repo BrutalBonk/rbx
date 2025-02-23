@@ -651,7 +651,7 @@ ph1:Checkbox({
 	end
 })
 PlrHack1:Button({
-	Text = 'Trollface Gun'
+	Text = 'Trollface Gun',
 	Callback = function()
 		local args = {
 		    [1] = "RequestingGunSkins",
