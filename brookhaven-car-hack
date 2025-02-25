@@ -446,6 +446,26 @@ mt2:Button({
 	end
 })
 mt2:Button({
+	Text = 'NoHead',
+	Callback = function()
+		local args = {
+			[1] = "CharacterChange",
+			[2] = {
+				[1] = "0",
+				[2] = "0",
+				[3] = "0",
+				[4] = "0",
+				[5] = "0",
+				[6] = "134082579"
+			},
+			[3] = "Gaze"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+	end
+})
+mt2:Button({
 	Text = 'NoRightArmBundle',
 	Callback = function()
 		local args = {
