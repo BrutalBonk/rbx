@@ -1,8 +1,36 @@
-local Sound = Instance.new("Sound", game.Players.LocalPlayer.Character)
-Sound.SoundId = 'rbxassetid://87440193768707'
-Sound:Play()
+local Player = game:GetService('Players').LocalPlayer
+local sound = function()
+	if Player.Character:FindFirstChild('sss') then
+		local audio = Player.Character.sss
+		audio.SoundId = 'rbxassetid://87440193768707'
+		audio:Play()
+	else
+		local audio = Instance.new("Sound", Player.Character)
+		audio.SoundId = 'rbxassetid://87440193768707'
+		audio:Play()
+		audio.Name ='sss'
+	end
 
+end
+local notification = function(text)
+	local ModalWindow = ImGui:CreateModal({ --// Returns a Tab class
+		Title = "Success",
+		AutoSize = "Y"
+	})
 
+	ModalWindow:Label({
+		Text = text
+	})
+
+	ModalWindow:Button({
+		Text = "//Confirm",
+		Callback = function()
+			ModalWindow:Close()
+		end,
+	})
+	sound()
+end
+notification('Connected | Author : HOKJHa, Version: 1')
 print('open-source HOKJHA')  --// Services 
 local RunService: RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
