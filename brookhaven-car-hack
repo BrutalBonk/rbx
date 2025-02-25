@@ -56,7 +56,8 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 1')
+notification('Connected | Author : HOKJHa, Version: 2')
+
 Window:Center()
 
 local CarHack = Window:CreateTab({
