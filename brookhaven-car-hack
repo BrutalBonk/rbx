@@ -25,38 +25,6 @@ local Window = ImGui:CreateWindow({
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
 local Player = game:GetService('Players').LocalPlayer
-local sound = function()
-	if Player.Character:FindFirstChild('sss') then
-		local audio = Player.Character.sss
-		audio.SoundId = 'rbxassetid://87440193768707'
-		audio:Play()
-	else
-		local audio = Instance.new("Sound", Player.Character)
-		audio.SoundId = 'rbxassetid://87440193768707'
-		audio:Play()
-		audio.Name ='sss'
-	end
-
-end
-local notification = function(text)
-	local ModalWindow = ImGui:CreateModal({ --// Returns a Tab class
-		Title = "Success",
-		AutoSize = "Y"
-	})
-
-	ModalWindow:Label({
-		Text = text
-	})
-
-	ModalWindow:Button({
-		Text = "Confirm",
-		Callback = function()
-			ModalWindow:Close()
-		end,
-	})
-	sound()
-end
-notification('Connected | Author : HOKJHa, Version: 2')
 
 Window:Center()
 
@@ -1334,3 +1302,35 @@ coroutine.wrap(function()
 		end
 	end
 end)() 
+local sound = function()
+	if Player.Character:FindFirstChild('sss') then
+		local audio = Player.Character.sss
+		audio.SoundId = 'rbxassetid://87440193768707'
+		audio:Play()
+	else
+		local audio = Instance.new("Sound", Player.Character)
+		audio.SoundId = 'rbxassetid://87440193768707'
+		audio:Play()
+		audio.Name ='sss'
+	end
+
+end
+local notification = function(text)
+	local ModalWindow = ImGui:CreateModal({ --// Returns a Tab class
+		Title = "Success",
+		AutoSize = "Y"
+	})
+
+	ModalWindow:Label({
+		Text = text
+	})
+
+	ModalWindow:Button({
+		Text = "Confirm",
+		Callback = function()
+			ModalWindow:Close()
+		end,
+	})
+	sound()
+end
+notification('Connected | Author : HOKJHa, Version: 2')
