@@ -1,3 +1,29 @@
+
+print('open-source HOKJHA')  --// Services 
+local RunService: RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local IsStudio = RunService:IsStudio()
+
+local Speed = 1000
+local Turbo = 11.3
+
+local self = game.Players.LocalPlayer
+
+--// Fetch library
+local ImGui
+if IsStudio then
+	ImGui = require(ReplicatedStorage.ImGui)
+else
+	local SourceURL = 'https://raw.githubusercontent.com/BrutalBonk/rbx/refs/heads/main/2'
+	ImGui = loadstring(game:HttpGet(SourceURL))()
+end
+
+--// Window 
+local Window = ImGui:CreateWindow({
+	Title = "Brookhaven troll | HOKJHa",
+	Size = UDim2.new(0, 350, 0, 370),
+	Position = UDim2.new(0.5, 0, 0, 70)
+})
 local Player = game:GetService('Players').LocalPlayer
 local sound = function()
 	if Player.Character:FindFirstChild('sss') then
@@ -31,31 +57,6 @@ local notification = function(text)
 	sound()
 end
 notification('Connected | Author : HOKJHa, Version: 1')
-print('open-source HOKJHA')  --// Services 
-local RunService: RunService = game:GetService("RunService")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local IsStudio = RunService:IsStudio()
-
-local Speed = 1000
-local Turbo = 11.3
-
-local self = game.Players.LocalPlayer
-
---// Fetch library
-local ImGui
-if IsStudio then
-	ImGui = require(ReplicatedStorage.ImGui)
-else
-	local SourceURL = 'https://raw.githubusercontent.com/BrutalBonk/rbx/refs/heads/main/2'
-	ImGui = loadstring(game:HttpGet(SourceURL))()
-end
-
---// Window 
-local Window = ImGui:CreateWindow({
-	Title = "Brookhaven troll | HOKJHa",
-	Size = UDim2.new(0, 350, 0, 370),
-	Position = UDim2.new(0.5, 0, 0, 70)
-})
 Window:Center()
 
 local CarHack = Window:CreateTab({
