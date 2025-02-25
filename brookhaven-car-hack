@@ -49,7 +49,7 @@ local notification = function(text)
 	})
 
 	ModalWindow:Button({
-		Text = "//Confirm",
+		Text = "Confirm",
 		Callback = function()
 			ModalWindow:Close()
 		end,
