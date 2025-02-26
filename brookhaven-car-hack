@@ -1,3 +1,4 @@
+
 print('open-source HOKJHA')  --// Services 
 local RunService: RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -425,8 +426,16 @@ local mt2 = PlrHack1:CollapsingHeader({
 local mt3 = PlrHack1:CollapsingHeader({
 	Title = 'Custom Bundle'
 })
+local mt4 = PlrHack1:CollapsingHeader({
+	Title = 'Custom Accessory'
+})
 
-local Input = mt3:InputText({
+local Input1 = mt3:InputText({
+	Label = "ID",
+	PlaceHolder = "Enter here",
+	Value = "",
+})
+local Input2 = mt4:InputText({
 	Label = "ID",
 	PlaceHolder = "Enter here",
 	Value = "",
@@ -458,7 +467,7 @@ local Tabble = {
 mt3:Button({
 	Text = 'Equip',
 	Callback = function()
-        Tabble[Select] = tonumber(Input:GetValue())
+        Tabble[Select] = tonumber(Input1:GetValue())
 	Tabble[6] = 1
 		local args = {
             [1] = "CharacterChange",
@@ -467,6 +476,18 @@ mt3:Button({
         }
 
 		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+	end
+})
+mt4:Button({
+	Text = 'Equip',
+	Callback = function()
+       local args = {
+            [1] = "wear",
+            [2] = Input2:GetValue()
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
 
 	end
 })
@@ -1380,4 +1401,4 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 4.1')
+notification('Connected | Author : HOKJHa, Version: 5')
