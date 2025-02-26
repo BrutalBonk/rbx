@@ -423,6 +423,53 @@ mt1:Button({
 local mt2 = PlrHack1:CollapsingHeader({
 	Title = 'Invis Method2'
 })
+local mt3 = PlrHack1:CollapsingHeader({
+	Title = 'Custom Bundle'
+})
+
+local Input = mt3:InputText({
+	Label = "ID",
+	PlaceHolder = "Enter here",
+	Value = "",
+})
+
+mt3:Combo({
+	Placeholder = "Select replacemt",
+	Label = "BodyPart",
+	Items = {
+		["Torso"] = 1,
+        ["LeftArm"] = 3,
+		["RightArm"] = 2,
+		["Head"] = 6,
+        ["RightLeg"] = 4,
+        ["LeftLeg"] = 5
+	},
+	Callback = function(self, Value)
+		Select = Value
+	end,
+})
+local Tabble = {
+    [1] = 0,
+    [2] = 0,
+    [3] = 0,
+    [4] = 0,
+    [5] = 0,
+    [6] = 0
+}
+mt3:Button({
+	Text = 'Equip',
+	Callback = function()
+        Tabble[Select] = tonumber(Input:GetValue())
+		local args = {
+            [1] = "CharacterChange",
+            [2] = Tabble,
+            [3] = "CoolKid"
+        }
+
+		game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+
+	end
+})
 mt2:Button({
 	Text = 'NoBundle',
 	Callback = function()
@@ -1333,4 +1380,4 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 2')
+notification('Connected | Author : HOKJHa, Version: 4')
