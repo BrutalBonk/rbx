@@ -1381,4 +1381,4 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 4')
+notification('Connected | Author : HOKJHa, Version: 4.1')
