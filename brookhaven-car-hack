@@ -460,6 +460,7 @@ mt3:Button({
 	Text = 'Equip',
 	Callback = function()
         Tabble[Select] = tonumber(Input:GetValue())
+	Tabble[6] = 1
 		local args = {
             [1] = "CharacterChange",
             [2] = Tabble,
