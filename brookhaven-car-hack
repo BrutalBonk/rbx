@@ -429,6 +429,9 @@ local mt3 = PlrHack1:CollapsingHeader({
 local mt4 = PlrHack1:CollapsingHeader({
 	Title = 'Custom Accessory'
 })
+local mt5 = PlrHack1:CollapsingHeader({
+	Title = 'Custom WalkStyle'
+})
 
 local Input1 = mt3:InputText({
 	Label = "ID",
@@ -436,6 +439,11 @@ local Input1 = mt3:InputText({
 	Value = "",
 })
 local Input2 = mt4:InputText({
+	Label = "ID",
+	PlaceHolder = "Enter here",
+	Value = "",
+})
+local Input3 = mt5:InputText({
 	Label = "ID",
 	PlaceHolder = "Enter here",
 	Value = "",
@@ -485,6 +493,18 @@ mt4:Button({
        local args = {
             [1] = "wear",
             [2] = tonumber(Input2:GetValue())
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+
+	end
+})
+mt5:Button({
+	Text = 'Equip',
+	Callback = function()
+       local args = {
+            [1] = "wearWalkStyle",
+            [2] = tonumber(Input3:GetValue())
         }
 
         game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
@@ -1401,4 +1421,4 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 5')
+notification('Connected | Author : HOKJHa, Version: 6')
