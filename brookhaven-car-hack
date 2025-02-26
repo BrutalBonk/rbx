@@ -484,7 +484,7 @@ mt4:Button({
 	Callback = function()
        local args = {
             [1] = "wear",
-            [2] = Input2:GetValue()
+            [2] = tonumber(Input2:GetValue())
         }
 
         game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
