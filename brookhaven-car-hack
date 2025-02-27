@@ -183,6 +183,9 @@ local character = self.Character
 local PlrHack = Window:CreateTab({
 	Name = "TROLL"
 })
+local BHack = Window:CreateTab({
+	Name = "AVATAR"
+})
 local PlrHack1 = PlrHack:CollapsingHeader({
 	Title = "Player"
 })
@@ -273,7 +276,7 @@ PlrHack1:Button({
 				Text = v.Name..if v.Character.Humanoid.Sit then ' [Sitting]' else '',
 				Callback = function()
 					local v_4 = self.Character.PrimaryPart.CFrame
-					self.Character.PrimaryPart.CFrame = CFrame.new(Vector3.new(0, 99999, 0))
+					self.Character.PrimaryPart.CFrame = CFrame.new(Vector3.new(0, -500, 0))
 					local hum = self.Character.Humanoid
 					local v_3 = self.Character.PrimaryPart.CFrame
 					self.Character.PrimaryPart.CFrame = workspace.WorkspaceCom["003_CouchGiveTool"].Main.CFrame
@@ -423,14 +426,11 @@ mt1:Button({
 local mt2 = PlrHack1:CollapsingHeader({
 	Title = 'Invis Method2'
 })
-local mt3 = PlrHack1:CollapsingHeader({
+local mt3 = BHack:CollapsingHeader({
 	Title = 'Custom Bundle'
 })
-local mt4 = PlrHack1:CollapsingHeader({
+local mt4 = BHack:CollapsingHeader({
 	Title = 'Custom Accessory'
-})
-local mt5 = PlrHack1:CollapsingHeader({
-	Title = 'Custom WalkStyle'
 })
 
 local Input1 = mt3:InputText({
@@ -439,11 +439,6 @@ local Input1 = mt3:InputText({
 	Value = "",
 })
 local Input2 = mt4:InputText({
-	Label = "ID",
-	PlaceHolder = "Enter here",
-	Value = "",
-})
-local Input3 = mt5:InputText({
 	Label = "ID",
 	PlaceHolder = "Enter here",
 	Value = "",
@@ -493,18 +488,6 @@ mt4:Button({
        local args = {
             [1] = "wear",
             [2] = tonumber(Input2:GetValue())
-        }
-
-        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
-
-	end
-})
-mt5:Button({
-	Text = 'Equip',
-	Callback = function()
-       local args = {
-            [1] = "wearWalkStyle",
-            [2] = tonumber(Input3:GetValue())
         }
 
         game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
@@ -1421,4 +1404,4 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 6')
+notification('Connected | Author : HOKJHa, Version: 7')
