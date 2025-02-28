@@ -187,6 +187,10 @@ local PlrHack = Window:CreateTab({
 local BHack = Window:CreateTab({
 	Name = "AVATAR"
 })
+local logk = Window:CreateTab({
+	Name = "Changelog"
+})
+
 local PlrHack1 = PlrHack:CollapsingHeader({
 	Title = "Player"
 })
@@ -1464,6 +1468,9 @@ local notification = function(text)
 	sound()
 end
 notification('Connected | Author : HOKJHa, Version: 8')
+logk:Label({
+	Text = '--BUG FIXES\n--Better kill script\n--Added config load in avatar\n-- Added info in kill script'
+})
 local args = {
     [1] = "RolePlayBio",
     [2] = "brokehaven \226\156\133"
