@@ -276,7 +276,7 @@ PlrHack1:Button({
 				Text = v.Name..if v.Character.Humanoid.Sit then ' [Sitting]' else '',
 				Callback = function()
 					local v_4 = self.Character.PrimaryPart.CFrame
-					self.Character.PrimaryPart.CFrame = CFrame.new(Vector3.new(0, -500, 0))
+					self.Character.PrimaryPart.CFrame = CFrame.new(Vector3.new(0, -400, 0))
 					local hum = self.Character.Humanoid
 					local v_3 = self.Character.PrimaryPart.CFrame
 					self.Character.PrimaryPart.CFrame = workspace.WorkspaceCom["003_CouchGiveTool"].Main.CFrame
@@ -291,24 +291,40 @@ PlrHack1:Button({
 							task.wait(0.05)
 							hum:EquipTool(cart)
 						self.Character.PrimaryPart.CFrame = CFrame.new(
-								v.Character.PrimaryPart.CFrame.Position - Vector3.new(0, 3, 0)
-								+ v.Character.PrimaryPart.CFrame.LookVector * 2 -- Move backward
-							)
+								v.Character.PrimaryPart.CFrame.Position - Vector3.new(0, 4, 0)
+								+ v.Character.PrimaryPart.CFrame.LookVector
+							) * CFrame.Angles(math.rad(5), math.rad(5), math.rad(5))
 
 							if hum.Health == 0 then
 								break
 							end
 						until occ.Occupant ~= nil or occ2.Occupant ~= nil
 						self.Character.PrimaryPart.CFrame = v_3
-						task.spawn(function()
-							self.Character.PrimaryPart.CFrame = v_3
-							task.wait(2)
-							self.Character.PrimaryPart.CFrame = v_3
-							hum.Health = 0
-						end)
-						task.wait(3)
+                        task.wait(0.5)
+                        hum:UnequipTools()
+						task.wait(0.2)
 						self.Character.PrimaryPart.CFrame = v_4
-						
+						local connection = v.Character.Humanoid.HealthChanged:Connect(function(health)
+                            if health == 0 then
+                                game.StarterGui:SetCore("SendNotification", {
+                                    Title = "BROKEHAVEN",
+                                    Text = v.Name .. " Died",
+                                    Icon = 'http://www.roblox.com/asset/?id=13733435096',
+                                    Duration = 1,
+                                })
+                                if Player.Character:FindFirstChild('sss2') then
+                                    local audio = Player.Character.sss2
+                                    audio.SoundId = 'rbxassetid://2868331684'
+                                    audio:Play()
+                                else
+                                    local audio = Instance.new("Sound", Player.Character)
+                                    audio.SoundId = 'rbxassetid://2868331684'
+                                    audio:Play()
+                                    audio.Name ='sss2'
+                                end
+                                connection:Disconnect()  -- Отключаем соединение
+                            end
+                        end)
 					end)
 					W1:Close()
 				end,
@@ -429,6 +445,9 @@ local mt2 = PlrHack1:CollapsingHeader({
 local mt3 = BHack:CollapsingHeader({
 	Title = 'Custom Bundle'
 })
+local mt1_3 = mt3:CollapsingHeader({
+	Title = 'Config'
+})
 local mt4 = BHack:CollapsingHeader({
 	Title = 'Custom Accessory'
 })
@@ -437,6 +456,45 @@ local Input1 = mt3:InputText({
 	Label = "ID",
 	PlaceHolder = "Enter here",
 	Value = "",
+})
+local Location1 = mt1_3:InputText({
+	Label = "Config Location",
+	PlaceHolder = "../config.txt",
+	Value = "",
+})
+local cTabble = {
+    [1] = 0,
+    [2] = 0,
+    [3] = 0,
+    [4] = 0,
+    [5] = 0,
+    [6] = 0
+}
+mt1_3:Button({
+	Text = 'Load',
+	Callback = function()
+        local HttpService = game:GetService("HttpService")
+
+        
+        local numbers = loadstring('return '..game:HttpGet(Location1:GetValue()))()
+        
+        local jsonString = HttpService:JSONEncode(numbers)
+
+        local decodedNumbers = HttpService:JSONDecode(jsonString)
+
+        for iiindex, vvvalue in ipairs(decodedNumbers) do
+            print(vvvalue)
+            cTabble[tonumber(iiindex)] =  tonumber(vvvalue)
+            cTabble[6] = 1
+            local args = {
+                [1] = "CharacterChange",
+                [2] = cTabble,
+                [3] = "CoolKid"
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Avata1rOrigina1l"):FireServer(unpack(args))
+        end
+	end
 })
 local Input2 = mt4:InputText({
 	Label = "ID",
@@ -1404,4 +1462,4 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 7')
+notification('Connected | Author : HOKJHa, Version: 8')
