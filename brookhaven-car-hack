@@ -1,4 +1,3 @@
-
 print('open-source HOKJHA')  --// Services 
 
 local RunService: RunService = game:GetService("RunService")
@@ -1467,9 +1466,9 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 8')
+notification('Connected | Author : HOKJHa, Version: 9')
 logk:Label({
-	Text = '--BUG FIXES\n--Better kill script\n--Added config load in avatar\n-- Added info in kill script'
+	Text = '--BUG FIXES\n--Better kill script\n--Added config load in avatar\n--Added info in kill script'
 })
 local args = {
     [1] = "RolePlayBio",
