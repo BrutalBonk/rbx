@@ -1,5 +1,6 @@
 
 print('open-source HOKJHA')  --// Services 
+
 local RunService: RunService = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local IsStudio = RunService:IsStudio()
@@ -1463,3 +1464,16 @@ local notification = function(text)
 	sound()
 end
 notification('Connected | Author : HOKJHa, Version: 8')
+local args = {
+    [1] = "RolePlayBio",
+    [2] = "brokehaven \226\156\133"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+task.wait(1)
+local args = {
+    [1] = "RolePlayBio",
+    [2] = ""
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
