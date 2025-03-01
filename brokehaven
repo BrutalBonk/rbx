@@ -201,6 +201,7 @@ RHack:Button({
         
         local Rejoin = coroutine.create(function()
             local Success, ErrorMessage = pcall(function()
+		queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/BrutalBonk/rbx/refs/heads/main/brookhaven-car-hack'))()")
                 TeleportService:Teleport(game.PlaceId, LocalPlayer)
             end)
         
