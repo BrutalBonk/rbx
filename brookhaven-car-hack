@@ -846,35 +846,38 @@ local Input2 = mt4:InputText({
 	PlaceHolder = "Enter here",
 	Value = "",
 })
-
+local Select = 0
 mt3:Combo({
 	Placeholder = "Select replacemt",
 	Label = "BodyPart",
 	Items = {
-		["Torso"] = 1,
-        ["LeftArm"] = 3,
-		["RightArm"] = 2,
-		["Head"] = 6,
-        ["RightLeg"] = 4,
-        ["LeftLeg"] = 5
+		Torso = 1,
+        LeftArm = 3,
+		RightArm = 2,
+		Head = 6,
+        RightLeg = 4,
+        LeftLeg = 5
 	},
 	Callback = function(self, Value)
-		Select = Value
+        
+		Select = self.Items[Value]
+
 	end,
 })
 local Tabble = {
-    [1] = 0,
-    [2] = 0,
-    [3] = 0,
-    [4] = 0,
-    [5] = 0,
-    [6] = 0
-}
+            [1] = 0,
+            [2] = 0,
+            [3] = 0,
+            [4] = 0,
+            [5] = 0,
+            [6] = 0
+        }
 mt3:Button({
 	Text = 'Equip',
 	Callback = function()
-        Tabble[Select] = tonumber(Input1:GetValue())
-	Tabble[6] = 1
+        
+        Tabble[tonumber(Select)] = tonumber(Input1:GetValue())
+	    Tabble[6] = 1
 		local args = {
             [1] = "CharacterChange",
             [2] = Tabble,
@@ -1797,7 +1800,7 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : HOKJHa, Version: 10')
+notification('Connected | Author : HOKJHa, Version: 11')
 
 
 local args = {
