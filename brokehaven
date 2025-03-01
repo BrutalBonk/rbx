@@ -886,7 +886,8 @@ mt1_22:Button({
                 "Right Leg",
                 "Left Arm",
                 "Right Arm",
-                "Torso"
+                "Torso",
+		"Head"
             }
 
             for _, item in ipairs(info.Items) do
@@ -903,9 +904,11 @@ mt1_22:Button({
                             v_1 = 2
                         elseif v == 'Torso' then
                             v_1 = 1
+			else 
+			    v_1 = 0
                         end
+			
                         bTabble[v_1] = tonumber(item.Id)
-                        bTabble[6] = 1
                         local args = {
                             [1] = "CharacterChange",
                             [2] = bTabble,
