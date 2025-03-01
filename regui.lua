@@ -6715,7 +6715,7 @@ ReGui:DefineElement("PopupModal", {
 			NoAutoFlags = false,
 			AutomaticSize = Enum.AutomaticSize.Y
 		}))
-		
+		print(Window:GetFullName())
 		function Config:ClosePopup()
 			Animation:Tween({
 				Object = ModalEffect,
@@ -6731,7 +6731,19 @@ ReGui:DefineElement("PopupModal", {
 			
 			Window:Close()
 		end
-		
+
+		Animation:Tween({
+			Object = ModalEffect,
+			Tweeninfo = WindowDimTweenInfo,
+			NoAnimation = NoAnimation,
+			StartProperties = {
+				BackgroundTransparency = 1
+			},
+			EndProperties = {
+				BackgroundTransparency = 0.8
+			}
+		})
+			
 		--// Tag elements into the theme
 		self:TagElements({
 			[ModalEffect] = "ModalWindowDim"
