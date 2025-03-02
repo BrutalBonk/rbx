@@ -283,7 +283,21 @@ local function playAnim(id, speed)
     currentTrack.Looped = true
     currentTrack:Play(.1, 9999999, speed)
 end
+local function playAnimNonLooped(id, speed)
+    local Player = game.Players.LocalPlayer
+    local character = Player.Character or Player.CharacterAdded:Wait()
+    local humanoid = character:WaitForChild("Humanoid")
 
+    -- Create Animation object (DON'T parent it to anything)
+    local Anim = Instance.new("Animation")
+    Anim.Name = "Kick1"
+    Anim.AnimationId = "rbxassetid://111721234918129" -- Ensure this is a valid animation ID
+
+    -- Load and play animation
+    local currentTrack2 = humanoid:LoadAnimation(Anim)
+    local speed = 1 -- Define speed value
+    currentTrack2:Play(0.1, 9999999, speed)
+end
 local function stopAnim()
     if currentTrack then
         currentTrack:Stop()
@@ -337,25 +351,20 @@ ColumnSelf1:Checkbox({
     end
 })
 ColumnSelf2:Checkbox({
-	Label = "Jumping animation",
+	Label = "NCT 127 animation",
     Value = false,
 	Callback = function(self, Value)
         if Value == true then
-            playAnim(12992262118, 1)
+            playAnim(12259826609, 1)
         else
             stopAnim()
         end
     end
 })
-ColumnSelf2:Checkbox({
-	Label = "Bow animation",
-    Value = false,
+ColumnSelf2:Button({
+	Text = "Kick animation",
 	Callback = function(self, Value)
-        if Value == true then
-            playAnim(13823324057, 1)
-        else
-            stopAnim()
-        end
+        playAnimNonLooped(77324133287848, 1)
     end
 })
 local Bring1 = PlrHack1:TreeNode({
