@@ -28,7 +28,14 @@ local self = game.Players.LocalPlayer
 local ImGui = ReGui
 
 local Player = game:GetService('Players').LocalPlayer
-
+local CFramePos = CFrame.new(-Player.Character:WaitForChild('Humanoid').MoveDirection.X, -2, 0)
+task.spawn(function()
+    while wait() do
+        local sin = math.sin(tick())
+        print(sin)
+        CFramePos = CFrame.new(-math.abs(sin), -4, math.sin(tick()))
+    end
+end)
 function s_notify(text)
     game.StarterGui:SetCore("SendNotification", {
                 Title = "BROKEHAVEN",
@@ -263,6 +270,27 @@ SelfRow1:Button({
         game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
     end
 })
+SelfRow1:Button({
+	Text = 'Name well x3',
+	Callback = function()
+        local str = 'Brokehaven 🤑🤑'
+        for i=0, string.len(str) do
+            task.wait(0.3)
+            local args = {
+                [1] = "RolePlayBio",
+                [2] = string.sub(str, i-1, string.len(str))
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+        end
+        local args = {
+            [1] = "RolePlayBio",
+            [2] = ""
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+    end
+})
 local plr = game:GetService("Players").LocalPlayer
 local humanoid = plr.Character:WaitForChild("Humanoid")
 local animSpeed = 1
@@ -444,10 +472,10 @@ Bring1_1:Button({
             humanoid:EquipTool(couchTool)
             
             repeat
-                task.wait(0.05)
+                task.wait(0.01)
                 humanoid:EquipTool(couchTool)
                 LocalPlayer.Character.PrimaryPart.CFrame = targetPlayer.Character.PrimaryPart.CFrame 
-                    * CFrame.new(0, -4, 0)
+                    * CFramePos
                     * CFrame.Angles(math.rad(5), math.rad(5), math.rad(5))
                 if targetPlayer.Character.Humanoid.SeatPart ~= seat1 and targetPlayer.Character.Humanoid.SeatPart ~= nil then
                     break
@@ -566,10 +594,10 @@ Bring1_1:Button({
             humanoid:EquipTool(couchTool)
             
             repeat
-                task.wait(0.05)
+                task.wait(0.01)
                 humanoid:EquipTool(couchTool)
                 LocalPlayer.Character.PrimaryPart.CFrame = targetPlayer.Character.PrimaryPart.CFrame 
-                    * CFrame.new(0, -4, 0)
+                    * CFramePos
                     * CFrame.Angles(math.rad(5), math.rad(5), math.rad(5))
                 if targetPlayer.Character.Humanoid.SeatPart ~= seat1 and targetPlayer.Character.Humanoid.SeatPart ~= nil then
                     break
@@ -690,10 +718,10 @@ Bring1_1:Button({
             humanoid:EquipTool(couchTool)
             
             repeat
-                task.wait(0.05)
+                task.wait(0.01)
                 humanoid:EquipTool(couchTool)
                 LocalPlayer.Character.PrimaryPart.CFrame = targetPlayer.Character.PrimaryPart.CFrame 
-                    * CFrame.new(0, -4, 0)
+                    * CFramePos
                     * CFrame.Angles(math.rad(5), math.rad(5), math.rad(5))
                 if targetPlayer.Character.Humanoid.SeatPart ~= seat1 and targetPlayer.Character.Humanoid.SeatPart ~= nil then
                     break
@@ -2081,7 +2109,7 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : rblx - HOKJHa, Version: 15')
+notification('Connected | Author : rblx - HOKJHa, Version: 16')
 RHack:Image({
 	Image = 7488932274
 })
