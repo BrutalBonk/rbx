@@ -5,7 +5,6 @@ local PrefabsId = 'rbxassetid://71968920594655'
 ReGui:Init({
 	Prefabs = game:GetService("InsertService"):LoadLocalAsset(PrefabsId)
 })
-
 game:GetService("InsertService"):LoadLocalAsset(PrefabsId).Parent = workspace
 local Window = ReGui:TabsWindow({
 	Title = "BROKEHAVEN ✅🥶 | rblx - HOKJHa",
@@ -47,7 +46,8 @@ end
 Window:Center()
 
 local CarHack = Window:CreateTab({
-	Name = "CAR"
+	Name = "CAR",
+    Icon = ReGui.Icons.Controller
 })
 
 local Tab = CarHack:CollapsingHeader({
@@ -200,13 +200,16 @@ Tab2:Button({
 local v_1 = false
 local character = self.Character
 local PlrHack = Window:CreateTab({
-	Name = "TROLL"
+	Name = "TROLL",
+    Icon = ReGui.Icons.User
 })
 local BHack = Window:CreateTab({
-	Name = "AVATAR"
+	Name = "AVATAR",
+    Icon = ReGui.Icons.Character
 })
 local RHack = Window:CreateTab({
-	Name = "OTHER"
+	Name = "OTHER",
+    Icon = ReGui.Icons.Info
 })
 RHack:Button({
     Text = 'Rejoin server',
@@ -813,18 +816,32 @@ local mt33 = mt3:Indent({Offset=15})
 local mt1_3 = mt33:CollapsingHeader({
 	Title = 'Config'
 })
-local mt1_33 = mt1_3:Indent({Offset=15})
+
+
+local TableR2 = mt1_3:Table()
+local RowR2 = TableR2:Row({Spacing = 30})
+local Column1R2 = RowR2:Column()
+
+local mt1_33 = Column1R2
 
 local mt1_2 = mt33:CollapsingHeader({
 	Title = 'Using BundleId'
 })
-local mt1_22 = mt1_2:Indent({Offset=15})
+local TableR1 = mt1_2:Table()
+local RowR1 = TableR1:Row({Spacing = 30})
+local Column1R1 = RowR1:Column()
+
+local mt1_22 = Column1R1
+
+
 
 local mt4 = BHack:CollapsingHeader({
 	Title = 'Custom Accessory'
 })
-
-local mt44 = mt4:Indent({Offset=15})
+local TableR = mt4:Table()
+local RowR = TableR:Row({Spacing = 30})
+local Column1R = RowR:Column()
+local mt44 = Column1R--:Indent({Offset=15})
 
 
 local Input1 = mt33:InputText({
@@ -833,8 +850,8 @@ local Input1 = mt33:InputText({
 	Value = "",
 })
 local Location1 = mt1_33:InputText({
-	Label = "Config Location",
-	PlaceHolder = "../config.txt",
+	Label = "URL",
+	PlaceHolder = "github",
 	Value = "",
 })
 local Location2 = mt1_22:InputText({
@@ -1886,8 +1903,9 @@ coroutine.wrap(function()
         local CFrame1 = Player.Character.HumanoidRootPart.CFrame
         if string.find(game:GetService("Players").LocalPlayer.PlayerGui.MainGUIHandler.Messages.MessageBackGound.TextMessage.Text, 'Banned') then
             if Player.Character.Humanoid.Health == 0 and v_51 then
+                local CFrame1 = Player.Character.HumanoidRootPart.CFrame
                 task.spawn(function()
-                    task.wait(5)
+                    task.wait(3)
                     Player.Character:WaitForChild('HumanoidRootPart').CFrame = CFrame1
                 end)
             end
