@@ -250,7 +250,7 @@ local PlrHack110 = SelfRow1:CollapsingHeader({
 local TableSelf1 = PlrHack110:Table()
 local RowSelf1 = TableSelf1:Row()
 local ColumnSelf1 = RowSelf1:Column()
-
+local ColumnSelf2 = RowSelf1:Column()
 
 SelfRow1:Button({
 	Text = 'Name promotion',
@@ -320,6 +320,39 @@ ColumnSelf1:Checkbox({
 	Callback = function(self, Value)
         if Value == true then
             playAnim(15609995579, 1)
+        else
+            stopAnim()
+        end
+    end
+})
+ColumnSelf1:Checkbox({
+	Label = "Bone Chillin' Bop animation",
+    Value = false,
+	Callback = function(self, Value)
+        if Value == true then
+            playAnim(15122972413, 1)
+        else
+            stopAnim()
+        end
+    end
+})
+ColumnSelf2:Checkbox({
+	Label = "Jumping animation",
+    Value = false,
+	Callback = function(self, Value)
+        if Value == true then
+            playAnim(12992262118, 1)
+        else
+            stopAnim()
+        end
+    end
+})
+ColumnSelf2:Checkbox({
+	Label = "Bow animation",
+    Value = false,
+	Callback = function(self, Value)
+        if Value == true then
+            playAnim(13823324057, 1)
         else
             stopAnim()
         end
