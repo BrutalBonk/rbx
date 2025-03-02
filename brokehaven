@@ -1846,6 +1846,14 @@ PlrHack3:Checkbox({
 		v_5 = value
 	end
 })
+local v_51 = false
+PlrHack3:Checkbox({
+	Label = "FlashTp on house-ban",
+	Value = false,
+	Callback = function(s, value)
+		v_51 = value
+	end
+})
 PlrHack3:Button({
     Text = "Give permission in all houses",
     Callback = function(s, value)
@@ -1874,9 +1882,17 @@ PlrHack3:Button({
 coroutine.wrap(function()
 	while true do
 	task.wait()
-    if string.find(game:GetService("Players").LocalPlayer.PlayerGui.MainGUIHandler.Messages.MessageBackGound.TextMessage.Text, 'Banned') then
-        warn('founded!')
-    end
+    pcall(function()
+        local CFrame1 = Player.Character.HumanoidRootPart.CFrame
+        if string.find(game:GetService("Players").LocalPlayer.PlayerGui.MainGUIHandler.Messages.MessageBackGound.TextMessage.Text, 'Banned') then
+            if Player.Character.Humanoid.Health == 0 and v_51 then
+                task.spawn(function()
+                    task.wait(5)
+                    Player.Character:WaitForChild('HumanoidRootPart').CFrame = CFrame1
+                end)
+            end
+        end
+    end)
 		if v_5 then
 			for i, v in pairs(workspace["001_Lots"]:GetChildren()) do
 				if string.find(v.Name, "House") then
