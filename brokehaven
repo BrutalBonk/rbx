@@ -31,9 +31,9 @@ local Player = game:GetService('Players').LocalPlayer
 local CFramePos = CFrame.new(-Player.Character:WaitForChild('Humanoid').MoveDirection.X, -2, 0)
 task.spawn(function()
     while wait() do
-        local sin = math.sin(tick())
+        local sin = math.sin(tick()* 500) * 2
         print(sin)
-        CFramePos = CFrame.new(-math.abs(sin), -4, math.sin(tick()))
+        CFramePos = CFrame.new(-math.abs(sin), -4, sin)
     end
 end)
 function s_notify(text)
