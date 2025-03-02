@@ -239,7 +239,20 @@ local PlrHack1 = PlrHack10:Indent({Offset = 15})
 local Self1 = PlrHack1:TreeNode({
 	Title = "Local player"
 })
-Self1:Button({
+local Bring2A = Self1:Table()
+local RowA = Bring2A:Row()
+local SelfRow1 = RowA:Column()
+
+local PlrHack110 = SelfRow1:CollapsingHeader({
+	Title = "Animations"
+})
+
+local TableSelf1 = PlrHack110:Table()
+local RowSelf1 = TableSelf1:Row()
+local ColumnSelf1 = RowSelf1:Column()
+
+
+SelfRow1:Button({
 	Text = 'Name promotion',
 	Callback = function()
         local args = {
@@ -248,6 +261,68 @@ Self1:Button({
         }
 
         game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+    end
+})
+local plr = game:GetService("Players").LocalPlayer
+local humanoid = plr.Character:WaitForChild("Humanoid")
+local animSpeed = 1
+local presetranimSpeed = 1
+local exploreranimSpeed = 1
+local weirdsitWeight = 0.1
+local weirdsit = false
+local animId
+local currentTrack
+
+local function playAnim(id, speed)
+    if currentTrack then
+        currentTrack:Stop()
+    end
+    local Anim = Instance.new("Animation")
+    Anim.AnimationId = "rbxassetid://" .. id
+    currentTrack = humanoid:LoadAnimation(Anim)
+    currentTrack.Looped = true
+    currentTrack:Play(.1, 9999999, speed)
+end
+
+local function stopAnim()
+    if currentTrack then
+        currentTrack:Stop()
+    end
+end
+ColumnSelf1:Label({
+	Text = 'R15 Required'
+})
+ColumnSelf1:Checkbox({
+	Label = 'Poop animation',
+    Value = false,
+	Callback = function(self, Value)
+        if Value == true then
+            playAnim(696096087, 1)
+        else
+            stopAnim()
+        end
+    end
+})
+ColumnSelf1:Checkbox({
+	Label = 'Rolling animation',
+    Value = false,
+	Callback = function(self, Value)
+        if Value == true then
+            playAnim(18665811005, 1)
+        else
+            stopAnim()
+        end
+    end
+})
+ColumnSelf1:Checkbox({
+	Label = 'Griddy animation',
+    Value = false,
+	Callback = function(self, Value)
+        if Value == true then
+            playAnim(17603135849, 1)
+        else
+            stopAnim()
+        end
     end
 })
 local Bring1 = PlrHack1:TreeNode({
@@ -1964,15 +2039,11 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : rblx - HOKJHa, Version: 14')
+notification('Connected | Author : rblx - HOKJHa, Version: 15')
 RHack:Image({
 	Image = 7488932274
 })
-RHack:DragFloat({
-    Maximum = 1,
-    Minimum = 0,
-    Value = 0.5
-})
+
 local args = {
     [1] = "RolePlayBio",
     [2] = "brokehaven \226\156\133"
