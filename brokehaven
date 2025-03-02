@@ -315,11 +315,11 @@ ColumnSelf1:Checkbox({
     end
 })
 ColumnSelf1:Checkbox({
-	Label = 'Griddy animation',
+	Label = 'Well x3 animation',
     Value = false,
 	Callback = function(self, Value)
         if Value == true then
-            playAnim(17603135849, 1)
+            playAnim(15609995579, 1)
         else
             stopAnim()
         end
