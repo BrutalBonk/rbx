@@ -13,6 +13,7 @@ local Window = ReGui:TabsWindow({
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
 
+
 warn('made by rblx: HOKJHA')  --// Services 
 
 local RunService: RunService = game:GetService("RunService")
@@ -28,6 +29,20 @@ local self = game.Players.LocalPlayer
 local ImGui = ReGui
 
 local Player = game:GetService('Players').LocalPlayer
+
+function s_notify(text)
+    game.StarterGui:SetCore("SendNotification", {
+                Title = "BROKEHAVEN",
+                Text = text,
+                Icon = 'rbxassetid://13733435096',
+                Duration = 1,
+            })
+            
+            local sound = Player.Character:FindFirstChild("sss2") or Instance.new("Sound")
+            sound.SoundId = 'rbxassetid://2868331684'
+            sound.Parent = Player.Character
+            sound:Play()
+end
 
 Window:Center()
 
@@ -96,7 +111,8 @@ Tab2:Button({
 	Callback = function()
 		local W1 = ImGui:PopupModal({
 			Title = "Suspension",
-			AutoSize = "Y"
+			AutoSize = "Y",
+            NoCollapse = false
 		})
 		W1:Button({
 			Text = "Remove",
@@ -112,11 +128,11 @@ Tab2:Button({
 				W1:Label({
 					Text = obj.Name
 				})
-				W1:Slider({
+				W1:SliderInt({
 					Label = "Length",
 					Value = obj.FreeLength,
-					MinValue = 0,
-					MaxValue = 30,
+					Minimum = 0,
+					Maximum = 30,
 					ReadOnly = false,
 
 					Callback = function(self2, Value)
@@ -127,11 +143,11 @@ Tab2:Button({
 						obj.MinLength = 0
 					end,
 				})
-				W1:Slider({
+				W1:SliderInt({
 					Label = "Wheel Rotation",
 					Value = cyl.InclinationAngle,
-					MinValue = -90,
-					MaxValue = 90,
+					Minimum = -90,
+					Maximum = 90,
 					ReadOnly = false,
 
 					Callback = function(self2, Value)
@@ -141,36 +157,36 @@ Tab2:Button({
 				local Header = W1:CollapsingHeader({
 					Title = "Position"
 				})
-				Header:Slider({
+				Header:SliderInt({
 					Label = "X",
 					Format = '%s',
 					Value = at.Position.X,
-					MinValue = -20,
-					MaxValue = 20,
+					Minimum = -20,
+					Maximum = 20,
 					ReadOnly = false,
 
 					Callback = function(self2, Value)
 						at.Position = Vector3.new(Value, at.Position.Y, at.Position.Z)
 					end,
 				})
-				Header:Slider({
+				Header:SliderInt({
 					Label = "Y",
 					Format = '%s',
 					Value = at.Position.Y,
-					MinValue = -20,
-					MaxValue = 20,
+					Minimum = -20,
+					Maximum = 20,
 					ReadOnly = false,
 
 					Callback = function(self2, Value)
 						at.Position = Vector3.new(at.Position.X, Value, at.Position.Z)
 					end,
 				})
-				Header:Slider({
+				Header:SliderInt({
 					Label = "Z",
 					Format = '%s',
 					Value = at.Position.Z,
-					MinValue = -20,
-					MaxValue = 20,
+					Minimum = -20,
+					Maximum = 20,
 					ReadOnly = false,
 
 					Callback = function(self2, Value)
@@ -1830,9 +1846,37 @@ PlrHack3:Checkbox({
 		v_5 = value
 	end
 })
+PlrHack3:Button({
+    Text = "Give permission in all houses",
+    Callback = function(s, value)
+        for i, v in pairs(workspace["001_Lots"]:GetChildren()) do
+				if string.find(v.Name, "House") then
+					local houseModel = v:FindFirstChild("HousePickedByPlayer") and v.HousePickedByPlayer:FindFirstChild("HouseModel")
+					if houseModel then
+						local number = v.Number.Number.Value
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.BuyHouse.CFrame
+                        task.wait(.5)
+                        local args = {
+                            [1] = "GivePermissionLoopToServer",
+                            [2] = game:GetService("Players").LocalPlayer,
+                            [3] = number
+                        }
+
+                        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Playe1rTrigge1rEven1t"):FireServer(unpack(args))
+                        s_notify(string.format('Got permission for house: %s', number))
+
+                    --end
+				end
+			end
+		end
+    end
+})
 coroutine.wrap(function()
 	while true do
 	task.wait()
+    if string.find(game:GetService("Players").LocalPlayer.PlayerGui.MainGUIHandler.Messages.MessageBackGound.TextMessage.Text, 'Banned') then
+        warn('founded!')
+    end
 		if v_5 then
 			for i, v in pairs(workspace["001_Lots"]:GetChildren()) do
 				if string.find(v.Name, "House") then
@@ -1886,11 +1930,15 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : rblx - HOKJHa, Version: 13')
+notification('Connected | Author : rblx - HOKJHa, Version: 14')
 RHack:Image({
 	Image = 7488932274
 })
-
+RHack:DragFloat({
+    Maximum = 1,
+    Minimum = 0,
+    Value = 0.5
+})
 local args = {
     [1] = "RolePlayBio",
     [2] = "brokehaven \226\156\133"
@@ -1904,5 +1952,3 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
-
-
