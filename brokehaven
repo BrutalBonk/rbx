@@ -2178,12 +2178,17 @@ local notification = function(text)
 	})
 	sound()
 end
+local special = ''
+local limit = false
 task.spawn(function()
     local chatbox = game:GetService("CoreGui").ExperienceChat.appLayout.chatInputBar.Background.Container.TextContainer.TextBoxContainer.TextBox
 
     local output = ""
     local text = ""
     local letter = ""
+
+    special = ''
+    limit = false
 
     local function transformText(inputText)
         local transformedText = ""
@@ -2200,12 +2205,40 @@ task.spawn(function()
                 else
                     letter = 'а'
                 end
+                if not limit  then
+                    limit = true
+                    if math.random(2) == 1  then
+                        special = special..'!'
+                        if math.random(2) == 1 then
+                            special = special..'😜'
+
+                            if math.random(2) == 1 then
+                                special = special..'😡'
+
+                                else
+                                
+                                special = special..'😥'
+                            end
+
+                            else
+
+                            special = special..'%'
+
+                        end
+
+                        else
+
+                        special = special..'?'
+
+                    end
+                end
             end
             transformedText = transformedText .. letter
         end
         return transformedText
     end
     local previousText = ""
+    
     chatbox:GetPropertyChangedSignal("Text"):Connect(function()
         if autism == false then
             return
@@ -2222,12 +2255,12 @@ task.spawn(function()
         if string.find(chatbox.Text, "%?$") then
             return
         end
-        local transformedText = transformText(chatbox.Text)
-        if autism then
-            warn(transformedText .. '?')
         
+        
+        local transformedText = transformText(chatbox.Text)
+        if autism then 
             task.wait(1)
-            chatbox.Text = transformedText .. '?'
+            chatbox.Text = transformedText .. special
             previousText = chatbox.Text
         end
     end)
