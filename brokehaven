@@ -29,12 +29,7 @@ local ImGui = ReGui
 
 local Player = game:GetService('Players').LocalPlayer
 local CFramePos = CFrame.new(-Player.Character:WaitForChild('Humanoid').MoveDirection.X, -2, 0)
-task.spawn(function()
-    while task.wait() do
-        local sin = math.sin(tick()* 500) * 2
-        CFramePos = CFrame.new(-math.abs(sin), -4, sin)
-    end
-end)
+
 function s_notify(text)
     game.StarterGui:SetCore("SendNotification", {
                 Title = "BROKEHAVEN",
@@ -344,14 +339,21 @@ SelfRow1:Button({
             )
         end)
 
-        -- Финал анимации
-        task.wait(2.5)
+
         if Root then
             Root.Anchored = originalAnchored
             Humanoid.Health = 0
         end
     end
 })
+local autism = false
+SelfRow1:Checkbox({
+	Label = 'Autism mode',
+    Value = false,
+	Callback = function(self, Value)
+        autism = Value
+    end
+}) 
 local plr = game:GetService("Players").LocalPlayer
 local humanoid = plr.Character:WaitForChild("Humanoid")
 local animSpeed = 1
@@ -655,6 +657,12 @@ Bring1_1:Button({
             humanoid:EquipTool(couchTool)
             
             repeat
+                task.spawn(function()
+                    while task.wait() do
+                        local sin = math.sin(tick()* 500) * 2
+                        CFramePos = CFrame.new(sin + targetPlayer.Character.Humanoid.MoveDirection.X, -4, targetPlayer.Character.Humanoid.MoveDirection.Z)
+                    end
+                end)
                 task.wait(0.01)
                 humanoid:EquipTool(couchTool)
                 LocalPlayer.Character.PrimaryPart.CFrame = targetPlayer.Character.PrimaryPart.CFrame 
@@ -2170,7 +2178,61 @@ local notification = function(text)
 	})
 	sound()
 end
-notification('Connected | Author : rblx - HOKJHa, Version: 16')
+task.spawn(function()
+    local chatbox = game:GetService("CoreGui").ExperienceChat.appLayout.chatInputBar.Background.Container.TextContainer.TextBoxContainer.TextBox
+
+    local output = ""
+    local text = ""
+    local letter = ""
+
+    local function transformText(inputText)
+        local transformedText = ""
+        for v = 1, #inputText do
+            if v % 2 == 0 then
+                if math.random(2) == 1 then
+                    letter = 'в'
+                else
+                    letter = 'ы'
+                end
+            else
+                if math.random(2) == 1 then
+                    letter = 'ж'
+                else
+                    letter = 'а'
+                end
+            end
+            transformedText = transformedText .. letter
+        end
+        return transformedText
+    end
+    local previousText = ""
+    chatbox:GetPropertyChangedSignal("Text"):Connect(function()
+        if autism == false then
+            return
+        end
+
+        if chatbox.Text == "" then
+            previousText = ""
+            return
+        end
+
+        if chatbox.Text == previousText then
+            return
+        end
+        if string.find(chatbox.Text, "%?$") then
+            return
+        end
+        local transformedText = transformText(chatbox.Text)
+        if autism then
+            warn(transformedText .. '?')
+        
+            task.wait(1)
+            chatbox.Text = transformedText .. '?'
+            previousText = chatbox.Text
+        end
+    end)
+end)
+notification('Connected | Author : rblx - HOKJHa, Version: 17')
 RHack:Image({
 	Image = 7488932274
 })
