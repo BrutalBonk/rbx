@@ -30,9 +30,8 @@ local ImGui = ReGui
 local Player = game:GetService('Players').LocalPlayer
 local CFramePos = CFrame.new(-Player.Character:WaitForChild('Humanoid').MoveDirection.X, -2, 0)
 task.spawn(function()
-    while wait() do
+    while task.wait() do
         local sin = math.sin(tick()* 500) * 2
-        print(sin)
         CFramePos = CFrame.new(-math.abs(sin), -4, sin)
     end
 end)
@@ -271,7 +270,7 @@ SelfRow1:Button({
     end
 })
 SelfRow1:Button({
-	Text = 'Name well x3',
+	Text = 'Name Brokehaven 🤑🤑',
 	Callback = function()
         local str = 'Brokehaven 🤑🤑'
         for i=0, string.len(str) do
@@ -289,6 +288,68 @@ SelfRow1:Button({
         }
 
         game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
+    end
+})
+SelfRow1:Button({
+    Text = 'Firework self',
+    Callback = function()
+        local Character = Player.Character or Player.CharacterAdded:Wait()
+        local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+        local Root = Character:FindFirstChild("HumanoidRootPart")
+        
+        if not Root or not Humanoid then return end
+
+        -- Сохраняем исходные свойства
+        local originalCFrame = Root.CFrame
+        local originalAnchored = Root.Anchored
+        
+        -- Блокируем физику
+        Root.Anchored = true
+        Humanoid:ChangeState(Enum.HumanoidStateType.Physics)
+
+        -- Первая фаза анимации (взлет)
+        local tweenInfo = TweenInfo.new(
+            1.5, -- Длительность
+            Enum.EasingStyle.Quad, -- Тип анимации
+            Enum.EasingDirection.Out -- Направление
+        )
+
+        local ascentTween = game:GetService("TweenService"):Create(
+            Root,
+            tweenInfo,
+            {
+                CFrame = originalCFrame 
+                    * CFrame.new(0, 55, 0) 
+                    * CFrame.Angles(0, math.rad(180), 0)
+            }
+        )
+
+        ascentTween:Play()
+        ascentTween.Completed:Wait()
+
+        -- Вторая фаза (вращение)
+        local spinAcceleration = 0
+        local startTime = os.clock()
+        
+        game:GetService("RunService").Heartbeat:Connect(function()
+            if not Root then return end
+            
+            local deltaTime = os.clock() - startTime
+            spinAcceleration = deltaTime * 15
+            
+            Root.CFrame = Root.CFrame * CFrame.Angles(
+                math.rad(spinAcceleration * 3),
+                math.rad(spinAcceleration * 1.5),
+                math.rad(spinAcceleration * 2)
+            )
+        end)
+
+        -- Финал анимации
+        task.wait(2.5)
+        if Root then
+            Root.Anchored = originalAnchored
+            Humanoid.Health = 0
+        end
     end
 })
 local plr = game:GetService("Players").LocalPlayer
