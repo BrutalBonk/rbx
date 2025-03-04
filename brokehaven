@@ -535,7 +535,13 @@ Bring1_1:Button({
             humanoid:EquipTool(couchTool)
             
             repeat
-                task.wait(0.01)
+                task.spawn(function()
+                    while task.wait() do
+                        local sin = math.sin(tick()*SinSpeed) 
+                        CFramePos = CFrame.new(sin + targetPlayer.Character.Humanoid.MoveDirection.X * 2, -4, targetPlayer.Character.Humanoid.MoveDirection.Z * 2) * RotSpeed + Vector3.new(X, Y, Z)
+                    end
+                end)
+                task.wait(Cooldown)
                 humanoid:EquipTool(couchTool)
                 LocalPlayer.Character.PrimaryPart.CFrame = targetPlayer.Character.PrimaryPart.CFrame 
                     * CFramePos
@@ -792,7 +798,13 @@ Bring1_1:Button({
             humanoid:EquipTool(couchTool)
             
             repeat
-                task.wait(0.01)
+                task.spawn(function()
+                    while task.wait() do
+                        local sin = math.sin(tick()*SinSpeed) 
+                        CFramePos = CFrame.new(sin + targetPlayer.Character.Humanoid.MoveDirection.X * 2, -4, targetPlayer.Character.Humanoid.MoveDirection.Z * 2) * RotSpeed + Vector3.new(X, Y, Z)
+                    end
+                end)
+                task.wait(Cooldown)
                 humanoid:EquipTool(couchTool)
                 LocalPlayer.Character.PrimaryPart.CFrame = targetPlayer.Character.PrimaryPart.CFrame 
                     * CFramePos
