@@ -664,8 +664,8 @@ Bring1_1:Button({
             repeat
                 task.spawn(function()
                     while task.wait() do
-                        local sin = math.sin(tick()*_G.SinSpeed) 
-                        CFramePos = CFrame.new(sin + targetPlayer.Character.Humanoid.MoveDirection.X * 2, -4, targetPlayer.Character.Humanoid.MoveDirection.Z * 2) * _G.RotSpeed + Vector3.new(_G.X, _G.Y, _G.Z)
+                        local sin = math.sin(tick()*SinSpeed) 
+                        CFramePos = CFrame.new(sin + targetPlayer.Character.Humanoid.MoveDirection.X * 2, -4, targetPlayer.Character.Humanoid.MoveDirection.Z * 2) * RotSpeed + Vector3.new(X, Y, Z)
                     end
                 end)
                 task.wait(Cooldown)
@@ -2338,7 +2338,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
-task.wait(1)
+task.wait(0.1)
 local args = {
     [1] = "RolePlayBio",
     [2] = ""
