@@ -620,7 +620,12 @@ Bring1_1:Button({
 Bring1_1:Label({
 	Text = 'Kill player'
 })
-
+X = 0
+Y = 0
+Z = 0
+SinSpeed = 100
+RotSpeed = 0
+Cooldown = 0.01
 Bring1_1:Button({
 	Text = 'Select player',
 	Callback = function()
@@ -659,11 +664,11 @@ Bring1_1:Button({
             repeat
                 task.spawn(function()
                     while task.wait() do
-                        local sin = math.sin(tick()* 500) * 2
-                        CFramePos = CFrame.new(sin + targetPlayer.Character.Humanoid.MoveDirection.X, -4, targetPlayer.Character.Humanoid.MoveDirection.Z)
+                        local sin = math.sin(tick()*_G.SinSpeed) 
+                        CFramePos = CFrame.new(sin + targetPlayer.Character.Humanoid.MoveDirection.X * 2, -4, targetPlayer.Character.Humanoid.MoveDirection.Z * 2) * _G.RotSpeed + Vector3.new(_G.X, _G.Y, _G.Z)
                     end
                 end)
-                task.wait(0.01)
+                task.wait(Cooldown)
                 humanoid:EquipTool(couchTool)
                 LocalPlayer.Character.PrimaryPart.CFrame = targetPlayer.Character.PrimaryPart.CFrame 
                     * CFramePos
@@ -1352,6 +1357,36 @@ mt2:Button({
 
 	end
 })
+local mt5 = BHack:CollapsingHeader({
+	Title = 'Custom Style'
+})
+local TableR5 = mt5:Table()
+local RowR5 = TableR5:Row({Spacing = 30})
+local Column1R5 = RowR5:Column()
+local mt55 = Column1R5--:Indent({Offset=15})
+
+mt55:Label({
+    Text = 'Enter only id of animation style (Not pack id!)'
+})
+local mt55input = mt55:InputText({
+    Placeholder = "ID",
+    Label = "ID",
+    Value = ""
+})
+
+mt55:Button({
+	Text = "Enter",
+	Callback = function(self)
+		local args = {
+            [1] = "wearWalkStyle",
+            [2] = tonumber(mt55input:GetValue())
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1Updat1eAvata1r"):FireServer(unpack(args))
+
+	end
+})
+
 local ph1 = PlrHack1:TreeNode({
 	Title = 'Sign troll'
 })
@@ -2211,25 +2246,10 @@ task.spawn(function()
                         special = special..'!'
                         if math.random(2) == 1 then
                             special = special..'😜'
-
                             if math.random(2) == 1 then
                                 special = special..'😡'
-
-                                else
-                                
-                                special = special..'😥'
                             end
-
-                            else
-
-                            special = special..'%'
-
                         end
-
-                        else
-
-                        special = special..'?'
-
                     end
                 end
             end
@@ -2260,15 +2280,57 @@ task.spawn(function()
         local transformedText = transformText(chatbox.Text)
         if autism then 
             task.wait(1)
-            chatbox.Text = transformedText .. special
+            chatbox.Text = transformedText .. special .. "?"
             previousText = chatbox.Text
         end
     end)
 end)
-notification('Connected | Author : rblx - HOKJHa, Version: 17')
+notification('Connected | Author : rblx - HOKJHa, Version: 18')
 RHack:Image({
 	Image = 7488932274
 })
+
+local Example
+
+-- Используем pcall для безопасного чтения файла
+local success, content = pcall(function()
+    return readfile('cfg.broke')
+end)
+
+if success and content then
+    Example = content
+else
+    print('Файл cfg.broke не найден или произошла ошибка. Используются значения по умолчанию.')
+    Example = [[
+    X = 0
+    Y = 0
+    Z = 0
+    SinSpeed = 100
+    RotSpeed = CFrame.new(math.rad(0), math.rad(0), math.rad(0))
+    Cooldown = 0.01
+    --Change to customize couch grab
+    ]]
+end
+
+-- Выводим содержимое Example
+print(Example)
+local Console = RHack:Console({
+    LineNumbers = true,
+    Value = Example
+})
+RHack:SmallButton({
+	Text = "Save",
+	Callback = function(self)
+		writefile('cfg.broke', tostring(Console:GetValue()))
+	end
+})
+task.spawn(function()
+    while task.wait() do
+        pcall(function()
+            loadstring(Console:GetValue())()
+        end)
+    end
+end)
 
 local args = {
     [1] = "RolePlayBio",
