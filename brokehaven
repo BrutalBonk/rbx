@@ -12,6 +12,84 @@ local Window = ReGui:TabsWindow({
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
 
+ReGui.Icons = {
+	Dot = "rbxasset://textures/whiteCircle.png",
+	Arrow = "rbxassetid://4731371527",
+	Close = "rbxasset://textures/AnimationEditor/icon_close.png",
+	Checkmark = "rbxasset://textures/AnimationEditor/icon_checkmark.png",
+	Cat = "rbxassetid://16211812161",
+	Script = "rbxassetid://11570895459",
+	Settings = "rbxassetid://9743465390",
+	Info = "rbxassetid://18754976792",
+	Move = "rbxassetid://6710235139",
+	Roblox = "rbxassetid://7414445494",
+	Warning = "rbxassetid://11745872910",
+	Audio = "rbxassetid://302250236",
+	Shop = "rbxassetid://6473525198",
+	CharacterDance = "rbxassetid://11932783331",
+	Pants = "rbxassetid://10098755331",
+	Home = "rbxassetid://4034483344",
+	Robux = "rbxassetid://5986143282",
+	Badge = "rbxassetid://16170504068",
+	SpawnLocation = "rbxassetid://6400507398",
+	Sword = "rbxassetid://7485051715",
+	Clover = "rbxassetid://11999300014",
+	Star = "rbxassetid://3057073083",
+	Code = "rbxassetid://11348555035",
+	Paw = "rbxassetid://13001190533",
+	Shield = "rbxassetid://7461510428",
+	Shield2 = "rbxassetid://7169354142",
+	File = "rbxassetid://7276823330",
+	Book = "rbxassetid://16061686835",
+	Location = "rbxassetid://13549782519",
+	Puzzle = "rbxassetid://8898417863",
+	Discord = "rbxassetid://84828491431270",
+	Premium = "rbxassetid://6487178625",
+	Friend = "rbxassetid://10885655986",
+	User = "rbxassetid://18854794412",
+	Duplicate = "rbxassetid://11833749507",
+	ChatBox = "rbxassetid://15839118471",
+	ChatBox2 = "rbxassetid://15839116089",
+	Devices = "rbxassetid://4458812712",
+	Weight = "rbxassetid://9855685269",
+	Image = "rbxassetid://4669770840",
+	Profile = "rbxassetid://13585614795",
+	Admin = "rbxassetid://11656483170",
+	PaintBrush = "rbxassetid://12111879608",
+	Speed = "rbxassetid://12641434961",
+	NoConnection = "rbxassetid://9795340967",
+	Connection = "rbxassetid://119759670842477",
+	Globe = "rbxassetid://18870359747",
+	Box = "rbxassetid://140217940575618",
+	Crown = "rbxassetid://18826490498",
+	Control = "rbxassetid://18979524646",
+	Send = "rbxassetid://18940312887",
+	FastForward = "rbxassetid://112963221295680",
+	Pause = "rbxassetid://109949100737970",
+	Reload = "rbxassetid://11570018242",
+	Joystick = "rbxassetid://18749336354",
+	Controller = "rbxassetid://11894535915",
+	Lock = "rbxassetid://17783082088",
+	Calculator = "rbxassetid://85861816563977",
+	Sun = "rbxassetid://13492317832",
+	Moon = "rbxassetid://8498174594",
+	Prohibited = "rbxassetid://5248916036",
+	Flag = "rbxassetid://251346532",
+	Website = "rbxassetid://98455290625865",
+	Telegram = "rbxassetid://115860270107061",
+	MusicNote = "rbxassetid://18187351229",
+	Music = "rbxassetid://253830398",
+	Headphones = "rbxassetid://1311321471",
+	Phone = "rbxassetid://8411963035",
+	Smartphone = "rbxassetid://14040313879",
+	Desktop = "rbxassetid://3120635703",
+	Desktop2 = "rbxassetid://4728059490",
+	Laptop = "rbxassetid://4728059725",
+	Server = "rbxassetid://9692125126",
+	Wedge = "rbxassetid://9086583059",
+	Drill = "rbxassetid://11959189471",
+	Character = "rbxassetid://13285102351",
+}
 
 warn('made by rblx: HOKJHA')  --// Services 
 
@@ -1596,521 +1674,133 @@ ph2:Button({
 local PlrHack11 = PlrHack:CollapsingHeader({
 	Title = "Item"
 })
-local PlrHack2 = PlrHack11:Indent({Offset=15})
+local ItemTable = PlrHack11:Table()
+local ItemRow = ItemTable:Row()
+local ItemColumn = ItemRow:Column()
 
-PlrHack2:Button({
-	Text = 'B1gD1ck',
-	Callback = function()
-		local function clearTools()
-			local args = {
-				[1] = "ClearAllTools"
-			}
+ItemColumn:Label({
+    Text = 'Buggy thing'
+})
+local TrollItem = ItemColumn:CollapsingHeader({
+    Title = 'Trolling',
+})
 
-			game:GetService("ReplicatedStorage").RE["1Clea1rTool1s"]:FireServer(unpack(args))
-		end
-		local function grab(item)
-			local args = {
-				[1] = "AcceptedToolToServer",
-				[2] = item,
-				[3] = game:GetService("Players").LocalPlayer
-			}
+local ItemTable2 = TrollItem:Table()
+local ItemRow2 = ItemTable2:Row()
+local ItemColumn2 = ItemRow2:Column()
 
-			game:GetService("ReplicatedStorage").RE["1Playe1rTrigge1rEven1t"]:FireServer(unpack(args))
-		end
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
+function cloneTool(ClickDetector)
+    local function fire()
+        fireclickdetector(ClickDetector)
+    end
 
-		-- Function to equip up to 5 tools from the backpack
-		local function equipTools()
-			local equippedCount = 0
-
-			-- Iterate through the tools in the backpack
-			for _, tool in ipairs(backpack:GetChildren()) do
-				if tool:IsA("Tool") then
-					-- Move the tool to the character and equip it
-					tool.Parent = character
-					equippedCount += 1
-
-					-- Stop after equipping 5 tools
-					if equippedCount >= 5 then
-						break
-					end
-				end
-			end
-		end
-
-		local function progress(value)
-			PB:SetPercentage(value % 100)
-		end
-		local character = self.Character
-		local hum = character.Humanoid
-		local boxes = workspace.WorkspaceCom["001_GiveTools"].Box
-		local pos = character.PrimaryPart.CFrame 
-		local attempts = 0 -- Количество попыток
-		clearTools()
-		while attempts < 5 do
-			-- Увеличиваем количество попыток
-			attempts += 1
-
-			-- Делаем паузу 5 раз
-			for i = 1, 5 do
-				task.wait()
-			end
-
-			-- Перемещаем персонажа к объекту
-			character.PrimaryPart.CFrame = boxes.CFrame
-
-			-- Активируем ClickDetector
-			fireclickdetector(boxes.ClickDetector)
-			task.wait(0.1)
-
-			-- Делаем инструмент доступным для сброса
-			local tool = character:FindFirstChildOfClass('Tool')
-			if tool then
-				tool.CanBeDropped = true
-			end
-			-- Ожидаем, пока инструмент не будет сброшен
-			repeat
-				task.wait()
-			until not character:FindFirstChildOfClass('Tool')
-
-			task.wait(0.3)
-
-			-- Снова перемещаем персонажа к объекту
-			character.PrimaryPart.CFrame = boxes.CFrame
-			fireclickdetector(boxes.ClickDetector)
-		end
-		hum:UnequipTools()
-		task.wait(0.2)
-		for i, v in pairs(workspace:GetChildren()) do
-			if v:IsA('Tool') and v.Name == 'Box' then
-				v.Parent = self.Backpack
-			end
-		end
-		hum:UnequipTools()
-		task.wait(0.1)
-		for i, tool in pairs(self.Backpack:GetChildren()) do
-			warn(i)
-			local grips = {
-				CFrame.new(-0.6, 0.7, -0.15) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
-				CFrame.new(-0.6, 0.7, 1.6) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
-				CFrame.new(-2.3, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
-				CFrame.new(-4.1, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
-				CFrame.new(-5.9, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
-			}
-			tool.Grip = grips[i]
-		end
-		task.wait(1)
-		task.spawn(function()
-			grab('FireX')
-			wait(0.3)
-			character.FireX.Grip = CFrame.new(0, 0, -1) * CFrame.Angles(math.rad(125), math.rad(210), math.rad(-90)) 
-
-		end)
-		task.wait(1)
-		character.PrimaryPart.CFrame = pos
-		hum:UnequipTools()
-		equipTools()
+	fire()
+	task.wait(.5)
+	local tool = character:FindFirstChildOfClass('Tool')
+	repeat 
+        if tool then
+            tool.CanBeDropped = true
+        end
+    until tool.CanBeDropped
+	repeat
 		task.wait()
-		equipTools()
-		self.Backpack.FireX.Parent = character
-	end
-})
-PlrHack2:Button({
-	Text = 'Sm@allD1ck',
-	Callback = function()
-		local function clearTools()
-			local args = {
-				[1] = "ClearAllTools"
-			}
+	until not character:FindFirstChildOfClass('Tool')
 
-			game:GetService("ReplicatedStorage").RE["1Clea1rTool1s"]:FireServer(unpack(args))
-		end
-		local function grab(item)
-			local args = {
-				[1] = "AcceptedToolToServer",
-				[2] = item,
-				[3] = game:GetService("Players").LocalPlayer
-			}
-
-			game:GetService("ReplicatedStorage").RE["1Playe1rTrigge1rEven1t"]:FireServer(unpack(args))
-		end
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-
-		-- Function to equip up to 5 tools from the backpack
-		local function equipTools()
-			local equippedCount = 0
-
-			-- Iterate through the tools in the backpack
-			for _, tool in ipairs(backpack:GetChildren()) do
-				if tool:IsA("Tool") then
-					-- Move the tool to the character and equip it
-					tool.Parent = character
-					equippedCount += 1
-
-					-- Stop after equipping 5 tools
-					if equippedCount >= 5 then
-						break
-					end
-				end
-			end
-		end
-		local function stopAllAnimations()
-			local humanoid = character:FindFirstChildOfClass("Humanoid") -- Get the humanoid
-			if humanoid then
-				local animator = humanoid:FindFirstChildOfClass("Animator") -- Get the animator
-				if animator then
-					for _, track in ipairs(animator:GetPlayingAnimationTracks()) do
-						track:Stop() -- Stop the animation track
-					end
-				else
-					warn("Animator not found in humanoid.")
-				end
-			else
-				warn("Humanoid not found in character.")
-			end
-		end
-
-		-- Call the function to stop all animations
-		stopAllAnimations()
-
-		local function progress(value)
-			PB:SetPercentage(value % 100)
-		end
-		local character = self.Character
-		local hum = character.Humanoid
-		local boxes = workspace.WorkspaceCom["001_GiveTools"].Banana
-		local boxes2 = workspace.WorkspaceCom["001_GiveTools"].Apple
-		local pos = character.PrimaryPart.CFrame 
-		local attempts = 0 -- Количество попыток
-		clearTools()
-		-- Перемещаем персонажа к объекту
-		character.PrimaryPart.CFrame = boxes.CFrame - Vector3.new(0, 1, 0)
-		fireclickdetector(boxes.ClickDetector)
-		task.wait(1)
-		hum:UnequipTools()
-		task.wait(0.2)
-		while attempts < 1 do
-			-- Увеличиваем количество попыток
-			attempts += 1
-
-			-- Делаем паузу 5 раз
-			for i = 1, 2 do
-				task.wait()
-			end
-
-			-- Перемещаем персонажа к объекту
-			character.PrimaryPart.CFrame = boxes2.CFrame -  Vector3.new(0, 2, 0)
-
-			-- Активируем ClickDetector
-			fireclickdetector(boxes2.ClickDetector)
-			task.wait(1)
-
-			-- Делаем инструмент доступным для сброса
-			local tool = character:FindFirstChildOfClass('Tool')
-			if tool then
-				tool.CanBeDropped = true
-			end
-			-- Ожидаем, пока инструмент не будет сброшен
-			repeat
-				task.wait()
-			until not character:FindFirstChildOfClass('Tool')
-
-			task.wait(0.3)
-
-			-- Снова перемещаем персонажа к объекту
-			character.PrimaryPart.CFrame = boxes2.CFrame
-			fireclickdetector(boxes2.ClickDetector)
-		end
-		hum:UnequipTools()
-		task.wait(0.2)
-		for i, v in pairs(workspace:GetChildren()) do
-			if v:IsA('Tool') and v.Name == 'Apple' then
-				v.Parent = self.Backpack
-			end
-		end
-		hum:UnequipTools()
-		self.Backpack.Banana.Parent = character
-		character.Banana.Grip = CFrame.new(-1.4, -0.5, 0) * CFrame.Angles(math.rad(-25), math.rad(180), math.rad(0))
-		task.wait(0.3)
-		for i, tool in pairs(self.Backpack:GetChildren()) do
-			warn(i)
-			local grips = {
-				CFrame.new(1.2, -0.1, 0) * CFrame.Angles(math.rad(-25), math.rad(180), math.rad(180)),
-				CFrame.new(1.6, -0.1, 0) * CFrame.Angles(math.rad(-25), math.rad(180), math.rad(180))
-			}
-			tool.Grip = grips[i]
-		end
-		character.PrimaryPart.CFrame = pos
-		hum:UnequipTools()
-		task.wait()
-		equipTools()
-		task.wait(0.2)
-		stopAllAnimations()
-	end
-})
-
-
---[[local PlrHack2P = PlrHack2:CollapsingHeader({
-	Title = "Grip"
-})
-PlrHack2P:Button({
-	Text = '-X',
-	Callback = function()
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-
-		character:FindFirstChildOfClass('Tool').Grip -= Vector3.new(0.1, 0, 0)
-	end
-})
-PlrHack2P:Button({
-	Text = '-Y',
-	Callback = function()
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-
-		character:FindFirstChildOfClass('Tool').Grip -= Vector3.new(0, 0.1, 0)
-	end
-})
-PlrHack2P:Button({
-	Text = '-Z',
-	Callback = function()
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-
-		character:FindFirstChildOfClass('Tool').Grip -= Vector3.new(0, 0, 0.1)
-	end
-})
-
-PlrHack2P:Button({
-	Text = '+X',
-	Callback = function()
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-
-		character:FindFirstChildOfClass('Tool').Grip += Vector3.new(0.1, 0, 0)
-	end
-})
-PlrHack2P:Button({
-	Text = '+Y',
-	Callback = function()
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-
-		character:FindFirstChildOfClass('Tool').Grip += Vector3.new(0, 0.1, 0)
-	end
-})
-PlrHack2P:Button({
-	Text = '+Z',
-	Callback = function()
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-
-		character:FindFirstChildOfClass('Tool').Grip += Vector3.new(0, 0, 0.1)
-	end
-})]]
-local P4 = PlrHack2:CollapsingHeader({
-	Title = "FireX"
-})
-P4:Button({
-	Text = 'Dupe FireX',
-	Callback = function()
-		local function clearTools()
-			local args = {
-				[1] = "ClearAllTools"
-			}
-
-			game:GetService("ReplicatedStorage").RE["1Clea1rTool1s"]:FireServer(unpack(args))
-		end
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-		local function equipTools()
-			for _, tool in ipairs(backpack:GetChildren()) do
-				if tool:IsA("Tool") then
-					tool.Parent = character
-				end
-			end
-		end
-		local character = self.Character
-		local hum = character.Humanoid
-		local boxes = workspace.WorkspaceCom["001_GiveTools"].FireX
-		local pos = character.PrimaryPart.CFrame 
-		local attempts = 0 -- Количество попыток
-		clearTools()
-		hum:UnequipTools()
-		task.wait(0.2)
-		while attempts < 11 do
-			-- Увеличиваем количество попыток
-			attempts += 1
-
-			-- Делаем паузу 5 раз
-			for i = 1, 2 do
-				task.wait()
-			end
-
-			-- Перемещаем персонажа к объекту
-			character.PrimaryPart.CFrame = boxes.CFrame
-
-			-- Активируем ClickDetector
-			local tool = character:FindFirstChildOfClass('Tool')
-			if tool then
-				tool.CanBeDropped = true
-			end
-			fireclickdetector(boxes.ClickDetector)
-			task.wait(0.3)
-
-			-- Делаем инструмент доступным для сброса
-			local tool = character:FindFirstChildOfClass('Tool')
-			if tool then
-				tool.CanBeDropped = true
-			end
-			-- Ожидаем, пока инструмент не будет сброшен
-			repeat
-				task.wait()
-			until not character:FindFirstChildOfClass('Tool')
-
-			task.wait(0.3)
-
-			-- Снова перемещаем персонажа к объекту
-			character.PrimaryPart.CFrame = boxes.CFrame
-			fireclickdetector(boxes.ClickDetector)
-		end
-		hum:UnequipTools()
-		task.wait(0.2)
-		for i, v in pairs(workspace:GetChildren()) do
-			if v:IsA('Tool') and v.Name == 'FireX' then
-				v.Grip = CFrame.new(0, 0, -6) * CFrame.Angles(math.rad(90), 0, 0)
-				task.wait(0.01)
-				v.Parent = self.Backpack
-			end
-		end
-		hum:UnequipTools()
-		character.PrimaryPart.CFrame = pos
-		task.wait(0.2)
-		equipTools()
-		task.wait(0.2)
-	end
-})
-local c = "On" -- Начальное состояние
-P4:Checkbox({
-	Label = "Enabled",
-	Value = false,
-	Callback = function(s, value)
-		if value then
-			character.Humanoid:UnequipTools()
-			local function equipTools()
-				for _, tool in ipairs(self.Backpack:GetChildren()) do
-					if tool:IsA("Tool") and tool.Name == 'FireX' then
-						tool.Grip = CFrame.new(0, 0, -6) * CFrame.Angles(math.rad(90), 0, 0)
-						wait(0.01)
-						tool.Parent = character
-					end
-				end
-			end
-			equipTools()
-			local backpack = game.Players.LocalPlayer.Character
-			task.spawn(function()
-				while wait() do
-					if value then
-						local delay = 0.01 -- Начальная задержка
-						local delayIncrement = 0.001 -- Увеличение задержки для каждого FireX
-
-						for _, tool in pairs(backpack:GetChildren()) do
-							if tool.Name == "FireX" then
-									wait(delay) -- Индивидуальная задержка для текущего FireX
-									
-									if c == "On" then
-										c = "Off"
-										tool.ToolSound:FireServer("FireX", "Off")
-									else
-										c = "On"
-										tool.ToolSound:FireServer("FireX", "On")
-									end
-								
-								delay += delayIncrement -- Увеличиваем задержку для следующего FireX
-							end
-						end
-					--[[else
-						for _, tool in pairs(backpack:GetChildren()) do
-							if tool.Name == "FireX" then
-								tool.ToolSound:FireServer("FireX", "Off")
-							end
-						end]]
-					end
-				end
-			end)
-
+end
+function endCloning(Player, ToolName)
+    for i, v in pairs(workspace:GetChildren()) do
+		if v:IsA('Tool') and v.Name == ToolName then
+			v.Parent = Player.Backpack
 		end
 	end
-})
-PlrHack2:Button({
-	Text = 'Equip Tools',
-	Callback = function()
-		local function clearTools()
-			local args = {
-				[1] = "ClearAllTools"
-			}
+end
+function clearTools()
+	local args = {
+		[1] = "ClearAllTools"
+	}
 
-			game:GetService("ReplicatedStorage").RE["1Clea1rTool1s"]:FireServer(unpack(args))
+	game:GetService("ReplicatedStorage").RE["1Clea1rTool1s"]:FireServer(unpack(args))
+end
+local function equipTools()
+	for _, tool in ipairs(Player.Backpack:GetChildren()) do
+		if tool:IsA("Tool") then
+			tool.Parent = Player.Character
 		end
-		local function grab(item)
-			local args = {
-				[1] = "AcceptedToolToServer",
-				[2] = item,
-				[3] = game:GetService("Players").LocalPlayer
-			}
-
-			game:GetService("ReplicatedStorage").RE["1Playe1rTrigge1rEven1t"]:FireServer(unpack(args))
-		end
-		local player = game.Players.LocalPlayer -- Get the local player
-		local character = player.Character or player.CharacterAdded:Wait() -- Ensure character exists
-		local backpack = player:WaitForChild("Backpack") -- Get the Backpack
-
-		-- Function to equip up to 5 tools from the backpack
-		local function equipTools()
-
-			-- Iterate through the tools in the backpack
-			for _, tool in ipairs(backpack:GetChildren()) do
-				if tool:IsA("Tool") then
-					-- Move the tool to the character and equip it
-					tool.Parent = character
-				end
-			end
-		end
-		local function stopAllAnimations()
-			local humanoid = character:FindFirstChildOfClass("Humanoid") -- Get the humanoid
-			if humanoid then
-				local animator = humanoid:FindFirstChildOfClass("Animator") -- Get the animator
-				if animator then
-					for _, track in ipairs(animator:GetPlayingAnimationTracks()) do
-						track:Stop() -- Stop the animation track
-					end
-				else
-					warn("Animator not found in humanoid.")
-				end
-			else
-				warn("Humanoid not found in character.")
-			end
-		end
-
-		-- Call the function to stop all animations
-		
-		character.Humanoid:UnequipTools()
-		wait(0.3)
-		equipTools()
-		wait(0.6)
-		stopAllAnimations()
 	end
+end
+function getTool(item)
+	local args = {
+		[1] = "AcceptedToolToServer",
+		[2] = item,
+		[3] = game:GetService("Players").LocalPlayer
+	}
+
+	game:GetService("ReplicatedStorage").RE["1Playe1rTrigge1rEven1t"]:FireServer(unpack(args))
+end
+function remember(icon, message)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "BROKEHAVEN",
+        Text = message,
+        Icon = icon,
+        Duration = 5,
+    })
+end
+function grip(Tool, CFrame)
+    Tool.Grip = CFrame
+end
+function Hash()
+    return string.format('object_%d', math.random(1, 10000))
+end
+ItemColumn2:Button({
+    Text = 'Penis',
+    Callback = function()
+        local Apple = workspace.WorkspaceCom["001_GiveTools"].Apple
+        Player.Character.HumanoidRootPart.CFrame = Apple.CFrame
+        
+        clearTools()
+
+        local Humanoid = Player.Character.Humanoid
+        Humanoid:UnequipTools()
+
+        task.wait(1)
+        for i=1, 2 do
+            remember(ReGui.Icons.Script, 'PRESS "Backspace" ! ! ! ')
+            cloneTool(Apple.ClickDetector)
+        end
+        endCloning(Player, 'Apple')
+        getTool('Banana')
+
+        task.wait(1)
+
+        Humanoid:UnequipTools()
+        local Offsets = {
+            CFrame.new(0.5, 0, 1.1, 0, 1, 0, 0, 0, 1, 1, 0, 0),
+            CFrame.new(0.5, 0, 1.8, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+        }
+        local InfOffset = CFrame.new(0, 0, 0, 0, 1, 0, -1, 0, -1, 0, 0, -0)
+        local Tools = {}
+        for _, Tool in pairs(Player.Backpack:GetChildren()) do
+            table.insert(Tools, Tool)
+            Tool.TextureId = ReGui.Icons.Image
+            if Tool.Name == 'Apple' then
+                grip(Tool, Offsets[_])
+            else
+                grip(Tool, CFrame.new(1.45, 0, 0, 1, 0, 0, 0, -1, -0, 0, 0, -1))
+            end
+        end
+        equipTools()
+        for i,v in pairs(Player.Character.Humanoid:GetPlayingAnimationTracks()) do
+            v:Stop()
+        end
+
+        remember(ReGui.Icons.CharacterDance,'NOW CHANGE ANIMATIONS ON THE LEFT MENU ! ! !')
+    end
+})
+ItemColumn2:Button({
+    Text = 'Equip tools',
+    Callback = function()
+        equipTools()
+    end
 })
 local PlrHack12 = PlrHack:CollapsingHeader({
 	Title = "House"
@@ -2297,7 +1987,7 @@ task.spawn(function()
         end
     end)
 end)
-notification('Connected | Author : rblx - HOKJHa, Version: 18')
+notification('Connected | Author : rblx - HOKJHa, Version: 19')
 RHack:Image({
 	Image = 7488932274
 })
@@ -2324,8 +2014,6 @@ else
     ]]
 end
 
--- Выводим содержимое Example
-print(Example)
 local Console = RHack:Console({
     LineNumbers = true,
     Value = Example
@@ -2350,7 +2038,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("RE"):WaitForChild("1RPNam1eTex1t"):FireServer(unpack(args))
-task.wait(0.1)
+task.wait(1)
 local args = {
     [1] = "RolePlayBio",
     [2] = ""
