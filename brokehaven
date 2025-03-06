@@ -1688,6 +1688,7 @@ local TrollItem = ItemColumn:CollapsingHeader({
 local ItemTable2 = TrollItem:Table()
 local ItemRow2 = ItemTable2:Row()
 local ItemColumn2 = ItemRow2:Column()
+local ItemColumn3 = ItemRow2:Column()
 
 function cloneTool(ClickDetector)
     local function fire()
@@ -1751,9 +1752,15 @@ end
 function Hash()
     return string.format('object_%d', math.random(1, 10000))
 end
+function stopAnims()
+    for i,v in pairs(Player.Character.Humanoid:GetPlayingAnimationTracks()) do
+        v:Stop()
+    end
+end
 ItemColumn2:Button({
-    Text = 'Penis',
+    Text = '[Fruits] Penis',
     Callback = function()
+        local RememberPos = Player.Character.HumanoidRootPart.CFrame
         local Apple = workspace.WorkspaceCom["001_GiveTools"].Apple
         Player.Character.HumanoidRootPart.CFrame = Apple.CFrame
         
@@ -1789,14 +1796,86 @@ ItemColumn2:Button({
             end
         end
         equipTools()
-        for i,v in pairs(Player.Character.Humanoid:GetPlayingAnimationTracks()) do
-            v:Stop()
-        end
+        stopAnims()
 
         remember(ReGui.Icons.CharacterDance,'NOW CHANGE ANIMATIONS ON THE LEFT MENU ! ! !')
+        Player.Character.HumanoidRootPart.CFrame = RememberPos
+    end
+})
+ItemColumn3:Label({
+    Text = 'Requires default character'
+})
+ItemColumn2:Button({
+    Text = '[Boxes] Penis',
+    Callback = function()
+        local RememberPos = Player.Character.HumanoidRootPart.CFrame
+        local Box = workspace.WorkspaceCom["001_GiveTools"].Box
+        Player.Character.HumanoidRootPart.CFrame = Box.CFrame
+        
+        clearTools()
+
+        local Humanoid = Player.Character.Humanoid
+        Humanoid:UnequipTools()
+
+        task.wait(1)
+        for i=1, 5 do
+            remember(ReGui.Icons.Script, 'PRESS "Backspace" ! ! ! ')
+            cloneTool(Box.ClickDetector)
+        end
+        endCloning(Player, 'Box')
+
+        task.wait(1)
+
+        Humanoid:UnequipTools()
+        local Offsets = {
+            CFrame.new(-0.6, 0.7, -0.15) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+			CFrame.new(-0.6, 0.7, 1.6) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+			CFrame.new(-2.3, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+			CFrame.new(-4.1, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+			CFrame.new(-5.9, 0.7, 0.55) * CFrame.Angles(math.rad(-21.5), math.rad(-21.5), math.rad(-30)),
+        }
+        local InfOffset = CFrame.new(0, 0, 0, 0, 1, 0, -1, 0, -1, 0, 0, -0)
+        local Tools = {}
+        for _, Tool in pairs(Player.Backpack:GetChildren()) do
+            table.insert(Tools, Tool)
+            Tool.TextureId = ReGui.Icons.Image
+            if Tool.Name == 'Box' then
+                grip(Tool, Offsets[_])
+            else
+                grip(Tool, CFrame.new(1.45, 0, 0, 1, 0, 0, 0, -1, -0, 0, 0, -1))
+            end
+        end
+        equipTools()
+        stopAnims()
+
+        remember(ReGui.Icons.CharacterDance,'NOW CHANGE ANIMATIONS ON THE LEFT MENU ! ! !')
+        Player.Character.HumanoidRootPart.CFrame = RememberPos
     end
 })
 ItemColumn2:Button({
+    Text = '[Cat] Penis',
+    Callback = function()
+        local Name = 'AnimalKittenGrey'
+        getTool(Name)
+
+        task.wait(0.2)
+        local Humanoid = Player.Character.Humanoid
+        Humanoid:UnequipTools()
+
+        task.wait(1)
+
+        local LocalPlayer = Player
+
+        local Tool = LocalPlayer.Backpack:FindFirstChild(Name)
+        Tool.Grip = CFrame.new(0.3, 0, 1.3) * CFrame.Angles(math.rad(90), math.rad(50), math.rad(-40))
+
+        task.wait(1)
+
+        equipTools()
+    end
+})
+
+ItemColumn:Button({
     Text = 'Equip tools',
     Callback = function()
         equipTools()
@@ -1987,7 +2066,7 @@ task.spawn(function()
         end
     end)
 end)
-notification('Connected | Author : rblx - HOKJHa, Version: 19')
+notification('Connected | Author : rblx - HOKJHa, Version: 20')
 RHack:Image({
 	Image = 7488932274
 })
