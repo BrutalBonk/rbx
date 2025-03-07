@@ -286,6 +286,10 @@ local BHack = Window:CreateTab({
 	Name = "AVATAR",
     Icon = ReGui.Icons.Character
 })
+local Settings = Window:CreateTab({
+	Name = "SETTINGS",
+    Icon = ReGui.Icons.Script
+})
 local RHack = Window:CreateTab({
 	Name = "OTHER",
     Icon = ReGui.Icons.Info
@@ -315,12 +319,20 @@ local PlrHack10 = PlrHack:CollapsingHeader({
 	Title = "Player"
 })
 local PlrHack1 = PlrHack10:Indent({Offset = 15})
-local Self1 = PlrHack1:TreeNode({
+local Self1 = PlrHack1:CollapsingHeader({
 	Title = "Local player"
 })
+local Self1_ = PlrHack10:CollapsingHeader({
+	Title = "Other"
+})
+
 local Bring2A = Self1:Table()
 local RowA = Bring2A:Row()
 local SelfRow1 = RowA:Column()
+
+local Bring_2A = Self1_:Table()
+local Row_A = Bring_2A:Row()
+local SelfRow11 = Row_A:Column()
 
 local PlrHack110 = SelfRow1:CollapsingHeader({
 	Title = "Animations"
@@ -536,14 +548,14 @@ ColumnSelf2:Button({
         playAnimNonLooped(77324133287848, 1)
     end
 })
-local Bring1 = PlrHack1:TreeNode({
+local Bring1 = PlrHack1:CollapsingHeader({
 	Title = "Other players"
 })
 local Bring2 = Bring1:Table()
 local Row = Bring2:Row()
 local Bring1_1 = Row:Column()
 local Bring1_2 = Row:Column()
-PlrHack1:Separator()
+
 Bring1_1:Label({
 	Text = 'Bring player'
 })
@@ -710,6 +722,7 @@ Z = 0
 SinSpeed = 100
 RotSpeed = 0
 Cooldown = 0.01
+KillPos = Vector3.new(0, -100, 0)
 Bring1_1:Button({
 	Text = 'Select player',
 	Callback = function()
@@ -734,7 +747,7 @@ Bring1_1:Button({
             W1:ClosePopup()
             gCouch()
             local humanoid = LocalPlayer.Character.Humanoid
-            local TargetC = CFrame.new(0, -100, 0)
+            local TargetC = CFrame.new(KillPos)
             humanoid:UnequipTools()
             
             local couchTool = LocalPlayer.Backpack:FindFirstChild("Couch")
@@ -1088,7 +1101,7 @@ local function size(value)
 
 	game:GetService("ReplicatedStorage").RE["1Clothe1s"]:FireServer(unpack(args))
 end
-local mt1 = PlrHack1:TreeNode({
+local mt1 = SelfRow11:CollapsingHeader({
 	Title = 'Invis Method1'
 })
 mt1:Button({
@@ -1113,7 +1126,7 @@ mt1:Button({
 		game.Players.LocalPlayer.Character.LowerTorso.CanCollide = true
 	end
 })
-local mt2 = PlrHack1:TreeNode({
+local mt2 = SelfRow11:CollapsingHeader({
 	Title = 'Invis Method2'
 })
 PlrHack1:Separator()
@@ -1477,10 +1490,10 @@ mt55:Button({
 	end
 })
 
-local ph1 = PlrHack1:TreeNode({
+local ph1 = SelfRow11:CollapsingHeader({
 	Title = 'Sign troll'
 })
-PlrHack1:Separator()
+
 ph1:Label({
 	Text = 'Allah mode'
 })
@@ -1608,7 +1621,7 @@ ph1:Checkbox({
 	end
 })
 
-local ph2 = PlrHack1:TreeNode({
+local ph2 = SelfRow11:CollapsingHeader({
 	Title = 'Effects'
 })
 
@@ -1909,7 +1922,6 @@ PlrHack3:Button({
 					local houseModel = v:FindFirstChild("HousePickedByPlayer") and v.HousePickedByPlayer:FindFirstChild("HouseModel")
 					if houseModel then
 						local number = v.Number.Number.Value
-                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.BuyHouse.CFrame
                         task.wait(.5)
                         local args = {
                             [1] = "GivePermissionLoopToServer",
@@ -1924,6 +1936,79 @@ PlrHack3:Button({
 				end
 			end
 		end
+    end
+})
+local PlrHack3CNoIndent = PlrHack3:CollapsingHeader({
+	Title = "Current house"
+})
+local PlrHack3C = PlrHack3CNoIndent:Indent({Offset = 15})
+PlrHack3C:Button({
+    Text = "Switch all lights",
+    Callback = function(s, value)
+        for _, lot in pairs(workspace["001_Lots"]:GetChildren()) do
+            if string.find(lot.Name, "House") then
+                local back = Player.Character.PrimaryPart.CFrame
+
+                local housePicked = lot:FindFirstChild("HousePickedByPlayer")
+                if not housePicked then continue end
+                
+                local houseModel = housePicked:FindFirstChild("HouseModel")
+                if not houseModel then continue end
+                
+                -- Проверка прав доступа
+                if not houseModel.MainHouseScript.PermissionPlayers:FindFirstChild(Player.Name) then
+                    remember(ReGui.Icons.Close, "No permission in current house")
+                    return -- Прекращаем выполнение при отсутствии прав
+                end
+                
+                -- Поиск позиции спавна дома
+                local spawnPosition = lot:FindFirstChild('HouseSpawnPosition')
+                if not spawnPosition then continue end
+                
+                -- Проверка нахождения игрока в доме
+                local size = (houseModel:GetExtentsSize() / 1.05) + Vector3.new(0, 100, 0)
+                local playerInHouse = false
+                
+                for _, part in pairs(workspace:GetPartBoundsInBox(spawnPosition.CFrame, size)) do
+                    if part.Parent == Player.Character then
+                        playerInHouse = true
+                        break
+                    end
+                end
+                
+                if playerInHouse then
+                    -- Выключаем все переключатели
+                    for _, light in pairs(houseModel["001_HouseLights"]:GetChildren()) do
+                        if not light:IsA('Model') then
+                            Player.Character.PrimaryPart.CFrame = light.CFrame
+                            task.wait(0.5)
+                            fireclickdetector(light:FindFirstChildOfClass('ClickDetector'))
+                            task.wait(0.5)
+                            
+                        end
+                    end
+                    Player.Character.PrimaryPart.CFrame = back
+                end
+            end
+        end
+        
+        remember(ReGui.Icons.Close, "No active house found")
+    end
+})
+local globalValueTrue = false
+local globalValueTrueBell = false
+PlrHack3C:Checkbox({
+    Label = "Knock aura",
+    Value = false,
+    Callback = function(s, ValueTrue)
+        globalValueTrue = ValueTrue
+    end
+})
+PlrHack3C:Checkbox({
+    Label = "Bell aura",
+    Value = false,
+    Callback = function(s, ValueTrue)
+        globalValueTrueBell = ValueTrue
     end
 })
 coroutine.wrap(function()
@@ -1961,16 +2046,82 @@ coroutine.wrap(function()
 				self.Character.PrimaryPart.CFrame = at_plr.Character.PrimaryPart.CFrame
 			end)
 		end
+        if globalValueTrue then
+            for _, lot in pairs(workspace["001_Lots"]:GetChildren()) do
+                if string.find(lot.Name, "House") then
+                    local back = Player.Character.PrimaryPart.CFrame
+                    local housePicked = lot:FindFirstChild("HousePickedByPlayer")
+                    if not housePicked then continue end
+                        
+                    local houseModel = housePicked:FindFirstChild("HouseModel")
+                    if not houseModel then continue end
+  
+
+                    local spawnPosition = lot:FindFirstChild('HouseSpawnPosition')
+                    if not spawnPosition then continue end
+                        
+                    local size = (houseModel:GetExtentsSize() / 1.05) + Vector3.new(0, 100, 0)
+                    local playerInHouse = false
+                        
+                    for _, part in pairs(workspace:GetPartBoundsInBox(spawnPosition.CFrame, size)) do
+                        if part.Parent == Player.Character then
+                            playerInHouse = true
+                             break
+                        end
+                    end
+                        
+                    if playerInHouse and globalValueTrue then
+                        pcall(function()
+                            fireclickdetector(houseModel["001_HouseDoors"].HouseDoorFront.Knock.TouchBell:WaitForChild('ClickDetector'))
+                        end)
+                        Player.Character.PrimaryPart.CFrame = back
+                    end
+                end
+            end
+        end
+        if globalValueTrueBell then
+            for _, lot in pairs(workspace["001_Lots"]:GetChildren()) do
+                if string.find(lot.Name, "House") then
+                    local back = Player.Character.PrimaryPart.CFrame
+                    local housePicked = lot:FindFirstChild("HousePickedByPlayer")
+                    if not housePicked then continue end
+                        
+                    local houseModel = housePicked:FindFirstChild("HouseModel")
+                    if not houseModel then continue end
+  
+
+                    local spawnPosition = lot:FindFirstChild('HouseSpawnPosition')
+                    if not spawnPosition then continue end
+                        
+                    local size = (houseModel:GetExtentsSize() / 1.05) + Vector3.new(0, 100, 0)
+                    local playerInHouse = false
+                        
+                    for _, part in pairs(workspace:GetPartBoundsInBox(spawnPosition.CFrame, size)) do
+                        if part.Parent == Player.Character then
+                            playerInHouse = true
+                             break
+                        end
+                    end
+                        
+                    if playerInHouse and globalValueTrueBell then
+                        pcall(function()
+                            fireclickdetector(houseModel["001_DoorBell"].TouchBell:WaitForChild('ClickDetector'))
+                        end)
+                        Player.Character.PrimaryPart.CFrame = back
+                    end
+                end
+            end
+        end
 	end
 end)() 
 local sound = function()
 	if Player.Character:FindFirstChild('sss') then
 		local audio = Player.Character.sss
-		audio.SoundId = 'rbxassetid://87440193768707'
+		audio.SoundId = 'rbxassetid://7705506391'
 		audio:Play()
 	else
 		local audio = Instance.new("Sound", Player.Character)
-		audio.SoundId = 'rbxassetid://87440193768707'
+		audio.SoundId = 'rbxassetid://7705506391'
 		audio:Play()
 		audio.Name ='sss'
 	end
@@ -2066,7 +2217,8 @@ task.spawn(function()
         end
     end)
 end)
-notification('Connected | Author : rblx - HOKJHa, Version: 20')
+notification('Connected | Author : rblx - HOKJHa, Version: 21')
+
 RHack:Image({
 	Image = 7488932274
 })
@@ -2092,16 +2244,35 @@ else
     --Change to customize couch grab
     ]]
 end
-
-local Console = RHack:Console({
+local SMain1 = Settings:CollapsingHeader({
+    Title = 'Coach settings'
+})
+local SMain2 = Settings:CollapsingHeader({
+    Title = 'Coach methods'
+})
+local Console = SMain1:Console({
     LineNumbers = true,
     Value = Example
 })
-RHack:SmallButton({
+
+SMain1:SmallButton({
 	Text = "Save",
 	Callback = function(self)
 		writefile('cfg.broke', tostring(Console:GetValue()))
 	end
+})
+
+SMain2:SliderEnum({
+    Items = {"Up", "Down"},
+    Value = 2, -- Index,
+    Label = "Coach kill method",
+    Callback = function(self, _return_)
+        if _return_ == 'Up' then
+            KillPos = Vector3.new(0, 100000, 0)
+        else
+            KillPos = Vector3.new(0, -100, 0)
+        end
+    end
 })
 task.spawn(function()
     while task.wait() do
