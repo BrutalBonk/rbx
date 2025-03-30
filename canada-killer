@@ -6,10 +6,13 @@ local NoBoxes = true
 local AutoPickup = false
 local AutoTpAfterCollect = false
 
-local list = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17 9x19", "J-9 Meretta 9x19", "GS-17 SMART GUN 9x19", "RugRug-Mark1 22lr.", "RugRug-Mark2 22lr.", "RugRug-LCP 38.SPCL", "TEKE-9 9x19", "TK-99 9x19", "JS-22 22lr", "JS-44 44.MAGN", "BUXXBERG590 Shotgun Shells", "RugRug-Mini Ranch Rifle 223.REM", "RugRug-Survival Rifle 22lr.", "BEAGLE 50.AE", "MAK-11 45ACP", "HW2000 556NETO", "HW45-USP 45ACP", "Wenry45 45.ACP", "RR-LCP 38.", "ZKZ 7.62x39", "JS-1200 ShotgunShells", "KALIKO M90 45acp", "ROSEN NAGANT 7.62x39", "JS-11 ShotgunShells", "JS-2 COMPETITOR 308.WIN"}
-local list2 = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17", "J-9 Meretta", "GS-17", "RugRug-Mark1.", "RugRug-Mark2", "RugRug-LCP", "TEKE-9", "TK-99", "JS-22", "JS-44", "BUXXBERG590", "RugRug-Mini Ranch Rifle", "RugRug-Survival Rifle.", "BEAGLE", "MAK-11", "HW2000", "HW45-USP", "Wenry45", "RR-LCP", "ZKZ", "JS-1200", "KALIKO M90", "ROSEN NAGANT", "JS-11", "COMPETITOR-JS2"}
+--local list = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17 9x19", "J-9 Meretta 9x19", "GS-17 SMART GUN 9x19", "RugRug-Mark1 22lr.", "RugRug-Mark2 22lr.", "RugRug-LCP 38.SPCL", "TEKE-9 9x19", "TK-99 9x19", "JS-22 22lr", "JS-44 44.MAGN", "BUXXBERG590 Shotgun Shells", "RugRug-Mini Ranch Rifle 223.REM", "RugRug-Survival Rifle 22lr.", "BEAGLE 50.AE", "MAK-11 45ACP", "HW2000 556NETO", "HW45-USP 45ACP", "Wenry45 45.ACP", "RR-LCP 38.", "ZKZ 7.62x39", "JS-1200 ShotgunShells", "KALIKO M90 45acp", "ROSEN NAGANT 7.62x39", "JS-11 ShotgunShells", "JS-2 COMPETITOR 308.WIN"}
+--local list2 = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17", "J-9 Meretta", "GS-17", "RugRug-Mark1.", "RugRug-Mark2", "RugRug-LCP", "TEKE-9", "TK-99", "JS-22", "JS-44", "BUXXBERG590", "RugRug-Mini Ranch Rifle", "RugRug-Survival Rifle.", "BEAGLE", "MAK-11", "HW2000", "HW45-USP", "Wenry45", "RR-LCP", "ZKZ", "JS-1200", "KALIKO M90", "ROSEN NAGANT", "JS-11", "COMPETITOR-JS2"}
+local list = {}
+local list2 = {}
+--game:GetService("ReplicatedStorage").Customization.Shirts.Shirtpostal.ShirtTemplate = 'http://www.roblox.com/asset/?id=6661954083'
+--game:GetService("ReplicatedStorage").Customization.Pants.Pants1.PantsTemplate = 'http://www.roblox.com/asset/?id=6661954083'
 
---// Window 
 local Window = ImGui:CreateWindow({
 	Title = "canada чикатило | ADMIN",
 	Size = UDim2.new(0, 350, 0, 370),
@@ -193,6 +196,7 @@ GameTab:Button({
 		local Character = Player.Character
 		local ch = Character.PlayerAmmoAmount
 		for i, v in pairs(ch:GetChildren()) do
+		task.wait()
 			if not string.find(v.Name, 'Max') then
 				local maxObject = ch:FindFirstChild(v.Name..'Max')
 				if maxObject then
@@ -295,6 +299,7 @@ PlrTab:Button({
 	Text = 'Withdraw (1000$)',
 	Callback = function()
 	if Player.Character.Money.Value >= 1 then
+	task.wait()
 		game:GetService("ReplicatedStorage").NATMEVENTERRERERE:FireServer(tostring('1000'), "withdraw")
 		sound()
 	end
@@ -372,6 +377,7 @@ end
 while wait() do
 	if pas then
 		pcall(function()
+		task.wait()
 			if workspace:FindFirstChild('CashDrop') then
 				workspace.CashDrop.Buck:FindFirstChildOfClass('RemoteEvent'):FireServer()
 				sound()
@@ -386,16 +392,19 @@ while wait() do
 	end]]
 	if fe then
 		pcall(function()
+		task.wait()
 			game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool').AttachmentEvents.MainColory:FireServer(hueToColor(hue))
 			
 			hue = hue + 0.01
 			if hue > 1 then
+			task.wait()
 				hue = 0
 			end	
 		end)
 	end
 	if plc then
 		pcall(function()
+		task.wait()
 			game.Players.LocalPlayer.Character:FindFirstChildOfClass('Tool'):WaitForChild('Union').GunMuzzlePoint1.Name = 'noeffectsorry'
 		end)
 	end
