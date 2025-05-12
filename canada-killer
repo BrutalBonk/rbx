@@ -2,17 +2,58 @@ local ImGui = loadstring(game:HttpGet('https://github.com/depthso/Roblox-ImGUI/r
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 
-local NoBoxes = true
-local AutoPickup = false
-local AutoTpAfterCollect = false
+local itemData = {}
+local itemList = {
+    {FullName = "K4A1", DisplayName = "K4A1"},
+    {FullName = "HW5k", DisplayName = "HW5k"},
+    {FullName = "ANK47", DisplayName = "ANK47"},
+    {FullName = "Altyn", DisplayName = "Altyn"},
+    {FullName = "Noobian body armour", DisplayName = "Noobian body armour"},
+    {FullName = "Kanatian TacVest", DisplayName = "Kanatian TacVest"},
+    {FullName = "Maska", DisplayName = "Maska"},
+    {FullName = "GG-17 9x19", DisplayName = "GG-17"},
+    {FullName = "J-9 Meretta 9x19", DisplayName = "J-9 Meretta"},
+    {FullName = "GS-17 SMART GUN 9x19", DisplayName = "GS-17"},
+    {FullName = "RugRug-Mark1 22lr.", DisplayName = "RugRug-Mark1."},
+    {FullName = "RugRug-Mark2 22lr.", DisplayName = "RugRug-Mark2"},
+    {FullName = "RugRug-LCP 38.SPCL", DisplayName = "RugRug-LCP"},
+    {FullName = "TEKE-9 9x19", DisplayName = "TEKE-9"},
+    {FullName = "TK-99 9x19", DisplayName = "TK-99"},
+    {FullName = "JS-22 22lr", DisplayName = "JS-22"},
+    {FullName = "JS-44 44.MAGN", DisplayName = "JS-44"},
+    {FullName = "BUXXBERG590 Shotgun Shells", DisplayName = "BUXXBERG590"},
+    {FullName = "RugRug-Mini Ranch Rifle 223.REM", DisplayName = "RugRug-Mini Ranch Rifle"},
+    {FullName = "RugRug-Survival Rifle 22lr.", DisplayName = "RugRug-Survival Rifle."},
+    {FullName = "BEAGLE 50.AE", DisplayName = "BEAGLE"},
+    {FullName = "MAK-11 45ACP", DisplayName = "MAK-11"},
+    {FullName = "HW2000 556NETO", DisplayName = "HW2000"},
+    {FullName = "HW45-USP 45ACP", DisplayName = "HW45-USP"},
+    {FullName = "Wenry45 45.ACP", DisplayName = "Wenry45"},
+    {FullName = "RR-LCP 38.", DisplayName = "RR-LCP"},
+    {FullName = "ZKZ 7.62x39", DisplayName = "ZKZ"},
+    {FullName = "JS-1200 ShotgunShells", DisplayName = "JS-1200"},
+    {FullName = "KALIKO M90 45acp", DisplayName = "KALIKO M90"},
+    {FullName = "ROSEN NAGANT 7.62x39", DisplayName = "ROSEN NAGANT"},
+    {FullName = "JS-11 ShotgunShells", DisplayName = "JS-11"},
+    {FullName = "JS-2 COMPETITOR 308.WIN", DisplayName = "COMPETITOR-JS2"},
+}
 
-local list = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17 9x19", "J-9 Meretta 9x19", "GS-17 SMART GUN 9x19", "RugRug-Mark1 22lr.", "RugRug-Mark2 22lr.", "RugRug-LCP 38.SPCL", "TEKE-9 9x19", "TK-99 9x19", "JS-22 22lr", "JS-44 44.MAGN", "BUXXBERG590 Shotgun Shells", "RugRug-Mini Ranch Rifle 223.REM", "RugRug-Survival Rifle 22lr.", "BEAGLE 50.AE", "MAK-11 45ACP", "HW2000 556NETO", "HW45-USP 45ACP", "Wenry45 45.ACP", "RR-LCP 38.", "ZKZ 7.62x39", "JS-1200 ShotgunShells", "KALIKO M90 45acp", "ROSEN NAGANT 7.62x39", "JS-11 ShotgunShells", "JS-2 COMPETITOR 308.WIN"}
-local list2 = {"K4A1", "HW5k", "ANK47", "Altyn", "Noobian body armour", "Kanatian TacVest", "Maska", "GG-17", "J-9 Meretta", "GS-17", "RugRug-Mark1.", "RugRug-Mark2", "RugRug-LCP", "TEKE-9", "TK-99", "JS-22", "JS-44", "BUXXBERG590", "RugRug-Mini Ranch Rifle", "RugRug-Survival Rifle.", "BEAGLE", "MAK-11", "HW2000", "HW45-USP", "Wenry45", "RR-LCP", "ZKZ", "JS-1200", "KALIKO M90", "ROSEN NAGANT", "JS-11", "COMPETITOR-JS2"}
---game:GetService("ReplicatedStorage").Customization.Shirts.Shirtpostal.ShirtTemplate = 'http://www.roblox.com/asset/?id=6661954083'
---game:GetService("ReplicatedStorage").Customization.Pants.Pants1.PantsTemplate = 'http://www.roblox.com/asset/?id=6661954083'
---game:GetService("Players").LocalPlayer.PlayerGui.CharacterCreationGUI.LeThang.Hair2.ScrollingFrame.Shirt.Postal.Text = 'CREEEEEEEEEEPY SHIRT'
---game:GetService("Players").LocalPlayer.PlayerGui.CharacterCreationGUI.LeThang.Hair2.ScrollingFrame.Pant.Pant1.Text = 'CREEEEEEEPY PANTS'
---// Window 
+-- Предварительный поиск всех предметов
+local function preCacheItems()
+    for _, item in ipairs(itemList) do
+        for _, v in ipairs(workspace:GetDescendants()) do
+            if v:IsA("StringValue") and v.Value == item.FullName then
+                itemData[item.FullName] = {
+                    Part = v.Parent,
+                    Price = v.Parent.Price.Value
+                }
+                break
+            end
+        end
+    end
+end
+preCacheItems()
+
 local Window = ImGui:CreateWindow({
 	Title = "canada чикатило | ADMIN",
 	Size = UDim2.new(0, 350, 0, 370),
@@ -30,6 +71,10 @@ local GameTab = Window:CreateTab({
 
 local PlrTab = Window:CreateTab({
 	Name = "Player"
+})
+
+local PlrTab2 = Window:CreateTab({
+	Name = "NOHACK"
 })
 function contains(word, tofind)
     if string.find(word, tofind) then
@@ -127,68 +172,46 @@ GameTab:Button({
 		sound()
 	end,
 })
-for i, v in pairs(list) do
-	local GameTab2 = AutoBuyTab:CollapsingHeader({
-		Title = list[i]
-	})
-	local cost = 0
-	GameTab2:Button({
-		Text = 'Buy',
-		Callback = function(self, vv)
-			--[[local le, path = 'Delta',  workspace.WIPFolder
-			local Character = Player.Character
-			local RootPart = Character.PrimaryPart
-			local Pos = RootPart.CFrame
-			for i, v in pairs(path:GetDescendants()) do
-				if v:IsA('StringValue') then
-					if v.Value == le then
-						local Character = Player.Character
-						local RootPart = Character.PrimaryPart
-						RootPart.CFrame = v.Parent.CFrame + Vector3.new(0, 0, 0)
-						task.wait(0.1)
-						v.Parent.BuyEventyer:FireServer()
-						task.wait(0.1)
-						Character.Humanoid:UnequipTools()
-						break
-						
-					end
-				end
-			end]]
-			local le, path = list[i],  workspace
-			for i1, v in pairs(path:GetDescendants()) do
-				if v:IsA('StringValue') then
-					if v.Value == le then
-						local Character = Player.Character
-						local RootPart = Character.PrimaryPart
-						RootPart.CFrame = v.Parent.CFrame + Vector3.new(0, 0, 0)
-						task.wait(0.1)
-						v.Parent.BuyEventyer:FireServer()
-						task.wait(0.5)
-						Character.Humanoid:UnequipTools()
-						--task.wait(1)
-						--local gun = Player.Backpack[list2[i]]
-						--gun.AttachmentEvents.Scope:FireServer("DELTA", Player.Backpack.Delta)
-						task.wait(0.5)
-						RootPart.CFrame = Pos
-						
-					end
-				end
-			end
-			sound()
-		end,
-	})
-	local le, path = list[i],  workspace
-		for i, v in pairs(path:GetDescendants()) do
-			if v:IsA('StringValue') then
-				if v.Value == le then
-					cost = v.Parent.Price.Value
-				end
-			end
+local function buyItem(itemName)
+    local data = itemData[itemName]
+    if not data then return end
+
+    local Character = Player.Character
+    local RootPart = Character and Character.PrimaryPart
+    if not RootPart then return end
+
+    local originalPosition = RootPart.CFrame
+    RootPart.CFrame = data.Part.CFrame + Vector3.new(0, 3, 0)
+    
+    task.wait(0.1)
+    task.spawn(function()
+		while task.wait(0.1) do
+			data.Part.BuyEventyer:FireServer()
 		end
-	GameTab2:Label({
-		Text = "Cost: "..tostring(cost)
-	})
+	end)
+    
+    task.wait(1.5)
+    Character.Humanoid:UnequipTools()
+    RootPart.CFrame = originalPosition
 end
+coroutine.wrap(function()
+    for _, item in ipairs(itemList) do
+        local header = AutoBuyTab:CollapsingHeader({
+            Title = item.DisplayName
+        })
+        
+        header:Button({
+            Text = "Buy",
+            Callback = function()
+                buyItem(item.FullName)
+            end
+        })
+        
+        header:Label({
+            Text = "Cost: "..(itemData[item.FullName] and itemData[item.FullName].Price or "N/A")
+        })
+    end
+end)()
 local pas = false
 GameTab:Button({
 	Text = "Max Ammo",
@@ -394,6 +417,64 @@ local hue = 0
 local function hueToColor(h)
 	return Color3.fromHSV(h, 1, 1) -- Полная насыщенность и яркость
 end
+PlrTab2:Label({
+	Text = "ANTI HACK ARMS"
+})
+
+PlrTab2:Button({
+	Text = "9x9x9 Hitbox",
+	Callback = function(self)
+		local Chr = Player.Character
+		local sec = task.wait
+		Chr.Humanoid:UnequipTools()
+		Player.Backpack.Fists.Parent = Chr
+		local Fists = Chr.Fists
+		if Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript') then
+			local AntiCheat = Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript')
+			AntiCheat:Destroy()
+		end
+		sec(0.1)
+		if not Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript') then
+			local Hitbox = Fists.Hitbox
+			if Hitbox then
+				Hitbox.Size = Vector3.new(9, 9, 9)
+				Hitbox.Transparency = 0.5
+				Hitbox.Material = 'Neon'
+				for i, v in pairs(workspace:GetDescendants()) do
+					if v.Name == '_glass' and v:IsA('Part') then
+						v.Name = 'removed'
+					end
+				end
+				notification('готово')
+			end
+		end
+	end,
+})
+PlrTab2:Button({
+	Text = "INSTA KILL",
+	Callback = function(self)
+		local Chr = Player.Character
+		local sec = task.wait
+		Chr.Humanoid:UnequipTools()
+		Player.Backpack.Fists.Parent = Chr
+		local Fists = Chr.Fists
+		if Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript') then
+			local AntiCheat = Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript')
+			AntiCheat:Destroy()
+		end
+		sec(0.1)
+		if not Fists:FindFirstChildOfClass('LocalScript'):FindFirstChildOfClass('LocalScript') then
+			local Hitbox = Fists.Hitbox
+			if Hitbox then
+				local Con = Fists.Configuration
+				Con.MaxDamage.Value = 100
+				Con.MinDamage.Value = 100
+				notification('готово')
+			end
+		end
+	end,
+})
+
 while wait() do
 	if pas then
 		pcall(function()
@@ -425,4 +506,5 @@ while wait() do
 		end)
 	end
 end
+
 
