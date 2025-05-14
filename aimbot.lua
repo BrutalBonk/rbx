@@ -477,14 +477,14 @@ end
 function Aimbot_function()
 	Aimbot:Indent({Offset = 5}):Checkbox({
 		Value = false,
-		Label = "Aim team",
+		Label = "Not Aim team",
 		Callback = function(self, Value: boolean)
 			Values.Aimbot_Team = Value
 		end
 	})
 	Aimbot:Indent({Offset = 5}):Checkbox({
 		Value = false,
-		Label = "Aim friends",
+		Label = "Not Aim friends",
 		Callback = function(self, Value: boolean)
 			Values.Aimbot_Friends = Value
 		end
