@@ -14,13 +14,16 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 local Camera = workspace.CurrentCamera
-
+local ConfigTab, configDropdown, nameBox, row
 local ESP = Window:CreateTab({
 	Name = 'ESP'
 })
 
 local Aimbot = Window:CreateTab({
 	Name = 'Aimbot'
+})
+local AA = Window:CreateTab({
+	Name = 'AntiAim'
 })
 local ConfigTab = Window:CreateTab({
 	Name = 'Config'
@@ -51,126 +54,85 @@ local Values = {
     Aimbot_Team = false,
     Aimbot_Friends = false,
 	Aimbot_WallCheck = false,
+	Aimbot_Predict = false,
+	Aimbot_PredictPower = 1,
 	Aimbot_Alive = true,
-    Aimbot_Smooth = 0.2,      -- 0 (instant) to 1 (very slow)
+    Aimbot_Smooth = 0.8,      -- 0 (instant) to 1 (very slow)
     Aimbot_FOV = 100,         -- Field of view radius in pixels
 	Aimbot_SwitchSmooth = 0.05, -- smoothing when switching targets
 	Aimbot_NearRange = 500,
+	Aimbot_KeyId = Enum.KeyCode.Q,
 	Aimbot_Rules = {
 		Near = true, -- By distance
 		Part = 'Head'
-	}
+	},
+	AA = false,
+	AA_Hidden = false,
 }
 
 local a = {
 	C1, C2, C3, C4, S1, S2, N, H, T, A, L, T, R, D, B, E
 }
 
-local function getConfigList()
-    local files = listfiles("UA_Configs")
-    local list = {}
-    for _, path in ipairs(files) do
-        local name = path:match("UA_Configs/(.+)%.json$")
-        if name then table.insert(list, name) end
-    end
-    return list
+local IDs = {
+
+}
+
+function Popup(Name, Label, Id)
+	if IDs[Id] then
+		return
+	end
+	local ModalWindow = Window:PopupModal({
+		Title = Name
+	})
+
+	ModalWindow:Label({
+		Text = Label,
+		TextWrapped = true
+	})
+	ModalWindow:Separator()
+	ModalWindow:Checkbox({
+		Value = false,
+		Label = "Don't remember",
+		Callback = function(self, Value)
+			IDs[Id] = Value
+		end
+	})
+
+	local Row = ModalWindow:Row({
+		Expanded = true
+	})
+	Row:Button({
+		Text = "Okay",
+		Callback = function()
+			ModalWindow:ClosePopup()
+		end,
+	})
 end
-local function saveConfig(name)
-	local HttpService = game:GetService("HttpService")
-    local data = HttpService:JSONEncode(Values)
-    writefile("UA_Configs/"..name..".json", data)
-    return true
-end
-local function loadConfig(name)
-	local HttpService = game:GetService("HttpService")
-    local path = "UA_Configs/"..name..".json"
-    if not isfile(path) then return false end
-    local raw = readfile(path)
-    local ok, data = pcall(HttpService.JSONDecode, HttpService, raw)
-    if not ok then return false end
-    for k,v in pairs(data) do
-        if Values[k] ~= nil then
-            Values[k] = v
-        end
-		print(k, v)
-    end
-    return true
-end
-
-local configDropdown = ConfigTab:Combo({
-    Label = "Select config",
-    Selected = "None",
-    Items = getConfigList(),
-    Callback = function(self, value)
-        currentSelection = value
-    end
-})
-
-local CurrentName = 'n/a'
-local nameBox = ConfigTab:InputText({
-    Label = "Config name",
-    Placeholder = "Enter name",
-    Callback = function(self, value)
-        CurrentName = value
-    end
-})
-
-local row = ConfigTab:Row({Spacing = 10})
-row:Button({
-    Text = "Save",
-    Callback = function()
-        local name = CurrentName
-        if name and name ~= "" then
-            saveConfig(name)
-            configDropdown.Items = getConfigList()
-            nameBox.Value = ""
-        end
-    end
-})
-row:Button({
-    Text = "Load",
-    Callback = function()
-        if currentSelection then
-            loadConfig(currentSelection)
-        end
-    end
-})
-row:Button({
-    Text = "Delete",
-    Callback = function()
-        if currentSelection then
-            delfile("UA_Configs/"..currentSelection..".json")
-            configDropdown.Items = getConfigList()
-            currentSelection = nil
-        end
-    end
-})
-
-
-local function ESP_function()
+function ESP_function(ESP)
     a.C1 = ESP:Indent({Offset=5}):DragColor3({
-        Value = Color3.fromRGB(255,255,255),
+        Value = Values.ESP_Color,
         Label = "ESP Color",
         Callback = function(Color, Value)
             Values.ESP_Color = Value
         end
     })
     a.C2 = ESP:Indent({Offset=5}):DragColor3({
-        Value = Color3.fromRGB(0,255,0),
+        Value = Values.ESP_FColor,
         Label = "Friends Color",
         Callback = function(Color, Value)
             Values.ESP_FColor = Value
         end
     })
     a.C3 = ESP:Indent({Offset=5}):DragColor3({
-        Value = Color3.fromRGB(0,255,0),
+        Value = Values.ESP_TColor,
         Label = "Team Color",
         Callback = function(Color, Value)
             Values.ESP_TColor = Value
         end
     })
 	a.C4 = ESP:Indent({Offset=5}):DragColor3({
-        Value = Color3.fromRGB(255, 255, 255),
+        Value = Values.ESP_TextColor,
         Label = "Text Color",
         Callback = function(Color, Value)
             Values.ESP_TextColor = Value
@@ -179,7 +141,7 @@ local function ESP_function()
 
 	a.S1 = ESP:Indent({Offset = 5}):SliderInt({
         Label = "Text size",
-        Value = 6,
+        Value = Values.ESP_TextSize,
         Minimum = 0,
         Maximum = 30,
         Callback = function(self, Value)
@@ -188,7 +150,7 @@ local function ESP_function()
     })
 	a.S2 = ESP:Indent({Offset = 5}):SliderInt({
         Label = "Thickness",
-        Value = 2,
+        Value = Values.ESP_Thickness,
         Minimum = 1,
         Maximum = 5,
         Callback = function(self, Value)
@@ -199,35 +161,35 @@ local function ESP_function()
 	ESP:Separator()
 
     a.N = ESP:Indent({Offset=5}):Checkbox({
-        Value = false,
+        Value = Values.ESP_Name,
         Label = "Name",
         Callback = function(self, Value: boolean)
             Values.ESP_Name = Value
         end
     })
     a.H = ESP:Indent({Offset=5}):Checkbox({
-        Value = false,
+        Value = Values.ESP_Health,
         Label = "Health",
         Callback = function(self, Value: boolean)
             Values.ESP_Health = Value
         end
     })
     a.T = ESP:Indent({Offset=5}):Checkbox({
-        Value = false,
+        Value = Values.ESP_Team,
         Label = "Show team",
         Callback = function(self, Value: boolean)
             Values.ESP_Team = Value
         end
     })
 	a.A = ESP:Indent({Offset = 5}):Checkbox({
-		Value = true,
+		Value = Values.ESP_Alive,
 		Label = "Alive only",
 		Callback = function(self, Value: boolean)
 			Values.ESP_Alive = Value
 		end
 	})
     a.L = ESP:Indent({Offset = 5}):Checkbox({
-        Value = false,
+        Value = Values.ESP_RangeEnabled,
         Label = "Limit distance",
         Callback = function(self, Value: boolean)
 			if Value then
@@ -239,7 +201,7 @@ local function ESP_function()
         end
     })
 	a.T = ESP:Indent({Offset=5}):Checkbox({
-        Value = false,
+        Value = Values.ESP_Tracers,
         Label = "Tracers",
         Callback = function(self, Value: boolean)
             Values.ESP_Tracers = Value
@@ -247,7 +209,7 @@ local function ESP_function()
     })
     local Range = ESP:Indent({Offset = 5}):SliderInt({
         Label = "Range",
-        Value = 200,
+        Value = Values.ESP_Range,
         Minimum = 10,
         Maximum = 5000,
         Callback = function(self, Value)
@@ -257,7 +219,7 @@ local function ESP_function()
 	a.R = Range
     a.D = ESP:Combo({
         Label = "Display",
-        Selected = "3D",
+        Selected = Values.ESP_Display,
         Items = { "3D", "2D", },
         Callback = function(Combo, Value)
             Values.ESP_Display = Value
@@ -265,7 +227,7 @@ local function ESP_function()
     })
 
 	a.B = ESP:Checkbox({
-        Value = true,
+        Value = Values.ESP_Boxes,
         Label = "Box",
         Callback = function(self, Value: boolean)
             Values.ESP_Boxes = Value
@@ -273,7 +235,7 @@ local function ESP_function()
     })
 
     a.E = ESP:Checkbox({
-        Value = false,
+        Value = Values.ESP,
         Label = "Enabled",
         Callback = function(self, Value: boolean)
             Values.ESP = Value
@@ -474,39 +436,55 @@ local function ESP_function()
     end)
 end
 
-function Aimbot_function()
+function Aimbot_function(Aimbot)
 	Aimbot:Indent({Offset = 5}):Checkbox({
-		Value = false,
-		Label = "Not Aim team",
+		Value = Values.Aimbot_Team,
+		Label = "Aim team",
 		Callback = function(self, Value: boolean)
 			Values.Aimbot_Team = Value
 		end
 	})
 	Aimbot:Indent({Offset = 5}):Checkbox({
-		Value = false,
-		Label = "Not Aim friends",
+		Value = Values.Aimbot_Friends,
+		Label = "Aim friends",
 		Callback = function(self, Value: boolean)
 			Values.Aimbot_Friends = Value
 		end
 	})
 	Aimbot:Separator()
 	Aimbot:Indent({Offset = 5}):Checkbox({
-		Value = false,
+		Value = Values.Aimbot_Rules.Near,
 		Label = "Aim at nearest",
 		Callback = function(self, Value: boolean)
 			Values.Aimbot_Rules.Near = Value
 		end
 	})
 	Aimbot:Indent({Offset = 5}):Checkbox({
-		Value = true,
+		Value = Values.Aimbot_Alive,
 		Label = "Alive only",
 		Callback = function(self, Value: boolean)
 			Values.Aimbot_Alive = Value
 		end
 	})
+	Aimbot:Indent({Offset = 5}):Checkbox({
+		Value = Values.Aimbot_Predict,
+		Label = "Auto-predict",
+		Callback = function(self, Value: boolean)
+			Values.Aimbot_Predict = Value
+		end
+	})
+	Aimbot:Indent({Offset = 5}):SliderInt({
+		Label = "Predict Power", 
+		Minimum = 1, 
+		Maximum = 5,
+		Value = Values.Aimbot_PredictPower,
+		Callback = function(self, Value)
+			Values.Aimbot_PredictPower = Value
+		end
+	})
 	local Range = Aimbot:Indent({Offset = 5}):SliderInt({
 		Label = "Range",
-		Value = 500,
+		Value = Values.Aimbot_NearRange,
 		Minimum = 10,
 		Maximum = 1000,
 		Callback = function(self, Value)
@@ -517,7 +495,7 @@ function Aimbot_function()
 		Label = "Smooth", 
 		Minimum = 0.0, 
 		Maximum = 1.0,
-		Value = 0.2,
+		Value = Values.Aimbot_Smooth,
 		Format = "%.2f",
 		Callback = function(self, Value)
 			Values.Aimbot_Smooth = Value
@@ -527,14 +505,19 @@ function Aimbot_function()
 		Label = "FOV", 
 		Minimum = 0, 
 		Maximum = 200,
-		Value = 50,
+		Value = Values.Aimbot_FOV,
 		Callback = function(self, Value)
 			Values.Aimbot_FOV = Value
 		end
 	})
 	Aimbot:Combo({
 		Label = "Aim at",
-		Selected = "Head",
+		Selected = if Values.Aimbot_Rules.Part == 1 then
+				'Head'
+			elseif Values.Aimbot_Rules.Part == 2 then
+				'Torso'
+			else
+				'Any',
 		Items = {
 			"Head",
 			"Torso",
@@ -552,7 +535,7 @@ function Aimbot_function()
 	})
 	local Row = Aimbot:Row({Spacing = 15})
 	local Enabled = Row:Checkbox({
-		Value = false,
+		Value = Values.Aimbot,
 		Label = "Enabled",
 		Callback = function(self, Value: boolean)
 			Values.Aimbot = Value
@@ -560,8 +543,9 @@ function Aimbot_function()
 	})
 	Row:Keybind({
 		Label = "Bind",
-		Value = Enum.KeyCode.Q,
+		Value = Values.Aimbot_KeyId,
 		Callback = function(self, KeyId)
+			Values.Aimbot_KeyId = KeyId
 			Enabled:Toggle()
 		end,
 	})
@@ -661,38 +645,244 @@ function Aimbot_function()
 			Part = 'Head'
 		end
 		Range:SetDisabled(not Values.Aimbot_Rules.Near)
+
 		if not Values.Aimbot then
 			lastTarget = nil
 			return
 		end
 
 		local target = getClosestTarget()
-		if target then
-			
-			local head = target.Character[Part]
-			local Can = true
+		if target and target.Character then
+			local character = target.Character
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			local targetPart = character:FindFirstChild(Part)
 
-			local smooth = (target == lastTarget)
-				and Values.Aimbot_SwitchSmooth
-				or Values.Aimbot_Smooth
+			if humanoid and targetPart then
+				-- If alive mode is enabled, check health
+				if Values.Aimbot_Alive and humanoid.Health <= 0 then
+					return
+				end
 
-			lastTarget = target
+				-- Use smoother interpolation if same target as last frame
+				if target == lastTarget then
+					smooth = Values.Aimbot_Smooth
+				end
+				lastTarget = target
 
-			-- Lerp camera
-			if Values.Aimbot_Alive then
-				Can = (target.Character.Humanoid.Health >= 1)
-			end
-			if Can then
-				local camCF  = Camera.CFrame
-				local dir    = (head.Position - camCF.Position).Unit
-				local look   = camCF.LookVector:Lerp(dir, Values.Aimbot_Smooth)
-				Camera.CFrame = CFrame.new(camCF.Position, camCF.Position + look)
+				local camCF = Camera.CFrame
+
+				-- Target movement prediction using MoveDirection
+				local moveDirection = humanoid.MoveDirection
+				local walkSpeed = humanoid.WalkSpeed or 16
+				local predictionTime = 0.1 -- you can expose this to settings
+				local predictedOffset = moveDirection * (Values.Aimbot_PredictPower + (targetPart.Position - LocalPlayer.Character.HumanoidRootPart.Position).Magnitude) * walkSpeed * predictionTime * (1 - smooth)
+				local predictedPosition = targetPart.Position + predictedOffset
+
+				-- Lerp camera toward predicted target
+				local direction = (predictedPosition - camCF.Position).Unit
+				local newLook = camCF.LookVector:Lerp(direction, smooth)
+				Camera.CFrame = CFrame.new(camCF.Position, camCF.Position + newLook)
 			end
 		else
 			lastTarget = nil
 		end
 	end)
+
+
+
 end
 
-ESP_function()
-Aimbot_function()
+function AA_function(AA)
+	AA:Indent({Offset = 5}):Checkbox({
+		Value = Values.AA_Hidden,
+		Label = "Hide Real rotation",
+		Callback = function(self, Value: boolean)
+			Values.AA_Hidden = Value
+			if Value then
+				Popup('Warning', "That's function hides your real rotation when you first person. Script rotates you at last direction", 1)
+			end
+		end
+	})
+	AA:Checkbox({
+		Value = Values.AA,
+		Label = "Enabled",
+		Callback = function(self, Value: boolean)
+			Values.AA = Value
+		end
+	})
+	local RunService = game:GetService("RunService")
+
+	task.spawn(function()
+		local lastLook = Vector3.new(0, 0, 1)
+		RunService.Heartbeat:Connect(function()
+			local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+			local hrp = char:WaitForChild("HumanoidRootPart")
+			local humanoid = char:WaitForChild("Humanoid")
+			
+			if Values.AA then
+				if Values.AA_Hidden then
+					local md = humanoid.MoveDirection
+
+					if md.Magnitude > 0 then
+						lastLook = Vector3.new(md.X, 0, md.Z).Unit
+					end
+
+					local pos = hrp.Position
+					hrp.CFrame = CFrame.lookAt(pos, pos + lastLook)
+				end
+			end
+		end)
+	end)
+end
+
+
+local HttpService = game:GetService("HttpService")
+
+local function getConfigList()
+    local files = listfiles("UA_Configs")
+    local list = {}
+    for _, path in ipairs(files) do
+        local name = path:match("UA_Configs/(.+)%.lua$")
+        if name then table.insert(list, name) end
+    end
+    return list
+end
+
+local function serializeValue(v, indent)
+    indent = indent or 0
+    local t = type(v)
+    -- strings, numbers, booleans as before
+    if t == "string" then
+        return ("%q"):format(v)
+    elseif t == "number" or t == "boolean" then
+        return tostring(v)
+    -- Color3
+    elseif typeof(v) == "Color3" then
+        local r, g, b = v.R * 255, v.G * 255, v.B * 255
+        return ("Color3.fromRGB(%d, %d, %d)"):format(r, g, b)
+    -- EnumItem support!
+    elseif typeof(v) == "EnumItem" then
+        -- this yields e.g. "Enum.KeyCode.Q"
+        return tostring(v)
+    -- tables (recursively)
+    elseif t == "table" then
+        local parts = {"{\n"}
+        for key, val in pairs(v) do
+            local keyRep = type(key) == "string"
+                            and ("[%q]"):format(key)
+                            or ("[" .. key .. "]")
+            local valRep = serializeValue(val, indent + 1)
+            parts[#parts+1] = string.rep("    ", indent+1)
+                             .. keyRep .. " = " .. valRep .. ",\n"
+        end
+        parts[#parts+1] = string.rep("    ", indent) .. "}"
+        return table.concat(parts)
+    else
+        error("Cannot serialize type: " .. t)
+    end
+end
+
+
+local function saveConfig(name)
+    local body = "return " .. serializeValue(Values, 0)
+    writefile("UA_Configs/" .. name .. ".lua", body)
+    return true
+end
+
+local function setupConfigTab()
+    configDropdown = ConfigTab:Combo({
+        Label    = "Select config",
+        Selected = "None",
+        Items    = getConfigList(),
+        Callback = function(_, value)
+            currentSelection = value
+        end,
+    })
+
+    nameBox = ConfigTab:InputText({
+        Label       = "Config name",
+        Placeholder = "Enter name",
+    })
+
+    local row = ConfigTab:Row({ Spacing = 10 })
+    row:Button({
+        Text = "Save",
+        Callback = function()
+            local name = nameBox.Value
+            if name and name ~= "" then
+                saveConfig(name)
+                configDropdown.Items = getConfigList()
+                nameBox:SetValue("")
+            end
+        end,
+    })
+    row:Button({
+        Text = "Load",
+        Callback = function()
+            if currentSelection then
+                loadConfig(currentSelection)
+            end
+        end,
+    })
+    row:Button({
+        Text = "Delete",
+        Callback = function()
+            if currentSelection then
+                delfile("UA_Configs/" .. currentSelection .. ".lua")
+                configDropdown.Items = getConfigList()
+                currentSelection = nil
+            end
+        end,
+    })
+end
+
+-- 2) Builds—or rebuilds—the whole GUI
+function buildWindow()
+    -- if there's an old window, close it
+    if Window and Window.Close then
+        Window:Close()
+    end
+
+    Window = ReGui:TabsWindow({
+        Title    = "Universal aimbot",
+        Size     = UDim2.new(0, 350, 0, 350),
+        Position = UDim2.new(0.5, 0, 0, 70),
+    })
+
+    local ESPTab    = Window:CreateTab({ Name = 'ESP' })
+    local AimbotTab = Window:CreateTab({ Name = 'Aimbot' })
+    local AATab     = Window:CreateTab({ Name = 'AntiAim' })
+    ConfigTab       = Window:CreateTab({ Name = 'Config' })
+
+    ESP_function(ESPTab)
+    Aimbot_function(AimbotTab)
+    AA_function(AATab)
+    setupConfigTab()
+end
+
+-- 3) loadConfig simply updates Values and then rebuilds
+function loadConfig(name)
+    local path = "UA_Configs/" .. name .. ".lua"
+    if not isfile(path) then return false end
+
+    local chunk = readfile(path)
+    local ok, loaded = pcall(loadstring(chunk))
+    if not ok or type(loaded) ~= "table" then
+        warn("Failed to load config:", loaded)
+        return false
+    end
+
+    -- merge loaded into Values
+    for k, v in pairs(loaded) do
+        if Values[k] ~= nil then
+            Values[k] = v
+        end
+    end
+
+    -- rebuild GUI so all sliders/checkboxes pick up the new Values
+    buildWindow()
+    return true
+end
+
+-- 4) kick things off
+buildWindow()
