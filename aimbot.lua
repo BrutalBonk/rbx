@@ -752,27 +752,37 @@ end
 local function serializeValue(v, indent)
     indent = indent or 0
     local t = type(v)
+    -- strings, numbers, booleans as before
     if t == "string" then
         return ("%q"):format(v)
     elseif t == "number" or t == "boolean" then
         return tostring(v)
-    elseif typeof and typeof(v) == "Color3" then
+    -- Color3
+    elseif typeof(v) == "Color3" then
         local r, g, b = v.R * 255, v.G * 255, v.B * 255
         return ("Color3.fromRGB(%d, %d, %d)"):format(r, g, b)
+    -- EnumItem support!
+    elseif typeof(v) == "EnumItem" then
+        -- this yields e.g. "Enum.KeyCode.Q"
+        return tostring(v)
+    -- tables (recursively)
     elseif t == "table" then
         local parts = {"{\n"}
         for key, val in pairs(v) do
-            local keyRep = type(key) == "string" and ("[%q]"):format(key) or ("[" .. key .. "]")
+            local keyRep = type(key) == "string"
+                            and ("[%q]"):format(key)
+                            or ("[" .. key .. "]")
             local valRep = serializeValue(val, indent + 1)
-            parts[#parts + 1] = string.rep("    ", indent + 1)
+            parts[#parts+1] = string.rep("    ", indent+1)
                              .. keyRep .. " = " .. valRep .. ",\n"
         end
-        parts[#parts + 1] = string.rep("    ", indent) .. "}"
+        parts[#parts+1] = string.rep("    ", indent) .. "}"
         return table.concat(parts)
     else
         error("Cannot serialize type: " .. t)
     end
 end
+
 
 local function saveConfig(name)
     -- Build a Lua chunk that returns your Values table
@@ -803,7 +813,7 @@ local function setupConfigTab()
             local name = nameBox.Value
             if name and name ~= "" then
                 saveConfig(name)
-                configDropdown:UpdateItems(getConfigList())
+                configDropdown.Items = getConfigList()
                 nameBox:SetValue("")
             end
         end,
@@ -821,7 +831,7 @@ local function setupConfigTab()
         Callback = function()
             if currentSelection then
                 delfile("UA_Configs/" .. currentSelection .. ".lua")
-                configDropdown:UpdateItems(getConfigList())
+                configDropdown.Items = getConfigList()
                 currentSelection = nil
             end
         end,
