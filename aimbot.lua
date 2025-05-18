@@ -675,7 +675,7 @@ function Aimbot_function(Aimbot)
 				local moveDirection = humanoid.MoveDirection
 				local walkSpeed = humanoid.WalkSpeed or 16
 				local predictionTime = 0.1 -- you can expose this to settings
-				local predictedOffset = moveDirection * (Values.Aimbot_PredictPower + (targetPart.Position - LocalPlayer.Character.HumanoidRootPart.Position).Magnitude) * walkSpeed * predictionTime * (1 - smooth)
+				local predictedOffset = moveDirection * (Values.Aimbot_PredictPower + (targetPart.Position - LocalPlayer.Character.HumanoidRootPart.Position).Magnitude / 500) * walkSpeed * predictionTime * (1 - smooth)
 				local predictedPosition = targetPart.Position + predictedOffset
 
 				-- Lerp camera toward predicted target
@@ -694,7 +694,7 @@ end
 
 function AA_function(AA)
 	AA:Indent({Offset = 5}):Checkbox({
-		Value = Values.AA_Hidden,
+		Value = false,
 		Label = "Hide Real rotation",
 		Callback = function(self, Value: boolean)
 			Values.AA_Hidden = Value
@@ -704,7 +704,7 @@ function AA_function(AA)
 		end
 	})
 	AA:Checkbox({
-		Value = Values.AA,
+		Value = false,
 		Label = "Enabled",
 		Callback = function(self, Value: boolean)
 			Values.AA = Value
@@ -748,42 +748,34 @@ local function getConfigList()
     return list
 end
 
+-- Save current Values to file
 local function serializeValue(v, indent)
     indent = indent or 0
     local t = type(v)
-    -- strings, numbers, booleans as before
     if t == "string" then
         return ("%q"):format(v)
     elseif t == "number" or t == "boolean" then
         return tostring(v)
-    -- Color3
-    elseif typeof(v) == "Color3" then
+    elseif typeof and typeof(v) == "Color3" then
         local r, g, b = v.R * 255, v.G * 255, v.B * 255
         return ("Color3.fromRGB(%d, %d, %d)"):format(r, g, b)
-    -- EnumItem support!
-    elseif typeof(v) == "EnumItem" then
-        -- this yields e.g. "Enum.KeyCode.Q"
-        return tostring(v)
-    -- tables (recursively)
     elseif t == "table" then
         local parts = {"{\n"}
         for key, val in pairs(v) do
-            local keyRep = type(key) == "string"
-                            and ("[%q]"):format(key)
-                            or ("[" .. key .. "]")
+            local keyRep = type(key) == "string" and ("[%q]"):format(key) or ("[" .. key .. "]")
             local valRep = serializeValue(val, indent + 1)
-            parts[#parts+1] = string.rep("    ", indent+1)
+            parts[#parts + 1] = string.rep("    ", indent + 1)
                              .. keyRep .. " = " .. valRep .. ",\n"
         end
-        parts[#parts+1] = string.rep("    ", indent) .. "}"
+        parts[#parts + 1] = string.rep("    ", indent) .. "}"
         return table.concat(parts)
     else
         error("Cannot serialize type: " .. t)
     end
 end
 
-
 local function saveConfig(name)
+    -- Build a Lua chunk that returns your Values table
     local body = "return " .. serializeValue(Values, 0)
     writefile("UA_Configs/" .. name .. ".lua", body)
     return true
@@ -811,7 +803,7 @@ local function setupConfigTab()
             local name = nameBox.Value
             if name and name ~= "" then
                 saveConfig(name)
-                configDropdown.Items = getConfigList()
+                configDropdown:UpdateItems(getConfigList())
                 nameBox:SetValue("")
             end
         end,
@@ -829,7 +821,7 @@ local function setupConfigTab()
         Callback = function()
             if currentSelection then
                 delfile("UA_Configs/" .. currentSelection .. ".lua")
-                configDropdown.Items = getConfigList()
+                configDropdown:UpdateItems(getConfigList())
                 currentSelection = nil
             end
         end,
