@@ -1,0 +1,145 @@
+--// Services 
+local RunService: RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local SourceURL = 'https://github.com/depthso/Roblox-ImGUI/raw/main/ImGui.lua'
+ImGui = loadstring(game:HttpGet(SourceURL))()
+local player = game:GetService("Players").LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local FakeLag = false
+local FakeJump = false
+local FakeAnim = {"1"}
+local BackflipOnJump = false  -- Variable for backflip toggle
+local SavedData = {
+	Speed = humanoid.WalkSpeed
+}
+
+local originalGravity = workspace.Gravity
+
+--// Window 
+local Window = ImGui:CreateWindow({
+	Title = "хуй",
+	Size = UDim2.new(0, 150, 0, 170),
+	Position = UDim2.new(0.5, 0, 0, 70)
+})
+Window:Center()
+
+local SelfActionsTab = Window:CreateTab({
+	Name = "SelfActions"
+})
+SelfActionsTab:Checkbox({
+	Label = "Fake Lag",
+	Value = false,
+	Callback = function(self, Value)
+		FakeLag = Value
+	end,
+})
+SelfActionsTab:Checkbox({
+	Label = "Fall on jump",
+	Value = false,
+	Callback = function(self, Value)
+		FakeJump = Value
+	end,
+})
+SelfActionsTab:Checkbox({
+	Label = "Backflip on Jump",  -- Add checkbox for Backflip toggle
+	Value = false,
+	Callback = function(self, Value)
+		BackflipOnJump = Value
+	end,
+})
+SelfActionsTab:Combo({
+	Placeholder = "Walking",
+	Label = "Faked Animations",
+	Items = {
+		["Walking"] = "1",
+		["All, not Emotes"] = "2",
+		["All"] = "3"
+	},
+	Callback = function(self, Value)
+		FakeAnim = {Value, self.Items[Value]}
+	end,
+})
+
+
+local function onJumping()
+	if FakeLag then
+		local force = Instance.new("BodyVelocity")
+		force.Velocity = Vector3.new(0, 10, 0) -- Adjust the Y value for stronger or weaker force
+		force.MaxForce = Vector3.new(0, math.huge, 0)
+		force.Parent = humanoidRootPart
+		if FakeJump then
+			task.spawn(function ()
+				task.wait(0.2)
+				humanoid.PlatformStand = true
+				task.wait(1)
+				humanoid.PlatformStand = false
+			end)
+		end
+
+		SavedData['Force'] = force
+		game.Debris:AddItem(force, 0.6)
+	end
+
+	-- Backflip logic using CFrame
+	if BackflipOnJump then
+		-- Apply upward force to initiate jump
+		local backflipForce = Instance.new("BodyVelocity")
+		backflipForce.MaxForce = Vector3.new(400000, 400000, 400000) -- High force for the jump
+		backflipForce.Velocity = Vector3.new(0, 5, 0) -- Upward velocity to initiate the jump
+		backflipForce.Parent = humanoidRootPart
+
+		-- Perform the backflip rotation using CFrame
+		task.spawn(function()
+			for i=0, 360 do
+				task.wait()
+				local initialCFrame = humanoidRootPart.CFrame
+				local rotation = CFrame.Angles(0.01, 0, 0) -- 180 degrees rotation around X-axis for backflip
+				humanoidRootPart.CFrame = initialCFrame * rotation
+				humanoid.PlatformStand = true
+				if i==360 then
+					backflipForce:Remove()
+					humanoid.PlatformStand = false
+				end
+			end
+		end)
+		--game.Debris:AddItem(backflipForce, 0.6)
+	end
+end
+
+humanoid.Jumping:Connect(onJumping)
+
+while task.wait() do
+	if FakeLag then
+		task.wait()
+		humanoid.WalkSpeed = 1
+		local function adjustAllAnimationSpeeds(speedMultiplier)
+			for _, track in ipairs(humanoid:GetPlayingAnimationTracks()) do
+				if track.Name == 'JumpAnim' then
+					track:AdjustSpeed(0.2)
+				elseif FakeAnim[1] == "1" and (track.Name == 'WalkAnim' or track.Name == 'RunAnim') then
+					track:AdjustSpeed(speedMultiplier)
+				elseif FakeAnim[1] == "2" and not string.find(track.Name, "Face") then
+					track:AdjustSpeed(speedMultiplier)
+				elseif FakeAnim[1] == "3" and (track.Name ~= 'JumpAnim') then
+					track:AdjustSpeed(speedMultiplier)
+				end
+			end
+		end
+
+		adjustAllAnimationSpeeds(0.1)
+	else
+		task.wait()
+		humanoid.WalkSpeed = SavedData['Speed']
+
+		local function adjustAllAnimationSpeeds(speedMultiplier)
+			for _, track in ipairs(humanoid:GetPlayingAnimationTracks()) do
+				track:AdjustSpeed(speedMultiplier)
+			end
+		end
+
+		adjustAllAnimationSpeeds(1)
+	end
+end
