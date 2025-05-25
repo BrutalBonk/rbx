@@ -676,7 +676,7 @@ function Aimbot_function(Aimbot)
 				local moveDirection = humanoid.MoveDirection
 				local walkSpeed = humanoid.WalkSpeed or 16
 				local predictionTime = 0.1 -- you can expose this to settings
-				local predictedOffset = moveDirection * (Values.Aimbot_PredictPower + (targetPart.Position - LocalPlayer.Character.HumanoidRootPart.Position).Magnitude / 500) * walkSpeed * predictionTime * (1 - smooth)
+				local predictedOffset = (moveDirection * walkSpeed * predictionTime * (1 - smooth)) * Values.Aimbot_PredictPower
 				local predictedPosition = targetPart.Position + predictedOffset
 
 				-- Lerp camera toward predicted target
@@ -721,7 +721,7 @@ function AA_function(AA)
 			local hrp = char:WaitForChild("HumanoidRootPart")
 			local humanoid = char:WaitForChild("Humanoid")
 			
-			if Values.AA then
+			if Values.AA and humanoid.Sit == false then
 				if Values.AA_Hidden then
 					local md = humanoid.MoveDirection
 
