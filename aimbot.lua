@@ -657,7 +657,8 @@ function Aimbot_function(Aimbot)
 			local humanoid = character:FindFirstChildOfClass("Humanoid")
 			local targetPart = character:FindFirstChild(Part)
 
-			if humanoid and targetPart then
+			local success, message = pcall(function()
+				if humanoid and targetPart then
 				-- If alive mode is enabled, check health
 				if Values.Aimbot_Alive and humanoid.Health <= 0 then
 					return
@@ -683,6 +684,7 @@ function Aimbot_function(Aimbot)
 				local newLook = camCF.LookVector:Lerp(direction, smooth)
 				Camera.CFrame = CFrame.new(camCF.Position, camCF.Position + newLook)
 			end
+			end)
 		else
 			lastTarget = nil
 		end
