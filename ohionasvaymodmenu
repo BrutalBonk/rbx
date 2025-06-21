@@ -1,0 +1,131 @@
+for i=0, 3 do
+local mt = debug.getmetatable(game)
+local old_namecall = mt.__namecall
+local protect_metatable = makewriteable or setreadonly
+protect_metatable(mt, false)
+
+local payload_executed = false
+
+mt.__namecall = function(...)
+    if not payload_executed and getnamecallmethod():lower() == "fire" then
+        payload_executed = true
+
+        -- Load required modules
+        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+        local Players = game:GetService("Players")
+        local localPlayer = Players.LocalPlayer
+        
+        local devv = require(ReplicatedStorage.devv)
+        local Load = devv.load
+        local Signal = Load("Signal")
+        local itemSystem = Load("v3item")
+        local baseItem = require(ReplicatedStorage.devv.client.Objects.v3item.bin.baseItem)
+        local ThrowHandler = require(ReplicatedStorage.devv.client.Handlers.StickyHandler)
+
+        -- Function to find "Snowball" in inventory
+        local function findSnowball()
+            for _, item in pairs(itemSystem.inventory.items) do
+                if item.name == "C4" then
+                    return item
+                end
+            end
+            return nil
+        end
+
+        -- Function to get the nearest player
+        local function getNearestPlayer()
+            local localCharacter = localPlayer.Character
+            if not localCharacter then return nil end
+            
+            local localRoot = localCharacter:FindFirstChild("HumanoidRootPart")
+            if not localRoot then return nil end
+            
+            local nearestPlayer = nil
+            local shortestDistance = math.huge
+            
+            for _, player in ipairs(Players:GetPlayers()) do
+                if player ~= localPlayer and player.Character then
+                    local targetRoot = player.Character:FindFirstChild("HumanoidRootPart")
+                    if targetRoot then
+                        local distance = (localRoot.Position - targetRoot.Position).Magnitude
+                        if distance < shortestDistance then
+                            shortestDistance = distance
+                            nearestPlayer = player
+                        end
+                    end
+                end
+            end
+            
+            return nearestPlayer
+        end
+
+        -- Function to calculate the throw velocity
+        function calculateThrowVelocity()
+            local localCharacter = localPlayer.Character
+            if not localCharacter then return Vector3.new(0, 50, 0) end
+            
+            local localRoot = localCharacter:FindFirstChild("HumanoidRootPart")
+            if not localRoot then return Vector3.new(0, 50, 0) end
+            
+            local targetPlayer = getNearestPlayer()
+            if not targetPlayer or not targetPlayer.Character then 
+                return Vector3.new(0, 50, 0) 
+            end
+            
+            local targetRoot = targetPlayer.Character:FindFirstChild("HumanoidRootPart")
+            if not targetRoot then return Vector3.new(0, 50, 0) end
+            
+            -- Constants
+            local gravity = Vector3.new(0, -game.Workspace.Gravity, 0)
+            local launchPosition = localRoot.Position + Vector3.new(0, 2, 0) -- Approximate launch position from character's torso
+            local targetPosition = targetRoot.Position
+
+            -- Time of flight calculation (simplified)
+            local displacement = targetPosition - launchPosition
+            local time = 1 -- Adjust this for desired arc
+
+            -- Calculate initial velocity
+            local initialVelocity = (displacement - 0.5 * gravity * time * time) / time
+            
+            return initialVelocity
+        end
+
+        -- Main execution flow
+        spawn(function()
+            local snowball = findSnowball()
+            
+            if not snowball then
+                Signal.InvokeServer('attemptPurchase', 'C4')
+
+                local attempts = 0
+                repeat
+                    attempts = attempts + 1
+                    task.wait(0.1)
+                    snowball = findSnowball()
+                until snowball or attempts >= 50
+            end
+            
+            if snowball then
+                baseItem.SetEquipped(snowball, true, false, true)
+                local _, equippedItem = itemSystem.GetEquipped(localPlayer)
+                
+                -- Calculate the dynamic velocity
+                local throwVelocity = calculateThrowVelocity()
+                
+                ThrowHandler.Throw(
+                    localPlayer,
+                    'C4',
+                    equippedItem,
+                    throwVelocity,
+                    Vector3.zero
+                )
+                Signal.FireServer("removeItem", snowball.guid, true)
+            end
+        end)
+    end
+    
+    return old_namecall(...)
+end
+
+protect_metatable(mt, true)
+end
