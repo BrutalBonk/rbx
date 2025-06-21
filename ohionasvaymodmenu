@@ -1,5 +1,5 @@
 for i=0, 3 do
-task.wait(0.3)
+task.wait(1)
 local mt = debug.getmetatable(game)
 local old_namecall = mt.__namecall
 local protect_metatable = makewriteable or setreadonly
