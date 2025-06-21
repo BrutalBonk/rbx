@@ -7,7 +7,7 @@ local AutoPickup = false
 local AutoTpAfterCollect = false
 --// Window 
 local Window = ImGui:CreateWindow({
-	Title = "НасвайСОФТ | Version 1.46",
+	Title = "НасвайСОФТ | Version 1.5",
 	Size = UDim2.new(0, 350, 0, 370),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
@@ -128,7 +128,6 @@ GameTab:Checkbox({
 		AutoTpAfterCollect = Value
 	end,
 })
-
 GameTab:Button({
 	Text = "Teleport to a random item",
 	Callback = function(self)
@@ -196,5 +195,59 @@ GameTab:Button({
 				wait(2)
 			end
 		end
+	end,
+})
+GameTab:Separator()
+GameTab:Label({
+	Text = "Buy by name"
+})
+local c2, c3
+GameTab:InputText({
+    PlaceHolder = '1',
+	Callback = function(self, c)
+	    c2 = c
+	end
+})
+GameTab:Checkbox({
+	Label = "Ammo?",
+	Value = false,
+	Callback = function(self, Value)
+		c3 = Value
+	end,
+})
+GameTab:Button({
+	Text = "Buy",
+	Callback = function(self)
+		local mt = debug.getmetatable(game)
+local old_namecall = mt.__namecall
+local protect_metatable = makewriteable or setreadonly
+protect_metatable(mt, false)
+
+local payload_executed = false
+
+mt.__namecall = function(...)
+    if not payload_executed and getnamecallmethod():lower() == "fire" then
+        payload_executed = true
+
+        -- Load required modules
+        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+        local Players = game:GetService("Players")
+        local localPlayer = Players.LocalPlayer
+        
+        local devv = require(ReplicatedStorage.devv)
+        local Load = devv.load
+        local Signal = Load("Signal")
+        local itemSystem = Load("v3item")
+        if not Ammo then
+               Signal.InvokeServer('attemptPurchase', c2)
+           else
+               Signal.InvokeServer('attemptPurchaseAmmo', c2)
+        end
+    end
+    
+    return old_namecall(...)
+end
+
+protect_metatable(mt, true)
 	end,
 })
