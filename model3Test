@@ -1,9 +1,24 @@
+-- Roblox Mesh Generator
+-- Original: Cube.obj, Vertices: 8
+-- Faces: 6 polygons (equivalent to 12 triangles)
+
 local vertices = {
-  Vector3.new(0, 0, 0)
+    Vector3.new(-5.000000, -5.000000, -5.000000),
+    Vector3.new(-5.000000, -5.000000, 5.000000),
+    Vector3.new(-5.000000, 5.000000, -5.000000),
+    Vector3.new(-5.000000, 5.000000, 5.000000),
+    Vector3.new(5.000000, -5.000000, -5.000000),
+    Vector3.new(5.000000, -5.000000, 5.000000),
+    Vector3.new(5.000000, 5.000000, -5.000000),
+    Vector3.new(5.000000, 5.000000, 5.000000),
 }
 
 local faces = {
-  {0, 0, 0}
+    {1, 5, 6, 2},
+    {2, 4, 3, 1},
+    {2, 6, 8, 4},
+    {3, 7, 5, 1},
+    {4, 8, 7, 3},
+    {5, 7, 8, 6},
 }
-
 return {vertices, faces}
