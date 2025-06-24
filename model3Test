@@ -1,0 +1,9 @@
+local vertices = {
+  Vector3.new(0, 0, 0)
+}
+
+local faces = {
+  {0, 0, 0}
+}
+
+return {vertices, faces}
