@@ -14,6 +14,9 @@ local SafeZone = game:GetService("Workspace").SecretEggSpawns.SecretEgg3.CFrame
 local Items = v3Inventory.items
 local Fists
 
+local BalloonAlways = false
+local SafeMode, SafeMin = false, 100
+
 function InitFists()
     for _, item in pairs(Items) do
         if item.name == 'Fists' then
@@ -152,7 +155,7 @@ ReGui:Init({
 })
 game:GetService("InsertService"):LoadLocalAsset(PrefabsId).Parent = workspace
 local Window = ReGui:TabsWindow({
-	Title = "Ohio killer ReCode | v2.0",
+	Title = "Ohio killer ReCode | v2.5",
 	Size = UDim2.new(0, 350, 0, 350),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
@@ -229,6 +232,9 @@ PlayerTab:Separator()
 local PlayerHeader = PlayerTab:CollapsingHeader({
     Title = 'Fake balloon'
 })
+local PlayerHeader0 = PlayerTab:CollapsingHeader({
+    Title = 'Safe mode'
+})
 function StateBalloon(Value)
    local Balloon = require(v3item.bin.Holdable.modules.controller.modules.itemFuncs.Balloon)
     local item = {
@@ -239,44 +245,158 @@ function StateBalloon(Value)
     local method = if Value then 'onEquipped' else 'onUnequipped'
     Balloon[method](item) 
 end
-pcall(function()
-    PlayerHeader:Checkbox({
-    	Value = false,
-    	Label = "Enabled",
-    	Callback = function(self, Value: boolean)
-    		task.spawn(function()
-    		    StateBalloon(Value)
-    		end)
-    	end
-    })
-end)
+
+PlayerHeader:Checkbox({
+	Value = false,
+   	Label = "Enabled",
+	Callback = function(self, Value: boolean)
+		task.spawn(function()
+		    StateBalloon(Value)
+		end)
+	end
+})
+
+PlayerHeader:Checkbox({
+    Value = false,
+    Label = "Always",
+    Callback = function(self, Value: boolean)
+    	task.spawn(function()
+    		BalloonAlways = Value
+    	end)
+    end
+})
+
+PlayerHeader0:Separator({Text = 'NOTE: Teleports to safe zone when health < or = min'})
+PlayerHeader0:SliderInt({
+    Label = "Minimum",
+    Value = 10,
+    Minimum = 10,
+    Maximum = 100,
+    Callback = function(self, Value)
+        SafeMin = Value
+    end
+})
+PlayerHeader0:Checkbox({
+    Value = false,
+    Label = "Enabled",
+    Callback = function(self, Value: boolean)
+    	task.spawn(function()
+            SafeMode = Value
+    	end)
+    end
+})
 
 
 local ValuablesTab = Window:CreateTab({Name = 'Valuables'})
 ValuablesTab:Button({
 	Text = "Find valuable",
 	Callback = function(self)
-		local Folder = game:GetService("Workspace").Game.Entities.ItemPickup
-		
-		local Priority = {
-		    'Military'
+		local Folder       = workspace.Game.Entities.ItemPickup
+		local Trigger1     = workspace.MilitaryRobbery.MilitaryTrigger
+		local Trigger2     = workspace.ArmoryRobbery.ArmoryTrigger
+		local Priority     = 
+		{
+		    "Military", 
+		    "Vest", 
+		    "Keycard",
+		    "Marker",
+		    "Barrett",
+		    'Gold',
+		    'Present',
+		    'Key',
+		    'Money',
+		    'RPG',
+		    'Saiga',
+		    'Scar',
+		    'Block',
+		    'M249',
+		    'Hoverboard',
+		    'Gravity',
+		    'Dragunov',
+		    'Void',
+		    'C4',
+		    'C5',
+		    'Santa',
+		    'Acid',
+		    'AS Val',
+		    'AUG',
+		    'Python'
+		    
 		}
+		local rootPart     = character:FindFirstChild("HumanoidRootPart")
 		
-		for _, V in pairs(Folder:GetChildren()) do
-		    if V.PrimaryPart then
-		        local ProxP = V.PrimaryPart:FindFirstChild('ProximityPrompt', true)
-		    for __, p in Priority do
-		        if ProxP then
-		            if string.find(ProxP.ObjectText, p) then
-    		             local rootPart = character:FindFirstChild("HumanoidRootPart")
-    		             rootPart.CFrame = V.PrimaryPart.CFrame
-    		             
-    		             break
-    		        end 
-		        end
-		    end 
-		    end
+		local allPickups = Folder:GetChildren()
+		
+		local partsIn1 = workspace:GetPartBoundsInBox(Trigger1.CFrame, Trigger1.Size)
+		local partsIn2 = workspace:GetPartBoundsInBox(Trigger2.CFrame, Trigger2.Size)
+		
+		local inTriggerSet = {}
+		for _, p in ipairs(partsIn1) do inTriggerSet[p] = true end
+		for _, p in ipairs(partsIn2) do inTriggerSet[p] = true end
+		
+		for _, pickup in ipairs(allPickups) do
+			local part = pickup.PrimaryPart
+			if part then
+				if inTriggerSet[part] then
+					continue
+				end
+				
+				local prompt = part:FindFirstChildOfClass("ProximityPrompt", true)
+				if prompt then
+					for _, keyword in ipairs(Priority) do
+						if prompt.ObjectText:find(keyword) or prompt.ObjectText == keyword then
+							if rootPart then
+								rootPart.CFrame = part.CFrame
+							end
+							break
+						end
+					end
+				end
+			end
 		end
 	end
 })
-
+ValuablesTab:Button({
+    Text = 'Remove cooldown',
+    Callback = function()
+        for _, o in pairs(workspace:GetDescendants()) do
+            if o:IsA('ProximityPrompt') then
+                o.HoldDuration = 0
+            end
+        end
+    end,
+})
+ValuablesTab:Button({
+    Text = 'Sell Equipped',
+    Callback = function()
+        task.spawn(function()
+            local _, item = v4item.GetEquipped(player)
+            if item then
+                Signal.FireServer("sellItem", item) 
+            end
+        end)
+    end,
+})
+local before = CFrame.new(0, 0, 0)
+while wait() do
+    task.spawn(function()
+        if BalloonAlways then
+            StateBalloon(true) 
+        end
+    end)
+    task.spawn(function()
+        if SafeMode then
+            local humanoid = character:FindFirstChild("Humanoid")
+            local rootPart = character:FindFirstChild("HumanoidRootPart")
+            if humanoid.Health <= SafeMin then
+                rootPart.CFrame = SafeZone
+                repeat
+                    task.wait(1)
+                until humanoid.Health >= SafeMin
+                rootPart.CFrame = before
+            else
+                before = rootPart.CFrame
+            end
+        end
+    end)
+end
