@@ -2,6 +2,8 @@ local Load = require(game:GetService("ReplicatedStorage").devv).load
 local Signal = require(game:GetService("ReplicatedStorage").devv.client.Helpers.remotes.Signal)
 local v3item = game:GetService("ReplicatedStorage").devv.client.Objects.v3item
 local v4item = require(v3item)
+local v3items = Load('v3items')
+
 local melee = Load('v3item').melee
 local player = game:GetService("Players").LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait() 
@@ -213,7 +215,68 @@ task.spawn(function()
     end
 end)
 
-FarmTab:Label({
-    Text = "Working method to farm money"
-}) 
+
 FarmTab:Separator({Text = 'NOTE: To disable press ESC and disable, \nSometimes may bug atms'})
+
+local PlayerTab = Window:CreateTab({Name = 'Player'})
+
+PlayerTab:Label({
+    Text = "Bypass AC"
+}) 
+
+PlayerTab:Separator()
+
+local PlayerHeader = PlayerTab:CollapsingHeader({
+    Title = 'Fake balloon'
+})
+function StateBalloon(Value)
+   local Balloon = require(v3item.bin.Holdable.modules.controller.modules.itemFuncs.Balloon)
+    local item = {
+        item = {
+            multiplier = 0.8
+        }
+    }
+    local method = if Value then 'onEquipped' else 'onUnequipped'
+    Balloon[method](item) 
+end
+pcall(function()
+    PlayerHeader:Checkbox({
+    	Value = false,
+    	Label = "Enabled",
+    	Callback = function(self, Value: boolean)
+    		task.spawn(function()
+    		    StateBalloon(Value)
+    		end)
+    	end
+    })
+end)
+
+
+local ValuablesTab = Window:CreateTab({Name = 'Valuables'})
+ValuablesTab:Button({
+	Text = "Find valuable",
+	Callback = function(self)
+		local Folder = game:GetService("Workspace").Game.Entities.ItemPickup
+		
+		local Priority = {
+		    'Military'
+		}
+		
+		for _, V in pairs(Folder:GetChildren()) do
+		    if V.PrimaryPart then
+		        local ProxP = V.PrimaryPart:FindFirstChild('ProximityPrompt', true)
+		    for __, p in Priority do
+		        if ProxP then
+		            if string.find(ProxP.ObjectText, p) then
+    		             local rootPart = character:FindFirstChild("HumanoidRootPart")
+    		             rootPart.CFrame = V.PrimaryPart.CFrame
+    		             
+    		             break
+    		        end 
+		        end
+		    end 
+		    end
+		end
+	end
+})
+
