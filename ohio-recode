@@ -152,7 +152,7 @@ ReGui:Init({
 })
 game:GetService("InsertService"):LoadLocalAsset(PrefabsId).Parent = workspace
 local Window = ReGui:TabsWindow({
-	Title = "Ohio killer ReCode | v1.0",
+	Title = "Ohio killer ReCode | v2.0",
 	Size = UDim2.new(0, 350, 0, 350),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
