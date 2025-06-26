@@ -91,45 +91,47 @@ function Process(IsSafeZone, Params)
                 end
             end
             for _, register in pairs(registers:GetChildren()) do
-                if Params.Register and register.CashDrawer then
-                    local weld = register.CashDrawer.WeldConstraint
-                    local atmPrimary = register.PrimaryPart
-                    
-                    if weld and atmPrimary then
-                        atmPrimary.CanCollide = false
+                pcall(function()
+                    if Params.Register and register.CashDrawer then
+                        local weld = register.CashDrawer.WeldConstraint
+                        local atmPrimary = register.PrimaryPart
                         
-                        if weld.Enabled then
-                            local atmLook = atmPrimary.CFrame.LookVector
-                            local atmRight = atmPrimary.CFrame.RightVector
-                            local frontPosition = atmPrimary.Position - (atmLook * 3)
-                            local lookAtCFrame = CFrame.new(frontPosition, atmPrimary.Position)
-                            local cam = workspace.CurrentCamera
+                        if weld and atmPrimary then
+                            atmPrimary.CanCollide = false
                             
-                            repeat
-                                cam.CFrame = CFrame.new(cam.CFrame.Position, atmPrimary.Position)
-                            
-                                rootPart.CFrame = lookAtCFrame
-                                rootPart.CFrame = atmPrimary.CFrame
+                            if weld.Enabled then
+                                local atmLook = atmPrimary.CFrame.LookVector
+                                local atmRight = atmPrimary.CFrame.RightVector
+                                local frontPosition = atmPrimary.Position - (atmLook * 3)
+                                local lookAtCFrame = CFrame.new(frontPosition, atmPrimary.Position)
+                                local cam = workspace.CurrentCamera
                                 
-                                local _, Equipped = v4item.GetEquipped(player)
-                                if not Equipped then
-                                    BaseItem.SetEquipped(Fists, true, false, true)
-                                    wait(0.5) 
+                                repeat
+                                    cam.CFrame = CFrame.new(cam.CFrame.Position, atmPrimary.Position)
+                                
+                                    rootPart.CFrame = lookAtCFrame
+                                    rootPart.CFrame = atmPrimary.CFrame
+                                    
+                                    local _, Equipped = v4item.GetEquipped(player)
+                                    if not Equipped then
+                                        BaseItem.SetEquipped(Fists, true, false, true)
+                                        wait(0.5) 
+                                    end
+                                
+                                    task.wait(0.1)
+                                    melee.meleeHitreg(Fists, "meleepunch")
+                                    melee.onMeleeHit(player, "meleepunch")
+                                until not weld or weld.Enabled == false or humanoid.Health < 100
+                                
+                                if weld.Enabled == false then
+                                    task.wait(1)
+                                    CollectMoney(rootPart)
+                                    task.wait(0.5)
                                 end
-                            
-                                task.wait(0.1)
-                                melee.meleeHitreg(Fists, "meleepunch")
-                                melee.onMeleeHit(player, "meleepunch")
-                            until not weld or weld.Enabled == false or humanoid.Health < 100
-                            
-                            if weld.Enabled == false then
-                                task.wait(1)
-                                CollectMoney(rootPart)
-                                task.wait(0.5)
                             end
-                        end
-                    end 
-                end
+                        end 
+                    end
+                end)
                 if humanoid.Health < 100 then
                     break
                 end
