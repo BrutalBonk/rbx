@@ -16,6 +16,13 @@ local Fists
 
 local BalloonAlways = false
 local SafeMode, SafeMin = false, 100
+local Farm = false
+local FarmSafeEnabled = true
+local LockerEnabled = true
+local FarmTypes = {
+    ATM = false,
+    Register = false,
+}
 
 function InitFists()
     for _, item in pairs(Items) do
@@ -147,6 +154,61 @@ function Process(IsSafeZone, Params)
         end
     end 
 end
+function InitAll()
+    InitFists()
+
+    task.spawn(function()
+        
+        local before = CFrame.new(0, 0, 0)
+        local safeModeActive = false  
+        while task.wait(0.1) do 
+            if BalloonAlways then
+                pcall(StateBalloon, true) 
+            end
+            if SafeMode and not safeModeActive then
+                safeModeActive = true
+                task.spawn(function()
+                    pcall(function()
+                        local humanoid = character:FindFirstChild("Humanoid")
+                        local rootPart = character:FindFirstChild("HumanoidRootPart")
+                        
+                        if not (humanoid and rootPart) then return end
+                        
+                        if humanoid.Health <= SafeMin then
+                            before = rootPart.CFrame
+                            rootPart.CFrame = SafeZone
+                            
+                            while humanoid.Health <= SafeMin and humanoid.Health > 0 do
+                                task.wait(1)
+                                humanoid = character:FindFirstChild("Humanoid")
+                                if not humanoid then break end
+                            end
+                            
+                            if character:IsDescendantOf(workspace) and rootPart then
+                                rootPart.CFrame = before
+                            end
+                        else
+                            before = rootPart.CFrame
+                        end
+                    end)
+                    safeModeActive = false
+                end)
+            end
+        end 
+    end)
+    task.spawn(function() 
+        while task.wait() do
+            if player.PlayerGui.Backpack.Enabled == true then
+                player.PlayerGui.Backpack.Holder.Locker.Visible = LockerEnabled     
+            end
+        end
+    end)
+    while task.wait() do
+        if Farm then
+            Process(FarmSafeEnabled, FarmTypes) 
+        end
+    end
+end
 
 local ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/depthso/Dear-ReGui/refs/heads/main/ReGui.lua'))()
 local PrefabsId = 'rbxassetid://71968920594655'
@@ -155,7 +217,7 @@ ReGui:Init({
 })
 game:GetService("InsertService"):LoadLocalAsset(PrefabsId).Parent = workspace
 local Window = ReGui:TabsWindow({
-	Title = "Ohio killer ReCode | v2.5",
+	Title = "Ohio killer ReCode | v3",
 	Size = UDim2.new(0, 350, 0, 350),
 	Position = UDim2.new(0.5, 0, 0, 70)
 })
@@ -166,13 +228,6 @@ FarmTab:Label({
     Text = "Working method to farm money"
 }) 
 FarmTab:Separator()
-
-local Farm = false
-local FarmSafeEnabled = true
-local FarmTypes = {
-    ATM = false,
-    Register = false,
-}
 
 local VerticalRow = FarmTab:Indent({Offset=10}):Row()
 VerticalRow:Checkbox({
@@ -208,15 +263,6 @@ FarmTab:Checkbox({
 })
 
 
-InitFists()
-
-task.spawn(function()
-    while task.wait() do
-        if Farm then
-            Process(FarmSafeEnabled, FarmTypes) 
-        end
-    end
-end)
 
 
 FarmTab:Separator({Text = 'NOTE: To disable press ESC and disable, \nSometimes may bug atms'})
@@ -235,6 +281,9 @@ local PlayerHeader = PlayerTab:CollapsingHeader({
 local PlayerHeader0 = PlayerTab:CollapsingHeader({
     Title = 'Safe mode'
 })
+local PlayerHeader1 = PlayerTab:CollapsingHeader({
+    Title = 'Locker'
+})
 function StateBalloon(Value)
    local Balloon = require(v3item.bin.Holdable.modules.controller.modules.itemFuncs.Balloon)
     local item = {
@@ -246,7 +295,7 @@ function StateBalloon(Value)
     Balloon[method](item) 
 end
 
-PlayerHeader:Checkbox({
+PlayerHeader:Indent({Offset=10}):Checkbox({
 	Value = false,
    	Label = "Enabled",
 	Callback = function(self, Value: boolean)
@@ -256,7 +305,7 @@ PlayerHeader:Checkbox({
 	end
 })
 
-PlayerHeader:Checkbox({
+PlayerHeader:Indent({Offset=10}):Checkbox({
     Value = false,
     Label = "Always",
     Callback = function(self, Value: boolean)
@@ -267,7 +316,7 @@ PlayerHeader:Checkbox({
 })
 
 PlayerHeader0:Separator({Text = 'NOTE: Teleports to safe zone when health < or = min'})
-PlayerHeader0:SliderInt({
+PlayerHeader0:Indent({Offset=10}):SliderInt({
     Label = "Minimum",
     Value = 10,
     Minimum = 10,
@@ -276,7 +325,7 @@ PlayerHeader0:SliderInt({
         SafeMin = Value
     end
 })
-PlayerHeader0:Checkbox({
+PlayerHeader0:Indent({Offset=10}):Checkbox({
     Value = false,
     Label = "Enabled",
     Callback = function(self, Value: boolean)
@@ -285,10 +334,27 @@ PlayerHeader0:Checkbox({
     	end)
     end
 })
+PlayerHeader1:Separator({Text = 'NOTE: Backpack locker'})
+PlayerHeader1:Indent({Offset=10}):Checkbox({
+    Value = false,
+    Label = "Enabled",
+    Callback = function(self, Value: boolean)
+    	task.spawn(function()
+            LockerEnabled = Value
+    	end)
+    end
+})
 
 
 local ValuablesTab = Window:CreateTab({Name = 'Valuables'})
-ValuablesTab:Button({
+local ValuableHeader = ValuablesTab:CollapsingHeader({
+    Title = 'Teleport'
+})
+local ValuableHeader0 = ValuablesTab:CollapsingHeader({
+    Title = 'Other'
+})
+ValuableHeader:Separator({Text = 'NOTE: Goto valuable button teleports you to valuable item'})
+ValuableHeader:Indent({Offset=10}):Button({
 	Text = "Find valuable",
 	Callback = function(self)
 		local Folder       = workspace.Game.Entities.ItemPickup
@@ -356,7 +422,79 @@ ValuablesTab:Button({
 		end
 	end
 })
-ValuablesTab:Button({
+ValuableHeader:Indent({Offset=10}):Button({
+    Text = 'Goto airdrop',
+    Callback = function()
+        task.spawn(function()
+            local airdrops = workspace.Game.Airdrops
+            local drop = nil
+            
+            for i, v in pairs(airdrops:GetChildren()) do
+                drop = v
+            end
+            
+            if drop then
+                if drop.PrimaryPart then
+                    local rootPart = character:FindFirstChild("HumanoidRootPart")
+                
+                    rootPart.CFrame = drop.PrimaryPart.CFrame 
+                end
+            end
+        end)
+    end,
+})
+ValuableHeader:Indent({Offset=10}):Button({
+    Text = 'Goto safe / chest',
+    Callback = function()
+        task.spawn(function()
+            local Path = game:GetService("Workspace").Game.Entities
+            for i, v in pairs(Path:GetChildren()) do
+        		if string.find(v.Name, 'Safe') or string.find(v.Name, 'Chest') then
+        			if v:FindFirstChildOfClass('Model') then
+        				if "ProximityPrompt" then
+        					for j, k in pairs(v:FindFirstChildOfClass('Model'):GetDescendants()) do
+        						if k:IsA("ProximityPrompt") then
+        							local Primary = v:FindFirstChildOfClass('Model').PrimaryPart
+        							if Primary then
+        								local RootPart = character.PrimaryPart
+			                            RootPart.CFrame = Primary.CFrame + Vector3.new(0, 5, 0)
+        							end
+        							k.HoldDuration = 0
+        						end
+        					end
+        				else
+        					local Primary = v:FindFirstChildOfClass('Model').PrimaryPart
+        					if Primary then
+        						return Primary
+        					end
+        				end
+        			end
+        		end
+        	end
+        end)
+    end,
+})
+ValuableHeader:Indent({Offset=10}):Button({
+    Text = 'Goto treasure marker',
+    Callback = function()
+        task.spawn(function()
+            local Path = workspace.Game.Local.Debris.TreasureMarker
+            if Path then
+                local rootPart = character:FindFirstChild('HumanoidRootPart')
+	            if rootPart then
+	                rootPart.CFrame = Path.CFrame
+	                for _, o in pairs(Path:GetChildren()) do
+                        if o:IsA('ProximityPrompt') then
+                            o.HoldDuration = 0
+                        end
+                    end
+	            end
+            end
+        end)
+    end,
+})
+ValuableHeader0:Separator({Text = 'NOTE: Removes cooldown of every ProximityPrompt'})
+ValuableHeader0:Indent({Offset=10}):Button({
     Text = 'Remove cooldown',
     Callback = function()
         for _, o in pairs(workspace:GetDescendants()) do
@@ -366,7 +504,8 @@ ValuablesTab:Button({
         end
     end,
 })
-ValuablesTab:Button({
+
+ValuableHeader0:Indent({Offset=10}):Button({
     Text = 'Sell Equipped',
     Callback = function()
         task.spawn(function()
@@ -377,26 +516,83 @@ ValuablesTab:Button({
         end)
     end,
 })
-local before = CFrame.new(0, 0, 0)
-while wait() do
-    task.spawn(function()
-        if BalloonAlways then
-            StateBalloon(true) 
-        end
-    end)
-    task.spawn(function()
-        if SafeMode then
-            local humanoid = character:FindFirstChild("Humanoid")
-            local rootPart = character:FindFirstChild("HumanoidRootPart")
-            if humanoid.Health <= SafeMin then
-                rootPart.CFrame = SafeZone
-                repeat
-                    task.wait(1)
-                until humanoid.Health >= SafeMin
-                rootPart.CFrame = before
-            else
-                before = rootPart.CFrame
+
+local TravelTab = Window:CreateTab({Name = 'Travel'})
+local TravelDest = 'None'
+
+local TravelHeader = TravelTab:CollapsingHeader({
+    Title = 'Places'
+})
+local TravelHeader0 = TravelTab:CollapsingHeader({
+    Title = 'Dropped'
+})
+TravelHeader:Indent({Offset=10}):Combo({
+	Label = "Destination",
+	Selected = "None",
+	Items = {
+		"Police station", 
+		"Military base", 
+		"Bank",
+		"Armory",
+		"Safe zone",
+		'Jewelry'
+	},
+	Callback = function(self, value)
+	    TravelDest = value
+	end
+})
+TravelHeader:Indent({Offset=10}):Button({
+	Text = "Teleport",
+	Callback = function(self)
+		local rootPart = character:FindFirstChild('HumanoidRootPart')
+		if rootPart then
+		    if TravelDest ~= 'None' then
+                local DestToPlace = {
+                    ["Police station"] = workspace.ArmoryRobbery.ArmoryTrigger, 
+                    ["Military base"] = workspace.MilitaryRobbery.MilitaryTrigger, 
+                    ["Bank"] = workspace.BankRobbery.BankAlarm,
+                    ["Armory"] = workspace.LandmarkNodes.Nodes.armory1,
+                    ["Safe zone"] = workspace.SecretEggSpawns.SecretEgg3,
+                    ['Jewelry'] = workspace.GemRobbery.AlarmLights
+                } 
+                
+                local destination = DestToPlace[TravelDest]
+                if destination then
+                    rootPart.CFrame = destination.CFrame
+                end
             end
-        end
-    end)
-end
+		end
+	end
+})
+TravelHeader0:Separator({Text = 'NOTE: Teleport you to dropped item'})
+TravelHeader0:Indent({Offset=10}):Combo({
+	Label = "Destination",
+	Selected = "None",
+	Items = {
+		"Ammo Box", 
+		"Money Printer", 
+	},
+	Callback = function(self, value)
+	    TravelDest = value
+	end
+})
+TravelHeader0:Indent({Offset=10}):Button({
+	Text = "Teleport",
+	Callback = function(self)
+		local rootPart = character:FindFirstChild('HumanoidRootPart')
+		if rootPart then
+		    if TravelDest ~= 'None' then
+                local DestToPlace = {
+                    ["Ammo Box"] = workspace.Game.Local.droppables['Ammo Box'], 
+                    ["Money Printer"] = workspace.Game.Local.droppables['Money Printer'], 
+                } 
+                
+                local destination = DestToPlace[TravelDest]
+                if destination then
+                    rootPart.CFrame = destination.PrimaryPart.CFrame
+                end
+            end
+		end
+	end
+})
+InitAll()
