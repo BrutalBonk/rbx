@@ -637,7 +637,7 @@ teleport_section:addButton({text = 'Goto Treasure Marker'}, function()
 end)
 
 local other_utils_section = valuables_menu:addSection({text = 'Other Utilities', side = 'right'})
-other_utils_section:addButton({text = 'Remove Prompt Cooldowns'}, function()
+other_utils_section:addButton({text = 'Remove Cooldowns'}, function()
     for _, o in pairs(workspace:GetDescendants()) do
         if o:IsA('ProximityPrompt') then
             o.HoldDuration = 0
@@ -645,7 +645,7 @@ other_utils_section:addButton({text = 'Remove Prompt Cooldowns'}, function()
     end
 end):setTooltip("Sets the hold duration for all ProximityPrompts in the game to 0.")
 
-other_utils_section:addButton({text = 'Sell Equipped Item'}, function()
+other_utils_section:addButton({text = 'Sell Equipped'}, function()
     task.spawn(function()
         local _, item = v4item.GetEquipped(player)
         if item then
