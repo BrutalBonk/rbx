@@ -337,10 +337,7 @@ function InitAll()
             if Input.UserInputType == Enum.UserInputType.Keyboard then
                  Root = getCurrentCharacter() and getCurrentCharacter():FindFirstChild("HumanoidRootPart")
                 if not Root then return end
-                if Input.KeyCode == Enum.KeyCode.M then
-                    Nav.Flying = not Nav.Flying
-                    Root.Anchored = Nav.Flying
-                elseif Input.KeyCode == Enum.KeyCode.W then
+                if Input.KeyCode == Enum.KeyCode.W then
                     Nav.Forward = true
                 elseif Input.KeyCode == Enum.KeyCode.S then
                     Nav.Backward = true
@@ -532,22 +529,30 @@ combat_section:addToggle({text = 'Auto Stomp'}, function(val)
     PlayerMethods.AutoStomp = val
 end)
 
-local fly_section = player_menu:addSection({text = 'Movement (Fly)', side = 'right'})
+local fly_section = player_menu:addSection({text = 'Movement', side = 'right'})
 local FlyBeforePos
 fly_section:addLabel({text = 'NOTE: You are invisible to others while flying.', dim = true})
-fly_section:addToggle({text = 'Toggle Fly'}, function(val)
+fly_section:addToggle({text = 'Fly'}, function(val)
     task.spawn(function()
+        local Value = val
         local character = getCurrentCharacter()
         if not character then return end
+            
         local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
         if not humanoidRootPart then return end
-
-        PlayerMethods.Fly = val
-        Nav.Flying = val
-        humanoidRootPart.Anchored = val
-
-        if val then
+            
+        if Value then
             FlyBeforePos = humanoidRootPart.CFrame
+            humanoidRootPart.CFrame = SafeZone
+
+            task.wait(0.1)
+            Nav.Flying = true
+            PlayerMethods.Fly = true
+            
+            humanoidRootPart.CFrame = FlyBeforePos
+        else
+            Nav.Flying = false
+            PlayerMethods.Fly = false
         end
     end)
 end)
