@@ -1,6 +1,3 @@
---[[
-  Script Logic (Unchanged as requested)
-]]
 local Load = require(game:GetService("ReplicatedStorage").devv).load
 local Signal = require(game:GetService("ReplicatedStorage").devv.client.Helpers.remotes.Signal)
 local v3item = game:GetService("ReplicatedStorage").devv.client.Objects.v3item
