@@ -1,3 +1,5 @@
+local ui = loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/dollarware/main/library.lua'))()
+
 local Load = require(game:GetService("ReplicatedStorage").devv).load
 local Signal = require(game:GetService("ReplicatedStorage").devv.client.Helpers.remotes.Signal)
 local v3item = game:GetService("ReplicatedStorage").devv.client.Objects.v3item
@@ -30,6 +32,8 @@ local PlayerMethods = {
     KillAura = false,
     AutoStomp = false,
     Fly = false,
+    Target = nil,
+    TargetKill = false,
 }
 local Nav = {
     Flying = false,
@@ -65,7 +69,12 @@ local Priority = {
     'Acid',
     'AS Val',
     'AUG',
-    'Python'
+    'Python',
+    'RPK',
+    'Fn',
+    'P90',
+    'Diamond',
+    'Tactical'
 }
 
 local ValuableAuto, ValuableSafe = false, false
@@ -206,7 +215,6 @@ function Process(IsSafeZone, Params)
         end
     end
 end
-
 function Seek()
     local character = getCurrentCharacter()
     local rootPart = character:FindFirstChild("HumanoidRootPart")
@@ -253,7 +261,6 @@ function Seek()
         end
     end
 end
-
 function StateBalloon(Value)
     local Balloon = require(v3item.bin.Holdable.modules.controller.modules.itemFuncs.Balloon)
     local item = {
@@ -264,7 +271,6 @@ function StateBalloon(Value)
     local method = if Value then 'onEquipped' else 'onUnequipped'
     Balloon[method](item)
 end
-
 function InitAll()
     task.spawn(function()
         local before = CFrame.new(0, 0, 0)
@@ -455,6 +461,45 @@ function InitAll()
             end
         end
     end)
+    task.spawn(function() 
+        while wait() do
+            if PlayerMethods.Target then
+                if PlayerMethods.TargetKill then
+                    local Player = game:GetService('Players')[PlayerMethods.Target]
+                    if Player then
+                        local Character = Player.Character or Player.CharacterAdded:Wait()
+                        if Character then
+                            local RootPart = Character:FindFirstChild('HumanoidRootPart')
+                            if RootPart then
+                                local ForceField = Character:FindFirstChild('ForceField')
+                                if not ForceField then
+                                    local SelfCharacter = getCurrentCharacter()
+                                    if SelfCharacter then
+                                        local ForceField = SelfCharacter:FindFirstChild('ForceField')
+                                        local RootPart = SelfCharacter:FindFirstChild('HumanoidRootPart')
+                                        if RootPart and not ForceField then
+                                            local Table = {
+                                                ["hitPlayerId"] = Player.UserId,
+                                                ["meleeType"] = 'meleemegapunch'
+                                            }
+                                            RootPart.CFrame = Character.HumanoidRootPart.CFrame
+                                            local _, Equipped = v4item.GetEquipped(player)
+                                            if not Equipped then
+                                                BaseItem.SetEquipped(Fists, true, false, true)
+                                                wait(0.5)
+                                            end
+                                            Signal.FireServer("meleeItemHit", "player", Table)
+                                            Signal.FireServer("stomp", Player)
+                                        end
+                                    end
+                                end 
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end)
     while task.wait() do
         if Farm then
             Process(FarmSafeEnabled, FarmTypes)
@@ -462,9 +507,7 @@ function InitAll()
     end
 end
 
-local ui = loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/dollarware/main/library.lua'))()
-
-local window = ui.newWindow({text = "Ohio killer ReCode | v6.1", resize = true})
+local window = ui.newWindow({text = "Ohio killer ReCode | v6.5", resize = true})
 
 local farm_menu = window:addMenu({text = 'Farm'})
 local farm_section = farm_menu:addSection({text = 'Money Farm', side = 'left'})
@@ -514,7 +557,7 @@ safemode_section:addToggle({text = 'Enabled'}, function(val)
 end)
 
 local locker_section = player_menu:addSection({text = 'Locker', side = 'left'})
-locker_section:addLabel({text = 'NOTE: Hides/shows backpack locker.', dim = true})
+locker_section:addLabel({text = 'NOTE: Shows backpack locker', dim = true})
 locker_section:addToggle({text = 'Enabled'}, function(val)
     LockerEnabled = val
 end)
@@ -557,6 +600,62 @@ fly_section:addToggle({text = 'Fly'}, function(val)
     end)
 end)
 
+local teleport_section = player_menu:addSection({text = "Teleport", side = "right"})
+local textbox = teleport_section:addTextbox({text = 'Name'})
+
+textbox:bindToEvent('onFocusLost', function(input_text)
+    local players = game:GetService("Players"):GetPlayers()
+    local input_lower = input_text:lower()
+    local matches = {}
+
+    for _, player in ipairs(players) do
+        local player_name = player.Name
+        if player_name:lower():sub(1, #input_lower) == input_lower then
+            table.insert(matches, player_name)
+        end
+    end
+
+    if #matches >= 1 then
+        textbox:setText(matches[1])
+    end
+end)
+teleport_section:addToggle({text = 'Kill'}, function(val)
+    PlayerMethods.Target = textbox:getText()
+    task.spawn(function()
+        local Value = val
+        local character = getCurrentCharacter()
+        if not character then return end
+            
+        local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+        if not humanoidRootPart then return end
+            
+        PlayerMethods.TargetKill = Value
+    end)
+end)
+teleport_section:addButton({text = "Teleport"}, function() 
+    PlayerMethods.Target = textbox:getText()
+    if PlayerMethods.Target then
+        local Player = game:GetService('Players')[PlayerMethods.Target]
+        if Player then
+            local Character = Player.Character or Player.CharacterAdded:Wait()
+            if Character then
+                local RootPart = Character:FindFirstChild('HumanoidRootPart')
+                if RootPart then
+                    local SelfCharacter = getCurrentCharacter()
+                    if SelfCharacter then
+                        local ForceField = SelfCharacter:FindFirstChild('ForceField')
+                        local RootPart = SelfCharacter:FindFirstChild('HumanoidRootPart')
+                        if RootPart and not ForceField then
+                            RootPart.CFrame = Character.HumanoidRootPart.CFrame
+                        end
+                    end 
+                end
+            end
+        end 
+    end
+end)
+
+
 local valuables_menu = window:addMenu({text = 'Valuables'})
 local auto_valuable_section = valuables_menu:addSection({text = 'Auto Collect Valuable', side = 'left'})
 
@@ -572,9 +671,37 @@ auto_valuable_section:addToggle({text = 'Most Valuable Only'}, function(val)
         Priority = { "Marker", 'Void', 'Dark', 'C5', 'Santa' }
     else
         Priority = {
-            "Military", "Vest", "Keycard", "Marker", "Barrett", 'Gold', 'Present', 'Key', 'Money',
-            'RPG', 'Saiga', 'Scar', 'Block', 'M249', 'Hoverboard', 'Gravity', 'Dragunov',
-            'Void', 'Dark', 'C4', 'C5', 'Santa', 'Acid', 'AS Val', 'AUG', 'Python'
+            "Military",
+            "Vest",
+            "Keycard",
+            "Marker",
+            "Barrett",
+            'Gold',
+            'Present',
+            'Key',
+            'Money',
+            'RPG',
+            'Saiga',
+            'Scar',
+            'Block',
+            'M249',
+            'Hoverboard',
+            'Gravity',
+            'Dragunov',
+            'Void',
+            'Dark',
+            'C4',
+            'C5',
+            'Santa',
+            'Acid',
+            'AS Val',
+            'AUG',
+            'Python',
+            'RPK',
+            'Fn',
+            'P90',
+            'Diamond',
+            'Tactical'
         }
     end
 end):setTooltip("Filters the auto-collector to only pick up the rarest items.")
