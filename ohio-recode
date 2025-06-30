@@ -35,6 +35,7 @@ local PlayerMethods = {
     Target = nil,
     TargetKill = false,
     AutoLoot = false,
+    AutoSell = false,
 }
 local Nav = {
     Flying = false,
@@ -75,7 +76,11 @@ local Priority = {
     'Fn',
     'P90',
     'Diamond',
-    'Tactical'
+    'Tactical',
+    'Topaz',
+    'Treasure',
+    'Grenade',
+    'Nuke'
 }
 
 local ValuableAuto, ValuableSafe = false, false
@@ -92,14 +97,17 @@ function GetItem(Name)
     end
 end
 
-function CollectMoney(rootPart)
+function CollectMoney(rootPart, radius)
+    if not radius then
+        radius = 20 
+    end
     local Cash = workspace.Game.Entities.CashBundle
     local collected = {}
 
     for _, Dollar in pairs(Cash:GetChildren()) do
         if Dollar and Dollar.PrimaryPart then
             local dist = (Dollar.PrimaryPart.Position - rootPart.Position).Magnitude
-            if dist <= 20 then
+            if dist <= radius then
                 table.insert(collected, Dollar)
             end
         end
@@ -125,6 +133,7 @@ function Process(IsSafeZone, Params)
                 if Params.ATM then
                     local screen = atm:FindFirstChild("Screen")
                     local atmPrimary = atm.PrimaryPart
+                    
 
                     if screen and atmPrimary then
                         atmPrimary.CanCollide = false
@@ -135,7 +144,12 @@ function Process(IsSafeZone, Params)
                             local frontPosition = atmPrimary.Position - (atmLook * 3)
                             local lookAtCFrame = CFrame.new(frontPosition, atmPrimary.Position)
                             local cam = workspace.CurrentCamera
-
+                            
+                            local atmGUID = atm:GetAttribute('guid')
+                            local Table = {
+                                guid = atmGUID,
+                                meleeType = "meleepunch"
+                            }
                             repeat
                                 cam.CFrame = CFrame.new(cam.CFrame.Position, atmPrimary.Position)
 
@@ -149,8 +163,10 @@ function Process(IsSafeZone, Params)
                                 end
 
                                 task.wait(0.1)
-                                melee.meleeHitreg(Fists, "meleepunch")
-                                melee.onMeleeHit(player, "meleepunch")
+                                task.spawn(function()
+                                    Signal.FireServer("meleeItemHit", "prop", Table)
+                                end)
+                            
                             until not screen or screen.Color == Color3.fromRGB(255, 0, 0) or humanoid.Health < 100
 
                             if screen and screen.Color == Color3.fromRGB(255, 0, 0) then
@@ -179,7 +195,12 @@ function Process(IsSafeZone, Params)
                                 local frontPosition = atmPrimary.Position - (atmLook * 3)
                                 local lookAtCFrame = CFrame.new(frontPosition, atmPrimary.Position)
                                 local cam = workspace.CurrentCamera
-
+                                
+                                local atmGUID = register:GetAttribute('guid')
+                                local Table = {
+                                    guid = atmGUID,
+                                    meleeType = "meleepunch"
+                                }
                                 repeat
                                     cam.CFrame = CFrame.new(cam.CFrame.Position, atmPrimary.Position)
 
@@ -193,8 +214,9 @@ function Process(IsSafeZone, Params)
                                     end
 
                                     task.wait(0.1)
-                                    melee.meleeHitreg(Fists, "meleepunch")
-                                    melee.onMeleeHit(player, "meleepunch")
+                                    task.spawn(function()
+                                        Signal.FireServer("meleeItemHit", "prop", Table)
+                                    end)
                                 until not weld or weld.Enabled == false or humanoid.Health < 100
 
                                 if weld and weld.Enabled == false then
@@ -216,7 +238,7 @@ function Process(IsSafeZone, Params)
         end
     end
 end
-function Seek()
+function Seek(radius)
     local character = getCurrentCharacter()
     local rootPart = character:FindFirstChild("HumanoidRootPart")
     if not rootPart then return end
@@ -237,6 +259,9 @@ function Seek()
     for _, p in ipairs(partsIn2) do
         inTriggerSet[p] = true
     end
+    if not radius then
+        radius = math.huge 
+    end
 
     for _, pickup in ipairs(allPickups) do
         local part = pickup.PrimaryPart
@@ -244,18 +269,19 @@ function Seek()
             if inTriggerSet[part] then
                 continue
             end
-
-            local prompt = part:FindFirstChildOfClass("ProximityPrompt", true)
-            if prompt then
-                for _, keyword in ipairs(Priority) do
-                    if prompt.ObjectText:find(keyword) or prompt.ObjectText == keyword then
-                        if prompt.ObjectText:find('Vest') or prompt.ObjectText:find('Key') or prompt.ObjectText:find('Keycard') then
-                            if GetItem(prompt.ObjectText) then
-                                continue
+            if (part.Position - rootPart.Position).Magnitude <= radius then
+                local prompt = part:FindFirstChildOfClass("ProximityPrompt", true)
+                if prompt then
+                    for _, keyword in ipairs(Priority) do
+                        if prompt.ObjectText:find(keyword) or prompt.ObjectText == keyword then
+                            if prompt.ObjectText:find('Vest') or prompt.ObjectText:find('Key') or prompt.ObjectText:find('Keycard') then
+                                if GetItem(prompt.ObjectText) then
+                                    continue
+                                end
                             end
+                            rootPart.CFrame = part.CFrame
+                            return prompt
                         end
-                        rootPart.CFrame = part.CFrame
-                        return prompt
                     end
                 end
             end
@@ -298,7 +324,18 @@ function SeekSC()
     
     return safesAndChests
 end
-
+function diff(table1, table2)
+    local set1 = {}
+    for _, v in pairs(table1) do
+        set1[v] = true
+    end
+    for _, v in pairs(table2) do
+        if not set1[v] then
+            return v
+        end
+    end
+    return nil
+end
 function InitAll()
     task.spawn(function()
         local before = CFrame.new(0, 0, 0)
@@ -451,7 +488,7 @@ function InitAll()
                 end
             end
             if PlayerMethods.Fly then
-                local Speed = 3
+                local Speed = 2
                 local RootPart = getCurrentCharacter():WaitForChild("HumanoidRootPart")
                 if not RootPart then continue end
 
@@ -548,14 +585,48 @@ function InitAll()
                                     if root then
                                         root.CFrame = lootable.primary.CFrame + Vector3.new(0, 3, 0)
                                         lootable.prompt.HoldDuration = 0
-                                        wait(1) 
                                         repeat
                                             task.wait()
                                             fireproximityprompt(lootable.prompt)
                                         until lootable.prompt.Parent == nil or not lootable.prompt
+                                        wait(1)
+                                        if lootable.prompt.Parent == nil or not lootable.prompt then
+                                            local founded = Seek(20)
+                                            if founded == nil then
+                                                CollectMoney(root, 20)
+                                                task.wait(0.5)
+                                            else
+                                                local object = founded.ObjectText
+                                                if not GetItem(object) then
+                                                    repeat
+                                                        task.wait()
+                                                        fireproximityprompt(founded)
+                                                    until founded.Parent == nil or not founded
+                                                end
+                                                if PlayerMethods.AutoSell then
+                                                    task.spawn(function()
+                                                        local item = GetItem(object)
+                                                        if item then
+                                                            BaseItem.SetEquipped(item, true, false, true)
+                                                            local _, Equipped = v4item.GetEquipped(player)
+                                                            if Equipped then
+                                                                Signal.FireServer("sellItem", Equipped) 
+                                                            end
+                                                        end
+                                                    end) 
+                                                end
+                                            end
+                                        end
+                                        break
                                     end
                                 end
                             end
+                        end
+                        if PlayerMethods.AutoLootSafe then
+                            local character = getCurrentCharacter()
+                            local rootPart = character:FindFirstChild("HumanoidRootPart")
+                            if not (rootPart) then return end
+                            rootPart.CFrame = SafeZone
                         end
                     end
                 end)
@@ -569,7 +640,7 @@ function InitAll()
     end
 end
 
-local window = ui.newWindow({text = "Ohio killer ReCode | v6.5", resize = true})
+local window = ui.newWindow({text = "Ohio killer ReCode | v7", resize = true})
 
 local farm_menu = window:addMenu({text = 'Farm'})
 local farm_section = farm_menu:addSection({text = 'Money Farm', side = 'left'})
@@ -721,7 +792,6 @@ end)
 local valuables_menu = window:addMenu({text = 'Valuables'})
 local auto_valuable_section = valuables_menu:addSection({text = 'Auto Collect Valuable', side = 'left'})
 
-auto_valuable_section:addLabel({text = 'Auto TP to and collect valuable items.', dim = true})
 auto_valuable_section:addButton({text = "Find Valuable"}, function() Seek() end)
 
 auto_valuable_section:addToggle({text = 'Safe Mode'}, function(val)
@@ -763,7 +833,11 @@ auto_valuable_section:addToggle({text = 'Most Valuable Only'}, function(val)
             'Fn',
             'P90',
             'Diamond',
-            'Tactical'
+            'Tactical',
+            'Topaz',
+            'Treasure',
+            'Grenade',
+            'Nuke'
         }
     end
 end):setTooltip("Filters the auto-collector to only pick up the rarest items.")
@@ -823,8 +897,16 @@ teleport_section:addToggle({text = 'Auto'}, function(val)
         PlayerMethods.AutoLoot = val
     end)
 end)
-
-
+teleport_section:addToggle({text = 'Auto sell'}, function(val)
+    task.spawn(function()
+        PlayerMethods.AutoSell = val
+    end)
+end)
+teleport_section:addToggle({text = 'Safe mode'}, function(val)
+    task.spawn(function()
+        PlayerMethods.AutoLootSafe = val
+    end)
+end)
 local other_utils_section = valuables_menu:addSection({text = 'Other Utilities', side = 'right'})
 other_utils_section:addButton({text = 'Remove Cooldowns'}, function()
     for _, o in pairs(workspace:GetDescendants()) do
