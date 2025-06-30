@@ -34,6 +34,7 @@ local PlayerMethods = {
     Fly = false,
     Target = nil,
     TargetKill = false,
+    AutoLoot = false,
 }
 local Nav = {
     Flying = false,
@@ -271,6 +272,33 @@ function StateBalloon(Value)
     local method = if Value then 'onEquipped' else 'onUnequipped'
     Balloon[method](item)
 end
+function SeekSC()
+    local rootPart = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
+    if not rootPart then return end
+    
+    local safesAndChests = {}
+    local searchFolders = {
+        workspace.Game.Entities,
+    }
+
+    for _, folder in ipairs(searchFolders) do
+        for _, obj in ipairs(folder:GetDescendants()) do
+            if obj:IsA("Model") and (obj.Name:find("Safe") or obj.Name:find("Chest")) then
+                local prompt = obj:FindFirstChild("ProximityPrompt", true)
+                if prompt then
+                    table.insert(safesAndChests, {
+                        model = obj,
+                        prompt = prompt,
+                        primary = obj.PrimaryPart
+                    })
+                end
+            end
+        end
+    end
+    
+    return safesAndChests
+end
+
 function InitAll()
     task.spawn(function()
         local before = CFrame.new(0, 0, 0)
@@ -461,7 +489,7 @@ function InitAll()
             end
         end
     end)
-    task.spawn(function() 
+    task.spawn(function()
         while wait() do
             if PlayerMethods.Target then
                 if PlayerMethods.TargetKill then
@@ -497,6 +525,40 @@ function InitAll()
                         end
                     end
                 end
+            end
+        end
+    end)
+    task.spawn(function()
+        while wait() do
+            if PlayerMethods.AutoLoot then
+                pcall(function()
+                    local lockpick = GetItem('Lockpick')
+                    if not lockpick then 
+                        Signal.InvokeServer('attemptPurchase', 'Lockpick')
+                        return 
+                    end
+    
+                    local lootables = SeekSC()
+                    if #lootables > 0 then
+                        for _, lootable in ipairs(lootables) do
+                            if lootable.primary then
+                                local char = getCurrentCharacter()
+                                if char then
+                                    local root = char:FindFirstChild('HumanoidRootPart')
+                                    if root then
+                                        root.CFrame = lootable.primary.CFrame + Vector3.new(0, 3, 0)
+                                        lootable.prompt.HoldDuration = 0
+                                        wait(1) 
+                                        repeat
+                                            task.wait()
+                                            fireproximityprompt(lootable.prompt)
+                                        until lootable.prompt.Parent == nil or not lootable.prompt
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end)
             end
         end
     end)
@@ -728,28 +790,16 @@ teleport_section:addButton({text = 'Goto Airdrop'}, function()
 end)
 
 teleport_section:addButton({text = 'Goto Safe / Chest'}, function()
-    task.spawn(function()
-        local rootPart = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
-        if not rootPart then return end
-        local Path = game:GetService("Workspace").Game.Entities
-        for i, v in pairs(Path:GetChildren()) do
-            if string.find(v.Name, 'Safe') or string.find(v.Name, 'Chest') then
-                if v:FindFirstChildOfClass('Model') then
-                    if "ProximityPrompt" then
-                        for j, k in pairs(v:FindFirstChildOfClass('Model'):GetDescendants()) do
-                            if k:IsA("ProximityPrompt") then
-                                local Primary = v:FindFirstChildOfClass('Model').PrimaryPart
-                                if Primary then
-                                    rootPart.CFrame = Primary.CFrame + Vector3.new(0, 5, 0)
-                                end
-                                k.HoldDuration = 0
-                            end
-                        end
-                    end
-                end
+    local lootables = SeekSC()
+    if #lootables > 0 then
+        local char = getCurrentCharacter()
+        if char then
+            local root = char:FindFirstChild('HumanoidRootPart')
+            if root then
+                root.CFrame = lootables[1].primary.CFrame + Vector3.new(0, 3, 0)
             end
         end
-    end)
+    end
 end)
 
 teleport_section:addButton({text = 'Goto Treasure Marker'}, function()
@@ -768,6 +818,13 @@ teleport_section:addButton({text = 'Goto Treasure Marker'}, function()
     end)
 end)
 
+teleport_section:addToggle({text = 'Auto'}, function(val)
+    task.spawn(function()
+        PlayerMethods.AutoLoot = val
+    end)
+end)
+
+
 local other_utils_section = valuables_menu:addSection({text = 'Other Utilities', side = 'right'})
 other_utils_section:addButton({text = 'Remove Cooldowns'}, function()
     for _, o in pairs(workspace:GetDescendants()) do
@@ -781,7 +838,7 @@ other_utils_section:addButton({text = 'Sell Equipped'}, function()
     task.spawn(function()
         local _, item = v4item.GetEquipped(player)
         if item then
-            Signal.FireServer("sellItem", item.guid)
+            Signal.FireServer("sellItem", item)
         end
     end)
 end)
