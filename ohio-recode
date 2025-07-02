@@ -1,4 +1,32 @@
-local ui = loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/dollarware/main/library.lua'))()
+local Bracket = loadstring(game:HttpGet('https://raw.githubusercontent.com/AlexR32/Bracket/refs/heads/main/BracketV34_dev.lua'))()
+function CreateNotification(options)
+    options = options or {}
+    local StarterGui = game:GetService("StarterGui")
+    local callback = Instance.new("BindableFunction")
+    
+    callback.OnInvoke = function(buttonPressed)
+        if buttonPressed == "OK" then
+            if options.OnOk and type(options.OnOk) == 'function' then
+                pcall(options.OnOk)
+            end
+        elseif buttonPressed == "Cancel" then
+            if options.OnCancel and type(options.OnCancel) == 'function' then
+                pcall(options.OnCancel)
+            end
+        end
+
+        callback:Destroy()
+    end
+
+    StarterGui:SetCore("SendNotification", {
+        Title = options.Title or "Notification",
+        Text = options.Message or "",
+        Duration = math.huge,
+        Button1 = "OK",
+        Button2 = "Cancel",
+        Callback = callback
+    })
+end
 
 local Load = require(game:GetService("ReplicatedStorage").devv).load
 local Signal = require(game:GetService("ReplicatedStorage").devv.client.Helpers.remotes.Signal)
@@ -19,14 +47,15 @@ local Items = v3Inventory.items
 local Fists
 
 local BalloonAlways = false
-local SafeMode, SafeHeal, SafeMin = false, false, 100
+local SafeMode, SafeHeal, SafeName, SafeArmor, SafeMin = false, false, false, false, 100
 local Farm = false
-local FarmSafeEnabled = true
-local LockerEnabled = true
+local FarmSafeEnabled = false
+local LockerEnabled = false
 local FarmTypes = {
     ATM = false,
     Register = false,
     Fly = false,
+    Hidden = true,
 }
 local PlayerMethods = {
     KillAura = false,
@@ -34,8 +63,16 @@ local PlayerMethods = {
     Fly = false,
     Target = nil,
     TargetKill = false,
+    TargetBring = false,
     AutoLoot = false,
+    AutoLootSafe = false,
     AutoSell = false,
+    Notification = false,
+    Notification2 = false,
+}
+local ItemMethods = {
+    Enabled = false,
+    Item = ''
 }
 local Nav = {
     Flying = false,
@@ -73,17 +110,29 @@ local Priority = {
     'AUG',
     'Python',
     'RPK',
-    'Fn',
+    'FN',
     'P90',
     'Diamond',
     'Tactical',
     'Topaz',
     'Treasure',
     'Grenade',
-    'Nuke'
+    'Nuke',
+    'AR-15',
+    'MP7',
+    'Deagle',
+    'Gun',
+    'Glock',
+    'Flamethrower',
+    'Ruby',
+    'Sapphire',
+    'Amethyst',
+    'Rollie',
+    'Emerald'
 }
 
 local ValuableAuto, ValuableSafe = false, false
+local player_textbox_i
 
 local function getCurrentCharacter()
     return player.Character or player.CharacterAdded:Wait()
@@ -115,178 +164,214 @@ function CollectMoney(rootPart, radius)
 
     for _, Dollar in ipairs(collected) do
         if Dollar and Dollar.PrimaryPart then
-            rootPart.CFrame = Dollar.PrimaryPart.CFrame
+            repeat
+                pcall(function()
+                    task.wait(0.1)
+                    rootPart.CFrame = Dollar.PrimaryPart.CFrame
+                end)
+            until not Dollar or Dollar.Parent == nil or not Dollar.PrimaryPart
             wait(0.5)
         end
     end
 end
 
 function Process(IsSafeZone, Params)
-    if Fists then
+    pcall(function()
+        if not Fists then return end
+
         local character = getCurrentCharacter()
-        local humanoid = character:FindFirstChild("Humanoid")
-        local rootPart = character:FindFirstChild("HumanoidRootPart")
-        local atms = workspace.Game.Props.ATM
-        local registers = workspace.Game.Props.CashRegister
-        if humanoid and rootPart and humanoid.Health >= 100 then
-            for _, atm in pairs(atms:GetChildren()) do
-                if Params.ATM then
-                    local screen = atm:FindFirstChild("Screen")
-                    local atmPrimary = atm.PrimaryPart
-                    
+        local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+        local rootPart = character and character:FindFirstChild("HumanoidRootPart")
 
-                    if screen and atmPrimary then
-                        atmPrimary.CanCollide = false
+        if not (humanoid and rootPart and humanoid.Health >= 100) then
+            return
+        end
 
-                        if screen.Color ~= Color3.fromRGB(255, 0, 0) then
-                            local atmLook = atmPrimary.CFrame.LookVector
-                            local atmRight = atmPrimary.CFrame.RightVector
-                            local frontPosition = atmPrimary.Position - (atmLook * 3)
-                            local lookAtCFrame = CFrame.new(frontPosition, atmPrimary.Position)
-                            local cam = workspace.CurrentCamera
-                            
-                            local atmGUID = atm:GetAttribute('guid')
-                            local Table = {
-                                guid = atmGUID,
-                                meleeType = "meleepunch"
-                            }
-                            repeat
-                                cam.CFrame = CFrame.new(cam.CFrame.Position, atmPrimary.Position)
+        local function FarmProp(prop, checkCondition)
+            local primaryPart = prop.PrimaryPart
+            if not primaryPart then return true end 
+            
+            local hidden = if not Params.Hidden then 3 else 0.1 
 
-                                rootPart.CFrame = lookAtCFrame
-                                rootPart.CFrame = atmPrimary.CFrame
+            primaryPart.CanCollide = false
+            local lookAtCFrame = CFrame.new(primaryPart.Position + (primaryPart.CFrame.LookVector * hidden), primaryPart.Position)
 
-                                local _, Equipped = v4item.GetEquipped(player)
-                                if not Equipped then
-                                    BaseItem.SetEquipped(Fists, true, false, true)
-                                    wait(0.5)
-                                end
-
-                                task.wait(0.1)
-                                task.spawn(function()
-                                    Signal.FireServer("meleeItemHit", "prop", Table)
-                                end)
-                            
-                            until not screen or screen.Color == Color3.fromRGB(255, 0, 0) or humanoid.Health < 100
-
-                            if screen and screen.Color == Color3.fromRGB(255, 0, 0) then
-                                CollectMoney(rootPart)
-                                task.wait(0.5)
-                            end
-                        end
-                    end
-                end
-                if humanoid.Health < 100 then
-                    break
-                end
+            local _, equipped = v4item.GetEquipped(player)
+            if not equipped then
+                BaseItem.SetEquipped(Fists, true, false, true)
+                task.wait(0.5)
             end
-            for _, register in pairs(registers:GetChildren()) do
-                pcall(function()
-                    if Params.Register and register.CashDrawer then
-                        local weld = register.CashDrawer.WeldConstraint
-                        local atmPrimary = register.PrimaryPart
 
-                        if weld and atmPrimary then
-                            atmPrimary.CanCollide = false
+            local propGUID = prop:GetAttribute('guid')
+            if not propGUID then return true end
 
-                            if weld.Enabled then
-                                local atmLook = atmPrimary.CFrame.LookVector
-                                local atmRight = atmPrimary.CFrame.RightVector
-                                local frontPosition = atmPrimary.Position - (atmLook * 3)
-                                local lookAtCFrame = CFrame.new(frontPosition, atmPrimary.Position)
-                                local cam = workspace.CurrentCamera
-                                
-                                local atmGUID = register:GetAttribute('guid')
-                                local Table = {
-                                    guid = atmGUID,
-                                    meleeType = "meleepunch"
-                                }
-                                repeat
-                                    cam.CFrame = CFrame.new(cam.CFrame.Position, atmPrimary.Position)
-
-                                    rootPart.CFrame = lookAtCFrame
-                                    rootPart.CFrame = atmPrimary.CFrame
-
-                                    local _, Equipped = v4item.GetEquipped(player)
-                                    if not Equipped then
-                                        BaseItem.SetEquipped(Fists, true, false, true)
-                                        wait(0.5)
-                                    end
-
-                                    task.wait(0.1)
-                                    task.spawn(function()
-                                        Signal.FireServer("meleeItemHit", "prop", Table)
-                                    end)
-                                until not weld or weld.Enabled == false or humanoid.Health < 100
-
-                                if weld and weld.Enabled == false then
-                                    task.wait(1)
-                                    CollectMoney(rootPart)
-                                    task.wait(0.5)
-                                end
-                            end
-                        end
-                    end
+            local hitTable = { guid = propGUID, meleeType = "meleepunch" }
+            local timeout = 100
+            
+            while checkCondition(prop) and humanoid.Health >= 100 and timeout > 0 do
+                rootPart.CFrame = lookAtCFrame
+                task.spawn(function()
+                    Signal.FireServer("meleeItemHit", "prop", hitTable)
                 end)
-                if humanoid.Health < 100 then
-                    break
-                end
+                timeout -= 1
+                task.wait(0.1)
             end
-            if IsSafeZone then
-                rootPart.CFrame = SafeZone
+            
+            if not checkCondition(prop) then
+                CollectMoney(rootPart)
+                task.wait(0.5)
+            end
+
+            return humanoid.Health >= 100
+        end
+
+        if Params.ATM then
+            local atms = workspace.Game.Props.ATM:GetChildren()
+            for _, atm in ipairs(atms) do
+                if not Farm then
+                    return 
+                end
+                local shouldContinue = pcall(function()
+                    local screen = atm:FindFirstChild("Screen")
+                    if screen and screen.Color ~= Color3.fromRGB(255, 0, 0) then
+                        return FarmProp(atm, function(p)
+                            local s = p and p:FindFirstChild("Screen")
+                            return s and s.Color ~= Color3.fromRGB(255, 0, 0)
+                        end)
+                    end
+                    return true
+                end)
+                if not shouldContinue then break end
             end
         end
-    end
+
+        if humanoid.Health < 100 then
+            if IsSafeZone then rootPart.CFrame = SafeZone end
+            return
+        end
+
+        if Params.Register then
+            local registers = workspace.Game.Props.CashRegister:GetChildren()
+            for _, register in ipairs(registers) do
+                if not Farm then
+                    return 
+                end
+                local shouldContinue = pcall(function()
+                    local weld = register:FindFirstChild("CashDrawer") and register.CashDrawer:FindFirstChild("WeldConstraint")
+                    if weld and weld.Enabled then
+                        return FarmProp(register, function(p)
+                            local w = p and p:FindFirstChild("CashDrawer") and p.CashDrawer:FindFirstChild("WeldConstraint")
+                            return w and w.Enabled
+                        end)
+                    end
+                    return true
+                end)
+                if not shouldContinue then break end
+            end
+        end
+
+        if FarmSafeEnabled then
+            rootPart.CFrame = SafeZone
+        end
+    end)
 end
 function Seek(radius)
     local character = getCurrentCharacter()
     local rootPart = character:FindFirstChild("HumanoidRootPart")
     if not rootPart then return end
 
-    local Folder = workspace.Game.Entities.ItemPickup
+    local FoldersToSearch = {
+        workspace.Game.Entities.ItemPickup,
+    }
+    
     local Trigger1 = workspace.MilitaryRobbery.MilitaryTrigger
     local Trigger2 = workspace.ArmoryRobbery.ArmoryTrigger
 
-    local allPickups = Folder:GetChildren()
+    local allPickups = {}
+    for _, folder in ipairs(FoldersToSearch) do
+        if folder then
+            for _, item in ipairs(folder:GetChildren()) do
+                table.insert(allPickups, item)
+            end
+        end
+    end
 
     local partsIn1 = workspace:GetPartBoundsInBox(Trigger1.CFrame, Trigger1.Size)
     local partsIn2 = workspace:GetPartBoundsInBox(Trigger2.CFrame, Trigger2.Size)
+    local bounds = workspace.BankRobbery.BankAlarmTrigger
+    local door = workspace.BankRobbery.VaultDoor.Door.Attachment.ProximityPrompt
+    local PoliceDoor, MilitaryDoor
+    local partsIn3 = workspace:GetPartBoundsInBox(bounds.CFrame, bounds.Size)
 
-    local inTriggerSet = {}
-    for _, p in ipairs(partsIn1) do
-        inTriggerSet[p] = true
+    local inTriggerSet0 = {} -- Military
+    local inTriggerSet1 = {} -- Armory
+    local inTriggerSet2 = {} -- Bank
+    for _, p in ipairs(partsIn1) do inTriggerSet0[p] = true end
+    for _, p in ipairs(partsIn2) do inTriggerSet1[p] = true end
+    for _, p in ipairs(partsIn3) do inTriggerSet2[p] = true end
+    
+    for i, v in pairs(workspace.Game.Props.Door:GetChildren()) do
+        if v:GetAttribute('keycardName') == 'policeArmory' then
+            PoliceDoor = v.DoorMain.LockedLight
+        elseif v:GetAttribute('keycardName') == 'militaryArmory' then
+            MilitaryDoor = v.DoorMain.LockedLight
+        end
     end
-    for _, p in ipairs(partsIn2) do
-        inTriggerSet[p] = true
-    end
+    
     if not radius then
         radius = math.huge 
     end
 
+    local bestFound = { prompt = nil, part = nil, priorityIndex = math.huge, proxp = nil }
+
     for _, pickup in ipairs(allPickups) do
         local part = pickup.PrimaryPart
         if part then
-            if inTriggerSet[part] then
-                continue
+            if inTriggerSet0[part] then
+                if (inTriggerSet0[part] and MilitaryDoor.Color == Color3.fromRGB(255, 0, 0)) then
+                    continue
+                end
             end
+            if inTriggerSet1[part] then
+                if (inTriggerSet1[part] and PoliceDoor.Color == Color3.fromRGB(255, 0, 0)) then
+                    continue
+                end
+            end
+            if inTriggerSet2[part] then
+                if (inTriggerSet2[part] and door.Enabled == true) then
+                    continue
+                end
+            end
+            
             if (part.Position - rootPart.Position).Magnitude <= radius then
-                local prompt = part:FindFirstChildOfClass("ProximityPrompt", true)
+                local prompt = pickup:GetAttribute('itemName')
+                
                 if prompt then
-                    for _, keyword in ipairs(Priority) do
-                        if prompt.ObjectText:find(keyword) or prompt.ObjectText == keyword then
-                            if prompt.ObjectText:find('Vest') or prompt.ObjectText:find('Key') or prompt.ObjectText:find('Keycard') then
-                                if GetItem(prompt.ObjectText) then
-                                    continue
-                                end
+                    if prompt:find('Vest') or prompt == 'Police Armory Keycard' or prompt == 'Military Armory Keycard' or prompt == 'Hoverboard' or prompt == 'Taser Gun' then
+                        if GetItem(prompt) then
+                            continue
+                        end
+                    end
+
+                    for i, keyword in ipairs(Priority) do
+                        if (prompt:find(keyword) or prompt == keyword) then
+                            if i < bestFound.priorityIndex then
+                                bestFound.prompt = prompt
+                                bestFound.part = part
+                                bestFound.priorityIndex = i
+                                pcall(function()
+                                    bestFound.proxp = pickup:FindFirstChildOfClass('ProximityPrompt') or part:FindFirstChildOfClass('ProximityPrompt')
+                                end)
                             end
-                            rootPart.CFrame = part.CFrame
-                            return prompt
+                            break 
                         end
                     end
                 end
             end
         end
     end
+
+    return bestFound.prompt, bestFound.part, bestFound.proxp
 end
 function StateBalloon(Value)
     local Balloon = require(v3item.bin.Holdable.modules.controller.modules.itemFuncs.Balloon)
@@ -306,16 +391,27 @@ function SeekSC()
     local searchFolders = {
         workspace.Game.Entities,
     }
+    local bounds = workspace.BankRobbery.BankAlarmTrigger
+    local door = workspace.BankRobbery.VaultDoor.Door.Attachment.ProximityPrompt
+    local partsIn1 = workspace:GetPartBoundsInBox(bounds.CFrame, bounds.Size)
 
+    local inTriggerSet = {}
+    for _, p in ipairs(partsIn1) do
+        inTriggerSet[p] = true
+    end
     for _, folder in ipairs(searchFolders) do
         for _, obj in ipairs(folder:GetDescendants()) do
             if obj:IsA("Model") and (obj.Name:find("Safe") or obj.Name:find("Chest")) then
+                local part = obj.PrimaryPart
                 local prompt = obj:FindFirstChild("ProximityPrompt", true)
+                if part and inTriggerSet[part] and door.Enabled == true then
+                    continue
+                end
                 if prompt then
                     table.insert(safesAndChests, {
                         model = obj,
                         prompt = prompt,
-                        primary = obj.PrimaryPart
+                        primary = part
                     })
                 end
             end
@@ -338,377 +434,675 @@ function diff(table1, table2)
 end
 function InitAll()
     task.spawn(function()
-        local before = CFrame.new(0, 0, 0)
-        local safeModeActive = false
-        while task.wait(0.1) do
-            Fists = GetItem('Fists')
-            if BalloonAlways then
-                pcall(StateBalloon, true)
-            end
-            if SafeMode and not safeModeActive then
-                safeModeActive = true
-                task.spawn(function()
-                    pcall(function()
-                        local character = getCurrentCharacter()
-                        local humanoid = character:FindFirstChild("Humanoid")
-                        local rootPart = character:FindFirstChild("HumanoidRootPart")
-
-                        if not(humanoid and rootPart) then return end
-
-                        if humanoid.Health <= SafeMin then
-                            before = rootPart.CFrame
-                            rootPart.CFrame = SafeZone
-
-                            while humanoid.Health <= SafeMin and humanoid.Health > 0 do
-                                task.wait(0.1)
-                                humanoid = character:FindFirstChild("Humanoid")
-                                if not humanoid then break end
-
-                                if SafeHeal and Replicator.Get(player, 'knocked') == false then
-                                    local Bandage = GetItem('Bandage')
-                                    local Before, BeforeItem = v4item.GetEquipped(player)
-                                    if Bandage then
-                                        Signal.FireServer("equip", Bandage.guid)
-                                        Signal.FireServer("useConsumable", Bandage.guid)
-                                        Signal.FireServer("removeItem", Bandage.guid)
-                                        if BeforeItem then
-                                            Signal.FireServer("equip", BeforeItem.guid)
-                                        end
-                                    else
-                                        Signal.InvokeServer('attemptPurchase', 'Bandage')
-                                    end
-                                end
-                            end
-
-                            if character:IsDescendantOf(workspace) and rootPart then
-                                rootPart.CFrame = before
-                            end
-                        else
-                            before = rootPart.CFrame
-                        end
-                    end)
-                    safeModeActive = false
-                end)
-            end
-        end
-    end)
-    task.spawn(function()
         while task.wait() do
-            if player.PlayerGui.Backpack.Enabled == true then
-                player.PlayerGui.Backpack.Holder.Locker.Visible = LockerEnabled
-            end
-        end
-    end)
-    task.spawn(function()
-        local UIS = game:GetService("UserInputService")
-        local Camera = workspace.CurrentCamera
-        local Root
-        
-        UIS.InputBegan:Connect(function(Input)
-            if Input.UserInputType == Enum.UserInputType.Keyboard then
-                 Root = getCurrentCharacter() and getCurrentCharacter():FindFirstChild("HumanoidRootPart")
-                if not Root then return end
-                if Input.KeyCode == Enum.KeyCode.W then
-                    Nav.Forward = true
-                elseif Input.KeyCode == Enum.KeyCode.S then
-                    Nav.Backward = true
-                elseif Input.KeyCode == Enum.KeyCode.A then
-                    Nav.Left = true
-                elseif Input.KeyCode == Enum.KeyCode.D then
-                    Nav.Right = true
-                end
-            end
-        end)
-
-        UIS.InputEnded:Connect(function(Input)
-            if Input.UserInputType == Enum.UserInputType.Keyboard then
-                if Input.KeyCode == Enum.KeyCode.W then
-                    Nav.Forward = false
-                elseif Input.KeyCode == Enum.KeyCode.S then
-                    Nav.Backward = false
-                elseif Input.KeyCode == Enum.KeyCode.A then
-                    Nav.Left = false
-                elseif Input.KeyCode == Enum.KeyCode.D then
-                    Nav.Right = false
-                end
-            end
-        end)
-
-        Camera:GetPropertyChangedSignal("CFrame"):Connect(function()
-            if Nav.Flying then
-                local character_ = getCurrentCharacter()
-                local RootPart = character_:FindFirstChild("HumanoidRootPart")
-                if RootPart then
-                    RootPart.CFrame = CFrame.new(RootPart.CFrame.Position, RootPart.CFrame.Position + Camera.CFrame.LookVector)
-                end
-            end
-        end)
-
-        local function GetPlayer(radius)
-            local nearestPlayer = nil
-            local shortestDistance = radius
-            local character_ = getCurrentCharacter()
-            local rootPart = character_:FindFirstChild("HumanoidRootPart")
-            if not rootPart then return end
-            
-            for _, player_ in ipairs(game:GetService("Players"):GetPlayers()) do
-                local character = player_.Character
-                if character and player_ ~= player and Replicator.Get(player_, 'knocked') == false then
-                    local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
-                    if humanoidRootPart then
-                        local distance = (humanoidRootPart.Position - rootPart.Position).Magnitude
-                        if distance < shortestDistance then
-                            shortestDistance = distance
-                            nearestPlayer = player_
+            if SafeArmor then
+                local Armor = player:GetAttribute('armor')
+                if Armor then
+                    local character_ = getCurrentCharacter()
+    				local RootPart = character_ and character_:FindFirstChild("HumanoidRootPart")
+    				if RootPart then
+            				if Armor <= 29 then
+                            local bandage = GetItem('Light Vest')
+                			if bandage then
+                				Signal.FireServer("equip", bandage.guid)
+                				Signal.FireServer("useConsumable", bandage.guid)
+                				Signal.FireServer("removeItem", bandage.guid)
+                			else
+                			    Signal.InvokeServer('attemptPurchase', 'Light Vest')
+                			end  
                         end
-                    end
-                elseif character and player_ ~= player and Replicator.Get(player_, 'knocked') == true then
-                    if PlayerMethods.AutoStomp then
-                        Signal.FireServer("stomp", player_)
-                    end
+    				end
                 end
-            end
+            end 
+        end
+    end)
+	task.spawn(function()
+		local beforeCFrame = nil
+		local isSafeModeActive = false
+        local hided = false
+		while task.wait() do
+			pcall(function()
+				Fists = GetItem('Fists')
+				if BalloonAlways then
+					StateBalloon(true)
+				end
+				
+				if SafeName then
+				    local mask = GetItem('Surgeon Mask')
+					if mask then
+						if not hided then
+						    Signal.FireServer("equip", mask.guid)
+						    Signal.FireServer("wearMask", mask.guid)
+						    hided = true
+						end
+					else
+						Signal.InvokeServer('attemptPurchase', 'Surgeon Mask')
+						hided = false
+					end
+				else
+			        local mask = GetItem('Surgeon Mask')
+					if mask then
+						if hided then
+						    Signal.FireServer("equip", mask.guid)
+						    Signal.FireServer("wearMask", mask.guid)
+						    hided = false
+						end
+					else
+						Signal.InvokeServer('attemptPurchase', 'Surgeon Mask')
+						hided = true
+					end
+				end
+				
+				local character = getCurrentCharacter()
+				local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+				local rootPart = character and character:FindFirstChild("HumanoidRootPart")
 
-            return nearestPlayer
-        end
-        while task.wait() do
-            local character_ = getCurrentCharacter()
-            local RootPart = character_:FindFirstChild("HumanoidRootPart")
-            if RootPart then
-                RootPart.Anchored = PlayerMethods.Fly
-            end
-            if PlayerMethods.KillAura then
-                local __player = GetPlayer(50)
-                if __player then
-                    local Table = {
-                        ["hitPlayerId"] = __player.UserId,
-                        ["meleeType"] = 'meleemegapunch'
-                    }
-                    Signal.FireServer("meleeItemHit", "player", Table)
-                end
-            end
-            if PlayerMethods.Fly then
-                local Speed = 2
-                local RootPart = getCurrentCharacter():WaitForChild("HumanoidRootPart")
-                if not RootPart then continue end
+				if not (humanoid and rootPart and humanoid.Health > 0) then
+				    hided = false
+					return
+				end
 
-                if Nav.Flying then
-                    if Nav.Forward then
-                        RootPart.CFrame = RootPart.CFrame + (Camera.CFrame.LookVector * Speed)
-                    end
-                    if Nav.Backward then
-                        RootPart.CFrame = RootPart.CFrame + (-Camera.CFrame.LookVector * Speed)
-                    end
-                    if Nav.Left then
-                        RootPart.CFrame = RootPart.CFrame + (-Camera.CFrame.RightVector * Speed)
-                    end
-                    if Nav.Right then
-                        RootPart.CFrame = RootPart.CFrame + (Camera.CFrame.RightVector * Speed)
-                    end
-                end
-            end
-        end
-    end)
-    task.spawn(function()
-        while task.wait() do
-            if ValuableAuto then
-                local prompt = Seek()
-                if prompt then
-                    fireproximityprompt(prompt)
-                else
-                    if ValuableSafe then
-                        local character = getCurrentCharacter()
-                        local rootPart = character:FindFirstChild("HumanoidRootPart")
-                        if not (rootPart) then return end
-                        rootPart.CFrame = SafeZone
-                    end
-                end
-            end
-        end
-    end)
-    task.spawn(function()
-        while wait() do
-            if PlayerMethods.Target then
-                if PlayerMethods.TargetKill then
-                    local Player = game:GetService('Players')[PlayerMethods.Target]
-                    if Player then
-                        local Character = Player.Character or Player.CharacterAdded:Wait()
-                        if Character then
-                            local RootPart = Character:FindFirstChild('HumanoidRootPart')
-                            if RootPart then
-                                local ForceField = Character:FindFirstChild('ForceField')
-                                if not ForceField then
-                                    local SelfCharacter = getCurrentCharacter()
-                                    if SelfCharacter then
-                                        local ForceField = SelfCharacter:FindFirstChild('ForceField')
-                                        local RootPart = SelfCharacter:FindFirstChild('HumanoidRootPart')
-                                        if RootPart and not ForceField then
-                                            local Table = {
-                                                ["hitPlayerId"] = Player.UserId,
-                                                ["meleeType"] = 'meleemegapunch'
-                                            }
-                                            RootPart.CFrame = Character.HumanoidRootPart.CFrame
-                                            local _, Equipped = v4item.GetEquipped(player)
-                                            if not Equipped then
-                                                BaseItem.SetEquipped(Fists, true, false, true)
-                                                wait(0.5)
-                                            end
-                                            Signal.FireServer("meleeItemHit", "player", Table)
-                                            Signal.FireServer("stomp", Player)
-                                        end
-                                    end
-                                end 
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end)
-    task.spawn(function()
-        while wait() do
-            if PlayerMethods.AutoLoot then
-                pcall(function()
-                    local lockpick = GetItem('Lockpick')
-                    if not lockpick then 
-                        Signal.InvokeServer('attemptPurchase', 'Lockpick')
-                        return 
-                    end
+				if not SafeMode then
+					return
+				end
+
+				if isSafeModeActive then
+					return
+				end
+
+				if humanoid.Health <= SafeMin then
+					isSafeModeActive = true
+					beforeCFrame = rootPart.CFrame
+					rootPart.CFrame = SafeZone
+
+					task.spawn(function()
+						pcall(function()
+							local currentCharacter = getCurrentCharacter()
+							local currentHumanoid = currentCharacter and currentCharacter:FindFirstChildOfClass("Humanoid")
+
+							while SafeMode and currentHumanoid and currentHumanoid.Health > 0 and currentHumanoid.Health <= SafeMin do
+								if SafeHeal and not Replicator.Get(player, 'knocked') then
+									local bandage = GetItem('Bandage')
+									if bandage then
+										Signal.FireServer("equip", bandage.guid)
+										Signal.FireServer("useConsumable", bandage.guid)
+										Signal.FireServer("removeItem", bandage.guid)
+									else
+										Signal.InvokeServer('attemptPurchase', 'Bandage')
+									end
+								end
+								task.wait(0.1)
+								currentCharacter = getCurrentCharacter()
+								currentHumanoid = currentCharacter and currentCharacter:FindFirstChildOfClass("Humanoid")
+							end
+
+	
+							local finalCharacter = getCurrentCharacter()
+							local finalRootPart = finalCharacter and finalCharacter:FindFirstChild("HumanoidRootPart")
+							if finalRootPart and beforeCFrame then
+								finalRootPart.CFrame = beforeCFrame
+							end
+						end)
+						isSafeModeActive = false
+					end)
+				end
+			end)
+		end
+	end)
+	task.spawn(function()
+		while task.wait() do 
+			pcall(function()
+				local backpack = player.PlayerGui:FindFirstChild("Backpack")
+				if backpack and backpack.Enabled then
+					local holder = backpack:FindFirstChild("Holder")
+					local locker = holder and holder:FindFirstChild("Locker")
+					if locker then
+						locker.Visible = LockerEnabled
+					end
+				end
+			end)
+		end
+	end)
+	task.spawn(function()
+		local UIS = game:GetService("UserInputService")
+		local Camera = workspace.CurrentCamera
+
+		UIS.InputBegan:Connect(function(input, gameProcessed)
+			if gameProcessed then return end
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				if input.KeyCode == Enum.KeyCode.W then Nav.Forward = true
+				elseif input.KeyCode == Enum.KeyCode.S then Nav.Backward = true
+				elseif input.KeyCode == Enum.KeyCode.A then Nav.Left = true
+				elseif input.KeyCode == Enum.KeyCode.D then Nav.Right = true
+				end
+			end
+		end)
+
+		UIS.InputEnded:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.Keyboard then
+				if input.KeyCode == Enum.KeyCode.W then Nav.Forward = false
+				elseif input.KeyCode == Enum.KeyCode.S then Nav.Backward = false
+				elseif input.KeyCode == Enum.KeyCode.A then Nav.Left = false
+				elseif input.KeyCode == Enum.KeyCode.D then Nav.Right = false
+				end
+			end
+		end)
+
+		Camera:GetPropertyChangedSignal("CFrame"):Connect(function()
+			if Nav.Flying then
+				local character_ = getCurrentCharacter()
+				local RootPart = character_ and character_:FindFirstChild("HumanoidRootPart")
+				if RootPart then
+					RootPart.CFrame = CFrame.new(RootPart.CFrame.Position, RootPart.CFrame.Position + Camera.CFrame.LookVector)
+				end
+			end
+		end)
+
+		local function GetPlayer(radius)
+			local nearestPlayer, shortestDistance = nil, radius
+			local character_ = getCurrentCharacter()
+			local rootPart = character_ and character_:FindFirstChild("HumanoidRootPart")
+			if not rootPart then return nil end
+
+			for _, p in ipairs(game:GetService("Players"):GetPlayers()) do
+				if p ~= player then
+					local char = p.Character
+					local isKnocked = Replicator.Get(p, 'knocked')
+
+					if char and isKnocked and PlayerMethods.AutoStomp then
+						Signal.FireServer("stomp", p)
+					elseif char and not isKnocked then
+						local hrp = char:FindFirstChild("HumanoidRootPart")
+						if hrp then
+							local dist = (hrp.Position - rootPart.Position).Magnitude
+							if dist < shortestDistance then
+								shortestDistance = dist
+								nearestPlayer = p
+							end
+						end
+					end
+				end
+			end
+			return nearestPlayer
+		end
+
+		while task.wait() do
+			pcall(function()
+				local character_ = getCurrentCharacter()
+				local RootPart = character_ and character_:FindFirstChild("HumanoidRootPart")
+				if RootPart then
+					RootPart.Anchored = PlayerMethods.Fly
+				end
+
+				if PlayerMethods.KillAura then
+					local target = GetPlayer(50)
+					if target then
+						local Table = { ["hitPlayerId"] = target.UserId, ["meleeType"] = 'meleemegapunch' }
+						Signal.FireServer("meleeItemHit", "player", Table)
+					end
+				end
+
+				if PlayerMethods.Fly and Nav.Flying then
+					local Speed = 2
+					local FlyRoot = getCurrentCharacter() and getCurrentCharacter():FindFirstChild("HumanoidRootPart")
+					if not FlyRoot then return end
+
+					local moveDirection = Vector3.new()
+					if Nav.Forward then moveDirection = moveDirection + Camera.CFrame.LookVector end
+					if Nav.Backward then moveDirection = moveDirection - Camera.CFrame.LookVector end
+					if Nav.Left then moveDirection = moveDirection - Camera.CFrame.RightVector end
+					if Nav.Right then moveDirection = moveDirection + Camera.CFrame.RightVector end
+
+					if moveDirection.Magnitude > 0 then
+						FlyRoot.CFrame = FlyRoot.CFrame + moveDirection.Unit * Speed
+					end
+				end
+			end)
+		end
+	end)
     
-                    local lootables = SeekSC()
-                    if #lootables > 0 then
-                        for _, lootable in ipairs(lootables) do
-                            if lootable.primary then
-                                local char = getCurrentCharacter()
-                                if char then
-                                    local root = char:FindFirstChild('HumanoidRootPart')
-                                    if root then
-                                        root.CFrame = lootable.primary.CFrame + Vector3.new(0, 3, 0)
-                                        lootable.prompt.HoldDuration = 0
-                                        repeat
-                                            task.wait()
-                                            fireproximityprompt(lootable.prompt)
-                                        until lootable.prompt.Parent == nil or not lootable.prompt
-                                        wait(1)
-                                        if lootable.prompt.Parent == nil or not lootable.prompt then
-                                            local founded = Seek(20)
-                                            if founded == nil then
-                                                CollectMoney(root, 20)
-                                                task.wait(0.5)
-                                            else
-                                                local object = founded.ObjectText
-                                                if not GetItem(object) then
-                                                    repeat
-                                                        task.wait()
-                                                        fireproximityprompt(founded)
-                                                    until founded.Parent == nil or not founded
-                                                end
-                                                if PlayerMethods.AutoSell then
-                                                    task.spawn(function()
+	task.spawn(function()
+    	while task.wait() do
+    		if ValuableAuto and not PlayerMethods.Fly and not isValuableHunting then
+    			pcall(function()
+    				if not ValuableAuto then return end
+    
+    				local prompt, part, proxp = Seek()
+    
+    				if prompt and part then
+    					if prompt:find('Paint') or prompt:find('Ring') or prompt == 'Taser Gun' or prompt == 'Tazer Gun' then
+    						return
+    					end
+    
+    					isValuableHunting = true
+    
+    					if PlayerMethods.Notification2 then
+    						ValuableAuto = false
+    					end
+    
+    					local function Step()
+    						task.spawn(function()
+    							pcall(function()
+    								if not ValuableAuto then
+    									isValuableHunting = false
+    									return
+    								end
+    
+    								local character_ = getCurrentCharacter()
+    								local RootPart = character_ and character_:FindFirstChild("HumanoidRootPart")
+    								local humanoid = character_ and character_:FindFirstChildOfClass("Humanoid")
+    
+    								if not RootPart or not humanoid then
+    									isValuableHunting = false
+    									return
+    								end
+    
+    								if humanoid.Health < 100 then
+    									if PlayerMethods.AutoLootSafe then
+    										RootPart.CFrame = SafeZone
+    									end
+    									isValuableHunting = false
+    									return
+    								end
+    
+    								if part and part.Parent and proxp and proxp.Parent then
+    									RootPart.CFrame = part.CFrame
+    									fireproximityprompt(proxp)
+    									task.wait(.1)
+    								end
+    							end)
+    
+    							if PlayerMethods.Notification2 then
+    								ValuableAuto = true
+    							end
+    							isValuableHunting = false
+    						end)
+    					end
+    
+    					if PlayerMethods.Notification2 then
+    						if prompt and part and proxp then
+    						    CreateNotification({
+        							Title = "Auto-Valuable",
+        							Message = string.format("Found %s. Teleport?", prompt),
+        							OnOk = Step,
+        							OnCancel = function()
+        								task.wait(1)
+        								ValuableAuto = true
+        								isValuableHunting = false
+        							end
+        						})
+    						end
+    					else
+    						Step()
+    					end
+    
+    				elseif ValuableSafe and not part then
+    					local character_ = getCurrentCharacter()
+    					local RootPart = character_ and character_:FindFirstChild("HumanoidRootPart")
+    					if RootPart then
+    						RootPart.CFrame = SafeZone
+    					end
+    					if PlayerMethods.Notification2 then
+    						ValuableAuto = false
+    					end
+    				end
+    			end)
+    		end
+    	end
+    end)
+
+    
+	task.spawn(function()
+		while task.wait() do
+			if PlayerMethods.Target and PlayerMethods.TargetKill then
+				pcall(function()
+					local targetPlayer = game:GetService('Players'):FindFirstChild(PlayerMethods.Target)
+					if not targetPlayer then return end
+
+					local targetCharacter = targetPlayer.Character
+					local selfCharacter = getCurrentCharacter()
+					if not (targetCharacter and selfCharacter) then return end
+
+					local targetRoot = targetCharacter:FindFirstChild('HumanoidRootPart')
+					local selfRoot = selfCharacter:FindFirstChild('HumanoidRootPart')
+					if not (targetRoot and selfRoot) then return end
+
+					if targetCharacter:FindFirstChild('ForceField') or selfCharacter:FindFirstChild('ForceField') then
+						return
+					end
+
+					selfRoot.CFrame = targetRoot.CFrame
+					local _, equipped = v4item.GetEquipped(player)
+					if not equipped then
+						BaseItem.SetEquipped(Fists, true, false, true)
+					end
+
+					local Table = { ["hitPlayerId"] = targetPlayer.UserId, ["meleeType"] = 'meleemegapunch' }
+					Signal.FireServer("meleeItemHit", "player", Table)
+					Signal.FireServer("stomp", targetPlayer)
+				end)
+			end
+		end
+	end)
+	task.spawn(function()
+    	local backto = nil
+    	local currentTargetName = nil
+    
+    	while task.wait() do
+    		if PlayerMethods.Target ~= currentTargetName then
+    			if currentTargetName and backto then
+    				pcall(function()
+    					local oldPlayer = game:GetService("Players"):FindFirstChild(currentTargetName)
+    					if oldPlayer and oldPlayer.Character then
+    						local oldRoot = oldPlayer.Character:FindFirstChild("HumanoidRootPart")
+    						if oldRoot then
+    							oldRoot.CFrame = backto
+    							oldRoot.Anchored = false
+    						end
+    					end
+    				end)
+    			end
+    
+    			currentTargetName = PlayerMethods.Target
+    			backto = nil
+    		end
+    
+    		if currentTargetName and PlayerMethods.TargetBring then
+    			pcall(function()
+    				local targetPlayer = game:GetService('Players'):FindFirstChild(currentTargetName)
+    				if not targetPlayer then PlayerMethods.Target = 'None' player_textbox_i:ChangeText('None') return end
+    				if not targetPlayer.Character then return end
+    
+    				local selfCharacter = getCurrentCharacter()
+    				if not selfCharacter then return end
+    
+    				local targetRoot = targetPlayer.Character:FindFirstChild('HumanoidRootPart')
+    				local selfRoot = selfCharacter:FindFirstChild('HumanoidRootPart')
+    				if not (targetRoot and selfRoot) then return end
+    	 
+    				if not backto then
+    					backto = targetRoot.CFrame 
+    				end
+    
+    				local endCframe = CFrame.new(selfRoot.Position + (selfRoot.CFrame.LookVector * 4), selfRoot.Position)
+    				targetRoot.CFrame = endCframe
+    				targetRoot.Anchored = true
+    			end)
+    		elseif currentTargetName and not PlayerMethods.TargetBring then
+    			if backto then
+    				pcall(function()
+    					local targetPlayer = game:GetService('Players'):FindFirstChild(currentTargetName)
+    					if not targetPlayer or not targetPlayer.Character then return end
+    					local targetRoot = targetPlayer.Character:FindFirstChild('HumanoidRootPart')
+    					if not targetRoot then return end
+    					
+    					targetRoot.CFrame = backto
+    					targetRoot.Anchored = false
+    					
+    					backto = nil
+    				end)
+    			end
+    		end
+    	end
+    end)
+
+	task.spawn(function()
+		while task.wait(0.2) do
+			if PlayerMethods.AutoLoot and not PlayerMethods.Fly and not isAutoLooting then
+				pcall(function()
+					if not PlayerMethods.AutoLoot then return end
+					local lootables = SeekSC()
+
+					if #lootables > 0 then
+					    isAutoLooting = true
+						PlayerMethods.AutoLoot = false
+
+						local function Step()
+							task.spawn(function()
+								pcall(function()
+									local char = getCurrentCharacter()
+									local root = char and char:FindFirstChild('HumanoidRootPart')
+									local humanoid = char:FindFirstChildOfClass('Humanoid')
+									if not root then
+										PlayerMethods.AutoLoot = true
+										isAutoLooting = false
+										return
+									end
+									if humanoid.Health < 100 then
+                                        if PlayerMethods.AutoLootSafe then rootPart.CFrame = SafeZone end
+                                        return
+                                    end
+
+									local originalCFrame = root.CFrame
+
+									for _, lootable in ipairs(lootables) do
+										if lootable and lootable.primary and lootable.primary.Parent and lootable.prompt and lootable.prompt.Parent then
+											root = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
+											if not root then break end
+
+											lootable.prompt.HoldDuration = 0
+
+											repeat
+												if not GetItem('Lockpick') then
+													Signal.InvokeServer('attemptPurchase', 'Lockpick')
+													task.wait(0.2)
+													if not GetItem('Lockpick') then break end 
+												end
+												local lookAtCFrame = CFrame.new(lootable.primary.Position - (lootable.primary.CFrame.LookVector * 3), lootable.primary.Position)
+												root.CFrame = lookAtCFrame
+												fireproximityprompt(lootable.prompt)
+												task.wait(0.1)
+											until not lootable.prompt or not lootable.prompt.Parent
+
+											local retry = 0
+                                            repeat
+                                                task.wait(0.1)
+                                                local _, v2, v1 = Seek(30)
+                                                retry += 1
+                                            until v1 or v2 or retry >= 20
+
+											local founded, part, proxp = Seek(30)
+											if founded and part and part.Parent then
+												if not founded:find('Paint') and not founded:find('Ring') then
+													root.CFrame = part.CFrame
+												end
+												local object = founded
+												repeat
+												    root.CFrame = part.CFrame
+													fireproximityprompt(proxp)
+													task.wait(0.1)
+												until not part or not part.Parent
+
+												if PlayerMethods.AutoSell then
+													task.spawn(function()
                                                         local item = GetItem(object)
                                                         if item then
+                                                            v3Inventory.unequipAll(true)
                                                             BaseItem.SetEquipped(item, true, false, true)
                                                             local _, Equipped = v4item.GetEquipped(player)
-                                                            if Equipped then
+                                                            if Equipped and _.sellPrice then
                                                                 Signal.FireServer("sellItem", Equipped) 
                                                             end
                                                         end
                                                     end) 
-                                                end
-                                            end
-                                        end
-                                        break
-                                    end
-                                end
-                            end
-                        end
-                        if PlayerMethods.AutoLootSafe then
-                            local character = getCurrentCharacter()
-                            local rootPart = character:FindFirstChild("HumanoidRootPart")
-                            if not (rootPart) then return end
-                            rootPart.CFrame = SafeZone
-                        end
-                    end
-                end)
-            end
-        end
-    end)
-    while task.wait() do
-        if Farm then
-            Process(FarmSafeEnabled, FarmTypes)
-        end
-    end
+												end
+											else
+												CollectMoney(root, 30)
+											end
+										end
+									end
+									root = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
+									if root then
+										if PlayerMethods.AutoLootSafe then
+											root.CFrame = SafeZone
+										else
+											root.CFrame = originalCFrame
+										end
+									end
+								end)
+								PlayerMethods.AutoLoot = true 
+							end)
+						end
+
+						if PlayerMethods.Notification then
+							CreateNotification({
+								Title = "Auto-Loot",
+								Message = string.format("Found %d Safe/Chest(s). Teleport?", #lootables),
+								OnOk = Step,
+								OnCancel = function()
+									PlayerMethods.AutoLoot = true
+								end
+							})
+						else
+							Step()
+						end
+					end
+					isAutoLooting = false
+				end)
+			end
+		end
+	end)
+    
+	task.spawn(function()
+		while task.wait() do
+			pcall(function()
+				local character = getCurrentCharacter()
+				local humanoid = character and character:FindFirstChild("Humanoid")
+				if not (humanoid and humanoid.Health > 0) then return end
+
+				if ItemMethods.Item and ItemMethods.Enabled then
+					local item = GetItem(ItemMethods.Item)
+					if not item then
+						Signal.InvokeServer('attemptPurchase', ItemMethods.Item)
+						item = GetItem(ItemMethods.Item)
+					end
+
+					if item then
+						local _, equipped = v4item.GetEquipped(player)
+						if not equipped then
+							BaseItem.SetEquipped(item, true, false, true)
+						end
+					end
+				end
+			end)
+		end
+	end)
+	task.spawn(function()
+		while task.wait(1) do
+			pcall(function()
+				local character = getCurrentCharacter()
+				local humanoid = character and character:FindFirstChild("Humanoid")
+				if not (humanoid and humanoid.Health > 0) then return end
+
+				if ItemMethods.Call and ItemMethods.CallEnabled then
+					Signal.FireServer("dropMoney", ItemMethods.Call)
+				end
+			end)
+		end
+	end)
+	task.spawn(function()
+		while task.wait(0.1) do
+			if Farm then
+				pcall(Process, FarmSafeEnabled, FarmTypes)
+			end
+		end
+	end)
 end
 
-local window = ui.newWindow({text = "Ohio killer ReCode | v7", resize = true})
 
-local farm_menu = window:addMenu({text = 'Farm'})
-local farm_section = farm_menu:addSection({text = 'Money Farm', side = 'left'})
+local window = Bracket:Window({Name = "Ohio killer ReCode | v8.2", Size = UDim2.new(0, 380, 0, 380)})
 
-farm_section:addToggle({text = 'ATMs'}, function(val)
+local farm_tab = window:Tab({Name = 'Farm'})
+local farm_section = farm_tab:Section({Name = 'Money Farm', Side = 'Left'})
+
+farm_section:Toggle({Name = 'ATMs', Callback = function(val)
     FarmTypes.ATM = val
-end)
+end})
 
-farm_section:addToggle({text = 'Registers'}, function(val)
+farm_section:Toggle({Name = 'Registers', Callback = function(val)
     FarmTypes.Register = val
-end)
+end})
 
-farm_section:addToggle({text = 'Safe mode'}, function(val)
+farm_section:Toggle({Name = 'Safe mode', Callback = function(val)
     FarmSafeEnabled = val
-end):setTooltip("Teleports you to a safe zone after farming all available machines.")
-
-farm_section:addToggle({text = 'Toggle Farm'}, function(val)
+end}):Tooltip({Text = "Teleports you to a safe zone after farming all available machines."})
+local Dropdown = farm_section:Dropdown({Name = "Position",Flag = "Dropdown",Side = "Left",List = {
+    {
+        Name = "Hidden",
+        Mode = "Button", 
+        Value = true,
+        Callback = function(Selected, v1)
+            FarmTypes.Hidden = true
+        end
+    },
+    {
+        Name = "UnHidden",
+        Mode = "Button",
+        Value = false,
+        Callback = function(Selected, v1)
+            FarmTypes.Hidden = false
+        end
+    }
+}})
+farm_section:Toggle({Name = 'Toggle Farm', Callback = function(val)
     Farm = val
-end)
+end})
 
-farm_section:addLabel({text = 'NOTE: To disable, press ESC and turn it off.\nSometimes may bug ATMs.', dim = true})
+farm_section:Label({Text = '<font color="rgb(191, 191, 191)">NOTE: To disable, press ESC and turn it off.\nSometimes may bug ATMs.</font>'})
 
-local player_menu = window:addMenu({text = 'Player'})
-
-local balloon_section = player_menu:addSection({text = 'Fake Balloon', side = 'left'})
-balloon_section:addToggle({text = 'Enabled'}, function(val)
+local player_tab = window:Tab({Name = 'Player'})
+local balloon_section = player_tab:Section({Name = 'Balloon', Side = 'Left'})
+balloon_section:Toggle({Name = 'Enabled', Callback = function(val)
     task.spawn(StateBalloon, val)
-end)
+end})
 
-balloon_section:addToggle({text = 'Always'}, function(val)
+balloon_section:Toggle({Name = 'Always', Callback = function(val)
     BalloonAlways = val
-end)
+end})
 
-local safemode_section = player_menu:addSection({text = 'Safe Mode', side = 'left'})
-safemode_section:addLabel({text = 'TPs to safe zone on low HP.', dim = true})
+local safemode_section = player_tab:Section({Name = 'Safe Mode', Side = 'Left'})
+safemode_section:Label({Text = '<font color="rgb(191, 191, 191)">TPs to safe zone on low HP.</font>'})
 
-safemode_section:addSlider({text = 'Minimum Health', min = 10, max = 100, value = 100, step = 5}, function(val)
+safemode_section:Slider({Name = 'Minimum Health', Min = 10, Max = 100, Value = 100, Precise = 0, Callback = function(val)
     SafeMin = val
-end)
+end})
 
-safemode_section:addToggle({text = 'Auto Heal'}, function(val)
+safemode_section:Toggle({Name = 'Auto Heal', Callback = function(val)
     SafeHeal = val
-end):setTooltip("Automatically buys and uses bandages when in safe mode.")
+end}):Tooltip({Text = "Automatically buys and uses bandages when in safe mode"})
 
-safemode_section:addToggle({text = 'Enabled'}, function(val)
+safemode_section:Toggle({Name = 'Auto Armor', Callback = function(val)
+    SafeArmor = val
+end}):Tooltip({Text = "Automatically buys and uses armor"})
+
+safemode_section:Toggle({Name = 'Hide Name', Callback = function(val)
+    SafeName = val
+end}):Tooltip({Text = "Wears mask"})
+
+safemode_section:Toggle({Name = 'Enabled', Callback = function(val)
     SafeMode = val
-end)
+end})
 
-local locker_section = player_menu:addSection({text = 'Locker', side = 'left'})
-locker_section:addLabel({text = 'NOTE: Shows backpack locker', dim = true})
-locker_section:addToggle({text = 'Enabled'}, function(val)
+local locker_section = player_tab:Section({Name = 'Locker', Side = 'Left'})
+locker_section:Label({Text = '<font color="rgb(191, 191, 191)">NOTE: Shows backpack locker</font>'})
+locker_section:Toggle({Name = 'Enabled', Callback = function(val)
     LockerEnabled = val
-end)
+end})
 
-local combat_section = player_menu:addSection({text = 'Combat', side = 'right'})
-combat_section:addLabel({text = 'NOTE: Equip fists for Kill Aura.', dim = true})
-combat_section:addToggle({text = 'Kill Aura'}, function(val)
+local combat_section = player_tab:Section({Name = 'Combat', Side = 'Right'})
+combat_section:Label({Text = '<font color="rgb(191, 191, 191)">NOTE: Equip fists for Kill Aura.</font>'})
+combat_section:Toggle({Name = 'Kill Aura', Callback = function(val)
     PlayerMethods.KillAura = val
-end)
+end})
 
-combat_section:addToggle({text = 'Auto Stomp'}, function(val)
+combat_section:Toggle({Name = 'Auto Stomp', Callback = function(val)
     PlayerMethods.AutoStomp = val
-end)
+end})
 
-local fly_section = player_menu:addSection({text = 'Movement', side = 'right'})
+local fly_section = player_tab:Section({Name = 'Movement', Side = 'Right'})
 local FlyBeforePos
-fly_section:addLabel({text = 'NOTE: You are invisible to others while flying.', dim = true})
-fly_section:addToggle({text = 'Fly'}, function(val)
+fly_section:Label({Text = '<font color="rgb(191, 191, 191)">NOTE: You are invisible to others while flying.</font>'})
+fly_section:Toggle({Name = 'Fly', Callback = function(val)
     task.spawn(function()
         local Value = val
         local character = getCurrentCharacter()
@@ -731,42 +1125,76 @@ fly_section:addToggle({text = 'Fly'}, function(val)
             PlayerMethods.Fly = false
         end
     end)
-end)
+end})
 
-local teleport_section = player_menu:addSection({text = "Teleport", side = "right"})
-local textbox = teleport_section:addTextbox({text = 'Name'})
+local teleport_section = player_tab:Section({Name = "Teleport", Side = "Right"})
 
-textbox:bindToEvent('onFocusLost', function(input_text)
-    local players = game:GetService("Players"):GetPlayers()
-    local input_lower = input_text:lower()
-    local matches = {}
+player_textbox_i = teleport_section:Textbox({
+    Placeholder = 'Player Name',
+    HideName = true,
+    Callback = function(input_text, enterPressed)
+        if not enterPressed then return end
+        if player_textbox_i.isSetting then return end
 
-    for _, player in ipairs(players) do
-        local player_name = player.Name
-        if player_name:lower():sub(1, #input_lower) == input_lower then
-            table.insert(matches, player_name)
+        local players = game:GetService("Players"):GetPlayers()
+        local input_lower = input_text:lower()
+        local matches = {}
+
+        for _, p in ipairs(players) do
+            local player_name = p.Name
+            if player_name:lower():sub(1, #input_lower) == input_lower then
+                table.insert(matches, player_name)
+            end
+        end
+
+        if #matches >= 0 then
+            player_textbox_i.isSetting = true
+            player_textbox_i.Value = matches[1]
+            player_textbox_i.isSetting = false
+            
+            PlayerMethods.Target = matches[1]
         end
     end
+})
+local SelectedIn = {
+    Kill = false,
+    Bring = false,
+}
+local Dropdown = teleport_section:Dropdown({Name = "Methods",Flag = "Dropdown",Side = "Right",List = {
+    {
+        Name = "None",
+        Mode = "Button", 
+        Value = true,
+        Callback = function(Selected, v1)
+            PlayerMethods.Target = player_textbox_i.Value
+            PlayerMethods.TargetBring = false
+            PlayerMethods.TargetKill = false
+        end
+    },
+    {
+        Name = "Loop bring",
+        Mode = "Button", 
+        Value = false,
+        Callback = function(Selected, v1)
+            PlayerMethods.Target = player_textbox_i.Value
+            PlayerMethods.TargetBring = true
+            PlayerMethods.TargetKill = false
+        end
+    },
+    {
+        Name = "Loop kill",
+        Mode = "Button",
+        Value = false,
+        Callback = function(Selected, v1)
+            PlayerMethods.Target = player_textbox_i.Value
+            PlayerMethods.TargetBring = false
+            PlayerMethods.TargetKill = true
+        end
+    }
+}})
 
-    if #matches >= 1 then
-        textbox:setText(matches[1])
-    end
-end)
-teleport_section:addToggle({text = 'Kill'}, function(val)
-    PlayerMethods.Target = textbox:getText()
-    task.spawn(function()
-        local Value = val
-        local character = getCurrentCharacter()
-        if not character then return end
-            
-        local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
-        if not humanoidRootPart then return end
-            
-        PlayerMethods.TargetKill = Value
-    end)
-end)
-teleport_section:addButton({text = "Teleport"}, function() 
-    PlayerMethods.Target = textbox:getText()
+teleport_section:Button({Name = "Teleport to Player", Callback = function() 
+    PlayerMethods.Target = player_textbox_i.Value
     if PlayerMethods.Target then
         local Player = game:GetService('Players')[PlayerMethods.Target]
         if Player then
@@ -786,69 +1214,51 @@ teleport_section:addButton({text = "Teleport"}, function()
             end
         end 
     end
-end)
+end})
 
 
-local valuables_menu = window:addMenu({text = 'Valuables'})
-local auto_valuable_section = valuables_menu:addSection({text = 'Auto Collect Valuable', side = 'left'})
 
-auto_valuable_section:addButton({text = "Find Valuable"}, function() Seek() end)
+local valuables_tab = window:Tab({Name = 'Valuables'})
+local auto_valuable_section = valuables_tab:Section({Name = 'Auto Collect Valuable', Side = 'Left'})
 
-auto_valuable_section:addToggle({text = 'Safe Mode'}, function(val)
+auto_valuable_section:Button({Name = "Find Valuable", Callback = function() 
+    local prompt, part = Seek()
+    if prompt and part then
+        if not prompt:find('Paint') and not prompt:find('Ring') and prompt ~= 'Taser Gun' and prompt ~= 'Tazer Gun' then
+            local character_ = getCurrentCharacter()
+    	    local RootPart = character_:FindFirstChild("HumanoidRootPart")
+            if RootPart then
+                RootPart.CFrame = part.CFrame
+            end
+        end 
+    end
+end})
+
+auto_valuable_section:Toggle({Name = 'Safe Mode', Callback = function(val)
     ValuableSafe = val
-end):setTooltip("After collecting all valuable items, teleport to a safe zone.")
+end}):Tooltip({Text = "After collecting all valuable items, teleport to a safe zone."})
 
-auto_valuable_section:addToggle({text = 'Most Valuable Only'}, function(val)
+auto_valuable_section:Toggle({Name = 'Most Valuable Only', Callback = function(val)
     if val then
         Priority = { "Marker", 'Void', 'Dark', 'C5', 'Santa' }
     else
         Priority = {
-            "Military",
-            "Vest",
-            "Keycard",
-            "Marker",
-            "Barrett",
-            'Gold',
-            'Present',
-            'Key',
-            'Money',
-            'RPG',
-            'Saiga',
-            'Scar',
-            'Block',
-            'M249',
-            'Hoverboard',
-            'Gravity',
-            'Dragunov',
-            'Void',
-            'Dark',
-            'C4',
-            'C5',
-            'Santa',
-            'Acid',
-            'AS Val',
-            'AUG',
-            'Python',
-            'RPK',
-            'Fn',
-            'P90',
-            'Diamond',
-            'Tactical',
-            'Topaz',
-            'Treasure',
-            'Grenade',
-            'Nuke'
+            "Military", "Vest", "Keycard", "Marker", "Barrett", 'Gold', 'Present', 'Key', 'Money', 'RPG', 'Saiga', 'Scar', 'Block', 'M249', 'Hoverboard', 'Gravity', 'Dragunov', 'Void', 'Dark', 'C4', 'C5', 'Santa', 'Acid', 'AS Val', 'AUG', 'Python', 'RPK', 'FN', 'P90', 'Diamond', 'Tactical', 'Topaz', 'Treasure', 'Grenade', 'Nuke', 'AR-15', 'MP7', 'Deagle', 'Gun', 'Flamethrower', 'Ruby', 'Sapphire', 'Amethyst', 'Rollie', 'Glock', 'Emerald'
         }
     end
-end):setTooltip("Filters the auto-collector to only pick up the rarest items.")
-
-auto_valuable_section:addToggle({text = 'Auto'}, function(val)
+end}):Tooltip({Text = "Filters the auto-collector to only pick up the rarest items."})
+auto_valuable_section:Toggle({Name = 'Notification', Callback = function(val)
+    task.spawn(function()
+        PlayerMethods.Notification2 = val
+    end)
+end})
+auto_valuable_section:Toggle({Name = 'Auto', Callback = function(val)
     ValuableAuto = val
-end)
+end})
 
-local teleport_section = valuables_menu:addSection({text = 'Teleport to Objects', side = 'right'})
+local teleport_objects_section = valuables_tab:Section({Name = 'Teleport to Objects', Side = 'Right'})
 
-teleport_section:addButton({text = 'Goto Airdrop'}, function()
+teleport_objects_section:Button({Name = 'Goto Airdrop', Callback = function()
     task.spawn(function()
         local rootPart = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
         if not rootPart then return end
@@ -861,9 +1271,9 @@ teleport_section:addButton({text = 'Goto Airdrop'}, function()
             rootPart.CFrame = drop.PrimaryPart.CFrame
         end
     end)
-end)
+end})
 
-teleport_section:addButton({text = 'Goto Safe / Chest'}, function()
+teleport_objects_section:Button({Name = 'Goto Safe / Chest', Callback = function()
     local lootables = SeekSC()
     if #lootables > 0 then
         local char = getCurrentCharacter()
@@ -874,9 +1284,9 @@ teleport_section:addButton({text = 'Goto Safe / Chest'}, function()
             end
         end
     end
-end)
+end})
 
-teleport_section:addButton({text = 'Goto Treasure Marker'}, function()
+teleport_objects_section:Button({Name = 'Goto Treasure Marker', Callback = function()
     task.spawn(function()
         local rootPart = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
         if not rootPart then return end
@@ -890,44 +1300,50 @@ teleport_section:addButton({text = 'Goto Treasure Marker'}, function()
             end
         end
     end)
-end)
+end})
 
-teleport_section:addToggle({text = 'Auto'}, function(val)
+teleport_objects_section:Toggle({Name = 'Auto Loot', Callback = function(val)
     task.spawn(function()
         PlayerMethods.AutoLoot = val
     end)
-end)
-teleport_section:addToggle({text = 'Auto sell'}, function(val)
+end})
+teleport_objects_section:Toggle({Name = 'Auto Sell', Callback = function(val)
     task.spawn(function()
         PlayerMethods.AutoSell = val
     end)
-end)
-teleport_section:addToggle({text = 'Safe mode'}, function(val)
+end})
+teleport_objects_section:Toggle({Name = 'Notification', Callback = function(val)
+    task.spawn(function()
+        PlayerMethods.Notification = val
+    end)
+end})
+teleport_objects_section:Toggle({Name = 'Safe Mode', Callback = function(val)
     task.spawn(function()
         PlayerMethods.AutoLootSafe = val
     end)
-end)
-local other_utils_section = valuables_menu:addSection({text = 'Other Utilities', side = 'right'})
-other_utils_section:addButton({text = 'Remove Cooldowns'}, function()
+end})
+
+local other_utils_section = valuables_tab:Section({Name = 'Other Utilities', Side = 'Right'})
+other_utils_section:Button({Name = 'Remove Cooldowns', Callback = function()
     for _, o in pairs(workspace:GetDescendants()) do
         if o:IsA('ProximityPrompt') then
             o.HoldDuration = 0
         end
     end
-end):setTooltip("Sets the hold duration for all ProximityPrompts in the game to 0.")
+end}):Tooltip({Text = "Sets the hold duration for all ProximityPrompts in the game to 0."})
 
-other_utils_section:addButton({text = 'Sell Equipped'}, function()
+other_utils_section:Button({Name = 'Sell Equipped', Callback = function()
     task.spawn(function()
         local _, item = v4item.GetEquipped(player)
         if item then
             Signal.FireServer("sellItem", item)
         end
     end)
-end)
+end})
 
-local travel_menu = window:addMenu({text = 'Travel'})
-local places_section = travel_menu:addSection({text = 'Places', side = 'left'})
-local dropped_section = travel_menu:addSection({text = 'Dropped Items', side = 'right'})
+local travel_tab = window:Tab({Name = 'Travel'})
+local places_section = travel_tab:Section({Name = 'Places', Side = 'Left'})
+local dropped_section = travel_tab:Section({Name = 'Dropped Items', Side = 'Right'})
 
 local destinations = {
     ["Police Station"] = workspace.ArmoryRobbery.ArmoryTrigger,
@@ -940,7 +1356,7 @@ local destinations = {
 }
 
 for dest_name, dest_obj in pairs(destinations) do
-    places_section:addButton({text = dest_name, style = 'large'}, function()
+    places_section:Button({Name = dest_name, Callback = function()
         local rootPart = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
         if not rootPart then return end
         
@@ -949,25 +1365,63 @@ for dest_name, dest_obj in pairs(destinations) do
         else
             rootPart.CFrame = dest_obj.CFrame
         end
-    end)
+    end})
 end
 
-dropped_section:addButton({text = "Ammo Box", style = 'large'}, function()
+dropped_section:Button({Name = "Ammo Box", Callback = function()
     local rootPart = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
     if not rootPart then return end
     local destination = workspace.Game.Local.droppables["Ammo Box"]
     if destination and destination.PrimaryPart then
         rootPart.CFrame = destination.PrimaryPart.CFrame
     end
-end)
+end})
 
-dropped_section:addButton({text = "Money Printer", style = 'large'}, function()
+dropped_section:Button({Name = "Money Printer", Callback = function()
     local rootPart = getCurrentCharacter() and getCurrentCharacter():FindFirstChild('HumanoidRootPart')
     if not rootPart then return end
     local destination = workspace.Game.Local.droppables["Money Printer"]
     if destination and destination.PrimaryPart then
         rootPart.CFrame = destination.PrimaryPart.CFrame
     end
-end)
+end})
+
+local item_tab = window:Tab({Name = 'Item'})
+local spam_throw_section = item_tab:Section({Name = 'Spam Throw', Side = 'Left'})
+local item_textbox
+item_textbox = spam_throw_section:Textbox({
+    Placeholder = 'Item Name',
+    HideName = true,
+    Callback = function(input_text, enterPressed)
+        if not enterPressed then return end
+        if item_textbox.isSetting then return end
+
+        local items = {'Banana Peel', 'Frag', 'C4', 'Molotov', 'Airdrop Marker'}
+        local input_lower = input_text:lower()
+        local matches = {}
+
+        for _, item in ipairs(items) do
+            if item:lower():sub(1, #input_lower) == input_lower then
+                table.insert(matches, item)
+            end
+        end
+
+        if #matches > 0 then
+            item_textbox.isSetting = true
+            item_textbox.Value = matches[1]
+            item_textbox.isSetting = false
+        else
+            item_textbox.isSetting = true
+            item_textbox.Value = input_text
+            item_textbox.isSetting = false
+        end
+    end
+})
+spam_throw_section:Toggle({Name = 'Enabled', Callback = function(val)
+    task.spawn(function()
+        ItemMethods.Item = item_textbox.Value
+        ItemMethods.Enabled = val
+    end)
+end})
 
 InitAll()
