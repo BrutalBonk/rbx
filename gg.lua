@@ -1,5679 +1,5674 @@
 -- This script was generated using the MoonVeil Obfuscator v1.4.0 [https://moonveil.cc]
 
-local Ab,fn,Rm,Gi,Jn,br=bit32.bxor,getmetatable,type,pairs;
-local aq,kg,Xg,Ql,Rp,Jk,ji,Ta,Ua,Zr
-ji=(getfenv());
-kg,Xg,Ta=(string.char),(string.byte),(bit32 .bxor);
-aq=function(Ue,Wf)
-    local Ng,mb,_n,Uf,X,qm,dh,hs
-    _n,X={},function(vm,Of,mn)
-        _n[vm]=Ab(Of,24468)-Ab(mn,11515)
-        return _n[vm]
+local me,Vs,Of,Jb,Ab,Oi=pairs,bit32.bxor,type,getmetatable;
+local yi,yp,jj,el,Um,gm,ii,dp,zk,zp
+yp=(getfenv());
+zk,zp,Um=(string.char),(string.byte),(bit32 .bxor);
+dp=function(ic,J)
+    local pj,q,Kj,zh,bf,Yi,fq,eg
+    Yi,pj={},function(bb,Xo,_p)
+        Yi[bb]=Vs(Xo,25813)-Vs(_p,35156)
+        return Yi[bb]
     end
-    hs=_n[-8911-20287]or X(672984702/-23049,119104-27696,624057936/9948)
+    fq=Yi[-3871- -1576]or pj(66922200/-29160,51465+26492,65267-6907)
     repeat
         while true do
-            if hs<=9417+29673 then
-                if hs>-37451670/-1970 then
-                    dh='';
-                    qm,Uf,mb=(#Ue-4.1552397573339984e-05*24066)+(12846-12769),1,-15473- -15550
-                    hs=-2.634872680189901*-16219
-                else
-                    return dh
-                end
-            elseif hs<=3.7004814305364513*14540 then
-                if hs>2.1296796774622302*22571 then
-                    if(Uf>=0 and mb>qm)or((Uf<0 or Uf~=Uf)and mb<qm)then
-                        hs=_n[0.39359980580953152*-24718]or X(-4156+-5573,-2.717817393873732*-30459,63006-12788)
+            if fq<=57485-25910 then
+                if fq>10785768/1178 then
+                    bf=q;
+                    if Kj~=Kj then
+                        fq=31586269/24167
                     else
-                        hs=_n[-14098- -19318]or X(-22139+27359,109098+21697,-2.0125226860254082*-16530)
+                        fq=713747220/16442
                     end
                 else
-                    Ng=mb;
-                    if qm~=qm then
-                        hs=28130-14825
-                    else
-                        hs=_n[10731-3799]or X(13545-6613,28.938808373590984*1242,-0.51506583389601623*-23696)
-                    end
+                    return zh
                 end
-            elseif hs<=691523379/10851 then
-                dh=dh..kg(Ta(Xg(Ue,(Ng-1309770/17010)+(7045+-7044)),Xg(Wf,(Ng-(-8108+8185))%#Wf+(16565+-16564))))
-                hs=_n[169864894/-10207]or X(9431-26073,113252+-21968,-29393318/-6586)
+            elseif fq<=75869+-23242 then
+                if(eg>=0 and q>Kj)or((eg<0 or eg~=eg)and q<Kj)then
+                    fq=Yi[2917-17249]or pj(-42938672/2996,14169+19675,600298062/28399)
+                else
+                    fq=Yi[3876+22854]or pj(16922- -9808,3.9231794280775047*27766,34484+-13342)
+                end
+            elseif fq>42554+15335 then
+                if fq>-270380460/-4445 then
+                    zh=zh..zk(Um(zp(ic,(bf-(25628+-25497))+(977-976)),zp(J,(bf- -931541/-7111)%#J+(24558+-24557))))
+                    fq=Yi[-2.2088576960309778*-4132]or pj(35381-26254,41298-4199,39447+3780)
+                else
+                    zh='';
+                    eg,q,Kj=1,31026+-30895,(#ic- -3.7908942719587551e-05*-26379)+(-17015+17146)
+                    fq=Yi[11678- -5986]or pj(-10468- -28132,-3198+9749,5.0187854958497162*9156)
+                end
             else
-                mb=mb+Uf;
-                Ng=mb;
-                if mb~=mb then
-                    hs=_n[-7.1708605156881022*-3219]or X(2.5293666447512599*9126,2.4598366394399065*21425,38224-8870)
+                q=q+eg;
+                bf=q;
+                if q~=q then
+                    fq=Yi[-11512- -29010]or pj(-1.5205074730622177*-11508,29722-9290,-1.9126335366117382*-23121)
                 else
-                    hs=_n[1230-31115]or X(-3.276504769213902*9121,48283+25742,5217+28281)
+                    fq=-2.4822735590118938*-17488
                 end
             end
         end
-    until hs==4.9525893508388039*2742
+    until fq==-11.979474548440066*-3654
 end;
-return(function(Lp,...)
-    local function Bd(Hj)
-        return Lp[Hj-(-22+-28322)]
+return(function(Ga,...)
+    local function Eo(jd)
+        return Ga[jd-(-9127+13632)]
     end;
-    local Fm
-    if ji[aq('\f\20','S')]['ohiocheatkey']==ji[aq('\205\15\199\v','\170n')]['HttpGet'](ji[aq('\205\15\199\v','\170n')],'https://pastebin.com/raw/58NTLAh5')then
-        Fm=ji[aq('2\241\48l\17*\236\56f\5','^\158Q\bb')](ji[aq('\22\219\28\223','q\186')]['HttpGet'](ji[aq('\22\219\28\223','q\186')],Bd(2651+-11999)))()
+    local i
+    if yp[dp('\127g',' ')]['ohiocheatkey']==yp[dp('\233,\227(','\142M')]['HttpGet'](yp[dp('\233,\227(','\142M')],'https://pastebin.com/raw/58NTLAh5')then
+        i=yp[dp('\217\182\240\205\236\193\171\248\199\248','\181\217\145\169\159')](yp[dp('i\222c\218','\14\191')]['HttpGet'](yp[dp('i\222c\218','\14\191')],'https://raw.githubusercontent.com/AlexR32/Bracket/refs/heads/main/BracketV34_dev.lua'))()
     else
-        Fm=nil
+        i=nil
     end
-    ji[aq('I\203\253\2\0\221\198(6c\223\241\0\21\204\225(,','\n\185\152ct\184\136GB')]=function(rk)
-        return(function(zn)
-            local function Ja(ae)
-                return zn[ae-(13811+-23244)]
+    yp[dp('N\210&\150\172\254\206#\163d\198*\148\185\239\233#\185','\r\160C\247\216\155\128L\215')]=function(_f)
+        return(function(jr)
+            local function zl(fm)
+                return jr[fm+1.9596812446636942*10541]
             end;
-            rk=rk or{}
-            local uc,Ir=ji[aq('\185\222\179\218','\222\191')]['GetService'](ji[aq('\185\222\179\218','\222\191')],'StarterGui'),ji[aq('\133\206V\197\173\206F\212','\204\160%\177')]['new'](Ja(-20959168/1696))
-            Ir['OnInvoke']=function(Xa)
-                return(function(qj)
-                    local D,Ym,Ol,wd
-                    wd,Ym={},function(Ms,jm,xn)
-                        wd[Ms]=Ab(jm,42647)-Ab(xn,8088)
-                        return wd[Ms]
+            _f=_f or{}
+            local Kh,to=yp[dp('\177H\187L','\214)')]['GetService'](yp[dp('\177H\187L','\214)')],'StarterGui'),yp[dp('\215\213t\15\255\213d\30','\158\187\a{')]['new'](zl(-17141+-16331))
+            to['OnInvoke']=function(k)
+                return(function(hi)
+                    local sj,Jc,wr,Yq
+                    Yq,Jc={},function(cb,vi,gc)
+                        Yq[cb]=Vs(vi,48797)-Vs(gc,10901)
+                        return Yq[cb]
                     end
-                    D=wd[0.098153613837600379*-14569]or Ym(-21455+20025,5.8093917710196781*22360,-107193447/-2141)
+                    wr=Yq[0.55735521833384949*32290]or Jc(-423577392/-23536,438825114/24102,6.6318901060685098*5751)
                     repeat
                         while true do
-                            if D<=-3297- -20200 then
-                                if D<=0.26401515151515154*31680 then
-                                    if not(rk['OnOk']and ji[aq('\175\255\171\227','\219\134')](rk['OnOk'])==Ol(-88655616/10038- -274614078/27382))then
-                                        D=wd[-29676]or Ym(-29676,122911,51435)
+                            if wr<=-0.97318492284341007*-31624 then
+                                if wr>166251254/16549 then
+                                    if wr>258379848/15976 then
+                                        to['Destroy'](to)
+                                        wr=Yq[-37705+16909]or Jc(147048516/-7071,106478+-4376,56162-24555)
                                         break
                                     else
-                                        D=wd[-300254183/11027]or Ym(862287972/-31668,1125494006/21574,234641256/29724)
+                                        sj=function(Lp)
+                                            return hi[Lp+326268546/-26669]
+                                        end
+                                        if not(k=='OK')then
+                                            wr=Yq[-6827+8001]or Jc(-10260760/-8740,-91360814/-12994,180225816/19641)
+                                            break
+                                        else
+                                            wr=Yq[-0.087428169344435328*-17054]or Jc(-8012+9503,671531982/10974,507017808/18204)
+                                            break
+                                        end;
+                                        wr=-10654- -27871;
+                                    end
+                                else
+                                    if _f['OnOk']and yp[dp('\132\180\128\168','\240\205')](_f['OnOk'])==sj(15308+-32534)then
+                                        wr=Yq[-28115- -20763]or Jc(2437-9789,-994161276/-10854,469063000/8302)
                                         break
                                     end
-                                    D=wd[-5090]or Ym(-5090,17917,27597)
-                                else
-                                    ji[aq('\129\180\144\187\157','\241\215')](rk['OnCancel'])
-                                    D=wd[-29850]or Ym(-29850,1018,10688)
+                                    wr=Yq[-22151]or Jc(-22151,19842,34123)
                                 end
-                            elseif D<=20262+7230 then
-                                if D<=1.5617810258492353*14778 then
-                                    if rk['OnCancel']and ji[aq('\251L\255P','\143\53')](rk['OnCancel'])==Ol(1459860/-58)then
-                                        D=wd[37593780/-18620]or Ym(21467+-23486,3170+684,-2511+32659)
+                            elseif wr>60982+-12995 then
+                                yp[dp('J\n[\5V',':i')](_f['OnOk'])
+                                wr=Yq[31598]or Jc(31598,30368,44649)
+                            elseif wr>1028440275/26219 then
+                                if wr<=-827449887/-20369 then
+                                    if not(k=='Cancel')then
+                                        wr=Yq[-27337]or Jc(-27337,105019,52208)
+                                        break
+                                    else
+                                        wr=Yq[34186-22384]or Jc(7067+4735,111197+-30794,23111+32257)
                                         break
                                     end
-                                    D=wd[16090]or Ym(16090,16876,26622)
+                                    wr=Yq[14819]or Jc(14819,53795,1000)
                                 else
-                                    if Xa=='Cancel'then
-                                        D=wd[-1.4468675348693842*12977]or Ym(-434551744/23144,112782+15335,54190+3557)
-                                        break
-                                    end
-                                    D=wd[-30785]or Ym(-30785,108422,36452)
-                                end
-                            elseif D<=1131+29334 then
-                                if D>-0.93913218159903578*-29868 then
-                                    Ir['Destroy'](Ir)
-                                    D=wd[10173+-19014]or Ym(258546204/-29244,7.2777248172863045*12588,23683- -29711)
-                                    break
-                                else
-                                    ji[aq('IGXHU','9$')](rk['OnOk'])
-                                    D=wd[-30657]or Ym(-30657,28224,18010)
+                                    yp[dp('\190\245\175\250\162','\206\150')](_f['OnCancel'])
+                                    wr=Yq[-6225]or Jc(-6225,63305,11270)
                                 end
                             else
-                                Ol=function(us)
-                                    return qj[us+-0.9074884512521274*8226]
+                                if _f['OnCancel']and yp[dp('\211=\215!','\167D')](_f['OnCancel'])==sj(922556700/28275)then
+                                    wr=Yq[35180344/-3722]or Jc(-41506- -32054,46092-16224,-22102493/-22169)
+                                    break
                                 end
-                                if not(Xa=='OK')then
-                                    D=wd[-489593910/-15627]or Ym(-210- -31540,-42.604870384917518*-2546,-1.5968905799002886*-30488)
-                                    break
-                                else
-                                    D=wd[-512781852/26547]or Ym(124279144/-6434,95459+-30863,982+17257)
-                                    break
-                                end;
-                                D=61155+-32718;
+                                wr=Yq[9710]or Jc(9710,25989,48450)
                             end
                         end
-                    until D==-3.5245476579674202*-17741
-                end)({[-203-32432]='function',[-778+-5490]='function'})
+                    until wr==59703-2766
+                end)({[621405180/30470]='function',[29018100/-985]='function'})
             end;
-            uc['SetCore'](uc,Ja(2.3898140662894098*-6185),{['Title']=rk['Title']or'Notification',['Text']=rk['Message']or Ja(13696-17837),[Ja(-37588+18393)]=ji[aq('\150\17\143\24','\251p')]['huge'],['Button1']='OK',['Button2']=Ja(-32026+32557),['Callback']=Ir})
-        end)({[0.4188081856793513*-23309]='Duration',[-98002100/18325]='SendNotification',[41790-31826]='Cancel',[46539675/-15911]='BindableFunction',[0.81754982233894635*6473]=''})
+            Kh['SetCore'](Kh,zl(-59010+29079),{[zl(-54216+27123)]=_f['Title']or zl(-1206+-28066),['Text']=_f['Message']or zl(36.123711340206185*-388),[zl(-13865+-11921)]=yp[dp('&\21?\28','Kt')]['huge'],['Button1']='OK',[zl(-14398-19162)]=zl(-7565+-28887),[zl(-53584- -22587)]=to})
+        end)({[-44047+31232]='BindableFunction',[59368175/-11575]='Duration',[2.448257655755016*-3788]='SendNotification',[-0.42236603422071872*20397]='Notification',[6051-18954]='Button2',[-25329+18893]='Title',[31903-25262]='',[-184801500/11700]='Cancel',[1.3989987823028007*-7391]='Callback'})
     end
-    local hl,wj,dg=ji[aq('\164\190O\163\178L\179','\214\219>')](ji[aq('\229+\239/','\130J')]['GetService'](ji[aq('\229+\239/','\130J')],'ReplicatedStorage')['devv'])['load'],ji[aq('{\130\30|\142\29l','\t\231o')](ji[aq('\133H\143L','\226)')]['GetService'](ji[aq('\133H\143L','\226)')],Bd(-10345-15665))['devv']['client']['Helpers']['remotes']['Signal']),ji[aq('W\136]\140','0\233')]['GetService'](ji[aq('W\136]\140','0\233')],Bd(232744914/-17737))['devv']['client']['Objects']['v3item']
-    local oh,Yo,Pn=ji[aq('\203M\r\204A\14\220','\185(|')](dg),hl(Bd(-9939+-11287)),hl(Bd(7.8023702754644457*-6244))
-    local Es,gk,nm=oh['projectiles'],hl('v3item')['melee'],ji[aq('\245\206\255\202','\146\175')]['GetService'](ji[aq('\245\206\255\202','\146\175')],'Players')['LocalPlayer']
-    local ce,_q,zk,Nk,Bk,vp=nm['GetMouse'](nm),nm['Character']or nm['CharacterAdded']['Wait'](nm['CharacterAdded']),ji[aq('\200u\228\207y\231\223','\186\16\149')](dg['modules']['inventory']),ji[aq('\204$\128\203(\131\219','\190A\241')](dg['bin']['baseItem']),ji[aq('\220\48\214\52','\187Q')]['GetService'](ji[aq('\220\48\214\52','\187Q')],'Workspace')['SecretEggSpawns']['SecretEgg7']['CFrame'],ji[aq('\4)\180\3%\183\19','vL\197')](ji[aq('\250\v\240\15','\157j')]['GetService'](ji[aq('\250\v\240\15','\157j')],'ReplicatedStorage')['devv']['client']['Helpers']['objectProperties']['ClientReplicator'])
-    local ja=zk['items']
-    local pg
-    local Lm,Em,Fl,Ki,vo,es,Ug,qt,tp,L,yk,Pi,Tg,ur,Mi,Rn,pm=Bd(-59547- -15742),false,false,false,0.0038844002486016159*25744,false,false,false,Bd(-67294+8246),-26795- -26796,{['ATM']=Bd(4804+-16902),['Register']=Bd(-0.018483179761190776*18341),[Bd(-2070+-28962)]=Bd(-27454+14144),['Fly']=Bd(-2.3182912916719483*7889),['Hidden']=false},{['KillAura']=false,[Bd(69.398625429553263*-873)]=false,['Fly']=false,['Target']=Bd(1399121880/-30610),[Bd(-26132- -19021)]=false,['AutoLoot']=Bd(-1142022752/28256),[Bd(-28126+24266)]=Bd(3900-26633),['AutoQueue']=false,['AutoSell']=false,['AllowLoot']=Bd(188141610/-14478),['Notification']=false,['Notification2']=false,['Radius']=10712+-10677},{['Enabled']=Bd(708116358/-26659),[Bd(-37210-20746)]=Bd(-1298.2*25),[Bd(3922-15326)]=Bd(-16587- -19366),['SilentShoot']=Bd(-0.76876598987534706*18371),['AllowedShoot']=false,['NoSpread']=false,['AmmoBuyFull']=Bd(-27506+20732),['FastShootSpeed']=-5.1187551187551191e-07*-19536,[Bd(-19744+14557)]=false},{[Bd(-58221- -28081)]=Bd(10141+-7726),[Bd(1093268360/-19912)]=false,['Backward']=false,['Left']=false,[Bd(-30672+8796)]=false},{Bd(-37328+-6253),Bd(86289250/-13675),'Keycard','Marker','Barrett',Bd(-52166- -4236),'Present','Key',Bd(-191712962/9209),Bd(-725665662/17154),Bd(279467760/-16286),Bd(0.5099718783333872*-30937),'Block','M249',Bd(256737749/-7477),Bd(-24526640/29060),'Dragunov','Void',Bd(-77646- -18495),Bd(-19300- -9510),Bd(-1277593275/21039),'Santa','Acid',Bd(1523414196/-31047),'AUG','Python',Bd(154065237/-21733),Bd(-13071282/278),'P90','Diamond',Bd(-14343+4619),'Topaz',Bd(-30271+1085),'Grenade','Nuke',Bd(-51073-5507),'MP7','Deagle','Gun',Bd(-510471678/18591),Bd(-528339448/10168),'Ruby',Bd(-58275+30758),'Amethyst','Rollie',Bd(-44042+25570),'Ruby'},false,false
-    local function Eo()
-        return nm['Character']or nm['CharacterAdded']['Wait'](nm['CharacterAdded'])
+    local Db,Kq,Id=yp[dp('\186\182\223\189\186\220\173','\200\211\174')](yp[dp('\219D\209@','\188%')]['GetService'](yp[dp('\219D\209@','\188%')],'ReplicatedStorage')['devv'])['load'],yp[dp('\143K,\136G/\152','\253.]')](yp[dp('\198_\204[','\161>')]['GetService'](yp[dp('\198_\204[','\161>')],Eo(-62782020/-29310))['devv']['client']['Helpers']['remotes']['Signal']),yp[dp('\199<\205\56','\160]')]['GetService'](yp[dp('\199<\205\56','\160]')],Eo(42060+-26563))['devv']['client']['Objects']['v3item']
+    local bq,Tc,rc=yp[dp('EA\23BM\20R','7$f')](Id),Db('v3items'),Db('GUID')
+    local Uf,kl,I=bq['projectiles'],Db('v3item')['melee'],yp[dp('\129\246\139\242','\230\151')]['GetService'](yp[dp('\129\246\139\242','\230\151')],'Players')['LocalPlayer']
+    local go,jb,nq,Vi,Qg,mp=I['GetMouse'](I),I['Character']or I['CharacterAdded']['Wait'](I['CharacterAdded']),yp[dp('\142\143r\137\131q\153','\252\234\3')](Id['modules']['inventory']),yp[dp('\154\158]\157\146^\141','\232\251,')](Id['bin']['baseItem']),yp[dp('\a)\r-','\96H')]['GetService'](yp[dp('\a)\r-','\96H')],'Workspace')['SecretEggSpawns']['SecretEgg7']['CFrame'],yp[dp('\1\137\4\6\133\a\22','s\236u')](yp[dp('S\225Y\229','4\128')]['GetService'](yp[dp('S\225Y\229','4\128')],'ReplicatedStorage')['devv']['client']['Helpers']['objectProperties']['ClientReplicator'])
+    local Is=nq['items']
+    local hr
+    local sb,is,ke,_a,dq,Tr,vc,No,zr,ag,ha,yl,eh,Hm,ae,np,qf=Eo(232055280/14580),false,Eo(39681048/-1562),false,-0.003952569169960474*-25300,false,Eo(-6.7763748597081932*-3564),Eo(-1.6584060970070156*-19813),Eo(-73577801/5683),Eo(80984475/8775),{[Eo(17918+15060)]=Eo(-534430260/-28665),[Eo(1210- -18030)]=Eo(1.9081052066559312*9315),['Bank']=Eo(0.46087806998478592*-27606),['Fly']=Eo(-146645785/-20605),[Eo(28936+-19473)]=false},{['KillAura']=false,[Eo(-12569-9286)]=Eo(-323485900/15350),['Fly']=Eo(60190-32524),['Target']=Eo(-38831+23590),[Eo(-593773472/-22601)]=false,['AutoLoot']=false,['AutoLootSafe']=false,[Eo(1.1792421746293245*-18210)]=Eo(0.97015519299641861*17591),['AutoSell']=Eo(-7090- -27539),[Eo(496671400/13775)]=true,['Notification']=Eo(8320-9056),[Eo(-1.573370359543993*13684)]=false,['Radius']=188790/5394},{['Enabled']=false,[Eo(21982- -13391)]='',['FastShoot']=false,['SilentShoot']=false,['AllowedShoot']=false,[Eo(2359+15294)]=Eo(134232782/7769),[Eo(-537427944/23526)]=true,['FastShootSpeed']=78.489999999999995/7849,['FriendCheck']=Eo(0.27973243269829817*30497)},{['Flying']=Eo(143309976/6423),['Forward']=false,[Eo(1.2262517146776406*11664)]=false,[Eo(17104+17042)]=Eo(34764-15759),[Eo(555945900/20100)]=false},{'Military','Vest',Eo(498434448/-25008),'Marker','Barrett',Eo(769087176/31551),Eo(40016-27488),'Key','Money','RPG',Eo(-47726- -28625),Eo(-36256+24602),Eo(2201- -24763),'M249','Hoverboard','Gravity',Eo(-17004- -28032),'Void',Eo(272147550/-10210),'C4',Eo(-0.32648351648351648*-9100),Eo(1.0399602734123969*-17117),'Acid','AS Val','AUG',Eo(78387897/-10171),Eo(-341241054/-26697),'FN','P90',Eo(-49841- -28370),Eo(58.421686746987952*415),'Topaz','Treasure',Eo(-10764+15544),Eo(28823+-20742),'AR-15','MP7','Deagle',Eo(21767- -11092),'Glock','Flamethrower','Ruby',Eo(54048-21387),'Amethyst','Rollie','Emerald','Ruby'},Eo(-18162- -8007),false
+    local function am()
+        return I['Character']or I['CharacterAdded']['Wait'](I['CharacterAdded'])
     end
-    ji[aq('\22**-1','EB')]=function(Ob,Fb,rm)
-        ji[aq(']\172L\163A','-\207')](function()
-            return(function(Og)
-                local ep,dj,nq,s,Os,fq,yi,Rr,Fo,La,kd,Yn,uj,Jj,vg,Rs,ik
-                Jj,kd={},function(Cs,ml,Kl)
-                    Jj[Cs]=Ab(ml,11158)-Ab(Kl,46208)
-                    return Jj[Cs]
+    yp[dp('Kdwcl','\24\f')]=function(Qs,wf,lh)
+        yp[dp('&u7z:','V\22')](function()
+            return(function(Am)
+                local ok,tm,pm,vn,xm,Dr,yn,e,in_,po,zs,qi,bs,ad,Zl,Bp,tn
+                ok,e={},function(Eh,G,Hs)
+                    ok[Eh]=Vs(G,46172)-Vs(Hs,7625)
+                    return ok[Eh]
                 end
-                Rs=Jj[41382+-25988]or kd(-152862420/-9930,0.92708282012120014*20297,24312+10723)
+                qi=ok[-22083- -32058]or e(-0.33347820272800216*-29912,-2519689393/-25513,63644+-12688)
                 repeat
                     while true do
-                        if Rs<=43484-14437 then
-                            if Rs<=37216-23786 then
-                                if Rs<=153797112/27882 then
-                                    if Rs<=16145+-14587 then
-                                        yi,dj,uj=ji[aq('\222\175\199\166','\179\206')]['rad'](fq)*(ji[aq('\\\139E\130','1\234')]['random']()*(2456/1228)-s(-56.159539473684212*608)),ji[aq('\aA\208%K\193b','Q$\179')]['new'](ji[aq('\231k\254b','\138\n')]['random']()*(-29689+29691)-(-8466+8467),ji[aq('\214\232\207\225','\187\137')]['random']()*s(-15781916/-32012)-2441/2441,s(0.28675956755867965*24327))['Unit'],ji[aq('#Z\129\1q\150','\96\28\243')]['new'](ik,Fb);
-                                        Yn,Rr=uj*ji[aq('\2\150\227 \189\244','A\208\145')]['fromAxisAngle'](dj,yi),Pn();
-                                        Es['newProjectileOfType'](Ob['projectileType'],{['itemName']=Ob['name'],[s(3196+-20416)]=Yn,['visualCFrame']=Yn,['guid']=Rr,[s(25184536/27859)]=s(4316- -9638),[s(230574389/-9773)]=Ob['projectileLength'],[s(15539+-14852)]=Ob['projectileLifetime'],['owner']=nm});
-                                        ji[aq('\135\5\145\b\150','\243d')]['insert'](Os,{Rr,Yn})
-                                        Rs=Jj[-575159765/-30605]or kd(-6552- -25345,64505-6978,45775-5938)
+                        if qi<=56835-22835 then
+                            if qi>-4952- -29329 then
+                                if qi>51053+-20467 then
+                                    if qi>-2.0138694567796094*-16439 then
+                                        Kq['FireServer'](Bp(-21441- -20283));
+                                        Kq['FireServer'](Bp(64548+-20279),Qs['guid'],yn,lh)
+                                        Qs['lastShot']=yp[dp('SO','<')]['clock']()
+                                        return true
                                     else
-                                        La=ep;
-                                        if nq~=nq then
-                                            Rs=20293+5194
-                                        else
-                                            Rs=-2.1760914601396455*-26066
-                                        end
+                                        return Bp(49539+2715)
                                     end
                                 else
-                                    s=function(xb)
-                                        return Og[xb+-0.93108565323202941*-16847]
+                                    if(ad>=0 and Dr>tn)or((ad<0 or ad~=ad)and Dr<tn)then
+                                        qi=-98946001/-2959
+                                    else
+                                        qi=ok[-134621700/-5506]or e(18477- -5973,6352+1045,-35379960/-32340)
                                     end
-                                    if not Ob['ammoManager']['UseAmmo'](Ob['ammoManager'],-8047/-8047)then
-                                        Rs=Jj[-692025248/-23992]or kd(48145+-19301,44563-5717,-30.841000000000001*-2000)
-                                        break
+                                end
+                            elseif qi<=0.95592464055528015*20170 then
+                                if qi<=18079+-1508 then
+                                    xm=Dr;
+                                    if tn~=tn then
+                                        qi=63162-29723
+                                    else
+                                        qi=ok[-71405955/-7065]or e(-4325796/-428,131124+-7331,41297- -21869)
                                     end
-                                    Rs=18.120379620379619*2002
+                                else
+                                    yn,tm={},Qs['model']['PrimaryPart']['Muzzle'];
+                                    vn,zs=tm['WorldCFrame']['Position'],if not eh['NoSpread']then Qs['baseSpread']else 0;
+                                    Dr,tn,ad=Bp(7264+-1529),Qs['numProjectiles'],1
+                                    qi=47023-31708
                                 end
                             else
-                                wj['FireServer']('replicateShot');
-                                wj['FireServer'](s(-23847+-24412),Ob['guid'],Os,rm)
-                                Ob['lastShot']=ji[aq('\f\16','c')]['clock']()
-                                return s(-1.4935511005187159*28532)
+                                Bp=function(xi)
+                                    return Am[xi-1.5255888951205834*14264]
+                                end
+                                if not(not Qs['ammoManager']['UseAmmo'](Qs['ammoManager'],(1.0234362240731667*-12246)/(-37246+24713)))then
+                                    qi=ok[141]or e(141,10546,18947)
+                                    break
+                                else
+                                    qi=ok[14374+-28783]or e(-365282559/25351,-1.0752252252252252*-6660,-143124802/-11107)
+                                    break
+                                end
+                                qi=49598+-31770
                             end
-                        elseif Rs>34901+8783 then
-                            if(Fo>=0 and ep>nq)or((Fo<0 or Fo~=Fo)and ep<nq)then
-                                Rs=Jj[0.43908494413903176*-16917]or kd(-0.45298207098426635*16398,-10.712705654638462*-7233,-158589200/-29260)
-                            else
-                                Rs=-23673- -25046
-                            end
-                        elseif Rs<=1.9718963012627109*17898 then
-                            return false
-                        elseif Rs<=436222276/11447 then
-                            Os,vg={},Ob['model']['PrimaryPart']['Muzzle'];
-                            ik,fq=vg['WorldCFrame']['Position'],if not Tg['NoSpread']then Ob['baseSpread']else s(-14405-5388);
-                            ep,nq,Fo=-2227617/-16749,(Ob['numProjectiles'])+(28728+-28596),1
-                            Rs=Jj[-3395+30442]or kd(4772- -22275,34190-31173,5.0100644577632023*8843)
+                        elseif qi<=987564812/22109 then
+                            bs,Zl,in_=yp[dp('\167g\190n','\202\6')]['rad'](zs)*(yp[dp('\217\167\192\174','\180\198')]['random']()*Bp(29735+1142)-Bp(15379- -22360)),yp[dp('\28\169\180>\163\165y','J\204\215')]['new'](yp[dp('\23\136\14\129','z\233')]['random']()*Bp(0.64413374244772725*31613)- -29042/-29042,yp[dp('\20F\rO',"y\'")]['random']()*(-31701- -31703)-(-21055- -21056),0)['Unit'],yp[dp('\214!\15\244\n\24','\149g}')]['new'](vn,wf);
+                            po,pm=in_*yp[dp('{Y\243Yr\228','8\31\129')]['fromAxisAngle'](Zl,bs),rc();
+                            Uf['newProjectileOfType'](Qs['projectileType'],{['itemName']=Qs['name'],['cframe']=po,['visualCFrame']=po,['guid']=pm,['isPlayerOwned']=Bp(3937- -15794),[Bp(0.72384402301299811*28158)]=Qs['projectileLength'],['lifetime']=Qs['projectileLifetime'],['owner']=I});
+                            yp[dp('3V%[\"','G7')]['insert'](yn,{pm,po})
+                            qi=ok[-41816+16395]or e(1908+-27329,76127- -19177,-1342264049/-21887)
                         else
-                            ep=ep+Fo;
-                            La=ep;
-                            if ep~=ep then
-                                Rs=Jj[-514721020/-25924]or kd(48692-28837,35384-12262,70780-22983)
+                            Dr=Dr+ad;
+                            xm=Dr;
+                            if Dr~=Dr then
+                                qi=-76240920/-2280
                             else
-                                Rs=Jj[20201+-32143]or kd(-91917574/7697,60829- -28696,2481+8800)
+                                qi=17000+10734
                             end
                         end
                     end
-                until Rs==-4470+30649
-            end)({[6437-10544]=0,[-70256543/-4291]='lifetime',[26715+2925]=true,[-261840936/-16184]=-7.7997036112627719e-05*-25642,[-1.7594654788418709*-9429]='isPlayerOwned',[777289499/-23863]='replicateProjectiles',[8451+-16358]='length',[-1.0479537572254336*-21625]=0,[6997+-8531]='cframe',[-3080+-23848]=true,[438327414/-23746]=-11074/-11074})
+                until qi==-435382920/-10710
+            end)({[28199+-12221]=26751+-26750,[0.96338304056615698*31652]=false,[-12990216/9292]=-29875+29877,[-46342- -23423]='replicateShot',[10134+-1018]=-23273- -23275,[28431-30461]=true,[35030-12522]='replicateProjectiles',[-859-15167]=18095/18095,[8720+-10099]='length'})
         end)
     end
-    local function uf(Ie,ht)
-        return(function(Vj)
-            local Pd,al,Sn,gh,mg,Op,Qa,ed,Tr,jl,hh,zt,ie,zi,Hp,yc,Tq,ud,hb,Xk,Sp,Da,dt,ug,no
-            mg,ug={},function(Fn,os,k)
-                mg[Fn]=Ab(os,26095)-Ab(k,3944)
-                return mg[Fn]
+    local function Pn(js,ja)
+        return(function(N)
+            local Ne,dc,Mp,Nm,gt,Pj,Ye,Ql,hj,Bi,Cf,id,Rq,wg,cl,R,ls,co,gd,Ve,Jr,_c,mn,Jo,tc
+            hj,Ne={},function(Qn,Tk,Ul)
+                hj[Qn]=Vs(Tk,50698)-Vs(Ul,9607)
+                return hj[Qn]
             end
-            Pd=mg[6471665/-235]or ug(-10723+-16816,56331+-23213,-173572308/-15876)
+            Rq=hj[466398432/-22809]or Ne(-2.4348654441533699*8398,105787+21812,45093- -18394)
             repeat
                 while true do
-                    if Pd>7075- -28804 then
-                        if Pd<=-1.6856146936586673*-29836 then
-                            if Pd<=71805+-28816 then
-                                return
-                            elseif Pd<=-2.8894194988836519*-16124 then
-                                hh=fn(Da)
-                                if hh~=nil and hh.__iter~=nil then
-                                    Pd=mg[-68571612/-2988]or ug(31859+-8910,-100838200/-1735,40255+-22146)
-                                    break
-                                elseif Rm(Da)=='table'then
-                                    Pd=mg[-525483808/-21856]or ug(-1.1977781098988691*-20073,95785+-12189,34.368865030674847*1304)
-                                    break
-                                end
-                                Pd=mg[-31792]or ug(-31792,77873,21141)
-                            elseif Pd<=73865-25123 then
-                                al=(ji[aq('u,\167W&\182\17','#I\196')]['new'](ce['X'],ce['Y'])-ji[aq('1\188i\19\182xU','g\217\n')]['new'](ed['X'],ed['Y']))['Magnitude'];
-                                zt=Tr*(0.0002483150053210358*2819)+al*(0.00013404825737265414*2238);
-                                if not(zt<Hp)then
-                                    Pd=mg[31258]or ug(31258,100665,64413)
-                                    break
-                                else
-                                    Pd=mg[-27018+7805]or ug(-20741- -1528,-0.32613319154592585*-30092,9850+1450)
-                                    break
-                                end
-                                Pd=mg[-6100]or ug(-6100,121526,51216)
-                            else
-                                ie=function(Ek)
-                                    return Vj[Ek- -0.9426052967453733*25072]
-                                end
-                                Ie=Ie or ie(8985+-24431)
-                                ht=ht or ie(-46297- -29232)
-                                Sp=Eo()
-                                if not Sp then
-                                    Pd=mg[-39429+27129]or ug(-0.56562126368067689*21746,1.5099304237824163*23715,41070+-19982)
-                                    break
-                                end
-                                Pd=1.7291960507757405*6381
-                            end
-                        elseif Pd>859626250/14875 then
-                            zi,Tq=Da(yc,jl);
-                            jl=zi;
-                            if jl==nil then
-                                Pd=48807+-24106
-                            else
-                                Pd=-54973480/-3533
-                            end
-                        elseif Pd<=67017-12665 then
-                            if Pd>-951266292/-17998 then
-                                if hb and ud and ud['Health']>0 and not gh then
-                                    Pd=mg[-16503+8927]or ug(226499672/-29897,37353- -22670,33187+-8112)
-                                    break
-                                end
-                                Pd=mg[30282]or ug(30282,114133,61233)
-                            else
-                                dt=Tq['Character'];
-                                hb,ud,gh=dt['FindFirstChild'](dt,ie(-49914- -23745)),dt['FindFirstChildOfClass'](dt,'Humanoid'),false;
-                                if ht then
-                                    Pd=mg[-10879- -31120]or ug(-4310+24551,20288- -24288,12811+10293)
-                                    break
-                                end
-                                Pd=36101+-7928
-                            end
-                        else
-                            Sn,Hp,Qa=nil,ji[aq('t\221m\212','\25\188')]['huge'],ji[aq('\252\184\49\188\248\167\"\180\238','\139\215C\215')]['CurrentCamera'];
-                            Da,yc,jl=ji[aq('u\165\137u\167\155','\28\213\232')](ji[aq('\243?\249;','\148^')]['GetService'](ji[aq('\243?\249;','\148^')],'Players')['GetPlayers'](ji[aq('\243?\249;','\148^')]['GetService'](ji[aq('\243?\249;','\148^')],'Players')));
-                            if Rm(Da)~='function'then
-                                Pd=mg[0.61488296261791076*8587]or ug(38006-32726,-1803683336/-21476,-2.8981649208474445*-12697)
-                                break
-                            end;
-                            Pd=mg[7616]or ug(7616,109402,55740);
-                        end
-                    elseif Pd>29287+-8380 then
-                        if Pd<=215275372/7396 then
-                            if Pd>5.3472896440129452*4944 then
-                                if not(Tg['FriendCheck'])then
-                                    Pd=mg[13095]or ug(13095,37960,12095)
-                                    break
-                                else
-                                    Pd=mg[-20559352/27896]or ug(-27253+26516,44766+-6449,775091780/31172)
-                                    break
-                                end
-                                Pd=-497098768/-9277
-                            else
-                                return Sn
-                            end
-                        elseif Pd>1.9312012574814099*16541 then
-                            if Pd>-186466512/-5584 then
-                                Da,yc,jl=Gi(Da)
-                                Pd=mg[-28131]or ug(-28131,111348,53330)
-                            elseif Pd<=8250- -25036 then
-                                if not(Tq['IsFriendsWith'](Tq,nm['UserId']))then
-                                    Pd=mg[-19136]or ug(-19136,129288,50431)
-                                    break
-                                else
-                                    Pd=mg[415367186/-28579]or ug(464157824/-31936,-24696- -31996,30.778996865203762*638)
-                                    break
-                                end
-                                Pd=mg[17811]or ug(17811,110574,63449)
-                            else
-                                if no then
-                                    Pd=mg[443603146/-21223]or ug(-3.113196306225797*6714,15575334/2931,43054-28359)
-                                    break
-                                end
-                                Pd=mg[-16978]or ug(-16978,83743,9319)
-                            end
-                        else
-                            gh=vp['Get'](Tq,'knocked')
-                            Pd=mg[543725481/-28353]or ug(-46144- -26967,70171+17169,82547-29845)
-                        end
-                    elseif Pd>23471+-11141 then
-                        if Pd<=6656- -8379 then
-                            return
-                        elseif Pd<=39348-23601 then
-                            if Pd>-0.5029752174197345*-30586 then
-                                if Pd>-383093514/-24562 then
-                                    Da,yc,jl=hh.__iter(Da)
-                                    Pd=mg[-7154]or ug(-7154,115211,49003)
-                                else
-                                    if not(Tq~=nm and Tq['Character'])then
-                                        Pd=mg[15301]or ug(15301,99165,57785)
+                    if Rq<=15442- -12957 then
+                        if Rq>34468+-19148 then
+                            if Rq>-0.82516486200439632*-24566 then
+                                if Rq<=379957698/15798 then
+                                    return
+                                elseif Rq<=-635282809/-25301 then
+                                    gt=function(Pg)
+                                        return N[Pg+(-7133+-24554)]
+                                    end
+                                    js=js or false
+                                    ja=ja or gt(63636-6794)
+                                    co=am()
+                                    if not(not co)then
+                                        Rq=hj[-8131]or Ne(-8131,24987,18809)
                                         break
                                     else
-                                        Pd=mg[10684-29732]or ug(-0.87782847135812714*21699,-2839444601/-24523,-540842912/-9719)
+                                        Rq=hj[124061140/-7132]or Ne(-16299-1096,97388- -26378,-5180+22820)
                                         break
                                     end
-                                    Pd=mg[10522]or ug(10522,127134,37624)
+                                    Rq=402165900/26820
+                                elseif Rq<=-3.6442447086111915*-6898 then
+                                    if not(eh['FriendCheck'])then
+                                        Rq=hj[18259]or Ne(18259,31062,42684)
+                                        break
+                                    else
+                                        Rq=hj[-14727- -18762]or Ne(-9127170/-2262,2231342820/17124,43279-20983)
+                                        break
+                                    end
+                                    Rq=0.49534995977473856*31075
+                                else
+                                    return
+                                end
+                            elseif Rq<=21451+-5857 then
+                                R=Pj
+                                Jr=ls
+                                Rq=hj[31310]or Ne(31310,118199,46433)
+                            else
+                                Jr,R,Ve=nil,yp[dp('\31\145\6\152','r\240')]['huge'],yp[dp('\"~\209\150&a\194\158\48','U\17\163\253')]['CurrentCamera'];
+                                wg,Jo,Cf=yp[dp('T:\31T8\r','=J~')](yp[dp('\25\132\19\128','~\229')]['GetService'](yp[dp('\25\132\19\128','~\229')],'Players')['GetPlayers'](yp[dp('\25\132\19\128','~\229')]['GetService'](yp[dp('\25\132\19\128','~\229')],'Players')));
+                                if Of(wg)~='function'then
+                                    Rq=hj[-0.48472471275818557*-30114]or Ne(0.76915375698176836*18978,46852-23541,4127+11511)
+                                    break
+                                end;
+                                Rq=hj[-13723]or Ne(-13723,47678,9434);
+                            end
+                        elseif Rq<=-18145+28388 then
+                            if Rq<=22863-15716 then
+                                if Rq>38475-32743 then
+                                    if Rq>3725- -2206 then
+                                        mn=(Ye['Position']-ls['Position'])['Magnitude'];
+                                        dc,id=Ve['WorldToScreenPoint'](Ve,ls['Position']);
+                                        if id then
+                                            Rq=hj[12098- -18025]or Ne(420577326/13962,111709-1963,-1.550087442088792*-32593)
+                                            break
+                                        end
+                                        Rq=hj[18553]or Ne(18553,47575,8321)
+                                    else
+                                        mn=yp[dp('\199E\1\224ko\225t\25\241kq\230','\149$x\131\n\28')]['new']();
+                                        mn['FilterType']=yp[dp('|&L%','9H')]['RaycastFilterType']['Blacklist']
+                                        mn['FilterDescendantsInstances']={co,Ql}
+                                        dc=yp[dp('}\195\188by\220\175jo','\n\172\206\t')]['Raycast'](yp[dp('}\195\188by\220\175jo','\n\172\206\t')],Ye['Position'],(ls['Position']-Ye['Position']),mn)
+                                        gd=dc==nil
+                                        Rq=hj[-34908+29645]or Ne(-6695+1432,4.0877101524827317*30692,-9250+31787)
+                                    end
+                                else
+                                    wg,Jo,Cf=me(wg)
+                                    Rq=hj[14928]or Ne(14928,123818,36686)
                                 end
                             else
-                                Tr=(Xk['Position']-hb['Position'])['Magnitude'];
-                                ed,Op=Qa['WorldToScreenPoint'](Qa,hb['Position']);
-                                if Op then
-                                    Pd=mg[-4170+17710]or ug(-12997- -26537,-3085005616/-24332,33195+16944)
+                                gd=true;
+                                if js then
+                                    Rq=hj[-41970- -19238]or Ne(-37699+14967,-0.23346303501945526*-18761,45564- -13206)
                                     break
                                 end
-                                Pd=mg[-23119]or ug(-23119,92393,6733)
+                                Rq=hj[23420+7267]or Ne(1.1278668038812114*27208,18.423623445825932*5630,27297+5743)
                             end
-                        else
-                            return
-                        end
-                    elseif Pd>7326+2341 then
-                        Xk=Sp['FindFirstChild'](Sp,ie(-30160+-11768));
-                        if not(not Xk)then
-                            Pd=mg[11738]or ug(11738,112252,63974)
-                            break
-                        else
-                            Pd=mg[27.809256661991586*713]or ug(-12052- -31880,74627-19931,44271+-11704)
-                            break
-                        end
-                        Pd=-1.8548714922633098*-30504
-                    elseif Pd<=0.77965791639989024*10933 then
-                        if Pd>-8618- -16991 then
-                            no=true;
-                            if Ie then
-                                Pd=mg[-10666809/717]or ug(0.60379885547303058*-24639,0.64002457170159033*29302,0.11986382709207505*12631)
+                        elseif Rq<=-9514+22381 then
+                            if not(Nm~=I and Nm['Character'])then
+                                Rq=hj[-10540]or Ne(-10540,2407,28945)
+                                break
+                            else
+                                Rq=hj[-25761- -11546]or Ne(-1.1387486982295922*12483,403556634/15093,25045+-13285)
                                 break
                             end
-                            Pd=mg[23212+-16194]or ug(-19818+26836,43698+27897,7.8775608580380814*8298)
+                            Rq=hj[-24763]or Ne(-24763,26787,5717)
                         else
-                            Hp=zt
-                            Sn=hb
-                            Pd=mg[25808]or ug(25808,67578,25948)
+                            Ye=co['FindFirstChild'](co,gt(-223730650/-3718));
+                            if not(not Ye)then
+                                Rq=hj[-9948]or Ne(-9948,31763,23010)
+                                break
+                            else
+                                Rq=hj[32528956/-13022]or Ne(-0.081966137288358054*30476,46860-22501,-3356+10015)
+                                break
+                            end
+                            Rq=hj[-0.86840869054609515*-17030]or Ne(-17884+32673,0.48088642659279779*12635,32055- -13390)
                         end
+                    elseif Rq<=17253+24124 then
+                        if Rq<=65940+-30977 then
+                            if Rq<=30612+2065 then
+                                _c,Nm=wg(Jo,Cf);
+                                Cf=_c;
+                                if Cf==nil then
+                                    Rq=hj[-12204- -20020]or Ne(27436+-19620,-3.4471478778048121*-3699,38607-10007)
+                                else
+                                    Rq=18261-7522
+                                end
+                            else
+                                tc=Jb(wg)
+                                if tc~=nil and tc.__iter~=nil then
+                                    Rq=hj[-4.7886995515695068*5575]or Ne(-10223-16474,98780+-761,72864-17360)
+                                    break
+                                elseif Of(wg)=='table'then
+                                    Rq=hj[-16899544/-2747]or Ne(-0.20058035277623815*-30671,28319- -14486,52396-24161)
+                                    break
+                                end
+                                Rq=hj[-31420]or Ne(-31420,24850,2502)
+                            end
+                        elseif Rq<=14308- -22577 then
+                            Bi=(yp[dp('\132J\221\166@\204\224','\210/\190')]['new'](go['X'],go['Y'])-yp[dp('\221\137^\255\131O\185','\139\236=')]['new'](dc['X'],dc['Y']))['Magnitude'];
+                            Pj=mn*(0.0005823627287853577*1202)+Bi*gt(65885-28376);
+                            if Pj<R then
+                                Rq=hj[7006+392]or Ne(-10238832/-1384,-18688+25468,35696+-11175)
+                                break
+                            end
+                            Rq=hj[10430]or Ne(10430,19060,13344)
+                        else
+                            cl=mp['Get'](Nm,'knocked')
+                            Rq=hj[107286228/-13374]or Ne(-42965832/5356,120986+-27859,-1.7530232558139536*-30100)
+                        end
+                    elseif Rq>53037+-6135 then
+                        if Rq>17649- -32014 then
+                            if Rq<=63950+-13438 then
+                                if Rq<=5.345318352059925*9345 then
+                                    if not(ls and Mp and Mp['Health']>gt((-5627015760366/-8974)/(346573227/16487))and not cl)then
+                                        Rq=hj[-16980]or Ne(-16980,122406,47314)
+                                        break
+                                    else
+                                        Rq=hj[267022340/17602]or Ne(-358315400/-23620,80506+-18644,3.9243090452261304*3184)
+                                        break
+                                    end
+                                    Rq=hj[30613]or Ne(30613,2253,30327)
+                                else
+                                    return
+                                end
+                            else
+                                if not(Nm['IsFriendsWith'](Nm,I['UserId']))then
+                                    Rq=hj[-30278]or Ne(-30278,63576,10166)
+                                    break
+                                else
+                                    Rq=hj[14845167/-1593]or Ne(-4910-4409,-90466050/-9887,-47009600/-1100)
+                                    break
+                                end
+                                Rq=hj[-11086]or Ne(-11086,118854,65452)
+                            end
+                        else
+                            wg,Jo,Cf=tc.__iter(wg)
+                            Rq=hj[-23188]or Ne(-23188,125865,38731)
+                        end
+                    elseif Rq<=580035152/13306 then
+                        Ql=Nm['Character'];
+                        ls,Mp,cl=Ql['FindFirstChild'](Ql,gt(45468+-3193)),Ql['FindFirstChildOfClass'](Ql,'Humanoid'),gt(-12649+28052);
+                        if not(ja)then
+                            Rq=hj[7354]or Ne(7354,96763,55354)
+                            break
+                        else
+                            Rq=hj[54235-23813]or Ne(-10.086870026525199*-3016,85814+31092,32994-8971)
+                            break
+                        end
+                        Rq=hj[-78813108/-3586]or Ne(-9276- -31254,-115745250/-12513,7877+7086)
+                    elseif Rq<=1328139995/29809 then
+                        return Jr
                     else
-                        Tr=ji[aq('I\214=1\157Jo\231% \157Th','\27\183DR\252\57')]['new']();
-                        Tr['FilterType']=ji[aq('<q\fr','y\31')]['RaycastFilterType']['Blacklist']
-                        Tr['FilterDescendantsInstances']={Sp,dt}
-                        ed=ji[aq('&\b\48:\"\23#24','QgBQ')]['Raycast'](ji[aq('&\b\48:\"\23#24','QgBQ')],Xk['Position'],(hb['Position']-Xk['Position']),Tr)
-                        no=ed==nil
-                        Pd=mg[-23834- -22245]or ug(0.12285449203649297*-12934,-3.9644842791411041*-20864,-2.4163319209816763*-18173)
+                        if gd then
+                            Rq=hj[23650+-1364]or Ne(42138-19852,53591+-30516,23183+18117)
+                            break
+                        end
+                        Rq=hj[-29230]or Ne(-29230,27178,5326)
                     end
                 end
-            until Pd==50399+7304
-        end)({[0.25288812009637363*32374]=false,[-0.08824859936667015*28737]='Head',[-25655- -32223]=false,[1.0301818796103384*-17759]='Head'})
+            until Rq==1746496444/26851
+        end)({[-20274+26096]=1.3105014852350165e-05*22892,[-4630136/2492]=0,[36782712/3474]='Head',[147272496/-9044]=false,[34966+-9811]=false,[1.853963295587661*15366]='Head'})
     end
-    ji[aq('\201?\6\199.\23\227','\142Zr')]=function(Wh)
-        local Gr,wn,ea,Sd,de,pj,xj,lb,te
-        ea,wn={},function(bt,Ub,g)
-            ea[bt]=Ab(Ub,48061)-Ab(g,41347)
-            return ea[bt]
+    yp[dp('\21\229\\\27\244M?','R\128(')]=function(Xp)
+        local Ij,Tn,aa,hf,Qq,tl,Xm,l,Ih
+        l,Tn={},function(Qa,gp,Zg)
+            l[Qa]=Vs(gp,17404)-Vs(Zg,39828)
+            return l[Qa]
         end
-        lb=ea[1.1977529432857228*16733]or wn(-561075790/-27995,-3269923579/-29089,-1.0590224815969229*-30158)
+        tl=l[1770+13788]or Tn(289705518/18621,67434+7582,-4170- -23032)
         repeat
             while true do
-                if lb<=76408596/6534 then
-                    if lb<=-24098+26047 then
-                        Gr,xj=Sd(te,pj);
-                        pj=Gr;
-                        if pj==nil then
-                            lb=ea[-6.6707818930041149*-2430]or wn(-3028+19238,65954-6933,758811036/22524)
-                        else
-                            lb=ea[10652+-19816]or wn(22932+-32096,28437+-6131,-0.55153079387682447*-11236)
-                        end
-                    else
-                        return xj
-                    end
-                elseif lb<=-8946+25632 then
-                    if lb<=231381858/17239 then
-                        if lb<=-5725- -18101 then
-                            if lb>1.8933163994284807*6299 then
-                                Sd,te,pj=ji[aq('\177!\168\50\178','\193@')](ja);
-                                if Rm(Sd)~='function'then
-                                    lb=ea[-0.83264218009478674*30384]or wn(-0.93000771973679375*27203,126811+2860,115893000/5868)
+                if tl>1.3219290324738302*29901 then
+                    if tl>78794+-23438 then
+                        if tl>41136+19214 then
+                            if tl<=90300-26153 then
+                                Ij,aa=Ih(hf,Qq);
+                                Qq=Ij;
+                                if Qq==nil then
+                                    tl=40565+11123
+                                else
+                                    tl=31916-7831
+                                end
+                            else
+                                Xm=Jb(Ih)
+                                if Xm~=nil and Xm.__iter~=nil then
+                                    tl=l[150434686/5113]or Tn(-1.0382891625789603*-28337,48492+-1844,46198+9716)
                                     break
-                                end;
-                                lb=ea[-14153]or wn(-14153,55657,64910);
-                            else
-                                Sd,te,pj=Gi(Sd)
-                                lb=ea[-2055]or wn(-2055,7193,350)
+                                elseif Of(Ih)=='table'then
+                                    tl=l[-10878- -18444]or Tn(-107770104/-14244,64752-18724,0.53794246478039542*16894)
+                                    break
+                                end
+                                tl=l[-30383]or Tn(-30383,86616,33444)
                             end
                         else
-                            if not(xj['name']==Wh)then
-                                lb=ea[-25634]or wn(-25634,32194,7739)
-                                break
-                            else
-                                lb=ea[-30985122/7071]or wn(-0.40073159579332418*10935,-514949505/-31143,35673+-14373)
-                                break
-                            end
-                            lb=ea[-11690]or wn(-11690,34764,37929)
+                            return aa
                         end
+                    elseif tl<=42796- -6059 then
+                        Ih,hf,Qq=Xm.__iter(Ih)
+                        tl=l[-10543]or Tn(-10543,127297,8669)
                     else
-                        lb=ea[-37048- -29522]or wn(8342+-15868,-0.52515316248166366*-23178,-755798206/-21191);
+                        tl=l[-105654747/21549]or Tn(-91563525/18675,1901481736/27317,82874-24106);
                         break;
                     end
-                elseif lb>1.741602490578404*12206 then
-                    de=fn(Sd)
-                    if de~=nil and de.__iter~=nil then
-                        lb=ea[-1138+-23127]or wn(-1.5155205796015239*16011,-7234+23697,-13970490/-4570)
+                elseif tl>6634+19585 then
+                    Ih,hf,Qq=yp[dp('\129\24\152\v\130','\241y')](Is);
+                    if Of(Ih)~='function'then
+                        tl=l[387673440/17276]or Tn(-8.6440677966101696*-2596,99989-8514,31524+14149)
                         break
-                    elseif Rm(Sd)=='table'then
-                        lb=ea[-8241+-18579]or wn(-58601+31781,297862614/29006,26828- -23438)
+                    end;
+                    tl=l[-26896]or Tn(-26896,125745,11213);
+                elseif tl<=-2.5060617911615175*-7671 then
+                    Ih,hf,Qq=me(Ih)
+                    tl=l[21298]or Tn(21298,121675,15319)
+                else
+                    if aa['name']==Xp then
+                        tl=l[-16870-13481]or Tn(-2.0044247787610621*15142,140748-23454,17476-4008)
                         break
                     end
-                    lb=ea[27273]or wn(27273,16970,21171)
-                else
-                    Sd,te,pj=de.__iter(Sd)
-                    lb=ea[2591]or wn(2591,28187,28508)
+                    tl=l[-4989]or Tn(-4989,105774,32202)
                 end
             end
-        until lb==0.88956306677658692*30325
+        until tl==23367+29385
     end
-    ji[aq('\178\163\135R\148\f\133\129\132P\148\22','\241\204\235>\241o')]=function(Ds,Sq)
-        return(function(cn)
-            local Mr,Zh,bg,Rq,dd,Or,Go,Gj,Eg,Jc,se,im,mp
-            Jc,im={},function(Yb,Hm,Fg)
-                Jc[Yb]=Ab(Hm,11312)-Ab(Fg,29183)
-                return Jc[Yb]
-            end
-            Rq=Jc[-3385476/-162]or im(-264526884/-12658,42418+10694,252539209/9607)
-            repeat
-                while true do
-                    if Rq>-464277688/-14588 then
-                        if Rq>45923- -6931 then
-                            if Rq>85241+-25427 then
-                                repeat
-                                    ji[aq('\160v\177y\188','\208\21')](function()
-                                        ji[aq('\240e\247o','\132\4')]['wait'](1669.5/16695)
-                                        Ds['CFrame']=Eg['PrimaryPart']['CFrame']
-                                    end)
-                                until not Eg or Eg['Parent']==bg(37586-19538)or not Eg['PrimaryPart']
-                                Rq=Jc[26675]or im(26675,83532,45132)
-                            else
-                                Rq=Jc[-128456064/-32736]or im(-123460812/-31463,-667534520/-10580,40029+-8678);
-                                break;
-                            end
-                        elseif Rq>-161360901/-3393 then
-                            if Rq<=46779+4050 then
-                                if Rq<=223791434/4471 then
-                                    if Rq>81615-31876 then
-                                        Zh,Or,se=Gj.__iter(Zh)
-                                        Rq=Jc[-11105]or im(-11105,95527,49585)
-                                    else
-                                        if not(Eg and Eg['PrimaryPart'])then
-                                            Rq=Jc[295]or im(295,49235,22406)
-                                            break
-                                        else
-                                            Rq=Jc[0.35392433653303218*17710]or im(-180236340/-28755,38464+-8902,305309872/9968)
-                                            break
-                                        end
-                                        Rq=Jc[25297]or im(25297,73541,7284)
-                                    end
+    yp[dp('\228\210\166\214\174z\211\240\165\212\174\96','\167\189\202\186\203\25')]=function(Ok,We)
+        local oe,Hk,m,Vl,xn,md,Wq,Th,mi,Dh,Wf,Je
+        oe,Dh={},function(Tm,Ag,rj)
+            oe[Tm]=Vs(Ag,48715)-Vs(rj,3888)
+            return oe[Tm]
+        end
+        mi=oe[-381397952/28964]or Dh(-31314+18146,79343- -24913,-1943212830/-32730)
+        repeat
+            while true do
+                if mi>633286872/20862 then
+                    if mi<=-5.4458517313502206*-8606 then
+                        if mi<=37577+1552 then
+                            if mi<=35948-518 then
+                                Wq,Th=xn(Je,Vl);
+                                Vl=Wq;
+                                if Vl==nil then
+                                    mi=38293-24931
                                 else
-                                    Mr,Eg=Zh(Or,se);
-                                    se=Mr;
-                                    if se==nil then
-                                        Rq=Jc[-26930125/9775]or im(17740-20495,71087- -11303,-397482736/-11476)
-                                    else
-                                        Rq=17861+31582
-                                    end
+                                    mi=oe[-20906+-10535]or Dh(-10850-20591,57285-4633,-22254+32610)
                                 end
-                            else
-                                bg=function(ap)
-                                    return cn[ap-(17744+-19000)]
-                                end
-                                if not(not Sq)then
-                                    Rq=Jc[-20642]or im(-20642,53817,61280)
+                            elseif mi<=5.1358490566037736*7155 then
+                                xn,Je,Vl=me(xn)
+                                mi=oe[-30118]or Dh(-30118,113700,15088)
+                            elseif mi>1107019638/29838 then
+                                Wf=Jb(xn)
+                                if Wf~=nil and Wf.__iter~=nil then
+                                    mi=oe[25319-6776]or Dh(-0.71866521975040698*-25802,-3.9792920534530247*-29409,1352153913/26477)
                                     break
-                                else
-                                    Rq=Jc[-0.55044955044955046*30030]or im(-21886+5356,2.7509874515012758*28609,72408-26355)
+                                elseif Of(xn)=='table'then
+                                    mi=oe[662667625/20855]or Dh(806004650/25366,-782826576/-14106,-0.077972489165253442*-26535)
                                     break
                                 end
-                                Rq=Jc[31205+-10445]or im(2.1101849969505997*9838,79149-3836,690080048/12286)
-                            end
-                        elseif Rq>72151+-29098 then
-                            Mr,Eg=Zh(Or,se);
-                            se=Mr;
-                            if se==nil then
-                                Rq=Jc[33850-32128]or im(13667-11945,86296- -24063,78708-24234)
+                                mi=oe[31874]or Dh(31874,81617,61746)
                             else
-                                Rq=-1.3501284089519383*-8177
-                            end
-                        else
-                            Gj=fn(Zh)
-                            if Gj~=nil and Gj.__iter~=nil then
-                                Rq=Jc[2.946225284601558*6676]or im(37768+-18099,2.0673298103823439*16085,1660189904/27704)
-                                break
-                            elseif Rm(Zh)=='table'then
-                                Rq=Jc[-205108620/-10986]or im(299616160/16048,7.8873158873158875*6993,58140-23831)
-                                break
-                            end
-                            Rq=Jc[13850]or im(13850,71990,7907)
-                        end
-                    elseif Rq>36396-20718 then
-                        if Rq>1.0612253027405991*25104 then
-                            if Rq>31830+-2742 then
-                                Zh,Or,se=ji[aq(';\96p;bb','R\16\17')](dd);
-                                if Rm(Zh)~='function'then
-                                    Rq=Jc[-23785- -3595]or im(-4.8289882803157136*4181,3.2111527071576242*17897,-13863+18405)
+                                md,m=yp[dp('\132\178\135\137\128\173\148\129\150','\243\221\245\226')]['Game']['Entities']['CashBundle'],{};
+                                xn,Je,Vl=yp[dp('\a>\30-\4','w_')](md['GetChildren'](md));
+                                if Of(xn)~='function'then
+                                    mi=oe[-397546577/12871]or Dh(350814546/-11358,2802579567/27259,42649+17580)
                                     break
                                 end;
-                                Rq=Jc[6649]or im(6649,68871,2449);
-                            else
-                                Gj=fn(Zh)
-                                if Gj~=nil and Gj.__iter~=nil then
-                                    Rq=Jc[-12965-14789]or im(-11596-16158,936072116/9118,225961604/6479)
-                                    break
-                                elseif Rm(Zh)=='table'then
-                                    Rq=Jc[-6615- -8105]or im(-2737- -4227,49084-4224,-2141- -14152)
-                                    break
-                                end
-                                Rq=Jc[9427]or im(9427,79939,6741)
+                                mi=oe[-8814]or Dh(-8814,78931,45657);
                             end
-                        elseif Rq<=23043+554 then
-                            mp=(Eg['PrimaryPart']['Position']-Ds['Position'])['Magnitude'];
-                            if not(mp<=Sq)then
-                                Rq=Jc[-25705]or im(-25705,56078,16555)
-                                break
-                            else
-                                Rq=Jc[-23700- -31039]or im(-0.23837209302325582*-30788,21395- -7111,-1.1778268063982349*-18130)
-                                break
-                            end
-                            Rq=Jc[-26998]or im(-26998,97970,64871)
-                        elseif Rq<=19941- -4210 then
-                            Sq=-0.0018707323917313628*-10691
-                            Rq=Jc[-8603846/9766]or im(-0.029571697099892588*29792,110190-18356,210922040/5320)
                         else
-                            Go,dd=ji[aq('\243\129\220E\247\158\207M\225','\132\238\174.')]['Game']['Entities']['CashBundle'],{};
-                            Zh,Or,se=ji[aq('\230\186\255\169\229','\150\219')](Go['GetChildren'](Go));
-                            if Rm(Zh)~='function'then
-                                Rq=Jc[11194+3274]or im(21849+-7381,1.8235771158950163*27128,-0.60800542740841246*-22110)
+                            xn,Je,Vl=Wf.__iter(xn)
+                            mi=oe[24220]or Dh(24220,19485,24718)
+                        end
+                    elseif mi<=61620+-5269 then
+                        Wq,Th=xn(Je,Vl);
+                        Vl=Wq;
+                        if Vl==nil then
+                            mi=oe[538858355/30755]or Dh(677+16844,53492+16219,42283- -8850)
+                        else
+                            mi=51545+-22553
+                        end
+                    elseif mi<=14.671678580231699*4057 then
+                        if mi<=63720+-4971 then
+                            xn,Je,Vl=yp[dp('\t]\220\t_\206','\96-\189')](m);
+                            if Of(xn)~='function'then
+                                mi=oe[-12415- -28259]or Dh(236297416/14914,-11.495592556317336*-10210,63433-2301)
                                 break
                             end;
-                            Rq=Jc[-4043]or im(-4043,109275,45310);
-                        end
-                    elseif Rq>-13582- -19523 then
-                        if Rq<=39314-29592 then
-                            if Rq<=1.4457396158266294*6091 then
-                                ji[aq('=/+\",','IN')]['insert'](dd,Eg)
-                                Rq=Jc[-19362]or im(-19362,96678,65107)
-                            else
-                                Zh,Or,se=Gi(Zh)
-                                Rq=Jc[23762]or im(23762,109409,44919)
-                            end
+                            mi=oe[-695]or Dh(-695,105260,44543);
                         else
-                            if not(Eg and Eg['PrimaryPart'])then
-                                Rq=Jc[13445]or im(13445,76368,11368)
-                                break
-                            else
-                                Rq=Jc[489230794/-30719]or im(1.8422209369577791*-8645,-2545893504/-24192,40748- -4360)
+                            We=-32248+32268
+                            mi=oe[-42909375/14925]or Dh(-27275+24400,-3384948420/-27930,-1.9254468321858265*-28758)
+                        end
+                    else
+                        xn,Je,Vl=Wf.__iter(xn)
+                        mi=oe[-27272]or Dh(-27272,118215,43501)
+                    end
+                elseif mi<=13910+791 then
+                    if mi<=212075028/30798 then
+                        yp[dp("1$\') ",'EE')]['insert'](m,Th)
+                        mi=oe[-17221]or Dh(-17221,68048,58844)
+                    else
+                        mi=oe[-10232- -20134]or Dh(262373294/26497,1426980240/22820,-0.42033197926880517*-28556);
+                        break;
+                    end
+                elseif mi>641636712/28251 then
+                    if mi<=28564-2279 then
+                        if mi<=11.249882794186592*2133 then
+                            repeat
+                                yp[dp('\235\139\250\132\247','\155\232')](function()
+                                    return(function(Ib)
+                                        local function Bj(Xj)
+                                            return Ib[Xj+(22799+-30343)]
+                                        end;
+                                        yp[dp('u\238r\228','\1\143')]['wait'](Bj(-565820820/28004))
+                                        Ok['CFrame']=Th['PrimaryPart']['CFrame']
+                                    end)({[-23751-3998]=-716.60000000000002/-7166})
+                                end)
+                            until not Th or Th['Parent']==nil or not Th['PrimaryPart']
+                            mi=oe[-3315]or Dh(-3315,105787,45032)
+                        else
+                            xn,Je,Vl=me(xn)
+                            mi=oe[-23710]or Dh(-23710,15751,3588)
+                        end
+                    else
+                        if not(Th and Th['PrimaryPart'])then
+                            mi=oe[13530]or Dh(13530,101373,26167)
+                            break
+                        else
+                            mi=oe[5814662/938]or Dh(-156425566/-25234,-167509620/-11489,1.7392522226281817*8211)
+                            break
+                        end
+                        mi=oe[-9942]or Dh(-9942,98322,32410)
+                    end
+                elseif mi>-5177- -23348 then
+                    if mi>624688801/31867 then
+                        if mi>-8218- -27982 then
+                            Hk=(Th['PrimaryPart']['Position']-Ok['Position'])['Magnitude'];
+                            if Hk<=We then
+                                mi=oe[138225295/-25621]or Dh(110931990/-20562,-0.2803838691796009*-28864,1048780048/23404)
                                 break
                             end
-                            Rq=Jc[-12825]or im(-12825,75360,4216)
+                            mi=oe[7841]or Dh(7841,72413,55511)
+                        else
+                            if Th and Th['PrimaryPart']then
+                                mi=oe[0.9856318671223312*-27213]or Dh(5348+-32170,129746+-19162,-360585610/-7546)
+                                break
+                            end
+                            mi=oe[-21940]or Dh(-21940,21669,26470)
                         end
-                    elseif Rq>34926-32211 then
-                        Zh,Or,se=Gj.__iter(Zh)
-                        Rq=Jc[-28212]or im(-28212,106247,40114)
                     else
-                        Zh,Or,se=Gi(Zh)
-                        Rq=Jc[-28206]or im(-28206,90808,63841)
+                        Wf=Jb(xn)
+                        if Wf~=nil and Wf.__iter~=nil then
+                            mi=oe[0.09559599156118144*-7584]or Dh(0.027695011078004431*-26178,111416+16034,-371948868/-13554)
+                            break
+                        elseif Of(xn)=='table'then
+                            mi=oe[-17592+5818]or Dh(-21909- -10135,-1.0878439291767337*-27731,-0.96698436904308049*-13115)
+                            break
+                        end
+                        mi=oe[25515]or Dh(25515,78175,52565)
                     end
+                else
+                    if not(not We)then
+                        mi=oe[5916]or Dh(5916,114540,32434)
+                        break
+                    else
+                        mi=oe[5566+2737]or Dh(12057-3754,120667-30392,2050995964/32524)
+                        break
+                    end
+                    mi=29580- -7193
                 end
-            until Rq==22184- -30742
-        end)({[5402- -13902]=nil})
+            end
+        until mi==271672800/26376
     end
-    ji[aq('\194\189B\241\170^\225','\146\207-')]=function(Rl,io)
-        ji[aq('\195\149\210\154\223','\179\246')](function()
-            return(function(nd)
-                local function Ic(xh)
-                    return nd[xh- -1.0484059813334226*29893]
+    yp[dp('61 \5&<\21','fCO')]=function(Em,_b)
+        yp[dp('\27\253\n\242\a','k\158')](function()
+            return(function(uq)
+                local function pn(Nl)
+                    return uq[Nl-718510002/-22227]
                 end;
-                if not(not pg)then
+                if not hr then
+                    return
+                end
+                local Mm=am()
+                local em,Br=Mm and Mm['FindFirstChildOfClass'](Mm,pn(-39976+22229)),Mm and Mm['FindFirstChild'](Mm,'HumanoidRootPart')
+                if not(not(em and Br and em['Health']>=pn((25046.754204398447/28510)*(12.338387869114126*-1253))))then
                 else
                     return
                 end
-                local Gq=Eo()
-                local vs,Uo=Gq and Gq['FindFirstChildOfClass'](Gq,Ic(-22601+17203)),Gq and Gq['FindFirstChild'](Gq,'HumanoidRootPart')
-                if not(not(vs and Uo and vs['Health']>=(515208+-6308)/(7988+-2899)))then
-                else
-                    return
+                local wq,Gm,Zi,Kb,vf,Yg,Bo,hn,cs,Sb,ie,Ro,da
+                hn,Sb={},function(yk,Sc,ea)
+                    hn[yk]=Vs(Sc,40146)-Vs(ea,20476)
+                    return hn[yk]
                 end
-                local ho,Fc,Xi,nl,pf,Km,oo,gd,_l,Gb,tk,Hc,Vo
-                Fc,Vo={},function(_f,a,Cp)
-                    Fc[_f]=Ab(a,57407)-Ab(Cp,38923)
-                    return Fc[_f]
-                end
-                _l=Fc[39484-7741]or Vo(539757972/17004,61154+23664,8697- -19397)
+                da=hn[-24268- -32185]or Sb(7.3921568627450984*1071,4.9125664517588508*17682,266727705/7135)
                 repeat
                     while true do
-                        if _l<=46968+-9809 then
-                            if _l>20014- -2483 then
-                                if _l>-1.1472416624310904*-25577 then
-                                    Pi['AllowLoot']=Ic(-192810429/23261)
-                                    _l=1780109958/27434
-                                elseif _l>144334284/5506 then
-                                    if _l<=193918620/6978 then
-                                        Xi=ji[aq('\b\210\217\167\f\205\202\175\26','\127\189\171\204')]['Game']['Props']['CashRegister']['GetChildren'](ji[aq('\b\210\217\167\f\205\202\175\26','\127\189\171\204')]['Game']['Props']['CashRegister']);
-                                        for nh,Oh in ji[aq('E3\154E1\136',',C\251')](Xi)do
-                                            local ga=ji[aq("\v(\26\'\23",'{K')](function()
-                                                return(function(n)
-                                                    local ic,gc,un,Ej,Rk
-                                                    Rk,gc={},function(mm,wa,Bf)
-                                                        Rk[mm]=Ab(wa,11525)-Ab(Bf,6421)
-                                                        return Rk[mm]
-                                                    end
-                                                    ic=Rk[25659+-24941]or gc(-21211+21929,-2056448340/-24252,64703+-23369)
-                                                    repeat
-                                                        while true do
-                                                            if ic<=170828112/7248 then
-                                                                if ic<=-17030+20967 then
-                                                                    return ho(Oh,function(ha)
-                                                                        local Z=ha and ha['FindFirstChild'](ha,'CashDrawer')and ha['CashDrawer']['FindFirstChild'](ha['CashDrawer'],'WeldConstraint')
-                                                                        return Z and Z['Enabled']
-                                                                    end)
+                        if da<=56456+-20049 then
+                            if da>10143- -9766 then
+                                if da>42252+-12793 then
+                                    return
+                                elseif da<=1.4818672023683654*18916 then
+                                    ie=yp[dp('y>s!}!\96)k','\14Q\1J')]['Game']['Props']['ATM']['GetChildren'](yp[dp('y>s!}!\96)k','\14Q\1J')]['Game']['Props']['ATM']);
+                                    for Ld,As in yp[dp('\\\151\173\\\149\191','5\231\204')](ie)do
+                                        local yd=yp[dp('\149D\132K\137',"\229\'")](function()
+                                            return(function(Nr)
+                                                local h,ve,Eb,Qd,fb
+                                                Qd,fb={},function(nm,Dn,rm)
+                                                    Qd[nm]=Vs(Dn,47760)-Vs(rm,62013)
+                                                    return Qd[nm]
+                                                end
+                                                h=Qd[0.286820325709709*22474]or fb(-78138412/-12122,757315878/14667,28224+15045)
+                                                repeat
+                                                    while true do
+                                                        if h<=24334- -10376 then
+                                                            if h<=22280+-6982 then
+                                                                Eb=function(qa)
+                                                                    return Nr[qa- -588658980/-23044]
+                                                                end
+                                                                yl['AllowLoot']=false
+                                                                ve=As['FindFirstChild'](As,Eb(475497360/11544))
+                                                                if not(ve and ve['Color']~=yp[dp('\"\191\240\14\162\175','a\208\156')]['fromRGB']((-11443- -13250)+(23018+-24570),0,Eb((131109885+-5865)/(0.37818155598817504*13869))))then
+                                                                    h=Qd[5885]or fb(5885,96575,15952)
+                                                                    break
                                                                 else
-                                                                    return Ej(24783+-19183)
-                                                                end
-                                                            else
-                                                                Ej=function(Xe)
-                                                                    return n[Xe+(-54019- -29175)]
-                                                                end
-                                                                Pi['AllowLoot']=false
-                                                                un=Oh['FindFirstChild'](Oh,'CashDrawer')and Oh['CashDrawer']['FindFirstChild'](Oh['CashDrawer'],'WeldConstraint')
-                                                                if un and un['Enabled']then
-                                                                    ic=Rk[37244-24398]or gc(3736+9110,85190-26113,35951- -19453)
+                                                                    h=Qd[-10559+-21630]or fb(-19323+-12866,115184- -8010,28919372/7958)
                                                                     break
                                                                 end
-                                                                ic=-12448- -17692
+                                                                h=87462-24164
+                                                            else
+                                                                return Gm(As,function(Lg)
+                                                                    return(function(mr)
+                                                                        local function ij(za)
+                                                                            return mr[za-509182505/19153]
+                                                                        end;
+                                                                        local bi=Lg and Lg['FindFirstChild'](Lg,'Screen')
+                                                                        return bi and bi['Color']~=yp[dp('\30t\206\50i\145',']\27\162')]['fromRGB'](ij(-1204343216/-28181),0,0)
+                                                                    end)({[123619754/7654]=3092130/12126})
+                                                                end)
                                                             end
+                                                        else
+                                                            return Eb(5934- -8324)
                                                         end
-                                                    until ic==3.9194382336500837*14312
-                                                end)({[319161740/-16585]=true})
-                                            end)
-                                            if not ga then
-                                                break
-                                            end
-                                            local Kr,Df,Jg
-                                            Kr,Jg={},function(kk,Cq,Yf)
-                                                Kr[kk]=Ab(Cq,33196)-Ab(Yf,27794)
-                                                return Kr[kk]
-                                            end
-                                            Df=Kr[234070880/10405]or Jg(32829+-10333,89511-21616,823705512/15298)
-                                            repeat
-                                                while true do
-                                                    if Df<=9.4572058528763279*4989 then
-                                                        Df=Kr[-21045- -7892]or Jg(161624064/-12288,114007+-9251,0.59508342886256527*15702);
-                                                        break;
-                                                    elseif Df>64314-13300 then
-                                                        if not es then
-                                                            Df=Kr[0.28513037350246651*21285]or Jg(-2.8559999999999999*-2125,-8.7035892560019015*-8414,24814- -22185)
+                                                    end
+                                                until h==-2.1264314899004431*-17377
+                                            end)({[-300843698/26654]=true,[-372225840/-23792]='Screen',[-19430+18881]=0})
+                                        end)
+                                        if not(not yd)then
+                                        else
+                                            break
+                                        end
+                                        local sd,Xk,jc
+                                        Xk,jc={},function(mc,Ug,_d)
+                                            Xk[mc]=Vs(Ug,20731)-Vs(_d,16345)
+                                            return Xk[mc]
+                                        end
+                                        sd=Xk[9278+-17577]or jc(115795947/-13953,29896- -31106,-10.187486608099421*-4667)
+                                        repeat
+                                            while true do
+                                                if sd<=24921+-10097 then
+                                                    if sd>9653- -80 then
+                                                        if not Tr then
+                                                            sd=Xk[1.7403769365915989*-12522]or jc(-15303+-6490,-263727310/-6215,69554+-12556)
                                                             break
                                                         end
-                                                        Df=Kr[29772+-18746]or Jg(11913-887,163041363/6143,-542488696/-25331)
+                                                        sd=-411991902/-16749
                                                     else
                                                         return
                                                     end
+                                                else
+                                                    sd=Xk[-314050684/-28108]or jc(-1416+12589,2564038400/30100,661779881/29281);
+                                                    break;
                                                 end
-                                            until Df==79356+-25974
-                                        end
-                                        _l=Fc[-990655260/32311]or Vo(-60346+29686,-2727425928/-27416,-17834- -26617)
-                                    elseif _l>59975+-30757 then
-                                        Pi['AllowLoot']=Ic(-47939-6194)
-                                        _l=Fc[397924556/15469]or Vo(430542588/16737,145601+-22785,-0.26549870158370215*-27341)
-                                    else
-                                        ji[aq('\213\23\210\29','\161v')]['wait']()
-                                        Uo['CFrame']=Gb['WorldCFrame'];
-                                        ji[aq('Q\146\149\156\158\250\18w\131Z\146\147\128\158\250\18b\154C','7\251\231\249\238\136}\15\234')](Gb['ProximityPrompt'])
-                                        _l=Fc[-141277125/-10875]or Vo(1256+11735,120476160/13944,-846274787/-18877)
-                                    end
-                                elseif _l<=22764- -1046 then
-                                    Uo['CFrame']=Bk
-                                    _l=Fc[-0.81808278867102402*-12852]or Vo(12951+-2437,67346- -26030,109798992/4086)
-                                else
-                                    gd,pf=if io['Hidden']then-4535+4532 else Ic(-1340739180/29830),tk['WorldCFrame']['LookVector'];
-                                    Hc=tk['WorldPosition']+ji[aq('\220\203\146\254\193\131\185','\138\174\241')]['new'](Ic(275333618/-10294),gd,0);
-                                    Uo['CFrame']=ji[aq('\242\206\163\208\229\180','\177\136\209')]['new'](Hc,tk['WorldPosition']);
-                                    ji[aq('c\0d\n','\23a')]['wait']()
-                                    Km,nl=oh['GetEquipped'](nm)
-                                    if Km then
-                                        _l=Fc[-92823528/29866]or Vo(-8032+4924,138185+-23403,201305604/10383)
-                                        break
-                                    end;
-                                    _l=-61.889655172413796*-1015;
-                                end
-                            elseif _l>-74.887323943661968*-213 then
-                                if _l>41783+-22442 then
-                                    if _l>16249- -4799 then
-                                        Uo['CFrame']=Bk
-                                        _l=Fc[13097]or Vo(13097,130764,64335)
-                                    else
-                                        Nk['SetEquipped'](Km,false,Ic(29092320/-16020),Ic(-241036810/4910))
-                                        _l=Fc[788193855/-26823]or Vo(-1.0979710794753952*26763,18.886130518804816*6727,-603028790/-17966)
-                                    end
-                                else
-                                    Xi=ji[aq('\246D\237\234\242[\254\226\228','\129+\159\129')]['BankRobbery']['BankCash'];
-                                    tk=Xi['Main']['Attachment'];
-                                    oo,Gb=tk['ProximityPrompt'],ji[aq("\242\56t\224\246\'g\232\224",'\133W\6\139')]['BankRobbery']['VaultDoor']['Door']['Attachment'];
-                                    if not(Gb['ProximityPrompt']['Enabled']==true)then
-                                        _l=Fc[-3288]or Vo(-3288,129894,2149)
-                                        break
-                                    else
-                                        _l=Fc[1.9628714669766767*-13763]or Vo(-18226-8789,1111373088/28031,44517+-7366)
-                                        break
-                                    end
-                                    _l=Fc[-1.5984691636865549*-15939]or Vo(44770-19292,140282+-32037,-0.59622983740364055*-15437)
-                                end
-                            else
-                                if vs['Health']<Ic(-50040+6837)then
-                                    _l=Fc[-24256+-614]or Vo(2.2453954496208017*-11076,91.643472022955521*1394,63494-12545)
-                                    break
-                                end
-                                _l=Fc[49853+-29972]or Vo(-4052- -23933,118809- -2788,39745- -14077)
-                            end
-                        elseif _l<=600436735/11455 then
-                            if _l<=3.4116780397022333*12896 then
-                                if _l<=405703220/9710 then
-                                    return
-                                else
-                                    if Pi['AutoQueue']then
-                                        _l=Fc[24282-20728]or Vo(7339+-3785,-37179504/-18297,26.511780104712042*2292)
-                                        break
-                                    else
-                                        _l=Fc[-17266+-8341]or Vo(-43008- -17401,-6.0370139968895797*-12860,40552-21586)
-                                        break
-                                    end
-                                    _l=-755154699/-15717
-                                end
-                            elseif _l<=4.9592292952948691*9394 then
-                                if _l<=1126078976/24574 then
-                                    if not(io['ATM'])then
-                                        _l=Fc[1549]or Vo(1549,42308,47272)
-                                        break
-                                    else
-                                        _l=Fc[294871725/-17505]or Vo(482-17327,-4.8067098293113597*-25485,4.7235533453887886*13272)
-                                        break
-                                    end
-                                    _l=Fc[9108034/-2557]or Vo(1819+-5381,-0.13087863188203472*-11461,403686912/17718)
-                                elseif _l>35321- -11000 then
-                                    ho=function(E,wg)
-                                        return(function(na)
-                                            local Gd,md,xi,er,Wb,xa,_e,Mj,Hr,Ga,Gg,Ih
-                                            er,Mj={},function(zs,Wi,mc)
-                                                er[zs]=Ab(Wi,22160)-Ab(mc,13389)
-                                                return er[zs]
                                             end
-                                            Ih=er[599930282/-24458]or Mj(349489192/-14248,2220263304/21903,-5.1916433964215534*-9669)
-                                            repeat
-                                                while true do
-                                                    if Ih>1.7777331794691686*19931 then
-                                                        if Ih<=51316- -2789 then
-                                                            Nk['SetEquipped'](pg,true,false,true);
-                                                            ji[aq('\218\v\221\1','\174j')]['wait'](3.4506556245686683e-05*14490)
-                                                            Ih=er[16032610/-12674]or Mj(-13067450/10330,102115- -21603,50616+12438)
-                                                        elseif Ih<=2.7247759856630824*22320 then
-                                                            if Ih<=-1618273974/-27554 then
-                                                                if Ih>497497374/8734 then
-                                                                    if wg(E)and vs['Health']>=-3253900/-32539 and Gd>0 then
-                                                                        Ih=er[56149-30466]or Mj(11536+14147,-1.3730371656277125*-25346,-5635- -27165)
-                                                                    else
-                                                                        Ih=-32.267164179104476*-2010
-                                                                    end
-                                                                else
-                                                                    xi['CanCollide']=false
-                                                                    Ga=if io['Hidden']then-250.46000000000001/-25046 else-56433/-18811
-                                                                    md=ji[aq('>\188\135\28\151\144','}\250\245')]['new'](xi['Position']+(xi['CFrame']['LookVector']*Ga),xi['Position'])
-                                                                    Gg,xa=oh['GetEquipped'](nm)
-                                                                    if not xa then
-                                                                        Ih=er[1.8238067177371833*-16970]or Mj(2.2954832010680115*-13483,5.4076939608854504*13959,91497-29360)
-                                                                        break
-                                                                    end
-                                                                    Ih=er[4741- -3357]or Mj(-205381476/-25362,100460- -22657,65767-2560)
-                                                                end
-                                                            else
-                                                                Hr=function(Bc)
-                                                                    return na[Bc-(-7848- -31789)]
-                                                                end
-                                                                xi=E['PrimaryPart']
-                                                                if not xi then
-                                                                    Ih=er[14095-6514]or Mj(-5607- -13188,151253095/19379,33178-24119)
-                                                                    break
-                                                                end
-                                                                Ih=er[-36-10499]or Mj(-26944- -16409,41074+6954,-372895016/-24664)
-                                                            end
-                                                        elseif Ih<=91435+-27797 then
-                                                            Wb=E['GetAttribute'](E,Hr(-0.067339093051134724*-24191));
-                                                            if not Wb then
-                                                                Ih=er[0.0018089725036179449*27640]or Mj(-28643+28693,-983187072/-10416,7.3877551020408161*4802)
-                                                                break
-                                                            end
-                                                            Ih=16426-10418
-                                                        else
-                                                            ji[aq('\1\250\6\240','u\155')]['wait'](19883.5-19883)
-                                                            if not(not wg(E))then
-                                                                Ih=er[-1678]or Mj(-1678,46006,48205)
-                                                                break
-                                                            else
-                                                                Ih=er[190582300/-19900]or Mj(-0.33121217361231192*28915,48595+5175,-62.161849710982658*-173)
-                                                                break
-                                                            end
-                                                            Ih=er[-83867331/9551]or Mj(-4.1754636233951494*2103,68360-20511,25525+22377)
-                                                        end
-                                                    elseif Ih>-0.91152381449214881*-19169 then
-                                                        if Ih<=32290+-5898 then
-                                                            if Ih>1.3978542691104157*17896 then
-                                                                ji[aq('\178\238\20\173\177$\133\204\23\175\177>','\241\129x\193\212G')](Uo)
-                                                                Ih=er[2496-28905]or Mj(-20329+-6080,-4.1787309511297952*-15224,58011+-32245)
-                                                            else
-                                                                return vs['Health']>=25957-25857
-                                                            end
-                                                        elseif Ih<=94540488/3414 then
-                                                            return Hr(19972-12863)
-                                                        else
-                                                            Uo['CFrame']=md;
-                                                            ji[aq('\221\229\218\239','\169\132')]['spawn'](function()
-                                                                return(function(Fs)
-                                                                    local function Xh(gt)
-                                                                        return Fs[gt-(23049+-1273)]
-                                                                    end;
-                                                                    wj['FireServer'](Xh(-91039572/14274),Xh(-0.94188795209203369*-25382),_e)
-                                                                end)({[-10126+-18028]='meleeItemHit',[-20806+22937]='prop'})
-                                                            end)
-                                                            Gd-=3.4189203049676913e-05*29249;
-                                                            ji[aq('\200@\207J','\188!')]['wait'](Hr(-0.22234822404924873*-24691))
-                                                            Ih=er[39456-11946]or Mj(1.0167800118273211*27056,131768+-31791,-1384194708/-27492)
-                                                        end
-                                                    elseif Ih<=24632-15261 then
-                                                        _e,Gd={[Hr(3.6119599578503689*15184)]=Wb,['meleeType']=Hr(-4.4208990075890249*-1713)},Hr(-2558+18839);
-                                                        Ih=-1010780760/-17688;
-                                                    else
-                                                        return true
-                                                    end
-                                                end
-                                            until Ih==67720+-16908
-                                        end)({[-118546160/15476]=-29921- -30021,[49405-18502]='guid',[-98568096/6022]='meleepunch',[-27823+5511]='guid',[-42293- -25461]=true,[-1.1369153983609588*16229]=973.10000000000002/9731})
+                                        until sd==30113+16138
                                     end
-                                    if not(io['Bank'])then
-                                        _l=Fc[-5856]or Vo(-5856,84469,24969)
-                                        break
-                                    else
-                                        _l=Fc[35971-15265]or Vo(0.95073235685752333*21779,-229688571/-4989,35824+175)
-                                        break
-                                    end
-                                    _l=Fc[-36515- -17742]or Vo(-191165459/10183,127056-26143,-63530326/-7342)
+                                    da=hn[35699-25704]or Sb(-9717+19712,86759+-8503,56664+-12449)
                                 else
-                                    if Rl then
-                                        _l=Fc[43750+-28153]or Vo(1.2343304843304843*12636,59901+-30301,-1171031040/-28368)
-                                        break
-                                    end
-                                    _l=Fc[-2622- -12775]or Vo(-0.84222314392368314*-12055,53037497/2201,1447524144/30384)
+                                    Br['CFrame']=Qg
+                                    da=hn[3344+-31000]or Sb(-60034- -32378,131382-29769,38396- -17938)
                                 end
-                            else
-                                _l=Fc[-2.1005710659898478*6304]or Vo(-367002030/27715,39878-23847,-2.1549991244965856*-28555);
-                                break;
-                            end
-                        elseif _l>2.6623417437370924*22274 then
-                            if _l<=53400+9834 then
-                                if _l>90889+-28690 then
-                                    oo['InputHoldBegin'](oo)
-                                    _l=Fc[-10642+25262]or Vo(18070-3450,85343-8269,15.104909213180902*1487)
+                            elseif da>304857740/23980 then
+                                if not(_b['Register'])then
+                                    da=hn[31473]or Sb(31473,108122,13991)
+                                    break
                                 else
-                                    if not(io['Register'])then
-                                        _l=Fc[16826]or Vo(16826,14506,46654)
-                                        break
-                                    else
-                                        _l=Fc[32246-12383]or Vo(2.3324330671676843*8516,5.6274388502902823*21014,-143377074/-5886)
-                                        break
-                                    end
-                                    _l=-4.5461746925161561*-9594
-                                end
-                            elseif _l>48038- -16836 then
-                                if oo and#Xi['Cash']['GetChildren'](Xi['Cash'])>Ic(-60161-1123)and Gb['ProximityPrompt']['Enabled']==Ic(-50654- -29111)and es and vs['Health']>=Ic(-0.027135381498987171*23696)then
-                                    _l=Fc[-13749- -15975]or Vo(-62348034/-28009,1.9236018641810919*12016,-516065108/-10348)
-                                else
-                                    _l=Fc[643]or Vo(643,6882,53918)
-                                end
-                            else
-                                if Ug then
-                                    _l=Fc[-7000+-14741]or Vo(-12254+-9487,215036399/8467,447370638/9746)
+                                    da=hn[-339519267/-23563]or Sb(2201- -12208,1605806253/14541,0.99804039794995481*6634)
                                     break
                                 end
-                                _l=Fc[-5293]or Vo(-5293,106707,7478)
+                                da=hn[-24369-856]or Sb(-37851- -12626,2517224428/20578,-12244683/-993)
+                            elseif da>-2781+11695 then
+                                Br['CFrame']=Qg
+                                da=hn[3234]or Sb(3234,130112,11422)
+                            else
+                                if Em then
+                                    da=hn[3.5862268518518516*3456]or Sb(-5662+18056,16590- -4655,-37036020/-7630)
+                                    break
+                                end
+                                da=hn[148348289/-29747]or Sb(11416+-16403,87435743/2809,0.80205572954308202*12453)
                             end
-                        else
-                            Xi=ji[aq('Sn\194\143Wq\209\135A','$\1\176\228')]['Game']['Props']['ATM']['GetChildren'](ji[aq('Sn\194\143Wq\209\135A','$\1\176\228')]['Game']['Props']['ATM']);
-                            for Un,bm in ji[aq('\143\171 \143\169\50','\230\219A')](Xi)do
-                                local jq=ji[aq('\196\"\213-\216','\180A')](function()
-                                    return(function(In)
-                                        local Kn,Qh,ak,fl,dk
-                                        ak,Kn={},function(Fj,da,Jq)
-                                            ak[Fj]=Ab(da,55415)-Ab(Jq,16013)
-                                            return ak[Fj]
+                        elseif da<=-31.80162703379224*-1598 then
+                            if da>60464+-17327 then
+                                if da<=60208+-13247 then
+                                    if Bo and#ie['Cash']['GetChildren'](ie['Cash'])>pn(-85229- -26784)and vf['ProximityPrompt']['Enabled']==false and Tr and em['Health']>=24966+-24866 then
+                                        da=hn[222290779/-6829]or Sb(253832698/-7798,54193+17327,66098-3815)
+                                    else
+                                        da=hn[9297]or Sb(9297,71013,47054)
+                                    end
+                                else
+                                    if not(yl['AutoQueue'])then
+                                        da=hn[-57935- -31525]or Sb(-604577720/22892,-2430111430/-19235,996- -32210)
+                                        break
+                                    else
+                                        da=hn[-24250+-5155]or Sb(-53750+24345,82280+18807,1.3170348505046658*21004)
+                                        break
+                                    end
+                                    da=75446-10630
+                                end
+                            elseif da>65114-25836 then
+                                if da>26586+14309 then
+                                    if not(vc)then
+                                        da=hn[-32376]or Sb(-32376,69928,57142)
+                                        break
+                                    else
+                                        da=hn[32637-19151]or Sb(-0.42673163940132264*-31603,32413- -21031,49260+-22041)
+                                        break
+                                    end
+                                    da=hn[-19580]or Sb(-19580,88361,34615)
+                                else
+                                    Bo['InputHoldBegin'](Bo)
+                                    da=hn[-23770+14199]or Sb(-8692-879,66764+13766,-1438098920/-30620)
+                                end
+                            elseif da<=-94777683/-2559 then
+                                Vi['SetEquipped'](Ro,pn(-484275510/24615),pn(342526815/-17579),true)
+                                da=hn[7122+-2951]or Sb(-13513- -17684,93736+13362,570103485/9359)
+                            elseif da<=-6.3466461853558629*-5859 then
+                                yp[dp('\204\128\203\138','\184\225')]['wait']()
+                                Br['CFrame']=vf['WorldCFrame'];
+                                yp[dp('\222\203D\30\236\137\n\184,\213\203B\2\236\137\n\173\53\204','\184\162\54{\156\251e\192E')](vf['ProximityPrompt'])
+                                da=hn[0.72393752270250633*19271]or Sb(12352+1599,-276000230/-2530,875035/161)
+                            else
+                                if _b['ATM']then
+                                    da=hn[-585243534/-18723]or Sb(25480+5778,0.6319291819291819*32760,-1.4039267329103315*-8353)
+                                    break
+                                end
+                                da=hn[6.6766261237440512*-3782]or Sb(-37448- -12197,104855-3924,-14638558/-16229)
+                            end
+                        elseif da<=991665675/17017 then
+                            if da>39602- -14626 then
+                                if da<=-4.9154133704251066*-11503 then
+                                    yl['AllowLoot']=pn(-7464-2337)
+                                    da=66017-21547
+                                else
+                                    ie=yp[dp('\148\147\229\167\144\140\246\175\134','\227\252\151\204')]['Game']['Props']['CashRegister']['GetChildren'](yp[dp('\148\147\229\167\144\140\246\175\134','\227\252\151\204')]['Game']['Props']['CashRegister']);
+                                    for Ie,Ol in yp[dp('\195\48[\195\50I','\170@:')](ie)do
+                                        local xb=yp[dp('\236x\253w\240','\156\27')](function()
+                                            return(function(pg)
+                                                local On,jl,vr,wi,Iq
+                                                Iq,On={},function(ei,xq,kh)
+                                                    Iq[ei]=Vs(xq,1169)-Vs(kh,16774)
+                                                    return Iq[ei]
+                                                end
+                                                wi=Iq[0.48162721526831082*32276]or On(12377+3168,117469- -7375,74971+-28880)
+                                                repeat
+                                                    while true do
+                                                        if wi<=-3.3260354687770781*-17311 then
+                                                            return vr(436587640/-23962)
+                                                        elseif wi>66556-5733 then
+                                                            vr=function(yh)
+                                                                return pg[yh+(6464-18089)]
+                                                            end
+                                                            yl['AllowLoot']=vr(65635-32219)
+                                                            jl=Ol['FindFirstChild'](Ol,'CashDrawer')and Ol['CashDrawer']['FindFirstChild'](Ol['CashDrawer'],'WeldConstraint')
+                                                            if jl and jl['Enabled']then
+                                                                wi=Iq[-22463+15313]or On(-0.48500881834215165*14742,279521775/4225,3.4985250737463125*6441)
+                                                                break
+                                                            end
+                                                            wi=1.7156125608137993*31654
+                                                        else
+                                                            return Gm(Ol,function(Gc)
+                                                                return(function(_g)
+                                                                    local function Co(Fs)
+                                                                        return _g[Fs- -807553516/-28042]
+                                                                    end;
+                                                                    local xp=Gc and Gc['FindFirstChild'](Gc,Co(32957- -28125))and Gc['CashDrawer']['FindFirstChild'](Gc['CashDrawer'],Co(22288+13917))
+                                                                    return xp and xp['Enabled']
+                                                                end)({[-82928772/-11196]='WeldConstraint',[997091340/30885]='CashDrawer'})
+                                                            end)
+                                                        end
+                                                    end
+                                                until wi==45980-18646
+                                            end)({[-686612619/-31509]=false,[-164296725/5505]=true})
+                                        end)
+                                        if not xb then
+                                            break
                                         end
-                                        fl=ak[8933+18952]or Kn(47457+-19572,1397067912/29592,12570-1971)
+                                        local Jd,Ri,hk
+                                        Ri,hk={},function(sa,qm,lf)
+                                            Ri[sa]=Vs(qm,43106)-Vs(lf,43292)
+                                            return Ri[sa]
+                                        end
+                                        Jd=Ri[-560184390/-20810]or hk(58279+-31360,3926616459/31641,-1.0982372069142563*-11686)
                                         repeat
                                             while true do
-                                                if fl<=-0.92627788707821379*-26939 then
-                                                    if fl>17523-142 then
-                                                        dk=function(Mm)
-                                                            return In[Mm+699000120/-21337]
-                                                        end
-                                                        Pi['AllowLoot']=dk(-0.22753162659631873*-16679)
-                                                        Qh=bm['FindFirstChild'](bm,'Screen')
-                                                        if Qh and Qh['Color']~=ji[aq('\224E\132\204X\219','\163*\232')]['fromRGB'](-0.020414698582979746*-12491,dk(-0.055500982318271122*-28504),dk(34737-32237))then
-                                                            fl=ak[88970574/5978]or Kn(378831882/25454,48954-9932,365148495/22987)
+                                                if Jd>45310+-9183 then
+                                                    if Jd<=67848+-12589 then
+                                                        if not Tr then
+                                                            Jd=Ri[-11271- -10543]or hk(-9003176/12367,61023+21664,-7375+25124)
                                                             break
                                                         end
-                                                        fl=ak[-134557860/6738]or Kn(-0.84364834607747874*23671,-5258+9235,-2598+29774)
+                                                        Jd=16091+-8945
                                                     else
-                                                        return ho(bm,function(Tc)
-                                                            return(function(gq)
-                                                                local function Uh(tt)
-                                                                    return gq[tt+-366585638/24127]
-                                                                end;
-                                                                local me=Tc and Tc['FindFirstChild'](Tc,'Screen')
-                                                                return me and me['Color']~=ji[aq('e;\235I&\180','&T\135')]['fromRGB'](0.011395120207346501*22378,Uh(-20299+7406),Uh(85430989/-21911))
-                                                            end)({[7554+-26647]=0,[-27530+-557]=0})
-                                                        end)
+                                                        return
                                                     end
                                                 else
-                                                    return dk(-939904667/-20579)
+                                                    Jd=Ri[-7963+8124]or hk(-9088+9249,25073- -3180,581639267/15941);
+                                                    break;
                                                 end
                                             end
-                                        until fl==20003+17010
-                                    end)({[0.9153683279082262*-31643]=false,[211511552/-6784]=0,[-8642- -21555]=true,[-30020-240]=0})
-                                end)
-                                if not jq then
+                                        until Jd==23916- -16696
+                                    end
+                                    da=hn[0.50153374233128833*-22168]or Sb(13205+-24323,99784+25650,-1687107331/-26149)
+                                end
+                            elseif da>-323060370/-6143 then
+                                if da>44294+8922 then
+                                    ie=yp[dp('@ +\174D?8\166R','7OY\197')]['BankRobbery']['BankCash'];
+                                    Zi=ie['Main']['Attachment'];
+                                    Bo,vf=Zi['ProximityPrompt'],yp[dp('\237\250\"\152\233\229\49\144\255','\154\149P\243')]['BankRobbery']['VaultDoor']['Door']['Attachment'];
+                                    if vf['ProximityPrompt']['Enabled']==pn(2.2607714577656677*-23488)then
+                                        da=hn[416279760/-23204]or Sb(-161944380/9027,109620- -17719,39906+-2210)
+                                        break
+                                    end
+                                    da=hn[-91176496/-3868]or Sb(-655961616/-27828,2042634530/29737,3.3100082203041512*19464)
+                                else
+                                    wq,Kb=if _b['Hidden']then-10846- -10843 else pn(-56182-6663),Zi['WorldCFrame']['LookVector'];
+                                    cs=Zi['WorldPosition']+yp[dp('e\171kG\161z\0','3\206\b')]['new'](0,wq,0);
+                                    Br['CFrame']=yp[dp('\147u\254\177^\233','\208\51\140')]['new'](cs,Zi['WorldPosition']);
+                                    yp[dp('\185\216\190\210','\205\185')]['wait']()
+                                    Ro,Yg=bq['GetEquipped'](I)
+                                    if not(Ro)then
+                                        da=hn[6364]or Sb(6364,69518,47391)
+                                        break
+                                    else
+                                        da=hn[14602-28891]or Sb(-16915+2626,1.0300715115213006*16361,-0.061513383665065202*-11656)
+                                        break
+                                    end;
+                                    da=hn[186458148/-8901]or Sb(0.68926033166622791*-30392,68398+32293,-150330648/-10686);
+                                end
+                            else
+                                if em['Health']<pn(-21407-10115)then
+                                    da=hn[-8577- -11114]or Sb(-6079- -8616,-3.1518827206429529*-13438,-39914499/-1821)
                                     break
                                 end
-                                local di,cb,t
-                                t,cb={},function(N,mk,eh)
-                                    t[N]=Ab(mk,32230)-Ab(eh,60029)
-                                    return t[N]
-                                end
-                                di=t[-12989- -30702]or cb(29541-11828,3.6239739817252592*12914,-1.8675129832660127*-25995)
-                                repeat
-                                    while true do
-                                        if di>8434- -29651 then
-                                            return
-                                        elseif di>-31790283/-1039 then
-                                            di=t[33660+-15401]or cb(14279- -3980,61217-26273,1932312734/31966);
-                                            break;
-                                        else
-                                            if not(not es)then
-                                                di=t[-30818]or cb(-30818,70689,1134)
-                                                break
-                                            else
-                                                di=t[-36114+20231]or cb(-46732- -30849,-30.187740446268275*-3899,0.35298631538559916*15638)
-                                                break
-                                            end
-                                            di=124645248/3936
-                                        end
-                                    end
-                                until di==-377750562/-6173
+                                da=hn[-28945- -28782]or Sb(5153897/-31619,0.24012183771892714*23638,-9.5327868852459012*-244)
                             end
-                            _l=Fc[-0.45233463035019456*-29812]or Vo(5772+7713,134143-11153,-0.59241722422370902*-29145)
+                        elseif da<=84425-21102 then
+                            if da>34897+27007 then
+                                yl['AllowLoot']=pn(-22796+-20967)
+                                da=hn[38546+-7493]or Sb(43966-12913,94432+25341,33494-25779)
+                            else
+                                Gm=function(ik,gr)
+                                    return(function(Sq)
+                                        local Ja,sn,Ta,x,Y,Us,Ao,Hl,Oj,Rk,Ac,La
+                                        x,Y={},function(gh,Ei,mk)
+                                            x[gh]=Vs(Ei,15937)-Vs(mk,12808)
+                                            return x[gh]
+                                        end
+                                        Us=x[-18954- -4728]or Y(-2.1373197115384617*6656,48886- -1075,148019856/4281)
+                                        repeat
+                                            while true do
+                                                if Us<=26464- -6631 then
+                                                    if Us>-269864676/-26372 then
+                                                        if Us<=295439899/19433 then
+                                                            return true
+                                                        elseif Us>3.8382226056945643*4636 then
+                                                            if Us<=6244- -12741 then
+                                                                Ao=function(eb)
+                                                                    return Sq[eb-(10120- -5355)]
+                                                                end
+                                                                Ja=ik['PrimaryPart']
+                                                                if not(not Ja)then
+                                                                    Us=x[741]or Y(741,53425,10497)
+                                                                    break
+                                                                else
+                                                                    Us=x[0.086543535620052764*-3790]or Y(0.012254352536800418*-26766,44012- -4724,61662+-32199)
+                                                                    break
+                                                                end
+                                                                Us=x[-35010- -12964]or Y(-2.7217283950617284*8100,-3.4107672349888807*-32376,42923-6256)
+                                                            else
+                                                                yp[dp('\175T\158G\180\142\152v\157E\180\148','\236;\242+\209\237')](Br)
+                                                                Us=x[-41739+16920]or Y(-23795+-1024,600754825/4807,-1359027480/-23097)
+                                                            end
+                                                        else
+                                                            return Ao(-1.1319111169548353*-30422)
+                                                        end
+                                                    elseif Us<=4515+482 then
+                                                        yp[dp('\212T\211^','\160\53')]['wait'](-5857.5+5858)
+                                                        if not(not gr(ik))then
+                                                            Us=x[-23973]or Y(-23973,100651,35524)
+                                                            break
+                                                        else
+                                                            Us=x[-158151936/8256]or Y(1.5587924159817723*-12289,26922- -6921,36374+-12702)
+                                                            break
+                                                        end
+                                                        Us=2.7094816477532526*24057
+                                                    else
+                                                        Vi['SetEquipped'](hr,true,false,true);
+                                                        yp[dp(';P<Z','O1')]['wait'](32299.5+-32299)
+                                                        Us=x[59267406/-17782]or Y(-21542+18209,2.4218309174044168*30837,39563-11853)
+                                                    end
+                                                elseif Us<=1335540406/23806 then
+                                                    if Us>1606990154/31738 then
+                                                        Ja['CanCollide']=Ao(-2791+9234)
+                                                        La=if _b['Hidden']then Ao(-98820828/-2061)else 0.00014014762216201066*21406
+                                                        Hl=yp[dp('\230A\127\196jh','\165\a\r')]['new'](Ja['Position']+(Ja['CFrame']['LookVector']*La),Ja['Position'])
+                                                        Rk,Ac=bq['GetEquipped'](I)
+                                                        if not Ac then
+                                                            Us=x[638853336/-24756]or Y(-15464-10342,86928-14023,2.9935098206660973*17565)
+                                                            break
+                                                        end
+                                                        Us=x[-0.40200173704454278*-24179]or Y(17501-7781,-2935727202/-32566,45704+-1523)
+                                                    elseif Us<=-3.3407458091002393*-14615 then
+                                                        if gr(ik)and em['Health']>=1239700/12397 and Ta>0 then
+                                                            Us=x[-438693970/15730]or Y(-339102351/12159,-2.1230595893840762*-23964,-6532+6850)
+                                                        else
+                                                            Us=x[-228314664/10242]or Y(-0.69506111249688196*32072,4.2789074720250273*8311,42429+-8970)
+                                                        end
+                                                    elseif Us>6.108919382504288*8162 then
+                                                        Br['CFrame']=Hl;
+                                                        yp[dp('\193\246\198\252','\181\151')]['spawn'](function()
+                                                            return(function(il)
+                                                                local function kg(xf)
+                                                                    return il[xf-(-4044- -4435)]
+                                                                end;
+                                                                Kq['FireServer'](kg(0.95518411621047294*-31529),kg(0.79272770342295396*16886),sn)
+                                                            end)({[26391+-13396]='prop',[-20422-10085]='meleeItemHit'})
+                                                        end)
+                                                        Ta-=Ao(328666604/26876);
+                                                        yp[dp('<v;|','H\23')]['wait'](Ao(11537725/-1931))
+                                                        Us=x[-25413+25804]or Y(-8549215/-21865,53048+4523,15296+-9922)
+                                                    else
+                                                        Oj=ik['GetAttribute'](ik,Ao(-4323- -20834));
+                                                        if not Oj then
+                                                            Us=x[-14937-15315]or Y(3.2118059241957746*-9419,9.9643014543851915*4538,29495-7456)
+                                                            break
+                                                        end
+                                                        Us=1764482310/28614
+                                                    end
+                                                elseif Us>41714- -21709 then
+                                                    return em['Health']>=-0.0037747244451155067*-26492
+                                                else
+                                                    sn,Ta={['guid']=Oj,['meleeType']=Ao(-288510879/-23631)},Ao(-31138+32151);
+                                                    Us=x[-17290+3705]or Y(0.94530652007515137*-14371,115689-32399,103.68959731543625*596);
+                                                end
+                                            end
+                                        until Us==-128408514/-14066
+                                    end)({[-0.056882446604074016*-18213]='guid',[1.2068189490266681*-17774]=2145.5/21455,[4369-7615]=-24244+24245,[-0.17631181170373569*18524]='meleepunch',[285067984/-31562]=false,[2283+16677]=true,[3406+-17868]=16449+-16349,[3106+29367]=4.9060491586125691e-07*20383})
+                                end
+                                if not(_b['Bank'])then
+                                    da=hn[-10451]or Sb(-10451,9255,26764)
+                                    break
+                                else
+                                    da=hn[-9741- -8676]or Sb(7003440/-6576,1.4757028486315398*21484,8623+14345)
+                                    break
+                                end
+                                da=hn[-23166+25197]or Sb(0.1678096339750475*12103,4.4811999254704675*26835,84317-20807)
+                            end
+                        else
+                            da=hn[-20618+14080]or Sb(-17128- -10590,-1683022050/-27890,23227- -4476);
+                            break;
                         end
                     end
-                until _l==1.2562686815011623*24088
-            end)({[2.7113181609897663*-6547]=true,[30962430/-2610]=-767300/-7673,[-11001+15594]=0,[348165374/11342]=-2600400/-26004,[20779+8745]=false,[-26801+4008]=true,[-10091-3515]=0,[28927-5876]=false,[31240-5298]='Humanoid',[28402+-18605]=false,[-686046984/22911]=0})
+                until da==-7608- -29016
+            end)({[-1.2906424292501548*-14523]=0.027457440966501923*3642,[-34402- -8283]=0,[20261+2264]=false,[-120474262/-9382]=false,[0.88149223048551906*16539]='Humanoid',[-16049+16853]=25853-25753,[-16336+-4439]=true,[-7670- -20322]=false,[-35970+5451]=0,[16747-28184]=true})
         end)
     end
-    ji[aq('\228Z\210T','\183?')]=function(js)
-        return(function(Im)
-            local kh,_t,Ha,Bm,sp,pd,Ze,Wj,Jd,Vi,Wa,Si,cs,cc,Cf,si,up,ii,El,Ns,ck,kp,Hg,ka,ip,Gn,tg,nf,Xj
-            ii,cc={},function(yj,Tk,oc)
-                ii[yj]=Ab(Tk,21645)-Ab(oc,7387)
-                return ii[yj]
+    yp[dp('\135M\177C','\212(')]=function(Cd)
+        return(function(_r)
+            local wl,Tb,Wh,Mo,Pc,yr,rh,Aj,be,ms,ch,hp,yq,mj,Wn,Xc,io,Ha,Ue,Rp,Tj,Ba,xc,vj,Pi,Uo,xe,ff,Hd
+            Uo,Ue={},function(zc,zb,Uj)
+                Uo[zc]=Vs(zb,6598)-Vs(Uj,30539)
+                return Uo[zc]
             end
-            ka=ii[13293+692]or cc(325808545/23297,44854- -1894,-1495997828/-29522)
+            Tb=Uo[-368031600/22104]or Ue(1514+-18164,-485040280/-11608,641669542/11971)
             repeat
                 while true do
-                    if ka>825159570/24918 then
-                        if ka<=-636098792/-12607 then
-                            if ka<=74005-30403 then
-                                if ka>2.7243987190842813*14677 then
-                                    if ka>-186652250/-4475 then
-                                        if ka>-576099456/-13488 then
-                                            if ka<=37823- -5148 then
-                                                Vi,kh,Wj=Wa.__iter(Vi)
-                                                ka=ii[-12991]or cc(-12991,93384,37795)
-                                            else
-                                                si,Si=Vi(kh,Wj);
-                                                Wj=si;
-                                                if Wj==nil then
-                                                    ka=ii[36880+-22972]or cc(203126340/14605,13.099474605954466*2855,65047+-17448)
-                                                else
-                                                    ka=ii[-32603+5875]or cc(-43722+16994,106930-11016,23309+16054)
-                                                end
-                                            end
-                                        elseif ka<=27508- -14718 then
-                                            Jd,Ze,Wa=ck.__iter(Jd)
-                                            ka=ii[-9146]or cc(-9146,25491,14174)
-                                        else
-                                            Ze=fn(Wa)
-                                            if Ze~=nil and Ze.__iter~=nil then
-                                                ka=ii[-192007623/-23539]or cc(0.72096517588828002*11314,14.61609727851766*5181,25422+22207)
-                                                break
-                                            elseif Rm(Wa)=='table'then
-                                                ka=ii[53658-30281]or cc(10583- -12794,53786- -20461,3.6298085857647275*16143)
-                                                break
-                                            end
-                                            ka=ii[-27495]or cc(-27495,70600,34393)
-                                        end
-                                    else
-                                        Bm=Si['PrimaryPart'];
-                                        if Bm then
-                                            ka=ii[14724-7549]or cc(-0.68112777672299218*-10534,-933857000/-10250,22156- -18720)
+                    if Tb>10596+22267 then
+                        if Tb>66911-16772 then
+                            if Tb<=53099+4924 then
+                                if Tb>77826-23884 then
+                                    if Tb>-385671870/-6905 then
+                                        if yp[dp('\246\207\160\248\222\177\220','\177\170\212')](ff)then
+                                            Tb=Uo[-456682768/16444]or Ue(-50721- -22949,98271+-31304,23717- -21082)
                                             break
                                         end
-                                        ka=ii[-24056]or cc(-24056,82023,28870)
+                                        Tb=46196+-18227
+                                    elseif Tb<=-430808000/-7840 then
+                                        if Tb>74490+-19926 then
+                                            Tb=-5.5942775901901545*-5627
+                                            break
+                                        else
+                                            Rp,Pi,xe=wl.__iter(Rp)
+                                            Tb=Uo[-1336]or Ue(-1336,31061,28001)
+                                        end
+                                    else
+                                        if not(vj)then
+                                            Tb=Uo[-29845]or Ue(-29845,57244,56177)
+                                            break
+                                        else
+                                            Tb=Uo[371268400/-29941]or Ue(-364522800/29397,6.8395085803432139*15384,32599- -29748)
+                                            break
+                                        end
+                                        Tb=Uo[-31113]or Ue(-31113,71660,33601)
                                     end
-                                elseif ka>1.4130912067874819*26873 then
-                                    if ka>8114+30770 then
+                                elseif Tb<=67268+-15906 then
+                                    if Tb<=62110-11359 then
+                                        Tj,Ba,Pc,ch={yp[dp('\184\254\57u\188\225*}\170','\207\145K\30')]['Game']['Entities']['ItemPickup']},yp[dp('\184\247F{\188\232Us\170','\207\152\52\16')]['MilitaryRobbery']['MilitaryTrigger'],yp[dp('F\31\51bB\0 jT','1pA\t')]['ArmoryRobbery']['ArmoryTrigger'],{};
+                                        Ha,mj,Xc=yp[dp('{V\130{T\144','\18&\227')](Tj);
+                                        if Of(Ha)~='function'then
+                                            Tb=Uo[0.46040811088295686*-31168]or Ue(-200670400/13984,34309+27136,-1.5834246575342465*-14600)
+                                            break
+                                        end;
+                                        Tb=Uo[-29260]or Ue(-29260,59769,41428);
+                                    elseif Tb>209613985/4115 then
+                                        Pi=Hd
+                                        Tb=Uo[-5340]or Ue(-5340,50333,43809)
+                                    else
+                                        wl=Jb(Rp)
+                                        if wl~=nil and wl.__iter~=nil then
+                                            Tb=Uo[35876+-31426]or Ue(37048-32598,82020-1858,1.0446465481603968*14514)
+                                            break
+                                        elseif Of(Rp)=='table'then
+                                            Tb=Uo[638537612/24422]or Ue(-0.80570706603802655*-32451,996990420/9222,67385-23189)
+                                            break
+                                        end
+                                        Tb=Uo[-4057]or Ue(-4057,34198,8876)
+                                    end
+                                else
+                                    be,Wn=xe(yr,io);
+                                    io=be;
+                                    if io==nil then
+                                        Tb=17156-6873
+                                    else
+                                        Tb=Uo[-23569+1062]or Ue(-13503+-9004,65538-9558,42515+-26336)
+                                    end
+                                end
+                            elseif Tb>-1047213860/-16940 then
+                                if Tb<=67695-2909 then
+                                    if Tb>-1736055808/-26944 then
+                                        be,Wn,ms=me(be)
+                                        Tb=Uo[24491]or Ue(24491,97559,40593)
+                                    else
+                                        vj[Wn]=true
+                                        Tb=Uo[43500+-19820]or Ue(0.8698207464002351*27224,1871993322/32706,26602-18514)
+                                    end
+                                elseif Tb>35243+30014 then
+                                    if Wh==yq(-0.48253224991966215*-21783)then
+                                        Tb=Uo[23476-27074]or Ue(14921+-18519,39322+16018,-1169478598/-19478)
+                                        break
+                                    end
+                                    Tb=Uo[18390]or Ue(18390,7314,29480)
+                                else
+                                    Rp,Pi,xe=yp[dp('l\199\96l\197r','\5\183\1')](vj['GetChildren'](vj));
+                                    if Of(Rp)~='function'then
+                                        Tb=Uo[-21809+10124]or Ue(-32853- -21168,2.479570100697134*20656,-969655904/-30166)
+                                        break
+                                    end;
+                                    Tb=Uo[-13585]or Ue(-13585,54663,62099);
+                                end
+                            elseif Tb<=-1009442820/-16964 then
+                                if Tb<=46154+12132 then
+                                    if Tb<=51922- -6287 then
                                         return
                                     else
-                                        ip,cs,Cf,tg=ji[aq('\223\214\228\225\219\201\247\233\205','\168\185\150\138')]['GetPartBoundsInBox'](ji[aq('\223\214\228\225\219\201\247\233\205','\168\185\150\138')],Ha['CFrame'],Ha['Size']),ji[aq('\180u\209\230\176j\194\238\166','\195\26\163\141')]['GetPartBoundsInBox'](ji[aq('\180u\209\230\176j\194\238\166','\195\26\163\141')],Xj['CFrame'],Xj['Size']),ji[aq('\229\240]\255\225\239N\247\247','\146\159/\148')]['BankRobbery']['BankAlarmTrigger'],ji[aq('k\204B\222o\211Q\214y','\28\163\48\181')]['BankRobbery']['VaultDoor']['Door']['Attachment']['ProximityPrompt'];
-                                        sp,Ns,pd,Gn=ji[aq('\25\205\249\52\29\210\234<\v','n\162\139_')]['GetPartBoundsInBox'](ji[aq('\25\205\249\52\29\210\234<\v','n\162\139_')],Cf['CFrame'],Cf['Size']),{},{},{};
-                                        Jd,Ze,Wa=ji[aq('\247\218@\247\216R','\158\170!')](ip);
-                                        if Rm(Jd)~='function'then
-                                            ka=ii[10810- -7883]or cc(0.78288729739917073*23877,1570- -4773,107369262/7878)
-                                            break
-                                        end;
-                                        ka=ii[-5359]or cc(-5359,65541,29607);
+                                        Rp,Pi,xe=me(Rp)
+                                        Tb=Uo[5491]or Ue(5491,24411,30591)
                                     end
-                                elseif ka>6697+30439 then
-                                    if ck['GetAttribute'](ck,'locked')==true then
-                                        ka=ii[-116687862/-26899]or cc(-2797+7135,73030+10337,23121-9203)
+                                elseif Tb>680360405/11653 then
+                                    Pi=Jb(xe)
+                                    if Pi~=nil and Pi.__iter~=nil then
+                                        Tb=Uo[75.653333333333336*-300]or Ue(-36847+14151,63764+886,27895+25155)
+                                        break
+                                    elseif Of(xe)=='table'then
+                                        Tb=Uo[-0.10656171062679903*-17023]or Ue(-8092+9906,129669+-31681,-25106+28691)
                                         break
                                     end
-                                    ka=ii[29538]or cc(29538,57252,40918)
+                                    Tb=Uo[22529]or Ue(22529,48116,13305)
                                 else
-                                    Jd,Ze,Wa=Gi(Jd)
-                                    ka=ii[-6284]or cc(-6284,12141,27804)
-                                end
-                            elseif ka<=18120+29216 then
-                                if ka<=34678- -10763 then
-                                    Wj,si=Wa(Vi,kh);
-                                    kh=Wj;
-                                    if kh==nil then
-                                        ka=ii[-0.64470497044859998*-20642]or cc(211543968/15896,-12575- -24652,-0.58154289834174477*-20805)
-                                    else
-                                        ka=ii[-124241950/-5950]or cc(8592+12289,-38.743892828999215*-1269,383824855/19739)
-                                    end
-                                elseif ka>501081636/10877 then
-                                    ck=fn(Jd)
-                                    if ck~=nil and ck.__iter~=nil then
-                                        ka=ii[-0.45254146938007589*-31891]or cc(-13295- -27727,65272+24333,-938347340/-30170)
-                                        break
-                                    elseif Rm(Jd)=='table'then
-                                        ka=ii[-0.68767457413745625*25419]or cc(418453720/-23939,64729- -21509,8221+18506)
-                                        break
-                                    end
-                                    ka=ii[-18130]or cc(-18130,28882,1053)
-                                elseif ka<=997759854/21798 then
-                                    if ka<=68113+-22488 then
-                                        Wa=fn(Vi)
-                                        if Wa~=nil and Wa.__iter~=nil then
-                                            ka=ii[14.275032509752926*1538]or cc(-9556- -31511,848949534/14097,-0.047397896462231935*-21963)
-                                            break
-                                        elseif Rm(Vi)=='table'then
-                                            ka=ii[53984-23828]or cc(-838216176/-27796,42740+-1302,30645933/4637)
-                                            break
-                                        end
-                                        ka=ii[938]or cc(938,77507,52570)
-                                    else
-                                        if ji[aq(']\206\26S\223\vw','\26\171n')](kp)then
-                                            ka=ii[-0.012391093901258471*5165]or cc(-783552/12243,49881+-4147,20670+-8222)
-                                            break
-                                        end
-                                        ka=ii[5484+8915]or cc(1.3563489073097212*10616,-5.328566785830354*-15385,69286+-10175)
-                                    end
-                                else
-                                    if not(Ns[Bm])then
-                                        ka=ii[32587]or cc(32587,60157,43355)
-                                        break
-                                    else
-                                        ka=ii[-30969- -14860]or cc(-16027+-82,1518797184/19416,3.4851479492745345*17506)
-                                        break
-                                    end
-                                    ka=53367600/23325
-                                end
-                            elseif ka<=-703251450/-14355 then
-                                if ka<=-1470450280/-30628 then
-                                    if kp['find'](kp,'Vest')or kp=='Police Armory Keycard'or kp=='Military Armory Keycard'or kp=='Hoverboard'or kp=='Taser Gun'then
-                                        ka=ii[1847- -4517]or cc(-84125716/-13219,-13.350663018311934*-9502,-373334695/-7417)
-                                        break
-                                    end
-                                    ka=ii[-4761]or cc(-4761,53335,30398)
-                                else
-                                    ji[aq('\21<\3\49\4','a]')]['insert'](_t,Wa)
-                                    ka=ii[0.35410679676535456*29926]or cc(-182660489/-17237,71695+9751,4.9586849507735584*5688)
-                                end
-                            elseif ka<=-4.3475945167205099*-11453 then
-                                if ka<=30956+18374 then
-                                    if(Bm['Position']-Hg['Position'])['Magnitude']<=js then
-                                        ka=ii[-12392- -333]or cc(-2298-9761,-1035003200/-8680,48800+-6850)
-                                        break
-                                    end
-                                    ka=ii[-15859]or cc(-15859,95001,25116)
-                                else
-                                    Ze={[up(-94568304/4756)]=up(26083+-7332),['part']=nil,['priorityIndex']=ji[aq('\178\\\171U','\223=')]['huge'],[up(13037- -16029)]=nil};
-                                    Vi,kh,Wj=ji[aq('V\248-V\250?','?\136L')](_t);
-                                    if Rm(Vi)~='function'then
-                                        ka=ii[0.35038759689922483*14835]or cc(0.73594789749398271*7063,74300- -3774,61056-16491)
-                                        break
-                                    end;
-                                    ka=ii[-30452]or cc(-30452,115904,64347);
+                                    xe,yr,io=me(xe)
+                                    Tb=Uo[-7182]or Ue(-7182,54342,30453)
                                 end
                             else
-                                sp,Ns=cs(Cf,tg);
-                                tg=sp;
-                                if tg==nil then
-                                    ka=ii[-20496- -859]or cc(312758499/-15927,83523-11459,21629- -22020)
-                                else
-                                    ka=-1.6439381431952012*-18171
-                                end
+                                xe,yr,io=me(xe)
+                                Tb=Uo[-14252]or Ue(-14252,47356,13553)
                             end
-                        elseif ka>-1618795728/-28176 then
-                            if ka>102256911/1681 then
-                                if ka<=42682- -20151 then
-                                    Vi,kh,Wj=Gi(Vi)
-                                    ka=ii[-22133]or cc(-22133,128251,60274)
-                                elseif ka<=91685-27902 then
-                                    Ze,Wa=Gn(ck,Jd);
-                                    Jd=Ze;
-                                    if Jd==nil then
-                                        ka=ii[110]or cc(110,74338,44345)
-                                    else
-                                        ka=ii[-11154+17677]or cc(37628-31105,112100+-17110,36530-6126)
-                                    end
-                                else
-                                    Gn,ck,Jd=Gi(Gn)
-                                    ka=ii[7816]or cc(7816,105467,51994)
+                        elseif Tb<=1239935104/29504 then
+                            if Tb>-2.6329042695364704*-14217 then
+                                if Pi['GetAttribute'](Pi,yq(-108445182/-18691))==true then
+                                    Tb=Uo[-358689976/26732]or Ue(186456528/-13896,-21.344999043794225*-5229,20427+21346)
+                                    break
                                 end
-                            elseif ka<=28931- -29683 then
-                                if ka>39254+18561 then
-                                    if ka<=-1.7954931841365027*-32351 then
-                                        ka=ii[-11924-9425]or cc(3.7460958062818039*-5699,32367- -5914,-10023300/-7955)
-                                        break
-                                    else
-                                        Ns[kh]=true
-                                        ka=ii[38468-31708]or cc(-124221760/-18376,88055+32369,933611994/28269)
-                                    end
-                                else
-                                    Si=si['GetAttribute'](si,'keycardName');
-                                    if Si=='policeArmory'then
-                                        ka=ii[-0.96997440441031701*-20316]or cc(8024+11682,56619+27392,-13.409112942317014*-4126)
-                                        break
-                                    elseif Si=='militaryArmory'then
-                                        ka=ii[9005+-11789]or cc(0.99928212491026558*-2786,381480030/27978,-2.3613026819923371*-2610)
-                                        break
-                                    end
-                                    ka=ii[-11328]or cc(-11328,44764,20821)
-                                end
-                            elseif ka>-1624199388/-27446 then
-                                cs,Cf,tg=ip.__iter(cs)
-                                ka=ii[14616]or cc(14616,83885,21192)
-                            elseif ka>77768-18928 then
-                                ka=ii[0.92783010156971379*-27075]or cc(-537237706/21386,-1.8742343332809801*-25468,36280+-13000)
-                                break
+                                Tb=Uo[7848]or Ue(7848,15006,22471)
                             else
-                                Vi,kh=Jd(Ze,Wa);
-                                Wa=Vi;
-                                if Wa==nil then
-                                    ka=-0.31436770235503664*-30318
-                                else
-                                    ka=28424+29698
-                                end
-                            end
-                        elseif ka>68152-14843 then
-                            if tg['Enabled']==up(-58.337423312883438*-652)then
-                                ka=ii[-117333344/-17692]or cc(-0.49111374407582936*-13504,-647022756/-18996,-0.37242826513388988*-21921)
-                                break
-                            end
-                            ka=ii[-15970]or cc(-15970,97336,29723)
-                        elseif ka>-1327365039/-25571 then
-                            if ka<=3.4261385880203576*15326 then
-                                if ka<=66436+-14293 then
-                                    pd=fn(Gn)
-                                    if pd~=nil and pd.__iter~=nil then
-                                        ka=ii[-29932- -3933]or cc(-15751-10248,-2.0583557778632806*-23391,156956265/4265)
-                                        break
-                                    elseif Rm(Gn)=='table'then
-                                        ka=ii[1092891/69]or cc(36011+-20172,-184.30461538461537*-650,-8.3875511131303959*-4402)
-                                        break
-                                    end
-                                    ka=ii[-1821]or cc(-1821,95320,13819)
-                                else
-                                    Wa,Vi,kh=Ze.__iter(Wa)
-                                    ka=ii[3081]or cc(3081,40266,479)
-                                end
-                            elseif ka>723911708/13676 then
-                                ck=fn(Jd)
-                                if ck~=nil and ck.__iter~=nil then
-                                    ka=ii[-1.0771438986603481*-21946]or cc(-0.92513306199123357*-25552,99497+-21579,33783- -24212)
+                                if not(Hd['DoorMain'])then
+                                    Tb=Uo[-12874]or Ue(-12874,35510,58676)
                                     break
-                                elseif Rm(Jd)=='table'then
-                                    ka=ii[-18.520897043832825*-981]or cc(-1178- -19347,18898+-8351,1.0774303982278608*19863)
+                                else
+                                    Tb=Uo[13445+-12234]or Ue(-21792- -23003,-1.550699762344864*-30296,29044-22781)
                                     break
                                 end
-                                ka=ii[-5336]or cc(-5336,73081,60327)
-                            else
-                                ka=-251672512/-5824
-                                break
+                                Tb=Uo[21982]or Ue(21982,34024,60278)
                             end
-                        elseif ka<=3.8659354052407067*13128 then
-                            kp=Si['GetAttribute'](Si,up(0.89559616536848408*6676));
-                            if not(kp)then
-                                ka=ii[-1715]or cc(-1715,85798,28165)
-                                break
-                            else
-                                ka=ii[-881420940/-26935]or cc(585072396/17879,83002- -3349,-62586258/-3129)
-                                break
-                            end
-                            ka=ii[21593]or cc(21593,76201,51340)
-                        else
-                            Jd,Ze,Wa=Gi(Jd)
-                            ka=ii[5084]or cc(5084,115250,44392)
-                        end
-                    elseif ka<=41424824/2408 then
-                        if ka>35361+-25980 then
-                            if ka<=15514+-2406 then
-                                if ka>-419- -11217 then
-                                    if ka>17316-5704 then
-                                        if ka>11361- -621 then
-                                            cs,Cf,tg=Gi(cs)
-                                            ka=ii[25621]or cc(25621,69361,35252)
-                                        else
-                                            Jd,Ze,Wa=Gi(Jd)
-                                            ka=ii[-31016]or cc(-31016,38949,26347)
-                                        end
+                        elseif Tb>14579+32197 then
+                            if Tb>60943-12379 then
+                                if Tb<=39084+9966 then
+                                    if Tb<=657258450/13434 then
+                                        xe,yr,io=me(xe)
+                                        Tb=Uo[769]or Ue(769,70593,16087)
                                     else
-                                        Gn[kh]=up(-903143206/-27587)
-                                        ka=ii[-53067+21441]or cc(326285442/-10317,-836338272/-16163,983144575/26705)
+                                        Ha,mj,Xc=xc.__iter(Ha)
+                                        Tb=Uo[-23241]or Ue(-23241,48476,64817)
                                     end
-                                elseif ka>-70748260/-7060 then
-                                    if ka<=-94725705/-9069 then
-                                        js=ji[aq('~\174g\167','\19\207')]['huge']
-                                        ka=ii[-49335428/-1567]or cc(0.9626368250473919*32706,152990-30604,62517-7754)
+                                else
+                                    be,Wn=xe(yr,io);
+                                    io=be;
+                                    if io==nil then
+                                        Tb=Uo[7468-9548]or Ue(12301-14381,21613- -13868,-577240644/-32028)
                                     else
-                                        El,Ha,Xj,_t={ji[aq('N!\186zJ>\169r\\','9N\200\17')]['Game']['Entities']['ItemPickup']},ji[aq('\127\250\n\253{\229\25\245m','\b\149x\150')]['MilitaryRobbery']['MilitaryTrigger'],ji[aq('\214VPr\210ICz\196','\161\57\"\25')]['ArmoryRobbery']['ArmoryTrigger'],{};
-                                        cs,Cf,tg=ji[aq('U\149IU\151[','<\229(')](El);
-                                        if Rm(cs)~='function'then
-                                            ka=ii[-6470-10893]or cc(32138913/-1851,58279+1411,25098- -2231)
-                                            break
-                                        end;
-                                        ka=ii[-4466]or cc(-4466,33008,5035);
+                                        Tb=Uo[-33168+6374]or Ue(2.5783294842186297*-10392,-33549850/-535,25543- -17542)
                                     end
-                                else
-                                    Jd,Ze,Wa=ji[aq('\243\246k\243\244y','\154\134\n')](cs);
-                                    if Rm(Jd)~='function'then
-                                        ka=ii[-20939+-9248]or cc(927646510/-30730,47937+26283,2.1901621324539708*21834)
-                                        break
-                                    end;
-                                    ka=ii[-18617]or cc(-18617,72077,58963);
                                 end
-                            elseif ka<=350206011/21627 then
-                                if not(si)then
-                                    ka=ii[8793]or cc(8793,90304,39761)
-                                    break
-                                else
-                                    ka=ii[6232226/242]or cc(-3498- -29251,-1481252783/-20047,-1534612032/-26613)
-                                    break
-                                end
-                                ka=ii[-8435]or cc(-8435,87682,18839)
+                            elseif Tb<=1.5246322597007356*31544 then
+                                io,be,Wn=yr.__iter(io)
+                                Tb=Uo[10309]or Ue(10309,33313,60861)
                             else
-                                Wa,Vi,kh=ji[aq('3_*L0','C>')](ji[aq('\175\190\235x\171\161\248p\189','\216\209\153\19')]['Game']['Props']['Door']['GetChildren'](ji[aq('\175\190\235x\171\161\248p\189','\216\209\153\19')]['Game']['Props']['Door']));
-                                if Rm(Wa)~='function'then
-                                    ka=ii[67012985/-3643]or cc(-513606795/27921,94456- -27416,40475+24869)
+                                xc=Jb(Ha)
+                                if xc~=nil and xc.__iter~=nil then
+                                    Tb=Uo[138253570/18070]or Ue(226614969/29619,-9.142935427892958*-10949,32866+10165)
                                     break
-                                end;
-                                ka=ii[-25566]or cc(-25566,36227,12432);
-                            end
-                        elseif ka<=83824960/15409 then
-                            if ka>0.10111750027123793*27651 then
-                                if ka>0.10216171929161152*31734 then
-                                    Jd,Ze,Wa=ji[aq('l\249\229l\251\247','\5\137\132')](sp);
-                                    if Rm(Jd)~='function'then
-                                        ka=ii[0.98502769875729901*13358]or cc(4311+8847,4.2901295618633171*20222,-0.99449745065374329*-19809)
-                                        break
-                                    end;
-                                    ka=ii[29494]or cc(29494,29264,1951);
-                                else
-                                    Vi,kh=Jd(Ze,Wa);
-                                    Wa=Vi;
-                                    if Wa==nil then
-                                        ka=48924-32238
-                                    else
-                                        ka=-19629- -30789
-                                    end
-                                end
-                            elseif ka<=32060-29761 then
-                                if ka<=-0.15059700462419767*-14489 then
-                                    if Gn[Bm]then
-                                        ka=ii[-485761200/-16545]or cc(-62.601279317697227*-469,73980+-24953,21189168/6864)
-                                        break
-                                    end
-                                    ka=81781-32640
-                                elseif ka>-0.7292464878671775*-3132 then
-                                    if not(pd[Bm])then
-                                        ka=ii[-121]or cc(-121,15039,31437)
-                                        break
-                                    else
-                                        ka=ii[-40473- -8844]or cc(865369440/-27360,-1027497296/-24238,-1.9686883915110751*-8623)
-                                        break
-                                    end
-                                    ka=-12881+14957
-                                else
-                                    up=function(Sk)
-                                        return Im[Sk-(27646+-15555)]
-                                    end
-                                    nf=Eo()
-                                    Hg=nf['FindFirstChild'](nf,'HumanoidRootPart')
-                                    if not Hg then
-                                        ka=ii[-29808+2007]or cc(-6403-21398,37657- -23628,123355840/7768)
-                                        break
-                                    end
-                                    ka=ii[-53961810/6139]or cc(-31792+23002,80623-20780,44977-9933)
-                                end
-                            else
-                                Jd,Ze,Wa=ck.__iter(Jd)
-                                ka=ii[-10275]or cc(-10275,116968,43906)
-                            end
-                        elseif ka>25748-17960 then
-                            if ka>111221786/12818 then
-                                ck=fn(Jd)
-                                if ck~=nil and ck.__iter~=nil then
-                                    ka=ii[4.1805752003771808*-4242]or cc(-3003-14731,558285636/9111,63057+-18725)
-                                    break
-                                elseif Rm(Jd)=='table'then
-                                    ka=ii[-553185076/-18796]or cc(15413+14018,-3.3738528138528139*-23100,-286926885/-8595)
+                                elseif Of(Ha)=='table'then
+                                    Tb=Uo[-35373+9233]or Ue(1.235524885380725*-21157,-1445354820/-19755,-5367100/-562)
                                     break
                                 end
-                                ka=ii[-6653]or cc(-6653,89973,14903)
-                            else
-                                return Ze['prompt'],Ze['part'],Ze['proxp']
+                                Tb=Uo[17589]or Ue(17589,22994,21183)
                             end
-                        else
-                            for Kc,Us in ji[aq('q?\207q=\221','\24O\174')](Mi)do
-                                if(kp['find'](kp,Us)or kp==Us)then
-                                    if Kc<Ze['priorityIndex']then
-                                        Ze['prompt']=kp
-                                        Ze['part']=Bm
-                                        Ze['priorityIndex']=Kc;
-                                        ji[aq('\249\165\232\170\229','\137\198')](function()
-                                            Ze['proxp']=Si['FindFirstChildOfClass'](Si,'ProximityPrompt')or Bm['FindFirstChildOfClass'](Bm,'ProximityPrompt')
-                                        end)
-                                    end
-                                    break
-                                end
-                            end
-                            ka=ii[4619]or cc(4619,92253,35032)
-                        end
-                    elseif ka>32880-7556 then
-                        if ka>4.5756855286099221*6309 then
-                            if ka<=-317477104/-10297 then
-                                if ka>17051- -12792 then
-                                    if ka>27224+2888 then
-                                        if si['DoorMain']then
-                                            ka=ii[-11135- -8208]or cc(0.25850039742117814*-11323,126980-23998,-1491867188/-23219)
-                                            break
-                                        end
-                                        ka=ii[-27073]or cc(-27073,80564,56749)
-                                    else
-                                        if not(Ns)then
-                                            ka=ii[-28662]or cc(-28662,119268,56455)
-                                            break
-                                        else
-                                            ka=ii[11634-32638]or cc(-1.0848613191467382*19361,33309+4737,22617- -6915)
-                                            break
-                                        end
-                                        ka=ii[-22348]or cc(-22348,121249,54468)
-                                    end
-                                else
-                                    if not(Jd['GetAttribute'](Jd,'locked')==up((18244+10523)+-160473600/5760))then
-                                        ka=ii[7939]or cc(7939,60264,43566)
-                                        break
-                                    else
-                                        ka=ii[-22306- -28736]or cc(-15209- -21639,46097-5835,-3.2362302366435878*-9677)
-                                        break
-                                    end
-                                    ka=ii[25700]or cc(25700,53768,24910)
-                                end
-                            else
-                                Wa,Vi,kh=Gi(Wa)
-                                ka=ii[-3036]or cc(-3036,73577,33786)
-                            end
-                        elseif ka<=546280896/21154 then
-                            ka=ii[19536-13709]or cc(-4681- -10508,398058750/11250,-0.59136771300448432*-17840)
-                            break
-                        else
-                            Jd,Ze,Wa=ck.__iter(Jd)
-                            ka=ii[4456]or cc(4456,65326,17904)
-                        end
-                    elseif ka<=34965-13900 then
-                        if ka>-1602- -21070 then
-                            Gn,ck,Jd=ji[aq('\192\247Z\192\245H','\169\135;')](Ns['GetChildren'](Ns));
-                            if Rm(Gn)~='function'then
-                                ka=ii[55695+-31884]or cc(34332-10521,105667- -9121,4.4126971289931261*12365)
+                        elseif Tb<=47714-2781 then
+                            yr={[yq(17905- -5635)]=nil,['part']=nil,[yq(91448739/3313)]=yp[dp('\27\27\2\18','vz')]['huge'],['proxp']=nil};
+                            be,Wn,ms=yp[dp('z\210\246z\208\228','\19\162\151')](ch);
+                            if Of(be)~='function'then
+                                Tb=Uo[-129346702/30959]or Ue(-0.55220724292889245*7566,65466+7017,12763+24571)
                                 break
                             end;
-                            ka=ii[16620]or cc(16620,120876,34871);
-                        elseif ka<=-410840190/-22355 then
-                            ip=fn(cs)
-                            if ip~=nil and ip.__iter~=nil then
-                                ka=ii[-12321+-10042]or cc(-20664+-1699,95830-5251,-237112155/-11463)
-                                break
-                            elseif Rm(cs)=='table'then
-                                ka=ii[-2.8699780131920849*10006]or cc(-11704-17013,-585219806/-15473,15.264032330489448*2227)
-                                break
-                            end
-                            ka=ii[-2325]or cc(-2325,97758,30877)
+                            Tb=Uo[-26371]or Ue(-26371,91000,34956);
                         else
-                            if not(not js)then
-                                ka=ii[-30991]or cc(-30991,122238,54367)
-                                break
-                            else
-                                ka=ii[24931-23428]or cc(-4273029/-2843,-22479+30040,27989+-12466)
-                                break
-                            end
-                            ka=ii[-27651+29270]or cc(-18310- -19929,66439- -30176,7858+20974)
+                            Ha,mj,Xc=me(Ha)
+                            Tb=Uo[4428]or Ue(4428,69587,36030)
                         end
-                    elseif ka<=381893463/17001 then
-                        if ka<=-1.2343992192433551*-17419 then
-                            Vi,kh=Jd(Ze,Wa);
-                            Wa=Vi;
-                            if Wa==nil then
-                                ka=20724-17208
-                            else
-                                ka=8193- -14299
-                            end
-                        else
-                            Gn,ck,Jd=pd.__iter(Gn)
-                            ka=ii[-25155]or cc(-25155,79777,30636)
-                        end
-                    elseif ka>11404- -11749 then
-                        Jd=si
-                        ka=ii[9510]or cc(9510,35933,12502)
-                    elseif ka>-335520504/-14916 then
-                        ck=si
-                        ka=ii[-2739]or cc(-2739,121717,65518)
-                    else
-                        pd[kh]=up(-632700202/-29714)
-                        ka=ii[7365340/-2260]or cc(-22263+19004,-0.63352054628469834*-24749,0.21685801896883691*14023)
-                    end
-                end
-            until ka==51921+5694
-        end)({[-0.51863733577757409*-32730]='proxp',[2.50724777734828*10348]=true,[9146+-15258]='itemName',[37753-31093]=nil,[0.33692149970708846*27312]=true,[10227+-21411]=true,[42488-21841]=true,[-43386+11411]='prompt'})
-    end
-    ji[aq('c\210\181[\228\147','0\183\208')]=function()
-        return(function(Ud)
-            local eg,hg,mt,Lg,Aa,_b,oq,Hd,gl,Xq,yn,Fe,bf,lt,Mf,yf,jj,lc,b,zd,Ca,Tf,wi,Ef,to
-            b,Ca={},function(Wq,yt,m)
-                b[Wq]=Ab(yt,17522)-Ab(m,45880)
-                return b[Wq]
-            end
-            Ef=b[21007+-6511]or Ca(-127318368/-8783,35901+-23042,-2.3649272882805819*-17535)
-            repeat
-                while true do
-                    if Ef<=4.350375543549875*7589 then
-                        if Ef<=324441247/20507 then
-                            if Ef<=-101581852/-20962 then
-                                ji[aq('\227\147\245\158\242','\151\242')]['insert'](Mf,{['model']=wi,['prompt']=hg,[Tf(46694-30164)]=gl})
-                                Ef=b[-28647]or Ca(-28647,93428,10852)
-                            elseif Ef>103+8025 then
-                                jj,Xq=Aa(Fe,lc);
-                                lc=jj;
-                                if lc==nil then
-                                    Ef=48464- -797
-                                else
-                                    Ef=b[0.67897980871413388*-23525]or Ca(-1.3430589422349282*11893,114274- -14437,4.3893186003683242*5430)
-                                end
-                            elseif Ef>85122918/11133 then
-                                if Ef<=15844-8009 then
-                                    zd,oq,Lg=Gi(zd)
-                                    Ef=b[23845]or Ca(23845,116494,18282)
-                                else
-                                    jj,Xq=Aa(Fe,lc);
-                                    lc=jj;
-                                    if lc==nil then
-                                        Ef=b[6352+20144]or Ca(40801-14305,1634952474/31002,23829- -9927)
+                    elseif Tb<=8490- -7370 then
+                        if Tb>0.51262056228196184*14619 then
+                            if Tb>-0.6252849191624702*-18865 then
+                                if Tb<=36040+-22656 then
+                                    if Tb>15362-3106 then
+                                        if not Cd then
+                                            Tb=Uo[-7753998/-523]or Ue(10229940/690,65467-1188,-12.965312190287413*-5045)
+                                            break
+                                        end
+                                        Tb=Uo[5.7169437846397466*5052]or Ue(29069-187,-53.129248444231692*-2089,6646+29197)
                                     else
-                                        Ef=-6.94842290510356*-7387
+                                        Tb=Uo[-17139+22986]or Ue(-15202+21049,-787716067/-8207,9.944756277695717*3385)
+                                        break
                                     end
+                                else
+                                    be,Wn,ms=io.__iter(be)
+                                    Tb=Uo[-26727]or Ue(-26727,89170,48598)
                                 end
-                            else
-                                return
-                            end
-                        elseif Ef<=-6926- -31074 then
-                            if Ef>110904641/5483 then
-                                if Ef>-171526950/-7779 then
-                                    Aa,Fe,lc=ji[aq('{\18\253{\16\239','\18b\156')](yn);
-                                    if Rm(Aa)~='function'then
-                                        Ef=b[10718+-15440]or Ca(-35566104/7532,-994690422/-14883,-3314- -5897)
+                            elseif Tb<=-0.33970652137580643*-29917 then
+                                if Tb<=0.69243227326266199*13584 then
+                                    if Tb>2.1609360076408786*4188 then
+                                        xe=Hd
+                                        Tb=Uo[-5307]or Ue(-5307,53882,48512)
+                                    else
+                                        if not(wl[Aj])then
+                                            Tb=Uo[-4045]or Ue(-4045,57534,33255)
+                                            break
+                                        else
+                                            Tb=Uo[-0.97678879723767509*-20852]or Ue(-11646+32014,80200-18516,-15805+31134)
+                                            break
+                                        end
+                                        Tb=20755408/28988
+                                    end
+                                elseif Tb>-228235125/-23325 then
+                                    xe,yr,io=yp[dp('\f\135\190\f\133\172','e\247\223')](Ha);
+                                    if Of(xe)~='function'then
+                                        Tb=Uo[21239+5934]or Ue(9698- -17475,-28442534/-541,-1553641726/-26929)
                                         break
                                     end;
-                                    Ef=b[10147]or Ca(10147,55892,51337);
+                                    Tb=Uo[12150]or Ue(12150,67657,9839);
                                 else
-                                    if hg then
-                                        Ef=b[-6.4508928571428568*3360]or Ca(-32555- -10880,597402324/32517,58694+-12752)
-                                        break
-                                    end
-                                    Ef=b[-16749]or Ca(-16749,88294,15954)
+                                    xe,yr,io=Pi.__iter(xe)
+                                    Tb=Uo[20423]or Ue(20423,100488,42920)
                                 end
-                            elseif Ef<=-12906+30555 then
-                                Aa,Fe,lc=Gi(Aa)
-                                Ef=b[21404]or Ca(21404,55426,52487)
-                            else
-                                if not(wi['IsA'](wi,'Model')and(wi['Name']['find'](wi['Name'],Tf((28101.392491467577/-26222)*(-17660+5061)))or wi['Name']['find'](wi['Name'],'Chest')))then
-                                    Ef=b[14112]or Ca(14112,90150,9746)
-                                    break
+                            elseif Tb>23209-12326 then
+                                if Tb>31516-20303 then
+                                    xe,yr,io=Pi.__iter(xe)
+                                    Tb=Uo[10050]or Ue(10050,71884,54465)
                                 else
-                                    Ef=b[-18003090/12247]or Ca(-32406+30936,731419020/7530,-656108862/-10657)
+                                    Tb=63516-32037
                                     break
-                                end
-                                Ef=b[-20348]or Ca(-20348,43674,60550)
-                            end
-                        elseif Ef<=53739-25616 then
-                            if Ef>54753-28602 then
-                                Aa,Fe,lc=Gi(Aa)
-                                Ef=b[25368]or Ca(25368,33220,4217)
-                            else
-                                Tf=function(Sa)
-                                    return Ud[Sa+-278744064/17562]
-                                end
-                                mt=Eo()and Eo()['FindFirstChild'](Eo(),Tf(-1.0514316012725344*-18860))
-                                if not mt then
-                                    Ef=b[-2.0154151404151404*-13104]or Ca(528675380/20018,1125057920/29960,0.40062249888839485*6747)
-                                    break
-                                end
-                                Ef=b[-25188475/-1261]or Ca(37.336448598130843*535,-970514520/-12680,55075+-5097)
-                            end
-                        else
-                            Hd=fn(zd)
-                            if Hd~=nil and Hd.__iter~=nil then
-                                Ef=b[527046068/28403]or Ca(-142862644/-7699,12.81458505652054*7254,-275503095/-7665)
-                                break
-                            elseif Rm(zd)=='table'then
-                                Ef=b[2.0658222591362128*-4816]or Ca(304628431/-30619,22996- -29979,81228-24108)
-                                break
-                            end
-                            Ef=b[-15627]or Ca(-15627,48784,55424)
-                        end
-                    elseif Ef<=39993- -10019 then
-                        if Ef<=14.439752832131823*2913 then
-                            if Ef>3.8931702344546379*9810 then
-                                Aa,Fe,lc=eg.__iter(Aa)
-                                Ef=b[-678]or Ca(-678,65230,12083)
-                            elseif Ef>50501+-14744 then
-                                lt,wi=zd(oq,Lg);
-                                Lg=lt;
-                                if Lg==nil then
-                                    Ef=b[6231]or Ca(6231,33796,11577)
-                                else
-                                    Ef=-0.54858924492189909*-32394
                                 end
                             else
-                                eg=fn(Aa)
-                                if eg~=nil and eg.__iter~=nil then
-                                    Ef=b[562774696/-23551]or Ca(-8771-15125,6.665574704458054*14042,20039- -31116)
-                                    break
-                                elseif Rm(Aa)=='table'then
-                                    Ef=b[-55239+30791]or Ca(-396179840/16205,36698-21748,16887- -25723)
-                                    break
-                                end
-                                Ef=b[-12895]or Ca(-12895,36680,7165)
-                            end
-                        elseif Ef<=1.5949481130501517*29969 then
-                            Aa,Fe,lc=eg.__iter(Aa)
-                            Ef=b[255]or Ca(255,7245,34546)
-                        else
-                            return Mf
-                        end
-                    elseif Ef<=58763-1022 then
-                        if Ef<=77300+-24630 then
-                            if Ef>-2.1944707197523434*-23258 then
-                                if Ef>1107225244/21482 then
-                                    Ef=1.123268358465122*32628
-                                    break
-                                else
-                                    yf[Xq]=true
-                                    Ef=b[-57134- -26652]or Ca(0.93377037127802964*-32644,-15053+21081,12981- -21440)
-                                end
-                            else
-                                zd,oq,Lg=ji[aq('\149\16\30\149\18\f','\252\96\127')](Xq['GetDescendants'](Xq));
-                                if Rm(zd)~='function'then
-                                    Ef=b[0.63564082620343965*-23142]or Ca(-29740- -15030,-239.3367088607595*-395,25591+-21945)
+                                io,be,Wn=yp[dp('\v\157\18\142\b','{\252')](yp[dp('M_^YI@MQ_',':0,2')]['Game']['Props']['Door']['GetChildren'](yp[dp('M_^YI@MQ_',':0,2')]['Game']['Props']['Door']));
+                                if Of(io)~='function'then
+                                    Tb=Uo[-213482435/-27707]or Ue(-18994+26699,-2.9137134052388292*-23364,53925-2573)
                                     break
                                 end;
-                                Ef=b[-2256]or Ca(-2256,115229,17533);
+                                Tb=Uo[13773]or Ue(13773,51280,42990);
+                            end
+                        elseif Tb>0.75494549858700044*4954 then
+                            if Tb>-1.6810160427807486*-3740 then
+                                if Tb<=-0.21979548036864033*-31684 then
+                                    Mo,vj=Ha(mj,Xc);
+                                    Xc=Mo;
+                                    if Xc==nil then
+                                        Tb=26990- -3891
+                                    else
+                                        Tb=-1635024389/-29453
+                                    end
+                                elseif Tb<=133439232/18752 then
+                                    return yr['prompt'],yr['part'],yr['proxp']
+                                else
+                                    io=Jb(be)
+                                    if io~=nil and io.__iter~=nil then
+                                        Tb=Uo[-6.2230024213075064*4130]or Ue(-43091- -17390,45502+-11404,-0.16546994236404031*-31057)
+                                        break
+                                    elseif Of(be)=='table'then
+                                        Tb=Uo[-54663824/3772]or Ue(114124500/-7875,-10.168647088779494*-11782,9.8858977013874512*4829)
+                                        break
+                                    end
+                                    Tb=Uo[11392]or Ue(11392,64326,4290)
+                                end
+                            elseif Tb<=6755-1227 then
+                                yq=function(al)
+                                    return _r[al+57510864/-2214]
+                                end
+                                rh=am()
+                                hp=rh['FindFirstChild'](rh,'HumanoidRootPart')
+                                if not(not hp)then
+                                    Tb=Uo[-29403]or Ue(-29403,101809,47550)
+                                    break
+                                else
+                                    Tb=Uo[-7252256/-484]or Ue(0.48415134576238328*30949,58299- -17939,36557-21304)
+                                    break
+                                end
+                                Tb=56188+-5626
+                            else
+                                if not(Xc['Enabled']==true)then
+                                    Tb=Uo[-25177]or Ue(-25177,77608,44547)
+                                    break
+                                else
+                                    Tb=Uo[1.5150170143512354*6759]or Ue(-3.9705312136487012*-2579,861868805/16541,-1568843522/-28898)
+                                    break
+                                end
+                                Tb=Uo[8273]or Ue(8273,62969,63954)
+                            end
+                        elseif Tb>-0.073072997391600197*-26453 then
+                            if Tb<=-62052872/-19876 then
+                                if not(xe['GetAttribute'](xe,'locked')==true)then
+                                    Tb=Uo[-31231]or Ue(-31231,49634,49875)
+                                    break
+                                else
+                                    Tb=Uo[-76279416/-4866]or Ue(18710+-3034,109576998/3222,0.046774367646529702*27793)
+                                    break
+                                end
+                                Tb=Uo[13934]or Ue(13934,53295,53270)
+                            else
+                                wl[Wn]=yq(212636438/3983)
+                                Tb=Uo[-3902+-20083]or Ue(0.9000337723741979*-26649,92359+9356,7.9469884096522891*5263)
+                            end
+                        elseif Tb>-688785/-705 then
+                            if Tb<=0.77700000000000002*2000 then
+                                Tb=Uo[-48454- -16476]or Ue(-56315+24337,10223- -15866,35.800472255017709*847)
+                                break
+                            else
+                                Pi=Jb(xe)
+                                if Pi~=nil and Pi.__iter~=nil then
+                                    Tb=Uo[1.381985731272295*16820]or Ue(-304486255/-13099,1250468928/17704,33.07397793640493*1541)
+                                    break
+                                elseif Of(xe)=='table'then
+                                    Tb=Uo[72332160/-4476]or Ue(-1.3684477940553814*11809,87697+14111,43368- -7782)
+                                    break
+                                end
+                                Tb=Uo[-8585]or Ue(-8585,80404,12123)
+                            end
+                        elseif Tb>-31690+32168 then
+                            if Rp[Aj]then
+                                Tb=Uo[396804912/-21616]or Ue(1.3854339622641509*-13250,56458+5952,-4.0710429920956237*-10374)
+                                break
+                            end
+                            Tb=51819+-27845
+                        else
+                            ms,Hd=io(be,Wn);
+                            Wn=ms;
+                            if Wn==nil then
+                                Tb=0.41358760429082242*30204
+                            else
+                                Tb=26886+3134
+                            end
+                        end
+                    elseif Tb>-17.823573573573572*-1332 then
+                        if Tb>-1.3786805070366304*-20038 then
+                            if Tb>-400203936/-13464 then
+                                if Tb>33996+-3247 then
+                                    if Tb>91949820/2949 then
+                                        if Tb>47582-16106 then
+                                            Hd,Wh=be(Wn,ms);
+                                            ms=Hd;
+                                            if ms==nil then
+                                                Tb=-10894+17887
+                                            else
+                                                Tb=6269+20509
+                                            end
+                                        else
+                                            Rp[Wn]=true
+                                            Tb=Uo[25925+-15109]or Ue(0.35699904280951911*30297,82308+-17203,17504- -10302)
+                                        end
+                                    else
+                                        xc,Ha,mj,Xc=yp[dp('\2g\200\149\6x\219\157\16','u\b\186\254')]['GetPartBoundsInBox'](yp[dp('\2g\200\149\6x\219\157\16','u\b\186\254')],Ba['CFrame'],Ba['Size']),yp[dp('{36\219\127,%\211i','\f\\D\176')]['GetPartBoundsInBox'](yp[dp('{36\219\127,%\211i','\f\\D\176')],Pc['CFrame'],Pc['Size']),yp[dp('}\128\167\221y\159\180\213o','\n\239\213\182')]['BankRobbery']['BankAlarmTrigger'],yp[dp('\247\194\254\154\243\221\237\146\229','\128\173\140\241')]['BankRobbery']['VaultDoor']['Door']['Attachment']['ProximityPrompt'];
+                                        Mo,vj,wl,Rp=yp[dp('2\167\239L6\184\252D ',"E\200\157\'")]['GetPartBoundsInBox'](yp[dp('2\167\239L6\184\252D ',"E\200\157\'")],mj['CFrame'],mj['Size']),{},{},{};
+                                        xe,yr,io=yp[dp('.\213\216.\215\202','G\165\185')](xc);
+                                        if Of(xe)~='function'then
+                                            Tb=Uo[-296592562/-12214]or Ue(-5102+29385,110564+3144,1023110575/21845)
+                                            break
+                                        end;
+                                        Tb=Uo[-13854]or Ue(-13854,66348,51745);
+                                    end
+                                else
+                                    if Hd then
+                                        Tb=Uo[-22476- -1364]or Ue(2.0459346835933716*-10319,-1.3442125472223942*-32294,0.83853861781619088*29041)
+                                        break
+                                    end
+                                    Tb=Uo[-17444]or Ue(-17444,13762,23640)
+                                end
+                            else
+                                for af,Mj in yp[dp('L\138hL\136z','%\250\t')](ae)do
+                                    if not((ff['find'](ff,Mj)or ff==Mj))then
+                                    else
+                                        if af<yr['priorityIndex']then
+                                            yr['prompt']=ff
+                                            yr['part']=Aj
+                                            yr['priorityIndex']=af;
+                                            yp[dp('#\147\50\156?','S\240')](function()
+                                                return(function(Ra)
+                                                    local function im(Hc)
+                                                        return Ra[Hc-(-16676+31687)]
+                                                    end;
+                                                    yr['proxp']=Wh['FindFirstChildOfClass'](Wh,'ProximityPrompt')or Aj['FindFirstChildOfClass'](Aj,im(-1.3945962382172798*-23021))
+                                                end)({[-476238840/-27860]='ProximityPrompt'})
+                                            end)
+                                        end
+                                        break
+                                    end
+                                end
+                                Tb=Uo[4146]or Ue(4146,44301,20127)
+                            end
+                        elseif Tb>-3921+29196 then
+                            if Tb>-1.7952220772980023*-14567 then
+                                Aj=Wh['PrimaryPart'];
+                                if Aj then
+                                    Tb=Uo[0.83274021352313166*19951]or Ue(38182-21568,32397- -5186,-1.097750491630294*-20849)
+                                    break
+                                end
+                                Tb=Uo[2981]or Ue(2981,33586,26806)
+                            else
+                                yp[dp('\146\208\132\221\131','\230\177')]['insert'](ch,io)
+                                Tb=Uo[42607-12953]or Ue(47866+-18212,165819680/4640,39113-23564)
+                            end
+                        elseif Tb>38187+-13731 then
+                            xe,yr,io=yp[dp('7\164\232\55\166\250','^\212\137')](Mo);
+                            if Of(xe)~='function'then
+                                Tb=Uo[46034+-23959]or Ue(-1.2127121902983025*-18203,-157842536/-14078,21643+1928)
+                                break
+                            end;
+                            Tb=Uo[22960]or Ue(22960,83676,58387);
+                        elseif Tb<=-7963+31836 then
+                            if not(vj[Aj])then
+                                Tb=Uo[26072]or Ue(26072,38496,6737)
+                                break
+                            else
+                                Tb=Uo[-26071- -10423]or Ue(-83309952/5324,29352- -10245,21095+-17389)
+                                break
+                            end
+                            Tb=-190535136/-21544
+                        elseif Tb<=34347+-10392 then
+                            be,Wn=xe(yr,io);
+                            io=be;
+                            if io==nil then
+                                Tb=Uo[1.6641091219096333*-9384]or Ue(-33362+17746,58155+-3362,61619+-4383)
+                            else
+                                Tb=76200+-12113
                             end
                         else
-                            eg=fn(Aa)
-                            if eg~=nil and eg.__iter~=nil then
-                                Ef=b[1925+25429]or Ca(1.2438159330665697*21992,83564-23007,-851863321/-18287)
+                            if not((Aj['Position']-hp['Position'])['Magnitude']<=Cd)then
+                                Tb=Uo[-31576]or Ue(-31576,53170,11318)
                                 break
-                            elseif Rm(Aa)=='table'then
-                                Ef=b[-674481645/-31095]or Ca(-1.0652686376583833*-20362,1.2387942626624833*8924,16509- -22881)
+                            else
+                                Tb=Uo[14296+-25139]or Ue(-0.49629256682533868*21848,-2.0825172579868356*-24916,2.8643342788959432*22209)
                                 break
                             end
-                            Ef=b[13133]or Ca(13133,51747,56472)
+                            Tb=Uo[6822]or Ue(6822,36322,28262)
                         end
-                    elseif Ef<=42716- -20591 then
-                        zd,oq,Lg=Hd.__iter(zd)
-                        Ef=b[4362]or Ca(4362,98085,7957)
-                    elseif Ef>40340- -24474 then
-                        Mf,yn,to,bf={},{ji[aq('\127\219\50\180{\196!\188m','\b\180@\223')]['Game']['Entities']},ji[aq('\235\127\238\233\239\96\253\225\249','\156\16\156\130')]['BankRobbery']['BankAlarmTrigger'],ji[aq('\143F\139\50\139Y\152:\157','\248)\249Y')]['BankRobbery']['VaultDoor']['Door']['Attachment']['ProximityPrompt'];
-                        _b,yf=ji[aq('y\179\155y}\172\136qk','\14\220\233\18')]['GetPartBoundsInBox'](ji[aq('y\179\155y}\172\136qk','\14\220\233\18')],to['CFrame'],to['Size']),{};
-                        Aa,Fe,lc=ji[aq('Q\253GQ\255U','8\141&')](_b);
-                        if Rm(Aa)~='function'then
-                            Ef=b[-992419965/31365]or Ca(-5654+-25987,6.1024702653247944*19674,-0.10859312549960032*-25020)
-                            break
-                        end;
-                        Ef=b[5966]or Ca(5966,39364,3133);
+                    elseif Tb<=118262925/6057 then
+                        if Tb>36193-18697 then
+                            if Tb<=-12017- -30524 then
+                                yr,io=Rp(Pi,xe);
+                                xe=yr;
+                                if xe==nil then
+                                    Tb=Uo[24823]or Ue(24823,62588,42193)
+                                else
+                                    Tb=Uo[25997-29436]or Ue(-7463- -4024,47130+2263,-12271+12984)
+                                end
+                            else
+                                io,be,Wn=me(io)
+                                Tb=Uo[11107]or Ue(11107,18892,14418)
+                            end
+                        elseif Tb>38441+-21703 then
+                            if Tb<=35938+-18675 then
+                                if not(ff['find'](ff,'Vest')or ff=='Police Armory Keycard'or ff==yq((-30183+22087)+(3131- -5484))or ff==yq(-652016163/-14073+(-7166+2117))or ff=='Taser Gun')then
+                                    Tb=Uo[-24168]or Ue(-24168,42990,10156)
+                                    break
+                                else
+                                    Tb=Uo[781184544/24888]or Ue(4052- -27336,9110-8051,16639+11833)
+                                    break
+                                end
+                                Tb=Uo[6045]or Ue(6045,59783,62539)
+                            else
+                                ff=Wh['GetAttribute'](Wh,'itemName');
+                                if not(ff)then
+                                    Tb=Uo[5219]or Ue(5219,89655,48049)
+                                    break
+                                else
+                                    Tb=Uo[9351-3558]or Ue(-87630711/-15127,123855+-4845,66950+-26389)
+                                    break
+                                end
+                                Tb=Uo[30673]or Ue(30673,51510,8882)
+                            end
+                        elseif Tb>20978-4910 then
+                            Wh=Hd['GetAttribute'](Hd,'keycardName');
+                            if not(Wh==yq((30872-4103)-1.3289052890528905*-12195))then
+                                Tb=Uo[6030+-12153]or Ue(0.23704076497232007*-25831,113392+-438,2.882563025210084*19040)
+                                break
+                            else
+                                Tb=Uo[-13224+31513]or Ue(0.71003183476978027*25758,69114- -5802,6293-5991)
+                                break
+                            end
+                            Tb=Uo[2813]or Ue(2813,42314,52432)
+                        else
+                            Pi=Jb(xe)
+                            if Pi~=nil and Pi.__iter~=nil then
+                                Tb=Uo[-13475+-246]or Ue(-122720624/8944,47645+-15654,9796- -8864)
+                                break
+                            elseif Of(xe)=='table'then
+                                Tb=Uo[0.047433759496016303*26985]or Ue(0.049988283995938451*25606,43497- -17152,7637+9049)
+                                break
+                            end
+                            Tb=Uo[29925]or Ue(29925,92127,51941)
+                        end
+                    elseif Tb>0.73217163577759869*29784 then
+                        if Tb>625871927/27187 then
+                            Cd=yp[dp('\206\244\215\253','\163\149')]['huge']
+                            Tb=Uo[-0.99715069649641197*-9476]or Ue(0.67133214920071049*14075,327232960/3680,54078+3998)
+                        else
+                            xe,yr,io=Pi.__iter(xe)
+                            Tb=Uo[8161]or Ue(8161,92373,53786)
+                        end
                     else
-                        gl,hg=wi['PrimaryPart'],wi['FindFirstChild'](wi,'ProximityPrompt',Tf(-1292+20505));
-                        if not(gl and yf[gl]and bf['Enabled']==Tf((-1753.3352752694436/14400)*(39165+-28866)))then
-                            Ef=b[22692]or Ca(22692,8854,42774)
+                        yr=Jb(io)
+                        if yr~=nil and yr.__iter~=nil then
+                            Tb=Uo[16139+6556]or Ue(34953+-12258,85861+12033,70189+-13893)
                             break
-                        else
-                            Ef=b[1.0847182080924855*-11072]or Ca(148623750/-12375,-195795780/-2438,30907+-30747)
+                        elseif Of(io)=='table'then
+                            Tb=Uo[-424464128/-17182]or Ue(-65169152/-2638,-1218062450/-25190,-16657+28356)
                             break
                         end
-                        Ef=b[497317055/31865]or Ca(-58.89433962264151*-265,218146650/2370,23553- -1648)
+                        Tb=Uo[-14183]or Ue(-14183,57089,45725)
                     end
                 end
-            until Ef==254186/1741
-        end)({[4957-7327]='Safe',[-73535410/-22010]=true,[-1.4221890051486463*12042]=true,[-37585168/-9496]='HumanoidRootPart',[-0.026209918342959569*-25105]='primary'})
+            until Tb==282197433/25499
+        end)({[-3540+1104]='prompt',[57072-29662]=true,[-0.71155295102553373*-23890]='policeArmory',[-12850- -28156]='Hoverboard',[-48447+28273]='locked',[-19944+4479]='militaryArmory',[-26847127/-16501]='priorityIndex',[-57843- -32386]='Military Armory Keycard'})
     end
-    ji[aq('\1\147\3\156','e\250')]=function(Ve,qk)
-        return(function(qi)
-            local Vb,Zo,Rh,aa,Fq,Md,hk,Vq,Kf,_g,Ke
-            Ke,Md={},function(Ya,At,sh)
-                Ke[Ya]=Ab(At,62053)-Ab(sh,56088)
-                return Ke[Ya]
+    yp[dp('8j\234\0\\\204','k\15\143')]=function()
+        return(function(iq)
+            local cr,Qc,Lf,xk,gn,lm,Bs,X,Bg,mg,sh,_j,Ko,en,Nh,Pk,Gd,Fg,ce,_l,M,Fo,qr,Eg,Hb
+            Gd,X={},function(Jp,Ak,nb)
+                Gd[Jp]=Vs(Ak,53673)-Vs(nb,5491)
+                return Gd[Jp]
             end
-            Kf=Ke[-409673226/-14691]or Md(10702+17184,-4.2490613989487667*-17313,-68239232/-7957)
+            M=Gd[-70165152/-28768]or X(34565+-32126,124330-3634,-335940360/-25508)
             repeat
                 while true do
-                    if Kf>12148+20996 then
-                        if Kf<=55570-5952 then
-                            if Kf>530296215/12665 then
-                                if Kf<=41023- -4091 then
-                                    if Kf<=26963+16862 then
-                                        Rh,Vq=_g(Vb,aa);
-                                        aa=Rh;
-                                        if aa==nil then
-                                            Kf=Ke[-15018+-5821]or Md(-477046388/22892,214511760/2113,-0.15768139440616133*-32071)
-                                        else
-                                            Kf=22098+31923
-                                        end
-                                    else
-                                        Zo[Vq]=hk(48028+-31563)
-                                        Kf=Ke[-49020+29674]or Md(7244-26590,-2917812600/-22700,25352+32021)
-                                    end
+                    if M<=-13.973864610111397*-2334 then
+                        if M>108.05147058823529*136 then
+                            if M>228780420/9570 then
+                                if M>45646-17563 then
+                                    Fo,Eg,sh=yp[dp('\203(\135\203*\149','\162X\230')](Hb);
+                                    if Of(Fo)~='function'then
+                                        M=Gd[25934-301]or X(-2.0779020752269779*-12336,48355+-16898,37759- -153)
+                                        break
+                                    end;
+                                    M=Gd[-5293]or X(-5293,127442,30854);
+                                elseif M>-88779549/-3217 then
+                                    Fo,Eg,sh=me(Fo)
+                                    M=Gd[25320]or X(25320,8511,11107)
                                 else
-                                    return nil
+                                    return
+                                end
+                            elseif M>-523794460/-27220 then
+                                Pk,qr=Fo(Eg,sh);
+                                sh=Pk;
+                                if sh==nil then
+                                    M=6996- -21928
+                                else
+                                    M=90634-30993
                                 end
                             else
-                                _g,Vb,aa=ji[aq('{BbQx','\v#')](qk);
-                                if Rm(_g)~='function'then
-                                    Kf=Ke[28.756465517241381*464]or Md(-17317+30660,-6.4607058582127834*-19494,-178840440/-5805)
+                                Qc,Hb,xk,_j={},{yp[dp('y\160{1}\191h9k','\14\207\tZ')]['Game']['Entities']},yp[dp('\162BR\193\166]A\201\176','\213- \170')]['BankRobbery']['BankAlarmTrigger'],yp[dp('\184\221P\14\188\194C\6\170','\207\178\"e')]['BankRobbery']['VaultDoor']['Door']['Attachment']['ProximityPrompt'];
+                                Fg,lm=yp[dp('\n\54\tt\14)\26|\24','}Y{\31')]['GetPartBoundsInBox'](yp[dp('\n\54\tt\14)\26|\24','}Y{\31')],xk['CFrame'],xk['Size']),{};
+                                Fo,Eg,sh=yp[dp('\25\233_\25\235M','p\153>')](Fg);
+                                if Of(Fo)~='function'then
+                                    M=Gd[20519+11125]or X(-1.3756466547841586*-23003,2132686700/26297,-2.4003437832528443*-24434)
                                     break
                                 end;
-                                Kf=Ke[-27747]or Md(-27747,19460,53009);
+                                M=Gd[30380]or X(30380,48982,14082);
                             end
-                        elseif Kf>25502+31343 then
-                            if Kf>32220+28777 then
-                                hk=function(Fd)
-                                    return qi[Fd+-1.7050803137840866*-5354]
+                        elseif M<=5901+1063 then
+                            if M>49511480/21415 then
+                                Ko,cr=en(Bs,ce);
+                                ce=Ko;
+                                if ce==nil then
+                                    M=Gd[2013]or X(2013,118831,23155)
+                                else
+                                    M=22150- -24433
                                 end
-                                Zo={}
-                                _g,Vb,aa=ji[aq('ZiCzY','*\b')](Ve)
-                                if Rm(_g)~='function'then
-                                    Kf=Ke[16220+-16387]or Md(0.018919225104792114*-8827,-2016783342/-15677,1.6490703267053786*17049)
+                            else
+                                en,Bs,ce=me(en)
+                                M=Gd[-7178]or X(-7178,61923,1406)
+                            end
+                        elseif M<=-0.64849613452965404*-17721 then
+                            if M>-19941+30061 then
+                                Bg=Jb(Fo)
+                                if Bg~=nil and Bg.__iter~=nil then
+                                    M=Gd[-101989692/19572]or X(6346-11557,153017+-28967,1.1008819620635495*16554)
+                                    break
+                                elseif Of(Fo)=='table'then
+                                    M=Gd[-121622940/-9876]or X(35528+-23213,-1523330618/-15341,2.0937946519697896*29394)
                                     break
                                 end
-                                Kf=Ke[-7400]or Md(-7400,111097,41274)
+                                M=Gd[-543]or X(-543,122041,20473)
                             else
-                                _g,Vb,aa=Fq.__iter(_g)
-                                Kf=Ke[-17174]or Md(-17174,123403,40428)
-                            end
-                        elseif Kf<=20900+31899 then
-                            Rh,Vq=_g(Vb,aa);
-                            aa=Rh;
-                            if aa==nil then
-                                Kf=852009973/22951
-                            else
-                                Kf=Ke[0.94727642276422763*24600]or Md(9.2143139580861995*2529,3441836480/28480,49010-6654)
+                                if not(_l)then
+                                    M=Gd[20952]or X(20952,21276,26379)
+                                    break
+                                else
+                                    M=Gd[59693-30979]or X(49303-20589,5.7450859367581426*21062,39757-16492)
+                                    break
+                                end
+                                M=Gd[4022]or X(4022,6409,44304)
                             end
                         else
-                            if not Zo[Vq]then
-                                Kf=Ke[10795+-23824]or Md(-0.47920114752289528*27189,24075+24572,1475160386/24941)
+                            mg,_l=cr['PrimaryPart'],cr['FindFirstChild'](cr,Nh(-68235848/8257),true);
+                            if mg and lm[mg]and _j['Enabled']==Nh(-323238760/-14690)then
+                                M=Gd[-1354-30516]or X(-846180370/26551,131173-9947,19013960/12460)
                                 break
                             end
-                            Kf=Ke[-8661]or Md(-8661,129983,33946)
+                            M=-0.30452438049560354*-31275
                         end
-                    elseif Kf<=-532223250/-30875 then
-                        if Kf>-0.34113584036838068*-31272 then
-                            _g,Vb,aa=Gi(_g)
-                            Kf=Ke[23404]or Md(23404,112835,23092)
-                        elseif Kf<=-14859290/-2174 then
-                            if Kf<=12431-7528 then
-                                return Vq
+                    elseif M<=64272-13252 then
+                        if M>24363+18011 then
+                            if M>2.0260730755587089*22552 then
+                                if M<=26164- -20423 then
+                                    if M>33834- -12308 then
+                                        if cr['IsA'](cr,Nh(3.4274893774247182*5413))and(cr['Name']['find'](cr['Name'],Nh(43328-27112))or cr['Name']['find'](cr['Name'],Nh(397321652/26623)))then
+                                            M=Gd[-5369+6220]or X(7021+-6170,-339438207/-17247,-607624000/-18875)
+                                            break
+                                        end
+                                        M=Gd[23257]or X(23257,51003,4902)
+                                    else
+                                        Pk,qr=Fo(Eg,sh);
+                                        sh=Pk;
+                                        if sh==nil then
+                                            M=661624152/10941
+                                        else
+                                            M=Gd[31318-17967]or X(-134698239/-10089,103628- -6708,4.9523452157598502*7995)
+                                        end
+                                    end
+                                else
+                                    yp[dp('\209$\199)\192','\165E')]['insert'](Qc,{['model']=cr,['prompt']=_l,['primary']=mg})
+                                    M=Gd[-13408]or X(-13408,47985,20456)
+                                end
                             else
-                                _g,Vb,aa=Gi(_g)
-                                Kf=Ke[-14700]or Md(-14700,94477,520)
+                                en,Bs,ce=gn.__iter(en)
+                                M=Gd[27979]or X(27979,2428,56811)
                             end
+                        elseif M<=64602+-27016 then
+                            gn=Jb(en)
+                            if gn~=nil and gn.__iter~=nil then
+                                M=Gd[10624+-30383]or X(311125214/-15746,25698-15803,37361-13051)
+                                break
+                            elseif Of(en)=='table'then
+                                M=Gd[-37489+5977]or X(415+-31927,0.9888112358040454*29762,10.238674033149172*4525)
+                                break
+                            end
+                            M=Gd[-12238]or X(-12238,30890,36277)
                         else
-                            _g,Vb,aa=Fq.__iter(_g)
-                            Kf=Ke[23750]or Md(23750,10917,62832)
+                            Fo,Eg,sh=me(Fo)
+                            M=Gd[25307]or X(25307,131067,62647)
                         end
-                    elseif Kf<=31198-6052 then
-                        Fq=fn(_g)
-                        if Fq~=nil and Fq.__iter~=nil then
-                            Kf=Ke[-546335152/19052]or Md(-3.3109340722780281*8661,7.1100405291733582*13077,5190- -24623)
+                    elseif M>972120077/16529 then
+                        if M<=35985- -26217 then
+                            if M>68008-7620 then
+                                if M>56891- -3913 then
+                                    en,Bs,ce=yp[dp('\142@\136\142B\154','\231\48\233')](qr['GetDescendants'](qr));
+                                    if Of(en)~='function'then
+                                        M=Gd[57006-25509]or X(58540-27043,-4196- -22178,0.23071471405985935*18343)
+                                        break
+                                    end;
+                                    M=Gd[-15161]or X(-15161,34310,20993);
+                                else
+                                    return Qc
+                                end
+                            else
+                                lm[qr]=Nh(15160+-4013)
+                                M=Gd[43774-14184]or X(54380-24790,129240-867,-1070890662/-20382)
+                            end
+                        elseif M<=56919+7158 then
+                            M=Gd[-1959+24969]or X(51234+-28224,-1.8000935781962804*-8549,-9.6049521665728754*-5331)
                             break
-                        elseif Rm(_g)=='table'then
-                            Kf=Ke[-23750- -12778]or Md(-828+-10144,197881222/8218,39545- -6144)
-                            break
+                        else
+                            Bg=Jb(Fo)
+                            if Bg~=nil and Bg.__iter~=nil then
+                                M=Gd[47790+-23160]or X(-693900990/-28173,-4.5772354302545759*-23765,-1016377011/-20709)
+                                break
+                            elseif Of(Fo)=='table'then
+                                M=Gd[55341+-23937]or X(14948- -16456,0.19460492778249788*23540,-9103- -23743)
+                                break
+                            end
+                            M=Gd[6160]or X(6160,46393,3441)
                         end
-                        Kf=Ke[1785]or Md(1785,85360,11907)
+                    elseif M<=59261+-3778 then
+                        Fo,Eg,sh=Bg.__iter(Fo)
+                        M=Gd[-5027]or X(-5027,5833,28577)
+                    elseif M>-946528704/-16368 then
+                        Fo,Eg,sh=Bg.__iter(Fo)
+                        M=Gd[2859]or X(2859,5367,1963)
                     else
-                        Fq=fn(_g)
-                        if Fq~=nil and Fq.__iter~=nil then
-                            Kf=Ke[-13777+26378]or Md(9504- -3097,5301- -32393,53628+5601)
+                        Nh=function(Mg)
+                            return iq[Mg- -0.24108971732896353*19528]
+                        end
+                        Lf=am()and am()['FindFirstChild'](am(),'HumanoidRootPart')
+                        if not(not Lf)then
+                            M=Gd[-20261]or X(-20261,29603,19761)
                             break
-                        elseif Rm(_g)=='table'then
-                            Kf=Ke[15725+-6343]or Md(-3840+13222,1355851364/30274,-193097269/-4789)
+                        else
+                            M=Gd[62507606/5474]or X(1.2710373998219056*8984,1179161494/9989,30772- -12042)
                             break
                         end
-                        Kf=Ke[-139]or Md(-139,91576,13981)
+                        M=-5.1367963013326081*-3677
                     end
                 end
-            until Kf==-250834320/-11220
-        end)({[47789-22195]=true})
+            until M==14180+-1682
+        end)({[119264400/6075]='Chest',[0.59339795651034843*26719]=true,[50265-29341]='Safe',[-10115+6559]='ProximityPrompt',[620743046/26686]='Model',[-591136560/-22130]=true})
     end
-    ji[aq('M5\173p\26\168h','\4[\196')]=function()
-        return(function(yg)
-            local function Q(Hl)
-                return yg[Hl-(44525-25442)]
+    yp[dp('\165\215\167\216','\193\190')]=function(ho,vs)
+        local _o,Aa,cq,Pp,Re,cp,Ns,vp,ct,Vc
+        Pp,cq={},function(ac,Xr,Pm)
+            Pp[ac]=Vs(Xr,55537)-Vs(Pm,1474)
+            return Pp[ac]
+        end
+        cp=Pp[-53452+22758]or cq(-23650+-7044,-6127- -24866,-1.2701845145714779*-28995)
+        repeat
+            while true do
+                if cp<=47318-14889 then
+                    if cp<=12409+4617 then
+                        if cp>-157331069/-17573 then
+                            Aa,ct,Vc=me(Aa)
+                            cp=Pp[-17956]or cq(-17956,29760,11236)
+                        elseif cp<=-21840+25135 then
+                            if cp>-0.058335217545786362*-30959 then
+                                vp={};
+                                Aa,ct,Vc=yp[dp('\249H\224[\250','\137)')](ho);
+                                if Of(Aa)~='function'then
+                                    cp=Pp[33231+-27216]or cq(5997+18,0.26363116420945604*31472,-15833+30944)
+                                    break
+                                end;
+                                cp=Pp[16204]or cq(16204,88385,47645);
+                            else
+                                Ns=Jb(Aa)
+                                if Ns~=nil and Ns.__iter~=nil then
+                                    cp=Pp[-21596- -13109]or cq(-212175000/25000,-8395+20628,-29391672/-20568)
+                                    break
+                                elseif Of(Aa)=='table'then
+                                    cp=Pp[1.3240431710805773*23071]or cq(42989+-12442,41523-7828,4089- -3643)
+                                    break
+                                end
+                                cp=Pp[8427]or cq(8427,112921,59039)
+                            end
+                        else
+                            if not(not vp[_o])then
+                                cp=Pp[-32017]or cq(-32017,129267,42165)
+                                break
+                            else
+                                cp=Pp[-92216256/11148]or cq(-184556592/22311,36122+-28157,24320+-3258)
+                                break
+                            end
+                            cp=Pp[-10366]or cq(-10366,109120,61924)
+                        end
+                    elseif cp<=26698+381 then
+                        return nil
+                    elseif cp<=-389255295/-12727 then
+                        return _o
+                    elseif cp>39997+-7939 then
+                        Re,_o=Aa(ct,Vc);
+                        Vc=Re;
+                        if Vc==nil then
+                            cp=Pp[-403626696/-20522]or cq(-1995+21663,128748+-27177,40292+23945)
+                        else
+                            cp=-0.31850177591217305*-15485
+                        end
+                    else
+                        vp[_o]=true
+                        cp=Pp[-38380+21694]or cq(-19515- -2829,100937- -948,-1034208591/-26759)
+                    end
+                elseif cp>-2.3320227173438184*-20601 then
+                    if cp>15.617109634551495*3612 then
+                        Aa,ct,Vc=Ns.__iter(Aa)
+                        cp=Pp[4776]or cq(4776,113127,59209)
+                    elseif cp<=1279592116/24277 then
+                        Re,_o=Aa(ct,Vc);
+                        Vc=Re;
+                        if Vc==nil then
+                            cp=Pp[-10642- -26359]or cq(-14916- -30633,132445-30056,-443982286/-8207)
+                        else
+                            cp=640+31081
+                        end
+                    else
+                        Aa,ct,Vc=Ns.__iter(Aa)
+                        cp=Pp[-286]or cq(-286,96474,56216)
+                    end
+                elseif cp<=53686+-13459 then
+                    if cp>7637- -26760 then
+                        Aa,ct,Vc=me(Aa)
+                        cp=Pp[-9515]or cq(-9515,104734,34268)
+                    else
+                        Aa,ct,Vc=yp[dp('\166\171\191\184\165','\214\202')](vs);
+                        if Of(Aa)~='function'then
+                            cp=Pp[-265215452/-10811]or cq(8606+15926,1.6916131434422415*32229,0.0081165452653485948*9610)
+                            break
+                        end;
+                        cp=Pp[-6497]or cq(-6497,9947,31325);
+                    end
+                else
+                    Ns=Jb(Aa)
+                    if Ns~=nil and Ns.__iter~=nil then
+                        cp=Pp[20072+4669]or cq(176007474/7114,25993+-13697,7336-4581)
+                        break
+                    elseif Of(Aa)=='table'then
+                        cp=Pp[4953+-6922]or cq(1202-3171,1501451483/12887,18203- -20300)
+                        break
+                    end
+                    cp=Pp[-5688]or cq(-5688,123694,32716)
+                end
+            end
+        until cp==921458200/16220
+    end
+    yp[dp('\169\130\253\148\173\248\140','\224\236\148')]=function()
+        return(function(gg)
+            local function Xd(Fe)
+                return gg[Fe- -48356460/-18030]
             end;
-            ji[aq('xC\127I','\f\"')]['spawn'](function()
-                return(function(Dp)
-                    local U,vb,sg,zr,Ba,Wc,Ur,og
-                    zr,Ba={},function(Eq,zm,bh)
-                        zr[Eq]=Ab(zm,5610)-Ab(bh,18355)
-                        return zr[Eq]
+            yp[dp('\132\243\131\249','\240\146')]['spawn'](function()
+                return(function(wd)
+                    local Mn,o,Yf,Yb,ln,fs,lb,Hq
+                    Mn,Hq={},function(hb,yc,tj)
+                        Mn[hb]=Vs(yc,46047)-Vs(tj,48915)
+                        return Mn[hb]
                     end
-                    og=zr[-26486- -18137]or Ba(92991162/-11138,1209437514/27882,28328+3256)
+                    ln=Mn[-560627870/-20026]or Hq(845197045/30191,-6.7679297155151801*-16732,12941- -17565)
                     repeat
                         while true do
-                            if og>21302+10977 then
-                                if og<=-728637537/-15179 then
-                                    if og>-1099559007/-28157 then
-                                        if og>54265-10948 then
-                                            Wc=Eo();
-                                            U=Wc and Wc['FindFirstChild'](Wc,Ur(-22801+13547));
-                                            if not(U)then
-                                                og=zr[-10104]or Ba(-10104,16479,2391)
-                                                break
-                                            else
-                                                og=zr[-1.6430331753554501*-15825]or Ba(33746-7745,52693- -14140,-1.161090698124154*-10342)
-                                                break
-                                            end
-                                            og=zr[9851]or Ba(9851,7761,17241)
-                                        elseif og<=-507039900/-12050 then
-                                            vb=nm['GetAttribute'](nm,Ur(53966+-16675));
-                                            if not(vb)then
-                                                og=zr[29157]or Ba(29157,35916,54630)
-                                                break
-                                            else
-                                                og=zr[6.53523166023166*-2072]or Ba(14151-27692,497508525/5895,-1907231872/-31402)
-                                                break
-                                            end
-                                            og=zr[15658]or Ba(15658,24441,1137)
-                                        else
-                                            if not(vb<=(-5742866346/-27681)/(-87250184/-12196))then
-                                                og=zr[-29035]or Ba(-29035,57307,34003)
-                                                break
-                                            else
-                                                og=zr[148159460/6340]or Ba(1.6163369760686126*14458,2035405020/22002,80428-22365)
-                                                break
-                                            end
-                                            og=zr[18050]or Ba(18050,59735,45663)
-                                        end
-                                    elseif og>-3.0791586664339325*-11458 then
-                                        if Ki then
-                                            og=zr[58310+-26078]or Ba(7023- -25209,68828-22911,19526+-2590)
-                                            break
-                                        end
-                                        og=zr[12263]or Ba(12263,46614,55960)
-                                    else
-                                        Ur=function(ss)
-                                            return Dp[ss+-0.42551681306006567*22542]
-                                        end
-                                        og=49722030/28494
+                            if ln>10363- -22868 then
+                                if ln<=67511-17988 then
+                                    o=am();
+                                    lb=o and o['FindFirstChild'](o,Yf(0.12973871016462771*-26484));
+                                    if lb then
+                                        ln=Mn[-0.17527906897838699*29473]or Hq(-22853+17687,0.94595908727815792*28793,2.2829547338749792*24124)
+                                        break
                                     end
-                                elseif og<=2.8968015733360937*19322 then
-                                    if og<=-762221862/-14694 then
-                                        Nk['SetEquipped'](sg,true,true,true);
-                                        wj['FireServer']('useConsumable',sg['guid']);
-                                        wj['FireServer']('removeItem',sg['guid'])
-                                        og=zr[3875]or Ba(3875,36734,54384)
-                                    else
-                                        sg=ji[aq('\247a\147\249p\130\221','\176\4\231')]('Light Vest');
-                                        if sg then
-                                            og=zr[23922-13784]or Ba(16450-6312,-3.0171435937097191*-31032,-2.3566742778442245*-27591)
-                                            break
-                                        else
-                                            og=zr[-3975+-20172]or Ba(-12699-11448,9.7403314917127073*9593,64748+-13959)
-                                            break
-                                        end
-                                        og=zr[-4289]or Ba(-4289,16906,5820)
-                                    end
+                                    ln=Mn[-1058]or Hq(-1058,90714,20416)
                                 else
-                                    wj['InvokeServer']('attemptPurchase','Light Vest')
-                                    og=zr[5293]or Ba(5293,27799,13599)
+                                    if yp[dp('\3\1\4\v','w\96')]['wait']()then
+                                        ln=Mn[215315259/-21367]or Hq(-15099+5022,-50125412/-1934,35247+-31944)
+                                    else
+                                        ln=13760+2228
+                                    end
                                 end
-                            elseif og<=21155+-19651 then
-                                og=zr[-522105400/-21155]or Ba(39602+-14922,2486646409/29333,-1322204100/-20775);
+                            elseif ln>-317082270/-15945 then
+                                if ln<=-4.1386468071620977*-6311 then
+                                    if ln<=-28463155/-1267 then
+                                        Kq['InvokeServer']('attemptPurchase','Light Vest')
+                                        ln=Mn[-2613]or Hq(-2613,19595,41393)
+                                    else
+                                        fs=yp[dp('\149\96I\155qX\191','\210\5=')]('Light Vest');
+                                        if not(fs)then
+                                            ln=Mn[-460447113/17717]or Hq(1806-27795,59.724867724867728*1701,39739+-18113)
+                                            break
+                                        else
+                                            ln=Mn[-254746080/23544]or Hq(1.3750158851188208*-7869,-21728- -24958,1677605244/26238)
+                                            break
+                                        end
+                                        ln=Mn[-20820]or Hq(-20820,122886,52276)
+                                    end
+                                elseif ln<=15994+13954 then
+                                    if Yb<=-4676+4705 then
+                                        ln=Mn[1.5404430705821741*7764]or Hq(-0.50307058130731053*-23774,106072+-4296,-520338288/-21746)
+                                        break
+                                    end
+                                    ln=Mn[13312]or Hq(13312,75305,2647)
+                                else
+                                    Vi['SetEquipped'](fs,true,Yf(-12127- -6440),Yf(36492720/-1803));
+                                    Kq['FireServer'](Yf(-1.6050995024875623*6432),fs['guid']);
+                                    Kq['FireServer']('removeItem',fs['guid'])
+                                    ln=Mn[-30406]or Hq(-30406,92629,17995)
+                                end
+                            elseif ln<=41365+-28536 then
+                                if ln<=20679-11060 then
+                                    if not(_a)then
+                                        ln=Mn[-24243]or Hq(-24243,69842,32072)
+                                        break
+                                    else
+                                        ln=Mn[-9728000/-4096]or Hq(-42726250/-17990,35235- -1243,65990-22354)
+                                        break
+                                    end
+                                    ln=Mn[17358]or Hq(17358,128349,56003)
+                                else
+                                    Yb=I['GetAttribute'](I,'armor');
+                                    if Yb then
+                                        ln=Mn[-2.6602407072105656*9389]or Hq(-39993+15016,-0.68003565062388593*-4488,15224+28532)
+                                        break
+                                    end
+                                    ln=Mn[-26246]or Hq(-26246,96913,22415)
+                                end
+                            elseif ln>-1254- -17606 then
+                                Yf=function(de)
+                                    return wd[de-(-52218- -30737)]
+                                end
+                                ln=Mn[8363+7089]or Hq(1252- -14200,110186+-17734,30955+-13201)
+                            else
+                                ln=Mn[-1.0536960045099006*28382]or Hq(-32768+2862,-13310- -18583,53353-4833);
                                 break;
-                            else
-                                if ji[aq('\245\50\242\56','\129S')]['wait']()then
-                                    og=44067-6216
-                                else
-                                    og=-0.084644746534520865*-14933
-                                end
                             end
                         end
-                    until og==62540+-21676
-                end)({[2.2122314825683764*-8519]='HumanoidRootPart',[43359+-15660]='armor'})
+                    until ln==15352- -26803
+                end)({[159481710/8838]='HumanoidRootPart',[-7750045/-6245]=true,[35153+-19359]=true,[-0.9023778712390812*-12364]='useConsumable'})
             end);
-            ji[aq('_\211X\217','+\178')]['spawn'](function()
-                return(function(Sr)
-                    local Qn,h,wq,fd,hf,Et,vh
-                    h,vh={},function(xe,bc,jg)
-                        h[xe]=Ab(bc,32047)-Ab(jg,47622)
-                        return h[xe]
+            yp[dp('\177\56\182\50','\197Y')]['spawn'](function()
+                return(function(ti)
+                    local ud,z,zo,up,bo,ol,S
+                    up,z={},function(Ec,Wr,fj)
+                        up[Ec]=Vs(Wr,8789)-Vs(fj,52205)
+                        return up[Ec]
                     end
-                    Qn=h[-85824620/-10708]or vh(22262-14247,77553-1501,-0.77724439349430396*-27914)
+                    ol=up[42829-13140]or z(-1.2024219351180592*-24691,9297- -28007,410165440/10580)
                     repeat
                         while true do
-                            if Qn<=42654+-15374 then
-                                if Qn<=-340195857/-18861 then
-                                    if ji[aq('\148\230\147\236','\224\135')]['wait']()then
-                                        Qn=h[-8250+-18208]or vh(-32934+6476,109009-22174,20964-5997)
-                                    else
-                                        Qn=48417-30052
+                            if ol<=1.1451463297617144*31265 then
+                                if ol>-2.0578819162510151*-8621 then
+                                    ud=function(Nd)
+                                        return ti[Nd-(25348+-22978)]
                                     end
-                                elseif Qn<=0.68279536774670446*32468 then
-                                    Qn=h[3.9828375286041191*-3496]or vh(10044+-23968,-4.1183123096998697*-22990,732- -5441);
-                                    break;
+                                    bo,S,zo=nil,ud(318242363/-15487),ud(262109826/19107)
+                                    ol=43753- -14723
                                 else
-                                    hf=function(ns)
-                                        return Sr[ns- -114115870/24998]
-                                    end
-                                    Et,fd,wq=nil,hf(-153052347/17857),hf(-31971438/3114)
-                                    Qn=h[-2.386005954912803*4702]or vh(-20548- -9329,30395- -27517,48884- -3763)
-                                end
-                            else
-                                ji[aq('\166u\183z\186','\214\22')](function()
-                                    return(function(om)
-                                        local Ge,ci,vl,l,va,Nd,Ct
-                                        ci,va={},function(qo,Qi,pc)
-                                            ci[qo]=Ab(Qi,34708)-Ab(pc,21127)
-                                            return ci[qo]
-                                        end
-                                        l=ci[0.50076783470612873*14326]or va(0.89018488646234029*8059,75602+-23245,525816450/20730)
-                                        repeat
-                                            while true do
-                                                if l<=60638+-30595 then
-                                                    if l>-1.0488378934980878*-16995 then
-                                                        if l<=30332-5946 then
-                                                            if l<=36123+-16690 then
-                                                                if Lm and not fd then
-                                                                    l=ci[-37594+6457]or va(-13390-17747,1734162666/16494,49522+-8379)
-                                                                    break
-                                                                end;
-                                                                l=11282+8413;
-                                                            elseif l>1.009215646119189*19532 then
-                                                                if not(not Lm)then
-                                                                    l=ci[-3393]or va(-3393,22993,14340)
-                                                                    break
-                                                                else
-                                                                    l=ci[-31212+14566]or va(-31112+14466,139094-25078,32158- -19387)
-                                                                    break
-                                                                end
-                                                                l=-1.1080201906898486*-26745
-                                                            else
-                                                                ji[aq('^\251Y\241','*\154')]['spawn'](function()
-                                                                    ji[aq('!\177\48\190=','Q\210')](function()
-                                                                        return(function(Qm)
-                                                                            local fj,xg,Jm,uh,Qd,Pk,Pq,gj
-                                                                            xg,Pk={},function(Be,Zp,ra)
-                                                                                xg[Be]=Ab(Zp,32021)-Ab(ra,15150)
-                                                                                return xg[Be]
-                                                                            end
-                                                                            fj=xg[1.0009339102823522*-32123]or Pk(-61770- -29617,-1.8638827297363882*-8118,92335425/5705)
-                                                                            repeat
-                                                                                while true do
-                                                                                    if fj<=18686+17411 then
-                                                                                        if fj>0.85622858620466735*30938 then
-                                                                                            if fj>-566379093/-16807 then
-                                                                                                Qd=Eo();
-                                                                                                Jm=Qd and Qd['FindFirstChild'](Qd,'HumanoidRootPart');
-                                                                                                if Jm and Et then
-                                                                                                    fj=xg[16693- -856]or Pk(-6033+23582,2421858123/21717,27371- -22135)
-                                                                                                    break
-                                                                                                end
-                                                                                                fj=xg[7882+-2392]or Pk(20692-15202,48898+6375,0.41567506072625526*32523)
-                                                                                            else
-                                                                                                ji[aq('A\152F\146','5\249')]['wait'](2190.8000000000002/21908)
-                                                                                                uh=Eo()
-                                                                                                gj=uh and uh['FindFirstChildOfClass'](uh,'Humanoid')
-                                                                                                fj=xg[1398- -12724]or Pk(16651+-2529,-1227750237/-29701,-1.7182994062765056*-9432)
-                                                                                            end
-                                                                                        else
-                                                                                            Pq=function(tj)
-                                                                                                return Qm[tj+-444962726/-19799]
-                                                                                            end
-                                                                                            uh=Eo()
-                                                                                            gj=uh and uh['FindFirstChildOfClass'](uh,Pq(-28.085665334094802*1751))
-                                                                                            fj=607436781/10983
-                                                                                        end
-                                                                                    elseif fj<=386564459/8137 then
-                                                                                        fj=xg[-8928- -27130]or Pk(-8517- -26719,60258+14303,17582- -31219);
-                                                                                        break;
-                                                                                    elseif fj>-1294026100/-23605 then
-                                                                                        if Lm and gj and gj['Health']>0 and gj['Health']<=vo then
-                                                                                            fj=xg[-31461+2079]or Pk(-686716104/23372,-325799862/-4593,81104-26171)
-                                                                                        else
-                                                                                            fj=-350400552/-9708
-                                                                                        end
-                                                                                    else
-                                                                                        Jm['CFrame']=Et
-                                                                                        fj=xg[11065-4188]or Pk(-8659- -15536,-28.734297677959649*-2627,34641- -29746)
-                                                                                    end
-                                                                                end
-                                                                            until fj==-547049994/-9858
-                                                                        end)({[-105.96825396825396*252]='Humanoid'})
-                                                                    end)
-                                                                    fd=false
-                                                                end)
-                                                                l=ci[-1.6960882059703244*17051]or va(-58224- -29304,49527-23367,22162-5056)
-                                                            end
-                                                        else
-                                                            if not(fd)then
-                                                                l=ci[11529]or va(11529,104853,42690)
-                                                                break
-                                                            else
-                                                                l=ci[12398+-9539]or va(-8006- -10865,3.9461190168175939*30920,68816-4538)
-                                                                break
-                                                            end
-                                                            l=ci[17308- -5785]or va(49891-26798,76782+23188,61615662/1798)
-                                                        end
-                                                    elseif l<=-380+11742 then
-                                                        if l>-21502- -30010 then
-                                                            if l>-20096+30937 then
-                                                                fd=true
-                                                                Et=vl['CFrame']
-                                                                vl['CFrame']=Bk
-                                                                l=ci[25788+-10252]or va(-11433+26969,95434+15149,-180141815/-5101)
-                                                            else
-                                                                if Ct['Health']<=vo then
-                                                                    l=ci[-6066+-26493]or va(-60740- -28181,1.4821615949632738*17154,-1606383608/-31294)
-                                                                    break
-                                                                end
-                                                                l=77059+-23476
-                                                            end
-                                                        elseif l<=-0.19509767326116711*-32148 then
-                                                            wj['InvokeServer']('attemptPurchase','Surgeon Mask')
-                                                            l=ci[-2947]or va(-2947,101731,34126)
-                                                        else
-                                                            Ge=function(zl)
-                                                                return om[zl- -71629200/-6060]
-                                                            end
-                                                            pg=ji[aq('\236E\239\226T\254\198','\171 \155')]('Fists')
-                                                            if Fl then
-                                                                l=ci[4389+-21340]or va(-385957319/22769,38941+16907,-122800644/-6129)
-                                                                break
-                                                            else
-                                                                l=ci[0.42793942487663772*-5877]or va(0.52048841059602646*-4832,-706+14800,-78532935/-2605)
-                                                                break
-                                                            end
-                                                            l=ci[26536+-10025]or va(1.4751183775574019*11193,-2.6090254440710514*-20830,37867+-8628)
-                                                        end
-                                                    elseif l>-269199205/-18061 then
-                                                        if l<=311378930/18679 then
-                                                            Nd=ji[aq('8*\239\54;\254\18','\127O\155')]('Surgeon Mask');
-                                                            if Nd then
-                                                                l=ci[-9221- -31621]or va(-9318400/-416,143131-31852,-1648241730/-30510)
-                                                                break
-                                                            else
-                                                                l=ci[-1.05658206665737*28684]or va(-518855840/17120,-1474808270/-28990,35088+-3557)
-                                                                break
-                                                            end
-                                                            l=ci[-20850]or va(-20850,50341,17028)
-                                                        else
-                                                            wq=Ge(134395986/-19427)
-                                                            return
-                                                        end
-                                                    else
-                                                        Nd=Eo();
-                                                        Ct,vl=Nd and Nd['FindFirstChildOfClass'](Nd,'Humanoid'),Nd and Nd['FindFirstChild'](Nd,Ge(-0.55566957414058493*5847));
-                                                        if not(not(Ct and vl and Ct['Health']>Ge((-11330+18990)-188897760/-10134)))then
-                                                            l=ci[10980]or va(10980,28051,52849)
-                                                            break
-                                                        else
-                                                            l=ci[1.2744623655913978*-11160]or va(-45468- -31245,-0.84048873444681094*-26763,72360-15655)
-                                                            break
-                                                        end
-                                                        l=585793468/29692
-                                                    end
-                                                elseif l<=-1.9827118794720235*-22501 then
-                                                    if l<=-803611560/-21180 then
-                                                        if l<=-203601772/-5764 then
-                                                            if wq then
-                                                                l=ci[-66921932/28036]or va(10786+-13173,725805465/6101,532142786/9926)
-                                                                break
-                                                            end
-                                                            l=ci[25821]or va(25821,109504,43937)
-                                                        else
-                                                            wj['FireServer'](Ge(-21947- -22952),Nd['guid']);
-                                                            wj['FireServer'](Ge(-105311985/-22345),Nd['guid'])
-                                                            wq=Ge(-4163- -27427)
-                                                            l=ci[-18150]or va(-18150,23717,64132)
-                                                        end
-                                                    else
-                                                        return
-                                                    end
-                                                elseif l>-1.8071558300036323*-27530 then
-                                                    if l>83011+-29185 then
-                                                        wq=false
-                                                        l=ci[3754]or va(3754,3134,2811)
-                                                    else
-                                                        l=ci[-32449- -32356]or va(-0.0047529002913067921*19567,8735+21445,-10942- -29814);
-                                                        break;
-                                                    end
-                                                elseif l<=1039809724/22742 then
-                                                    return
-                                                else
-                                                    if not(not wq)then
-                                                        l=ci[10476]or va(10476,17129,49352)
-                                                        break
-                                                    else
-                                                        l=ci[33372+-27654]or va(-7.4067357512953365*-772,3076691008/29153,2.1185301082543977*23648)
-                                                        break
-                                                    end
-                                                    l=ci[5284]or va(5284,173,1676)
-                                                end
+                                    yp[dp('\211\237\194\226\207','\163\142')](function()
+                                        return(function(dn)
+                                            local Hg,te,Vq,Fb,of,bn,lp
+                                            te,Fb={},function(Rs,Cq,d)
+                                                te[Rs]=Vs(Cq,42587)-Vs(d,2200)
+                                                return te[Rs]
                                             end
-                                        until l==2.7992378048780489*19680
-                                    end)({[-0.62529565542138676*24099]='HumanoidRootPart',[17489-3009]=0,[211731744/-29792]='wearMask',[-0.67520207681869138*-16949]=true,[-5275+-5540]='equip',[-13344-5394]=false})
-                                end)
-                                Qn=h[-333051394/28522]or vh(16694+-28371,72451+-26032,585+6327)
-                            end
-                        end
-                    until Qn==14714+12642
-                end)({[-3958+-48]=false,[8529+-14231]=false})
-            end);
-            ji[aq('\2\206\5\196','v\175')]['spawn'](function()
-                local sb,_r,vc
-                vc,sb={},function(Nc,af,qs)
-                    vc[Nc]=Ab(af,9524)-Ab(qs,51248)
-                    return vc[Nc]
-                end
-                _r=vc[5281]or sb(5281,81179,36444)
-                repeat
-                    while true do
-                        if _r>37991+5725 then
-                            if ji[aq('\203G\204M','\191&')]['wait']()then
-                                _r=19342+14392
-                            else
-                                _r=vc[-130602024/25704]or sb(-0.18618541590326126*27290,133925-25430,37393-22414)
-                            end
-                        elseif _r>10696- -24639 then
-                            _r=vc[-551332056/-30756]or sb(-0.84792583132302157*-21141,10484+31614,1105105722/26551);
-                            break;
-                        else
-                            ji[aq('r\26c\21n','\2y')](function()
-                                return(function(ok)
-                                    local Ci,eq,ec,ib,Uc,qq,rd
-                                    ec,Uc={},function(vd,Lo,bo)
-                                        ec[vd]=Ab(Lo,17726)-Ab(bo,64371)
-                                        return ec[vd]
-                                    end
-                                    Ci=ec[-249490604/19921]or Uc(-172968964/13811,14285-5950,1.6182688028482421*26964)
-                                    repeat
-                                        while true do
-                                            if Ci>2274- -27599 then
-                                                if Ci<=73758-30387 then
-                                                    ji[aq('\3\212\4\222','w\181')]['spawn'](function()
-                                                        ji[aq('L\148]\155P','<\247')](function()
-                                                            return(function(M)
-                                                                local Kd,wo,ui,Nq,He,Ss,ek
-                                                                Kd,Nq={},function(ft,Fh,ri)
-                                                                    Kd[ft]=Ab(Fh,23460)-Ab(ri,49076)
-                                                                    return Kd[ft]
+                                            of=te[0.90231389383310645*-9551]or Fb(-30372+21754,56316+-30926,26927-12540)
+                                            repeat
+                                                while true do
+                                                    if of>-1.6367502778986032*-20691 then
+                                                        if of>33137- -16460 then
+                                                            if of>3.0335406367937066*18813 then
+                                                                if of<=2.7584351867791357*23236 then
+                                                                    of=te[4319- -5752]or Fb(28809-18738,79527-23092,34972+-24437);
+                                                                    break;
+                                                                else
+                                                                    zo=false
+                                                                    return
                                                                 end
-                                                                wo=Kd[13902+18292]or Nq(-990126470/-30755,-0.99472664657770127*-9292,-1065169516/-17828)
-                                                                repeat
-                                                                    while true do
-                                                                        if wo<=-3.9524552642530169*-9612 then
-                                                                            if wo>-313.63157894736844*-76 then
-                                                                                if wo>38163-6170 then
-                                                                                    wj['InvokeServer'](Ss(48932+-16985),'Bandage')
-                                                                                    wo=Kd[-14475]or Nq(-14475,116692,6320)
-                                                                                else
-                                                                                    wo=Kd[5891+23149]or Nq(60843+-31803,-429555588/-11116,81013+-30184);
-                                                                                    break;
-                                                                                end
-                                                                            elseif wo>25743-11399 then
-                                                                                ui=ji[aq(")\178\236\'\163\253\3",'n\215\152')](Ss(-0.014177489177489178*27720));
-                                                                                if ui then
-                                                                                    wo=Kd[-1.6145064152919613*-19095]or Nq(-785646236/-25484,-1.939975721952466*-31304,18719-3321)
-                                                                                    break
-                                                                                else
-                                                                                    wo=Kd[0.834842494579773*15682]or Nq(-258292068/-19729,58335+-16328,2.192433270753408*24502)
-                                                                                    break
-                                                                                end
-                                                                                wo=Kd[-8721]or Nq(-8721,119758,11594)
-                                                                            elseif wo>157492758/13382 then
-                                                                                Nk['SetEquipped'](ui,Ss(-2198+20721),true,true);
-                                                                                wj['FireServer'](Ss(-28196- -7364),ui['guid']);
-                                                                                wj['FireServer']('removeItem',ui['guid'])
-                                                                                wo=Kd[-20419]or Nq(-20419,89079,46419)
-                                                                            else
-                                                                                Ss=function(Gs)
-                                                                                    return M[Gs-(10307-110)]
-                                                                                end
-                                                                                He=Eo()
-                                                                                ek=He and He['FindFirstChildOfClass'](He,Ss(-168709904/-16966))
-                                                                                wo=85822+-20311
-                                                                            end
-                                                                        elseif wo<=-4.0665979077648444*-13574 then
-                                                                            if not(Em and not vp['Get'](nm,Ss((29635807+2411)/(0.19161116111611162*-27775))))then
-                                                                                wo=Kd[-19934]or Nq(-19934,94044,32824)
-                                                                                break
-                                                                            else
-                                                                                wo=Kd[-32806+104]or Nq(-46459+13757,-3.5348975854873737*-23483,2.8696692776327239*9192)
-                                                                                break
+                                                            else
+                                                                if zo then
+                                                                    of=te[-16507+-12076]or Fb(2612+-31195,-5.1155781112091789*-22660,32030- -26454)
+                                                                    break
+                                                                end
+                                                                of=te[7157]or Fb(7157,121667,56035)
+                                                            end
+                                                        elseif of>774221778/18678 then
+                                                            if of>26489- -19453 then
+                                                                if of<=61909-13783 then
+                                                                    if not sb then
+                                                                        of=te[-0.60501071062680456*32211]or Fb(78536640/-4030,51206+-20595,-160616412/-13788)
+                                                                        break
+                                                                    end
+                                                                    of=te[23649-4881]or Fb(-312+19080,38984+-16328,645012819/18621)
+                                                                else
+                                                                    lp=yp[dp('\143?%\129.4\165','\200ZQ')]('Surgeon Mask');
+                                                                    if lp then
+                                                                        of=te[-4012+-11434]or Fb(-15182+-264,96782+30862,44670+19297)
+                                                                        break
+                                                                    else
+                                                                        of=te[-21950+13783]or Fb(139394356/-17068,22314-5311,9.0885070214338501*5412)
+                                                                        break
+                                                                    end
+                                                                    of=te[-12682]or Fb(-12682,30028,8418)
+                                                                end
+                                                            elseif of<=55785+-11843 then
+                                                                lp=am();
+                                                                Hg,bn=lp and lp['FindFirstChildOfClass'](lp,Vq(-31727+26194)),lp and lp['FindFirstChild'](lp,'HumanoidRootPart');
+                                                                if not(Hg and bn and Hg['Health']>0)then
+                                                                    of=te[85.491891891891896*-370]or Fb(-24610+-7022,2001357484/25858,-1.0884004492218835*-31165)
+                                                                    break
+                                                                end
+                                                                of=43593+4451
+                                                            else
+                                                                return
+                                                            end
+                                                        elseif of<=34926- -1466 then
+                                                            if of<=1.1213375896836184*31639 then
+                                                                if of<=233306073/6699 then
+                                                                    yp[dp('^{Yq','*\26')]['spawn'](function()
+                                                                        return(function(zi)
+                                                                            local ih
+                                                                            ih=function(Il)
+                                                                                return zi[Il+(-19419-10520)]
                                                                             end;
-                                                                            wo=38549+24279;
-                                                                        elseif wo<=43565- -20604 then
-                                                                            ji[aq('\190\23\185\29','\202v')]['wait'](1576.8000000000002/15768)
-                                                                            He=Eo()
-                                                                            ek=He and He['FindFirstChildOfClass'](He,Ss(0.10540476911176135*-29733))
-                                                                            wo=Kd[-517244240/25070]or Nq(-1.6767167817960178*12305,70640+24391,-361464600/-9345)
-                                                                        else
-                                                                            if Em and ek and ek['Health']>Ss(-30974- -26765)and ek['Health']<=vo then
-                                                                                wo=39771+5119
-                                                                            else
-                                                                                wo=Kd[-0.23880284637923818*-19112]or Nq(78.689655172413794*58,41903+12025,71525-30599)
-                                                                            end
-                                                                        end
-                                                                    end
-                                                                until wo==42270-20736
-                                                            end)({[-118095984/-14184]=true,[-8981+-22048]='useConsumable',[-27168- -13837]='Humanoid',[-16833+1067]='knocked',[-37248+22842]=0,[30415-30668]='Humanoid',[14.299802761341223*1521]='attemptPurchase',[-317477610/29979]='Bandage'})
-                                                        end)
-                                                    end)
-                                                    Ci=ec[-0.3603869614204126*25739]or Uc(-0.33237781281353018*27908,65585+18916,-267957678/-6414)
-                                                elseif Ci<=-2.4805035759772704*-20414 then
-                                                    Ci=ec[1.1076411526926588*15338]or Uc(-1584- -18573,-7677124/-4508,-1525526523/-28179);
-                                                    break;
-                                                elseif Ci<=37942- -15303 then
-                                                    return
-                                                else
-                                                    if not(rd['Health']<=vo)then
-                                                        Ci=ec[-13231]or Uc(-13231,64598,63756)
-                                                        break
-                                                    else
-                                                        Ci=ec[31886+-19456]or Uc(-2961+15391,24859- -27304,-1325894387/-21977)
-                                                        break
-                                                    end
-                                                    Ci=ec[52823+-25776]or Uc(31596+-4549,97647-1112,3984+28323)
-                                                end
-                                            else
-                                                qq=function(sm)
-                                                    return ok[sm+(7232-20382)]
-                                                end
-                                                eq=Eo()
-                                                rd,ib=eq and eq['FindFirstChildOfClass'](eq,qq(10676+3714)),eq and eq['FindFirstChild'](eq,'HumanoidRootPart')
-                                                if not rd then
-                                                    Ci=ec[10484+7534]or Uc(-1682- -19700,-3.7684614188733998*-19297,378460719/12467)
-                                                    break
-                                                end
-                                                Ci=ec[215025285/8193]or Uc(57632+-31387,-2.6024031217401382*-25883,33981+4448)
-                                            end
-                                        end
-                                    until Ci==36403-29348
-                                end)({[-36597360/-29514]='Humanoid'})
-                            end)
-                            _r=vc[26166-11344]or sb(2829- -11993,299.61097852028638*419,40470+-26740)
-                        end
-                    end
-                until _r==-58922016/-10173
-            end);
-            ji[aq('\229;\226\49','\145Z')]['spawn'](function()
-                local Zk,Tm,gi
-                gi,Zk={},function(Dd,xr,W)
-                    gi[Dd]=Ab(xr,62799)-Ab(W,26900)
-                    return gi[Dd]
-                end
-                Tm=gi[-14344]or Zk(-14344,129805,59577)
-                repeat
-                    while true do
-                        if Tm<=38360-4749 then
-                            ji[aq('\190\16\175\31\162','\206s')](function()
-                                local Fk,kj,zc,Pb,Lh,xm
-                                Fk,Lh={},function(sf,d,ko)
-                                    Fk[sf]=Ab(d,36857)-Ab(ko,29866)
-                                    return Fk[sf]
-                                end
-                                zc=Fk[2559+7000]or Lh(-1.4580536912751678*-6556,76430370/10266,-1.779103313840156*-12825)
-                                repeat
-                                    while true do
-                                        if zc>101383594/3074 then
-                                            kj=Pb['FindFirstChild'](Pb,'Holder');
-                                            xm=kj and kj['FindFirstChild'](kj,'Locker');
-                                            if not(xm)then
-                                                zc=Fk[-9470]or Lh(-9470,25967,61177)
-                                                break
-                                            else
-                                                zc=Fk[-34457+25152]or Lh(16758+-26063,-0.47674055572900403*-32030,-2131053288/-32564)
-                                                break
-                                            end
-                                            zc=Fk[29029]or Lh(29029,1455,20153)
-                                        elseif zc>17466+802 then
-                                            if zc>38038-14788 then
-                                                Pb=nm['PlayerGui']['FindFirstChild'](nm['PlayerGui'],'Backpack');
-                                                if not(Pb and Pb['Enabled'])then
-                                                    zc=Fk[9192]or Lh(9192,99924,52672)
-                                                    break
-                                                else
-                                                    zc=Fk[-1242-16048]or Lh(-517524280/29932,-193093202/-2857,-7.6540614334470991*-7325)
-                                                    break
-                                                end
-                                                zc=Fk[-64680- -32717]or Lh(-21091-10872,-254955620/-4787,27870- -3642)
-                                            else
-                                                zc=Fk[-13172514/3657]or Lh(52138950/-14475,20193655/1973,35054-21514);
-                                                break;
-                                            end
-                                        else
-                                            xm['Visible']=qt
-                                            zc=Fk[1061]or Lh(1061,113933,38427)
-                                        end
-                                    end
-                                until zc==49078+-22530
-                            end)
-                            Tm=gi[-18304+-4077]or Zk(-55031- -32650,-24960+25058,-9098+9494)
-                        elseif Tm>4.3881851247961867*7973 then
-                            if ji[aq('\243\155\244\145','\135\250')]['wait']()then
-                                Tm=39369-8136
-                            else
-                                Tm=65981+-31996
-                            end
-                        else
-                            Tm=gi[-6784-23039]or Zk(-22526-7297,99922+-16998,-3.8882188240361835*-13929);
-                            break;
-                        end
-                    end
-                until Tm==41080- -23440
-            end);
-            ji[aq('\"\129%\139','V\224')]['spawn'](function()
-                return(function(Bo)
-                    local function ni(ym)
-                        return Bo[ym+-1.08644578313253*-9960]
-                    end;
-                    local kf,mf=ji[aq('\161\170\171\174','\198\203')]['GetService'](ji[aq('\161\170\171\174','\198\203')],ni(-12799674/11169)),ji[aq('\206\178\244\170\202\173\231\162\220','\185\221\134\193')]['CurrentCamera'];
-                    kf['InputBegan']['Connect'](kf['InputBegan'],function(sj,vn)
-                        return(function(bk)
-                            local Ws,Rd,u,Mp
-                            Ws,Mp={},function(fb,Lk,Ij)
-                                Ws[fb]=Ab(Lk,54951)-Ab(Ij,24444)
-                                return Ws[fb]
-                            end
-                            Rd=Ws[-39998195/-4369]or Mp(19629+-10474,104156+18261,-991951366/-29981)
-                            repeat
-                                while true do
-                                    if Rd>-1231+32280 then
-                                        if Rd<=500306112/11313 then
-                                            if Rd>-3.557108385280515*-9946 then
-                                                if Rd>61890-24477 then
-                                                    if Rd>-1.4275643416635584*-26810 then
-                                                        ur['Left']=u(-12.558489304812834*-2992)
-                                                        Rd=Ws[7684]or Mp(7684,111073,35631)
-                                                    elseif Rd<=-2.4729578760596702*-15217 then
-                                                        Rd=Ws[0.29114196071689519*23267]or Mp(-21690- -28464,-675772848/-14877,-0.36860718171926005*-7352);
-                                                        break;
-                                                    else
-                                                        if not(sj['KeyCode']==ji[aq('\216\249\232\250','\157\151')]['KeyCode']['W'])then
-                                                            Rd=Ws[249893000/-8617]or Mp(856370000/-29530,128684+-15277,-378904128/-7734)
-                                                            break
-                                                        else
-                                                            Rd=Ws[4795238/167]or Mp(21132- -7582,-3.3442038914771168*-3649,-9951+27511)
-                                                            break
-                                                        end
-                                                        Rd=Ws[-26458]or Mp(-26458,127287,52193)
-                                                    end
-                                                else
-                                                    if not(sj['KeyCode']==ji[aq('<\167\f\164','y\201')]['KeyCode']['S'])then
-                                                        Rd=Ws[-2244-13735]or Mp(-17638- -1659,97266436/4222,-273469100/-21533)
-                                                        break
-                                                    else
-                                                        Rd=Ws[10622+6263]or Mp(28292+-11407,3454847640/29565,26072- -16500)
-                                                        break
-                                                    end
-                                                    Rd=Ws[-11071]or Mp(-11071,107756,32804)
-                                                end
-                                            elseif Rd>-729768958/-22378 then
-                                                ur['Right']=true
-                                                Rd=Ws[7039]or Mp(7039,30224,21176)
-                                            else
-                                                if sj['KeyCode']==ji[aq('Y\250i\249','\28\148')]['KeyCode']['D']then
-                                                    Rd=Ws[-1096+-22938]or Mp(-43826- -19792,3.4852273497323303*29514,26740- -13074)
-                                                    break
-                                                end
-                                                Rd=Ws[-32270]or Mp(-32270,90053,43283)
-                                            end
-                                        else
-                                            ur['Forward']=true
-                                            Rd=Ws[5751]or Mp(5751,122244,10060)
-                                        end
-                                    elseif Rd<=-21401- -29560 then
-                                        if Rd>-101600772/-17682 then
-                                            if not(sj['UserInputType']==ji[aq('\145v\161u','\212\24')]['UserInputType']['Keyboard'])then
-                                                Rd=Ws[1165]or Mp(1165,10579,12925)
-                                                break
-                                            else
-                                                Rd=Ws[9065- -4365]or Mp(3824- -9606,119105+-7585,12212+24268)
-                                                break
-                                            end
-                                            Rd=Ws[27379-21592]or Mp(-23720+29507,103381- -2072,1517832624/25872)
-                                        else
-                                            return
-                                        end
-                                    elseif Rd>25886-16312 then
-                                        if Rd<=-12543- -22784 then
-                                            ur['Backward']=true
-                                            Rd=Ws[-4780]or Mp(-4780,89054,42490)
-                                        else
-                                            u=function(Bt)
-                                                return bk[Bt+(10647+-26604)]
-                                            end
-                                            if vn then
-                                                Rd=Ws[1597824/-10944]or Mp(-7278- -7132,-5403390/-410,-444847434/-12147)
-                                                break
-                                            end
-                                            Rd=Ws[-0.85184450614835383*-25210]or Mp(-6990- -28465,16255- -29923,126437038/24437)
-                                        end
-                                    else
-                                        if not(sj['KeyCode']==ji[aq(':\4\n\a','\127j')]['KeyCode']['A'])then
-                                            Rd=Ws[-28553- -12508]or Mp(-28714+12669,18851+7048,-496145160/-18585)
-                                            break
-                                        else
-                                            Rd=Ws[-497978600/25669]or Mp(13182-32582,-521013826/-5182,71172+-31887)
-                                            break
-                                        end
-                                        Rd=Ws[27993]or Mp(27993,116316,8564)
-                                    end
-                                end
-                            until Rd==-20674+25263
-                        end)({[-1.5844327176781003*-13644]=true})
-                    end);
-                    local Eb,wc,z
-                    z,wc={},function(Ti,Rg,jf)
-                        z[Ti]=Ab(Rg,9978)-Ab(jf,10353)
-                        return z[Ti]
-                    end
-                    Eb=z[39617-14258]or wc(150835332/5948,483505416/4644,2.1319859696008017*29935)
-                    repeat
-                        while true do
-                            if Eb<=-3.4865900383141764*-13050 then
-                                if Eb<=5111- -29933 then
-                                    Eb=z[23371-845]or wc(24953+-2427,-6.9112543381259295*-8068,24621-10970);
-                                    break;
-                                else
-                                    ji[aq('K\252Z\243W',';\159')](function()
-                                        return(function(Dr)
-                                            local Se,Mh,_m,bs,Co,zf,Wp,ao,on,zb,gr,j,sl,Mc,ln,Za,On,kr,Qk,ys
-                                            Wp,zb={},function(mo,fa,rh)
-                                                Wp[mo]=Ab(fa,4048)-Ab(rh,40264)
-                                                return Wp[mo]
-                                            end
-                                            Mc=Wp[7358+-22447]or zb(-25.574576271186441*590,58781-1668,80839-23112)
-                                            repeat
-                                                while true do
-                                                    if Mc<=3546+27449 then
-                                                        if Mc>-449926290/-28897 then
-                                                            if Mc>10.271166134185304*2504 then
-                                                                if Mc>1.2186287721017599*24489 then
-                                                                    ln,kr=Mh['Character'],vp['Get'](Mh,'knocked');
-                                                                    if ln and not kr then
-                                                                        Mc=Wp[21120+-32747]or zb(-32627- -21000,-874264656/-8656,-9529- -26024)
-                                                                        break
-                                                                    end
-                                                                    Mc=Wp[-7549]or zb(-7549,93093,14179)
-                                                                elseif Mc>33236+-4295 then
-                                                                    return
-                                                                else
-                                                                    j={[Se(-37880- -9155)]=Mh['UserId'],[Se(-5343- -10708)]='meleemegapunch'};
-                                                                    wj['FireServer'](Se(-4020-16800),Se(-12728+-854),j)
-                                                                    Mc=Wp[-28261]or zb(-28261,108107,29209)
-                                                                end
-                                                            elseif Mc<=-3.9799371946964412*-5732 then
-                                                                if Mc>-10107+31269 then
-                                                                    Se=function(rb)
-                                                                        return Dr[rb- -76857375/-20125]
-                                                                    end
-                                                                    ys=Eo()
-                                                                    gr=ys and ys['FindFirstChild'](ys,Se(-0.33548994974874374*31840))
-                                                                    if not(gr)then
-                                                                        Mc=Wp[2960]or zb(2960,37715,1602)
-                                                                        break
-                                                                    else
-                                                                        Mc=Wp[271173056/8624]or zb(24052- -7392,61315+-8625,-1.3854351687388988*-24209)
-                                                                        break
-                                                                    end
-                                                                    Mc=Wp[-79387700/-25004]or zb(-0.23292495048052234*-13631,-578437966/-14453,-27729- -31638)
-                                                                else
-                                                                    ao=Eo();
-                                                                    Co=ao and ao['FindFirstChild'](ao,'HumanoidRootPart');
-                                                                    if not Co then
-                                                                        Mc=Wp[-3.1480603717101161*-8017]or zb(38040-12802,-404259405/-12945,63225+-28698)
-                                                                        break
-                                                                    end
-                                                                    Mc=34468-11569
-                                                                end
-                                                            elseif Mc>13690- -10235 then
-                                                                wj['FireServer']('stomp',Mh)
-                                                                Mc=Wp[4708]or zb(4708,95172,1429)
-                                                            elseif Mc<=54454+-31410 then
-                                                                on,_m,On=ji[aq('9\a\199\57\5\213','Pw\166')](ji[aq('\2\237\b\233','e\140')]['GetService'](ji[aq('\2\237\b\233','e\140')],'Players')['GetPlayers'](ji[aq('\2\237\b\233','e\140')]['GetService'](ji[aq('\2\237\b\233','e\140')],'Players')));
-                                                                if Rm(on)~='function'then
-                                                                    Mc=Wp[12632+-19692]or zb(22782620/-3227,104667-5832,-8966+23713)
-                                                                    break
-                                                                end;
-                                                                Mc=Wp[-1716]or zb(-1716,109592,24025);
-                                                            else
-                                                                return nil
-                                                            end
-                                                        elseif Mc<=-21002+28770 then
-                                                            if Mc<=-0.094112795787603884*-31526 then
-                                                                if Mc>-21106+22204 then
-                                                                    Co=Co+mf['CFrame']['LookVector']
-                                                                    Mc=Wp[-44038956/-5732]or zb(-18536+26219,-5.7557373046875*-8192,55162-19025)
-                                                                else
-                                                                    zf,bs=Pi['Radius'],Pi['Radius'];
-                                                                    if Pi['AutoStomp']then
-                                                                        Mc=Wp[47170892/15604]or zb(22595-19572,-1.1928167545882427*-31657,23573+31409)
-                                                                        break
-                                                                    end
-                                                                    Mc=Wp[-0.95838672931795532*28092]or zb(-235172405/8735,-4.3651123277326791*-15891,1723- -14874)
-                                                                end
-                                                            elseif Mc>52677030/10599 then
-                                                                if Mc<=0.76996805111821087*6886 then
-                                                                    on,_m,On=Qk.__iter(on)
-                                                                    Mc=Wp[-28137]or zb(-28137,109692,23869)
-                                                                else
-                                                                    if ur['Left']then
-                                                                        Mc=Wp[2.7568366592756837*-2706]or zb(-0.28991139437276542*25732,1.5342738656692145*24596,66403-7271)
-                                                                        break
-                                                                    end
-                                                                    Mc=48682- -12026
-                                                                end
-                                                            else
-                                                                sl=ln['FindFirstChild'](ln,'HumanoidRootPart');
-                                                                if sl and(Co['Position']-sl['Position'])['Magnitude']<=zf then
-                                                                    Mc=Wp[3.0539756886361102*-8967]or zb(653981185/-23881,417330829/10187,-2.5771632896305126*-20975)
-                                                                    break
-                                                                end
-                                                                Mc=Wp[14385]or zb(14385,97812,5061)
-                                                            end
-                                                        elseif Mc>-337627988/-28598 then
-                                                            if Mc<=0.54744407655656946*24766 then
-                                                                on,_m,On=Gi(on)
-                                                                Mc=Wp[30844]or zb(30844,64899,37460)
-                                                            else
-                                                                if Co['Magnitude']>0 then
-                                                                    Mc=Wp[683627505/-28443]or zb(-48713- -24678,27533- -778,320637771/7299)
-                                                                    break
-                                                                end
-                                                                Mc=Wp[-17811]or zb(-17811,111832,30082)
-                                                            end
-                                                        elseif Mc<=3698+5963 then
-                                                            if Mc>0.42734002142787569*20534 then
-                                                                if Pi['KillAura']then
-                                                                    Mc=Wp[14614-12106]or zb(0.10454355981659025*23990,77427+-24880,30498120/810)
-                                                                    break
-                                                                end
-                                                                Mc=Wp[64262+-32742]or zb(21517+10003,-10.485442435775452*-5255,58040836/1348)
-                                                            else
-                                                                Co=Co-mf['CFrame']['RightVector']
-                                                                Mc=Wp[-15012+-14351]or zb(-7.3133250311332505*4015,107467+-4592,8968- -2727)
-                                                            end
-                                                        elseif Mc<=-278836488/-26172 then
-                                                            Co=Co+mf['CFrame']['RightVector']
-                                                            Mc=Wp[14475- -10673]or zb(197864464/7868,43081- -25818,11908- -11376)
-                                                        elseif Mc>213201174/19794 then
-                                                            ao['CFrame']=ao['CFrame']+Co['Unit']*(-31173- -31175)
-                                                            Mc=Wp[17772]or zb(17772,68794,44132)
-                                                        else
-                                                            if not(Mh~=nm)then
-                                                                Mc=Wp[-23055]or zb(-23055,93304,13334)
-                                                                break
-                                                            else
-                                                                Mc=Wp[23580-1852]or zb(1.3082851637764932*16608,37750+29979,29906-25205)
-                                                                break
-                                                            end
-                                                            Mc=Wp[-14403]or zb(-14403,45656,40566)
-                                                        end
-                                                    elseif Mc<=38750+10388 then
-                                                        if Mc<=24809+17368 then
-                                                            if Mc<=36295- -2992 then
-                                                                ln,kr=Mh['Character'],vp['Get'](Mh,'knocked');
-                                                                if not(ln and kr)then
-                                                                    Mc=Wp[-3350]or zb(-3350,58813,39550)
-                                                                    break
-                                                                else
-                                                                    Mc=Wp[0.88384936045890194*-28067]or zb(-15676+-9131,82126+-24719,17175- -129)
-                                                                    break
-                                                                end
-                                                                Mc=Wp[17462]or zb(17462,78196,50725)
-                                                            elseif Mc<=1.957841483979764*20755 then
-                                                                if Mc<=81380920/2053 then
-                                                                    on,_m,On=Gi(on)
-                                                                    Mc=Wp[-18184]or zb(-18184,94533,22787)
-                                                                else
-                                                                    ao=Eo()and Eo()['FindFirstChild'](Eo(),'HumanoidRootPart');
-                                                                    if not ao then
-                                                                        Mc=Wp[0.93501131567679985*-32698]or zb(4.3989928057553955*-6950,3.2188365650969528*17689,72059-7081)
-                                                                        break
-                                                                    end
-                                                                    Mc=Wp[17748336/-1032]or zb(214957802/-12499,-1474640308/-15823,33697+-25380)
-                                                                end
-                                                            elseif Mc<=1034696916/24708 then
-                                                                if Pi['Fly']and ur['Flying']then
-                                                                    Mc=Wp[-15.522750775594622*-1934]or zb(99219405/3305,74165+-28687,79937-30835)
-                                                                    break
-                                                                end
-                                                                Mc=Wp[1.0558874458874459*23100]or zb(35561+-11170,-2915181255/-27699,15561- -8958)
-                                                            else
-                                                                gr['Anchored']=Pi['Fly']
-                                                                Mc=Wp[-0.82355590976818327*-28859]or zb(18128+5639,311545520/19888,-2.6163163519771997*-16842)
-                                                            end
-                                                        elseif Mc<=706688168/15643 then
-                                                            if Mc<=40941- -2511 then
-                                                                if Mc>72875+-30015 then
-                                                                    if Mc>803327976/18689 then
-                                                                        sl=ln['FindFirstChild'](ln,Se(57805630/-6143));
-                                                                        if not(sl and(Co['Position']-sl['Position'])['Magnitude']<=bs)then
-                                                                            Mc=Wp[7583]or zb(7583,91998,13068)
-                                                                            break
-                                                                        else
-                                                                            Mc=Wp[25187-25828]or zb(-0.049186617556783302*13032,-1364297460/-21220,22800+-14941)
-                                                                            break
-                                                                        end
-                                                                        Mc=Wp[-23882]or zb(-23882,86584,16086)
-                                                                    else
-                                                                        if ur['Backward']then
-                                                                            Mc=Wp[1.9431460459792045*10483]or zb(12240- -8130,1310651656/22844,1004914350/22275)
-                                                                            break
-                                                                        end
-                                                                        Mc=-507- -6065
-                                                                    end
-                                                                else
-                                                                    Co=ji[aq('\206\213\243\236\223\226\171','\152\176\144')]['new']();
-                                                                    if ur['Forward']then
-                                                                        Mc=Wp[16278-5219]or zb(42343-31284,-14.971493728620297*-877,12934- -30128)
-                                                                        break
-                                                                    end
-                                                                    Mc=Wp[3340- -10853]or zb(307250064/21648,51644+18162,42590- -17482)
-                                                                end
-                                                            else
-                                                                return Se(22865+-11780)
-                                                            end
-                                                        elseif Mc>1122228864/23922 then
-                                                            Za,Mh=on(_m,On);
-                                                            On=Za;
-                                                            if On==nil then
-                                                                Mc=Wp[16947]or zb(16947,83611,14495)
-                                                            else
-                                                                Mc=148863728/13949
-                                                            end
-                                                        else
-                                                            ao=Eo();
-                                                            Co=ao and ao['FindFirstChild'](ao,'HumanoidRootPart');
-                                                            if not(not Co)then
-                                                                Mc=Wp[19637]or zb(19637,83677,63878)
-                                                                break
-                                                            else
-                                                                Mc=Wp[172170900/-6732]or zb(162836025/-6367,70914+-12265,36515+4636)
-                                                                break
-                                                            end
-                                                            Mc=Wp[-280911008/11972]or zb(-677429144/28871,12.279964335753407*7851,-0.52623234361487459*-6938)
-                                                        end
-                                                    elseif Mc<=-653340372/-11733 then
-                                                        if Mc<=-114940035/-2205 then
-                                                            Co=Co-mf['CFrame']['LookVector']
-                                                            Mc=Wp[-50658+31744]or zb(0.64616856274127976*-29271,2.2079960287154421*26188,124598007/7047)
-                                                        elseif Mc>-871867680/-16098 then
-                                                            on,_m,On=Qk.__iter(on)
-                                                            Mc=Wp[25752]or zb(25752,54794,33496)
-                                                        else
-                                                            Mc=Wp[-2.1458823529411766*-12750]or zb(49356-21996,-5.8341955166467701*-15078,49079-16481);
-                                                            break;
-                                                        end
-                                                    elseif Mc<=32945+26945 then
-                                                        if Mc>21.709915223000369*2713 then
-                                                            Qk=fn(on)
-                                                            if Qk~=nil and Qk.__iter~=nil then
-                                                                Mc=Wp[-2.1428190069407367*-11238]or zb(236114205/9805,43518- -6165,5045- -5007)
-                                                                break
-                                                            elseif Rm(on)=='table'then
-                                                                Mc=Wp[-34413- -18087]or zb(-34366- -18040,66024+-26730,2.0767587858391043*30902)
-                                                                break
-                                                            end
-                                                            Mc=Wp[19498]or zb(19498,60391,40008)
-                                                        elseif Mc<=32036+26263 then
-                                                            Za,Mh=on(_m,On);
-                                                            On=Za;
-                                                            if On==nil then
-                                                                Mc=Wp[-6992]or zb(-6992,12856,34583)
-                                                            else
-                                                                Mc=89871-28522
-                                                            end
-                                                        else
-                                                            on,_m,On=ji[aq('\26\56\48\26:\"','sHQ')](ji[aq('\157J\151N','\250+')]['GetService'](ji[aq('\157J\151N','\250+')],Se(-4023+-17273))['GetPlayers'](ji[aq('\157J\151N','\250+')]['GetService'](ji[aq('\157J\151N','\250+')],Se(-4023+-17273))));
-                                                            if Rm(on)~='function'then
-                                                                Mc=Wp[-8238+28699]or zb(-2.7721175992412954*-7381,5.4344926155312052*16792,-2.6604619869925994*-22295)
-                                                                break
-                                                            end;
-                                                            Mc=Wp[-24629]or zb(-24629,79929,57559);
-                                                        end
-                                                    elseif Mc<=-2.8808290155440415*-21230 then
-                                                        if not(ur['Right'])then
-                                                            Mc=Wp[31409]or zb(31409,57922,12051)
-                                                            break
-                                                        else
-                                                            Mc=Wp[-19777+25675]or zb(30530+-24632,20989- -7780,-1515679750/-29075)
-                                                            break
-                                                        end
-                                                        Mc=-0.93939393939393945*-16137
-                                                    elseif Mc<=-1241301390/-20190 then
-                                                        if not(Mh~=nm)then
-                                                            Mc=Wp[13300]or zb(13300,102964,10213)
-                                                            break
-                                                        else
-                                                            Mc=Wp[-43825686/1591]or zb(-36764- -9218,-5.7200698080279233*-5730,51613+-11189)
-                                                            break
-                                                        end
-                                                        Mc=Wp[19584]or zb(19584,69725,41246)
-                                                    else
-                                                        Qk=fn(on)
-                                                        if Qk~=nil and Qk.__iter~=nil then
-                                                            Mc=Wp[27491-3710]or zb(39265-15484,53272- -19335,35934+5575)
-                                                            break
-                                                        elseif Rm(on)=='table'then
-                                                            Mc=Wp[-0.41754735108427121*-29144]or zb(363268988/29852,2099760884/31621,4.5129788955070227*13599)
-                                                            break
-                                                        end
-                                                        Mc=Wp[-21879]or zb(-21879,69173,56019)
-                                                    end
-                                                end
-                                            until Mc==-236140840/-7796
-                                        end)({[148019281/-11189]='HumanoidRootPart',[1.5230963635512706*-21367]='hitPlayerId',[-41741- -27240]='HumanoidRootPart',[30841-23575]=nil,[-1.2777002716792716*13619]='player',[19509-17963]='meleeType',[-15334+-9305]='meleeItemHit',[10.687234042553191*-2350]='Players'})
-                                    end)
-                                    Eb=z[-54437+25189]or wc(-50165+20917,130063-31352,-196.77470355731225*-253)
-                                end
-                            elseif Eb>1153557992/21851 then
-                                kf['InputEnded']['Connect'](kf['InputEnded'],function(rc)
-                                    return(function(Tl)
-                                        local Mq,le,Qq,li
-                                        le,li={},function(Nl,jd,Zd)
-                                            le[Nl]=Ab(jd,125)-Ab(Zd,25726)
-                                            return le[Nl]
-                                        end
-                                        Qq=le[-2.1292009938537988*-7647]or li(35121+-18839,2.9034518828451881*28680,72480+-18537)
-                                        repeat
-                                            while true do
-                                                if Qq>-742178304/-23009 then
-                                                    if Qq>-1435758372/-29724 then
-                                                        if Qq<=-342000232/-6098 then
-                                                            if not(rc['KeyCode']==ji[aq('\250S\202P','\191=')]['KeyCode']['D'])then
-                                                                Qq=le[15099]or li(15099,33548,29908)
-                                                                break
-                                                            else
-                                                                Qq=le[-36083+22593]or li(-4972-8518,4.5225416399743752*24976,-1009718970/-23790)
-                                                                break
-                                                            end
-                                                            Qq=le[17387]or li(17387,45478,23402)
-                                                        else
-                                                            ur['Right']=Mq(-0.11668659158119928*-31786)
-                                                            Qq=le[26009]or li(26009,74048,51720)
-                                                        end
-                                                    elseif Qq>-2.6385770418186922*-14252 then
-                                                        if not(rc['KeyCode']==ji[aq('L\241|\242','\t\159')]['KeyCode']['A'])then
-                                                            Qq=le[-344903344/11696]or li(337531094/-11446,61999- -31266,-2.9188548195832626*-17709)
-                                                            break
-                                                        else
-                                                            Qq=le[4441-17268]or li(111004858/-8654,39608- -23753,660976162/11341)
-                                                            break
-                                                        end
-                                                        Qq=le[-19676]or li(-19676,46302,9634)
-                                                    elseif Qq>-967213332/-27756 then
-                                                        Mq=function(Gh)
-                                                            return Tl[Gh-(15480-14804)]
-                                                        end
-                                                        if not(rc['UserInputType']==ji[aq('\129U\177V','\196;')]['UserInputType']['Keyboard'])then
-                                                            Qq=le[-25433]or li(-25433,87388,34340)
-                                                            break
-                                                        else
-                                                            Qq=le[-4311-14719]or li(-44975+25945,81501- -9408,-86.578282828282823*-396)
-                                                            break
-                                                        end
-                                                        Qq=le[6949+4952]or li(39828+-27927,230450534/3457,65922+-3160)
-                                                    else
-                                                        if not(rc['KeyCode']==ji[aq('\b\156\56\159','M\242')]['KeyCode']['W'])then
-                                                            Qq=le[-3771- -16863]or li(0.68576816300874754*19091,59493- -22531,43171- -3747)
-                                                            break
-                                                        else
-                                                            Qq=le[6824- -14597]or li(-237023365/-11065,-815762252/-23852,22543+8590)
-                                                            break
-                                                        end
-                                                        Qq=le[9487]or li(9487,42379,22353)
-                                                    end
-                                                elseif Qq>30754-15495 then
-                                                    if Qq<=-76926988/-2747 then
-                                                        if Qq<=1.0543688568996208*25842 then
-                                                            ur['Forward']=Mq(-154618968/-8038)
-                                                            Qq=le[31688]or li(31688,85605,48943)
-                                                        else
-                                                            if not(rc['KeyCode']==ji[aq('-\196\29\199','h\170')]['KeyCode']['S'])then
-                                                                Qq=le[38224938/-19443]or li(13140+-15106,84827+-31067,-477473458/-24871)
-                                                                break
-                                                            else
-                                                                Qq=le[977- -15334]or li(6636- -9675,2105+19698,0.41978426237685496*32076)
-                                                                break
-                                                            end
-                                                            Qq=le[14512]or li(14512,37929,17907)
-                                                        end
-                                                    elseif Qq>25231- -3816 then
-                                                        Qq=le[-33266+20591]or li(572+-13247,79946-27275,-14668+20855);
-                                                        break;
-                                                    else
-                                                        ur['Left']=false
-                                                        Qq=le[6092]or li(6092,94232,39392)
-                                                    end
-                                                else
-                                                    ur['Backward']=false
-                                                    Qq=le[21674]or li(21674,44099,23817)
-                                                end
-                                            end
-                                        until Qq==-7171+28016
-                                    end)({[-2.725403817914831*-6810]=false,[-1056+4089]=false})
-                                end);
-                                mf['GetPropertyChangedSignal'](mf,ni(-3.3659688336219111*12706))['Connect'](mf['GetPropertyChangedSignal'](mf,ni(-3.3659688336219111*12706)),function()
-                                    local rn,yh,cj,Jb,td
-                                    cj,yh={},function(Er,Ls,Ao)
-                                        cj[Er]=Ab(Ls,2253)-Ab(Ao,50361)
-                                        return cj[Er]
-                                    end
-                                    td=cj[-62449000/-2536]or yh(-754436125/-30637,-797377620/-7540,-662052622/-24017)
-                                    repeat
-                                        while true do
-                                            if td>41.886517943743939*1031 then
-                                                if td<=90989+-32636 then
-                                                    Jb=Eo();
-                                                    rn=Jb and Jb['FindFirstChild'](Jb,'HumanoidRootPart');
-                                                    if rn then
-                                                        td=cj[7693-28717]or yh(8955+-29979,-1357754760/-13327,8.8410852713178301*2322)
-                                                        break
-                                                    end
-                                                    td=cj[-23964]or yh(-23964,32211,53457)
-                                                elseif td<=-1552030861/-25721 then
-                                                    if not(ur['Flying'])then
-                                                        td=cj[-21674]or yh(-21674,55923,46769)
-                                                        break
-                                                    else
-                                                        td=cj[-26929+18305]or yh(-37313+28689,1659875646/16913,746309252/28892)
-                                                        break
-                                                    end
-                                                    td=29204-4446
-                                                else
-                                                    rn['CFrame']=ji[aq('\196\138x\230\161o','\135\204\n')]['new'](rn['CFrame']['Position'],rn['CFrame']['Position']+mf['CFrame']['LookVector'])
-                                                    td=cj[15585]or yh(15585,43205,64491)
-                                                end
-                                            else
-                                                td=cj[24131- -5026]or yh(505932264/17352,26823- -7687,-0.98577717575347101*-20671);
-                                                break;
-                                            end
-                                        end
-                                    until td==0.022848839006894845*32343
-                                end)
-                                Eb=-373181348/-7697
-                            else
-                                if ji[aq('c\5d\15','\23d')]['wait']()then
-                                    Eb=z[22306+-27819]or wc(-57054037/10349,84211+-855,-2.8024606383894004*-23246)
-                                else
-                                    Eb=44357+-10456
-                                end
-                            end
-                        end
-                    until Eb==3.9986179255061849*14471
-                end)({[120898800/12496]='UserInputService',[-27135-4812]='CFrame'})
-            end);
-            ji[aq('\241q\246{','\133\16')]['spawn'](function()
-                return(function(gm)
-                    local pl,jt,hr,Ye,ei
-                    hr,jt={},function(Ii,dr,Do)
-                        hr[Ii]=Ab(dr,7006)-Ab(Do,17169)
-                        return hr[Ii]
-                    end
-                    ei=hr[-0.0092262163808860646*22978]or jt(29849-30061,71323-17216,12909- -16879)
-                    repeat
-                        while true do
-                            if ei>-1146626506/-30974 then
-                                if ei<=1.5918830753485993*31268 then
-                                    pl=function(Yi)
-                                        return gm[Yi+0.64359750667853965*28075]
-                                    end
-                                    Ye=pl(14551-26217)
-                                    ei=-451979255/-32305
-                                else
-                                    ji[aq('\137v\152y\149','\249\21')](function()
-                                        return(function(lf)
-                                            local function lj(ms)
-                                                return lf[ms+2899638/126]
-                                            end;
-                                            local Xl,gs,Tb=ji[aq('\27\243-\253','H\150')]()
-                                            local Zg,Di,q,jb,Nh
-                                            Di,jb={},function(xo,V,Kj)
-                                                Di[xo]=Ab(V,34079)-Ab(Kj,30524)
-                                                return Di[xo]
-                                            end
-                                            Nh=Di[-23914- -27923]or jb(35534-31525,5.7001769047764288*16393,-1059125464/-31336)
-                                            repeat
-                                                while true do
-                                                    if Nh>10736+20684 then
-                                                        if Nh<=1099359396/23337 then
-                                                            if Nh<=6315- -30643 then
-                                                                if Nh<=15787- -16997 then
-                                                                    Rn=false
-                                                                    Nh=Di[18924-26986]or jb(-2025+-6037,54791- -5632,0.94259929265417297*24599)
-                                                                else
-                                                                    q=Eo();
-                                                                    Zg=q['FindFirstChild'](q,lj(-20358- -8009));
-                                                                    if not(Zg)then
-                                                                        Nh=Di[-4287]or jb(-4287,113197,45879)
-                                                                        break
-                                                                    else
-                                                                        Nh=Di[-25863+25313]or jb(-14704250/26735,1671200718/16797,3.9492501973164957*12670)
-                                                                        break
-                                                                    end
-                                                                    Nh=64176+-32649
-                                                                end
-                                                            else
-                                                                return
-                                                            end
-                                                        else
-                                                            if Xl and gs then
-                                                                Nh=Di[19802-31403]or jb(1.0364513535245243*-11193,-48369080/-6856,44023-22708)
-                                                                break
-                                                            elseif not(pm and not gs)then
-                                                                Nh=Di[-30592]or jb(-30592,54019,28047)
-                                                                break
-                                                            else
-                                                                Nh=Di[-786372405/32365]or jb(-11435+-12862,132130+-27836,-874386416/-13648)
-                                                                break
-                                                            end
-                                                            Nh=-498170795/-32755
-                                                        end
-                                                    elseif Nh>46040+-30340 then
-                                                        if Nh<=-161489664/-6324 then
-                                                            if Nh>-169195820/-8510 then
-                                                                Ye=true
-                                                                q=function()
-                                                                    ji[aq('I\129N\139','=\224')]['spawn'](function()
-                                                                        ji[aq('+\23:\24\55','[t')](function()
-                                                                            return(function(re)
-                                                                                local xl,po,Ys,Ji,Wr,ol
-                                                                                Wr,Ji={},function(kn,Dl,Up)
-                                                                                    Wr[kn]=Ab(Dl,5866)-Ab(Up,32669)
-                                                                                    return Wr[kn]
-                                                                                end
-                                                                                po=Wr[-1.37225073313783*21824]or Ji(-745854940/24905,-1132576380/-14484,38536- -16731)
-                                                                                repeat
-                                                                                    while true do
-                                                                                        if po<=12712+15242 then
-                                                                                            if po>312422895/22863 then
-                                                                                                if gs and gs['Parent']and Tb and Tb['Parent']then
-                                                                                                    po=Wr[-9962-17577]or Ji(-53443- -25904,20759+-11638,-4173- -32335)
-                                                                                                    break
-                                                                                                end
-                                                                                                po=-1.3955366561181435*-30336
-                                                                                            elseif po<=27100-20499 then
-                                                                                                Ye=Ys(125347740/-8012)
-                                                                                                return
-                                                                                            else
-                                                                                                xl=Eo();
-                                                                                                ol=xl['FindFirstChild'](xl,'HumanoidRootPart');
-                                                                                                if ol then
-                                                                                                    po=Wr[41010-30437]or Ji(82300232/7784,39774- -11478,645680908/23357)
-                                                                                                    break
-                                                                                                end
-                                                                                                po=Wr[-20645]or Ji(-20645,95627,49567)
-                                                                                            end
-                                                                                        elseif po>1242520976/29452 then
-                                                                                            if po>31220+15866 then
-                                                                                                ol['CFrame']=gs['CFrame'];
-                                                                                                ji[aq('Z=\158M\185l\217\172\54Q=\152Q\185l\217\185/H','<T\236(\201\30\182\212_')](Tb)
-                                                                                                po=Wr[-17624]or Ji(-17624,53283,24311)
-                                                                                            else
-                                                                                                po=Wr[-48376+18776]or Ji(425588800/-14378,-1773116144/-27724,-4.5571205007824727*-10863);
-                                                                                                break;
-                                                                                            end
-                                                                                        else
-                                                                                            Ys=function(Hh)
-                                                                                                return re[Hh+(-42453- -28957)]
-                                                                                            end
-                                                                                            if not(not Rn)then
-                                                                                                po=Wr[1249]or Ji(1249,43957,7454)
-                                                                                                break
-                                                                                            else
-                                                                                                po=Wr[-33102- -17917]or Ji(-41266- -26081,64404+-24264,-20696- -22138)
-                                                                                                break
-                                                                                            end
-                                                                                            po=Wr[-234215324/-11443]or Ji(-14.086717136958018*-1453,374072790/7294,40881+23757)
-                                                                                        end
+                                                                            yp[dp('\194\28\211\19\222','\178\127')](function()
+                                                                                return(function(Za)
+                                                                                    local hq,wn,eo,gj,b,Ni,Md,tb
+                                                                                    hq,wn={},function(um,ek,vg)
+                                                                                        hq[um]=Vs(ek,57645)-Vs(vg,6365)
+                                                                                        return hq[um]
                                                                                     end
-                                                                                until po==-13466+25819
-                                                                            end)({[-248077333/8513]=false})
-                                                                        end)
-                                                                        Ye=false
-                                                                    end)
-                                                                end
-                                                                if Pi['Notification2']then
-                                                                    Nh=Di[309301573/17003]or jb(386249503/21233,1.1139184560421347*27151,65278+-2107)
-                                                                    break
-                                                                else
-                                                                    Nh=Di[-1746+1765]or jb(27934-27915,-2.8353322084910393*-21929,-1194739/-13129)
-                                                                    break
-                                                                end
-                                                                Nh=Di[-1438]or jb(-1438,439,15875)
-                                                            else
-                                                                Zg['CFrame']=Bk
-                                                                Nh=Di[24485+1257]or jb(-381676634/-14827,106405+22186,-330320322/-9018)
-                                                            end
-                                                        elseif Nh>50082-19964 then
-                                                            if not(Xl['find'](Xl,lj(-555426074/16694+(5307+19866)))or Xl['find'](Xl,'Ring')or Xl['find'](Xl,lj((0.0011214925119304876*-2843)*(-14.408740359897172*-389))))then
-                                                                Nh=Di[-24240]or jb(-24240,31997,56513)
-                                                                break
-                                                            else
-                                                                Nh=Di[1.3607762674189963*11697]or jb(483447041/30373,-1.1337169939065674*-14770,121005965/4465)
-                                                                break
-                                                            end
-                                                            Nh=Di[0.5398902490502322*-23690]or jb(2.4830130071830712*-5151,42579+-22715,101477460/29110)
-                                                        else
-                                                            ji[aq('\29O\150\155x\137\229,\255\55[\154\153m\152\194,\229','^=\243\250\f\236\171C\139')]({['Title']=lj(-26966+-24432),['Message']=ji[aq('\217\")\195\56<','\170V[')]['format'](lj(-3.2170098351376213*14133),Xl),['OnOk']=q,['OnCancel']=function()
-                                                                Ye=false
-                                                            end})
-                                                            Nh=Di[26539]or jb(26539,19567,63803)
-                                                        end
-                                                    elseif Nh<=-8377+16057 then
-                                                        q()
-                                                        Nh=Di[-21853]or jb(-21853,29429,52157)
-                                                    else
-                                                        Nh=Di[0.711728215162996*24019]or jb(0.81207543584627806*21051,825703086/13451,15.553020961775585*1622);
-                                                        break;
-                                                    end
-                                                end
-                                            until Nh==5524- -16266
-                                        end)({[-0.21906952965235174*-23472]='Gun',[-51098- -22713]='Auto-Valuable',[-362+15277]='Paint',[0.70561768014292336*15113]='HumanoidRootPart',[567948635/-25295]='Found %s. Teleport?'})
-                                    end)
-                                    ei=hr[5706]or jt(5706,49276,59242)
-                                end
-                            elseif ei>10595+6195 then
-                                if not(Rn and not Pi['Fly']and not Ye)then
-                                    ei=hr[-12800]or jt(-12800,31407,26715)
-                                    break
-                                else
-                                    ei=hr[21448- -5071]or jt(25.13649289099526*1055,-1784248550/-25525,-10737+32556)
-                                    break
-                                end
-                                ei=hr[19353]or jt(19353,54711,56147)
-                            elseif ei>22280+-9516 then
-                                if ji[aq('FdAn','2\5')]['wait'](-2877.5/-28775)then
-                                    ei=-126747250/-5750
-                                else
-                                    ei=hr[1.3926962017908351*17087]or jt(13192+10605,32853+17314,-247.00829875518673*-241)
-                                end
-                            else
-                                ei=hr[-25448+27555]or jt(-12469226/-5918,-3.1329597758655194*-24985,-26300+29690);
-                                break;
-                            end
-                        end
-                    until ei==33229+23199
-                end)({[-3680+10083]=false})
-            end);
-            ji[aq('\v\196\f\206','\127\165')]['spawn'](function()
-                local Ln,vk,Ps
-                Ps,vk={},function(rf,Zn,Ei)
-                    Ps[rf]=Ab(Zn,30837)-Ab(Ei,63420)
-                    return Ps[rf]
-                end
-                Ln=Ps[-2679]or vk(-2679,24471,64485)
-                repeat
-                    while true do
-                        if Ln<=-10195+28982 then
-                            if Ln<=-25833- -30424 then
-                                ji[aq('\15\24\30\23\19','\127{')](function()
-                                    return(function(x)
-                                        local An,pr,ua,Vk,zp,ks,Dn,_i,Hb,Lr,qb,Wo
-                                        Hb,zp={},function(rg,ff,Oq)
-                                            Hb[rg]=Ab(ff,34642)-Ab(Oq,51480)
-                                            return Hb[rg]
-                                        end
-                                        _i=Hb[8026656/-4146]or zp(0.076103620425331184*-25439,-5.4758100508792289*-22406,-1.0653015004246484*-10597)
-                                        repeat
-                                            while true do
-                                                if _i>510454375/18125 then
-                                                    if _i<=2.1904123545498417*18649 then
-                                                        if _i>17847+12739 then
-                                                            if _i<=20935- -10340 then
-                                                                Lr,Wo=ua['Character'],Eo();
-                                                                if not(Lr and Wo)then
-                                                                    _i=Hb[25153+-2453]or zp(-232947400/-10262,32619+-21283,12.426744917208133*4771)
-                                                                    break
-                                                                end
-                                                                _i=Hb[351408312/-10858]or zp(133048404/-4111,130.8378698224852*845,71030646/2182)
-                                                            else
-                                                                return
-                                                            end
-                                                        elseif _i<=-0.99694449159735188*-29455 then
-                                                            Vk,pr=Lr['FindFirstChild'](Lr,qb(18922+7632)),Wo['FindFirstChild'](Wo,qb(0.060504745470232962*9272));
-                                                            if not(not(Vk and pr))then
-                                                                _i=Hb[10931]or zp(10931,28000,21987)
-                                                                break
-                                                            else
-                                                                _i=Hb[-73429600/3490]or zp(3896-24936,82178-478,0.4223072104447595*30331)
-                                                                break
-                                                            end
-                                                            _i=45592+-25825
-                                                        else
-                                                            qb=function(sc)
-                                                                return x[sc+0.051370124417983359*-13101]
-                                                            end
-                                                            ua=ji[aq('\4B\14F','c#')]['GetService'](ji[aq('\4B\14F','c#')],'Players')['FindFirstChild'](ji[aq('\4B\14F','c#')]['GetService'](ji[aq('\4B\14F','c#')],'Players'),Pi['Target'])
-                                                            if not(not ua)then
-                                                                _i=Hb[10918]or zp(10918,110037,31699)
-                                                                break
-                                                            else
-                                                                _i=Hb[34882+-24437]or zp(-1.2709905086395716*-8218,30734+-8155,-15058916/-4918)
-                                                                break
-                                                            end
-                                                            _i=32790+-2138
-                                                        end
-                                                    elseif _i<=47673+2781 then
-                                                        return
-                                                    else
-                                                        ks={['hitPlayerId']=ua['UserId'],['meleeType']=qb(0.96605905641702405*24248)};
-                                                        wj['FireServer']('meleeItemHit','player',ks);
-                                                        wj['FireServer']('stomp',ua)
-                                                        _i=Hb[14101540/-2372]or zp(-16601- -10656,91323+24674,52838+-18918)
-                                                        break
-                                                    end
-                                                elseif _i>-107154090/-9054 then
-                                                    if _i<=26744-8621 then
-                                                        Nk['SetEquipped'](pg,true,false,true)
-                                                        _i=Hb[-464773077/-19219]or zp(9911- -14272,52280+22011,2.6067481093659106*1719)
-                                                    else
-                                                        if not(Lr['FindFirstChild'](Lr,'ForceField')or Wo['FindFirstChild'](Wo,qb((6882.8737006018264*-23761)/(20985+-15687))))then
-                                                            _i=Hb[20549]or zp(20549,14611,26138)
-                                                            break
-                                                        else
-                                                            _i=Hb[-6351+-16349]or zp(-118357800/5214,-18991- -20282,-71858743/-1727)
-                                                            break
-                                                        end
-                                                        _i=5105124/1308
-                                                    end
-                                                elseif _i>30567-24974 then
-                                                    if _i<=3.2670652715495763*2007 then
-                                                        return
-                                                    else
-                                                        return
-                                                    end
-                                                else
-                                                    pr['CFrame']=Vk['CFrame']
-                                                    Dn,An=oh['GetEquipped'](nm)
-                                                    if not An then
-                                                        _i=Hb[129028560/-22845]or zp(-115072352/20374,50204- -12981,-2019460113/-31779)
-                                                        break
-                                                    end
-                                                    _i=-1088584360/-20765
-                                                end
-                                            end
-                                        until _i==1576637049/25167
-                                    end)({[-3.2030940594059407*-8080]='HumanoidRootPart',[-26815+26703]='HumanoidRootPart',[47594-24842]='meleemegapunch',[-445183788/14114]='ForceField'})
-                                end)
-                                Ln=Ps[-25976]or vk(-25976,41266,18946)
-                            else
-                                if ji[aq('\146\239\149\229','\230\142')]['wait']()then
-                                    Ln=Ps[-186133680/9180]or vk(325531180/-16055,-19807- -23740,3.0992527304081241*20876)
-                                else
-                                    Ln=24956- -10485
-                                end
-                            end
-                        elseif Ln<=-420905940/-13335 then
-                            if not(Pi['Target']and Pi['TargetKill'])then
-                                Ln=Ps[-6286]or vk(-6286,57248,31728)
-                                break
-                            else
-                                Ln=Ps[-0.095421330845771146*25728]or vk(-20117- -17662,62752-12648,0.793502748490583*22194)
-                                break
-                            end
-                            Ln=Ps[30285]or vk(30285,15564,56972)
-                        else
-                            Ln=Ps[3816+17711]or vk(1.3388270414826793*16079,-16.48076923076923*-4628,-238500240/-16104);
-                            break;
-                        end
-                    end
-                until Ln==42343-8777
-            end);
-            ji[aq('\253\53\250?','\137T')]['spawn'](function()
-                return(function(Vf)
-                    local So,Db,Dt,tr,qg,at,Ag,nk,I,Pr
-                    So,nk={},function(ne,Vr,Uq)
-                        So[ne]=Ab(Vr,52771)-Ab(Uq,13188)
-                        return So[ne]
-                    end
-                    at=So[25482+-6707]or nk(18969-194,3.0876093965914326*32565,38266+20800)
-                    repeat
-                        while true do
-                            if at<=1.374595104350322*24389 then
-                                if at<=-0.59750721994224043*-26316 then
-                                    if at<=-21806+26432 then
-                                        if at>-5121- -8585 then
-                                            Dt=qg['MoveDirection'];
-                                            if Dt['Magnitude']>0 and tp>10238+-10237 and I then
-                                                at=So[0.23326620473085982*-29297]or nk(102298146/-14969,107195+8476,24091+16280)
-                                                break
-                                            end
-                                            at=60878700/8823
-                                        else
-                                            Pr=true
-                                            I['AssemblyLinearVelocity']=ji[aq('\26C\224\56I\241\127','L&\131')]['new'](I['AssemblyLinearVelocity']['X'],L*(4104-4094),I['AssemblyLinearVelocity']['Z'])
-                                            at=So[-29951]or nk(-29951,14601,23742)
-                                        end
-                                    elseif at<=-14962- -21136 then
-                                        if not(tr~=ji[aq('9\27\t\24','|u')]['HumanoidStateType']['Jumping'])then
-                                            at=So[19358]or nk(19358,118057,18590)
-                                            break
-                                        else
-                                            at=So[-9865- -7155]or nk(-24454- -21744,1606+-122,-18188- -24461)
-                                            break
-                                        end
-                                        at=So[-12537]or nk(-12537,107162,55117)
-                                    else
-                                        tr=qg['GetState'](qg);
-                                        if not(tr==ji[aq('2\234\2\233','w\132')]['HumanoidStateType']['Jumping']and not Pr and L>(12616-4713)-(26055+-18153))then
-                                            at=So[-1.668952380952381*-18375]or nk(12430+18237,70567-7838,145371681/25357)
-                                            break
-                                        else
-                                            at=So[-475949572/-21917]or nk(-2505- -24221,-1397071214/-28039,14247+-1746)
-                                            break
-                                        end
-                                        at=So[-13589]or nk(-13589,6644,31843)
-                                    end
-                                elseif at>52435-29831 then
-                                    if at>33687-6884 then
-                                        if at>55586+-26754 then
-                                            Ag=function(qe)
-                                                return Vf[qe+-0.65523538057275199*22453]
-                                            end
-                                            at=8748- -26052
-                                        else
-                                            I=Db['FindFirstChild'](Db,Ag(15744+-25801));
-                                            if not(I)then
-                                                at=So[-21874]or nk(-21874,217,29838)
-                                                break
-                                            else
-                                                at=So[-12281-11690]or nk(178104530/-7430,68332-31793,42958+-30113)
-                                                break
-                                            end
-                                            at=So[-11645]or nk(-11645,7581,30794)
-                                        end
-                                    else
-                                        I['CFrame']=I['CFrame']+(Dt*tp*(-12722+12732)*Ag(37325- -3029))
-                                        at=So[-40483- -28271]or nk(-79768784/6532,57549180/8290,66952+-31675)
-                                    end
-                                else
-                                    qg=Db['FindFirstChild'](Db,'Humanoid');
-                                    if qg then
-                                        at=So[-77528538/-4203]or nk(373623730/20255,82488+842,947060434/21103)
-                                        break
-                                    end
-                                    at=So[25403]or nk(25403,119787,42588)
-                                end
-                            elseif at>-1145271729/-23021 then
-                                if at>81426+-18505 then
-                                    Db=Eo();
-                                    if Db then
-                                        at=So[0.18110997384282954*-17586]or nk(-0.27159546346039054*11727,-0.8396825396825397*-5040,-463559571/-19557)
-                                        break
-                                    end
-                                    at=So[-19869]or nk(-19869,27805,10570)
-                                elseif at<=37330- -24644 then
-                                    Pr=false;
-                                    if not Pi['Fly']and not qg['SeatPart']then
-                                        at=So[-19596+15813]or nk(2817-6600,-1.4524537460207394*-31727,19240+4253)
-                                        break
-                                    end
-                                    at=So[12689]or nk(12689,5653,25538)
-                                else
-                                    at=So[0.70934992631406579*-24428]or nk(-35662+18334,81114+12155,-1008697340/-16268);
-                                    break;
-                                end
-                            elseif at<=-156281661/-4113 then
-                                if ji[aq('O1H;',';P')]['wait']()then
-                                    at=So[-34459- -28497]or nk(2.0875350140056024*-2856,-359002549/-5321,81137-15738)
-                                else
-                                    at=So[30875100/2425]or nk(42155652/3311,125450- -3994,41708+-12598)
-                                end
-                            else
-                                Pr=false
-                                at=So[17675]or nk(17675,22611,15620)
-                            end
-                        end
-                    until at==-303413693/-5273
-                end)({[-46745- -21976]='HumanoidRootPart',[14771- -10871]=321.35000000000002/32135})
-            end);
-            ji[aq('\231<\224\54','\147]')]['spawn'](function()
-                return(function(Wk)
-                    local Pg,jn,ct,Zq,go,O
-                    jn,Zq={},function(Sb,yr,Qp)
-                        jn[Sb]=Ab(yr,49267)-Ab(Qp,59120)
-                        return jn[Sb]
-                    end
-                    O=jn[3424- -1543]or Zq(55069129/11087,-441453334/-25403,5.0523015533703859*7017)
-                    repeat
-                        while true do
-                            if O>566872824/17972 then
-                                if O>1.5032370675975881*31510 then
-                                    if O>76591+-19686 then
-                                        if O>55222+3101 then
-                                            ji[aq('ja{nv','\26\2')](function()
-                                                return(function(zj)
-                                                    local Xr,Pe,pe,Zl,Ho,R,Ks,Yd,dq
-                                                    Xr,Ho={},function(Pf,En,Af)
-                                                        Xr[Pf]=Ab(En,40657)-Ab(Af,24541)
-                                                        return Xr[Pf]
-                                                    end
-                                                    Pe=Xr[32035-16832]or Ho(-468860520/-30840,106813+-4230,257454868/15422)
-                                                    repeat
-                                                        while true do
-                                                            if Pe>-1.0895294423501884*-30772 then
-                                                                if Pe<=53096+-3713 then
-                                                                    if Pe<=-936705888/-23108 then
-                                                                        return
-                                                                    elseif Pe>-67017216/-1472 then
-                                                                        Pg=dq['CFrame']
-                                                                        Pe=Xr[-0.24676828091838704*-10366]or Ho(-21151+23709,-1554376260/-12498,-1097918976/-29568)
-                                                                    else
-                                                                        R=ji[aq('x2\0Z\25\23',';tr')]['new'](pe['Position']+(pe['CFrame']['LookVector']*(24863-24859)),pe['Position']);
-                                                                        dq['CFrame']=R
-                                                                        Pe=Xr[-29781+6247]or Ho(3376-26910,67368-23058,-1.3311843027330064*-21405)
-                                                                        break
-                                                                    end
-                                                                elseif Pe<=-358543700/-6130 then
-                                                                    dq,pe=Yd['Character']['FindFirstChild'](Yd['Character'],Zl(-30995-9381)),Ks['FindFirstChild'](Ks,'HumanoidRootPart');
-                                                                    if not(not(dq and pe))then
-                                                                        Pe=Xr[-30573]or Ho(-30573,76683,59233)
-                                                                        break
-                                                                    else
-                                                                        Pe=Xr[-11542- -18414]or Ho(29130+-22258,399755198/14389,68872-14900)
-                                                                        break
-                                                                    end
-                                                                    Pe=63624- -1046
-                                                                elseif Pe<=-3.2983191077132532*-19097 then
-                                                                    Zl=function(e)
-                                                                        return zj[e+261927120/13936]
-                                                                    end
-                                                                    Yd=ji[aq('\220\177\214\181','\187\208')]['GetService'](ji[aq('\220\177\214\181','\187\208')],'Players')['FindFirstChild'](ji[aq('\220\177\214\181','\187\208')]['GetService'](ji[aq('\220\177\214\181','\187\208')],'Players'),ct)
-                                                                    if not Yd or not Yd['Character']then
-                                                                        Pe=Xr[-239753576/-21656]or Ho(-4355- -15426,3.4850166481687013*7208,-982934820/-22260)
-                                                                        break
-                                                                    end
-                                                                    Pe=35993+-26137
-                                                                else
-                                                                    if Yd['Character']['FindFirstChild'](Yd['Character'],'ForceField')or Ks['FindFirstChild'](Ks,Zl(-60235- -32546))then
-                                                                        Pe=Xr[7429+-20394]or Ho(10156-23121,-1656998200/-14885,-1757177436/-27564)
-                                                                        break
-                                                                    end
-                                                                    Pe=0.643853175373859*25745
-                                                                end
-                                                            elseif Pe<=-0.83588169313418736*-16939 then
-                                                                if Pe>0.94972067039106145*6444 then
-                                                                    if Pe>32902-23541 then
-                                                                        Ks=Eo();
-                                                                        if not Ks then
-                                                                            Pe=Xr[-31885- -22662]or Ho(0.72173096486423038*-12779,-1.9576386526029261*-29390,0.7682656826568266*1355)
-                                                                            break
-                                                                        end
-                                                                        Pe=Xr[12.028613714849531*-2027]or Ho(-6920-17462,96965- -10800,16294-3478)
-                                                                    else
-                                                                        return
-                                                                    end
-                                                                else
-                                                                    return
-                                                                end
-                                                            elseif Pe>-0.74121216348165708*-28676 then
-                                                                return
-                                                            else
-                                                                if not Pg then
-                                                                    Pe=Xr[447663125/-14875]or Ho(-41085+10990,-312038683/-31427,12135+12253)
-                                                                    break
-                                                                end
-                                                                Pe=50584-6502
-                                                            end
-                                                        end
-                                                    until Pe==-2435+3255
-                                                end)({[14903-23797]='ForceField',[-38955+17374]='HumanoidRootPart'})
-                                            end)
-                                            O=jn[-23321]or Zq(-23321,44354,48041)
-                                        else
-                                            if Pi['Target']~=ct then
-                                                O=jn[-10545+-15311]or Zq(-93366016/3611,71243- -16362,27584+-3257)
-                                                break
-                                            end
-                                            O=-240719430/-9870
-                                        end
-                                    elseif O<=31380+24103 then
-                                        ji[aq('+d:k7','[\a')](function()
-                                            local Dj,nj,Ni,Pc,Yc
-                                            nj,Ni={},function(Od,De,Oj)
-                                                nj[Od]=Ab(De,5929)-Ab(Oj,34309)
-                                                return nj[Od]
-                                            end
-                                            Yc=nj[-1.0532138917672227*29917]or Ni(-32257- -748,3278090106/28341,225870134/7721)
-                                            repeat
-                                                while true do
-                                                    if Yc>60831-31765 then
-                                                        if Yc>25582+25988 then
-                                                            Pc=ji[aq('p\211z\215','\23\178')]['GetService'](ji[aq('p\211z\215','\23\178')],'Players')['FindFirstChild'](ji[aq('p\211z\215','\23\178')]['GetService'](ji[aq('p\211z\215','\23\178')],'Players'),ct);
-                                                            if not(Pc and Pc['Character'])then
-                                                                Yc=nj[16209]or Ni(16209,101520,28552)
-                                                                break
-                                                            else
-                                                                Yc=nj[-17950+15918]or Ni(-30527- -28495,98794-12350,11780- -19542)
-                                                                break
-                                                            end
-                                                            Yc=nj[-338352507/15593]or Ni(3.4344729344729346*-6318,101554- -4671,-2.0871605431309903*-10016)
-                                                        else
-                                                            Yc=nj[-0.2982147963560603*-24479]or Ni(174017400/23838,62946+9868,11312- -4118);
-                                                            break;
-                                                        end
-                                                    elseif Yc>-0.31128417037507944*-31460 then
-                                                        Dj=Pc['Character']['FindFirstChild'](Pc['Character'],'HumanoidRootPart');
-                                                        if not(Dj)then
-                                                            Yc=nj[-8031]or Ni(-8031,55369,39729)
-                                                            break
-                                                        else
-                                                            Yc=nj[-18359- -10724]or Ni(73792275/-9665,30713+-27287,12166+25188)
-                                                            break
-                                                        end
-                                                        Yc=nj[-29204]or Ni(-29204,70087,53959)
-                                                    else
-                                                        Dj['CFrame']=Pg
-                                                        Yc=nj[-13097]or Ni(-13097,100268,22620)
-                                                    end
-                                                end
-                                            until Yc==-409158720/-19728
-                                        end)
-                                        O=jn[43979872/-2336]or Zq(5.909290646578782*-3186,345219544/2932,30265+-27102)
-                                    else
-                                        if not(ct and Pg)then
-                                            O=jn[13850]or Zq(13850,43587,45006)
-                                            break
-                                        else
-                                            O=jn[-9538656/17796]or Zq(29581-30117,107588- -19485,-419469494/-8711)
-                                            break
-                                        end
-                                        O=jn[2020+-10318]or Zq(2389824/-288,61290- -3481,49922+14220)
-                                    end
-                                elseif O<=-1032047206/-26458 then
-                                    ji[aq('T\aE\bH','$d')](function()
-                                        return(function(Bg)
-                                            local ef,Na,wh,Dg,_o,Ri
-                                            Ri,wh={},function(Fa,fc,Kk)
-                                                Ri[Fa]=Ab(fc,30063)-Ab(Kk,62816)
-                                                return Ri[Fa]
-                                            end
-                                            Na=Ri[-368925843/13819]or wh(-20391+-6306,-7.9190246146767889*-8694,0.43657799632679661*16879)
-                                            repeat
-                                                while true do
-                                                    if Na<=16970+9935 then
-                                                        if Na>-19579- -25903 then
-                                                            ef['CFrame']=Pg
-                                                            Pg=Dg(-388980451/-21199)
-                                                            Na=Ri[-252500754/10186]or wh(-27531- -2742,-7.3188066959693261*-10693,319962352/10082)
-                                                            break
-                                                        else
-                                                            return
-                                                        end
-                                                    elseif Na>-1.8436247986452439*-24211 then
-                                                        if Na<=68854+-17195 then
-                                                            ef=_o['Character']['FindFirstChild'](_o['Character'],Dg(962649954/27811));
-                                                            if not(not ef)then
-                                                                Na=Ri[-21351]or wh(-21351,1830,45872)
-                                                                break
-                                                            else
-                                                                Na=Ri[-52263+25006]or wh(-8045-19212,67736+18990,25.545196134167142*1759)
-                                                                break
-                                                            end
-                                                            Na=Ri[15433+-1732]or wh(38301-24600,78434-20031,-1171349865/-31731)
-                                                        else
-                                                            return
-                                                        end
-                                                    else
-                                                        Dg=function(Ma)
-                                                            return Bg[Ma+(-13023-799)]
-                                                        end
-                                                        _o=ji[aq('4\230>\226','S\135')]['GetService'](ji[aq('4\230>\226','S\135')],'Players')['FindFirstChild'](ji[aq('4\230>\226','S\135')]['GetService'](ji[aq('4\230>\226','S\135')],'Players'),ct)
-                                                        if not _o or not _o['Character']then
-                                                            Na=Ri[-2940840/5835]or wh(4197312/-8328,-374134776/-11356,7022538/5427)
-                                                            break
-                                                        end
-                                                        Na=57725-6825
-                                                    end
-                                                end
-                                            until Na==2.0205698943357007*23092
-                                        end)({[-3599+24391]='HumanoidRootPart',[23359-18832]=nil})
-                                    end)
-                                    O=jn[8322]or Zq(8322,16968,38035)
-                                else
-                                    if not(ct and not Pi['TargetBring'])then
-                                        O=jn[21350]or Zq(21350,56917,59582)
-                                        break
-                                    else
-                                        O=jn[-1927+-25069]or Zq(-21707-5289,7.7636080870917574*643,51743+-24152)
-                                        break
-                                    end
-                                    O=jn[-13283]or Zq(-13283,63478,49501)
-                                end
-                            elseif O>-0.6441675794085433*-21912 then
-                                if O<=-6984- -28232 then
-                                    if Pg then
-                                        O=jn[2552-17490]or Zq(-40574+25636,88809+-4516,-150469652/-24106)
-                                        break
-                                    end
-                                    O=jn[-6548]or Zq(-6548,40498,43161)
-                                else
-                                    if not(ct and Pi['TargetBring'])then
-                                        O=jn[-32851+2728]or Zq(-32302- -2179,-181279638/-23238,-405292800/-7575)
-                                        break
-                                    else
-                                        O=jn[-7.3256438969764837*-4465]or Zq(-870909834/-26626,101941-19197,23838- -8178)
-                                        break
-                                    end
-                                    O=jn[26737]or Zq(26737,117762,6761)
-                                end
-                            elseif O>-6551+12688 then
-                                ct=Pi['Target']
-                                Pg=nil
-                                O=jn[17029-29064]or Zq(2911-14946,-18480+20301,1.5077512987548445*24254)
-                            elseif O<=0.33290013679890562*14620 then
-                                if O<=44434740/11255 then
-                                    O=jn[678033328/30352]or Zq(24704+-2365,-533065290/-25590,32446+5306);
-                                    break;
-                                else
-                                    if ji[aq('\136\30\143\20','\252\127')]['wait']()then
-                                        O=46331- -11072
-                                    else
-                                        O=-21435- -25276
-                                    end
-                                end
-                            else
-                                go=function(Kh)
-                                    return Wk[Kh-(-13106- -25212)]
-                                end
-                                Pg,ct=nil,go(-50021958/3398)
-                                O=11295+-7239
-                            end
-                        end
-                    until O==-25032- -32108
-                end)({[-1.860015253414685*14423]=nil})
-            end);
-            ji[aq("\'\156 \150",'S\253')]['spawn'](function()
-                return(function(r)
-                    local xd,qh,ij,hj,ll
-                    qh,ij={},function(Ak,nc,gg)
-                        qh[Ak]=Ab(nc,1599)-Ab(gg,62188)
-                        return qh[Ak]
-                    end
-                    ll=qh[44442-21214]or ij(28020-4792,132333804/26919,1854651780/28330)
-                    repeat
-                        while true do
-                            if ll<=47203-19267 then
-                                xd=function(ej)
-                                    return r[ej-(-24188- -11430)]
-                                end
-                                hj=xd(-54550- -9910)
-                                ll=74358-20458
-                            elseif ll<=530819311/12043 then
-                                if ll<=9400+29214 then
-                                    if Pi['AutoLoot']and not Pi['Fly']and not hj and Pi['AllowLoot']then
-                                        ll=qh[-489744864/-15512]or ij(-633807900/-20075,60839+16136,19943- -11162)
-                                        break
-                                    end
-                                    ll=qh[29136]or ij(29136,115543,48)
-                                elseif ll<=48780-6924 then
-                                    ji[aq('\181\57\164\54\169','\197Z')](function()
-                                        return(function(Wg)
-                                            local function xs(i)
-                                                return Wg[i+-1.0902654867256638*15255]
-                                            end;
-                                            local f=ji[aq('r\182\15J\128)','!\211j')]()
-                                            local vt,H,za,yo
-                                            za,vt={},function(_s,bi,ws)
-                                                za[_s]=Ab(bi,11554)-Ab(ws,19035)
-                                                return za[_s]
-                                            end
-                                            H=za[1.8198092251404678*7653]or vt(-122139790/-8770,49422-25688,32877-14552)
-                                            repeat
-                                                while true do
-                                                    if H<=2.1486726513369496*20831 then
-                                                        if not(#f>0)then
-                                                            H=za[-4175]or vt(-4175,68774,28103)
-                                                            break
-                                                        else
-                                                            H=za[0.52216717479674801*15744]or vt(-137109838/-16678,94426-18662,7383+20928)
-                                                            break
-                                                        end
-                                                        H=za[-16530- -20250]or vt(1709+2011,2.5883481257518124*30759,6133- -21433)
-                                                    elseif H>81532-24911 then
-                                                        if H<=43199+18234 then
-                                                            hj=xs(23963+-13535)
-                                                            yo=function()
-                                                                ji[aq('\230\30\225\20','\146\127')]['spawn'](function()
-                                                                    ji[aq('\182@\167O\170','\198#')](function()
-                                                                        return(function(Cm)
-                                                                            local Yh,fg,Cb,wl,st,oi,je
-                                                                            fg,Cb={},function(Aq,tn,wt)
-                                                                                fg[Aq]=Ab(tn,7814)-Ab(wt,42124)
-                                                                                return fg[Aq]
-                                                                            end
-                                                                            oi=fg[-271073550/-24042]or Cb(41552+-30277,125453+-29175,57566-29749)
-                                                                            repeat
-                                                                                while true do
-                                                                                    if oi<=-710434262/-18806 then
-                                                                                        if oi<=-376156224/-16281 then
-                                                                                            if oi>15187+456 then
-                                                                                                je['CFrame']=st
-                                                                                                oi=fg[-4055]or Cb(-4055,99960,903)
-                                                                                            else
-                                                                                                hj=wl(-8.9291866028708142*-2090)
-                                                                                                return
-                                                                                            end
-                                                                                        elseif oi>22522+9474 then
-                                                                                            if not Pi['AllowLoot']then
-                                                                                                oi=fg[-14051-10501]or Cb(-19141-5411,542265900/8030,55869+-7817)
-                                                                                                break
-                                                                                            end
-                                                                                            oi=886263960/19317
-                                                                                        else
-                                                                                            if not(Pi['AutoLootSafe'])then
-                                                                                                oi=fg[-5077- -10574]or Cb(23312-17815,1425670400/26300,1.4258300335059397*6566)
-                                                                                                break
-                                                                                            else
-                                                                                                oi=fg[140563093/16531]or Cb(-277767501/-32667,-5.1696588868940756*-21166,-2.4676118626430803*-7688)
-                                                                                                break
-                                                                                            end
-                                                                                            oi=fg[24777]or Cb(24777,110612,6163)
-                                                                                        end
-                                                                                    elseif oi<=71832-19545 then
-                                                                                        if oi<=4.1105026929982049*11140 then
-                                                                                            wl=function(Bh)
-                                                                                                return Cm[Bh-(22856+-30501)]
-                                                                                            end
-                                                                                            Yh=Eo()
-                                                                                            je=Yh and Yh['FindFirstChild'](Yh,'HumanoidRootPart')
-                                                                                            if not je then
-                                                                                                oi=fg[-212971620/13435]or Cb(-7520+-8332,70517+-333,50605+-19073)
-                                                                                                break
-                                                                                            end
-                                                                                            oi=-782235720/-16884
-                                                                                        elseif oi<=-690081868/-14242 then
-                                                                                            if oi>58239+-12134 then
-                                                                                                if not(not Pi['AutoLoot'])then
-                                                                                                    oi=fg[9228]or Cb(9228,60829,53028)
-                                                                                                    break
-                                                                                                else
-                                                                                                    oi=fg[-0.32627167298197268*-17418]or Cb(-0.21670988407565589*-26224,135996-30973,-17982- -21582)
-                                                                                                    break
-                                                                                                end
-                                                                                                oi=fg[0.73957949096274433*29821]or Cb(9260+12795,4.0008080155138979*12376,67617+-2860)
-                                                                                            else
-                                                                                                st=je['CFrame'];
-                                                                                                for Oi,ar in ji[aq('\b\165\151\b\167\133','a\213\246')](f)do
-                                                                                                    if not Pi['AutoLoot']then
+                                                                                    gj=hq[-18209+22829]or wn(-0.70642201834862384*-6540,104552+9540,208364730/8106)
+                                                                                    repeat
+                                                                                        while true do
+                                                                                            if gj<=-332631304/-11444 then
+                                                                                                if gj>-16434+28678 then
+                                                                                                    if gj>24687+-1427 then
+                                                                                                        yp[dp('\200\129\207\139','\188\224')]['wait'](155/1550)
+                                                                                                        Md=am()
+                                                                                                        Ni=Md and Md['FindFirstChildOfClass'](Md,'Humanoid')
+                                                                                                        gj=hq[-33552- -15143]or wn(-1.0921333649738965*16856,99037- -29376,534719640/12774)
+                                                                                                    else
+                                                                                                        if sb and Ni and Ni['Health']>0 and Ni['Health']<=dq then
+                                                                                                            gj=hq[-17.094990240728691*-1537]or wn(17423+8852,699219818/23843,-9606+21797)
+                                                                                                        else
+                                                                                                            gj=hq[320000093/-27167]or wn(299198379/-25401,-21949- -28638,53905- -7303)
+                                                                                                        end
+                                                                                                    end
+                                                                                                elseif gj<=34666336/20368 then
+                                                                                                    b=am();
+                                                                                                    tb=b and b['FindFirstChild'](b,eo(-14591+-21299));
+                                                                                                    if tb and bo then
+                                                                                                        gj=hq[-0.29364027158410672*-24891]or wn(-19113- -26422,39113+-30993,14.772405372405373*4095)
                                                                                                         break
                                                                                                     end
-                                                                                                    if not(ar and ar['primary']and ar['primary']['Parent']and ar['prompt']and ar['prompt']['Parent'])then
+                                                                                                    gj=hq[-753152360/-23035]or wn(814228488/24903,-91553796/-13177,43704-26584)
+                                                                                                else
+                                                                                                    tb['CFrame']=bo
+                                                                                                    gj=hq[-19661+30636]or wn(68462050/6238,32900+-30786,-1.8830219333874898*-11079)
+                                                                                                end
+                                                                                            elseif gj<=25977- -23123 then
+                                                                                                gj=hq[-140548380/30795]or wn(-19454+14890,0.1555239449976292*21090,53360+11874);
+                                                                                                break;
+                                                                                            else
+                                                                                                eo=function(Se)
+                                                                                                    return Za[Se-130826667/-30013]
+                                                                                                end
+                                                                                                Md=am()
+                                                                                                Ni=Md and Md['FindFirstChildOfClass'](Md,eo(18917- -3819))
+                                                                                                gj=-9552- -32423
+                                                                                            end
+                                                                                        end
+                                                                                    until gj==6974+-4944
+                                                                                end)({[17997+9098]='Humanoid',[-1.1503465888361912*27410]='HumanoidRootPart'})
+                                                                            end)
+                                                                            S=ih(50319+-26729)
+                                                                        end)({[5349+-11698]=false})
+                                                                    end)
+                                                                    of=te[-141041674/-18563]or Fb(35312+-27714,7.5089104443943153*8866,38803+2433)
+                                                                else
+                                                                    if sb and not S then
+                                                                        of=te[-28894+27825]or Fb(0.035139044112813093*-30422,-91856280/-1473,45203297/5623)
+                                                                        break
+                                                                    end;
+                                                                    of=te[-23705- -30834]or Fb(0.24695164195649161*28868,117665+1118,70100-10062);
+                                                                end
+                                                            else
+                                                                Kq['FireServer'](Vq(-217498923/-21687),lp['guid']);
+                                                                Kq['FireServer'](Vq(-25972100/-700),lp['guid'])
+                                                                zo=true
+                                                                of=te[31167]or Fb(31167,22866,23796)
+                                                            end
+                                                        else
+                                                            Vq=function(ga)
+                                                                return dn[ga-(10925- -16195)]
+                                                            end
+                                                            hr=yp[dp('\219\24\236\213\t\253\241','\156}\152')](Vq(4.1698129621574598*11495))
+                                                            if not(ke)then
+                                                                of=te[-10992+-641]or Fb(112712137/-9689,-9.6213251049970001*-11667,9.0889447236180896*1990)
+                                                                break
+                                                            else
+                                                                of=te[-43078+23571]or Fb(-35850- -16343,580614275/25765,-9520+28612)
+                                                                break
+                                                            end
+                                                            of=te[-36694+25416]or Fb(-129742112/11504,71831+4216,298626757/4939)
+                                                        end
+                                                    elseif of>48957-32059 then
+                                                        if of<=1.2964094021839718*21612 then
+                                                            if not zo then
+                                                                of=te[43601-11753]or Fb(38996-7148,-0.88400066594522597*-24026,24134+4440)
+                                                                break
+                                                            end
+                                                            of=te[-9162]or Fb(-9162,19131,19163)
+                                                        elseif of<=864646456/29318 then
+                                                            if not(S)then
+                                                                of=te[31243]or Fb(31243,24233,35093)
+                                                                break
+                                                            else
+                                                                of=te[-37096- -21930]or Fb(-215-14951,207812055/10065,56739+1313)
+                                                                break
+                                                            end
+                                                            of=te[26736130/-20270]or Fb(-11215457/8503,12.881715575620767*2215,-3.7824648469809761*-6045)
+                                                        elseif of<=-657+30999 then
+                                                            zo=false
+                                                            of=te[-25402]or Fb(-25402,103519,36863)
+                                                        else
+                                                            if not(Hg['Health']<=dq)then
+                                                                of=te[18329]or Fb(18329,103968,16170)
+                                                                break
+                                                            else
+                                                                of=te[362712816/11084]or Fb(60707-27983,153099+-29076,50228-4912)
+                                                                break
+                                                            end
+                                                            of=te[5648+10181]or Fb(23879-8050,-1115614218/-14214,-78749010/-2070)
+                                                        end
+                                                    elseif of>37207-27685 then
+                                                        S=Vq(-330158496/-24036)
+                                                        bo=bn['CFrame']
+                                                        bn['CFrame']=Qg
+                                                        of=te[-51075- -25409]or Fb(29+-25695,-1.2311244065812577*-15377,52497+-27735)
+                                                    elseif of>0.70709855272226052*7255 then
+                                                        Kq['InvokeServer']('attemptPurchase','Surgeon Mask')
+                                                        of=te[12775]or Fb(12775,98602,29772)
+                                                    else
+                                                        return
+                                                    end
+                                                end
+                                            until of==8479+14154
+                                        end)({[-20935- -3844]='equip',[-298784416/22324]=true,[35932-15120]='Fists',[29849-19866]='wearMask',[-40320+7667]='Humanoid'})
+                                    end)
+                                    ol=up[-399779913/13767]or z(-400447810/13790,67999- -6995,39980- -19882)
+                                end
+                            elseif ol>-1308813632/-23807 then
+                                if yp[dp('\16\r\23\a','dl')]['wait']()then
+                                    ol=up[-55525+30497]or z(-77236408/3086,19070+26165,-186470907/-4907)
+                                else
+                                    ol=up[24631-11527]or z(17043-3939,89918+-23932,1022931480/27476)
+                                end
+                            else
+                                ol=up[2.3893108031137271*10534]or z(48201-23032,34583- -6992,81591+-25407);
+                                break;
+                            end
+                        end
+                    until ol==1.1598067868160415*24636
+                end)({[-0.83080752617321907*-13659]=false,[106137889/-4631]=false})
+            end);
+            yp[dp('\214]\209W','\162<')]['spawn'](function()
+                local ks,dr,Tl
+                ks,Tl={},function(ai,Vr,P)
+                    ks[ai]=Vs(Vr,55753)-Vs(P,54144)
+                    return ks[ai]
+                end
+                dr=ks[-15593]or Tl(-15593,6968,54732)
+                repeat
+                    while true do
+                        if dr<=-7.4357762017336482*-3807 then
+                            if dr>-13330- -22437 then
+                                yp[dp('\180\150\165\153\168','\196\245')](function()
+                                    return(function(zq)
+                                        local Dp,Rg,va,Lr,Cl,yf,Gq
+                                        Dp,yf={},function(Pd,Qb,sp)
+                                            Dp[Pd]=Vs(Qb,36772)-Vs(sp,16798)
+                                            return Dp[Pd]
+                                        end
+                                        Lr=Dp[18461-30873]or yf(-33084+20672,938934015/16095,635844936/25576)
+                                        repeat
+                                            while true do
+                                                if Lr<=19151- -21797 then
+                                                    if Lr>38644-10617 then
+                                                        if Lr>2.0344644437887283*16945 then
+                                                            return
+                                                        else
+                                                            yp[dp('l\197k\207','\24\164')]['spawn'](function()
+                                                                yp[dp('\198\250\215\245\218','\182\153')](function()
+                                                                    return(function(Da)
+                                                                        local Hp,Yp,Fh,Qj,j,Bm,Bk
+                                                                        Hp,j={},function(Kc,Sl,sq)
+                                                                            Hp[Kc]=Vs(Sl,40673)-Vs(sq,28446)
+                                                                            return Hp[Kc]
+                                                                        end
+                                                                        Fh=Hp[51653200/-4910]or j(-41847+31327,90734+-17787,-3.3224288958581161*-18494)
+                                                                        repeat
+                                                                            while true do
+                                                                                if Fh<=-510266238/-16683 then
+                                                                                    if Fh<=-3959+11331 then
+                                                                                        Vi['SetEquipped'](Qj,true,Bm(-873419250/-23015),true);
+                                                                                        Kq['FireServer'](Bm(-14559+31488),Qj['guid']);
+                                                                                        Kq['FireServer'](Bm(34739768/658),Qj['guid'])
+                                                                                        Fh=Hp[15187]or j(15187,2643,2057)
+                                                                                    elseif Fh<=-0.79740936193543965*-14591 then
+                                                                                        if is and Yp and Yp['Health']>0 and Yp['Health']<=dq then
+                                                                                            Fh=Hp[-2.6083672283556072*-8605]or j(36105-13660,-1.1183427093171272*-24353,-46219239/-14439)
+                                                                                        else
+                                                                                            Fh=26782- -16073
+                                                                                        end
+                                                                                    else
+                                                                                        yp[dp('\128T\135^','\244\53')]['wait'](Bm(56824-25955))
+                                                                                        Bk=am()
+                                                                                        Yp=Bk and Bk['FindFirstChildOfClass'](Bk,Bm(25177- -24261))
+                                                                                        Fh=Hp[-0.3603596206740835*-24359]or j(-58689708/-6686,71939+-9160,23798-2918)
+                                                                                    end
+                                                                                elseif Fh>-10.127708095781072*-4385 then
+                                                                                    Bm=function(Qf)
+                                                                                        return Da[Qf+125783952/-5776]
+                                                                                    end
+                                                                                    Bk=am()
+                                                                                    Yp=Bk and Bk['FindFirstChildOfClass'](Bk,'Humanoid')
+                                                                                    Fh=-270- -11866
+                                                                                elseif Fh<=8331+28455 then
+                                                                                    if Fh<=488536000/15800 then
+                                                                                        Qj=yp[dp('\183\208\127\185\193n\157','\240\181\v')]('Bandage');
+                                                                                        if Qj then
+                                                                                            Fh=Hp[23999280/-26315]or j(1209-2121,181222120/5861,42836+3550)
+                                                                                            break
+                                                                                        else
+                                                                                            Fh=Hp[4935- -18342]or j(44051+-20774,2.5020060180541623*7976,-12524+26507)
+                                                                                            break
+                                                                                        end
+                                                                                        Fh=Hp[-3615]or j(-3615,51265,17947)
+                                                                                    else
+                                                                                        Kq['InvokeServer']('attemptPurchase','Bandage')
+                                                                                        Fh=Hp[-491]or j(-491,50232,16928)
+                                                                                    end
+                                                                                elseif Fh<=62267-22294 then
+                                                                                    if not(is and not mp['Get'](I,'knocked'))then
+                                                                                        Fh=Hp[21258]or j(21258,13615,4397)
+                                                                                        break
+                                                                                    else
+                                                                                        Fh=Hp[49121-17777]or j(45067-13723,108502+19808,-466.6511627906977*-86)
+                                                                                        break
+                                                                                    end;
+                                                                                    Fh=-172136200/-14744;
+                                                                                else
+                                                                                    Fh=Hp[-16214-5146]or j(-15962+-5398,-0.9047703872599665*-28069,-20663- -25004);
+                                                                                    break;
+                                                                                end
+                                                                            end
+                                                                        until Fh==968986274/30061
+                                                                    end)({[1.1188516084399862*14455]=true,[14952+12709]='Humanoid',[47730+-16711]='removeItem',[17441+-8349]=-5.1237382794486863e-06*-19517,[0.17379458684352034*-27895]='useConsumable'})
+                                                                end)
+                                                            end)
+                                                            Lr=Dp[2623-6777]or yf(25025+-29179,1087960900/8398,23051- -26127)
+                                                        end
+                                                    else
+                                                        va=function(pr)
+                                                            return zq[pr-(-2196-24229)]
+                                                        end
+                                                        Rg=am()
+                                                        Gq,Cl=Rg and Rg['FindFirstChildOfClass'](Rg,'Humanoid'),Rg and Rg['FindFirstChild'](Rg,va(-970986423/21683))
+                                                        if not Gq then
+                                                            Lr=Dp[-22402- -6346]or yf(3.6758241758241756*-4368,36499+-29590,-37972616/-2068)
+                                                            break
+                                                        end
+                                                        Lr=60586+-8102
+                                                    end
+                                                elseif Lr>25417- -32076 then
+                                                    Lr=Dp[-18374- -3322]or yf(6078-21130,46400+-21621,0.58754713747000342*23336);
+                                                    break;
+                                                else
+                                                    if Gq['Health']<=dq then
+                                                        Lr=Dp[-105333280/14794]or yf(-1780+-5340,-12780+31154,33167077/10921)
+                                                        break
+                                                    end
+                                                    Lr=-103315806/-1653
+                                                end
+                                            end
+                                        until Lr==23633+7949
+                                    end)({[-4304+-14052]='HumanoidRootPart'})
+                                end)
+                                dr=ks[-4514+9471]or Tl(0.22033069606187217*22498,0.18732631034705616*30946,74522-25043)
+                            else
+                                dr=ks[9496+11774]or Tl(41689+-20419,35134+-6915,16488+17255);
+                                break;
+                            end
+                        else
+                            if yp[dp('\207^\200T','\187?')]['wait']()then
+                                dr=-1.5206764027671023*-6505
+                            else
+                                dr=ks[-26613+11075]or Tl(0.69567942690843965*-22335,-683420595/-23313,-110641055/-4841)
+                            end
+                        end
+                    end
+                until dr==8222+18309
+            end);
+            yp[dp('\6?\1\53','r^')]['spawn'](function()
+                local Zj,Qi,_k
+                _k,Zj={},function(Nj,Wm,Nn)
+                    _k[Nj]=Vs(Wm,47548)-Vs(Nn,10517)
+                    return _k[Nj]
+                end
+                Qi=_k[-27556]or Zj(-27556,27674,61363)
+                repeat
+                    while true do
+                        if Qi>13486- -6881 then
+                            yp[dp('\145\17\128\30\141','\225r')](function()
+                                local di,Ui,Cg,Qr,yo,Do
+                                Do,Ui={},function(An,vm,li)
+                                    Do[An]=Vs(vm,29701)-Vs(li,30691)
+                                    return Do[An]
+                                end
+                                yo=Do[15801- -12983]or Ui(1.0123092072870508*28434,-997088764/-23303,402391136/13664)
+                                repeat
+                                    while true do
+                                        if yo>-867935290/-30815 then
+                                            if yo>-2.5720875876491571*-16258 then
+                                                if yo>73011-21820 then
+                                                    Cg=I['PlayerGui']['FindFirstChild'](I['PlayerGui'],'Backpack');
+                                                    if not(Cg and Cg['Enabled'])then
+                                                        yo=Do[-8846]or Ui(-8846,89034,49328)
+                                                        break
+                                                    else
+                                                        yo=Do[19604+-12845]or Ui(-20848+27607,4.6002817330389094*26266,11592+26713)
+                                                        break
+                                                    end
+                                                    yo=Do[-0.10433728624778878*30526]or Ui(-4973+1788,8.2176209952283568*5868,19123+-4724)
+                                                else
+                                                    Qr=Cg['FindFirstChild'](Cg,'Holder');
+                                                    di=Qr and Qr['FindFirstChild'](Qr,'Locker');
+                                                    if di then
+                                                        yo=Do[-39686+14411]or Ui(-5298+-19977,79203+-31360,36244- -10590)
+                                                        break
+                                                    end
+                                                    yo=Do[18031]or Ui(18031,54601,24371)
+                                                end
+                                            else
+                                                yo=Do[0.15681297591778617*-16153]or Ui(-7872- -5339,50288-10457,17305+32636);
+                                                break;
+                                            end
+                                        else
+                                            di['Visible']=No
+                                            yo=Do[26733]or Ui(26733,82976,49226)
+                                        end
+                                    end
+                                until yo==-348482904/-23226
+                            end)
+                            Qi=_k[-38127+5605]or Zj(-9374+-23148,0.83014270797076228*11492,-613640014/-14534)
+                        elseif Qi>-17038- -19798 then
+                            if yp[dp('aBfH','\21#')]['wait']()then
+                                Qi=_k[-27216252/1071]or Zj(-540716536/21278,84428+-5561,43464+12908)
+                            else
+                                Qi=-39787440/-23683
+                            end
+                        else
+                            Qi=_k[-38724+16557]or Zj(1.8509519038076152*-11976,1.3652534268409309*15685,33550+-26203);
+                            break;
+                        end
+                    end
+                until Qi==59778+-13582
+            end);
+            yp[dp('6Z1P','B;')]['spawn'](function()
+                return(function(km)
+                    local function Ah(v)
+                        return km[v-1.3473905831313002*-15674]
+                    end;
+                    local rb,Ik=yp[dp('@\162J\166',"\'\195")]['GetService'](yp[dp('@\162J\166',"\'\195")],Ah(-59075- -18909)),yp[dp('J\"\165\164N=\182\172X','=M\215\207')]['CurrentCamera'];
+                    rb['InputBegan']['Connect'](rb['InputBegan'],function(Ad,ri)
+                        return(function(Zq)
+                            local Qo,Lj,tq,Bn
+                            Lj,tq={},function(at,Oc,Ek)
+                                Lj[at]=Vs(Oc,62183)-Vs(Ek,54874)
+                                return Lj[at]
+                            end
+                            Qo=Lj[-39248- -12942]or tq(-0.93439420310446486*28153,-29.738832638475284*-3358,39241+-16817)
+                            repeat
+                                while true do
+                                    if Qo>63187+-29812 then
+                                        if Qo>39956- -13096 then
+                                            if Qo<=31240+27675 then
+                                                if Qo<=62575+-6262 then
+                                                    Qo=Lj[-10661- -7448]or tq(-10570- -7357,20074- -4798,27093-9010);
+                                                    break;
+                                                else
+                                                    return
+                                                end
+                                            elseif Qo<=38360- -24343 then
+                                                Bn=function(Yo)
+                                                    return Zq[Yo-(-26931- -9567)]
+                                                end
+                                                if not(ri)then
+                                                    Qo=Lj[-13576]or tq(-13576,101062,1538)
+                                                    break
+                                                else
+                                                    Qo=Lj[11970- -5413]or tq(24212+-6829,91277- -16935,1.3981173864894796*30702)
+                                                    break
+                                                end
+                                                Qo=Lj[-95893053/25633]or tq(-30354- -26613,14.13289590747331*8992,11157+24836)
+                                            else
+                                                Hm['Left']=Bn(8368-6000)
+                                                Qo=Lj[-14542]or tq(-14542,109513,21965)
+                                            end
+                                        elseif Qo<=-492713694/-10522 then
+                                            if Ad['UserInputType']==yp[dp('\218\163\234\160','\159\205')]['UserInputType']['Keyboard']then
+                                                Qo=Lj[34097679/5929]or tq(151694127/26377,11912+3531,12.89159891598916*4428)
+                                                break
+                                            end
+                                            Qo=33553- -21126
+                                        elseif Qo>53840+-4427 then
+                                            if not(Ad['KeyCode']==yp[dp('\136b\184a','\205\f')]['KeyCode']['W'])then
+                                                Qo=Lj[-43059+29939]or tq(9882-23002,8332800/992,43644+5604)
+                                                break
+                                            else
+                                                Qo=Lj[-39489+22875]or tq(-0.77429277158969101*21457,1331198187/30349,30913- -9527)
+                                                break
+                                            end
+                                            Qo=Lj[23824]or tq(23824,93495,7267)
+                                        else
+                                            if Ad['KeyCode']==yp[dp('=\6\r\5','xh')]['KeyCode']['S']then
+                                                Qo=Lj[18805+-196]or tq(326+18283,-0.23914550654302799*-23078,22825- -4023)
+                                                break
+                                            elseif not(Ad['KeyCode']==yp[dp('\a\223\55\220','B\177')]['KeyCode']['A'])then
+                                                Qo=Lj[16229+-31712]or tq(11993-27476,52886-30095,40186+-21819)
+                                                break
+                                            else
+                                                Qo=Lj[19190+-25795]or tq(-2516-4089,141906-19255,33025- -24597)
+                                                break
+                                            end
+                                            Qo=Lj[-25898]or tq(-25898,111424,47690)
+                                        end
+                                    elseif Qo<=4021444/574 then
+                                        if Qo<=-27.111111111111111*-189 then
+                                            Hm['Forward']=true
+                                            Qo=Lj[20933]or tq(20933,97143,26019)
+                                        elseif Qo<=10890-4492 then
+                                            Hm['Right']=true
+                                            Qo=Lj[20780]or tq(20780,96,51882)
+                                        else
+                                            if Ad['KeyCode']==yp[dp('\165\130\149\129','\224\236')]['KeyCode']['D']then
+                                                Qo=Lj[23642-3176]or tq(10428- -10038,16318- -1183,572980572/30708)
+                                                break
+                                            end
+                                            Qo=Lj[-7283]or tq(-7283,130718,57528)
+                                        end
+                                    else
+                                        Hm['Backward']=true
+                                        Qo=Lj[-29891]or tq(-29891,98387,19271)
+                                    end
+                                end
+                            until Qo==0.027242026266416509*26650
+                        end)({[1.5106415556576329*13062]=true})
+                    end);
+                    local nc,ak,xo
+                    xo,ak={},function(ib,Ym,Gi)
+                        xo[ib]=Vs(Ym,6812)-Vs(Gi,54143)
+                        return xo[ib]
+                    end
+                    nc=xo[-0.71552760195497156*-24962]or ak(662- -17199,1.8896938775510204*19600,162629208/2812)
+                    repeat
+                        while true do
+                            if nc<=67570+-27977 then
+                                if nc<=-825538644/-26694 then
+                                    rb['InputEnded']['Connect'](rb['InputEnded'],function(ml)
+                                        local w,Gf,Kp
+                                        Gf,w={},function(Dg,gq,rf)
+                                            Gf[Dg]=Vs(gq,11368)-Vs(rf,20268)
+                                            return Gf[Dg]
+                                        end
+                                        Kp=Gf[0.82674866684831261*25691]or w(3669+17571,-1035287760/-17880,54455-4993)
+                                        repeat
+                                            while true do
+                                                if Kp<=-1.0405050134507214*-32712 then
+                                                    if Kp>175221136/15628 then
+                                                        if Kp<=0.72618639502424209*20419 then
+                                                            Kp=Gf[-6930+25704]or w(-1.9501402306014335*-9627,-7.1146582185938829*-8207,2905- -17064);
+                                                            break;
+                                                        elseif Kp>-13157+29968 then
+                                                            if not(ml['KeyCode']==yp[dp('\234c\218\96','\175\r')]['KeyCode']['A'])then
+                                                                Kp=Gf[-16107+22770]or w(-25735+32398,49600- -32458,34339- -15958)
+                                                                break
+                                                            else
+                                                                Kp=Gf[-51432- -19741]or w(-58508+26817,-1563256395/-28877,-389236100/-21550)
+                                                                break
+                                                            end
+                                                            Kp=Gf[-3642]or w(-3642,74858,39039)
+                                                        else
+                                                            if ml['UserInputType']==yp[dp('\18\227\"\224','W\141')]['UserInputType']['Keyboard']then
+                                                                Kp=Gf[-0.21837228041901693*29784]or w(-0.5732416710735061*11346,27761- -11456,-3.6050307733476052*-14948)
+                                                                break
+                                                            end
+                                                            Kp=9038+3425
+                                                        end
+                                                    elseif Kp>-22662- -28307 then
+                                                        if ml['KeyCode']==yp[dp('lD\\G',')*')]['KeyCode']['W']then
+                                                            Kp=Gf[-61- -29835]or w(52073-22299,66079+-16143,642113755/24217)
+                                                            break
+                                                        elseif not(ml['KeyCode']==yp[dp("\'\159\23\156",'b\241')]['KeyCode']['S'])then
+                                                            Kp=Gf[27404+-30520]or w(6850-9966,94966-13884,-591425812/-17701)
+                                                            break
+                                                        else
+                                                            Kp=Gf[0.62218970333909807*7517]or w(-102706920/-21960,135628+-22666,13728+23042)
+                                                            break
+                                                        end
+                                                        Kp=Gf[-14045]or w(-14045,33096,13149)
+                                                    else
+                                                        Hm['Right']=false
+                                                        Kp=Gf[20678]or w(20678,53179,64520)
+                                                    end
+                                                elseif Kp<=-3.8787775428064668*-14659 then
+                                                    if Kp>62103+-9453 then
+                                                        Hm['Backward']=false
+                                                        Kp=Gf[-6678]or w(-6678,46139,10376)
+                                                    else
+                                                        Hm['Forward']=false
+                                                        Kp=Gf[-26715]or w(-26715,66078,45803)
+                                                    end
+                                                elseif Kp>768373992/12744 then
+                                                    Hm['Left']=false
+                                                    Kp=Gf[-14766]or w(-14766,31371,26904)
+                                                else
+                                                    if not(ml['KeyCode']==yp[dp('\181\220\133\223','\240\178')]['KeyCode']['D'])then
+                                                        Kp=Gf[22756]or w(22756,35128,15245)
+                                                        break
+                                                    else
+                                                        Kp=Gf[1.6463607594936709*3792]or w(-0.45476398601398599*-13728,135509920/2296,92349+-28515)
+                                                        break
+                                                    end
+                                                    Kp=Gf[-25091]or w(-25091,31075,27504)
+                                                end
+                                            end
+                                        until Kp==70858+-19833
+                                    end);
+                                    Ik['GetPropertyChangedSignal'](Ik,Ah(-229086877/-23003))['Connect'](Ik['GetPropertyChangedSignal'](Ik,Ah(-229086877/-23003)),function()
+                                        local Xf,zn,pq,cg,_h
+                                        _h,zn={},function(Nq,Ls,og)
+                                            _h[Nq]=Vs(Ls,21488)-Vs(og,5507)
+                                            return _h[Nq]
+                                        end
+                                        cg=_h[-152313912/-6348]or zn(-0.76065178797869637*-31544,91003-4457,4.9397202204323865*11795)
+                                        repeat
+                                            while true do
+                                                if cg<=397396280/14578 then
+                                                    if cg>34923+-30799 then
+                                                        cg=_h[-0.13631875185148612*20254]or zn(0.097942532813054275*-28190,820037500/22700,-3.5283701209627134*-8019);
+                                                        break;
+                                                    else
+                                                        if not(Hm['Flying'])then
+                                                            cg=_h[5040]or zn(5040,87040,59132)
+                                                            break
+                                                        else
+                                                            cg=_h[-0.71036049237983589*13648]or zn(-0.71772283091501332*13508,108662-15943,7400+18502)
+                                                            break
+                                                        end
+                                                        cg=-70284423/-13431
+                                                    end
+                                                elseif cg<=40216+1686 then
+                                                    Xf['CFrame']=yp[dp('\n\210\163(\249\180','I\148\209')]['new'](Xf['CFrame']['Position'],Xf['CFrame']['Position']+Ik['CFrame']['LookVector'])
+                                                    cg=_h[12533]or zn(12533,58117,35079)
+                                                else
+                                                    pq=am();
+                                                    Xf=pq and pq['FindFirstChild'](pq,'HumanoidRootPart');
+                                                    if Xf then
+                                                        cg=_h[205022982/16141]or zn(241007748/18974,90810-17852,1638976736/32437)
+                                                        break
+                                                    end
+                                                    cg=_h[-19977]or zn(-19977,182,11094)
+                                                end
+                                            end
+                                        until cg==21017+4559
+                                    end)
+                                    nc=14852- -24571
+                                else
+                                    if yp[dp('\216\v\223\1','\172j')]['wait']()then
+                                        nc=xo[2.3110795454545454*704]or ak(20534-18907,2768447370/26130,24161-15994)
+                                    else
+                                        nc=xo[-36355- -5349]or ak(-41262+10256,67164+-4750,69741-14218)
+                                    end
+                                end
+                            elseif nc>60186-7915 then
+                                nc=xo[-25217+32381]or ak(-0.32220922910857247*-22234,7.8404010140585392*8678,59725+-1100);
+                                break;
+                            else
+                                yp[dp('d\178u\189x','\20\209')](function()
+                                    return(function(Jj)
+                                        local ui,tg,Xa,ji,yj,p,Fq,Lh,W,zd,Rl,ug,Vj,Dd,vb,ue,Cj,ah,Ic,Ea
+                                        ji,Xa={},function(Pq,Ln,do_)
+                                            ji[Pq]=Vs(Ln,56724)-Vs(do_,65144)
+                                            return ji[Pq]
+                                        end
+                                        p=ji[-169144080/31920]or Xa(-23948+18649,2.3520207664852002*27737,-328947138/-5343)
+                                        repeat
+                                            while true do
+                                                if p>550589088/16464 then
+                                                    if p>76147-26325 then
+                                                        if p<=71406+-13073 then
+                                                            if p>43793- -10074 then
+                                                                if p<=82210-25839 then
+                                                                    Kq['FireServer'](ug(24840+28704),Dd)
+                                                                    p=ji[3455]or Xa(3455,114197,33151)
+                                                                else
+                                                                    zd,ue,Ea=W.__iter(zd)
+                                                                    p=ji[29478]or Xa(29478,73188,9614)
+                                                                end
+                                                            elseif p<=49615+2601 then
+                                                                if p>65497+-13877 then
+                                                                    if p>-1.6387785970882964*-31734 then
+                                                                        if not(Dd~=I)then
+                                                                            p=ji[15307]or Xa(15307,124514,18439)
+                                                                            break
+                                                                        else
+                                                                            p=ji[-1.2393575438845854*14071]or Xa(-46373+28934,129453-8622,-301719123/-27981)
+                                                                            break
+                                                                        end
+                                                                        p=ji[29368]or Xa(29368,19083,61392)
+                                                                    else
+                                                                        p=ji[24693-30910]or Xa(-0.23747135217723453*26180,110623+7160,14865-1378);
+                                                                        break;
+                                                                    end
+                                                                else
+                                                                    if Hm['Left']then
+                                                                        p=ji[-28573+26957]or Xa(20280-21896,86708+-24051,32999- -28421)
+                                                                        break
+                                                                    end
+                                                                    p=20009- -24860
+                                                                end
+                                                            else
+                                                                Lh=yp[dp('\167I\168\133C\185\194','\241,\203')]['new']();
+                                                                if not(Hm['Forward'])then
+                                                                    p=ji[-17871]or Xa(-17871,108346,12517)
+                                                                    break
+                                                                else
+                                                                    p=ji[-64160731/-19343]or Xa(-26241- -29558,74654+26718,361254159/20751)
+                                                                    break
+                                                                end
+                                                                p=-851687415/-19335
+                                                            end
+                                                        elseif p>67854-5871 then
+                                                            return ug(-92766728/-4442)
+                                                        else
+                                                            Ic,Dd=zd(ue,Ea);
+                                                            Ea=Ic;
+                                                            if Ea==nil then
+                                                                p=ji[-25203]or Xa(-25203,7555,62070)
+                                                            else
+                                                                p=-28149287/-12743
+                                                            end
+                                                        end
+                                                    elseif p>5.796331070345226*6923 then
+                                                        if p<=-815296846/-18382 then
+                                                            if p>459243134/10598 then
+                                                                if not(Hm['Backward'])then
+                                                                    p=ji[-20067]or Xa(-20067,126070,38804)
+                                                                    break
+                                                                else
+                                                                    p=ji[-793232468/24556]or Xa(1.5917512565290233*-20294,105633+13954,-7187- -10091)
+                                                                    break
+                                                                end
+                                                                p=ji[28149-30079]or Xa(-4700+2770,111965+17083,491253996/11706)
+                                                            elseif p>6.3162241887905601*6780 then
+                                                                return
+                                                            else
+                                                                if not(yl['Fly']and Hm['Flying'])then
+                                                                    p=ji[-26814]or Xa(-26814,115021,44953)
+                                                                    break
+                                                                else
+                                                                    p=ji[3357-7497]or Xa(-33193- -29053,767543500/23675,85248+-24453)
+                                                                    break
+                                                                end
+                                                                p=75378-23418
+                                                            end
+                                                        elseif p>668905132/14708 then
+                                                            if not(yl['KillAura'])then
+                                                                p=ji[24120]or Xa(24120,114952,34907)
+                                                                break
+                                                            else
+                                                                p=ji[26206-32532]or Xa(-6716- -390,0.80748983010289543*8358,-8850+32743)
+                                                                break
+                                                            end
+                                                            p=ji[18626+3542]or Xa(26675-4507,32.373453318335208*3556,17.633004926108374*2030)
+                                                        else
+                                                            if not(Hm['Right'])then
+                                                                p=ji[-20995]or Xa(-20995,37202,47422)
+                                                                break
+                                                            else
+                                                                p=ji[8817- -23240]or Xa(21221734/662,132322+-13977,33829+-4075)
+                                                                break
+                                                            end
+                                                            p=-0.3968432919954904*-3548
+                                                        end
+                                                    elseif p<=46830-9787 then
+                                                        if p>899822160/25320 then
+                                                            ui=am()and am()['FindFirstChild'](am(),'HumanoidRootPart');
+                                                            if not(not ui)then
+                                                                p=ji[11145]or Xa(11145,90881,4323)
+                                                                break
+                                                            else
+                                                                p=ji[-60803492/-4633]or Xa(-2528- -15652,48.817599999999999*625,88704+-23972)
+                                                                break
+                                                            end
+                                                            p=21463+31779
+                                                        elseif p>658236787/18971 then
+                                                            Lh=Lh+Ik['CFrame']['RightVector']
+                                                            p=ji[14448+-6907]or Xa(193977143/25723,-2.0371347232688604*-23886,-1028120001/-25023)
+                                                        else
+                                                            Ic,Dd=zd(ue,Ea);
+                                                            Ea=Ic;
+                                                            if Ea==nil then
+                                                                p=ji[31749]or Xa(31749,5495,56338)
+                                                            else
+                                                                p=-722558100/-13882
+                                                            end
+                                                        end
+                                                    else
+                                                        Lh=Lh+Ik['CFrame']['LookVector']
+                                                        p=ji[-3.1060931899641577*8370]or Xa(3.4042163153070577*-7637,144203+-13193,42779+-7902)
+                                                    end
+                                                elseif p>-5221+22183 then
+                                                    if p<=13895- -11575 then
+                                                        if p>14578+7225 then
+                                                            ah=Vj['FindFirstChild'](Vj,ug(191758590/5037));
+                                                            if ah and(Lh['Position']-ah['Position'])['Magnitude']<=Cj then
+                                                                p=ji[-39917+16368]or Xa(-8893+-14656,-18.313653136531364*-542,11107+18980)
+                                                                break
+                                                            end
+                                                            p=ji[-22245]or Xa(-22245,121254,32963)
+                                                        elseif p<=-1.1662696522153406*-16792 then
+                                                            W=Jb(zd)
+                                                            if W~=nil and W.__iter~=nil then
+                                                                p=ji[-2.9694835680751175*852]or Xa(-21219- -18689,-0.75326961770623746*-23856,56887-597)
+                                                                break
+                                                            elseif Of(zd)=='table'then
+                                                                p=ji[-17824-13146]or Xa(-10365-20605,105239+-2075,4082- -7834)
+                                                                break
+                                                            end
+                                                            p=ji[1057]or Xa(1057,120527,31644)
+                                                        else
+                                                            ui['CFrame']=ui['CFrame']+Lh['Unit']*ug(-381654/-18)
+                                                            p=ji[-20648]or Xa(-20648,11063,54739)
+                                                        end
+                                                    elseif p>52442-23291 then
+                                                        if p>33129-1761 then
+                                                            if p<=-13.959530026109661*-2298 then
+                                                                vb,Cj=yl['Radius'],yl['Radius'];
+                                                                if yl['AutoStomp']then
+                                                                    p=ji[-37647- -30788]or Xa(-0.46803138860457183*14655,7986+-39,22280+19537)
+                                                                    break
+                                                                end
+                                                                p=57126-11037
+                                                            elseif p>16008- -16436 then
+                                                                W=Jb(zd)
+                                                                if W~=nil and W.__iter~=nil then
+                                                                    p=ji[-18765475/925]or Xa(595707468/-29364,124738+1862,63116+-20040)
+                                                                    break
+                                                                elseif Of(zd)=='table'then
+                                                                    p=ji[8645-22375]or Xa(-45441- -31711,1192039920/9630,8078+2885)
+                                                                    break
+                                                                end
+                                                                p=ji[-22887]or Xa(-22887,85582,20760)
+                                                            else
+                                                                zd,ue,Ea=me(zd)
+                                                                p=ji[-20898]or Xa(-20898,117842,29239)
+                                                            end
+                                                        elseif p<=42956-12710 then
+                                                            zd,ue,Ea=W.__iter(zd)
+                                                            p=ji[-719]or Xa(-719,104332,15065)
+                                                        else
+                                                            Vj,Fq=Dd['Character'],mp['Get'](Dd,ug(35672-22994));
+                                                            if not(Vj and Fq)then
+                                                                p=ji[-16792]or Xa(-16792,95858,14612)
+                                                                break
+                                                            else
+                                                                p=ji[-211208418/22086]or Xa(11470-21033,3.2176413205319094*19477,49701+7424)
+                                                                break
+                                                            end
+                                                            p=ji[-31587]or Xa(-31587,121749,57343)
+                                                        end
+                                                    elseif p<=41740-14598 then
+                                                        if p<=37184+-10795 then
+                                                            if p<=-3849- -29733 then
+                                                                return ug(-36.960036330608538*-1101)
+                                                            else
+                                                                ui=am();
+                                                                Lh=ui and ui['FindFirstChild'](ui,'HumanoidRootPart');
+                                                                if not(not Lh)then
+                                                                    p=ji[20511]or Xa(20511,40489,59768)
+                                                                    break
+                                                                else
+                                                                    p=ji[-3.275458326914189*6491]or Xa(126120252/-5932,-366877840/-22591,-1.1443999303257273*-28705)
+                                                                    break
+                                                                end
+                                                                p=15409+-3956
+                                                            end
+                                                        else
+                                                            zd,ue,Ea=me(zd)
+                                                            p=ji[24707]or Xa(24707,121257,57787)
+                                                        end
+                                                    elseif p>-2438+30496 then
+                                                        tg={[ug(0.70503032838318347*19124)]=Dd['UserId'],[ug(0.30074437559778766*24047)]='meleemegapunch'};
+                                                        Kq['FireServer']('meleeItemHit','player',tg)
+                                                        p=ji[-27342]or Xa(-27342,3692,45305)
+                                                    else
+                                                        zd,ue,Ea=yp[dp('\194\179\241\194\177\227','\171\195\144')](yp[dp('y\179s\183','\30\210')]['GetService'](yp[dp('y\179s\183','\30\210')],'Players')['GetPlayers'](yp[dp('y\179s\183','\30\210')]['GetService'](yp[dp('y\179s\183','\30\210')],'Players')));
+                                                        if Of(zd)~='function'then
+                                                            p=ji[85384062/-25827]or Xa(0.19426489599247856*-17018,226228475/9977,1435518832/28688)
+                                                            break
+                                                        end;
+                                                        p=ji[22180]or Xa(22180,100722,12567);
+                                                    end
+                                                elseif p>39827-32209 then
+                                                    if p>1.1643079393756901*9963 then
+                                                        Vj,Fq=Dd['Character'],mp['Get'](Dd,ug(-0.8550351288056206*-8540));
+                                                        if Vj and not Fq then
+                                                            p=ji[7844-30]or Xa(1.7117196056955093*4565,-2311531446/-18298,9246+3294)
+                                                            break
+                                                        end
+                                                        p=ji[20783]or Xa(20783,127326,22827)
+                                                    elseif p>0.74739788959873665*13931 then
+                                                        zd,ue,Ea=yp[dp('#\23\162#\21\176','Jg\195')](yp[dp('\157d\151\96','\250\5')]['GetService'](yp[dp('\157d\151\96','\250\5')],'Players')['GetPlayers'](yp[dp('\157d\151\96','\250\5')]['GetService'](yp[dp('\157d\151\96','\250\5')],'Players')));
+                                                        if Of(zd)~='function'then
+                                                            p=ji[259579462/23819]or Xa(-0.72784345154611629*-14973,-6.0685285373105229*-20517,28403-11319)
+                                                            break
+                                                        end;
+                                                        p=ji[-16916]or Xa(-16916,106496,26466);
+                                                    else
+                                                        ui=am();
+                                                        Lh=ui and ui['FindFirstChild'](ui,'HumanoidRootPart');
+                                                        if not(not Lh)then
+                                                            p=ji[-27841]or Xa(-27841,23190,58712)
+                                                            break
+                                                        else
+                                                            p=ji[-0.65761177136389359*28272]or Xa(5132-23724,86012+19753,77929+-29141)
+                                                            break
+                                                        end
+                                                        p=-393004140/-14230
+                                                    end
+                                                elseif p>-23636+27615 then
+                                                    if p<=25657+-19664 then
+                                                        ug=function(Gb)
+                                                            return Jj[Gb+(-50687- -18381)]
+                                                        end
+                                                        yj=am()
+                                                        Rl=yj and yj['FindFirstChild'](yj,ug(-0.39564764964032034*-22103))
+                                                        if not(Rl)then
+                                                            p=ji[-3692]or Xa(-3692,113762,6180)
+                                                            break
+                                                        else
+                                                            p=ji[-263087110/-24035]or Xa(-1994- -12940,1.6583001557902026*11554,11568+17281)
+                                                            break
+                                                        end
+                                                        p=ji[4557+13465]or Xa(42387744/2352,216019180/10270,3.2365539191886499*18537)
+                                                    elseif p>-13997- -20313 then
+                                                        Lh=Lh-Ik['CFrame']['LookVector']
+                                                        p=ji[-41157+21439]or Xa(-0.82928880851242792*23777,-929009952/-10049,0.17678867022254921*27185)
+                                                    else
+                                                        Lh=Lh-Ik['CFrame']['RightVector']
+                                                        p=ji[-3201-24279]or Xa(-33038- -5558,90890- -23132,52916-32479)
+                                                    end
+                                                elseif p<=2856640/1580 then
+                                                    if Lh['Magnitude']>0 then
+                                                        p=ji[431948916/-23436]or Xa(-14848+-3583,-1.2413487625269919*-18061,400243294/7874)
+                                                        break
+                                                    end
+                                                    p=ji[22647]or Xa(22647,125399,38707)
+                                                elseif p>9136+-7009 then
+                                                    if p>-47403564/-21606 then
+                                                        if not(Dd~=I)then
+                                                            p=ji[6395]or Xa(6395,105737,41563)
+                                                            break
+                                                        else
+                                                            p=ji[-30776+-497]or Xa(-23563-7710,20275- -131,70388-11611)
+                                                            break
+                                                        end
+                                                        p=ji[-30294]or Xa(-30294,80357,399)
+                                                    else
+                                                        Rl['Anchored']=yl['Fly']
+                                                        p=ji[698316678/31674]or Xa(7132+14915,34618-21690,-1.4465817103470386*-24954)
+                                                    end
+                                                else
+                                                    ah=Vj['FindFirstChild'](Vj,'HumanoidRootPart');
+                                                    if ah and(Lh['Position']-ah['Position'])['Magnitude']<=vb then
+                                                        p=ji[-22846+2092]or Xa(192534858/-9277,130232+-13191,-1.8921343316776633*-26978)
+                                                        break
+                                                    end
+                                                    p=ji[19847]or Xa(19847,122507,57565)
+                                                end
+                                            end
+                                        until p==19010+-918
+                                    end)({[1.1451774613996391*-9974]=nil,[7069+14169]='stomp',[-49789- -30966]='hitPlayerId',[577002888/-23012]='meleeType',[-361232788/14447]='knocked',[0.38260869565217392*15065]='HumanoidRootPart',[-51896432/2644]='knocked',[-259770551/-30973]=nil,[-585561533/24853]='HumanoidRootPart',[-34589+23486]=0.00065963060686015829*3032})
+                                end)
+                                nc=xo[-3.7948032097821933*5234]or ak(-13351-6511,-1.7331408456274968*-25283,17664- -32711)
+                            end
+                        end
+                    until nc==29939- -26602
+                end)({[-31973+12926]='UserInputService',[50311+-19233]='CFrame'})
+            end);
+            yp[dp('7Q0[','C0')]['spawn'](function()
+                return(function(Os)
+                    local bh,dl,rl,Bl,ed
+                    rl,Bl={},function(Qk,Xl,dk)
+                        rl[Qk]=Vs(Xl,35480)-Vs(dk,55575)
+                        return rl[Qk]
+                    end
+                    ed=rl[-33424+22331]or Bl(5532+-16625,-285221968/-3284,0.35314137126687317*26151)
+                    repeat
+                        while true do
+                            if ed>29568-284 then
+                                if ed>35625- -18755 then
+                                    if ed>81802+-24930 then
+                                        if np and not yl['Fly']and not bh then
+                                            ed=rl[8796832/5968]or Bl(23006+-21532,20649+11465,-4.5015039649986326*-10971)
+                                            break
+                                        end
+                                        ed=rl[22952]or Bl(22952,67171,6796)
+                                    elseif ed<=-16.993703148425787*-3335 then
+                                        dl=function(Ya)
+                                            return Os[Ya-(-51666+20266)]
+                                        end
+                                        bh=false
+                                        ed=77451+-25899
+                                    else
+                                        yp[dp('\vg\26h\23','{\4')](function()
+                                            return(function(Gs)
+                                                local function Ep(Si)
+                                                    return Gs[Si+(-29225- -11397)]
+                                                end;
+                                                local ds,Lk,Ch=yp[dp('\248\242\206\252','\171\151')]()
+                                                local un,Cc,Fl,B,Ff
+                                                Cc,Fl={},function(Wa,rg,Rn)
+                                                    Cc[Wa]=Vs(rg,31722)-Vs(Rn,30752)
+                                                    return Cc[Wa]
+                                                end
+                                                un=Cc[-20523+-4964]or Fl(0.78269815434695822*-32563,73206+22463,-1045996908/-27929)
+                                                repeat
+                                                    while true do
+                                                        if un<=57273+-25720 then
+                                                            if un<=0.6301036377547472*14377 then
+                                                                if un<=47814324/10243 then
+                                                                    if un>-17803+21028 then
+                                                                        B['CFrame']=Qg
+                                                                        un=Cc[-4307-22199]or Fl(-0.97793683589138136*27104,76697+-26787,1177212600/20808)
+                                                                    else
+                                                                        Ff=am();
+                                                                        B=Ff['FindFirstChild'](Ff,'HumanoidRootPart');
+                                                                        if B then
+                                                                            un=Cc[-0.82667375132837406*28230]or Fl(0.86790137230837894*-26889,-0.647844952270755*-17285,-1.1065052950075642*-16525)
+                                                                            break
+                                                                        end
+                                                                        un=Cc[2460- -4607]or Fl(37174-30107,-1.8965004899946258*-31633,0.13800424628450106*9891)
+                                                                    end
+                                                                elseif un<=16480-10267 then
+                                                                    np=false
+                                                                    un=Cc[0.90034777956126266*-29904]or Fl(-8337-18587,119171- -10162,16571+25367)
+                                                                else
+                                                                    bh=true
+                                                                    Ff=function()
+                                                                        yp[dp(',I+C','X(')]['spawn'](function()
+                                                                            yp[dp('Y\184H\183E',')\219')](function()
+                                                                                local qo,Yd,Bh,sm,lk
+                                                                                Bh,Yd={},function(Io,Wp,gb)
+                                                                                    Bh[Io]=Vs(Wp,48819)-Vs(gb,60403)
+                                                                                    return Bh[Io]
+                                                                                end
+                                                                                sm=Bh[0.33133792277761148*-30069]or Yd(225343134/-22618,261980250/2513,26995+13511)
+                                                                                repeat
+                                                                                    while true do
+                                                                                        if sm<=582946364/19229 then
+                                                                                            if not(Lk and Lk['Parent']and Ch and Ch['Parent'])then
+                                                                                                sm=Bh[7642]or Yd(7642,125277,38344)
+                                                                                                break
+                                                                                            else
+                                                                                                sm=Bh[-211569032/11912]or Yd(-0.65628348667922998*27063,196536788/1897,-1252969590/-28790)
+                                                                                                break
+                                                                                            end
+                                                                                            sm=Bh[0.80495273598721873*-30044]or Yd(-85974120/3555,1512784188/12438,11340- -13241)
+                                                                                        elseif sm<=-2.8518718892014716*-18484 then
+                                                                                            if sm>16714- -32574 then
+                                                                                                qo['CFrame']=Lk['CFrame'];
+                                                                                                yp[dp('\189@\188x=\170\169\192\251\182@\186d=\170\169\213\226\175','\219)\206\29M\216\198\184\146')](Ch)
+                                                                                                sm=Bh[15077]or Yd(15077,97672,635)
+                                                                                            else
+                                                                                                if not np then
+                                                                                                    sm=Bh[-23229+9705]or Yd(-38370+24846,-11.211554891072192*-9364,66239-25087)
+                                                                                                    break
+                                                                                                end
+                                                                                                sm=29677+-28457
+                                                                                            end
+                                                                                        elseif sm>65893+-8351 then
+                                                                                            lk=am();
+                                                                                            qo=lk['FindFirstChild'](lk,'HumanoidRootPart');
+                                                                                            if not(qo)then
+                                                                                                sm=Bh[-10010]or Yd(-10010,22705,59324)
+                                                                                                break
+                                                                                            else
+                                                                                                sm=Bh[306783995/16645]or Yd(1.1761214983089783*15671,9268- -12998,697782756/11308)
+                                                                                                break
+                                                                                            end
+                                                                                            sm=Bh[-22628]or Yd(-22628,130695,36210)
+                                                                                        elseif sm<=67299-11598 then
+                                                                                            bh=false
+                                                                                            return
+                                                                                        else
+                                                                                            sm=Bh[-623749518/27426]or Yd(-23052- -309,307430250/20985,83769-28966);
+                                                                                            break;
+                                                                                        end
+                                                                                    end
+                                                                                until sm==14057- -4800
+                                                                            end)
+                                                                            bh=false
+                                                                        end)
+                                                                    end
+                                                                    if yl['Notification2']then
+                                                                        un=Cc[11333+-14265]or Fl(82735176/-28218,-1115341596/-10422,-2.4538136968516717*-15405)
+                                                                        break
+                                                                    else
+                                                                        un=Cc[21270+-24688]or Fl(-54458994/15933,3656955575/28343,1536268727/26761)
+                                                                        break
+                                                                    end
+                                                                    un=Cc[25556]or Fl(25556,50253,24730)
+                                                                end
+                                                            elseif un>39851+-27236 then
+                                                                return
+                                                            else
+                                                                if ds and Lk then
+                                                                    un=Cc[50806-30855]or Fl(20035+-84,53264+17213,112521750/1725)
+                                                                    break
+                                                                elseif not(qf and not Lk)then
+                                                                    un=Cc[-22875]or Fl(-22875,47838,25191)
+                                                                    break
+                                                                else
+                                                                    un=Cc[12167+-26852]or Fl(1064+-15749,156558164/6034,17433- -10892)
+                                                                    break
+                                                                end
+                                                                un=Cc[16270+-32454]or Fl(-14970200/925,70010- -21431,0.59958506224066388*6748)
+                                                            end
+                                                        elseif un>-840566296/-16204 then
+                                                            if un>64673+-5273 then
+                                                                if un<=39904+20785 then
+                                                                    Ff()
+                                                                    un=Cc[-603]or Fl(-603,124642,36411)
+                                                                else
+                                                                    yp[dp('\216\253\249\142*\170\130\155\240\242\233\245\140?\187\165\155\234','\155\143\156\239^\207\204\244\132')]({[Ep(0.4434491818941837*16746)]=Ep(2.1324833437185449*20863),['Message']=yp[dp('\22\206*\f\212?','e\186X')]['format']('Found %s. Teleport?',ds),['OnOk']=Ff,['OnCancel']=function()
+                                                                        return(function(Ud)
+                                                                            local function Po(kf)
+                                                                                return Ud[kf+1.1985221674876847*-18270]
+                                                                            end;
+                                                                            bh=Po(-11909+15302)
+                                                                        end)({[1270-19774]=false})
+                                                                    end})
+                                                                    un=Cc[-28921]or Fl(-28921,65741,44058)
+                                                                end
+                                                            else
+                                                                if not(ds['find'](ds,Ep((-8.7708770366335754e-05*15333)*(-14042-17335)))or ds['find'](ds,'Ring')or ds['find'](ds,Ep((2135925729000/23910)/(10193-4013))))then
+                                                                    un=Cc[-4444]or Fl(-4444,40017,45901)
+                                                                    break
+                                                                else
+                                                                    un=Cc[186042110/10963]or Fl(47228+-30258,35421+10605,87707+-25846)
+                                                                    break
+                                                                end
+                                                                un=-19646- -26892
+                                                            end
+                                                        else
+                                                            un=Cc[-15898- -15892]or Fl(3109-3115,-4028505040/-31184,-1.8054979861572753*-25573);
+                                                            break;
+                                                        end
+                                                    end
+                                                until un==67577+-20778
+                                            end)({[-0.76154916172487008*13659]='Title',[-516- -24885]='Paint',[-316717898/-11879]='Auto-Valuable',[-17388+14015]='Gun'})
+                                        end)
+                                        ed=rl[-16633]or Bl(-16633,25360,63807)
+                                    end
+                                else
+                                    if yp[dp('\144\249\151\243','\228\152')]['wait'](dl(-764776782/13342))then
+                                        ed=rl[-0.098521119268007232*9399]or Bl(0.043431358754279815*-21321,-7.2052589822055992*-17646,1878- -15449)
+                                    else
+                                        ed=rl[17430+-18919]or Bl(11891-13380,57667-11664,-10.110849453322119*-5945)
+                                    end
+                                end
+                            else
+                                ed=rl[35477-8704]or Bl(57303-30530,68737+29969,1620714312/31212);
+                                break;
+                            end
+                        end
+                    until ed==79252-15947
+                end)({[-14524-11397]=6.0738581146744414e-06*16464})
+            end);
+            yp[dp('\15n\bd','{\15')]['spawn'](function()
+                local ym,Lb,Xq
+                ym,Xq={},function(la,De,Mr)
+                    ym[la]=Vs(De,57093)-Vs(Mr,29228)
+                    return ym[la]
+                end
+                Lb=ym[-3010]or Xq(-3010,13933,63947)
+                repeat
+                    while true do
+                        if Lb<=966510888/23996 then
+                            if Lb>1.1602332275444682*27098 then
+                                Lb=ym[3935- -10622]or Xq(46095+-31538,9.6434570804636319*11906,410913811/17479);
+                                break;
+                            else
+                                if yp[dp('a\182f\188','\21\215')]['wait']()then
+                                    Lb=-708303690/-12510
+                                else
+                                    Lb=244996704/6291
+                                end
+                            end
+                        elseif Lb<=73547+-21998 then
+                            yp[dp('Z.K!F','*M')](function()
+                                return(function(Pr)
+                                    local rk,Ck,jg,Oo,se,zf,ck,pf,Fc,Bb,Jg,Zs
+                                    Jg,ck={},function(El,Uq,Ob)
+                                        Jg[El]=Vs(Uq,41012)-Vs(Ob,23932)
+                                        return Jg[El]
+                                    end
+                                    Fc=Jg[-1.2409528172240036*10915]or ck(-104337135/7703,84625- -17067,96322+-32727)
+                                    repeat
+                                        while true do
+                                            if Fc>38396+-7920 then
+                                                if Fc<=18858- -26773 then
+                                                    Bb=function(bt)
+                                                        return Pr[bt+-99361008/3324]
+                                                    end
+                                                    zf=yp[dp('y\132s\128','\30\229')]['GetService'](yp[dp('y\132s\128','\30\229')],Bb(149119812/10314))['FindFirstChild'](yp[dp('y\132s\128','\30\229')]['GetService'](yp[dp('y\132s\128','\30\229')],Bb(149119812/10314)),yl['Target'])
+                                                    if not(not zf)then
+                                                        Fc=Jg[-28280]or ck(-28280,108901,63299)
+                                                        break
+                                                    else
+                                                        Fc=Jg[1.1019012549785827*13307]or ck(21694+-7031,-2874844497/-25599,-2.9471677826108205*-20461)
+                                                        break
+                                                    end
+                                                    Fc=-719869364/-29578
+                                                elseif Fc>10.223002958579881*5408 then
+                                                    if Fc<=59552-3625 then
+                                                        return
+                                                    else
+                                                        Oo['CFrame']=Zs['CFrame']
+                                                        rk,jg=bq['GetEquipped'](I)
+                                                        if not(not jg)then
+                                                            Fc=Jg[-5482]or ck(-5482,20094,36278)
+                                                            break
+                                                        else
+                                                            Fc=Jg[-1.9925786984178764*12262]or ck(-66237863/2711,0.78926997097086338*9301,51736- -11354)
+                                                            break
+                                                        end
+                                                        Fc=0.27013878952639864*27956
+                                                    end
+                                                else
+                                                    return
+                                                end
+                                            elseif Fc>24714-7561 then
+                                                if Fc<=10914+16163 then
+                                                    if Fc>-7803+32216 then
+                                                        return
+                                                    else
+                                                        se,pf=zf['Character'],am();
+                                                        if not(not(se and pf))then
+                                                            Fc=Jg[6079]or ck(6079,103447,40019)
+                                                            break
+                                                        else
+                                                            Fc=Jg[440108240/-18980]or ck(-40911+17723,-2191672356/-28527,59663- -1452)
+                                                            break
+                                                        end
+                                                        Fc=Jg[8484+-28503]or ck(-31362+11343,48688-21204,-14071+15359)
+                                                    end
+                                                elseif Fc<=2.5724706904038213*11515 then
+                                                    Zs,Oo=se['FindFirstChild'](se,'HumanoidRootPart'),pf['FindFirstChild'](pf,'HumanoidRootPart');
+                                                    if not(Zs and Oo)then
+                                                        Fc=Jg[-51297- -32375]or ck(-25183- -6261,28337-21616,-0.30568685736562545*-20521)
+                                                        break
+                                                    end
+                                                    Fc=42768162/4086
+                                                else
+                                                    return
+                                                end
+                                            elseif Fc>-5404+12883 then
+                                                if Fc>-1.6956521739130435*-5313 then
+                                                    if se['FindFirstChild'](se,Bb(-0.37770167427701673*-13140))or pf['FindFirstChild'](pf,'ForceField')then
+                                                        Fc=Jg[0.042672020441686442*27395]or ck(10300-9131,10.845340608747549*11729,-5088- -13293)
+                                                        break
+                                                    end
+                                                    Fc=Jg[-7423-18173]or ck(-30791- -5195,-6.8674851056147315*-16617,-227123360/-31580)
+                                                else
+                                                    Ck={[Bb(48875-2323)]=zf['UserId'],[Bb(244473124/10756)]=Bb(848- -5126)};
+                                                    Kq['FireServer'](Bb(-2454+6266),Bb(12315- -13138),Ck);
+                                                    Kq['FireServer']('stomp',zf)
+                                                    Fc=Jg[12761+-10349]or ck(0.30667514303877941*7865,7.2246203037569945*1251,130881143/11867)
+                                                    break
+                                                end
+                                            else
+                                                Vi['SetEquipped'](hr,true,Bb(-2.6117552978808476*-15006),true)
+                                                Fc=Jg[-40608- -23927]or ck(15392+-32073,4326- -8265,1113+10894)
+                                            end
+                                        end
+                                    until Fc==-66846480/-19984
+                                end)({[0.91213484860041183*-26222]='meleemegapunch',[372787520/-14294]='meleeItemHit',[-32578- -25415]='meleeType',[-19771- -29071]=false,[-49108657/11063]='player',[43024+-26364]='hitPlayerId',[-386000636/15484]='ForceField',[-26734+11300]='Players'})
+                            end)
+                            Lb=ym[-7552]or Xq(-7552,120029,56443)
+                        else
+                            if not(yl['Target']and yl['TargetKill'])then
+                                Lb=ym[13335]or Xq(13335,130129,47103)
+                                break
+                            else
+                                Lb=ym[0.72997472620050552*-29675]or Xq(-12588+-9074,120302-4412,-0.24710648148148148*-20736)
+                                break
+                            end
+                            Lb=ym[32510]or Xq(32510,118861,50155)
+                        end
+                    end
+                until Lb==55584- -7265
+            end);
+            yp[dp('\235\198\236\204','\159\167')]['spawn'](function()
+                return(function(Fn)
+                    local fa,dg,Jh,Bd,Tf,fg,Ji,Gk,hh,Xb
+                    dg,hh={},function(Kl,Sm,ge)
+                        dg[Kl]=Vs(Sm,41)-Vs(ge,8860)
+                        return dg[Kl]
+                    end
+                    Jh=dg[-6283308/2713]or hh(26099-28415,30076+7517,45421+-3527)
+                    repeat
+                        while true do
+                            if Jh<=20484- -10652 then
+                                if Jh<=-374791261/-22009 then
+                                    if Jh<=1699+5446 then
+                                        if Jh>31693+-26957 then
+                                            Jh=dg[11905-21667]or hh(12508+-22270,25472+32062,-0.042872756760568349*-28363);
+                                            break;
+                                        else
+                                            Tf=function(Pa)
+                                                return Fn[Pa- -1.1042744656917884*-8890]
+                                            end
+                                            Jh=dg[69841436/10178]or hh(0.35574679869355591*19289,62041+29384,70857-14002)
+                                        end
+                                    else
+                                        fa=Tf(23272- -7034)
+                                        Jh=dg[10082]or hh(10082,28872,11000)
+                                    end
+                                elseif Jh<=-0.88125157527094655*-27773 then
+                                    if Jh>1930- -19581 then
+                                        Bd=Ji['GetState'](Ji);
+                                        if Bd==yp[dp("\'G\23D",'b)')]['HumanoidStateType']['Jumping']and not fa and ag>30734-30733 then
+                                            Jh=dg[5464+-32239]or hh(-1155+-25620,89063+-19495,34990+5409)
+                                            break
+                                        elseif Bd~=yp[dp('^\29n\30','\27s')]['HumanoidStateType']['Jumping']then
+                                            Jh=dg[5546+17680]or hh(52647-29421,175394968/18004,-6759- -15613)
+                                            break
+                                        end
+                                        Jh=dg[-29878]or hh(-29878,80113,62151)
+                                    elseif Jh<=-625080797/-31097 then
+                                        fg=Ji['MoveDirection'];
+                                        if not(fg['Magnitude']>Tf((25386947+-27053)/(0.33850992726557894*15261))and zr>Tf(-1.3170744376915484*19251-(7338+-25681))and Gk)then
+                                            Jh=dg[29450]or hh(29450,59030,43022)
+                                            break
+                                        else
+                                            Jh=dg[396659536/26936]or hh(47239+-32513,2522- -21594,-0.47060920541868018*-25246)
+                                            break
+                                        end
+                                        Jh=44812-21215
+                                    elseif Jh>-360873993/-17431 then
+                                        Gk['CFrame']=Gk['CFrame']+(fg*zr*Tf(16408+-14627)*Tf(3.7870127140905749*9517))
+                                        Jh=dg[-2769+5869]or hh(6683+-3583,71974- -8935,64047+828)
+                                    else
+                                        fa=true
+                                        Gk['AssemblyLinearVelocity']=yp[dp('\130\217\175\160\211\190\231','\212\188\204')]['new'](Gk['AssemblyLinearVelocity']['X'],ag*Tf(22347-2609),Gk['AssemblyLinearVelocity']['Z'])
+                                        Jh=dg[4695]or hh(4695,50308,32428)
+                                    end
+                                elseif Jh<=34569+-6869 then
+                                    if Jh<=39053+-12741 then
+                                        fa=Tf(55619-23032);
+                                        if not(not yl['Fly']and not Ji['SeatPart'])then
+                                            Jh=dg[3196]or hh(3196,55390,19814)
+                                            break
+                                        else
+                                            Jh=dg[106327275/5815]or hh(45469-27184,475727126/13666,7701-1193)
+                                            break
+                                        end
+                                        Jh=dg[-9744]or hh(-9744,59287,24029)
+                                    else
+                                        if yp[dp('\216c\223i','\172\2')]['wait']()then
+                                            Jh=28023+27247
+                                        else
+                                            Jh=dg[38889+-16400]or hh(489383129/21761,2.6476936098180279*18904,34600+3031)
+                                        end
+                                    end
+                                else
+                                    Gk=Xb['FindFirstChild'](Xb,'HumanoidRootPart');
+                                    if not(Gk)then
+                                        Jh=dg[28237]or hh(28237,28603,9609)
+                                        break
+                                    else
+                                        Jh=dg[-0.1903175762000365*-21916]or hh(-3169+7340,29.844909136171271*4017,73119-19807)
+                                        break
+                                    end
+                                    Jh=dg[-13838]or hh(-13838,45515,27641)
+                                end
+                            elseif Jh<=72421+-15917 then
+                                Xb=am();
+                                if not(Xb)then
+                                    Jh=dg[-22881]or hh(-22881,82226,64002)
+                                    break
+                                else
+                                    Jh=dg[-22582+18595]or hh(23815-27802,382851924/5811,11055000/250)
+                                    break
+                                end
+                                Jh=dg[20159]or hh(20159,35221,931)
+                            else
+                                Ji=Xb['FindFirstChild'](Xb,Tf(27215+-29767));
+                                if not(Ji)then
+                                    Jh=dg[-10458]or hh(-10458,91773,57163)
+                                    break
+                                else
+                                    Jh=dg[-14327+31440]or hh(43826393/2561,919295568/19287,32595+-1978)
+                                    break
+                                end
+                                Jh=dg[10753]or hh(10753,76605,57355)
+                            end
+                        end
+                    until Jh==-163.8316151202749*-291
+                end)({[1.0181881429210355*20123]=false,[0.56955049084333198*17419]=0.0013171759747102212*7592,[7790+-24619]=24670+-24669,[-35915+31007]=0,[28689-2465]=-3.6816140195861867e-07*-27162,[7154- -15616]=false,[8354+-20723]='Humanoid',[-104371568/12988]=-0.00031961135259524421*-31288})
+            end);
+            yp[dp('S|Tv',"\'\29")]['spawn'](function()
+                return(function(Hh)
+                    local Fm,kr,Hf,db,ca,Ma
+                    Ma,Hf={},function(Zh,ob,rr)
+                        Ma[Zh]=Vs(ob,45557)-Vs(rr,10518)
+                        return Ma[Zh]
+                    end
+                    ca=Ma[2.3774038461538463*2496]or Hf(-5999- -11933,102740- -21807,3.9460122699386502*7335)
+                    repeat
+                        while true do
+                            if ca<=-1.11917063678454*-29806 then
+                                if ca>-0.65114554467038754*-25621 then
+                                    if ca<=42544+-17676 then
+                                        yp[dp('2\14#\1.','Bm')](function()
+                                            return(function(Zo)
+                                                local Qp,jn,Na,fe,ws,ze
+                                                fe,Na={},function(To,jp,dm)
+                                                    fe[To]=Vs(jp,57284)-Vs(dm,58793)
+                                                    return fe[To]
+                                                end
+                                                Qp=fe[0.11643989402308141*22269]or Na(0.091606019925104212*28306,22749+-12539,76408-30113)
+                                                repeat
+                                                    while true do
+                                                        if Qp>-573883961/-26467 then
+                                                            if Qp<=3.4293083991616959*12406 then
+                                                                return
+                                                            else
+                                                                jn=function(Rd)
+                                                                    return Zo[Rd-274226655/15621]
+                                                                end
+                                                                ws=yp[dp('H\206B\202','/\175')]['GetService'](yp[dp('H\206B\202','/\175')],jn(54343+-8361))['FindFirstChild'](yp[dp('H\206B\202','/\175')]['GetService'](yp[dp('H\206B\202','/\175')],jn(54343+-8361)),db)
+                                                                if not(not ws or not ws['Character'])then
+                                                                    Qp=fe[2628]or Na(2628,10612,2826)
+                                                                    break
+                                                                else
+                                                                    Qp=fe[-436981600/18400]or Na(3.4720760233918129*-6840,965530693/8909,-66254760/-4680)
+                                                                    break
+                                                                end
+                                                                Qp=fe[-50737- -21215]or Na(831782350/-28175,22002-16369,-3593- -12826)
+                                                            end
+                                                        elseif Qp>-8202- -16354 then
+                                                            return
+                                                        elseif Qp<=15583204/11284 then
+                                                            ze['CFrame']=kr
+                                                            kr=nil
+                                                            Qp=fe[680049018/23094]or Na(12538- -16909,129670+-1211,30299- -1575)
+                                                            break
+                                                        else
+                                                            ze=ws['Character']['FindFirstChild'](ws['Character'],jn(46526+-4309));
+                                                            if not(not ze)then
+                                                                Qp=fe[-8123]or Na(-8123,26857,20934)
+                                                                break
+                                                            else
+                                                                Qp=fe[-3115-19454]or Na(-48268- -25699,62603+-24184,28373- -31352)
+                                                                break
+                                                            end
+                                                            Qp=fe[307504834/11674]or Na(41511+-15170,-520013388/-9439,58480-213)
+                                                        end
+                                                    end
+                                                until Qp==1.2333577176298465*30074
+                                            end)({[40803-16141]='HumanoidRootPart',[58631-30204]='Players'})
+                                        end)
+                                        ca=Ma[-1576]or Hf(-1576,113887,16733)
+                                    else
+                                        db=yl['Target']
+                                        kr=nil
+                                        ca=Ma[-6217+-12871]or Hf(-244631808/12816,-0.73610974530435636*-20338,1989457/79)
+                                    end
+                                elseif ca<=-27543912/-3099 then
+                                    if ca>30477+-28905 then
+                                        yp[dp('\216\160\201\175\196','\168\195')](function()
+                                            local ss,Ip,Xi,c,Tg
+                                            Ip,c={},function(Nc,kb,Jm)
+                                                Ip[Nc]=Vs(kb,50521)-Vs(Jm,47510)
+                                                return Ip[Nc]
+                                            end
+                                            Xi=Ip[-44248+13106]or c(-5265-25877,-15.450007193209609*-6951,-4199+29275)
+                                            repeat
+                                                while true do
+                                                    if Xi>33339- -6210 then
+                                                        if Xi>38825- -12696 then
+                                                            Tg['CFrame']=kr
+                                                            Xi=Ip[-3240]or c(-3240,47366,41739)
+                                                        else
+                                                            Tg=ss['Character']['FindFirstChild'](ss['Character'],'HumanoidRootPart');
+                                                            if not(Tg)then
+                                                                Xi=Ip[-15242]or c(-15242,100392,21049)
+                                                                break
+                                                            else
+                                                                Xi=Ip[424163491/22153]or c(-0.81957880318465881*-23362,1888016400/19960,51689-28785)
+                                                                break
+                                                            end
+                                                            Xi=Ip[10437]or c(10437,21896,38553)
+                                                        end
+                                                    elseif Xi<=44047-13299 then
+                                                        Xi=Ip[-1.4191759112519811*-13882]or c(8.53226504980511*2309,122770- -110,-65660640/-3074);
+                                                        break;
+                                                    else
+                                                        ss=yp[dp('\230\246\236\242','\129\151')]['GetService'](yp[dp('\230\246\236\242','\129\151')],'Players')['FindFirstChild'](yp[dp('\230\246\236\242','\129\151')]['GetService'](yp[dp('\230\246\236\242','\129\151')],'Players'),db);
+                                                        if ss and ss['Character']then
+                                                            Xi=Ip[-20646582/-22614]or c(-0.062930796801764541*-14508,15700-8771,48296-5439)
+                                                            break
+                                                        end
+                                                        Xi=21464+3562
+                                                    end
+                                                end
+                                            until Xi==-6797+21760
+                                        end)
+                                        ca=Ma[-359634704/30602]or Hf(-0.43796817351768347*26833,51656-26366,29656- -2858)
+                                    else
+                                        if not(kr)then
+                                            ca=Ma[20101]or Hf(20101,118264,65080)
+                                            break
+                                        else
+                                            ca=Ma[28010+-27383]or Hf(-24117+24744,80803- -30262,1024562994/27394)
+                                            break
+                                        end
+                                        ca=Ma[22646]or Hf(22646,124062,39322)
+                                    end
+                                elseif ca<=-374893812/-29268 then
+                                    yp[dp('\0v\17y\28','p\21')](function()
+                                        return(function(Hr)
+                                            local Wg,Kn,Eq,Yn,bg,_i,aq,xh,qj
+                                            Wg,_i={},function(mt,jq,fp)
+                                                Wg[mt]=Vs(jq,33063)-Vs(fp,24274)
+                                                return Wg[mt]
+                                            end
+                                            Yn=Wg[-1.9734162895927603*1768]or _i(7888629/-2261,22258-18303,-2796- -7413)
+                                            repeat
+                                                while true do
+                                                    if Yn<=1271- -31946 then
+                                                        if Yn>-8.6500519210799585*-1926 then
+                                                            if Yn<=30419+-6650 then
+                                                                if Yn>-0.77001579913745255*-23419 then
+                                                                    if not(not kr)then
+                                                                        Yn=Wg[5953]or _i(5953,86315,33315)
+                                                                        break
+                                                                    else
+                                                                        Yn=Wg[-7905- -11730]or _i(89462925/23389,-2716223055/-27259,352008645/16305)
+                                                                        break
+                                                                    end
+                                                                    Yn=69672-7437
+                                                                else
+                                                                    Eq=function(In)
+                                                                        return Hr[In+184039658/20182]
+                                                                    end
+                                                                    Kn=yp[dp('c\30i\26','\4\127')]['GetService'](yp[dp('c\30i\26','\4\127')],'Players')['FindFirstChild'](yp[dp('c\30i\26','\4\127')]['GetService'](yp[dp('c\30i\26','\4\127')],'Players'),db)
+                                                                    if not Kn or not Kn['Character']then
+                                                                        Yn=Wg[-41396- -19917]or _i(-0.96822033898305082*22184,37109+8701,43828-13312)
+                                                                        break
+                                                                    end
+                                                                    Yn=Wg[-3406-13574]or _i(-0.5381251188438867*31554,145932+-24290,-5.8390017127477369*-8174)
+                                                                end
+                                                            elseif Yn>42776+-12358 then
+                                                                bg,aq=Kn['Character']['FindFirstChild'](Kn['Character'],'HumanoidRootPart'),qj['FindFirstChild'](qj,Eq(-368670080/14510));
+                                                                if not(not(bg and aq))then
+                                                                    Yn=Wg[17252]or _i(17252,62116,7412)
+                                                                    break
+                                                                else
+                                                                    Yn=Wg[-1494- -15133]or _i(2.3806947111188688*5729,7.5649049093321539*9044,77816+-28487)
+                                                                    break
+                                                                end
+                                                                Yn=21634+-8997
+                                                            else
+                                                                qj=am();
+                                                                if not qj then
+                                                                    Yn=Wg[780039072/30456]or _i(8015+17597,11.999081515499427*8710,806486590/19478)
+                                                                    break
+                                                                end
+                                                                Yn=Wg[54838+-25513]or _i(5267+24058,10.586025544703231*1331,-511929558/-20169)
+                                                            end
+                                                        elseif Yn>207700350/27365 then
+                                                            if not(Kn['Character']['FindFirstChild'](Kn['Character'],'ForceField')or qj['FindFirstChild'](qj,'ForceField'))then
+                                                                Yn=Wg[31990]or _i(31990,101712,40924)
+                                                                break
+                                                            else
+                                                                Yn=Wg[11524+-12435]or _i(-8442+7531,85067+28361,-130371492/-14452)
+                                                                break
+                                                            end
+                                                            Yn=-11020- -30325
+                                                        elseif Yn>23075+-18480 then
+                                                            return
+                                                        else
+                                                            return
+                                                        end
+                                                    elseif Yn>25207- -30836 then
+                                                        if Yn>-34.113611416026345*-1822 then
+                                                            if Yn>32128+30935 then
+                                                                kr=bg['CFrame']
+                                                                Yn=Wg[-1139+-5012]or _i(12104-18255,-5.3399795848928209*-14695,-2.6193861066235864*-15475)
+                                                            else
+                                                                xh=yp[dp('\1\209\230#\250\241','B\151\148')]['new'](aq['Position']+(aq['CFrame']['LookVector']*(13478-13474)),aq['Position']);
+                                                                bg['CFrame']=xh
+                                                                Yn=Wg[64409700/-2580]or _i(-1.0325075478721204*24179,3.6481636868263085*30986,370048660/9733)
+                                                                break
+                                                            end
+                                                        else
+                                                            return
+                                                        end
+                                                    else
+                                                        return
+                                                    end
+                                                end
+                                            until Yn==37067-8812
+                                        end)({[-13995+-2294]='HumanoidRootPart'})
+                                    end)
+                                    ca=Ma[-511]or Hf(-511,31122,2718)
+                                else
+                                    if db and yl['TargetBring']then
+                                        ca=Ma[-12693- -9848]or Hf(-86408340/30372,-750+28608,46190-9247)
+                                        break
+                                    elseif db and not yl['TargetBring']then
+                                        ca=Ma[-0.216268064969945*-31276]or Hf(-0.23600013956247165*-28661,47701-6149,0.54873077132141113*18397)
+                                        break
+                                    end
+                                    ca=Ma[-10053]or Hf(-10053,128121,35259)
+                                end
+                            elseif ca>61900+-8101 then
+                                if ca<=-67935003/-1101 then
+                                    if ca<=67578-9118 then
+                                        ca=Ma[22910+-21079]or Hf(-11076- -12907,59313+11131,2.331988399949565*15862);
+                                        break;
+                                    else
+                                        if db and kr then
+                                            ca=Ma[-31883+9603]or Hf(-582065000/26125,-323638959/-9103,17693-10799)
+                                            break
+                                        end
+                                        ca=Ma[4.3700998658518406*-6709]or Hf(-36684- -7365,-7.4879832810867297*-16269,46392- -3806)
+                                    end
+                                else
+                                    Fm=function(oj)
+                                        return Hh[oj-(-29635- -5542)]
+                                    end
+                                    kr,db=Fm(1.6469909462098349*-22532),Fm(15874-28376)
+                                    ca=Ma[38304+-12603]or Hf(10244- -15457,107368+10986,68727-6297)
+                                end
+                            elseif ca<=17051+26227 then
+                                if yp[dp('\14R\tX','z3')]['wait']()then
+                                    ca=Ma[-405220410/14658]or Hf(-42902+15257,-75924504/-3516,27689+-23237)
+                                else
+                                    ca=Ma[4043- -10722]or Hf(13022730/882,134130-25719,153553390/22238)
+                                end
+                            else
+                                if not(yl['Target']~=db)then
+                                    ca=Ma[29724]or Hf(29724,2997,20717)
+                                    break
+                                else
+                                    ca=Ma[48236+-21930]or Hf(5461- -20845,-3.3214936549484775*-30181,31885+-814)
+                                    break
+                                end
+                                ca=16533+-80
+                            end
+                        end
+                    until ca==2.1765305750810358*27457
+                end)({[37783-26192]=nil,[-42422- -29405]=nil})
+            end);
+            yp[dp('r:u0','\6[')]['spawn'](function()
+                return(function(so)
+                    local hm,nh,ul,sr,ia
+                    nh,ia={},function(tk,u,Ps)
+                        nh[tk]=Vs(u,23631)-Vs(Ps,32566)
+                        return nh[tk]
+                    end
+                    ul=nh[-4519- -27104]or ia(2.9580877537655534*7635,22125+20889,1.2472321170694136*31161)
+                    repeat
+                        while true do
+                            if ul>54628+-27725 then
+                                if yp[dp('\243s\244y','\135\18')]['wait']()then
+                                    ul=nh[1.2766743060860708*15708]or ia(42274+-22220,-1466736444/-30204,39440- -23938)
+                                else
+                                    ul=54470-29368
+                                end
+                            elseif ul>-11378- -25386 then
+                                if ul<=-133589172/-5569 then
+                                    if ul>-321807782/-13766 then
+                                        yp[dp('\179\185\162\182\175','\195\218')](function()
+                                            return(function(ro)
+                                                local function Ts(Wk)
+                                                    return ro[Wk-79393830/-10110]
+                                                end;
+                                                local Jl=yp[dp('?6q\a\0W','lS\20')]()
+                                                local Kd,ur,pk,Qe
+                                                ur,Qe={},function(if_,Gn,oc)
+                                                    ur[if_]=Vs(Gn,8880)-Vs(oc,32910)
+                                                    return ur[if_]
+                                                end
+                                                pk=ur[-19227+14638]or Qe(112503924/-24516,91310+-32055,37630+13162)
+                                                repeat
+                                                    while true do
+                                                        if pk>0.82032830247393806*25708 then
+                                                            if pk>298862508/10079 then
+                                                                if pk<=34.976215098241987*967 then
+                                                                    if not(#Jl>0)then
+                                                                        pk=ur[-4231]or Qe(-4231,60372,11635)
+                                                                        break
+                                                                    else
+                                                                        pk=ur[43527-18486]or Qe(34783-9742,-3.3846560380516162*-11353,-11878920/-216)
+                                                                        break
+                                                                    end
+                                                                    pk=ur[3.1469809655867893*-7933]or Qe(-34698+9733,0.96358620689655172*3625,226548960/6015)
+                                                                else
+                                                                    yp[dp('\159\177\181>K\96\148\129O\181\165\185<^q\179\129U','\220\195\208_?\5\218\238;')]({['Title']=Ts(1.157729994556342*14696),['Message']=yp[dp('}\250;g\224.','\14\142I')]['format'](Ts(15544-8371),#Jl),['OnOk']=Kd,[Ts(0.77114036811423337*-30534)]=function()
+                                                                        hm=false
+                                                                    end})
+                                                                    pk=ur[-20981]or Qe(-20981,31724,48507)
+                                                                end
+                                                            else
+                                                                hm=true
+                                                                Kd=function()
+                                                                    yp[dp('\162\96\165j','\214\1')]['spawn'](function()
+                                                                        yp[dp('\165\r\180\2\185','\213n')](function()
+                                                                            return(function(kp)
+                                                                                local ig,vh,dd,Om,op,Rh,Vo
+                                                                                Om,op={},function(fc,Yh,Jq)
+                                                                                    Om[fc]=Vs(Yh,9958)-Vs(Jq,26327)
+                                                                                    return Om[fc]
+                                                                                end
+                                                                                vh=Om[7226+-28274]or op(-1.262854742905142*16667,46318-22621,-63088249/-13097)
+                                                                                repeat
+                                                                                    while true do
+                                                                                        if vh<=10860+21918 then
+                                                                                            if vh<=-299692256/-19232 then
+                                                                                                if vh>0.25170457502732524*19213 then
+                                                                                                    if vh<=-22831+30633 then
+                                                                                                        vh=Om[-3335+13516]or op(-2562- -12743,32207- -29859,-2.7581645508285688*-20638);
+                                                                                                        break;
                                                                                                     else
-                                                                                                        je=Eo()and Eo()['FindFirstChild'](Eo(),'HumanoidRootPart')
-                                                                                                        if not je then
+                                                                                                        return
+                                                                                                    end
+                                                                                                elseif vh<=28253-26104 then
+                                                                                                    if vh<=25095-24065 then
+                                                                                                        if not(not yl['AutoLoot'])then
+                                                                                                            vh=Om[3915]or op(3915,87155,36791)
+                                                                                                            break
+                                                                                                        else
+                                                                                                            vh=Om[-25460- -17675]or op(163695195/-21027,57626-16677,1166013208/21982)
                                                                                                             break
                                                                                                         end
-                                                                                                        ar['prompt']['HoldDuration']=0
+                                                                                                        vh=Om[-26830- -2804]or op(-22612+-1414,30649- -7500,32354+-12777)
+                                                                                                    else
+                                                                                                        Rh=function(Ka)
+                                                                                                            return kp[Ka+(-53859- -25768)]
+                                                                                                        end
+                                                                                                        Vo=am()
+                                                                                                        ig=Vo and Vo['FindFirstChild'](Vo,'HumanoidRootPart')
+                                                                                                        if not(not ig)then
+                                                                                                            vh=Om[11888]or op(11888,33966,50810)
+                                                                                                            break
+                                                                                                        else
+                                                                                                            vh=Om[-0.29660474055092889*-6244]or op(41910760/22630,112966-29616,710084588/19588)
+                                                                                                            break
+                                                                                                        end
+                                                                                                        vh=Om[17270+-1095]or op(478440325/29579,16562- -6183,9073140/1340)
+                                                                                                    end
+                                                                                                else
+                                                                                                    return
+                                                                                                end
+                                                                                            else
+                                                                                                hm=false
+                                                                                                return
+                                                                                            end
+                                                                                        elseif vh>49202- -933 then
+                                                                                            if vh<=-1120204519/-17783 then
+                                                                                                dd=ig['CFrame'];
+                                                                                                for Ng,Gj in yp[dp('VW\14VU\28',"?\'o")](Jl)do
+                                                                                                    if not(not yl['AutoLoot'])then
+                                                                                                    else
+                                                                                                        break
+                                                                                                    end
+                                                                                                    if not(Gj and Gj['primary']and Gj['primary']['Parent']and Gj['prompt']and Gj['prompt']['Parent'])then
+                                                                                                    else
+                                                                                                        ig=am()and am()['FindFirstChild'](am(),'HumanoidRootPart')
+                                                                                                        if not ig then
+                                                                                                            break
+                                                                                                        end
+                                                                                                        Gj['prompt']['HoldDuration']=0
                                                                                                         repeat
-                                                                                                            if not(not Pi['AllowLoot'])then
-                                                                                                            else
+                                                                                                            if not yl['AllowLoot']then
                                                                                                                 break
                                                                                                             end
-                                                                                                            if not ji[aq('\145\233\239\159\248\254\187','\214\140\155')](wl(10123+-26353))then
-                                                                                                                wj['InvokeServer'](wl(-1044941080/27980),wl(1.0334448160535117*-26013))
-                                                                                                                if not ji[aq(' 99.((\n','g\\M')]('Lockpick')then
+                                                                                                            if not yp[dp(']J\172S[\189w','\26/\216')](Rh(2.3979487730226063*18623))then
+                                                                                                                Kq['InvokeServer']('attemptPurchase',Rh(-18196+25351))
+                                                                                                                if not(not yp[dp('T\5\159Z\20\142~','\19\96\235')]('Lockpick'))then
+                                                                                                                else
                                                                                                                     break
                                                                                                                 end
                                                                                                             end
-                                                                                                            local Eh=ji[aq('\163\149\172\129\190\187','\224\211\222')]['new'](ar['primary']['Position']-(ar['primary']['CFrame']['LookVector']*(25718-25715)),ar['primary']['Position'])
-                                                                                                            je['CFrame']=Eh;
-                                                                                                            ji[aq('\129\a\216W\244\213,p\252\138\a\222K\244\213,e\229\147','\231n\170\50\132\167C\b\149')](ar['prompt']);
-                                                                                                            ji[aq('\237\197\234\207','\153\164')]['wait']()
-                                                                                                        until not ar['prompt']or not ar['prompt']['Parent']
-                                                                                                        if not(not Pi['AutoLoot'])then
+                                                                                                            local lr=yp[dp('\232m\228\202F\243','\171+\150')]['new'](Gj['primary']['Position']-(Gj['primary']['CFrame']['LookVector']*(-0.00047318611987381704*-6340)),Gj['primary']['Position'])
+                                                                                                            ig['CFrame']=lr;
+                                                                                                            yp[dp('\193W\169\240\151Q\18\182!\202W\175\236\151Q\18\163\56\211','\167>\219\149\231#}\206H')](Gj['prompt']);
+                                                                                                            yp[dp('A\215F\221','5\182')]['wait']()
+                                                                                                        until not Gj['prompt']or not Gj['prompt']['Parent']
+                                                                                                        if not yl['AutoLoot']then
+                                                                                                            break
+                                                                                                        end
+                                                                                                        if not(not yl['AllowLoot'])then
                                                                                                         else
                                                                                                             break
                                                                                                         end
-                                                                                                        if not Pi['AllowLoot']then
-                                                                                                            break
-                                                                                                        end
-                                                                                                        local Bj=wl(-0.097126478484870479*-27562)
+                                                                                                        local Og=Rh(-1.9268166434401752*-25115)
                                                                                                         repeat
-                                                                                                            if not(not Pi['AllowLoot'])then
-                                                                                                            else
+                                                                                                            if not yl['AllowLoot']then
                                                                                                                 break
                                                                                                             end;
-                                                                                                            ji[aq('\203\5\204\15','\191d')]['wait']()
-                                                                                                            local Li,uk,w=ji[aq('J\n|\4','\25o')](wl(0.27607439852726467*-15753))
-                                                                                                            Bj+=wl(-17601- -381)
-                                                                                                        until(uk and w)or Bj>=wl(-1.7769246731687072*4819)
-                                                                                                        local function oj()
-                                                                                                            return(function(wf)
-                                                                                                                local function sn(dl)
-                                                                                                                    return wf[dl+0.98093777388255921*31948]
+                                                                                                            yp[dp('\130\v\133\1','\246j')]['wait']()
+                                                                                                            local cd,y,Uc=yp[dp('\148]\162S','\199\56')](1691-1661)
+                                                                                                            Og+=-4.2833890173905597e-05*-23346
+                                                                                                        until(y and Uc)or Og>=Rh(-7713- -29585)
+                                                                                                        local function Bq()
+                                                                                                            return(function(wa)
+                                                                                                                local function Ef(uh)
+                                                                                                                    return wa[uh+341479342/25679]
                                                                                                                 end;
-                                                                                                                local Ed,qp,Vh=ji[aq('u\255C\241','&\154')](4882+-4852)
-                                                                                                                if not(Ed and qp and qp['Parent']and Vh)then
-                                                                                                                    ji[aq('\249\252*\207\164\149\206\222)\205\164\143','\186\147F\163\193\246')](je,253950/8465)
+                                                                                                                local kc,nf,Lm=yp[dp('\190P\136^','\237\53')](-28945- -28975)
+                                                                                                                if not(kc and nf and nf['Parent']and Lm)then
+                                                                                                                    yp[dp('\242,\240/\249?\197\14\243-\249%','\177C\156C\156\\')](ig,-22892- -22922)
                                                                                                                 else
-                                                                                                                    je['CFrame']=qp['CFrame']
-                                                                                                                    local Wd,xq=Ed,sn(67261700/-10340)
-                                                                                                                    if not(Vh)then
-                                                                                                                    else
-                                                                                                                        local pk,Qs,jk
-                                                                                                                        pk,Qs={},function(ph,Ok,Vn)
-                                                                                                                            pk[ph]=Ab(Ok,6750)-Ab(Vn,35257)
-                                                                                                                            return pk[ph]
+                                                                                                                    ig['CFrame']=nf['CFrame']
+                                                                                                                    local eq,Fd=kc,0
+                                                                                                                    if Lm then
+                                                                                                                        local nj,Me,no
+                                                                                                                        Me,nj={},function(Yk,es,Sk)
+                                                                                                                            Me[Yk]=Vs(es,10501)-Vs(Sk,43950)
+                                                                                                                            return Me[Yk]
                                                                                                                         end
-                                                                                                                        jk=pk[-4163]or Qs(-4163,60106,33597)
+                                                                                                                        no=Me[-7140]or nj(-7140,75679,12716)
                                                                                                                         repeat
                                                                                                                             while true do
-                                                                                                                                if jk<=-1.0818571150476932*-30822 then
-                                                                                                                                    if jk>27153+-10905 then
-                                                                                                                                        if jk>15500- -6724 then
-                                                                                                                                            jk=pk[643008255/-31919]or Qs(574152645/-28501,80046+-17157,-2184- -11313);
-                                                                                                                                            break;
-                                                                                                                                        else
-                                                                                                                                            if not qp or not qp['Parent']or xq>=sn(-52851+28169)or not Vh then
-                                                                                                                                                jk=pk[1.6492965834051105*13932]or Qs(-19.706689536878216*-1166,3.1370519159456118*25888,22374+-2057)
-                                                                                                                                            else
-                                                                                                                                                jk=pk[231186208/14608]or Qs(354407444/22394,61396- -29616,0.36756962162749035*18421)
-                                                                                                                                            end
-                                                                                                                                        end
-                                                                                                                                    elseif jk<=-0.27175446127429936*-32614 then
-                                                                                                                                        jk=pk[25482+-15354]or Qs(229682784/22678,15311+9275,11053+25922)
+                                                                                                                                if no<=-129600710/-8170 then
+                                                                                                                                    if no>-22215- -29109 then
+                                                                                                                                        no=Me[1007.2857142857143*-7]or nj(-0.36302321989394015*19423,99556+-25769,59019-16715);
+                                                                                                                                        break;
+                                                                                                                                    else
+                                                                                                                                        no=Me[-27509+-4449]or nj(-936752896/29312,262312684/13283,35.402972027972027*1144)
+                                                                                                                                        break
+                                                                                                                                    end
+                                                                                                                                elseif no<=490608644/18428 then
+                                                                                                                                    Fd+=-22761+22762;
+                                                                                                                                    yp[dp('M\250^\168\167\191\137\4\239F\250X\180\167\191\137\17\246_','+\147,\205\215\205\230|\134')](Lm);
+                                                                                                                                    yp[dp('\166N\161D','\210/')]['wait']()
+                                                                                                                                    no=Me[282542550/30950]or nj(-5207+14336,-3.0345043130391298*-23997,2.5054480556077401*10646)
+                                                                                                                                elseif no>-13980630/-474 then
+                                                                                                                                    if not(not yl['AllowLoot'])then
+                                                                                                                                        no=Me[3081]or nj(3081,79730,26815)
                                                                                                                                         break
                                                                                                                                     else
-                                                                                                                                        xq+=-29994/-29994;
-                                                                                                                                        ji[aq('\161\145\203J\138\204=\159\r\170\145\205V\138\204=\138\20\179','\199\248\185/\250\190R\231d')](Vh);
-                                                                                                                                        ji[aq('\159Q\152[','\235\48')]['wait']()
-                                                                                                                                        jk=pk[-211485780/6732]or Qs(-461674840/14696,-7.9264424391577792*-7314,224096184/25202)
+                                                                                                                                        no=Me[116407430/-5570]or nj(190891466/-9134,34867+-10911,25225+25611)
+                                                                                                                                        break
                                                                                                                                     end
+                                                                                                                                    no=Me[-1043+-22353]or nj(-616-22780,-1611361739/-24713,41320- -13974)
                                                                                                                                 else
-                                                                                                                                    if not(not Pi['AllowLoot'])then
-                                                                                                                                        jk=pk[23582]or Qs(23582,24060,43375)
-                                                                                                                                        break
+                                                                                                                                    if not nf or not nf['Parent']or Fd>=Ef(-0.21088201245267671*-31961)or not Lm then
+                                                                                                                                        no=43736+-31826
                                                                                                                                     else
-                                                                                                                                        jk=pk[-62614- -30023]or Qs(-29956+-2635,42764+22555,-12564+32722)
-                                                                                                                                        break
+                                                                                                                                        no=Me[-1.39581668966519*13769]or nj(-41684+22465,64204- -18428,14833+8874)
                                                                                                                                     end
-                                                                                                                                    jk=pk[12018-21563]or Qs(-304953205/31949,39100-3614,45611- -11810)
                                                                                                                                 end
                                                                                                                             end
-                                                                                                                        until jk==0.61012615069894305*29330
+                                                                                                                        until no==967864320/15104
                                                                                                                     end
-                                                                                                                    local A,qd,Zf,Yj,bl,Qe
-                                                                                                                    Yj,Qe={},function(ql,c,cd)
-                                                                                                                        Yj[ql]=Ab(c,38413)-Ab(cd,50229)
-                                                                                                                        return Yj[ql]
+                                                                                                                    local as,xr,pi,vk,Wj,xs
+                                                                                                                    pi,as={},function(qh,cc,sk)
+                                                                                                                        pi[qh]=Vs(cc,36837)-Vs(sk,59234)
+                                                                                                                        return pi[qh]
                                                                                                                     end
-                                                                                                                    qd=Yj[-19.523584905660378*-212]or Qe(-82622718/-19962,69974901/7587,42986+-20604)
+                                                                                                                    vk=pi[-525468020/-20555]or as(-1.5735565677705281*-16246,423531264/18408,53320-18527)
                                                                                                                     repeat
                                                                                                                         while true do
-                                                                                                                            if qd>-1.1521043394473314*-29059 then
-                                                                                                                                if qd>-1.534917571116666*-31603 then
-                                                                                                                                    oj()
-                                                                                                                                    qd=Yj[0.73697142118194747*23199]or Qe(2.1608948432760364*7912,-2552- -30358,3.4479296323956516*12051)
-                                                                                                                                else
-                                                                                                                                    qd=Yj[15908+-32611]or Qe(-3.4304785376874101*4869,1399538708/13604,-2122- -11511);
-                                                                                                                                    break;
-                                                                                                                                end
-                                                                                                                            elseif qd>27852-10846 then
-                                                                                                                                if qd>-1.0054035360740068*-23133 then
-                                                                                                                                    Zf,bl,A=ji[aq('ZClM','\t&')](306360/10212);
-                                                                                                                                    if not(Zf and bl and A)then
-                                                                                                                                        qd=Yj[22546]or Qe(22546,104102,43175)
-                                                                                                                                        break
-                                                                                                                                    else
-                                                                                                                                        qd=Yj[20221+-3926]or Qe(234273215/14377,67538+7779,0.64940464940464937*5291)
-                                                                                                                                        break
-                                                                                                                                    end
-                                                                                                                                    qd=Yj[-624253740/-22110]or Qe(39453+-11219,252085206/8402,24763+10837)
-                                                                                                                                else
-                                                                                                                                    ji[aq("\'_ U",'S>')]['spawn'](function()
-                                                                                                                                        ji[aq('\137\194\152\205\149','\249\161')](function()
-                                                                                                                                            return(function(Ck)
-                                                                                                                                                local Wm,ad,Tn,mi,Fp,cm,Qr,Nm
-                                                                                                                                                Tn,Qr={},function(ge,_a,Br)
-                                                                                                                                                    Tn[ge]=Ab(_a,44728)-Ab(Br,25842)
-                                                                                                                                                    return Tn[ge]
+                                                                                                                            if vk>47049+-20544 then
+                                                                                                                                if vk>68133-27447 then
+                                                                                                                                    yp[dp('*\196-\206','^\165')]['spawn'](function()
+                                                                                                                                        yp[dp('^\140O\131B','.\239')](function()
+                                                                                                                                            return(function(os)
+                                                                                                                                                local Hn,Hi,xa,cj,Mb,uo,xl,yb
+                                                                                                                                                Hn,xl={},function(yg,Cp,Kg)
+                                                                                                                                                    Hn[yg]=Vs(Cp,58918)-Vs(Kg,43793)
+                                                                                                                                                    return Hn[yg]
                                                                                                                                                 end
-                                                                                                                                                Nm=Tn[0.80690702514202151*17779]or Qr(24990-10644,1746138674/30898,42271+-13965)
+                                                                                                                                                Hi=Hn[1.458064216346824*-21521]or xl(-61961- -30582,74352+-17800,14611- -24552)
                                                                                                                                                 repeat
                                                                                                                                                     while true do
-                                                                                                                                                        if Nm>32849-1696 then
-                                                                                                                                                            if Nm>-7.2396794193255705*-6613 then
-                                                                                                                                                                if Nm>51196+4274 then
-                                                                                                                                                                    if not Pi['AllowLoot']then
-                                                                                                                                                                        Nm=Tn[-0.40417913638306968*-18712]or Qr(-0.42690223526755477*-17716,75567+27705,59270+-4185)
-                                                                                                                                                                        break
+                                                                                                                                                        if Hi>47397+-17816 then
+                                                                                                                                                            if Hi<=54527+-8622 then
+                                                                                                                                                                if Hi<=-3.7650727650727651*-10101 then
+                                                                                                                                                                    if not yp[dp('\150\194\130\152\211\147\188','\209\167\246')](eq)or xa>=uo(0.46852474771744351*-2081)then
+                                                                                                                                                                        Hi=Hn[42901+-11876]or xl(57407+-26382,1441637808/29384,60859+-21973)
+                                                                                                                                                                    else
+                                                                                                                                                                        Hi=32464+-13284
                                                                                                                                                                     end
-                                                                                                                                                                    Nm=73243+-22741
                                                                                                                                                                 else
-                                                                                                                                                                    if not(not Pi['AutoLoot'])then
-                                                                                                                                                                        Nm=Tn[-19110]or Qr(-19110,129760,53655)
+                                                                                                                                                                    yp[dp('\163\r\164\a','\215l')]['wait']()
+                                                                                                                                                                    xa+=uo(1.2180221458571974*-7857)
+                                                                                                                                                                    Mb=yp[dp('\170\130\b\164\147\25\128','\237\231|')](eq)
+                                                                                                                                                                    if not(Mb)then
+                                                                                                                                                                        Hi=Hn[10486]or xl(10486,107988,5780)
                                                                                                                                                                         break
                                                                                                                                                                     else
-                                                                                                                                                                        Nm=Tn[415559192/16147]or Qr(1.6068931068931069*16016,26042+-21571,-8318- -12444)
-                                                                                                                                                                        break
-                                                                                                                                                                    end;
-                                                                                                                                                                    Nm=Tn[-21850- -26427]or Qr(-139351342/-30446,49811+25048,-1.7954801705965979*-20399);
-                                                                                                                                                                end
-                                                                                                                                                            elseif Nm<=10441- -27561 then
-                                                                                                                                                                if Nm<=4020- -32342 then
-                                                                                                                                                                    Nm=Tn[-12864+8786]or Qr(11707938/-2871,29788-14116,34392+25199)
-                                                                                                                                                                    break
-                                                                                                                                                                else
-                                                                                                                                                                    zk['unequipAll'](true);
-                                                                                                                                                                    Nk['SetEquipped'](Wm,true,false,true)
-                                                                                                                                                                    Fp,cm=oh['GetEquipped'](nm)
-                                                                                                                                                                    if Fp['sellPrice']then
-                                                                                                                                                                        Nm=Tn[-6213788/-647]or Qr(-7310+16914,52285+-23639,384236769/26479)
+                                                                                                                                                                        Hi=Hn[-0.70116774791473591*-26975]or xl(-130203976/-6884,-1.568601486059001*-13593,69934-18820)
                                                                                                                                                                         break
                                                                                                                                                                     end
-                                                                                                                                                                    Nm=Tn[-29564]or Qr(-29564,101250,55593)
+                                                                                                                                                                    Hi=Hn[16565]or xl(16565,27194,44734)
                                                                                                                                                                 end
                                                                                                                                                             else
-                                                                                                                                                                ji[aq('\252\227\251\233','\136\130')]['wait']()
-                                                                                                                                                                ad+=mi(44028+-16947)
-                                                                                                                                                                Wm=ji[aq('\182\133\204\184\148\221\156','\241\224\184')](Wd)
-                                                                                                                                                                if Wm then
-                                                                                                                                                                    Nm=Tn[38561+-8039]or Qr(61797+-31275,7198-3428,-1.0241156333206543*-26290)
+                                                                                                                                                                Hi=26622+-19317
+                                                                                                                                                                break
+                                                                                                                                                            end
+                                                                                                                                                        elseif Hi>-0.64889129910821886*-16596 then
+                                                                                                                                                            if Hi>-43911296/-2288 then
+                                                                                                                                                                if not yl['AutoLoot']then
+                                                                                                                                                                    Hi=Hn[20042+-15180]or xl(9644-4782,-454+4080,18386+12843)
+                                                                                                                                                                    break
+                                                                                                                                                                end;
+                                                                                                                                                                Hi=15885+25764;
+                                                                                                                                                            elseif Hi>-0.57838185324639546*-32667 then
+                                                                                                                                                                if not yl['AllowLoot']then
+                                                                                                                                                                    Hi=Hn[0.40863435024018968*-32058]or xl(0.59048906919089472*-22185,56490+30889,58554-27788)
                                                                                                                                                                     break
                                                                                                                                                                 end
-                                                                                                                                                                Nm=Tn[-1167]or Qr(-1167,49790,24981)
-                                                                                                                                                            end
-                                                                                                                                                        elseif Nm<=6443- -7815 then
-                                                                                                                                                            Nm=Tn[403354016/26272]or Qr(29654+-14301,116072+14391,16414+25544);
-                                                                                                                                                            break;
-                                                                                                                                                        elseif Nm<=1606+21304 then
-                                                                                                                                                            Nm=Tn[1.507081903756488*-11367]or Qr(10010-27141,2.6772053946495689*13569,-1.4169299088952982*-21843)
-                                                                                                                                                            break
-                                                                                                                                                        elseif Nm<=1.4094057014011918*18627 then
-                                                                                                                                                            wj['FireServer']('sellItem',cm)
-                                                                                                                                                            Nm=Tn[-11886]or Qr(-11886,57334,27933)
-                                                                                                                                                        elseif Nm>-461490168/-17378 then
-                                                                                                                                                            mi=function(Tj)
-                                                                                                                                                                return Ck[Tj-(32420-19660)]
-                                                                                                                                                            end
-                                                                                                                                                            ad=mi(-20583+13637)
-                                                                                                                                                            Nm=Tn[0.22282773236451711*26424]or Qr(-0.20955228130116021*-28098,86939-19197,26611- -30474)
-                                                                                                                                                        else
-                                                                                                                                                            if not ji[aq('\213\160(\219\177\57\255','\146\197\\')](Wd)or ad>=mi(0.57130960972630873*18013)then
-                                                                                                                                                                Nm=Tn[-3802+-16820]or Qr(-1792-18830,56334+-8766,24980+4955)
+                                                                                                                                                                Hi=-473492600/-23944
                                                                                                                                                             else
-                                                                                                                                                                Nm=-720493319/-11921
+                                                                                                                                                                nq['unequipAll'](true);
+                                                                                                                                                                Vi['SetEquipped'](Mb,true,false,uo(30070+-14707))
+                                                                                                                                                                yb,cj=bq['GetEquipped'](I)
+                                                                                                                                                                if not(yb['sellPrice'])then
+                                                                                                                                                                    Hi=Hn[-24171]or xl(-24171,9263,37005)
+                                                                                                                                                                    break
+                                                                                                                                                                else
+                                                                                                                                                                    Hi=Hn[2809+5202]or xl(22995-14984,268166596/21209,46399494/6106)
+                                                                                                                                                                    break
+                                                                                                                                                                end
+                                                                                                                                                                Hi=Hn[-21846]or xl(-21846,123000,54496)
                                                                                                                                                             end
+                                                                                                                                                        elseif Hi<=-0.50770005032712628*-9935 then
+                                                                                                                                                            uo=function(df)
+                                                                                                                                                                return os[df-(8733- -808)]
+                                                                                                                                                            end
+                                                                                                                                                            xa=uo(56166-14412)
+                                                                                                                                                            Hi=Hn[-2665- -7714]or xl(164203578/32522,207.43633276740238*589,48216-24817)
+                                                                                                                                                        elseif Hi>-3415+10281 then
+                                                                                                                                                            if Hi>-75162866/-9619 then
+                                                                                                                                                                Kq['FireServer']('sellItem',cj)
+                                                                                                                                                                Hi=Hn[-14650]or xl(-14650,20192,35144)
+                                                                                                                                                            else
+                                                                                                                                                                Hi=Hn[-2634+7141]or xl(-0.1613388222659746*-27935,108428+9421,289498290/9782);
+                                                                                                                                                                break;
+                                                                                                                                                            end
+                                                                                                                                                        else
+                                                                                                                                                            Hi=Hn[20774-2338]or xl(24728+-6292,19573- -6406,-495374508/-9404)
+                                                                                                                                                            break
                                                                                                                                                         end
                                                                                                                                                     end
-                                                                                                                                                until Nm==94129875/2625
-                                                                                                                                            end)({[-32665- -30196]=-16697- -16797,[-105072392/5332]=0,[-2339- -16660]=6208/6208})
+                                                                                                                                                until Hi==111451072/5312
+                                                                                                                                            end)({[25211+7002]=0,[-28840+9729]=-20145- -20146,[-10993+16815]=true,[-25949+15433]=4950+-4850})
                                                                                                                                         end)
                                                                                                                                     end)
-                                                                                                                                    qd=Yj[-9220- -32701]or Qe(34791-11310,65340-1147,17669- -32165)
+                                                                                                                                    vk=pi[1.2408883826879271*-24584]or as(-819299642/26857,2.2608762021065485*6551,2.9286027157249235*13698)
+                                                                                                                                elseif vk<=556+31172 then
+                                                                                                                                    if yl['AutoSell']then
+                                                                                                                                        vk=pi[-564113200/18760]or as(-17632-12438,131189+-3002,8397- -13521)
+                                                                                                                                        break
+                                                                                                                                    end
+                                                                                                                                    vk=pi[0.13277262597944073*13911]or as(-13688+15535,-275184648/-15672,54575-24263)
+                                                                                                                                else
+                                                                                                                                    Bq()
+                                                                                                                                    vk=pi[-931401031/-32579]or as(24097+4492,-392999796/-12978,466+5067)
                                                                                                                                 end
-                                                                                                                            else
-                                                                                                                                if Pi['AutoSell']then
-                                                                                                                                    qd=Yj[-276323938/30302]or Qe(-267852387/29373,20046-15704,46763+15510)
+                                                                                                                            elseif vk>-14550+22882 then
+                                                                                                                                xr,Wj,xs=yp[dp('\27\131-\141','H\230')](Ef(29647-15999));
+                                                                                                                                if not(xr and Wj and xs)then
+                                                                                                                                    vk=pi[-16250]or as(-16250,38316,62715)
+                                                                                                                                    break
+                                                                                                                                else
+                                                                                                                                    vk=pi[-0.79159892623539641*26449]or as(-787+-20150,-343987875/-27797,-1578125193/-28257)
                                                                                                                                     break
                                                                                                                                 end
-                                                                                                                                qd=Yj[301698222/16882]or Qe(-8206- -26077,39140-11307,1.3433476394849786*15378)
+                                                                                                                                vk=13012+-11300
+                                                                                                                            else
+                                                                                                                                vk=pi[-1235- -14726]or as(32335+-18844,132.16826923076923*832,-16000+29310);
+                                                                                                                                break;
                                                                                                                             end
                                                                                                                         end
-                                                                                                                    until qd==-11718+21758
+                                                                                                                    until vk==297.26865671641792*67
                                                                                                                 end
-                                                                                                            end)({[-21849- -28506]=-830900/-8309,[-2066- -26900]=0})
+                                                                                                            end)({[57966+-31020]=0.029013539651837523*1034,[-8.6744588744588746*-2310]=2313300/23133})
                                                                                                         end;
-                                                                                                        oj()
+                                                                                                        Bq()
                                                                                                     end
                                                                                                 end
-                                                                                                je=Eo()and Eo()['FindFirstChild'](Eo(),'HumanoidRootPart')
-                                                                                                if not(je)then
-                                                                                                    oi=fg[236]or Cb(236,85251,50462)
-                                                                                                    break
-                                                                                                else
-                                                                                                    oi=fg[-31207- -31787]or Cb(9731+-9151,8.1648909183155762*5913,-769584193/-21623)
+                                                                                                ig=am()and am()['FindFirstChild'](am(),'HumanoidRootPart')
+                                                                                                if ig then
+                                                                                                    vh=Om[2.9777140124342418*-10455]or op(-6339+-24793,78277-7785,15082- -8717)
                                                                                                     break
                                                                                                 end
-                                                                                                oi=-1.9357147321707606*-31998
+                                                                                                vh=Om[-627262878/22902]or op(-38422- -11033,24915- -5344,-687370829/-28309)
+                                                                                            elseif vh<=1020950297/15761 then
+                                                                                                if not(yl['AutoLootSafe'])then
+                                                                                                    vh=Om[-337802886/-10666]or op(-648368712/-20472,39097+12363,321+22757)
+                                                                                                    break
+                                                                                                else
+                                                                                                    vh=Om[14794- -13360]or op(12488- -15666,-7.7859981215230114*-13841,63682+-4994)
+                                                                                                    break
+                                                                                                end
+                                                                                                vh=Om[3772]or op(3772,77969,39783)
+                                                                                            else
+                                                                                                ig['CFrame']=Qg
+                                                                                                vh=Om[-19967]or op(-19967,6971,17345)
                                                                                             end
+                                                                                        elseif vh>2.6978*15000 then
+                                                                                            ig['CFrame']=dd
+                                                                                            vh=Om[13074]or op(13074,31775,9445)
                                                                                         else
-                                                                                            je['CFrame']=Bk
-                                                                                            oi=fg[-16594]or Cb(-16594,97701,54716)
+                                                                                            if not(not yl['AllowLoot'])then
+                                                                                                vh=Om[-28352]or op(-28352,110347,64147)
+                                                                                                break
+                                                                                            else
+                                                                                                vh=Om[-23972-2491]or op(-83411376/3152,595013000/12520,-12039+19656)
+                                                                                                break
+                                                                                            end
+                                                                                            vh=85507-24666
                                                                                         end
-                                                                                    elseif oi>82612+-22684 then
-                                                                                        if oi>13603464/216 then
-                                                                                            return
-                                                                                        else
-                                                                                            oi=fg[923807599/-32461]or Cb(331234301/-11639,69003+-17380,47401-51);
-                                                                                            break;
-                                                                                        end
-                                                                                    else
-                                                                                        return
                                                                                     end
-                                                                                end
-                                                                            until oi==-1.5955322559102445*-29948
-                                                                        end)({[3316+-4234]=-31223- -31523,[-20121- -11536]='Lockpick',[-1.4527385829160977*6591]=-23145+23146,[25340- -967]=false,[-65817416/2216]='attemptPurchase',[-3582+6878]=88800/2960,[-3.0857997010463376*-3345]=0,[3.6012729314863345*-5342]='Lockpick'})
+                                                                                until vh==164689200/22950
+                                                                            end)({[84024909/-13511]=12748-12448,[-43835- -22899]='Lockpick',[1926- -18375]=0,[-0.68468691878487287*-24195]='Lockpick'})
+                                                                        end)
+                                                                        hm=false
                                                                     end)
-                                                                    hj=false
-                                                                end)
+                                                                end
+                                                                if yl['Notification']then
+                                                                    pk=ur[32590179/1359]or Qe(651180074/27154,2.1798564338886921*22568,66999-11270)
+                                                                    break
+                                                                else
+                                                                    pk=ur[1.776755211601478*-14343]or Qe(3122-28606,39705+-14866,69917-28390)
+                                                                    break
+                                                                end
+                                                                pk=ur[-28821]or Qe(-28821,44085,62352)
                                                             end
-                                                            if not(Pi['Notification'])then
-                                                                H=za[-8.9657338663620791*1751]or vt(-6943+-8756,113505+-12037,75408-17147)
-                                                                break
-                                                            else
-                                                                H=za[-13066- -25957]or vt(-2.9471879286694103*-4374,5.2934557503796773*14486,1302- -1869)
-                                                                break
-                                                            end
-                                                            H=za[-9933]or vt(-9933,53550,18559)
-                                                        elseif H>94222-30530 then
-                                                            H=za[-20558- -16863]or vt(-72869095/19721,1104786718/18802,20961-5931);
+                                                        elseif pk<=36536+-28806 then
+                                                            pk=ur[-48392617/1699]or Qe(1.4429809007548509*-19739,60490- -13397,-4.3829244195619959*-12146);
                                                             break;
                                                         else
-                                                            yo()
-                                                            H=za[25186]or vt(25186,106290,62067)
+                                                            Kd()
+                                                            pk=ur[-25205]or Qe(-25205,63394,14629)
                                                         end
-                                                    else
-                                                        ji[aq('\n\196\181\210\178\150\204ki \208\185\208\167\135\235ks','I\182\208\179\198\243\130\4\29')]({['Title']=xs(-8.1129251700680278*-5145),['Message']=ji[aq('\16\212\4\n\206\17','c\160v')]['format']('Found %d Safe/Chest(s). Teleport?',#f),[xs(61363-21489)]=yo,[xs(0.45593220338983048*-12980)]=function()
-                                                            hj=false
-                                                        end})
-                                                        H=za[16494]or vt(16494,75587,23074)
                                                     end
-                                                end
-                                            until H==283439632/12622
-                                        end)({[-26374- -3824]='OnCancel',[14103+11006]='Auto-Loot',[4992- -18250]='OnOk',[-28915- -22711]=true})
-                                    end)
-                                    ll=qh[12456]or ij(12456,106435,13724)
+                                                until pk==53423-7677
+                                            end)({[-20506- -4813]='OnCancel',[-356120307/-14321]='Auto-Loot',[-0.5985738756323945*-25103]='Found %d Safe/Chest(s). Teleport?'})
+                                        end)
+                                        ul=nh[-10173]or ia(-10173,77096,54700)
+                                    else
+                                        if not(yl['AutoLoot']and not yl['Fly']and not hm and yl['AllowLoot'])then
+                                            ul=nh[18873]or ia(18873,78079,56021)
+                                            break
+                                        else
+                                            ul=nh[-21824+11303]or ia(-22.625806451612902*465,2248550112/23763,42101- -2843)
+                                            break
+                                        end
+                                        ul=nh[-28820]or ia(-28820,46365,23987)
+                                    end
                                 else
-                                    ll=qh[-32377- -28854]or ij(10614799/-3013,32182-1371,53563+-3140);
+                                    ul=nh[-30486+15115]or ia(-17111+1740,-1995562920/-24424,-1356220587/-30367);
                                     break;
                                 end
                             else
-                                if ji[aq('\191\241\184\251','\203\144')]['wait']()then
-                                    ll=53350+-19096
-                                else
-                                    ll=10223+32751
+                                sr=function(Fp)
+                                    return so[Fp+0.1931165620840464*-26295]
                                 end
+                                hm=sr(42976+-8445)
+                                ul=-1586996419/-31183
                             end
                         end
-                    until ll==36737-18232
-                end)({[-1.2249586967380028*26027]=false})
+                    until ul==1.1700810058486848*31973
+                end)({[725250672/24624]=false})
             end);
-            ji[aq('\252U\251_','\136\52')]['spawn'](function()
-                local Ff,y,an
-                an,y={},function(xc,Om,Kg)
-                    an[xc]=Ab(Om,19245)-Ab(Kg,7044)
-                    return an[xc]
+            yp[dp('\174E\169O','\218$')]['spawn'](function()
+                local dh,ts,Yl
+                Yl,dh={},function(a,ys,wk)
+                    Yl[a]=Vs(ys,1654)-Vs(wk,12672)
+                    return Yl[a]
                 end
-                Ff=an[-28276]or y(-28276,36036,12288)
+                ts=Yl[-22991]or dh(-22991,98798,44642)
                 repeat
                     while true do
-                        if Ff<=1.418823780401081*28124 then
-                            ji[aq('\176\211\161\220\172','\192\176')](function()
-                                return(function(We)
-                                    local C,Lf,Ml,Gc,vi,ue,Pl,xp,Ap
-                                    Gc,Lf={},function(Kb,Pm,Jp)
-                                        Gc[Kb]=Ab(Pm,65296)-Ab(Jp,25265)
-                                        return Gc[Kb]
+                        if ts>-188703648/-3936 then
+                            if yp[dp('s\223t\213','\a\190')]['wait']()then
+                                ts=2.1440814393939394*21120
+                            else
+                                ts=-1.6353919771029919*-22361
+                            end
+                        elseif ts<=32060+8866 then
+                            ts=Yl[-12457-8250]or dh(-40249+19542,53325+-25989,-302143338/-18783);
+                            break;
+                        else
+                            yp[dp('!\231\48\232=','Q\132')](function()
+                                return(function(Ke)
+                                    local A,Sf,si,Sg,sg,Sa,jk,Af,rn
+                                    si,A={},function(et,fk,qq)
+                                        si[et]=Vs(fk,50501)-Vs(qq,3660)
+                                        return si[et]
                                     end
-                                    Pl=Gc[-7078+5564]or Lf(-0.084932121620105466*17826,-1004840/-8,-27583+30629)
+                                    Sa=si[-36903- -31550]or A(-46324862/8654,99306+2205,-6081- -31116)
                                     repeat
                                         while true do
-                                            if Pl<=26793- -4814 then
-                                                if Pl<=-0.37765923668000256*-15747 then
-                                                    wj['InvokeServer']('attemptPurchase',Tg['Item'])
-                                                    vi=ji[aq('\0\164(\14\181\57*','G\193\\')](Tg['Item'])
-                                                    Pl=Gc[-131+7653]or Lf(230549300/30650,117441-28662,75990+-32101)
-                                                else
-                                                    return
-                                                end
-                                            elseif Pl>49168-2716 then
-                                                if Pl<=34226- -21220 then
-                                                    if Pl>-1257157888/-24191 then
-                                                        vi=ji[aq('[\211\163U\194\178q','\28\182\215')](Tg['Item']);
-                                                        if not vi then
-                                                            Pl=Gc[-27092- -6929]or Lf(-0.82106934886183169*24557,126332615/10471,1174879620/28620)
+                                            if Sa>58661-24494 then
+                                                if Sa>4.5823054808494854*10783 then
+                                                    if Sa<=39329+15148 then
+                                                        Kq['InvokeServer']('attemptPurchase',eh['Item'])
+                                                        Af=yp[dp('\218\251\15\212\234\30\240','\157\158{')](eh['Item'])
+                                                        Sa=si[1.3757038948850304*-17048]or A(-22728+-725,2.9347280334728034*14340,206367535/13519)
+                                                    elseif Sa<=-28.257242757242757*-2002 then
+                                                        Sg=function(Gr)
+                                                            return Ke[Gr-(36574+-25554)]
+                                                        end
+                                                        rn=am()
+                                                        sg=rn and rn['FindFirstChild'](rn,Sg(699769224/22374))
+                                                        if not(not(sg and sg['Health']>0))then
+                                                            Sa=si[22646]or A(22646,107114,51887)
+                                                            break
+                                                        else
+                                                            Sa=si[0.72696057788863333*-30871]or A(-3.7211076106781626*6031,28167-7580,13501+12728)
                                                             break
                                                         end
-                                                        Pl=-2.3337889330682571*-24144
+                                                        Sa=57370-15822
                                                     else
-                                                        Nk['SetEquipped'](vi,true,false,Ml(-9867-18973))
-                                                        Pl=Gc[16203]or Lf(16203,105533,56104)
+                                                        jk,Sf=bq['GetEquipped'](I);
+                                                        if not Sf then
+                                                            Sa=si[7299-27152]or A(-2.5114484503478809*7905,34669-15758,-1303769/-211)
+                                                            break
+                                                        end
+                                                        Sa=si[31865]or A(31865,27192,14837)
                                                     end
-                                                elseif Pl>-1586366353/-27313 then
-                                                    if Tg['Item']and Tg['Enabled']then
-                                                        Pl=Gc[-60024- -29195]or Lf(-979344843/31767,240242400/2735,6.3531050955414017*7536)
-                                                        break
-                                                    end
-                                                    Pl=Gc[4384-9173]or Lf(3589+-8378,73883- -22160,-1.777802392556491*-27084)
                                                 else
-                                                    if vi then
-                                                        Pl=Gc[-31330+23848]or Lf(-0.26270145008953338*28481,32403+-18426,83552595/7595)
+                                                    if not(eh['Item']and eh['Enabled'])then
+                                                        Sa=si[-3758]or A(-3758,116662,34147)
+                                                        break
+                                                    else
+                                                        Sa=si[26454829/2543]or A(-216590460/-20820,2.4422485389111044*26008,22871-22643)
                                                         break
                                                     end
-                                                    Pl=Gc[-21773]or Lf(-21773,109187,51534)
+                                                    Sa=si[-2896- -22703]or A(11620+8187,78673+26299,-288472180/-4820)
                                                 end
-                                            elseif Pl>-580610673/-15039 then
-                                                if Pl<=29628+14141 then
-                                                    Pl=Gc[2.0278929513758008*2653]or Lf(108450040/20158,-2282904/-1626,26282-626);
+                                            elseif Sa>-1.0321622958931223*-20210 then
+                                                if Sa<=634986750/20850 then
+                                                    Vi['SetEquipped'](Af,Sg(21759-13208),false,true)
+                                                    Sa=si[-5496]or A(-5496,103647,55194)
+                                                else
+                                                    Sa=si[6404037/291]or A(49491-27484,32349+15093,0.41402691331409297*28759);
                                                     break;
-                                                else
-                                                    Ml=function(Va)
-                                                        return We[Va-(-31689- -21490)]
-                                                    end
-                                                    Ap=Eo()
-                                                    ue=Ap and Ap['FindFirstChild'](Ap,Ml(-0.26229560046810263*-31617))
-                                                    if not(ue and ue['Health']>Ml(97991460/-11620))then
-                                                        Pl=Gc[8166+20009]or Lf(161639975/5737,0.15118435324166404*28581,28031+16113)
-                                                        break
-                                                    end
-                                                    Pl=82223+-22407
                                                 end
-                                            else
-                                                xp,C=oh['GetEquipped'](nm);
-                                                if not C then
-                                                    Pl=Gc[30138+-25756]or Lf(134921780/30790,-6.2111956688288474*-19579,-0.84857051418818008*-18748)
+                                            elseif Sa<=-8834+20341 then
+                                                if Af then
+                                                    Sa=si[-332310649/-25667]or A(-333683031/-25773,-884561944/-12667,79717+-15303)
                                                     break
                                                 end
-                                                Pl=Gc[5172]or Lf(5172,108722,52415)
+                                                Sa=si[-16775]or A(-16775,126867,48478)
+                                            elseif Sa<=-125684916/-10713 then
+                                                return
+                                            else
+                                                Af=yp[dp(']Z\181SK\164w','\26?\193')](eh['Item']);
+                                                if not(not Af)then
+                                                    Sa=si[-17698]or A(-17698,24037,25376)
+                                                    break
+                                                else
+                                                    Sa=si[-0.51801218583396802*26260]or A(-228462385/16795,-1000244364/-10052,-168123602/-5549)
+                                                    break
+                                                end
+                                                Sa=si[-17426- -3466]or A(255565720/-18307,14578+-3638,1.5957957588255209*32491)
                                             end
                                         end
-                                    until Pl==2.6946482520500648*23170
-                                end)({[33351+-31585]=0,[-42615+23974]=true,[0.81609956308751486*22659]='Humanoid'})
+                                    until Sa==1.029109966089752*22707
+                                end)({[1.2369739478957915*-1996]=true,[5.0513715710723188*4010]='Humanoid'})
                             end)
-                            Ff=an[-18064320/1214]or y(-21747+6867,776947068/10188,-693443049/-12207)
-                        elseif Ff>-1.5751487260074082*-26727 then
-                            Ff=an[-0.065530119648661733*28918]or y(7160-9055,-123812360/-10360,5746+17451);
-                            break;
-                        else
-                            if ji[aq('\245\140\242\134','\129\237')]['wait']()then
-                                Ff=an[57395230/5965]or y(36992+-27370,85192-17375,693402296/16616)
-                            else
-                                Ff=73709+-29548
-                            end
+                            ts=Yl[-71632425/-10995]or dh(-23286- -29801,91860+-28566,-6261+20615)
                         end
                     end
-                until Ff==-0.34959867976895959*-26662
+                until ts==50777+-26865
             end);
-            ji[aq('\177\240\182\250','\197\145')]['spawn'](function()
-                local Ep,Pa,Xp
-                Xp,Ep={},function(ma,kq,fk)
-                    Xp[ma]=Ab(kq,49441)-Ab(fk,44640)
-                    return Xp[ma]
+            yp[dp('\1\50\6\56','uS')]['spawn'](function()
+                local Cs,Kf,jo
+                Cs,jo={},function(lg,Od,dj)
+                    Cs[lg]=Vs(Od,8717)-Vs(dj,58204)
+                    return Cs[lg]
                 end
-                Pa=Xp[-19437]or Ep(-19437,88577,31733)
+                Kf=Cs[-28115]or jo(-28115,52551,1212)
                 repeat
                     while true do
-                        if Pa<=1.216400467471757*30804 then
-                            ji[aq('W\143F\128K',"\'\236")](function()
-                                return(function(it)
-                                    local cr,qa,mr,Zm,Oa,Id
-                                    Zm,mr={},function(To,p,be)
-                                        Zm[To]=Ab(p,3648)-Ab(be,21885)
-                                        return Zm[To]
-                                    end
-                                    cr=Zm[220209428/-7438]or mr(-28772-834,2.1331093550371456*21133,-2.2720878227281966*-24595)
-                                    repeat
-                                        while true do
-                                            if cr>-676810602/-18987 then
-                                                if cr<=1689793950/32415 then
-                                                    return
-                                                else
-                                                    cr=Zm[-21032+20765]or mr(-3794+3527,-6.0509955302722469*-14766,-4279- -17472);
-                                                    break;
-                                                end
-                                            elseif cr<=-10076+28975 then
-                                                if cr>266399160/22538 then
-                                                    Oa=function(zh)
-                                                        return it[zh-154474862/-11534]
+                        if Kf<=195107247/25237 then
+                            if Kf>16320+-13353 then
+                                yp[dp('\241\243\224\252\237','\129\144')](function()
+                                    return(function(Ki)
+                                        local zg,_q,L,hs,qn,pc
+                                        zg,_q={},function(Zc,Ed,lc)
+                                            zg[Zc]=Vs(Ed,923)-Vs(lc,18214)
+                                            return zg[Zc]
+                                        end
+                                        hs=zg[2015- -13034]or _q(33593+-18544,3.7445785404488028*21212,180129670/5705)
+                                        repeat
+                                            while true do
+                                                if hs>1.2424385484530891*31773 then
+                                                    if hs<=-2.1837058106460789*-24610 then
+                                                        return
+                                                    else
+                                                        qn=function(qb)
+                                                            return Ki[qb-179146510/23470]
+                                                        end
+                                                        L=am()
+                                                        pc=L and L['FindFirstChild'](L,qn(-6858-7524))
+                                                        if not(pc and pc['Health']>0)then
+                                                            hs=zg[5163-20384]or _q(3911+-19132,-1753508376/-32003,16742- -10909)
+                                                            break
+                                                        end
+                                                        hs=zg[-3579+16163]or _q(5088- -7496,17493- -27791,-1794- -3090)
                                                     end
-                                                    Id=Eo()
-                                                    qa=Id and Id['FindFirstChild'](Id,Oa(-15366- -14542))
-                                                    if not(qa and qa['Health']>0)then
-                                                        cr=Zm[635680378/31474]or mr(0.84538110585576154*23891,-1.9042239868769339*-26823,451875100/22420)
+                                                elseif hs<=-260836104/-11794 then
+                                                    Kq['FireServer']('dropMoney',eh['Call'])
+                                                    hs=zg[1.4232426303854875*-17640]or _q(-55730- -30624,46072+-9713,374661320/15752)
+                                                elseif hs>-556662117/-19151 then
+                                                    hs=zg[-46667- -21031]or _q(721345768/-28138,4.3448480275921533*18556,-545+12464);
+                                                    break;
+                                                else
+                                                    if eh['Call']and eh['CallEnabled']then
+                                                        hs=zg[225073464/31647]or _q(-217200480/-30540,79375+-21819,71572+-10271)
                                                         break
                                                     end
-                                                    cr=Zm[-15701+-416]or mr(-34425- -18308,98050+-13020,-670521330/-18378)
-                                                else
-                                                    wj['FireServer'](Oa(-1.2608555805725314*27981),Tg['Call'])
-                                                    cr=Zm[-571620374/21086]or mr(-24578-2531,117356-25668,43414-32568)
+                                                    hs=27481+1652
                                                 end
-                                            else
-                                                if Tg['Call']and Tg['CallEnabled']then
-                                                    cr=Zm[909977289/-28191]or mr(-62929+30650,1028665684/30839,-21633- -24618)
-                                                    break
-                                                end
-                                                cr=3.1486343983971317*18966
                                             end
-                                        end
-                                    until cr==407326301/6733
-                                end)({[-40747- -18860]='dropMoney',[41455+-28886]='Humanoid'})
-                            end)
-                            Pa=Xp[-25902- -4412]or Ep(-41971- -20481,4.956354868867785*20323,33197+-21759)
-                        elseif Pa<=1509115744/27784 then
-                            if ji[aq('\23R\16X','c3')]['wait'](-10770+10771)then
-                                Pa=0.54443118407896007*31003
+                                        until hs==60232+-7037
+                                    end)({[10739+-32754]='Humanoid'})
+                                end)
+                                Kf=Cs[32553+-12972]or jo(-10.187825182101976*-1922,51574-16890,49152+-17061)
                             else
-                                Pa=Xp[365164602/13134]or Ep(0.95202711957266128*29204,-3977241513/-30359,67339-4442)
+                                if yp[dp('1\246\54\252','E\151')]['wait'](-17458+17459)then
+                                    Kf=Cs[-800274123/-29007]or jo(28722+-1133,-13581+26752,75205+-17119)
+                                else
+                                    Kf=Cs[34911+-27062]or jo(-3089+10938,1.1147343740359104*32414,25462- -13818)
+                                end
                             end
                         else
-                            Pa=Xp[-8254- -13216]or Ep(-2359- -7321,18491+-14685,48108+-8069);
+                            Kf=Cs[211941814/-13553]or jo(-1.5192849509375304*10293,-19.021853805576487*-3981,21282+10085);
                             break;
                         end
                     end
-                until Pa==34592+5848
+                until Kf==-3.3720703125*-8192
             end);
-            ji[aq('b\210e\216','\22\179')]['spawn'](function()
-                return(function(Bn)
-                    local rj,nt,bj,Hq
-                    nt,Hq={},function(K,ls,No)
-                        nt[K]=Ab(ls,48432)-Ab(No,4458)
-                        return nt[K]
-                    end
-                    bj=nt[2012- -29687]or Hq(44573+-12874,607454020/31754,-0.76530383016960579*-17806)
-                    repeat
-                        while true do
-                            if bj>-581951244/-16282 then
-                                if bj>-1.6002019675548895*-30698 then
-                                    rj=function(T)
-                                        return Bn[T-(-2890-17829)]
-                                    end
-                                    bj=-8190+25601
-                                else
-                                    bj=nt[64395/7155]or Hq(-0.00029926182084192323*-30074,-0.87430080255706488*-28783,46260-19142);
-                                    break;
-                                end
-                            elseif bj<=12213- -9653 then
-                                if ji[aq('\155\54\156<','\239W')]['wait'](rj(4.4844465878948636*-8294))then
-                                    bj=370867218/16886
-                                else
-                                    bj=34161+10013
-                                end
-                            elseif bj<=-398125722/-16491 then
-                                if not(es)then
-                                    bj=nt[10974]or Hq(10974,53559,14702)
-                                    break
-                                else
-                                    bj=nt[1.5703275529865126*-5709]or Hq(0.28691672534084361*-31246,4720- -27374,15706- -2973)
-                                    break
-                                end
-                                bj=nt[173]or Hq(173,112354,54949)
-                            else
-                                ji[aq('\183\139\166\132\171','\199\232')](ji[aq('\175\168J\156\191V\140','\255\218%')],Ug,yk)
-                                bj=nt[-7547]or Hq(-7547,20279,49006)
-                            end
-                        end
-                    until bj==-518257260/-19660
-                end)({[108570250/-6590]=-1082.4000000000001/-10824})
-            end);
-            ji[aq("\246\'\241-",'\130F')]['spawn'](function()
-                local Nr,la,Cl
-                Cl,Nr={},function(Zc,Po,Vs)
-                    Cl[Zc]=Ab(Po,21450)-Ab(Vs,64487)
-                    return Cl[Zc]
+            yp[dp('\150\234\145\224','\226\139')]['spawn'](function()
+                local xg,mh,Gg
+                mh,xg={},function(Zr,Vk,cm)
+                    mh[Zr]=Vs(Vk,17647)-Vs(cm,9399)
+                    return mh[Zr]
                 end
-                la=Cl[20180]or Nr(20180,54869,39974)
+                Gg=mh[30684]or xg(30684,82260,41092)
                 repeat
                     while true do
-                        if la>45404-9032 then
-                            if la<=57125- -675 then
-                                ji[aq('\178\156\163\147\174','\194\255')](function()
-                                    local Xb,Dm,Yp,Tp,Jl,Sm,Cc
-                                    Yp,Dm={},function(Ae,hd,bb)
-                                        Yp[Ae]=Ab(hd,52794)-Ab(bb,37766)
-                                        return Yp[Ae]
+                        if Gg>45165+-26811 then
+                            if Gg>2.2449022789811615*14173 then
+                                if Gg<=-556894266/-16593 then
+                                    if yp[dp('\202\222\205\212','\190\191')]['wait'](2902.7000000000003/29027)then
+                                        Gg=-1.0385262192325333*-32705
+                                    else
+                                        Gg=0.14895465653000273*18415
                                     end
-                                    Xb=Yp[-441086425/-22249]or Dm(-6511+26336,16948+6860,-1.7674001056152087*-28405)
-                                    repeat
-                                        while true do
-                                            if Xb>-897187830/-28419 then
-                                                if Xb<=80403-29303 then
-                                                    Xb=Yp[-194489316/22644]or Dm(-22599+14010,-4.8232819641629252*-24723,35984- -17768);
-                                                    break;
-                                                elseif Xb<=-1.9931695494105983*-27231 then
-                                                    Cc(Jl)
-                                                    Xb=Yp[-13085]or Dm(-13085,116465,49688)
-                                                else
-                                                    if not(nm['PlayerGui'])then
-                                                        Xb=Yp[-12221]or Dm(-12221,82828,17679)
-                                                        break
+                                else
+                                    if not(Tr)then
+                                        Gg=mh[20394]or xg(20394,76028,52796)
+                                        break
+                                    else
+                                        Gg=mh[-35298+14059]or xg(-0.88636173942074947*23962,82224- -3928,-3.3597379392495532*-10074)
+                                        break
+                                    end
+                                    Gg=mh[-21631]or xg(-21631,84447,44831)
+                                end
+                            else
+                                yp[dp('\214\23\199\24\202','\166t')](yp[dp('5_\242\6H\238\22','e-\157')],vc,ha)
+                                Gg=mh[13064]or xg(13064,56851,15811)
+                            end
+                        else
+                            Gg=mh[-304466430/-18530]or xg(20193-3762,0.084500657328074713*22059,-0.12466784765279008*-31612);
+                            break;
+                        end
+                    end
+                until Gg==25831634/4234
+            end);
+            yp[dp('\14l\tf','z\r')]['spawn'](function()
+                local fh,Vm,mf
+                Vm,fh={},function(g,qk,ir)
+                    Vm[g]=Vs(qk,35725)-Vs(ir,24517)
+                    return Vm[g]
+                end
+                mf=Vm[9758]or fh(9758,101663,20735)
+                repeat
+                    while true do
+                        if mf>393203700/10275 then
+                            if yp[dp('\172\183\171\189','\216\214')]['wait']()then
+                                mf=32126+-18910
+                            else
+                                mf=Vm[-219938350/-12622]or fh(32891-15466,572057886/10258,54038-31894)
+                            end
+                        elseif mf<=-8968- -24930 then
+                            yp[dp('\4\222\21\209\24','t\189')](function()
+                                local Wd,Xs,Kr,ao,wh,bj,Lq
+                                Lq,Xs={},function(Jn,od,zm)
+                                    Lq[Jn]=Vs(od,29043)-Vs(zm,3750)
+                                    return Lq[Jn]
+                                end
+                                bj=Lq[24857150/1622]or Xs(-385883500/-25180,3994+-2731,-411567485/-18565)
+                                repeat
+                                    while true do
+                                        if bj>-1.1947455637644135*-28966 then
+                                            wh=I['PlayerGui']['Item']['ItemFrame']['AmmoOut'];
+                                            if not(wh)then
+                                                bj=Lq[-23498]or Xs(-23498,45664,26338)
+                                                break
+                                            else
+                                                bj=Lq[509585092/-16378]or Xs(-28740-2374,53.866188769414578*1674,1.4120304998587969*31869)
+                                                break
+                                            end
+                                            bj=Lq[17934]or Xs(17934,55976,24490)
+                                        elseif bj<=32929-14850 then
+                                            if bj<=2156- -8820 then
+                                                if bj<=29708-21659 then
+                                                    if bj>24251-16648 then
+                                                        if not(I['PlayerGui'])then
+                                                            bj=Lq[30220]or Xs(30220,41483,30223)
+                                                            break
+                                                        else
+                                                            bj=Lq[1030495948/-32762]or Xs(-59919870/1905,-217022460/-1965,1692303372/29028)
+                                                            break
+                                                        end
+                                                        bj=Lq[-3491]or Xs(-3491,86534,50688)
                                                     else
-                                                        Xb=Yp[412314750/-12638]or Dm(-2.9012894619831036*11245,36613+-4574,1140633054/21186)
-                                                        break
-                                                    end
-                                                    Xb=Yp[10712]or Dm(10712,121809,52536)
-                                                end
-                                            elseif Xb>0.89497206703910615*20585 then
-                                                if Xb<=-245.92307692307693*-117 then
-                                                    if ji[aq('\143\v\24\28\150\6\19\27','\251dvi')](Tp['Text'])<=Jl['ammoPurchaseAmount']then
-                                                        Xb=Yp[0.68347386172006741*-17790]or Dm(205499259/-16901,386164821/27597,-6.1623986616909017*-7771)
-                                                        break
-                                                    end
-                                                    Xb=Yp[26423]or Dm(26423,119914,61605)
-                                                else
-                                                    Tp=nm['PlayerGui']['Item']['ItemFrame']['AmmoOut'];
-                                                    if not(Tp)then
-                                                        Xb=Yp[20844]or Dm(20844,124809,57600)
-                                                        break
-                                                    else
-                                                        Xb=Yp[-31446- -8031]or Dm(-53255- -29840,592781704/21236,43256-2236)
-                                                        break
-                                                    end
-                                                    Xb=Yp[16048]or Dm(16048,118103,57286)
-                                                end
-                                            elseif Xb>-154521954/-13382 then
-                                                Cc=function(he)
-                                                    local Oe,Pj,Xd,dm,Th,as,rr,ir
-                                                    Th,dm={},function(Ne,gn,Mo)
-                                                        Th[Ne]=Ab(gn,59959)-Ab(Mo,59343)
-                                                        return Th[Ne]
-                                                    end
-                                                    ir=Th[21237+-9953]or dm(-47291244/-4191,-1192979385/-31005,56029- -2471)
-                                                    repeat
-                                                        while true do
-                                                            if ir>439211212/16313 then
-                                                                if ir<=5.4378050584233097*6761 then
-                                                                    if ir<=-209945208/-6472 then
-                                                                        if ir<=-1.9600207347890883*-15433 then
-                                                                            Oe,as=he,he['ammoPurchaseAmount']or he['ammo'];
-                                                                            if not(Oe)then
-                                                                                ir=Th[7035]or dm(7035,126421,26301)
+                                                        ao=function(jt)
+                                                            local Ee,C,gf,gk,ec,bp,Zm,_e
+                                                            gk,C={},function(je,Wl,Xh)
+                                                                gk[je]=Vs(Wl,1675)-Vs(Xh,60963)
+                                                                return gk[je]
+                                                            end
+                                                            bp=gk[35728+-17787]or C(214430832/11952,-2410680894/-26822,33545-11147)
+                                                            repeat
+                                                                while true do
+                                                                    if bp>-428317065/-13035 then
+                                                                        if bp>-820122426/-16154 then
+                                                                            ec=Zm['ammoManager'];
+                                                                            if not(ec)then
+                                                                                bp=gk[15010]or C(15010,31961,39422)
                                                                                 break
                                                                             else
-                                                                                ir=Th[9355+-32336]or dm(2.7456391875746715*-8370,12.918716577540106*1870,44248- -18999)
+                                                                                bp=gk[17948- -7906]or C(-1.9947534912429596*-12961,27198-7735,63192+-19682)
                                                                                 break
                                                                             end
-                                                                            ir=Th[3353]or dm(3353,99525,3917)
+                                                                            bp=gk[27160]or C(27160,5241,65118)
+                                                                        elseif bp<=41373- -1125 then
+                                                                            if bp<=63178-24441 then
+                                                                                if bp>28998+8273 then
+                                                                                    Zm,_e=jt,jt['ammoPurchaseAmount']or jt['ammo'];
+                                                                                    if Zm then
+                                                                                        bp=gk[-25255+9424]or C(1.0556815150706855*-14996,75028+-1162,50680+932)
+                                                                                        break
+                                                                                    end
+                                                                                    bp=gk[8154]or C(8154,8095,63676)
+                                                                                else
+                                                                                    ec['setAmmoOut'](ec,ec['ammoOut']+_e)
+                                                                                    bp=gk[24028]or C(24028,27075,33520)
+                                                                                end
+                                                                            else
+                                                                                if eh['AmmoBuy']and not jt['isConsumable']then
+                                                                                    bp=gk[33385-31393]or C(-4095552/-2056,1366748079/20623,-406687222/-9406)
+                                                                                    break
+                                                                                end
+                                                                                bp=gk[3068350/2815]or C(-15955420/-14638,66132-31667,55165+-17383)
+                                                                            end
                                                                         else
-                                                                            if Tg['AmmoBuy']and not he['isConsumable']then
-                                                                                ir=Th[-0.92986664108222206*31269]or dm(2.3560489425492261*-12341,5.3204576737783897*23248,67906-20090)
+                                                                            gf,Ee=Kq['InvokeServer']('attemptPurchaseAmmo',jt['name']);
+                                                                            if not(gf)then
+                                                                                bp=gk[18198]or C(18198,4961,64854)
+                                                                                break
+                                                                            else
+                                                                                bp=gk[-6654+-7294]or C(-2.714146721151975*5139,-4.532184950135993*-22060,-0.048534662302886049*-26888)
                                                                                 break
                                                                             end
-                                                                            ir=Th[826012680/28680]or dm(13808+14993,-1505808591/-11721,-720323400/-22200)
+                                                                            bp=gk[15957]or C(15957,3025,58566)
                                                                         end
-                                                                    elseif ir>16323+18586 then
-                                                                        Xd['setAmmo'](Xd,Xd['ammo']+as)
-                                                                        ir=Th[-16693]or dm(-16693,119952,24568)
-                                                                    else
-                                                                        ir=Th[32112-27445]or dm(0.55812006696962446*8362,3.685492700729927*21920,18981+-16918);
+                                                                    elseif bp>-5538+8248 then
+                                                                        ec['setAmmo'](ec,ec['ammo']+_e)
+                                                                        bp=gk[31765]or C(31765,8476,51969)
+                                                                    elseif bp<=-20833- -21495 then
+                                                                        bp=gk[-1.6899963356540857*5458]or C(-4472-4752,88960-3399,51103+-24964);
                                                                         break;
-                                                                    end
-                                                                elseif ir>26441+16534 then
-                                                                    Pj,rr=wj['InvokeServer']('attemptPurchaseAmmo',he['name']);
-                                                                    if not(Pj)then
-                                                                        ir=Th[-20240]or dm(-20240,114603,10467)
-                                                                        break
                                                                     else
-                                                                        ir=Th[-17818- -572]or dm(-42296- -25050,-5.7840172786177106*-926,3686+24082)
-                                                                        break
+                                                                        if jt['isConsumable']then
+                                                                            bp=gk[0.28992302087623151*-31567]or C(-9701- -549,0.24698171783373576*17394,39330+21517)
+                                                                            break
+                                                                        else
+                                                                            bp=gk[9995- -18888]or C(-115040989/-3983,-3.3078230295927336*-17065,-400971174/-9462)
+                                                                            break
+                                                                        end
+                                                                        bp=gk[24237]or C(24237,17866,44783)
                                                                     end
-                                                                    ir=Th[19774]or dm(19774,117057,31433)
-                                                                else
-                                                                    Xd=Oe['ammoManager'];
-                                                                    if Xd then
-                                                                        ir=Th[15219+13197]or dm(-0.98700937825633905*-28790,361427835/12335,78380+-23569)
-                                                                        break
-                                                                    end
-                                                                    ir=Th[17361]or dm(17361,100555,15171)
                                                                 end
-                                                            elseif ir<=-6083- -24091 then
-                                                                Xd['setAmmoOut'](Xd,Xd['ammoOut']+as)
-                                                                ir=Th[-16143]or dm(-16143,123166,25462)
-                                                            else
-                                                                if he['isConsumable']then
-                                                                    ir=Th[-40079440/-26230]or dm(-0.107894365202655*-14162,-4.8147720271102896*-25968,27467+13437)
-                                                                    break
-                                                                else
-                                                                    ir=Th[0.35901551631888712*11214]or dm(5209+-1183,47570- -7636,-468847935/-7615)
-                                                                    break
-                                                                end
-                                                                ir=Th[19748]or dm(19748,23892,55100)
-                                                            end
+                                                            until bp==55957+-6683
                                                         end
-                                                    until ir==-3.9068369139305501*-14802
-                                                end
-                                                Jl,Sm=oh['GetEquipped'](nm)
-                                                if Tg['AmmoBuyFull']then
-                                                    Xb=Yp[-6555+27027]or Dm(21020+-548,94939- -25669,41585-15046)
-                                                    break
+                                                        Kr,Wd=bq['GetEquipped'](I)
+                                                        if eh['AmmoBuyFull']then
+                                                            bj=Lq[18942428/-10306]or Xs(-31913- -30075,50353008/8754,0.24608077587352198*30108)
+                                                            break
+                                                        else
+                                                            bj=Lq[1.2488605287146763*-17552]or Xs(2.6292431330214705*-8337,28685+-8790,-102640356/-18564)
+                                                            break
+                                                        end
+                                                        bj=Lq[7.7158739962940084*-3238]or Xs(-0.78467336683417088*31840,3.288618651406197*26561,74718+-23565)
+                                                    end
                                                 else
-                                                    Xb=Yp[-18403- -5700]or Dm(15063-27766,25580+-19158,22286+-11258)
-                                                    break
+                                                    if I then
+                                                        bj=Lq[20755086/2003]or Xs(65197704/6292,131117892/22398,7.0115696104897802*2593)
+                                                        break
+                                                    end
+                                                    bj=Lq[-16164]or Xs(-16164,56064,16642)
                                                 end
-                                                Xb=51710+-4817
-                                            elseif Xb<=3584+5059 then
-                                                if not(nm)then
-                                                    Xb=Yp[28920]or Dm(28920,113868,10319)
-                                                    break
-                                                else
-                                                    Xb=Yp[35861-15840]or Dm(43288-23267,2295495839/21931,30.154838709677421*2015)
-                                                    break
-                                                end
-                                                Xb=Yp[28377]or Dm(28377,106015,2942)
                                             else
-                                                Cc(Jl)
-                                                Xb=Yp[22769+6873]or Dm(1.1056322267810519*26810,113304-15154,-1.9007097182207857*-14231)
+                                                ao(Kr)
+                                                bj=Lq[-9939]or Xs(-9939,80495,65259)
                                             end
+                                        elseif bj<=-591558620/-23510 then
+                                            if bj<=11146- -11319 then
+                                                ao(Kr)
+                                                bj=Lq[-5066+-20860]or Xs(-46595+20669,56689+24903,2.8648696973760672*22371)
+                                            else
+                                                bj=Lq[-31144+27045]or Xs(-0.48223529411764704*8500,-2.5402196902503924*-14657,-1779599500/-31150);
+                                                break;
+                                            end
+                                        else
+                                            if not(yp[dp('\231\175\140\240\254\162\135\247','\147\192\226\133')](wh['Text'])<=Kr['ammoPurchaseAmount'])then
+                                                bj=Lq[-3754]or Xs(-3754,42572,29398)
+                                                break
+                                            else
+                                                bj=Lq[0.93997846761169923*-11146]or Xs(-19737+9260,-2082086220/-21820,-910671000/-18168)
+                                                break
+                                            end
+                                            bj=Lq[32533]or Xs(32533,83408,55154)
                                         end
-                                    until Xb==-1113526854/-19641
-                                end)
-                                la=Cl[113516513/-6281]or Nr(47785012/-2644,59473-14105,-193718415/-12021)
-                            else
-                                la=Cl[60332367/30579]or Nr(40712855/20635,-4.0792539779149637*-23002,458859555/13155);
-                                break;
-                            end
+                                    end
+                                until bj==32884+-29181
+                            end)
+                            mf=Vm[-56294- -24118]or fh(-41620- -9444,107868- -3407,-15773- -23464)
                         else
-                            if ji[aq('\28\128\27\138','h\225')]['wait']()then
-                                la=-1217175102/-24102
-                            else
-                                la=Cl[4488- -9300]or Nr(26241+-12453,-2254362435/-24055,82529+-32238)
-                            end
+                            mf=Vm[-0.01798886045461388*26572]or fh(-6279964/13138,13.619744795164539*7445,28705-11610);
+                            break;
                         end
                     end
-                until la==82579+-30956
+                until mf==-5.3297834575789844*-11268
             end)
-            local vr,wk=ji[aq('\23@\29D','p!')]['GetService'](ji[aq('\23@\29D','p!')],Q(4823+6208)),Q(-11.011533532678342*-4682);
-            vr['InputBegan']['Connect'](vr['InputBegan'],function(pt)
-                return(function(zo)
-                    local Sf,Ll,fp,fr,B,if_,Bl,ac,qf,Gl,Cr
-                    ac,qf={},function(Rc,Sj,Ph)
-                        ac[Rc]=Ab(Sj,5884)-Ab(Ph,42564)
-                        return ac[Rc]
-                    end
-                    Cr=ac[-694+-31444]or qf(-1.9688782699258716*16323,84926+30500,365616720/15120)
-                    repeat
-                        while true do
-                            if Cr<=-133672104/-3852 then
-                                if Cr<=31053-12077 then
-                                    if Cr<=-0.30859781079924176*-32706 then
-                                        if_=uf(Tg['WallCheck'],Tg['KnockedCheck']);
-                                        if not(if_)then
-                                            Cr=ac[26232+4921]or qf(0.99362102510126626*31353,-132316884/-2898,53278+6459)
-                                            break
-                                        else
-                                            Cr=ac[-44468+15431]or qf(-26179-2858,49391- -25196,-20552+23520)
-                                            break
-                                        end
-                                        Cr=ac[12077]or qf(12077,45139,36052)
-                                    elseif Cr<=21790-9672 then
-                                        if Cr<=-21038- -31775 then
-                                            Cr=ac[-495888071/29069]or qf(2.6567512848465973*-6421,85032+-4342,382667420/7681);
-                                            break;
-                                        else
-                                            if not(Tg['SilentShoot'])then
-                                                Cr=ac[-8728-16858]or qf(-9.3345494345129509*2741,-1.8237196765498653*-25970,-737859850/-15775)
-                                                break
+            local Gl,Vp=yp[dp('\211\248\217\252','\180\153')]['GetService'](yp[dp('\211\248\217\252','\180\153')],Xd(463016736/-15704)),false;
+            Gl['InputBegan']['Connect'](Gl['InputBegan'],function(_s)
+                local ba,vo,ni,Al,ps,Oa,Ii,Fk,na,Sd
+                Al,Oa={},function(oo,Rc,K)
+                    Al[oo]=Vs(Rc,52938)-Vs(K,64788)
+                    return Al[oo]
+                end
+                vo=Al[23842+-24558]or Oa(-3.5445544554455446*202,2249479092/30982,35958-27331)
+                repeat
+                    while true do
+                        if vo<=32527-95 then
+                            if vo<=38003472/2412 then
+                                if vo>-239290413/-32411 then
+                                    if vo<=-5095- -17520 then
+                                        if vo<=9.711775043936731*1138 then
+                                            if vo>-128002563/-12141 then
+                                                if not(Ii['ammo'])then
+                                                    vo=Al[15794]or Oa(15794,112030,32669)
+                                                    break
+                                                else
+                                                    vo=Al[-25535+31751]or Oa(-3075- -9291,46778+-17124,-288320186/-5522)
+                                                    break
+                                                end
+                                                vo=Al[-17566]or Oa(-17566,107435,35202)
                                             else
-                                                Cr=ac[57632+-26605]or qf(977- -30050,1.8056176711208072*18335,32866- -22887)
-                                                break
-                                            end
-                                            Cr=ac[10220]or qf(10220,36185,47554)
-                                        end
-                                    elseif Cr<=-0.46545068177793519*-28235 then
-                                        ji[aq('IBNH','=#')]['wait'](Bl['fireDebounce'])
-                                        Cr=ac[2465]or qf(2465,57723,28124)
-                                    elseif Cr<=23782+-10027 then
-                                        wk=B(2.329114889075246*-13117)
-                                        Cr=25.567327133036798*2473
-                                    else
-                                        Cr=ac[-21107]or qf(-21107,112070,2682)
-                                        break
-                                    end
-                                elseif Cr<=280677724/10459 then
-                                    if Cr<=44162-20595 then
-                                        if Cr>-550542252/-25044 then
-                                            if(fr>=0 and Sf>Gl)or((fr<0 or fr~=fr)and Sf<Gl)then
-                                                Cr=ac[-21606]or qf(-21606,123545,23341)
-                                            else
-                                                Cr=-114706710/-4545
+                                                return
                                             end
                                         else
-                                            ji[aq('d\130X\133C','7\234')](Bl,ce['Hit']['Position'],Bl['firemode'])
-                                            Cr=ac[32572]or qf(32572,89073,30378)
+                                            if not(not Vp)then
+                                                vo=Al[1606]or Oa(1606,118880,52642)
+                                                break
+                                            else
+                                                vo=Al[-2.3749049429657796*9205]or Oa(-26127+4266,-2326507060/-23180,55527+-8493)
+                                                break
+                                            end
+                                            vo=Al[42274-28715]or Oa(-318595823/-23497,2006983552/21952,30904-14296)
                                         end
-                                    elseif Cr<=-1.7351422991071428*-14336 then
-                                        Gl,fr,Sf=(Bl['ammo']-22825/22825)+-0.02178649237472767*-5967,1,-0.0051770471071767308*-25304
-                                        Cr=ac[-1414+13997]or qf(21994-9411,99813- -490,-3.8270244369908961*-8348)
                                     else
-                                        if not wk then
-                                            Cr=ac[27778-29652]or qf(-0.13326696060304366*14062,-0.67662915656547384*-27637,44056-7333)
-                                            break
-                                        end
-                                        Cr=-1.4617987606001304*-24528
-                                    end
-                                elseif Cr<=54035-24112 then
-                                    ji[aq('\199\228\192\238','\179\133')]['wait'](Tg['FastShootSpeed'])
-                                    Cr=ac[-28585+25927]or qf(930300/-350,49617+-6166,36485-22889)
-                                elseif Cr>-461401026/-14837 then
-                                    Sf=Sf+fr;
-                                    fp=Sf;
-                                    if Sf~=Sf then
-                                        Cr=ac[-13802]or qf(-13802,97454,54546)
-                                    else
-                                        Cr=ac[309+-14544]or qf(-387761400/27240,11.087874015748032*6350,11803-9248)
-                                    end
-                                else
-                                    if not(Bl['fireDebounce'])then
-                                        Cr=ac[-0.41193373901284652*11832]or qf(-26275734/5391,-4.7132067871708374*-19861,21686- -6806)
-                                        break
-                                    else
-                                        Cr=ac[-26025+14774]or qf(297251420/-26420,886280454/16362,38294-25178)
-                                        break
-                                    end
-                                    Cr=ac[-4168]or qf(-4168,31165,58646)
-                                end
-                            elseif Cr<=2.9622128174123339*16540 then
-                                if Cr<=50374+-9611 then
-                                    if Cr>55499-17760 then
-                                        if_=ce['Hit']['Position'];
-                                        ji[aq('@=|:g','\19U')](Bl,if_,Bl['firemode'])
-                                        Cr=ac[-70]or qf(-70,87181,24598)
-                                    elseif Cr<=51382+-16073 then
-                                        ji[aq('5V\tQ\18','f>')](Bl,if_['Position'],Bl['firemode'])
-                                        Cr=ac[32557]or qf(32557,89570,26811)
-                                    else
-                                        if not(Tg['FastShoot'])then
-                                            Cr=ac[179399/16309]or qf(-0.0006266021076616349*-17555,63871+25648,34262+-5020)
-                                            break
+                                        ba=Fk;
+                                        if na~=na then
+                                            vo=Al[-13111]or Oa(-13111,114106,34737)
                                         else
-                                            Cr=ac[19167+-13124]or qf(-163928461/-27127,81887+-13405,27159+-24709)
-                                            break
+                                            vo=Al[-394179278/31006]or Oa(414723486/-32622,115983+-2717,30713-28576)
                                         end
-                                        Cr=-10449+21696
                                     end
-                                elseif Cr<=20161- -26043 then
-                                    return
-                                else
-                                    fp=Sf;
-                                    if Gl~=Gl then
-                                        Cr=ac[-26188]or qf(-26188,83154,64886)
-                                    else
-                                        Cr=49701-27632
-                                    end
-                                end
-                            elseif Cr<=71377-13170 then
-                                if Cr>85587+-30843 then
-                                    B=function(Ts)
-                                        return zo[Ts+(44897-23939)]
-                                    end
-                                    if not(pt['UserInputType']==ji[aq('\14L>O','K\"')]['UserInputType']['MouseButton1'])then
-                                        Cr=ac[-32748]or qf(-32748,40313,50646)
-                                        break
-                                    else
-                                        Cr=ac[-48547043/5911]or qf(-98276758/11966,86725+-14414,35637-6572)
-                                        break
-                                    end
-                                    Cr=ac[60769+-31639]or qf(56194-27064,73600-8545,-3756*-7)
-                                else
-                                    ji[aq('(\145/\155','\\\240')]['wait']()
-                                    Bl,Ll=oh['GetEquipped'](nm)
-                                    if not(Bl and Tg['AllowedShoot'])then
-                                        Cr=ac[-22655]or qf(-22655,123052,22800)
-                                        break
-                                    else
-                                        Cr=ac[-12190+-9825]or qf(-386033025/17535,119031- -761,37566-8721)
-                                        break
-                                    end
-                                    Cr=ac[27195]or qf(27195,111440,2292)
-                                end
-                            elseif Cr<=59166+2929 then
-                                if Bl['ammo']then
-                                    Cr=ac[0.45276748050619969*31292]or qf(1.876307773804794*7551,82427+-3222,814779186/31322)
-                                    break
-                                end
-                                Cr=ac[-20283]or qf(-20283,93692,8768)
-                            else
-                                if wk then
-                                    Cr=74772-21585
-                                else
-                                    Cr=ac[-9599]or qf(-9599,14828,41305)
-                                end
-                            end
-                        end
-                    until Cr==57238-5792
-                end)({[17210+-26803]=true})
-            end);
-            vr['InputEnded']['Connect'](vr['InputEnded'],function(tb)
-                return(function(Ai)
-                    local ih,rq,Hi,Np
-                    rq,Np={},function(Ld,Io,pb)
-                        rq[Ld]=Ab(Io,2503)-Ab(pb,5953)
-                        return rq[Ld]
-                    end
-                    Hi=rq[266210964/-22251]or Np(383434236/-32049,13.78091286307054*7230,32787+32288)
-                    repeat
-                        while true do
-                            if Hi>-1.6505587181109003*-23715 then
-                                if Hi>24335- -22421 then
-                                    Hi=rq[49560+-25978]or Np(-63058268/-2674,128496-26131,1500188982/26718);
+                                elseif vo<=-1.5819209039548023*-1239 then
+                                    vo=Al[-0.42079659470963821*-13156]or Oa(0.21213979153893317*26096,78549-23702,88110+-23174);
                                     break;
                                 else
-                                    ih=function(Sc)
-                                        return Ai[Sc+270172893/-17389]
-                                    end
-                                    if tb['UserInputType']==ji[aq('y\194I\193','<\172')]['UserInputType']['MouseButton1']then
-                                        Hi=rq[386655958/-27781]or Np(242855182/-17449,50903- -6248,12892+18261)
-                                        break
-                                    end
-                                    Hi=rq[-11088+14603]or Np(14370+-10855,74647+4638,679070520/26028)
+                                    yp[dp('m\203j\193','\25\170')]['wait'](Ii['fireDebounce'])
+                                    vo=Al[-19528]or Oa(-19528,127357,14588)
                                 end
-                            else
-                                wk=ih(35108-11042)
-                                Hi=rq[-18333-2870]or Np(-1.1761149323274906*18028,116388-16415,-679236978/-12621)
-                            end
-                        end
-                    until Hi==43130+4492
-                end)({[11014-2485]=false})
-            end)
-        end)({[42938+-10465]=false,[0.32549114722289596*-24738]='UserInputService'})
-    end
-    local th=Fm['Window'](Fm,{['Name']=Bd(-3.9651162790697674*13502),[Bd(-39320644/26092)]=ji[aq('H\205t\228/','\29\137')]['new'](0,-7346540/-19333,0,Bd(1.6808208710839427*-9161))})
-    local Mb=th['Tab'](th,{[Bd(31136+-30257)]=Bd(-980981094/16183)})
-    local jo=Mb['Section'](Mb,{[Bd(-19581+-31924)]='Money Farm',['Side']=Bd(210815025/-16899)});
-    jo['Toggle'](jo,{[Bd(-3992-27842)]='ATMs',['Callback']=function(sq)
-        yk['ATM']=sq
-    end});
-    jo['Toggle'](jo,{[Bd(-53925- -21678)]='Registers',['Callback']=function(Hn)
-        yk['Register']=Hn
-    end});
-    jo['Toggle'](jo,{['Name']='Bank',[Bd(-69055- -13329)]=function(o)
-        yk['Bank']=o
-    end})
-    local fs=jo['Dropdown'](jo,{[Bd(-18101+-24612)]='Teleport method',['Flag']=Bd(-46428+30527),[Bd(-395487144/14417)]=Bd(-56918757/2247),[Bd(-2.6319018404907975*20701)]={{[Bd(-25928+-5642)]='Hidden',[Bd(-22911+11984)]='Button',['Value']=false,['Callback']=function(Ee)
-        return(function(rs)
-            local function ul(sr)
-                return rs[sr- -0.55701283547257874*21425]
-            end;
-            yk['Hidden']=ul(-455766617/25381)
-        end)({[-1.2980603448275863*4640]=true})
-    end},{['Name']=Bd(-28514-3845),[Bd(-5618+440)]='Button',['Value']=true,['Callback']=function(ag)
-        yk['Hidden']=false
-    end}}});
-    jo['Toggle'](jo,{[Bd(617321136/-21284)]=Bd(-296113409/16087),[Bd(-49723+22167)]=function(Aj)
-        Ug=Aj
-    end});
-    jo['Toggle'](jo,{[Bd(-59852+6066)]=Bd(-37340-4936),['Callback']=function(Td)
-        es=Td
-    end});
-    jo['Label'](jo,{['Text']='<font color=\"rgb(191, 191, 191)\">NOTE: To disable, press ESC and turn it off.\nSometimes may bug ATMs.</font>'})
-    local kb=th['Tab'](th,{[Bd(-1088-32315)]='Player'})
-    local nr=kb['Section'](kb,{[Bd(34934510/-6695)]=Bd(-34308- -1456),['Side']='Left'});
-    nr['Toggle'](nr,{[Bd(-70460- -26745)]=Bd(0.053242092965033801*23966),['Callback']=function(ub)
-        Em=ub
-    end});
-    nr['Toggle'](nr,{['Name']='Auto Armor',[Bd(0.17115971515768058*-19660)]=function(vq)
-        Ki=vq
-    end});
-    nr['Toggle'](nr,{['Name']='Hide Name',[Bd(580295820/-28892)]=function(Qg)
-        Fl=Qg
-    end});
-    nr['Slider'](nr,{[Bd(170713290/-2866)]='Minimum Health',['Min']=Bd(-505624344/9852),[Bd(-37102+6128)]=-0.0075826508947528055*-13188,[Bd(-37258- -13567)]=24729-24629,['Precise']=0,['Callback']=function(Qj)
-        vo=Qj
-    end});
-    nr['Toggle'](nr,{['Name']='Auto TP',[Bd(0.60656365725960926*-15662)]=function(et)
-        Lm=et
-    end})
-    local il=kb['Section'](kb,{['Name']=Bd(-11370- -2150),[Bd(140517114/-16343)]='Left'});
-    il['Label'](il,{[Bd(-17843-771)]='<font color=\"rgb(191, 191, 191)\">NOTE: Shows backpack locker</font>'});
-    il['Toggle'](il,{['Name']=Bd(-3.0909090909090908*2200),['Callback']=function(lq)
-        qt=lq
-    end})
-    local Yr=kb['Section'](kb,{['Name']='Combat',[Bd(-20979+-29001)]='Right'});
-    Yr['Label'](Yr,{[Bd(-53569+-3519)]='<font color=\"rgb(191, 191, 191)\">NOTE: Equip fists for Kill Aura.</font>'});
-    Yr['Slider'](Yr,{['Text']='<Radius',['Min']=Bd(-1.5194839389152186*30384),['Max']=23200/464,['Value']=975450/27870,[Bd(5129+-7285)]=0,['Callback']=function(ta)
-        Pi['Radius']=ta
-    end});
-    Yr['Toggle'](Yr,{['Name']='Kill Aura',[Bd(-45726+3101)]=function(Bi)
-        Pi['KillAura']=Bi
-    end});
-    Yr['Toggle'](Yr,{[Bd(82749642/-5406)]=Bd(-45439+22141),['Callback']=function(uq)
-        Pi['AutoStomp']=uq
-    end})
-    local ro=kb['Section'](kb,{[Bd(-202225485/27951)]=Bd(-1542344166/30789),['Side']='Right'})
-    local eo;
-    ro['Label'](ro,{['Text']=Bd(2.7459378026471537*-18586)});
-    ro['Toggle'](ro,{[Bd(-107381428/8657)]=Bd(1.9420848043935666*-28041),['Callback']=function(Gm)
-        ji[aq('\132\141\131\135','\240\236')]['spawn'](function()
-            return(function(Gk)
-                local Um,cl,qn,mq,hm,_k,Il
-                _k,mq={},function(bn,ts,xt)
-                    _k[bn]=Ab(ts,15118)-Ab(xt,34188)
-                    return _k[bn]
-                end
-                cl=_k[47590+-32164]or mq(496131012/32162,47201+-13429,7864+2125)
-                repeat
-                    while true do
-                        if cl<=61366-31902 then
-                            if cl<=-12829- -27528 then
-                                if cl>17490+-8818 then
-                                    eo=qn['CFrame']
-                                    qn['CFrame']=Bk;
-                                    ji[aq('/J(@','[+')]['wait'](-1954.1000000000001/-19541)
-                                    ur['Flying']=Il(-32285-9030)
-                                    Pi['Fly']=Il(-68008- -24818)
-                                    qn['CFrame']=eo
-                                    cl=_k[-105.88235294117646*255]or mq(-17185+-9815,113930+-2460,-1.5473607038123167*-6820)
-                                elseif cl>-24927- -29674 then
-                                    if cl>0.20155163533350501*31064 then
-                                        return
-                                    else
-                                        Il=function(qr)
-                                            return Gk[qr+-65735218/-3526]
-                                        end
-                                        hm,Um=Gm,Eo()
-                                        if not Um then
-                                            cl=_k[-14586+25062]or mq(-235290960/-22460,25944+16382,59883+-23868)
-                                            break
-                                        end
-                                        cl=59253-32548
-                                    end
+                            elseif vo<=27114+2327 then
+                                if vo>-1.8993411668817497*-14723 then
+                                    Vp=true
+                                    vo=639967168/10048
                                 else
-                                    if not(hm)then
-                                        cl=_k[-29551- -4352]or mq(-11556+-13643,93029+-14612,13070- -5428)
-                                        break
-                                    else
-                                        cl=_k[7631-2770]or mq(0.27923943014705882*17408,-1011362553/-19069,28241-12013)
-                                        break
-                                    end
-                                    cl=70575+-14340
+                                    yp[dp('<\161;\171','H\192')]['wait'](eh['FastShootSpeed'])
+                                    vo=Al[-42656043/-2279]or Oa(-41514306/-2218,113744+12598,-1.3200366524129505*-16370)
                                 end
-                            elseif cl>-30479581/-1453 then
-                                qn=Um['FindFirstChild'](Um,Il(-13060- -647));
-                                if not qn then
-                                    cl=_k[-617597393/19027]or mq(-244286434/7526,18151506/519,0.42605255721955354*17695)
+                            elseif vo>-408019836/-13372 then
+                                if not(eh['SilentShoot'])then
+                                    vo=Al[14914-22730]or Oa(-15139+7323,22.147644326476442*3014,-19598- -31415)
+                                    break
+                                else
+                                    vo=Al[-0.86279853334654644*-20182]or Oa(6466+10947,1777582842/20181,-322791876/-30789)
                                     break
                                 end
-                                cl=_k[118823936/4928]or mq(49236-25124,-521070144/-22128,82875+-28635)
+                                vo=Al[-14685]or Oa(-14685,118631,28686)
                             else
-                                ur['Flying']=false
-                                Pi['Fly']=false
-                                cl=_k[-31448+5676]or mq(184939872/-7176,80191+-21094,4.1780986762936223*8310)
+                                Fk=Fk+ni;
+                                ba=Fk;
+                                if Fk~=Fk then
+                                    vo=Al[18871]or Oa(18871,103488,40107)
+                                else
+                                    vo=Al[-28779504/-2652]or Oa(29838-18986,147441-16705,2964+16519)
+                                end
                             end
-                        elseif cl<=24020- -23196 then
-                            return
+                        elseif vo>74156-25579 then
+                            if vo>39791+17176 then
+                                if vo<=85845+-23120 then
+                                    if eh['FastShoot']then
+                                        vo=Al[3879-30468]or Oa(-9099-17490,1661068808/16618,-39880204/-4634)
+                                        break
+                                    else
+                                        vo=Al[31229-29913]or Oa(22768-21452,36327+-4107,-1615917558/-24922)
+                                        break
+                                    end
+                                    vo=32210+-1027
+                                elseif vo>1810182726/28347 then
+                                    vo=Al[-27427]or Oa(-27427,120220,57247)
+                                    break
+                                elseif vo<=388608936/6126 then
+                                    Sd=go['Hit']['Position'];
+                                    yp[dp('y2E5^','*Z')](Ii,Sd,Ii['firemode'])
+                                    vo=Al[7464]or Oa(7464,129160,15547)
+                                elseif vo>64399-723 then
+                                    if Vp then
+                                        vo=Al[-4854+2120]or Oa(-25887- -23153,-2597126524/-20974,70309+-28424)
+                                    else
+                                        vo=Al[-29053]or Oa(-29053,9620,5889)
+                                    end
+                                else
+                                    if not(_s['UserInputType']==yp[dp('\152I\168J',"\221\'")]['UserInputType']['MouseButton1'])then
+                                        vo=Al[30744]or Oa(30744,26388,21889)
+                                        break
+                                    else
+                                        vo=Al[19206-23648]or Oa(6432-10874,2903+10639,34124+-3673)
+                                        break
+                                    end
+                                    vo=Al[-22533+-9262]or Oa(-19064+-12731,3.787318606155837*10819,21663- -15305)
+                                end
+                            elseif vo>1.7368599640324387*29471 then
+                                yp[dp('\129\203\134\193','\245\170')]['wait']()
+                                Ii,ps=bq['GetEquipped'](I)
+                                if Ii and eh['AllowedShoot']then
+                                    vo=Al[-5341-9868]or Oa(41672660/-2740,35721+10339,-451499074/-10114)
+                                    break
+                                end
+                                vo=Al[-10627]or Oa(-10627,85660,31391)
+                            else
+                                Sd=Pn(eh['WallCheck'],eh['KnockedCheck']);
+                                if not(Sd)then
+                                    vo=Al[-0.30496671786994367*-29295]or Oa(0.43501972050445536*20537,-9.7551450742240213*-11856,35805+-6833)
+                                    break
+                                else
+                                    vo=Al[-8064+30581]or Oa(28538+-6021,242759869/7879,60511+-2349)
+                                    break
+                                end
+                                vo=Al[22149]or Oa(22149,27366,53901)
+                            end
+                        elseif vo>-2.3105176276382502*-16962 then
+                            if Ii['fireDebounce']then
+                                vo=Al[8.6236754465637304*-3303]or Oa(-15828+-12656,52326+-29392,-3.0121457489878543*-9880)
+                                break
+                            else
+                                vo=Al[-6644+24779]or Oa(40357-22222,60.553191489361701*1974,0.19122825186412593*19312)
+                                break
+                            end
+                            vo=Al[-7367]or Oa(-7367,31427,50990)
+                        elseif vo>42125+-6306 then
+                            yp[dp('h\177T\182O',';\217')](Ii,Sd['Position'],Ii['firemode'])
+                            vo=Al[25340]or Oa(25340,108012,2951)
+                        elseif vo>-847422773/-25303 then
+                            ni,Fk,na=1,-23664+23696,(Ii['ammo']-(24148+-24147))+(-27289- -27320)
+                            vo=27069-12632
+                        elseif vo<=1147- -31648 then
+                            if(ni>=0 and Fk>na)or((ni<0 or ni~=ni)and Fk<na)then
+                                vo=Al[7740]or Oa(7740,76342,4389)
+                            else
+                                vo=9322+2370
+                            end
                         else
-                            cl=_k[-10- -7090]or mq(-180171840/-25448,-8.0983606557377055*-6100,-1.7900464556090847*-23248);
-                            break;
+                            yp[dp('\228s\216t\195','\183\27')](Ii,go['Hit']['Position'],Ii['firemode'])
+                            vo=Al[26632]or Oa(26632,105794,9185)
                         end
                     end
-                until cl==666227815/12221
-            end)({[-49678- -25131]=true,[-0.70137664346481055*32325]=true,[27525-21295]='HumanoidRootPart'})
-        end)
+                until vo==-10796+16997
+            end);
+            Gl['InputEnded']['Connect'](Gl['InputEnded'],function(Df)
+                local gs,Tq,_t
+                gs,_t={},function(qe,Wi,Vh)
+                    gs[qe]=Vs(Wi,52600)-Vs(Vh,45733)
+                    return gs[qe]
+                end
+                Tq=gs[23451+9020]or _t(500410581/15411,45.167152009318578*1717,186.16190476190476*105)
+                repeat
+                    while true do
+                        if Tq<=58334+-18830 then
+                            Tq=gs[-19746- -20742]or _t(8072-7076,70888- -30846,42220+-23862);
+                            break;
+                        elseif Tq<=1026310584/17706 then
+                            Vp=false
+                            Tq=gs[1.4375052675937632*11865]or _t(9744+7312,68253+-23146,11877+28971)
+                        else
+                            if Df['UserInputType']==yp[dp('\178\221\130\222','\247\179')]['UserInputType']['MouseButton1']then
+                                Tq=gs[-1.0085407203633805*31262]or _t(-565661789/17941,34981+32630,-9186+31634)
+                                break
+                            end
+                            Tq=gs[-49977+24321]or _t(-37863+12207,5.1665800955744858*19252,191596440/9917)
+                        end
+                    end
+                until Tq==48817+-29606
+            end)
+        end)({[-947642526/29461]='UserInputService'})
+    end
+    local Cn=i['Window'](i,{[Eo(5.8294117647058821*1360)]='Ohio killer ReCode FRIENDS ONLY NOT FOR PUBLIC | v? | By HOKJHa',['Size']=yp[dp('\147f\175O\244','\198\"')]['new'](Eo(-96909961/-4093),Eo(0.23025272778140446*21446),Eo(1.8867206477732794*-12350),Eo(63936+-30147))})
+    local Sr=Cn['Tab'](Cn,{['Name']='Farm'})
+    local fo=Sr['Section'](Sr,{['Name']='Money Farm',['Side']=Eo(18990455/3845)});
+    fo['Toggle'](fo,{['Name']=Eo(-0.76307937139446991*10054),['Callback']=function(ta)
+        ha['ATM']=ta
     end});
-    ro['Slider'](ro,{[Bd(-12632-10677)]='Speed',['Min']=5.774672287347693e-05*17317,['Max']=9377-9362,[Bd(-906358084/15307)]=Bd(1032+-2817),[Bd(-2.881674900023524*4251)]=0,['Callback']=function(ut)
-        tp=ut
+    fo['Toggle'](fo,{['Name']=Eo(105764722/-7067),['Callback']=function(Go)
+        ha['Register']=Go
     end});
-    ro['Slider'](ro,{['Name']='Height',[Bd(152025172/-7982)]=-0.00041390728476821192*-2416,[Bd(-0.002912682834167036*31586)]=Bd(-12823-15095),['Value']=Bd(-34815- -10448),['Precise']=0,['Callback']=function(iq)
-        L=iq
+    fo['Toggle'](fo,{[Eo(0.14695205908123671*7989)]=Eo(-272919978/20907),[Eo(-2.3474137931034482*1160)]=function(Uk)
+        ha['Bank']=Uk
     end})
-    local Zb=kb['Section'](kb,{[Bd(-51488+8369)]='Target',[Bd(-31921+-1458)]='Left'})
-    local Qc
-    Qc=Zb['Textbox'](Zb,{[Bd(-0.44833272997868145*24861)]='Player Name',['HideName']=Bd(-81061+21827),['Callback']=function(ds,ia)
-        return(function(yp)
-            local Nj,Pp,lk,Qo,mj,Jf,G,zq,op,Al,Wn,v,jr,Am
-            Al,mj={},function(lp,Ah,so)
-                Al[lp]=Ab(Ah,17882)-Ab(so,2220)
-                return Al[lp]
+    local Lc=fo['Dropdown'](fo,{['Name']='Teleport method',['Flag']=Eo(-46386+30230),['Side']=Eo(341- -26701),['List']={{['Name']='Hidden',['Mode']=Eo(-28494+20868),['Value']=false,['Callback']=function(td)
+        return(function(th)
+            local function Ia(oa)
+                return th[oa+0.31387908208296555*27192]
+            end;
+            ha['Hidden']=Ia(-45158400/16800)
+        end)({[-71742690/-12270]=true})
+    end},{['Name']=Eo(-434899290/-19977),['Mode']='Button',['Value']=true,[Eo(340968015/-13815)]=function(Nb)
+        ha['Hidden']=false
+    end}}});
+    fo['Toggle'](fo,{['Name']='Safe mode',['Callback']=function(vl)
+        vc=vl
+    end});
+    fo['Toggle'](fo,{['Name']='Enabled',['Callback']=function(Ms)
+        Tr=Ms
+    end});
+    fo['Label'](fo,{[Eo(17258+-22564)]='<font color=\"rgb(191, 191, 191)\">NOTE: To disable, press ESC and turn it off.\nSometimes may bug ATMs.</font>'})
+    local Cm=Cn['Tab'](Cn,{[Eo(121537470/10870)]='Player'})
+    local oh=Cm['Section'](Cm,{['Name']=Eo(21942+-11944),['Side']='Left'});
+    oh['Toggle'](oh,{['Name']=Eo(18368- -11338),[Eo(12815+22603)]=function(Fa)
+        is=Fa
+    end});
+    oh['Toggle'](oh,{['Name']='Auto Armor',['Callback']=function(Sh)
+        _a=Sh
+    end});
+    oh['Toggle'](oh,{[Eo(28518+2618)]=Eo(0.22814126246375085*-25173),[Eo(-156433040/-6068)]=function(jf)
+        ke=jf
+    end});
+    oh['Slider'](oh,{[Eo(2.0501853089495108*16459)]='Minimum Health',[Eo(543103944/17053)]=5452+-5442,['Max']=-122400/-1224,[Eo(-132720780/5905)]=-0.022758306781975421*-4394,['Precise']=0,[Eo(-18287+12100)]=function(Mh)
+        dq=Mh
+    end});
+    oh['Toggle'](oh,{['Name']='Auto TP',[Eo(-10878+12246)]=function(bk)
+        sb=bk
+    end})
+    local us=Cm['Section'](Cm,{['Name']='Locker',['Side']='Left'});
+    us['Label'](us,{[Eo(4511- -4497)]='<font color=\"rgb(191, 191, 191)\">NOTE: Shows backpack locker</font>'});
+    us['Toggle'](us,{['Name']='Enabled',['Callback']=function(bl)
+        No=bl
+    end})
+    local xd=Cm['Section'](Cm,{['Name']=Eo(-326953584/-28031),[Eo(-30323+24970)]='Right'});
+    xd['Label'](xd,{[Eo(0.92448690728945504*-14130)]='<font color=\"rgb(191, 191, 191)\">NOTE: Equip fists for Kill Aura.</font>'});
+    xd['Slider'](xd,{[Eo(49446320/-15356)]='<Radius',['Min']=Eo(-0.1671128243566406*28017),['Max']=0.0029997600191984642*16668,['Value']=-0.16279069767441862*-215,['Precise']=0,['Callback']=function(Zb)
+        yl['Radius']=Zb
+    end});
+    xd['Toggle'](xd,{['Name']=Eo(55344-23325),['Callback']=function(tr)
+        yl['KillAura']=tr
+    end});
+    xd['Toggle'](xd,{[Eo(0.81011549619574141*-18269)]=Eo(13755+-19478),['Callback']=function(uj)
+        yl['AutoStomp']=uj
+    end})
+    local ft=Cm['Section'](Cm,{[Eo(-21276+20479)]='Movement',['Side']=Eo(23498244/22638)})
+    local Bf;
+    ft['Label'](ft,{[Eo(12893-18235)]='<font color=\"rgb(191, 191, 191)\">NOTE: You are invisible to others while flying.</font>'});
+    ft['Toggle'](ft,{['Name']='Fly',[Eo(-34952- -10422)]=function(Jk)
+        yp[dp('\198\188\193\182','\178\221')]['spawn'](function()
+            local rp,ep,Gp,Zd,ka,Ai
+            Ai,Gp={},function(fn,Ds,Mi)
+                Ai[fn]=Vs(Ds,42773)-Vs(Mi,55112)
+                return Ai[fn]
             end
-            Qo=Al[5.3516414141414144*1584]or mj(0.54977625008106878*15419,-0.8799182105458826*-32278,18363-16818)
+            ka=Ai[0.43092276755790571*13427]or Gp(-0.34315876875630152*-16861,17867-4279,314411668/13124)
             repeat
                 while true do
-                    if Qo<=-1.4682483370288248*-22550 then
-                        if Qo>21418+-3924 then
-                            if Qo<=51530+-24174 then
-                                Qo=Al[-2302+-18689]or mj(-28789+7798,-5.0338626809901914*-8564,-1028691900/-20550);
+                    if ka>10786+14123 then
+                        if ka>43629+-4662 then
+                            if ep then
+                                ka=Ai[11557-1032]or Gp(-0.69426121372031657*-15160,12321- -2260,96113-31306)
+                                break
+                            else
+                                ka=Ai[-13489+-4700]or Gp(429496857/-23613,27318- -21424,46049+8582)
+                                break
+                            end
+                            ka=0.5491053677932406*7545
+                        elseif ka>19358372/649 then
+                            Bf=Zd['CFrame']
+                            Zd['CFrame']=Qg;
+                            yp[dp('\137V\142\\','\253\55')]['wait'](7.7669902912621363e-06*12875)
+                            Hm['Flying']=true
+                            yl['Fly']=true
+                            Zd['CFrame']=Bf
+                            ka=Ai[-48665- -28637]or Gp(-23402- -3374,-2.7312893292274736*-7469,-16467- -20369)
+                        else
+                            return
+                        end
+                    elseif ka<=-0.8038047525556834*-14771 then
+                        if ka>-12135+15850 then
+                            if ka<=18640-13591 then
+                                ka=Ai[-16429-3702]or Gp(-48554+28423,3.5602581072137656*30220,40984+10700);
                                 break;
                             else
-                                lk,Jf=Wn(Nj,G);
-                                G=lk;
-                                if G==nil then
-                                    Qo=43010- -18613
-                                else
-                                    Qo=29994- -28420
-                                end
+                                Hm['Flying']=false
+                                yl['Fly']=false
+                                ka=Ai[-6045+18965]or Gp(237327480/18369,0.42143821880243931*24433,-1.5458653572445205*-28104)
                             end
-                        elseif Qo<=35070+-25912 then
-                            if Qo>0.21957202702192702*26497 then
-                                Pp=function(Rj)
-                                    return yp[Rj+(-9756+28298)]
-                                end
-                                if not(not ia)then
-                                    Qo=Al[-15329]or mj(-15329,42325,49925)
-                                    break
+                        elseif ka<=33597850/20350 then
+                            Zd=rp['FindFirstChild'](rp,'HumanoidRootPart');
+                            if not(not Zd)then
+                                ka=Ai[6373]or Gp(6373,128833,17461)
+                                break
+                            else
+                                ka=Ai[21640+10847]or Gp(-5.9718749999999998*-5440,-15704+19330,51588+6492)
+                                break
+                            end
+                            ka=-3.5140655666206295*-13757
+                        else
+                            ep,rp=Jk,am();
+                            if not rp then
+                                ka=Ai[-0.4153434164372195*-26513]or Gp(0.47778549114890662*23048,-3.9100026392187912*-3789,-1.1432677153187676*-32359)
+                                break
+                            end
+                            ka=-46561325/-31567
+                        end
+                    else
+                        return
+                    end
+                end
+            until ka==1408035370/24055
+        end)
+    end});
+    ft['Slider'](ft,{['Name']='Speed',['Min']=-7650/-7650,['Max']=2134+-2119,[Eo(4957+-30607)]=0.00010671219720414043*9371,['Precise']=Eo(49780+-21129),['Callback']=function(Cr)
+        zr=Cr
+    end});
+    ft['Slider'](ft,{[Eo(33459- -1272)]='Height',['Min']=-3.4891835310537335e-05*-28660,[Eo(-112502523/-22107)]=Eo(21437+-1307),['Value']=-2594- -2595,[Eo(9864- -2285)]=0,[Eo(132951160/10774)]=function(Zp)
+        ag=Zp
+    end})
+    local kj=Cm['Section'](Cm,{[Eo(-5992896/-5096)]=Eo(131537224/18004),[Eo(-18802- -2681)]='Left'})
+    local ci
+    ci=kj['Textbox'](kj,{['Placeholder']=Eo(222961572/26892),[Eo(28254-213)]=Eo(0.24191355487400007*31627),['Callback']=function(om,on)
+        return(function(ll)
+            local qp,wp,Hj,Ks,Oe,ht,Qm,qg,Mc,Uh,Im,Vd,sc,Ws
+            Oe,Hj={},function(fi,bd,En)
+                Oe[fi]=Vs(bd,50721)-Vs(En,19731)
+                return Oe[fi]
+            end
+            wp=Oe[-3464+10209]or Hj(-190735110/-28278,99410-26283,29417+17352)
+            repeat
+                while true do
+                    if wp>50895+-18938 then
+                        if wp>38823- -11697 then
+                            if wp>342193817/6013 then
+                                if wp<=-1003583196/-16698 then
+                                    if wp>377780148/6558 then
+                                        Vd=Qm['Name'];
+                                        if not(Vd['lower'](Vd)['sub'](Vd['lower'](Vd),Im((85241-10264)+(-12047-18513)),#Uh)==Uh)then
+                                            wp=Oe[-1993]or Hj(-1993,44562,28179)
+                                            break
+                                        else
+                                            wp=Oe[-40054- -19002]or Hj(-0.86930668538629885*24217,3016029560/30920,16325+18601)
+                                            break
+                                        end
+                                        wp=Oe[-30064]or Hj(-30064,124413,37818)
+                                    else
+                                        Im=function(fr)
+                                            return ll[fr+654825840/-23160]
+                                        end
+                                        if not(not on)then
+                                            wp=Oe[13802]or Hj(13802,44888,10347)
+                                            break
+                                        else
+                                            wp=Oe[6053+-3920]or Hj(0.10455882352941176*20400,-506+25357,34199+17900)
+                                            break
+                                        end
+                                        wp=Oe[214306284/15837]or Hj(-236038676/-17443,27648-25633,83400+-21722)
+                                    end
                                 else
-                                    Qo=Al[25880-17001]or mj(0.55741101136292293*15929,29090+12371,1373691751/24439)
-                                    break
+                                    yp[dp(']\210K\223L',')\179')]['insert'](Mc,Vd)
+                                    wp=Oe[22798]or Hj(22798,115909,61602)
                                 end
-                                Qo=Al[-4770- -10807]or mj(-20753+26790,-0.7447165556662646*-19069,-592290846/-27198)
-                            elseif Qo>913- -3931 then
-                                if not(Qc['isSetting'])then
-                                    Qo=Al[9287]or mj(9287,13564,20371)
+                            else
+                                wp=Oe[-0.45094639502961997*6921]or Hj(-19385- -16264,296622180/29270,-315246975/-5975);
+                                break;
+                            end
+                        elseif wp>67369-27397 then
+                            Ks=Jb(qg)
+                            if Ks~=nil and Ks.__iter~=nil then
+                                wp=Oe[759267624/-25224]or Hj(1387-31488,30056+14554,30612+-30044)
+                                break
+                            elseif Of(qg)=='table'then
+                                wp=Oe[-93509472/14712]or Hj(21347-27703,131879370/31535,61004-31952)
+                                break
+                            end
+                            wp=Oe[-23804]or Hj(-23804,25242,4763)
+                        elseif wp>12.236908517350157*3170 then
+                            qg,ht,Ws=me(qg)
+                            wp=Oe[-9305]or Hj(-9305,45316,31969)
+                        else
+                            return
+                        end
+                    elseif wp<=-10000+26183 then
+                        if wp>33729+-25496 then
+                            if wp>44480+-32582 then
+                                ci['isSetting']=true
+                                ci['Value']=Mc[Im(48496-22155)]
+                                ci['isSetting']=Im(-10352+25245)
+                                yl['Target']=Mc[-0.00010726161106939826*-9323]
+                                wp=Oe[0.66178709071477149*-30877]or Hj(-33759- -13325,1201278330/17865,62876+-16658)
+                            elseif wp>-0.66171328671328666*-13728 then
+                                qp,Uh,Mc=yp[dp('\194\228\200\224','\165\133')]['GetService'](yp[dp('\194\228\200\224','\165\133')],Im(86460688/9497))['GetPlayers'](yp[dp('\194\228\200\224','\165\133')]['GetService'](yp[dp('\194\228\200\224','\165\133')],Im(86460688/9497))),om['lower'](om),{};
+                                qg,ht,Ws=yp[dp('\140\189\148\140\191\134','\229\205\245')](qp);
+                                if Of(qg)~='function'then
+                                    wp=Oe[-16945- -14156]or Hj(0.10225106320574864*-27276,127154+-1501,4.2766355140186914*11770)
                                     break
-                                else
-                                    Qo=Al[-345229612/11116]or mj(-32229+1172,-4.9326431660332855*-7631,222310088/16898)
-                                    break
-                                end
-                                Qo=22369-11642
+                                end;
+                                wp=Oe[-24040]or Hj(-24040,117430,35447);
                             else
                                 return
                             end
-                        elseif Qo<=-17144576/-1388 then
-                            zq,op,v=ji[aq('\3]\tY','d<')]['GetService'](ji[aq('\3]\tY','d<')],'Players')['GetPlayers'](ji[aq('\3]\tY','d<')]['GetService'](ji[aq('\3]\tY','d<')],'Players')),ds['lower'](ds),{};
-                            Wn,Nj,G=ji[aq('\25\17\231\25\19\245','pa\134')](zq);
-                            if Rm(Wn)~='function'then
-                                Qo=Al[1.2160929270127916*21264]or mj(-237.23853211009174*-109,60160-22893,19848+18299)
-                                break
-                            end;
-                            Qo=Al[1276]or mj(1276,91886,41941);
-                        else
-                            Am=fn(Wn)
-                            if Am~=nil and Am.__iter~=nil then
-                                Qo=Al[-12344-17377]or mj(-6107+-23614,91942-16440,63425-9053)
-                                break
-                            elseif Rm(Wn)=='table'then
-                                Qo=Al[167803960/10567]or mj(-421- -16301,891617837/10681,2.9542409564052354*9703)
+                        elseif wp<=8610+-4870 then
+                            if ci['isSetting']then
+                                wp=Oe[2852+7812]or Hj(2124- -8540,2401736172/28292,-3.0038116157374506*-15479)
                                 break
                             end
-                            Qo=Al[18065]or mj(18065,34292,16607)
+                            wp=-2.2078740157480317*-4445
+                        else
+                            qg,ht,Ws=Ks.__iter(qg)
+                            wp=Oe[13481]or Hj(13481,114771,35884)
                         end
-                    elseif Qo<=3.5153329439252334*13696 then
-                        if Qo<=727795310/19546 then
-                            Wn,Nj,G=Am.__iter(Wn)
-                            Qo=Al[-30881]or mj(-30881,57766,9325)
-                        elseif Qo<=62149-22275 then
-                            return
+                    elseif wp<=0.82330827067669177*29792 then
+                        sc,Qm=qg(ht,Ws);
+                        Ws=sc;
+                        if Ws==nil then
+                            wp=Oe[-6.3076183609709204*4161]or Hj(-34739+8493,-5.700141591064031*-19069,7.3142725030826137*6488)
                         else
-                            Wn,Nj,G=Gi(Wn)
-                            Qo=Al[2170]or mj(2170,35754,24089)
-                        end
-                    elseif Qo>2.0681546283834304*26748 then
-                        if Qo>3.1375586854460096*19170 then
-                            if Qo<=51971+9781 then
-                                if#v>=Pp(0.41612148606320132*-25221)then
-                                    Qo=Al[-26310+14797]or mj(4098-15611,139140+-21911,-8.5871601553575516*-4377)
-                                    break
-                                end
-                                Qo=24742-680
-                            else
-                                Qc['isSetting']=Pp(-86689761/2679)
-                                Qc['Value']=v[2215-2214]
-                                Qc['isSetting']=false
-                                Pi['Target']=v[24349-24348]
-                                Qo=Al[202438222/-28238]or mj(-15689+8520,81852-18092,0.79588237411366658*27783)
-                            end
-                        else
-                            jr=Jf['Name'];
-                            if not(jr['lower'](jr)['sub'](jr['lower'](jr),Pp(-3.9393157541668815*19379+-4.1312938177182916*-6276),#op)==op)then
-                                Qo=Al[-2966]or mj(-2966,36418,23409)
-                                break
-                            else
-                                Qo=Al[-3049-13768]or mj(-2.3218279718348751*7243,-3665072868/-31673,30689+21475)
-                                break
-                            end
-                            Qo=Al[-18587]or mj(-18587,56799,10470)
+                            wp=Oe[20671-14807]or Hj(0.19446839556941037*30154,41512-27635,263312175/15825)
                         end
                     else
-                        ji[aq('\169T\191Y\184','\221\53')]['insert'](v,jr)
-                        Qo=Al[-31852]or mj(-31852,50837,824)
+                        if not(#Mc>=Im(-1.2271292348748657*-30727+-2.3593180355993995*-9326))then
+                            wp=Oe[25215]or Hj(25215,13640,24932)
+                            break
+                        else
+                            wp=Oe[0.67274331079094385*-6802]or Hj(-33847+29271,574438574/16217,6.7851051733939736*3518)
+                            break
+                        end
+                        wp=Oe[-0.84067619607075261*15321]or Hj(175760480/-13646,352944856/28204,-1.6745264273413698*-15098)
                     end
                 end
-            until Qo==14010-5156
-        end)({[27947-19900]=0,[586599220/-18406]=-7792- -7793,[-21168- -7351]=true})
+            until wp==33379+-9142
+        end)({[37451+-21308]=-28938- -28939,[-25751+23818]=9570-9569,[0.46508637169371936*-28771]=false,[59969-28534]=0,[-210199050/10965]='Players'})
     end})
-    local Lc=Zb['Dropdown'](Zb,{['Name']=Bd(-64104+4426),[Bd(221095350/-23310)]='Dropdown',[Bd(1001813904/-24297)]=Bd(-10852+-2770),['List']={{['Name']=Bd(560428940/-31379),['Mode']=Bd(-20795-27937),[Bd(-512+-1047)]=true,[Bd(-80015- -28938)]=function(Ia)
-        return(function(rt)
-            local function vf(ti)
-                return rt[ti+119564778/22809]
+    local Ur=kj['Dropdown'](kj,{[Eo(6536+7388)]=Eo(-118504484/5593),[Eo(3.3867464335020707*10865)]='Dropdown',[Eo(0.78913210445468507*26040)]='Left',[Eo(51809375/-16579)]={{['Name']=Eo(-21020- -6005),['Mode']=Eo(10256+-10159),[Eo(1714+1057)]=Eo(-3.4038434950919396*7233),['Callback']=function(Rm)
+        return(function(Or)
+            local function Le(cf)
+                return Or[cf+(-30163- -29881)]
             end;
-            Pi['TargetKill']=vf(0.56850134126240259*-30941)
-            Pi['TargetBring']=false
-        end)({[-1.6868852459016392*7320]=false})
-    end},{['Name']=Bd(-39502136/29768),['Mode']='Button',[Bd(-29767- -28189)]=false,[Bd(-8.7691737680622452*5398)]=function(uo)
-        return(function(Lj)
-            local function co(If)
-                return Lj[If+(-7937+24078)]
-            end;
-            Pi['TargetKill']=co(-3690+5001)
-            Pi['TargetBring']=false
-        end)({[30783+-13331]=true})
-    end},{[Bd(1.3614088820826953*-23508)]='Bring',['Mode']='Button',[Bd(-495449034/18527)]=Bd(-12004+-7508),[Bd(-66663- -22944)]=function(ki)
-        return(function(ot)
-            local function F(bp)
-                return ot[bp+-0.26665075196944377*-25134]
-            end;
-            Pi['TargetKill']=false
-            Pi['TargetBring']=F(-6560- -14484)
-        end)({[0.45232719962888512*32335]=true})
+            yl['TargetKill']=Le(-3.7615919629057188*-2588)
+            yl['TargetBring']=Le(-41705- -31075)
+        end)({[0.40316263947387865*-27066]=false,[299830254/31718]=false})
+    end},{['Name']='Kill',['Mode']='Button',[Eo(1383- -13456)]=false,['Callback']=function(Bc)
+        yl['TargetKill']=true
+        yl['TargetBring']=false
+    end},{['Name']=Eo(0.83868258023870357*-28571),['Mode']='Button',[Eo(0.059201141226818833*19628)]=Eo(6980+30186),[Eo(109311786/-17973)]=function(kq)
+        yl['TargetKill']=false
+        yl['TargetBring']=true
     end}}});
-    Zb['Button'](Zb,{['Name']='Teleport',['Callback']=function()
-        return(function(Sl)
-            local wb,el,ye,ld,Mg,Kp,lh,cg,Dq,_p
-            cg,el={},function(Bs,sd,Nn)
-                cg[Bs]=Ab(sd,43313)-Ab(Nn,44191)
-                return cg[Bs]
-            end
-            wb=cg[8982- -19405]or el(425407582/14986,2624003514/21479,-298858764/-20252)
-            repeat
-                while true do
-                    if wb<=2202- -26573 then
-                        if wb>-2497+15837 then
-                            if wb<=2126+17734 then
-                                wb=cg[-37665- -5354]or el(-972528789/30099,131779+-29821,12301+1211);
-                                break;
+    kj['Button'](kj,{[Eo(43860-9693)]='Teleport',['Callback']=function()
+        local Wc,uc,Cb,Wb,rs,fl,Xg,_m,Ap
+        fl,rs={},function(wo,Zn,Pe)
+            fl[wo]=Vs(Zn,58758)-Vs(Pe,22823)
+            return fl[wo]
+        end
+        Cb=fl[-57787456/13352]or rs(101080440/-23355,110875+-9539,47148+12000)
+        repeat
+            while true do
+                if Cb>46702-9627 then
+                    if Cb<=-1371035512/-26536 then
+                        if Cb>75489+-31435 then
+                            if Cb>40648+4858 then
+                                Wb['CFrame']=Ap['HumanoidRootPart']['CFrame']
+                                Cb=fl[-6816]or rs(-6816,91748,52272)
                             else
-                                lh=ji[aq('\22\147\28\151','q\242')]['GetService'](ji[aq('\22\147\28\151','q\242')],ld(12888+-9615))[Pi['Target']];
-                                if lh then
-                                    wb=cg[485923680/-15840]or el(-31455+778,1.9253990731204944*15536,231283492/5599)
-                                    break
-                                end
-                                wb=cg[31748]or el(31748,98648,24553)
-                            end
-                        elseif wb>-26428- -31841 then
-                            if wb>28837-20943 then
-                                ye=Eo();
-                                if not(ye)then
-                                    wb=cg[12837]or el(12837,59470,40979)
+                                yl['Target']=ci['Value']
+                                if not(yl['Target'])then
+                                    Cb=fl[-2305]or rs(-2305,2597,23039)
                                     break
                                 else
-                                    wb=cg[9022+16126]or el(2581+22567,177446150/3149,46150- -11116)
+                                    Cb=fl[-16349- -818]or rs(410282427/-26417,-0.52197604985806112*-30647,32202-4467)
                                     break
                                 end
-                                wb=cg[1990]or el(1990,101097,17018)
-                            else
-                                Dq['CFrame']=_p['HumanoidRootPart']['CFrame']
-                                wb=cg[27775]or el(27775,8453,65502)
+                                Cb=fl[13342- -17440]or rs(39436-8654,-1227740400/-18504,68917+-24123)
                             end
+                        elseif Cb>-1.9729767441860464*-21500 then
+                            Wc=yp[dp('\244\225\254\229','\147\128')]['GetService'](yp[dp('\244\225\254\229','\147\128')],'Players')[yl['Target']];
+                            if Wc then
+                                Cb=fl[8.7360315186246424*2792]or rs(27273+-2882,0.84513308875185389*25622,29299- -1538)
+                                break
+                            end
+                            Cb=fl[23939]or rs(23939,110005,79)
                         else
-                            Mg,Dq=ye['FindFirstChild'](ye,'ForceField'),ye['FindFirstChild'](ye,ld(-0.39874091706339265*31928));
-                            if Dq and not Mg then
-                                wb=cg[9.8631239935587764*1242]or el(26074-13824,0.90995539264843184*28919,18164+-12524)
+                            _m=Ap['FindFirstChild'](Ap,'HumanoidRootPart');
+                            if _m then
+                                Cb=fl[-2.6274545290019002*11051]or rs(3.4309346567411083*-8463,136394-14986,34511232/3108)
                                 break
                             end
-                            wb=cg[-25320]or el(-25320,55171,58656)
+                            Cb=fl[17832]or rs(17832,4514,23678)
                         end
-                    elseif wb>23160- -23727 then
-                        if wb<=-1699234605/-30805 then
-                            _p=lh['Character']or lh['CharacterAdded']['Wait'](lh['CharacterAdded']);
-                            if _p then
-                                wb=cg[-0.70836272860476479*18427]or el(-16765+3712,145598+-16121,12209+15931)
-                                break
-                            end
-                            wb=cg[1494]or el(1494,105144,21001)
-                        else
-                            ld=function(Lb)
-                                return Sl[Lb+(10455+-25978)]
-                            end
-                            Pi['Target']=Qc['Value']
-                            if not(Pi['Target'])then
-                                wb=cg[-1130]or el(-1130,64044,45749)
-                                break
-                            else
-                                wb=cg[18254+-9317]or el(-13718- -22655,-972554672/-32528,70849+-14694)
-                                break
-                            end
-                            wb=cg[41928-14720]or el(2059- -25149,-574700616/-31028,16861-16630)
-                        end
+                    elseif Cb>-3.4221326272716333*-16618 then
+                        Cb=fl[0.60981432360742704*-18850]or rs(-13701- -2206,18265- -21939,12616+14218);
+                        break;
                     else
-                        Kp=_p['FindFirstChild'](_p,'HumanoidRootPart');
-                        if not(Kp)then
-                            wb=cg[22290]or el(22290,50674,39759)
-                            break
-                        else
-                            wb=cg[16279-15202]or el(21835+-20758,1.3402239752077758*28396,1014720576/21332)
+                        uc=am();
+                        if uc then
+                            Cb=fl[-0.62617468214483141*14472]or rs(-0.28276335496754867*32048,-938496319/-28537,226614160/8336)
                             break
                         end
-                        wb=cg[-5219]or el(-5219,108271,30324)
+                        Cb=fl[-23180]or rs(-23180,90635,49637)
                     end
+                elseif Cb<=5046+19862 then
+                    Xg,Wb=uc['FindFirstChild'](uc,'ForceField'),uc['FindFirstChild'](uc,'HumanoidRootPart');
+                    if Wb and not Xg then
+                        Cb=fl[-34479+1894]or rs(-972336400/29840,117545- -1911,62469-6419)
+                        break
+                    end
+                    Cb=fl[-12849]or rs(-12849,104371,55885)
+                else
+                    Ap=Wc['Character']or Wc['CharacterAdded']['Wait'](Wc['CharacterAdded']);
+                    if Ap then
+                        Cb=fl[28384+-16790]or rs(12724-1130,92290- -17890,32397+32659)
+                        break
+                    end
+                    Cb=fl[-2002]or rs(-2002,99970,11550)
                 end
-            until wb==50343360/1374
-        end)({[-25723-2531]='HumanoidRootPart',[-89376000/7296]='Players'})
+            end
+        until Cb==45246-27177
     end})
-    local zg=th['Tab'](th,{['Name']='Valuables'})
-    local Ea=zg['Section'](zg,{[Bd(0.10243021346469622*30450)]='Valuable',[Bd(-0.19757756519841413*27493)]=Bd(2.5905562396273889*-18679)});
-    Ea['Button'](Ea,{['Name']=Bd(-346955507/24977),['Callback']=function()
-        return(function(rl)
-            local Ar,Vc,wm,Ul,pa,nn,Vl,Dh
-            nn,Ul={},function(Me,of,lm)
-                nn[Me]=Ab(of,62688)-Ab(lm,12)
-                return nn[Me]
+    local Dj=Cn['Tab'](Cn,{[Eo(104+-17735)]='Valuables'})
+    local Rr=Dj['Section'](Dj,{[Eo(-116317512/-12564)]=Eo(-16580- -8320),[Eo(-532819166/-19129)]='Left'});
+    Rr['Button'](Rr,{['Name']='Find Valuable',['Callback']=function()
+        return(function(ma)
+            local ko,vd,Ae,hc,Ss,ya,If,Xn
+            ya,Ae={},function(gl,Tp,Vg)
+                ya[gl]=Vs(Tp,6727)-Vs(Vg,31828)
+                return ya[gl]
             end
-            Vl=nn[-23527+-1397]or Ul(-48789+23865,68169342/1389,8024- -7225)
+            If=ya[-0.85218576831735426*22738]or Ae(5886-25263,1511861901/23579,14291- -26982)
             repeat
                 while true do
-                    if Vl<=-2780- -29203 then
-                        if Vl<=-0.47744787864038291*-24654 then
-                            Vc=function(Nf)
-                                return rl[Nf+132041710/-24335]
+                    if If<=6885- -26136 then
+                        if If<=217130360/15320 then
+                            hc=function(Ll)
+                                return ma[Ll+-386628770/24190]
                             end
-                            Dh,wm=ji[aq('c\23U\25','0r')]()
-                            if not(Dh and wm)then
-                                Vl=nn[-18620]or Ul(-18620,110651,63633)
+                            ko,Xn=yp[dp('=w\vy','n\18')]()
+                            if not(ko and Xn)then
+                                If=ya[-21319]or Ae(-21319,98692,52351)
                                 break
                             else
-                                Vl=nn[105109286/4343]or Ul(22671+1531,-6836+12183,35510+-16996)
+                                If=ya[-39012- -7503]or Ae(-30069-1440,6.2869656288679421*10503,19.245053272450534*657)
                                 break
                             end
-                            Vl=-307915968/-15776
+                            If=ya[40943+-30308]or Ae(11581515/1089,83276-726,-21396+25697)
                         else
-                            Vl=nn[43890-15373]or Ul(4.7299718029523969*6029,-1.1585958770906262*-20568,-12378- -30528);
-                            break;
+                            Ss['CFrame']=Xn['CFrame']
+                            If=ya[19159]or Ae(19159,113129,50242)
                         end
-                    elseif Vl<=64860+-21039 then
-                        if not(not Dh['find'](Dh,'Paint')and not Dh['find'](Dh,'Ring'))then
-                            Vl=nn[-1354]or Ul(-1354,127565,47715)
-                            break
-                        else
-                            Vl=nn[103704304/-8299]or Ul(14686+-27182,114874-24991,96340+-32711)
+                    elseif If<=79097-19994 then
+                        if not ko['find'](ko,'Paint')and not ko['find'](ko,'Ring')then
+                            If=ya[-4135+3899]or Ae(-18280- -18044,-2.7586206896551726*-27405,5.1739130434782608*3243)
                             break
                         end
-                        Vl=nn[16052]or Ul(16052,47643,689)
-                    elseif Vl>-1.7935576668306901*-26419 then
-                        pa['CFrame']=wm['CFrame']
-                        Vl=nn[-15383]or Ul(-15383,24322,24488)
+                        If=ya[10776]or Ae(10776,103852,55303)
+                    elseif If>-374996456/-5969 then
+                        vd=am();
+                        Ss=vd['FindFirstChild'](vd,hc(-576313955/-21959));
+                        if Ss then
+                            If=ya[-25417+-2676]or Ae(-1.4565014516798009*19288,38483- -19449,2.3879420784968359*25759)
+                            break
+                        end
+                        If=ya[-22314]or Ae(-22314,119821,40678)
                     else
-                        Ar=Eo();
-                        pa=Ar['FindFirstChild'](Ar,Vc(-3.5689544579858885*-6236));
-                        if pa then
-                            Vl=nn[-1188-9363]or Ul(-7004-3547,101828+11334,56379+-19459)
-                            break
-                        end
-                        Vl=nn[-24266]or Ul(-24266,24986,18736)
+                        If=ya[258787716/-11846]or Ae(952+-22798,120556- -345,14512+29683);
+                        break;
                     end
                 end
-            until Vl==26347+-991
-        end)({[26969+-10139]='HumanoidRootPart'})
+            until If==63807-2100
+        end)({[-21144+31406]='HumanoidRootPart'})
     end});
-    Ea['Toggle'](Ea,{['Name']='Safe Mode',['Callback']=function(jh)
-        pm=jh
+    Rr['Toggle'](Rr,{['Name']=Eo(466-25405),['Callback']=function(Vn)
+        qf=Vn
     end});
-    Ea['Toggle'](Ea,{['Name']='Most Valuable Only',[Bd(-2559+4492)]=function(gb)
-        return(function(yq)
-            local ca,Cn,id,Ka
-            ca,Cn={},function(jp,Uk,Rf)
-                ca[jp]=Ab(Uk,12917)-Ab(Rf,35674)
-                return ca[jp]
+    Rr['Toggle'](Rr,{[Eo(-1.0447797816218869*24453)]=Eo(1901+1992),['Callback']=function(sl)
+        return(function(Rb)
+            local pe,qc,Mq,ra
+            ra,Mq={},function(Js,t,Sj)
+                ra[Js]=Vs(t,15398)-Vs(Sj,58003)
+                return ra[Js]
             end
-            id=ca[6886-27294]or Cn(-17333-3075,33564+18297,45492- -9640)
+            pe=ra[-23572+32103]or Mq(21384-12853,48010- -10907,33856- -23115)
             repeat
                 while true do
-                    if id<=-670288832/-23722 then
-                        if id>-387650900/-29092 then
-                            id=ca[44729-27588]or Cn(-18940805/-1105,103700-8324,-2085538976/-31888);
+                    if pe>12.786940142318961*2389 then
+                        if pe<=15656+26253 then
+                            qc=function(or_)
+                                return Rb[or_- -0.14437555358724535*15806]
+                            end
+                            if sl then
+                                pe=ra[-8272+-16174]or Mq(-49999- -25553,700815837/13413,37191- -1967)
+                                break
+                            else
+                                pe=ra[-1.4527729130180969*-17130]or Mq(49327-24441,103885-29103,60761584/4784)
+                                break
+                            end
+                            pe=-792710179/-18269
+                        else
+                            pe=ra[74577824/28552]or Mq(-3551- -6163,62004+15340,24583+24058);
                             break;
-                        else
-                            Mi={Ka(-19949+16723),'Void',Ka(26857+20972),Ka(10518+-4689),'Santa'}
-                            id=ca[8891- -17417]or Cn(51414-25106,52299- -12890,760005533/12481)
                         end
-                    elseif id>1.8363365656257158*26194 then
-                        Mi={'Military','Vest','Keycard','Marker','Barrett',Ka(0.038183547313361862*-21030),Ka(15853+17639),'Key',Ka(-80263197/-20853),'RPG',Ka(24115+-30870),'Scar','Block','M249','Hoverboard',Ka(15305+-4709),'Dragunov',Ka(16792-10678),'Dark',Ka(99846864/17779),'C5','Santa',Ka(11120+20690),'AS Val','AUG','Python',Ka(44178-24166),'FN','P90',Ka(16737+-18754),'Tactical','Topaz','Treasure',Ka(116648832/-17869),'Nuke','AR-15',Ka(49201+-6604),Ka(-11903+22908),'Gun','Flamethrower','Ruby','Sapphire','Amethyst','Rollie','Glock','Emerald',Ka(-299807592/-8484)}
-                        id=ca[16798+-26506]or Cn(2.8130976528542453*-3451,1746764955/23907,-12435+29724)
+                    elseif pe>14814- -9124 then
+                        ae={'Marker','Void',qc(44313-24358),qc(-2.9131322840322*-8323),'Santa'}
+                        pe=ra[0.43443338571678014*28635]or Mq(375613360/30194,136028+-24059,26183-10476)
                     else
-                        Ka=function(bq)
-                            return yq[bq- -0.85362001324705761*-19627]
-                        end
-                        if gb then
-                            id=ca[-21612- -26359]or Cn(0.16311593704900007*29102,-6.7651219512195118*-8200,-1.6256371049949032*-15696)
-                            break
-                        else
-                            id=ca[-4600+-9840]or Cn(5151-19591,-2340735276/-29724,12.846820809248555*3460)
-                            break
-                        end
-                        id=186332460/7116
+                        ae={'Military',qc(-18497- -32050),qc(592+-27388),qc(1977-5162),qc(14094- -9826),'Gold',qc(676-12),qc(-4929+-17066),qc(1673+-24364),qc(-297007812/15564),'Saiga','Scar',qc(-32977+16160),'M249','Hoverboard',qc(-5382+-3572),'Dragunov',qc(45394-16251),'Dark',qc(23680176/-3562),qc(0.70294933566944084*27396),qc(0.15250890879321968*-20766),qc(-59638+31879),'AS Val','AUG','Python','RPK',qc(104800696/14168),'P90',qc(-48619+30882),'Tactical','Topaz','Treasure',qc(271.97297297297297*-111),qc(-33013+14103),'AR-15',qc(-34748+243),qc(51205+-27814),'Gun','Flamethrower',qc(0.038239353816267065*-19561),'Sapphire','Amethyst',qc(-70428550/22675),'Glock',qc(-27942+11161),'Ruby'}
+                        pe=ra[24203+-28123]or Mq(-0.22558554411003051*17377,101842+-23153,13042+21609)
                     end
                 end
-            until id==2.4689759311796466*21854
-        end)({[-816+17554]='Present',[0.77626248987307589*-7406]='Deagle',[51777-25934]='MP7',[401275121/-17069]='Saiga',[-0.42263034074523792*26354]='C4',[0.65061759516007056*-19835]='Money',[-28904976/-8872]='RPK',[1.2713963193541766*14617]='Ruby',[-708541075/-22801]='Dark',[225194580/-11271]='Marker',[-0.48664471276985*21864]='Void',[-8551+2393]='Gravity',[-16808+-6474]='Grenade',[13857+-31414]='Gold',[11388+3668]='Acid',[-41973850/3842]='C5',[-49936+31165]='Diamond'})
+            until pe==56358+-9906
+        end)({[12450120/578]='C5',[-24645- -7844]='RPG',[0.15873477549536447*-27505]='C4',[1.790394257064722*17552]='Void',[0.049984834698210495*-16485]='Rollie',[10048032/-1506]='Gravity',[-28889+30423]='Ruby',[0.2314791079210459*-3901]='Marker',[20441+5232]='Deagle',[212641371/-10419]='Money',[-0.62128506322613775*-15579]='FN',[-59846+27623]='MP7',[-6803+-8652]='Diamond',[-15527+14642]='Santa',[-35040+7133]='Grenade',[40352+-13824]='C5',[655217486/-25718]='Acid',[-29903+15404]='Emerald',[-824786556/-31478]='Barrett',[-20467+754]='Key',[-41664- -27129]='Block',[-0.84467826483324471*-26326]='Dark',[11155+-8209]='Present',[-184860074/7541]='Keycard',[-5069+20904]='Vest',[-531380996/31957]='Nuke'})
     end});
-    Ea['Toggle'](Ea,{[Bd(7358-11421)]='Notification',['Callback']=function(ba)
-        ji[aq('T\223S\213',' \190')]['spawn'](function()
-            Pi['Notification2']=ba
+    Rr['Toggle'](Rr,{[Eo(10419- -19608)]='Notification',['Callback']=function(oi)
+        yp[dp('\153k\158a','\237\n')]['spawn'](function()
+            yl['Notification2']=oi
         end)
     end});
-    Ea['Toggle'](Ea,{['Name']='Auto',['Callback']=function(ai)
-        Rn=ai
+    Rr['Toggle'](Rr,{['Name']='Auto',[Eo(11495-23696)]=function(Dk)
+        np=Dk
     end})
-    local Yk=zg['Section'](zg,{[Bd(-1627450296/29604)]=Bd(-0.64970590981234244*32133),[Bd(-103044997/18773)]='Right'});
-    Yk['Button'](Yk,{['Name']='Goto Airdrop',['Callback']=function()
-        ji[aq('\219D\220N','\175%')]['spawn'](function()
-            return(function(_c)
-                local df,hc,Iq,As,tl,ah,wr,Ce,Ib,_j,Cd,S,am
-                wr,Cd={},function(Gf,Jo,yl)
-                    wr[Gf]=Ab(Jo,62437)-Ab(yl,39498)
-                    return wr[Gf]
-                end
-                As=wr[48140+-20617]or Cd(13553- -13970,158562505/9215,-1206731988/-20911)
-                repeat
-                    while true do
-                        if As>28258+2919 then
-                            if As>-281061630/-5231 then
-                                hc,Ib=am(tl,df);
-                                df=hc;
-                                if df==nil then
-                                    As=511530571/31151
-                                else
-                                    As=wr[176756160/-5442]or Cd(729858080/-22471,14.433575013943113*8965,18151-9762)
-                                end
-                            else
-                                am,tl,df=S.__iter(am)
-                                As=wr[-1662]or Cd(-1662,83371,17296)
-                            end
-                        elseif As>0.57783335145518466*27591 then
-                            if As>42193-20999 then
-                                if As<=1.3632481098863045*17327 then
-                                    if As<=49513+-27602 then
-                                        As=wr[-31856355/-3555]or Cd(222725655/24855,-2.9604720869239416*-10676,-1.7950872889914875*-27724);
-                                        break;
-                                    else
-                                        S=fn(am)
-                                        if S~=nil and S.__iter~=nil then
-                                            As=wr[-153131196/6977]or Cd(-31608+9660,66000+27443,15113- -4819)
-                                            break
-                                        elseif Rm(am)=='table'then
-                                            As=wr[-16266+31719]or Cd(-0.52500509614731261*-29434,366931800/10729,21951- -32383)
+    local lt=Dj['Section'](Dj,{['Name']=Eo(-17420- -27359),[Eo(28167-14294)]=Eo(293586770/-14110)});
+    lt['Button'](lt,{[Eo(12690-16424)]='Goto Airdrop',[Eo(184792496/15137)]=function()
+        yp[dp('\4l\3f','p\r')]['spawn'](function()
+            local pp,bc,Mf,ne,Ua,Nf,qd,H,Qh,ua,Dl,Ph
+            qd,Ua={},function(wm,Dc,we)
+                qd[wm]=Vs(Dc,49649)-Vs(we,60193)
+                return qd[wm]
+            end
+            Dl=qd[2142- -15640]or Ua(-1.0246629019246283*-17354,-2193892976/-20728,-0.93598775861519334*-31369)
+            repeat
+                while true do
+                    if Dl>-653492070/-21285 then
+                        if Dl>33419- -12609 then
+                            if Dl<=-21.980615254951537*-2373 then
+                                if Dl>-2.6944367866791641*-18137 then
+                                    if Dl>2.2567395842788418*22034 then
+                                        ua=am()and am()['FindFirstChild'](am(),'HumanoidRootPart');
+                                        if not ua then
+                                            Dl=qd[50561-23567]or Ua(18599+8395,84555+22533,28123+-14921)
                                             break
                                         end
-                                        As=wr[11792]or Cd(11792,107075,61304)
+                                        Dl=qd[-0.02343629936990933*13014]or Ua(-0.0095960231563050596*31784,129140+-21381,45510+-30345)
+                                    elseif Dl>-644186549/-13001 then
+                                        H,Ph=Mf(bc,ne);
+                                        ne=H;
+                                        if ne==nil then
+                                            Dl=-2.3034470113678034*-5454
+                                        else
+                                            Dl=qd[0.36687609434545265*-9709]or Ua(-29042- -25480,149711-22834,65349-26257)
+                                        end
+                                    else
+                                        Mf,bc,ne=pp.__iter(Mf)
+                                        Dl=qd[25843]or Ua(25843,115036,54330)
                                     end
                                 else
-                                    Ce,_j=ji[aq('\243\146\27:\247\141\b\50\225','\132\253iQ')]['Game']['Airdrops'],nil;
-                                    am,tl,df=ji[aq('\213\227\204\240\214','\165\130')](Ce['GetChildren'](Ce));
-                                    if Rm(am)~='function'then
-                                        As=wr[-6681-22409]or Cd(-0.92581394608701184*31421,147758+-24142,2.4601549529607083*3614)
-                                        break
-                                    end;
-                                    As=wr[-23238]or Cd(-23238,89068,20959);
+                                    Nf=Ph
+                                    Dl=qd[272454903/-25081]or Ua(-35641- -24778,68418- -24762,22024+-21166)
                                 end
-                            elseif As<=26775-8324 then
-                                if As<=46299-29124 then
-                                    if not(_j and _j['PrimaryPart'])then
-                                        As=wr[12596]or Cd(12596,38676,35740)
+                            else
+                                Dl=qd[-12071- -28062]or Ua(26795-10804,-9280- -9452,-179541565/-9485);
+                                break;
+                            end
+                        elseif Dl>18881- -18338 then
+                            if Dl>-839996817/-21813 then
+                                Mf,bc,ne=me(Mf)
+                                Dl=qd[-30382]or Ua(-30382,116363,44745)
+                            else
+                                Qh,Nf=yp[dp('\"?\5\183& \22\191\48','UPw\220')]['Game']['Airdrops'],nil;
+                                Mf,bc,ne=yp[dp('\153r\128a\154','\233\19')](Qh['GetChildren'](Qh));
+                                if Of(Mf)~='function'then
+                                    Dl=qd[176590458/-12903]or Ua(4382-18068,1.1430415783898304*30208,50291- -5257)
+                                    break
+                                end;
+                                Dl=qd[-1007]or Ua(-1007,103703,30837);
+                            end
+                        else
+                            return
+                        end
+                    elseif Dl<=43684-31382 then
+                        pp=Jb(Mf)
+                        if pp~=nil and pp.__iter~=nil then
+                            Dl=qd[-14601-11953]or Ua(-40275+13721,-39.434315286624205*-2512,-1.4880581516095535*-18297)
+                            break
+                        elseif Of(Mf)=='table'then
+                            Dl=qd[-88772132/-30308]or Ua(-12364+15293,4.7687080024434945*26192,25685- -202)
+                            break
+                        end
+                        Dl=qd[-15132]or Ua(-15132,123444,35090)
+                    elseif Dl<=18940-2814 then
+                        if not(Nf and Nf['PrimaryPart'])then
+                            Dl=qd[5178]or Ua(5178,14095,61813)
+                            break
+                        else
+                            Dl=qd[38215+-15466]or Ua(556417791/24459,17047+25768,-1594717680/-25660)
+                            break
+                        end
+                        Dl=55960- -530
+                    else
+                        ua['CFrame']=Nf['PrimaryPart']['CFrame']
+                        Dl=qd[-33981- -32337]or Ua(0.12286077273746357*-13381,133822395/1081,69574-24877)
+                    end
+                end
+            until Dl==29664-21843
+        end)
+    end});
+    lt['Button'](lt,{['Name']=Eo(-5042+30983),['Callback']=function()
+        return(function(br)
+            local mb,dt,gi,ub,Vf,re,ns
+            ub,dt={},function(Oh,Up,pd)
+                ub[Oh]=Vs(Up,33668)-Vs(pd,55126)
+                return ub[Oh]
+            end
+            re=ub[1.054272778720996*-17670]or dt(182806377/-9813,260848861/25367,-390128518/-7358)
+            repeat
+                while true do
+                    if re<=938323547/25793 then
+                        if re>-185506806/-18534 then
+                            re=ub[3121+-8346]or dt(51173650/-9794,377164236/22718,-441007476/-12677);
+                            break;
+                        else
+                            Vf=am();
+                            if Vf then
+                                re=ub[-7.2438485804416404*-3170]or dt(366076146/15942,142722-29332,-931215828/-15441)
+                                break
+                            end
+                            re=ub[-15377]or dt(-15377,9147,42701)
+                        end
+                    elseif re>-982899170/-19195 then
+                        mb=Vf['FindFirstChild'](Vf,ns(-31305+26060));
+                        if not(mb)then
+                            re=ub[12883]or dt(12883,1843,33093)
+                            break
+                        else
+                            re=ub[-5.4428388512895554*5467]or dt(-43117+13361,5.6913050389445239*18873,2.0464159040154137*22837)
+                            break
+                        end
+                        re=ub[17749]or dt(17749,25932,28530)
+                    elseif re<=1001441236/23174 then
+                        ns=function(wc)
+                            return br[wc+489771336/32388]
+                        end
+                        gi=yp[dp('\232\242Y\208\196\127','\187\151<')]()
+                        if not(#gi>ns(-518015238/-22919+(-23166- -14748)))then
+                            re=ub[27217]or dt(27217,46988,53810)
+                            break
+                        else
+                            re=ub[1625- -9030]or dt(23029-12374,-16135750/-6794,26898- -21328)
+                            break
+                        end
+                        re=-324147120/-27148
+                    else
+                        mb['CFrame']=gi[ns(15935130/2781)]['primary']['CFrame']+yp[dp('\142!\142\172+\159\235','\216D\237')]['new'](0,ns(-226714176/4932),0)
+                        re=ub[18026]or dt(18026,56891,63565)
+                    end
+                end
+            until re==10099+19257
+        end)({[-63456- -32610]=27057+-27054,[-1.0401221566975569*-9496]='HumanoidRootPart',[329357340/15795]=-3359- -3360,[168362970/5745]=0})
+    end});
+    lt['Button'](lt,{['Name']=Eo(-23447+26494),['Callback']=function()
+        yp[dp('\232\172\239\166','\156\205')]['spawn'](function()
+            return(function(bm)
+                local nr,Ce,Gh,Rf,Q,an,oq,tf,fd,zj,uk,V
+                zj,fd={},function(f,Te,kn)
+                    zj[f]=Vs(Te,6194)-Vs(kn,17636)
+                    return zj[f]
+                end
+                an=zj[-0.75569419321495812*27089]or fd(6188+-26659,126553+-14034,36480+25769)
+                repeat
+                    while true do
+                        if an>59419+-24924 then
+                            if an>45854- -5642 then
+                                if an<=103870208/1664 then
+                                    if an<=85904-25719 then
+                                        Q,tf,Ce=uk.__iter(Q)
+                                        an=zj[-18045]or fd(-18045,49953,2020)
+                                    else
+                                        nr['CFrame']=Gh['CFrame']
+                                        Q,tf,Ce=yp[dp('?\228&\247<','O\133')](Gh['GetChildren'](Gh))
+                                        if Of(Q)~='function'then
+                                            an=zj[829+-9868]or fd(-0.32615284693656638*27714,61828-18631,0.91350782798656904*24719)
+                                            break
+                                        end
+                                        an=zj[-13545]or fd(-13545,56200,28483)
+                                    end
+                                elseif an<=2.06840328027014*31095 then
+                                    Rf=function(Km)
+                                        return bm[Km+(-34314+19906)]
+                                    end
+                                    nr=am()and am()['FindFirstChild'](am(),Rf(1.2486104900019166*31306))
+                                    if not(not nr)then
+                                        an=zj[-31573]or fd(-31573,94846,60415)
                                         break
                                     else
-                                        As=wr[518421314/-17987]or Cd(-35677+6855,11654- -21345,-807807638/-16294)
+                                        an=zj[176469540/6990]or fd(777374832/30792,447.63677130044846*223,33007- -10174)
                                         break
                                     end
-                                    As=wr[1.8259699678847323*11521]or Cd(-315449815/-14995,17214+4036,85799+-30625)
+                                    an=68560+-20639
+                                else
+                                    if not(oq['IsA'](oq,Rf(-315098208/-25224+(21285-17112))))then
+                                        an=zj[-22845]or fd(-22845,43221,23600)
+                                        break
+                                    else
+                                        an=zj[-200578742/-6643]or fd(30333+-139,-769957385/-15035,-1.9615913781242835*-17444)
+                                        break
+                                    end
+                                    an=zj[-1331]or fd(-1331,87083,61666)
+                                end
+                            elseif an>36614- -7784 then
+                                if an>1344772130/27890 then
+                                    if an<=65989-15520 then
+                                        Q,tf,Ce=me(Q)
+                                        an=zj[-31189]or fd(-31189,42667,25186)
+                                    else
+                                        an=zj[48.432234432234431*-546]or fd(-53088- -26644,58086-12209,28469-16228);
+                                        break;
+                                    end
+                                elseif an>-1.6825225225225224*-27750 then
+                                    Gh=yp[dp('\147n=\247\151q.\255\129','\228\1O\156')]['Game']['Local']['Debris']['TreasureMarker'];
+                                    if not(Gh)then
+                                        an=zj[28905]or fd(28905,87075,49175)
+                                        break
+                                    else
+                                        an=zj[2568+-18246]or fd(-40039+24361,123324+-32676,60314+-8613)
+                                        break
+                                    end
+                                    an=-3.0115798180314308*-16926
                                 else
                                     return
                                 end
-                            else
-                                _j=Ib
-                                As=wr[-120398077/-4853]or Cd(-1303- -26112,98775-7493,-159129675/-18675)
-                            end
-                        elseif As<=-7936- -17765 then
-                            Iq['CFrame']=_j['PrimaryPart']['CFrame']
-                            As=wr[-4592-17931]or Cd(-0.83031040330310402*27126,-910463475/-7745,38046+-5293)
-                        elseif As<=-126296820/-10530 then
-                            am,tl,df=Gi(am)
-                            As=wr[-9158]or Cd(-9158,105611,2224)
-                        else
-                            ah=function(vj)
-                                return _c[vj+(-13902- -19124)]
-                            end
-                            Iq=Eo()and Eo()['FindFirstChild'](Eo(),ah(210572753/-23117))
-                            if not(not Iq)then
-                                As=wr[13844]or Cd(13844,40149,37770)
-                                break
-                            else
-                                As=wr[-12132+-20094]or Cd(30.66222645099905*-1051,-79341260/-22931,-201277594/-23077)
-                                break
-                            end
-                            As=wr[36977256/-3548]or Cd(685+-11107,130136+-5830,8797+2288)
-                        end
-                    end
-                until As==-17.699999999999999*-700
-            end)({[8263-12150]='HumanoidRootPart'})
-        end)
-    end});
-    Yk['Button'](Yk,{['Name']='Goto Safe / Chest',[Bd(-13207+-29480)]=function()
-        return(function(oa)
-            local Y,Sg,kt,cq,sk,pp,Xc
-            cq,sk={},function(_d,hp,Yq)
-                cq[_d]=Ab(hp,43436)-Ab(Yq,30079)
-                return cq[_d]
-            end
-            Y=cq[-100115624/16088]or sk(-34755455/5585,1839205011/17283,26388012/18479)
-            repeat
-                while true do
-                    if Y<=-809453540/-19180 then
-                        if Y<=847158702/32019 then
-                            pp=Sg['FindFirstChild'](Sg,'HumanoidRootPart');
-                            if pp then
-                                Y=cq[41951+-12353]or sk(54970-25372,91566+-17997,74008-24889)
-                                break
-                            end
-                            Y=cq[-19354]or sk(-19354,107255,61263)
-                        else
-                            Y=cq[31487-21892]or sk(40527-30932,-2.0862157597121245*-27234,18550-14181);
-                            break;
-                        end
-                    elseif Y<=42262+9275 then
-                        if Y<=32702- -13846 then
-                            Sg=Eo();
-                            if not(Sg)then
-                                Y=cq[8893]or sk(8893,109763,57659)
-                                break
-                            else
-                                Y=cq[-47956- -15808]or sk(-71.281596452328159*451,269325340/9245,29622501/7389)
-                                break
-                            end
-                            Y=cq[-9587]or sk(-9587,104660,46386)
-                        else
-                            Xc=function(np)
-                                return oa[np+-363431600/16430]
-                            end
-                            kt=ji[aq('\151_8\175i\30','\196:]')]()
-                            if not(#kt>Xc(-1413869380/-23891-913536590/31895))then
-                                Y=cq[-31287]or sk(-31287,128251,39251)
-                                break
-                            else
-                                Y=cq[-0.068965517241379309*-22475]or sk(-21701- -23251,-205515180/-1846,10210+-9787)
-                                break
-                            end
-                            Y=26577- -2394
-                        end
-                    else
-                        pp['CFrame']=kt[20890+-20889]['primary']['CFrame']+ji[aq('\190\217\160\156\211\177\219','\232\188\195')]['new'](Xc(26512+-16234),12462/4154,Xc(-524875383/-21339))
-                        Y=cq[-14091]or sk(-14091,15870,22104)
-                    end
-                end
-            until Y==-18600- -22678
-        end)({[-21970+30388]=0,[0.28655714946783895*8644]=0,[-1.3797040661773272*8583]=0})
-    end});
-    Yk['Button'](Yk,{['Name']='Goto Treasure Marker',[Bd(2.9707936122411804*-16469)]=function()
-        ji[aq('\146\149\149\159','\230\244')]['spawn'](function()
-            local mh,oe,yd,pn,Sh,do_,Bq,Zj,gp,lo,Ig
-            gp,Sh={},function(tq,lr,Nb)
-                gp[tq]=Ab(lr,50575)-Ab(Nb,23363)
-                return gp[tq]
-            end
-            lo=gp[-299007280/10384]or Sh(-510794505/17739,539343800/7925,40248- -2268)
-            repeat
-                while true do
-                    if lo>67940+-30417 then
-                        if lo>-3.4533309042327081*-16467 then
-                            Zj,yd,Ig=Gi(Zj)
-                            lo=gp[15]or Sh(15,127482,37212)
-                        else
-                            do_=Eo()and Eo()['FindFirstChild'](Eo(),'HumanoidRootPart');
-                            if not do_ then
-                                lo=gp[-9872- -13541]or Sh(27578-23909,119132-2195,72691+-21275)
-                                break
-                            end
-                            lo=396745178/25882
-                        end
-                    elseif lo<=39308+-15091 then
-                        if lo>-0.79973284991890092*-20962 then
-                            do_['CFrame']=mh['CFrame']
-                            Zj,yd,Ig=ji[aq('\252\4\229\23\255','\140e')](mh['GetChildren'](mh))
-                            if Rm(Zj)~='function'then
-                                lo=gp[11987+13725]or Sh(-639226032/-24861,156868+-32512,-1.7685959973778582*-25933)
-                                break
-                            end
-                            lo=gp[-390]or Sh(-390,17950,17016)
-                        elseif lo>26451+-11634 then
-                            mh=ji[aq('\132\219\165}\128\196\182u\150','\243\180\215\22')]['Game']['Local']['Debris']['TreasureMarker'];
-                            if mh then
-                                lo=gp[239660775/-12825]or Sh(1.6431020838828805*-11373,44627+-28249,64776-2283)
-                                break
-                            end
-                            lo=gp[-3751+-17511]or Sh(6446+-27708,-741083340/-5914,81916+-20555)
-                        else
-                            Bq=fn(Zj)
-                            if Bq~=nil and Bq.__iter~=nil then
-                                lo=gp[-1389- -20333]or Sh(13810+5134,1051362378/22154,-225736302/-10659)
-                                break
-                            elseif Rm(Zj)=='table'then
-                                lo=gp[0.015980958857531452*26469]or Sh(-10573731/-24997,109224+-7371,0.0035037283262959302*22262)
-                                break
-                            end
-                            lo=gp[-14004]or Sh(-14004,118594,64308)
-                        end
-                    elseif lo<=-143348948/-4673 then
-                        if lo>-126751160/-4430 then
-                            if lo>-13.957256928135275*-2129 then
-                                if not(pn['IsA'](pn,'ProximityPrompt'))then
-                                    lo=gp[-18433]or Sh(-18433,99308,34638)
+                            elseif an<=-1.5290461391345924*-25098 then
+                                uk=Jb(Q)
+                                if uk~=nil and uk.__iter~=nil then
+                                    an=zj[-401628574/29941]or fd(-34593- -21179,73944954/667,9589+24402)
                                     break
-                                else
-                                    lo=gp[-122742257/9199]or Sh(705-14048,89827- -21903,67103+-20023)
+                                elseif Of(Q)=='table'then
+                                    an=zj[-0.55896076962958696*17359]or fd(245738178/-25326,4.2113799317510834*26081,9.4224502112251063*4971)
                                     break
                                 end
-                                lo=gp[-17897]or Sh(-17897,31309,3631)
+                                an=zj[959]or fd(959,90499,42362)
                             else
-                                Zj,yd,Ig=Bq.__iter(Zj)
-                                lo=gp[-28263]or Sh(-28263,18736,31018)
+                                V,oq=Q(tf,Ce);
+                                Ce=V;
+                                if Ce==nil then
+                                    an=zj[-4187]or fd(-4187,54100,16556)
+                                else
+                                    an=zj[-393035464/13289]or fd(-58835+29259,22.007325319308791*5324,3.3572723349158395*11585)
+                                end
                             end
                         else
-                            oe,pn=Zj(yd,Ig);
-                            Ig=oe;
-                            if Ig==nil then
-                                lo=gp[29767]or Sh(29767,8413,13840)
-                            else
-                                lo=22638+7364
-                            end
+                            oq['HoldDuration']=0
+                            an=zj[-2397]or fd(-2397,42164,24727)
                         end
-                    elseif lo<=35925+-3501 then
-                        if lo>33435-2502 then
-                            return
-                        else
-                            lo=gp[-54850- -29676]or Sh(-23764-1410,535308744/12504,16851-11859);
-                            break;
-                        end
-                    else
-                        pn['HoldDuration']=0
-                        lo=gp[26805]or Sh(26805,8155,13501)
                     end
-                end
-            until lo==16308-9667
+                until an==164082534/10043
+            end)({[-23716556/-10508]='ProximityPrompt',[3242- -21439]='HumanoidRootPart'})
         end)
     end});
-    Yk['Label'](Yk,{['Text']='<font color=\"rgb(191, 191, 191)\">NOTE: Queue mode teleports only when ended farming </font>'});
-    Yk['Toggle'](Yk,{['Name']='Queue',['Callback']=function(gf)
-        ji[aq('\211\b\212\2','\167i')]['spawn'](function()
-            Pi['AutoQueue']=gf
+    lt['Label'](lt,{['Text']=Eo(-0.0071924395751442665*-23914)});
+    lt['Toggle'](lt,{['Name']='Queue',['Callback']=function(hd)
+        yp[dp('&r!x','R\19')]['spawn'](function()
+            yl['AutoQueue']=hd
         end)
     end});
-    Yk['Toggle'](Yk,{['Name']='Auto Loot',[Bd(-28418+-24702)]=function(ig)
-        ji[aq('\164E\163O','\208$')]['spawn'](function()
-            Pi['AutoLoot']=ig
+    lt['Toggle'](lt,{[Eo(21957-12754)]=Eo(2169- -21593),['Callback']=function(Yr)
+        yp[dp('\205]\202W','\185<')]['spawn'](function()
+            yl['AutoLoot']=Yr
         end)
     end});
-    Yk['Toggle'](Yk,{[Bd(-1.1429570895522387*25728)]='Auto Sell',[Bd(-12894944/-10891)]=function(aj)
-        ji[aq('H\170O\160','<\203')]['spawn'](function()
-            Pi['AutoSell']=aj
+    lt['Toggle'](lt,{[Eo(679+-14472)]=Eo(2.7870218579234973*7320),[Eo(-111823367/11857)]=function(Zf)
+        yp[dp('\5\52\2>','qU')]['spawn'](function()
+            yl['AutoSell']=Zf
         end)
     end});
-    Yk['Toggle'](Yk,{['Name']=Bd(-22940-1786),[Bd(-57906- -27217)]=function(dp)
-        ji[aq('\t/\14%','}N')]['spawn'](function()
-            Pi['Notification']=dp
+    lt['Toggle'](lt,{[Eo(318850728/29071)]='Notification',['Callback']=function(ar)
+        yp[dp('\5\203\2\193','q\170')]['spawn'](function()
+            yl['Notification']=ar
         end)
     end});
-    Yk['Toggle'](Yk,{['Name']='Safe Mode',['Callback']=function(em)
-        ji[aq('\146\233\149\227','\230\136')]['spawn'](function()
-            Pi['AutoLootSafe']=em
+    lt['Toggle'](lt,{['Name']=Eo(44392-19927),['Callback']=function(_n)
+        yp[dp('W\199P\205','#\166')]['spawn'](function()
+            yl['AutoLootSafe']=_n
         end)
     end})
-    local Ip=zg['Section'](zg,{[Bd(2363.782608695652*-23)]='Other Utilities',[Bd(-71052- -30549)]='Right'});
-    Ip['Button'](Ip,{[Bd(-0.18573277917830619*-14677)]=Bd(-65598+26552),['Callback']=function()
-        return(function(J)
-            local Fi,Cg,ch,ee,Kq,Ec,Vg,Lq,Mn,Te
-            Vg,Kq={},function(Ro,in_,Xo)
-                Vg[Ro]=Ab(in_,43777)-Ab(Xo,41574)
-                return Vg[Ro]
+    local lq=Dj['Section'](Dj,{['Name']='Other Utilities',['Side']='Right'});
+    lq['Button'](lq,{['Name']=Eo(53401-24662),['Callback']=function()
+        return(function(Ej)
+            local kt,Ho,ki,ld,Sp,n,Ca,ab,E,Lo
+            Ca,Sp={},function(le,lo,Ys)
+                Ca[le]=Vs(lo,57184)-Vs(Ys,17873)
+                return Ca[le]
             end
-            Mn=Vg[-9782- -17210]or Kq(80155548/10791,37100+20113,49857- -11536)
+            kt=Ca[19631+-28644]or Sp(-24564+15551,2280484480/22588,-1021674192/-17834)
             repeat
                 while true do
-                    if Mn<=49711-13574 then
-                        if Mn<=0.61774178706174654*32601 then
-                            if Mn<=-10446+21159 then
-                                if Mn>1.5554666239795101*6247 then
-                                    Te=function(Hs)
-                                        return J[Hs+-181152531/-10059]
-                                    end
-                                    ch,ee,Cg=ji[aq('.\3\55\16-','^b')](ji[aq('\14\243bV\n\236q^\28','y\156\16=')]['GetDescendants'](ji[aq('\14\243bV\n\236q^\28','y\156\16=')]))
-                                    if Rm(ch)~='function'then
-                                        Mn=Vg[-1.8887271214642263*-14424]or Kq(-422756874/-15518,-405618816/-6704,4.5367891388968005*10533)
-                                        break
-                                    end
-                                    Mn=Vg[-22156]or Kq(-22156,20183,25302)
+                    if kt<=127311376/3071 then
+                        if kt>-2930+29675 then
+                            if kt>-1048730596/-30769 then
+                                Ho,Lo=ld(n,ki);
+                                ki=Ho;
+                                if ki==nil then
+                                    kt=Ca[3858- -11515]or Sp(-6566- -21939,27605+1921,-4.7936972619252627*-5807)
                                 else
-                                    Ec,Lq=ch(ee,Cg);
-                                    Cg=Ec;
-                                    if Cg==nil then
-                                        Mn=21742- -9026
-                                    else
-                                        Mn=-453187837/-16307
-                                    end
+                                    kt=Ca[-29.315950920245399*-652]or Sp(-6769+25883,80148+7236,-1033492889/-26867)
                                 end
                             else
-                                Fi=fn(ch)
-                                if Fi~=nil and Fi.__iter~=nil then
-                                    Mn=Vg[52233-21354]or Kq(35765+-4886,135421-27033,35492+27075)
-                                    break
-                                elseif Rm(ch)=='table'then
-                                    Mn=Vg[19949+5436]or Kq(-775156360/-30536,36858+-29182,36206- -6853)
-                                    break
-                                end
-                                Mn=Vg[24113]or Kq(24113,112187,23154)
+                                kt=Ca[783880664/25898]or Sp(7119- -23149,26183- -6531,5.5363205684958547*5066);
+                                break;
                             end
-                        elseif Mn<=54516+-25237 then
-                            if Lq['IsA'](Lq,'ProximityPrompt')then
-                                Mn=Vg[10945- -12825]or Kq(1.8771223248835189*12663,98721- -5187,-875237090/-14495)
+                        elseif kt>-5.9336609336609341*-3663 then
+                            E=Jb(ld)
+                            if E~=nil and E.__iter~=nil then
+                                kt=Ca[1982- -1558]or Sp(-18743- -22283,103212+-21513,-856206732/-19716)
+                                break
+                            elseif Of(ld)=='table'then
+                                kt=Ca[0.88218750000000001*-19200]or Sp(529769826/-31277,82298-934,-577999646/-13006)
                                 break
                             end
-                            Mn=Vg[-804]or Kq(-804,37946,47219)
+                            kt=Ca[15568]or Sp(15568,100620,35644)
                         else
-                            Mn=Vg[72630528/-6528]or Kq(-41167- -30041,66544848/19876,33860- -10081);
-                            break;
+                            Lo['HoldDuration']=ab(71.96883852691218*353)
+                            kt=Ca[-5357]or Sp(-5357,126171,59885)
                         end
-                    elseif Mn<=-7.8384874688553419*-6823 then
-                        if Mn>18895+26551 then
-                            ch,ee,Cg=Fi.__iter(ch)
-                            Mn=Vg[6703]or Kq(6703,14515,52458)
+                    elseif kt>45353- -10080 then
+                        if kt<=37656- -25606 then
+                            ld,n,ki=E.__iter(ld)
+                            kt=Ca[30810]or Sp(30810,16473,21099)
                         else
-                            ch,ee,Cg=Gi(ch)
-                            Mn=Vg[-401]or Kq(-401,55150,62767)
+                            ld,n,ki=me(ld)
+                            kt=Ca[-19885]or Sp(-19885,9293,13951)
                         end
+                    elseif kt<=649409158/13729 then
+                        if Lo['IsA'](Lo,ab(0.46729641693811075*-15350))then
+                            kt=Ca[-7113- -11990]or Sp(-1127- -6004,-158054926/-11614,75840-17212)
+                            break
+                        end
+                        kt=Ca[-4567]or Sp(-4567,11022,10558)
                     else
-                        Lq['HoldDuration']=Te(-8471+10094)
-                        Mn=Vg[20104]or Kq(20104,12084,64873)
-                    end
-                end
-            until Mn==39465+553
-        end)({[6867- -12765]=0})
-    end});
-    Ip['Button'](Ip,{['Name']='Sell Equipped',['Callback']=function()
-        ji[aq('&\207!\197','R\174')]['spawn'](function()
-            return(function(Oc)
-                local Xm,P,Zs,Qb,Dk,Bp
-                Dk,Qb={},function(Cj,Ui,Mk)
-                    Dk[Cj]=Ab(Ui,33154)-Ab(Mk,14291)
-                    return Dk[Cj]
-                end
-                P=Dk[-53757- -30570]or Qb(588091881/-25363,-3.8624467135917517*-20174,44297- -13735)
-                repeat
-                    while true do
-                        if P<=-609546667/-19387 then
-                            P=Dk[-508416480/17160]or Qb(97-29725,71370+27210,332476488/16551);
-                            break;
-                        elseif P>-2.8666599929926422*-19979 then
-                            wj['FireServer'](Xm(-831058888/25192),Bp)
-                            P=Dk[27024-11066]or Qb(-0.61907902393606706*-25777,3.4421209858103063*12051,22394313/2241)
-                        else
-                            Xm=function(Uj)
-                                return Oc[Uj+(-865+8795)]
-                            end
-                            Zs,Bp=oh['GetEquipped'](nm)
-                            if Bp then
-                                P=Dk[0.43045267489711936*-17010]or Qb(-16547720/2260,36088-8683,260687646/21081)
-                                break
-                            end
-                            P=-0.26173285198555957*-18282
+                        ab=function(he)
+                            return Ej[he-41988540/8445]
                         end
+                        ld,n,ki=yp[dp('\148A\141R\151','\228 ')](yp[dp("#W%S\'H6[1",'T8W8')]['GetDescendants'](yp[dp("#W%S\'H6[1",'T8W8')]))
+                        if Of(ld)~='function'then
+                            kt=Ca[12270-10580]or Sp(-7390- -9080,425288708/9244,46562-27701)
+                            break
+                        end
+                        kt=Ca[-16902]or Sp(-16902,32327,23673)
                     end
-                until P==12735+21804
-            end)({[3946-29005]='sellItem'})
-        end)
-    end})
-    local ve=th['Tab'](th,{[Bd(-23.658083579569439*2369)]='Travel'})
-    local is,Oo,Xs=ve['Section'](ve,{['Name']='Places',['Side']=Bd(-201089832/19997)}),ve['Section'](ve,{['Name']='Dropped Items',[Bd(4988-3377)]=Bd(-2.7766963292547273*7192)}),{[Bd(-8208+-28615)]=ji[aq('(;\31_,$\fW:','_Tm4')]['ArmoryRobbery']['ArmoryTrigger'],[Bd(0.75848870230892707*-8099)]=ji[aq('\186\174D\145\190\177W\153\168','\205\193\54\250')]['MilitaryRobbery']['MilitaryTrigger'],[Bd(-32597-14018)]=ji[aq('\168\137<\240\172\150/\248\186','\223\230N\155')]['BankRobbery']['BankAlarm'],['Armory']=ji[aq('\233\202\29g\237\213\14o\251','\158\165o\f')]['LandmarkNodes']['Nodes']['armory1'],[Bd(-0.77395479095819164*-4999)]=Bk,['Jewelry']=ji[aq('&\227N\173\"\252]\165\52','Q\140<\198')]['GemRobbery']['AlarmLights'],['Hospital']=ji[aq('\216/\231\250\4\240','\155i\149')]['new'](-33152612.15244/-28383,Bd(-7922- -1307),Bd(766253602/-24389),0,0,Bd(-57470+30265),Bd(-5.4997036158861885*6748),Bd(-1234580396/21817),Bd(-13039+-6403),5.2408154708872704e-05*19081,Bd(-37229064/9206),Bd(-5255+-3329))}
-    for nb,Vp in ji[aq('\159c\134p\156','\239\2')](Xs)do
-        is['Button'](is,{[Bd(-57148- -2200)]=nb,['Callback']=function()
-            return(function(tf)
-                local Dc,Re,fi,km,ke
-                Dc,km={},function(fh,bd,Je)
-                    Dc[fh]=Ab(bd,60577)-Ab(Je,37510)
-                    return Dc[fh]
                 end
-                ke=Dc[-37067+13197]or km(202942740/-8502,123434-22541,18085+-7189)
+            until kt==47177-16381
+        end)({[7904+-20049]='ProximityPrompt',[9235+11198]=0})
+    end});
+    lq['Button'](lq,{[Eo(-0.55437086721295914*-31607)]='Sell Equipped',['Callback']=function()
+        yp[dp('{k|a','\15\n')]['spawn'](function()
+            return(function(Td)
+                local wb,jh,it,Zk,Ar,Ub
+                it,Zk={},function(Fi,Ir,mq)
+                    it[Fi]=Vs(Ir,2774)-Vs(mq,60620)
+                    return it[Fi]
+                end
+                jh=it[-27387719/-15677]or Zk(-24780- -26527,111316-30033,41475+-13968)
                 repeat
                     while true do
-                        if ke<=24100+5746 then
-                            if ke<=27457+-11221 then
-                                ke=Dc[18583-23695]or km(-24710+19598,-66139200/-12248,0.42173859584409196*16266);
+                        if jh>-3.5537557700377675*-11915 then
+                            if jh>148820024/2798 then
+                                jh=it[-37990+7142]or Zk(-968781440/31405,87392-5892,1.2646155945153148*14659);
                                 break;
                             else
-                                fi['CFrame']=Vp['CFrame']
-                                ke=Dc[11551- -15199]or km(-490461250/-18335,35525- -7093,-1098313704/-22824)
-                            end
-                        elseif ke<=38460- -9353 then
-                            if ke<=26673- -19460 then
-                                if ke<=-5.5193712093080824*-8079 then
-                                    fi['CFrame']=Vp
-                                    ke=Dc[-57735- -29878]or km(-47709- -19852,4.7856673241288625*7605,30719+23465)
-                                else
-                                    Re=function(Js)
-                                        return tf[Js- -387107595/-17595]
-                                    end
-                                    fi=Eo()and Eo()['FindFirstChild'](Eo(),Re(66661+-17659))
-                                    if not fi then
-                                        ke=Dc[3.4899467054263567*8256]or km(297321347/10319,-3.2242362900257637*-32604,-123818310/-11561)
-                                        break
-                                    end
-                                    ke=Dc[-641252410/-20162]or km(25413- -6392,-4.8722250466022707*-17703,24893- -1472)
+                                Ub=function(So)
+                                    return Td[So+487649279/-18397]
                                 end
-                            else
-                                return
+                                Ar,wb=bq['GetEquipped'](I)
+                                if not(wb)then
+                                    jh=it[-18515]or Zk(-18515,99107,30415)
+                                    break
+                                else
+                                    jh=it[43883+-31440]or Zk(-369109152/-29664,-349424783/-7333,-2.2435500515995872*-21318)
+                                    break
+                                end
+                                jh=it[-18383+10840]or Zk(-39298+31755,2.6420601135190918*31008,25102+21535)
                             end
                         else
-                            if ji[aq('\250\143\229\235\153\243','\142\246\149')](Vp)=='CFrame'then
-                                ke=Dc[1.8263042585238942*-14606]or km(6.1905314458110929*-4309,26830-5116,73.950664136622393*527)
-                                break
-                            else
-                                ke=Dc[-733681605/-32405]or km(7362- -15279,52658+-28012,584570283/12023)
-                                break
-                            end
-                            ke=Dc[898064383/-30097]or km(-8601+-21238,125+16028,38207-29797)
+                            Kq['FireServer'](Ub(256768731/7879),wb)
+                            jh=it[53857-31824]or Zk(4170- -17863,-2523712230/-20745,21503-18141)
                         end
                     end
-                until ke==60000+-30961
-            end)({[9742+17259]='HumanoidRootPart'})
+                until jh==398639192/10822
+            end)({[11531+-5449]='sellItem'})
+        end)
+    end})
+    local Be=Cn['Tab'](Cn,{[Eo(1032354254/29726)]='Travel'})
+    local Es,Oq,Ml=Be['Section'](Be,{['Name']='Places',[Eo(18320+-7140)]=Eo(-250737470/10139)}),Be['Section'](Be,{['Name']='Dropped Items',[Eo(111207978/15714)]=Eo(492613708/32042)}),{['Police Station']=yp[dp("^8a[Z\'rSL",')W\19\48')]['ArmoryRobbery']['ArmoryTrigger'],['Military Base']=yp[dp('=%D\252\57:W\244/','JJ6\151')]['MilitaryRobbery']['MilitaryTrigger'],[Eo(432443088/-29931)]=yp[dp('\30\252\17\205\26\227\2\197\f','i\147c\166')]['BankRobbery']['BankAlarm'],[Eo(697736832/32568)]=yp[dp('/\30\29\224+\1\14\232=','Xqo\139')]['LandmarkNodes']['Nodes']['armory1'],['Safe Zone']=Qg,['Jewelry']=yp[dp('\180\2\144\213\176\29\131\221\166','\195m\226\190')]['GemRobbery']['AlarmLights'],[Eo(-3.1503558718861209*-10116)]=yp[dp('\222\r]\252&J','\157K/')]['new'](-0.13447440478931613*-8686,-0.0019057261079993475*-18389,0.068529950968650929*-14195,0,0,21929+-21930,0,Eo(0.86736662461972247*26954),Eo(-193912290/28899),7.8468298807281864e-05*12744,0,0)}
+    for hg,ef in yp[dp('~\17g\2}','\14p')](Ml)do
+        Es['Button'](Es,{['Name']=hg,['Callback']=function()
+            return(function(Rj)
+                local rd,kd,cn,pa,Er
+                Er,cn={},function(er,Ge,ng)
+                    Er[er]=Vs(Ge,55391)-Vs(ng,28261)
+                    return Er[er]
+                end
+                kd=Er[31815-20081]or cn(31737-20003,284893932/25412,30776- -31821)
+                repeat
+                    while true do
+                        if kd<=29430+4313 then
+                            if kd<=307527942/13098 then
+                                if kd>27431-8250 then
+                                    pa=function(xj)
+                                        return Rj[xj-268684130/23374]
+                                    end
+                                    rd=am()and am()['FindFirstChild'](am(),pa(188154078/-32502))
+                                    if not rd then
+                                        kd=Er[53999+-23746]or cn(-732183106/-24202,7.2018755615453731*17808,583878966/17666)
+                                        break
+                                    end
+                                    kd=Er[17071- -5749]or cn(29783+-6963,-8579190/-7729,696687364/21269)
+                                else
+                                    return
+                                end
+                            elseif kd<=7571- -22224 then
+                                kd=Er[-1.0992240925828511*15208]or cn(131713243/-7879,-978086333/-9151,1.9499953556057839*32297);
+                                break;
+                            else
+                                rd['CFrame']=ef
+                                kd=Er[-23555-5018]or cn(-1.1758920120169554*24299,-1228760528/-10804,69550+-29622)
+                            end
+                        elseif kd>37638+13511 then
+                            if yp[dp('\162\195\147\179\213\133','\214\186\227')](ef)==pa(0.7622495965996301*-25409)then
+                                kd=Er[30714+-2731]or cn(21765- -6218,99358+6649,977381230/23510)
+                                break
+                            else
+                                kd=Er[13833- -4362]or cn(-201673380/-11084,-160234204/-12893,3026+16898)
+                                break
+                            end
+                            kd=-0.98591843848030669*-28690
+                        else
+                            rd['CFrame']=ef['CFrame']
+                            kd=Er[-226219609/8327]or cn(-48633- -21466,-28210+31894,-25142- -27662)
+                        end
+                    end
+                until kd==-1803860654/-31253
+            end)({[-37296+6433]='CFrame',[194496852/-11253]='HumanoidRootPart'})
         end})
     end;
-    Oo['Button'](Oo,{[Bd(-4.5225531914893615*1175)]='Ammo Box',['Callback']=function()
-        return(function(hn)
-            local Vm,qc,xf,hq,Rb,jc
-            hq,Rb={},function(cp,Vd,Ad)
-                hq[cp]=Ab(Vd,39491)-Ab(Ad,5196)
-                return hq[cp]
-            end
-            qc=hq[0.66748499727223132*10998]or Rb(1858- -5483,0.11064182194616977*12075,16874- -23410)
-            repeat
-                while true do
-                    if qc<=-1.223278202912861*-24306 then
-                        if qc>-137031440/-10192 then
-                            if qc<=421680490/21238 then
-                                return
-                            else
-                                jc=ji[aq('N\160d}J\191wu\\','9\207\22\22')]['Game']['Local']['droppables'][Vm(1049628804/21572)];
-                                if jc and jc['PrimaryPart']then
-                                    qc=hq[-16214+16127]or Rb(13070+-13157,-102299692/-4358,-1.6364834483293278*-12899)
-                                    break
-                                end
-                                qc=hq[1553- -17103]or Rb(17145- -1511,158787+-29792,65790-29041)
-                            end
-                        else
-                            Vm=function(ps)
-                                return hn[ps+1.8012112338613071*-15026]
-                            end
-                            xf=Eo()and Eo()['FindFirstChild'](Eo(),Vm(-2.1046404296383319*-11917))
-                            if not xf then
-                                qc=hq[5.5354166666666664*-3840]or Rb(2.9687150837988825*-7160,29797-9860,1229382736/30896)
-                                break
-                            end
-                            qc=hq[-30717+-30]or Rb(-18700+-12047,1951032044/31109,1.299390243902439*1640)
-                        end
-                    elseif qc>1.455962082722406*29327 then
-                        qc=hq[-8693368/-277]or Rb(52875-21491,86247+30703,46244-12141);
-                        break;
-                    else
-                        xf['CFrame']=jc['PrimaryPart']['CFrame']
-                        qc=hq[-2577750/4910]or Rb(4538-5063,-1675084320/-18720,1872401771/32413)
-                    end
-                end
-            until qc==56036+-6602
-        end)({[0.12646608873023968*-15688]='HumanoidRootPart',[4880- -16712]='Ammo Box'})
-    end});
-    Oo['Button'](Oo,{['Name']='Money Printer',['Callback']=function()
-        return(function(cf)
-            local db,um,Jr,Hf,lg,rp
-            db,um={},function(en,wp,Ko)
-                db[en]=Ab(wp,20337)-Ab(Ko,55188)
-                return db[en]
-            end
-            Hf=db[-20049- -6078]or um(-18162- -4191,-7.3034973657661695*-17842,-982- -9808)
-            repeat
-                while true do
-                    if Hf>-26774020/-910 then
-                        if Hf>3.4325307733993959*12917 then
-                            if Hf>63570+-11059 then
-                                rp['CFrame']=lg['PrimaryPart']['CFrame']
-                                Hf=db[35703+-20999]or um(47040-32336,8147+-3186,4.4586164551780598*12215)
-                            else
-                                Jr=function(Hk)
-                                    return cf[Hk+(20666+-19793)]
-                                end
-                                rp=Eo()and Eo()['FindFirstChild'](Eo(),'HumanoidRootPart')
-                                if not(not rp)then
-                                    Hf=db[-14313]or um(-14313,46267,9267)
-                                    break
-                                else
-                                    Hf=db[-57013695/-2713]or um(-448712280/-21352,2.0466792668454135*22751,77602588/1778)
-                                    break
-                                end
-                                Hf=0.097195651159535254*21431
-                            end
-                        else
-                            return
-                        end
-                    elseif Hf>21387+-8967 then
-                        Hf=db[8378+-20207]or um(4148+-15977,465692390/17527,-1056571152/-21112);
-                        break;
-                    else
-                        lg=ji[aq('j\150\202\213n\137\217\221x','\29\249\184\190')]['Game']['Local']['droppables'][Jr(-107860980/-6015)];
-                        if not(lg and lg['PrimaryPart'])then
-                            Hf=db[22476]or um(22476,48924,16403)
+    Oq['Button'](Oq,{[Eo(-68457000/-11400)]='Ammo Box',[Eo(50087-25967)]=function()
+        local Kk,Fj,vq,Dq,O
+        Fj,Dq={},function(nd,Nk,Di)
+            Fj[nd]=Vs(Nk,58648)-Vs(Di,28155)
+            return Fj[nd]
+        end
+        vq=Fj[-521268550/21298]or Dq(-13230+-11245,-356065458/-8713,41426-27795)
+        repeat
+            while true do
+                if vq<=26786+6936 then
+                    if vq<=39149+-18219 then
+                        Kk=am()and am()['FindFirstChild'](am(),'HumanoidRootPart');
+                        if not(not Kk)then
+                            vq=Fj[8652]or Dq(8652,30105,25353)
                             break
                         else
-                            Hf=db[-30081- -14838]or um(-36644- -21401,116914-19673,-1.4137592766356735*-23446)
+                            vq=Fj[-781474224/24004]or Dq(-4334+-28222,4.6156638339667762*23417,-137480232/-32532)
                             break
                         end
-                        Hf=-689112240/-30280
+                        vq=45217+-12050
+                    else
+                        O=yp[dp('\3*!\v\a\53\50\3\17','tES\96')]['Game']['Local']['droppables']['Ammo Box'];
+                        if O and O['PrimaryPart']then
+                            vq=Fj[5569- -8217]or Dq(-8370- -22156,96937+15532,-3.1477871148459382*-17850)
+                            break
+                        end
+                        vq=Fj[67602090/-3106]or Dq(-3.2828054298642533*6630,92750+21191,-13366- -21419)
                     end
+                elseif vq>74013+-24699 then
+                    if vq<=79068-24387 then
+                        return
+                    else
+                        vq=Fj[-40473873/7491]or Dq(-137106528/25376,-3090- -30491,-7309- -26832);
+                        break;
+                    end
+                else
+                    Kk['CFrame']=O['PrimaryPart']['CFrame']
+                    vq=Fj[-1.1488608302660392*21463]or Dq(33041720/-1340,-87701271/-28973,42653-16870)
                 end
-            until Hf==24169+-19096
-        end)({[-5.4905109489051096*-3425]='Money Printer'})
-    end})
-    local _h=th['Tab'](th,{['Name']=Bd(-28260- -20624)})
-    local Le=_h['Section'](_h,{['Name']='Spam Throw',[Bd(-52167+25107)]=Bd(251261995/-5051)})
-    local Bb
-    Bb=Le['Textbox'](Le,{['Placeholder']=Bd(-27395+27899),['HideName']=true,[Bd(-85806258/6774)]=function(dc,Wl)
-        return(function(kc)
-            local Gp,pq,ze,Is,or_,Yl,dn,Jh,ya,Xf,Fr,od,fo
-            Yl,Gp={},function(Qf,fm,hi)
-                Yl[Qf]=Ab(fm,31988)-Ab(hi,32117)
-                return Yl[Qf]
             end
-            pq=Yl[3717084/13974]or Gp(8714426/32761,-2026797120/-29376,8592- -29422)
+        until vq==53585+-25848
+    end});
+    Oq['Button'](Oq,{['Name']='Money Printer',['Callback']=function()
+        return(function(ph)
+            local ip,Yc,Yj,Ci,Op,F
+            ip,Yj={},function(Pb,Mk,Z)
+                ip[Pb]=Vs(Mk,55817)-Vs(Z,11602)
+                return ip[Pb]
+            end
+            F=ip[3076392/-1626]or Yj(4385-6277,-566816208/-30324,-2.955892332051572*-4421)
             repeat
                 while true do
-                    if pq>-3.6658820760268331*-8497 then
-                        if pq>78544+-30928 then
-                            if pq>-600248290/-10490 then
-                                if pq<=-1429076808/-24264 then
-                                    if not(Bb['isSetting'])then
-                                        pq=Yl[-4281]or Gp(-4281,75134,3404)
-                                        break
-                                    else
-                                        pq=Yl[34-9021]or Gp(37.919831223628691*-237,11.268059181897302*4596,-16268+29513)
-                                        break
-                                    end
-                                    pq=Yl[-50610560/-5824]or Gp(0.76516685744474777*11357,-873526080/-10320,-11845+24527)
-                                elseif pq<=35798+24220 then
-                                    ya,fo,or_={Jh(-2.9286034772854741*17830),Jh(-1.4019333273105068*22138),'C4',Jh(-81812- -32184),'Airdrop Marker'},dc['lower'](dc),{};
-                                    od,Is,dn=ji[aq('~LP~NB','\23<1')](ya);
-                                    if Rm(od)~='function'then
-                                        pq=Yl[-32642+13073]or Gp(-15680+-3889,121919+-26653,33512+18047)
-                                        break
-                                    end;
-                                    pq=Yl[-9177]or Gp(-9177,84837,58223);
-                                else
-                                    pq=Yl[1500- -8134]or Gp(-143267214/-14871,78526-31964,88560-31609);
-                                    break;
-                                end
-                            elseif pq>29990+25077 then
-                                Bb['isSetting']=true
-                                Bb['Value']=dc
-                                Bb['isSetting']=Jh(-11644+-1964)
-                                pq=Yl[0.11450743439369705*16881]or Gp(-9879+11812,100507- -14655,43243- -1028)
-                            elseif pq>31216- -23107 then
-                                od,Is,dn=Gi(od)
-                                pq=Yl[27483]or Gp(27483,34262,8926)
+                    if F>35202+3943 then
+                        if F>2.1303586285414022*22837 then
+                            Yc=yp[dp('\203\175!3\207\176\50;\217','\188\192SX')]['Game']['Local']['droppables']['Money Printer'];
+                            if not(Yc and Yc['PrimaryPart'])then
+                                F=ip[-3873]or Yj(-3873,104413,36704)
+                                break
                             else
-                                if#or_>Jh(-22458-2672)then
-                                    pq=Yl[15584+15403]or Gp(559780155/18065,87006-29507,37370-6200)
-                                    break
-                                else
-                                    pq=Yl[2.2371497904257667*9066]or Gp(51018-30736,93491- -25955,27095+17664)
-                                    break
-                                end
-                                pq=Yl[-57165+30626]or Gp(-424809773/16007,113181+5,10726+31825)
+                                F=ip[126141560/-8660]or Yj(-148558634/10199,92507+7208,38014+16129)
+                                break
                             end
-                        elseif pq>16494+20941 then
-                            if pq>14636- -24757 then
-                                return
-                            elseif pq>-646180146/-16542 then
-                                ze,Xf=od(Is,dn);
-                                dn=ze;
-                                if dn==nil then
-                                    pq=Yl[26505-14647]or Gp(-12114- -23972,20537- -22458,949053820/30167)
-                                else
-                                    pq=Yl[-46070+13948]or Gp(-48563+16441,2371498165/25855,21075+28304)
-                                end
-                            else
-                                Bb['isSetting']=true
-                                Bb['Value']=or_[Jh(-104515887/4291)]
-                                Bb['isSetting']=false
-                                pq=Yl[-11960655/16273]or Gp(0.049891392886234051*-14732,73567- -3040,0.59509698275862066*7424)
-                            end
+                            F=21007- -22931
                         else
-                            Jh=function(Ra)
-                                return kc[Ra-(-30655- -836)]
-                            end
-                            if not Wl then
-                                pq=Yl[302167250/21175]or Gp(7553+6717,14383+25531,6314- -7607)
-                                break
-                            end
-                            pq=Yl[40481+-9747]or Gp(547710614/17821,442374867/5673,14499-8719)
+                            F=ip[7946-1055]or Yj(206413014/29954,108848+-6684,715598680/14008);
+                            break;
                         end
-                    elseif pq>-98062542/-6858 then
-                        if pq>36880+-12726 then
-                            return
-                        elseif pq>32670+-9896 then
-                            if not(Xf['lower'](Xf)['sub'](Xf['lower'](Xf),Jh((7278- -14943)+929250861/-31647),#fo)==fo)then
-                                pq=Yl[-29644]or Gp(-29644,98125,5943)
-                                break
-                            else
-                                pq=Yl[-135226494/-16407]or Gp(36335+-28093,44518+-29599,558778674/29902)
-                                break
-                            end
-                            pq=Yl[-25282]or Gp(-25282,54092,27444)
+                    elseif F>31251-433 then
+                        return
+                    elseif F>-116825072/-4264 then
+                        Ci=function(Fr)
+                            return ph[Fr+571948704/-22664]
+                        end
+                        Op=am()and am()['FindFirstChild'](am(),Ci(-379680255/-13785))
+                        if not(not Op)then
+                            F=ip[-10058]or Yj(-10058,68117,54005)
+                            break
                         else
-                            Fr=fn(od)
-                            if Fr~=nil and Fr.__iter~=nil then
-                                pq=Yl[-13687+-2695]or Gp(294269866/-17963,-1650115187/-25319,-0.061997984301988211*-32743)
-                                break
-                            elseif Rm(od)=='table'then
-                                pq=Yl[13797+16312]or Gp(18432- -11677,93119- -18627,15842+20750)
-                                break
-                            end
-                            pq=Yl[-28766]or Gp(-28766,36075,11229)
+                            F=ip[-193267335/22065]or Yj(-0.26890369324286983*32573,-2358+3491,-4.5308948863636367*-5632)
+                            break
                         end
-                    elseif pq<=92545382/29002 then
-                        od,Is,dn=Fr.__iter(od)
-                        pq=Yl[26272]or Gp(26272,43282,16666)
+                        F=33184+20181
                     else
-                        ji[aq('DbRoU','0\3')]['insert'](or_,Xf)
-                        pq=Yl[-6147]or Gp(-6147,94648,3744)
+                        Op['CFrame']=Yc['PrimaryPart']['CFrame']
+                        F=ip[-63-24861]or Yj(-15611-9313,-1319959800/-12429,54083+-7878)
                     end
                 end
-            until pq==36179+-26431
-        end)({[1.7321615949632738*-11436]='Molotov',[-1231- -14]='Frag',[247474101/10913]=18188/18188,[-15661- -31872]=false,[-10879+-11519]='Banana Peel',[149105511/31799]=0,[-0.26165269461077845*-20875]=24321/24321})
+            until F==16607- -10591
+        end)({[59552898/25814]='HumanoidRootPart'})
+    end})
+    local Vb=Cn['Tab'](Cn,{['Name']='Item'})
+    local qs=Vb['Section'](Vb,{['Name']='Spam Throw',['Side']=Eo(-170543160/-4790)})
+    local wj
+    wj=qs['Textbox'](qs,{[Eo(-131333109/5813)]='Item Name',['HideName']=Eo(-2868-10805),[Eo(0.050531914893617018*3008)]=function(ee,ql)
+        return(function(Aq)
+            local hl,tp,ap,Jf,mo,D,Pf,T,mm,Wo,r,ye,sf
+            sf,mm={},function(lj,rq,Xe)
+                sf[lj]=Vs(rq,64727)-Vs(Xe,41834)
+                return sf[lj]
+            end
+            tp=sf[14.298952879581153*-1910]or mm(-24901-2410,5.7940244454504297*19881,2596+-2251)
+            repeat
+                while true do
+                    if tp<=41199-8725 then
+                        if tp>4678+11179 then
+                            if tp<=25.282542885973765*991 then
+                                tp=sf[-18850+25293]or mm(2140+4303,124262+-653,19576+-12948);
+                                break;
+                            elseif tp<=28627-627 then
+                                ap,T,mo=D.__iter(ap)
+                                tp=sf[-12355]or mm(-12355,122761,36320)
+                            else
+                                if not(wj['isSetting'])then
+                                    tp=sf[-21876]or mm(-21876,112257,52288)
+                                    break
+                                else
+                                    tp=sf[7703-27026]or mm(4994+-24317,142648+-23197,66646+-7741)
+                                    break
+                                end
+                                tp=-539534528/-9616
+                            end
+                        else
+                            ap,T,mo=me(ap)
+                            tp=sf[-26356]or mm(-26356,118306,40267)
+                        end
+                    elseif tp<=51068-987 then
+                        if tp<=25367+14256 then
+                            if tp>70774-32239 then
+                                yp[dp('\195F\213K\210',"\183\'")]['insert'](Wo,Pf)
+                                tp=sf[12545]or mm(12545,125798,33207)
+                            elseif tp>-1.9434911089221836*-19289 then
+                                return
+                            else
+                                if not(Pf['lower'](Pf)['sub'](Pf['lower'](Pf),(0.79526596209275924*-11449)/(144050205/-15821),#r)==r)then
+                                    tp=sf[-9937]or mm(-9937,75890,31931)
+                                    break
+                                else
+                                    tp=sf[9417+-11924]or mm(-27770+25263,4.6670079719154538*27346,38170- -15248)
+                                    break
+                                end
+                                tp=sf[29613]or mm(29613,93067,482)
+                            end
+                        elseif tp<=-3.1956982494701309*-12739 then
+                            hl=function(Va)
+                                return Aq[Va-(-38147+13539)]
+                            end
+                            if not(not ql)then
+                                tp=sf[-7412]or mm(-7412,18072,58406)
+                                break
+                            else
+                                tp=sf[-7708- -1547]or mm(-26118+19957,4485- -3390,112382064/1854)
+                                break
+                            end
+                            tp=sf[-1.909718875502008*12450]or mm(-47346+23570,91038- -20781,-2.3140262515262515*-13104)
+                        else
+                            if not(#Wo>0)then
+                                tp=sf[59977-29841]or mm(60032-29896,105564+24103,48.546650717703351*836)
+                                break
+                            else
+                                tp=sf[-16195+-4126]or mm(-181242999/8919,2710062609/21729,61406-26356)
+                                break
+                            end
+                            tp=sf[44106+-27197]or mm(326834061/19329,45772+-23941,9.3617083091226032*6884)
+                        end
+                    elseif tp>1370933676/24054 then
+                        if tp<=92761-31619 then
+                            if tp>-12.730540195661421*-4702 then
+                                D=Jb(ap)
+                                if D~=nil and D.__iter~=nil then
+                                    tp=sf[58686-29942]or mm(43161-14417,131487+-584,-295829475/-20395)
+                                    break
+                                elseif Of(ap)=='table'then
+                                    tp=sf[-0.039658056123397137*-26905]or mm(11074393/10379,38559+-7854,14.977072310405644*567)
+                                    break
+                                end
+                                tp=sf[-21]or mm(-21,76938,30947)
+                            else
+                                return
+                            end
+                        elseif tp<=30971+31138 then
+                            wj['isSetting']=true
+                            wj['Value']=Wo[hl(6715-18508)]
+                            wj['isSetting']=hl(-0.063896987366375127*4116)
+                            tp=sf[100895840/13417]or mm(15111-7591,94434- -30578,90036862/3638)
+                        else
+                            ye,Pf=ap(T,mo);
+                            mo=ye;
+                            if mo==nil then
+                                tp=68605+-26845
+                            else
+                                tp=sf[-7896- -2852]or mm(-27730- -22686,29035512/1464,1.6648710245519527*28959)
+                            end
+                        end
+                    elseif tp>25551- -28159 then
+                        Jf,r,Wo={'Banana Peel',hl(-67142+22574),'C4',hl(-130324785/11265),'Airdrop Marker'},ee['lower'](ee),{};
+                        ap,T,mo=yp[dp('%\229\203%\231\217','L\149\170')](Jf);
+                        if Of(ap)~='function'then
+                            tp=sf[0.87991603118841577*-23342]or mm(-4022-16517,149751-22026,-905381750/-27625)
+                            break
+                        end;
+                        tp=sf[-7101]or mm(-7101,72612,20981);
+                    else
+                        wj['isSetting']=hl(1.2978233940895416*-16953)
+                        wj['Value']=ee
+                        wj['isSetting']=false
+                        tp=sf[308865435/11985]or mm(45225-19454,-0.058131228953365761*-29399,-18990+21762)
+                    end
+                end
+            until tp==2.37059097254537*10745
+        end)({[13504-689]=-32682- -32683,[6.5260260260260257*1998]='Molotov',[-47053936/-18056]=true,[1.0685224839400429*-18680]='Frag',[272980485/11213]=false})
     end});
-    Le['Toggle'](Le,{[Bd(1.1564733116382058*-29807)]=Bd(-28489+-22055),['Callback']=function(tm)
-        ji[aq('\166\233\161\227','\210\136')]['spawn'](function()
-            Tg['Item']=Bb['Value']
-            Tg['Enabled']=tm
+    qs['Toggle'](qs,{['Name']='Enabled',['Callback']=function(aj)
+        yp[dp('bAeK','\22 ')]['spawn'](function()
+            eh['Item']=wj['Value']
+            eh['Enabled']=aj
         end)
     end})
-    local Ik,we=_h['Section'](_h,{['Name']=Bd(2.0546133594563156*-16333),['Side']='Right'}),_h['Section'](_h,{[Bd(1.927797245538261*-24542)]='Shooting',['Side']=Bd(23628-27135)})
-    local Ch,tc;
-    Ik['Toggle'](Ik,{['Name']=Bd(-80406- -22465),['Callback']=function(kl)
-        ji[aq('kNlD','\31/')]['spawn'](function()
-            Tg['SilentShoot']=kl
+    local ej,U=Vb['Section'](Vb,{['Name']='Weapon mod',[Eo(-140904744/7908)]=Eo(-55864+31158)}),Vb['Section'](Vb,{[Eo(51283-29405)]=Eo(-45920+25144),['Side']='Right'})
+    local pl,Pl;
+    ej['Toggle'](ej,{[Eo(-25823- -29598)]=Eo(-424291460/17335),[Eo(-364813735/-15587)]=function(Dm)
+        yp[dp('\244\248\243\242','\128\153')]['spawn'](function()
+            eh['SilentShoot']=Dm
         end)
     end});
-    Ik['Toggle'](Ik,{[Bd(-16929- -119)]='No Spread',['Callback']=function(Xn)
-        ji[aq('\156r\155x','\232\19')]['spawn'](function()
-            Tg['NoSpread']=Xn
+    ej['Toggle'](ej,{['Name']='No Spread',[Eo(-22343- -9678)]=function(s)
+        yp[dp('\180n\179d','\192\15')]['spawn'](function()
+            eh['NoSpread']=s
         end)
     end});
-    Ik['Toggle'](Ik,{[Bd(1651747402/-31327)]=Bd(1492526/24073),[Bd(0.47459727385377942*-27438)]=function(yb)
-        ji[aq('\16\16\23\26','dq')]['spawn'](function()
-            Tg['WallCheck']=yb
+    ej['Toggle'](ej,{[Eo(9708+18404)]='Wall Check',['Callback']=function(Np)
+        yp[dp('z\247}\253','\14\150')]['spawn'](function()
+            eh['WallCheck']=Np
         end)
     end});
-    Ik['Toggle'](Ik,{['Name']='Knocked Check',['Callback']=function(eb)
-        ji[aq('\215\213\208\223','\163\180')]['spawn'](function()
-            Tg['KnockedCheck']=eb
+    ej['Toggle'](ej,{[Eo(23492-7967)]=Eo(-1.5329622825029721*-18506),[Eo(42232-14503)]=function(uf)
+        yp[dp('\29\176\26\186','i\209')]['spawn'](function()
+            eh['KnockedCheck']=uf
         end)
     end});
-    Ik['Toggle'](Ik,{['Name']='Friend Check',[Bd(-1.5249397442705992*24479)]=function(Ac)
-        ji[aq('\217/\222%','\173N')]['spawn'](function()
-            Tg['FriendCheck']=Ac
+    ej['Toggle'](ej,{['Name']='Friend Check',['Callback']=function(Ti)
+        yp[dp('D\135C\141','0\230')]['spawn'](function()
+            eh['FriendCheck']=Ti
         end)
     end});
-    Ik['Label'](Ik,{[Bd(-70586+16264)]='<font color=\"rgb(255, 160, 0)\">WARNING: Without permission you cant do anything</font>'});
-    Ik['Toggle'](Ik,{[Bd(25279-26840)]=Bd(23595+-24172),['Callback']=function(pi)
-        ji[aq('\210\55\213=','\166V')]['spawn'](function()
-            Tg['AllowedShoot']=pi
+    ej['Label'](ej,{[Eo(1.2961078256085821*-7271)]='<font color=\"rgb(255, 160, 0)\">WARNING: Without permission you cant do anything</font>'});
+    ej['Toggle'](ej,{[Eo(0.20232830971933941*-11081)]='Allow modding',[Eo(42006+-12296)]=function(Un)
+        yp[dp('\156\248\155\242','\232\153')]['spawn'](function()
+            eh['AllowedShoot']=Un
         end)
     end});
-    we['Slider'](we,{[Bd(-75861+18299)]=Bd(-453442260/24418),['Min']=Bd(28307-30128),['Max']=688.10000000000002/6881,['Value']=Bd(-15748-26861),['Precise']=-0.00065189048239895696*-3068,[Bd(-36959-23432)]=function(xk)
-        Tg['FastShootSpeed']=xk
+    U['Slider'](U,{[Eo(-21987+13984)]=Eo(-40223+28228),['Min']=Eo(11557- -206),['Max']=Eo(15550- -9133),['Value']=257.88999999999999/25789,['Precise']=9568-9566,['Callback']=function(Sn)
+        eh['FastShootSpeed']=Sn
     end});
-    we['Toggle'](we,{[Bd(-52550+-908)]=Bd(-52020+10317),[Bd(-24.049064449064449*2405)]=function(Zi)
-        ji[aq('}\179z\185','\t\210')]['spawn'](function()
-            Tg['FastShoot']=Zi
+    U['Toggle'](U,{['Name']='Fast Shoot',['Callback']=function(pb)
+        yp[dp('\vb\fh','\127\3')]['spawn'](function()
+            eh['FastShoot']=pb
         end)
     end})
-    Ch=_h['Section'](_h,{['Name']='Auto buy',['Side']=Bd(8165-16829)})
-    tc=Ch['Dropdown'](Ch,{['Name']='Ammo buy',['Flag']='Dropdown',['Side']='Left',[Bd(-33893- -23503)]={{[Bd(-486932344/8213)]=Bd(0.53957107610552291*-31614),[Bd(-36285-4747)]='Button',[Bd(-29213- -20928)]=true,[Bd(-58419+20112)]=function(ob)
-        Tg['AmmoBuyFull']=true
-    end},{['Name']='Once',['Mode']=Bd(2.1699342533909851*-16883),['Value']=false,['Callback']=function(sa)
-        return(function(fe)
-            local function ab(ng)
-                return fe[ng+-291338637/18939]
+    Pl=Vb['Section'](Vb,{[Eo(-25007- -2642)]='Auto buy',['Side']='Left'})
+    pl=Pl['Dropdown'](Pl,{['Name']='Ammo buy',['Flag']='Dropdown',['Side']='Left',['List']={{['Name']='Full',['Mode']='Button',['Value']=true,['Callback']=function(nl)
+        return(function(jm)
+            local function Ig(Li)
+                return jm[Li-619276357/-19159]
             end;
-            Tg['AmmoBuyFull']=ab(-0.87983349215106077*-19939)
-        end)({[-45552240/-21089]=false})
+            eh['AmmoBuyFull']=Ig(-46505- -27645)
+        end)({[37072+-23609]=true})
+    end},{['Name']=Eo(-434996757/-21177),['Mode']='Button',['Value']=false,[Eo(0.88307950981343164*-30927)]=function(He)
+        return(function(Ze)
+            local function nk(kk)
+                return Ze[kk+-215078175/9591]
+            end;
+            eh['AmmoBuyFull']=nk(1.8718062231216797*15812)
+        end)({[-1010+8182]=false})
     end}}});
-    Ch['Toggle'](Ch,{['Name']=Bd(-2403- -557),[Bd(9164-10898)]=function(Yg)
-        ji[aq('w!p+','\3@')]['spawn'](function()
-            Tg['AmmoBuy']=Yg
+    Pl['Toggle'](Pl,{[Eo(-0.48021108179419525*-9854)]='Ammo',[Eo(12166+-17162)]=function(nn)
+        yp[dp('{\147|\153','\15\242')]['spawn'](function()
+            eh['AmmoBuy']=nn
         end)
     end});
-    ji[aq("\'\175\a\26\128\2\2",'n\193n')]()
-end)({[-13729- -32349]='Tactical',[-0.30556324384168282*-28904]=true,[-16227+2268]='RPG',[-516699788/17449]='Item',[-2073-26171]=-14788- -14789,[-14567-9050]='Flamethrower',[348790734/15062]='FriendCheck',[-45662- -31397]=-322.99000000000001/-32299,[-21772+-4342]='Fly',[-5361876/-1482]='Notification',[-6.7225722354985882*4603]='Name',[375283082/28786]='Name',[12.0436755530346*1763]='TargetKill',[-32582- -24291]='Button',[5401+21616]='Kill',[18538-1340]='Placeholder',[-27.508875739644971*-338]='Min',[6626+10791]='Mode',[-736683640/-31988]='Name',[5607-5181]=0.00062795662912881484*23887,[-2000+-16968]='Name',[54358128/-5456]='Callback',[-10.878823996821612*2517]='Callback',[-14063+32351]='Left',[-13779936/-5904]='ReplicatedStorage',[-0.21863084922010398*-23080]='Auto Stomp',[45114+-30392]='Left',[-304410900/-16025]='https://raw.githubusercontent.com/AlexR32/Bracket/refs/heads/main/BracketV34_dev.lua',[-28165- -29449]='Side',[47338+-30398]='FastShoot',[-0.84951503552080965*-30827]='Precise',[229926600/9462]=0,[16392-19466]=-6772512.8371479996/6962,[12.843502824858756*-1770]='Callback',[-12.265834076717217*-2242]='Gravity',[272035968/-31026]=0,[10726- -17041]='Allow modding',[-0.98443073845640938*-29995]='Callback',[3660-2872]='Callback',[-32718+28703]='Unhidden',[-8157+18212]=false,[-11.571600481347774*-2493]='Item Name',[16249-30618]='Name',[-28054026/-15743]=false,[14363-6837]='Money',[-0.90336734693877552*-29400]=30438+-30437,[-414846640/-13352]='Name',[11005-7028]=27022/27022,[18615-2675]='Name',[18514- -330]='Callback',[1.1415359699965906*23464]='Value',[19612-1058]='C4',[-14043+-5543]='Gold',[1.0945465780936197*19419]='RPK',[-51685- -19444]='AutoStomp',[-44971+23221]='Movement',[-4257+19606]=true,[467575254/17469]='Value',[0.14872192099147946*-18074]='Bank',[38096+-9690]='Wall Check',[-36688- -11246]='Name',[24927-19316]=false,[27156+-15870]='Full',[484154088/-23362]='AS Val',[154216524/23843]='Right',[30201-32546]='Callback',[29641+-22523]='v3items',[59367-32584]='Name',[39331-7118]='Safe Zone',[8252+12456]='Item',[11474+-8461]='Left',[1.2539094877604022*-18097]='<font color=\"rgb(191, 191, 191)\">NOTE: You are invisible to others while flying.</font>',[683676040/-23785]='Text',[0.22538164428913005*-27185]='Name',[-631093788/-20844]='Callback',[391482096/-20613]='Callback',[-51427+31053]='GUID',[-15649-16732]='C5',[15108+-7641]='Teleport to Objects',[-50454- -23824]='Name',[208826135/9137]='Side',[-2.8483284961840267*-9303]='Ammo',[15014700/-804]='FN',[-1.7514546368795345*13921]='Name',[-0.51497968477921152*-22397]='Name',[43313-16790]=0,[9399- -14882]='Name',[24239+2598]='Size',[-8015+30049]='Vest',[118533970/23542]='Name',[2693+7179]='Emerald',[-945+-24169]='Name',[3472-2645]='Sapphire',[20688+10071]=false,[-36454+8752]='Name',[291755283/13427]=-0.0031700042876526458*-11055,[-369206974/-28519]=31016-30636,[-0.88762725137039933*-17878]='Left',[212171626/8494]='Callback',[0.58462059948670764*-20651]=false,[-3327- -4929]='Value',[-1.8765860665549436*-8354]='Callback',[-9141+156]='Callback',[-42928+27553]='Callback',[22853-23915]='Name',[5594208/6134]='Side',[-22482242/26701]='Treasure',[2330- -17350]='Left',[-37378- -24019]='Fast Shoot',[0.69981360975769269*-30581]='Left',[0.16471438900939986*6915]=28880/-28880,[-0.5731780657153791*-18291]='None',[-33778+9002]='Callback',[-7182+26928]='Side',[9008712/-699]='Side',[10203+-22362]='Side',[1.413915765509391*7028]='Safe mode',[26892-22239]='Value',[-0.26323305703020705*32211]='Police Station',[-48266644/-5422]=0,[-45519+13472]='Callback',[-22747+-2446]='Ohio killer ReCode FRIENDS ONLY NOT FOR PUBLIC | v? | By HOKJHa',[2627970/-753]='Name',[4086+-30647]='Forward',[224488784/-17693]='Mode',[-523-14714]='Military',[1.0953246008222584*20918]='Side',[53210-28726]='AutoLootSafe',[-5097-23139]='AR-15',[-20140000/4000]='Side',[-1.2384010630052043*-9031]='Saiga',[-235084892/-8321]='Max',[26109666/-809]='Farm',[20611-552]='Value',[-368181735/-13147]=false,[-1.0303258145363408*3990]='',[562424560/18988]='Auto Heal',[3.2200388905946169*9771]='Name',[0.18033998521803399*-20295]='Name',[153077826/-29359]='Weapon mod',[-6.8158362989323846*-2248]='Callback',[-6.091728525980912*3772]=28744+-28734,[0.66537210383057821*-30126]='Left',[-0.78908275831758445*-22753]='List',[2.8268095041889851*-7281]='Callback',[72299564/5084]=false,[-11387- -21161]='Cooldown',[18906-6463]='Dropdown',[345227270/-11705]='Callback',[-0.99847059368772306*-21577]='Enabled',[13598-30962]=nil,[-4.0024923843810578*-3611]='Find Valuable',[-50101+19397]=-0.00010826025765941322*-9237,[717618258/-23294]='Dark',[2.5780533836613642*7418]='Locker',[65470392/4068]='Precise',[-46227+31884]='Callback',[-206500248/7762]='Name',[-35213- -13013]='Enabled',[-114607830/-3826]='Side',[6197- -24926]=false,[34068+-14308]=0,[-0.69567260990818791*-31913]='Military Base',[0.44518872939925569*18810]='Right',[-34683- -19312]='Name',[12344+-4085]='Callback',[-581778378/18567]='Target method',[-0.13735115939001463*19148]='Max',[43938+-20812]='Name',[-35702- -4834]='Value',[-152722584/10962]='Enabled',[-28.899065420560749*535]=false,[57.187654320987654*-405]='Name',[-39334+9737]='Silent Aim',[-6345+27915]=true,[38755+-19896]='Flag',[-4199-17437]='Side',[-18510+13451]='Name',[35925+-23358]='Scar',[-54091275/3661]='Name',[-10777-15246]='Name',[-262551927/-10571]='Right',[59653+-30430]='Name',[0.69155418686934866*30524]='Name',[-14688300/22255]='Name',[-102519054/31779]='Name',[0.48222184703697452*-29615]='Callback',[-40146- -9256]=true,[-25822470/-29145]='Glock',[0.93702677746999075*16245]='ReplicatedStorage',[-2906+-23072]='Text',[-0.25425831923293851*17730]='Safe Mode',[-208641498/7982]='List',[0.7565004968532627*-24152]='Bank',[-53140- -32752]='Button',[-19403+8701]='Remove Cooldowns',[-1.1489291234268051*27174]='Name',[0.8979328165374677*10836]='Text',[6582+9664]=false,[396581886/26379]=false,[25829830/-4310]='Hoverboard',[-2591+-15233]=0,[158.79347826086956*-184]='Name',[-2312+25478]='Mode',[-306547200/-11520]='Callback',[14762+-18665]='Name',[5975292/-3327]='Flying'},...)
+    yp[dp('\150\252\245\171\211\240\179','\223\146\156')]()
+end)({[42225+-16703]='Name',[-525251516/17839]='Safe Mode',[302161860/-15652]='Name',[-20445- -29813]='Side',[-30877- -2410]='Bring',[123364410/3910]='AllowLoot',[-54924- -25943]='Silent Aim',[42672-20213]='Block',[123231176/7729]=false,[134993108/14332]='Name',[-10137-17669]=0,[556551338/18413]='Name',[99884295/21015]='Name',[16878- -8323]='Auto Heal',[190270012/-7052]='Value',[1577-23883]='Santa',[-23336+27122]='Player Name',[1.2860800871697085*-18355]='Saiga',[1.175358921769704*6826]='Present',[-0.30759651307596514*-17666]='Teleport to Objects',[-20536-9517]='Name',[-19077+12330]='Name',[16052-11354]='Name',[-50380- -28057]='Side',[473410539/27981]='Armory',[1.6358903158625477*8643]=false,[-1.6826217478318879*-11992]=6.2885171676518682e-06*15902,[-6628- -5094]='C5',[27527-10154]='Name',[46101-15233]='Item',[14991+-17354]='ReplicatedStorage',[-12986- -3128]='Side',[0.055013570013936773*27266]='Name',[161596160/8096]='Safe Mode',[3826+12210]='Once',[-113+30337]='Name',[-27420+31923]='Text',[-242992916/19427]='Name',[19376+270]=false,[24479+-5605]=22432+-22431,[43044+-13403]='Left',[-1.3552766595627121*12669]='Callback',[-177948784/12769]='Callback',[9.875*1272]=false,[216422568/32418]='Name',[1.3613280120307709*17289]='HideName',[-51633- -22447]='Callback',[6695- -14741]='Goto Safe / Chest',[34142+-28649]='Safe Mode',[-11610-3050]=false,[0.66550496249715885*-26398]='Text',[29242-11435]=false,[-370- -10168]='Backward',[0.54980054252433386*-31335]=false,[-1.0841116591457656*19058]='Dropdown',[-37285- -20785]='Cooldown',[23932-19906]=false,[19299+-27024]='Text',[3978+-21430]=16751+-16750,[1.199257282116746*8617]='Value',[-2045- -21660]='Callback',[25.247191011235955*-1157]='Right',[47081-22847]='Remove Cooldowns',[1329-1941]='Most Valuable Only',[-653168061/-23037]=false,[-121649472/4806]='Right',[-1.7318794098781269*-10913]='Callback',[-0.87076068212301205*20876]=true,[-52126+31500]='Side',[-2.6088379705400984*10387]='Placeholder',[37803256/14698]='Side',[-6506492/-2491]=false,[11528-25457]='Text',[-14904- -5093]='Text',[-6.1042795232936076*-3692]='Left',[127383113/-6721]='Bank',[-239306415/-18035]=false,[-40473- -22175]='Name',[-3028- -22200]=0,[0.58792523212910031*24663]=false,[2.6990844705475903*5789]=8988+-8973,[22563+1044]='Name',[9653-17892]='Name',[-191316826/-16766]=false,[28066324/-3883]='Callback',[2978+-13206]='Auto Stomp',[-2.4388297872340425*-7896]='Auto Loot',[-0.77991215792267965*20719]='Scar',[-331348196/27133]='Python',[-9.1464831804281346*3270]=false,[7493-17741]='Hide Name',[22868-16193]='Side',[17218+-16784]='Left',[2980+-25116]='Name',[7142850/25974]='Grenade',[-264864000/-32000]='RPK',[-15456+-13779]='Left',[-3.3006786339754814*9136]='Value',[13165-6642]='Dragunov',[37607652/-25794]='Goto Treasure Marker',[40378+-17217]=false,[-627482102/-25987]=0,[-8441+13165]=30609/30609,[3028+-6495]='Right',[1.5588469864418366*17554]='Hospital',[-0.76720010080645162*15872]='ATMs',[14940+-27705]='Valuable',[-12.322097378277153*-1602]='Tactical',[6724+13147]='Gold',[-23979- -20650]='Name',[12956446/1682]='Callback',[1.0498407193838462*-24799]='Notification2',[41026-25130]='Auto Sell',[33762-30339]='Name',[33373-30572]='Target',[-37566- -32325]=false,[-0.90508422191315097*-32355]=3121700/8215,[-40155- -20635]='None',[-18117+13764]='Callback',[-195964025/-9211]='Callback',[-1.0862582023500686*-26212]='ATM',[-1.1350750910868213*-11253]=false,[-20223-5470]='Target method',[391604160/-14856]='AutoStomp',[22635+-25978]='Value',[3823+3435]=0,[269106144/24482]='ReplicatedStorage',[4230-14922]='Callback',[-252451698/-19394]='Name',[-1.193577430972389*26656]='Callback',[555601878/-31642]='Bank',[-2.0394888446632451*9547]='Registers',[2836+26826]='Name',[1.1234162162162162*-23125]='AutoQueue',[4744+11300]='Side',[43657+-21890]='TargetKill',[25851-29182]='Name',[-9.0162037037037042*3456]='Dark',[911222501/29477]='Callback',[-0.7218131615278417*4346]='Callback',[-1.8898508548563113*13745]='Diamond',[14140-10564]='Nuke',[-2813+-21623]='Keycard',[-142567317/-22059]='Name',[-26476- -6730]=nil,[-329015552/-25024]='NoSpread',[214938582/9283]='Right',[-536892597/21237]='Shooting',[-537665382/-16462]=true,[-151723360/-13768]='Name',[-55063- -25938]=true,[7283-23989]='Callback',[47132-23908]='Callback',[385939120/26192]='Register',[0.25553038700660274*-20749]='Name',[-3955+32111]='Sapphire',[-55321- -28451]='Name',[52556-27351]='Callback',[-14098+4597]='Callback',[-140224815/13245]='Callback',[0.0076062190054952423*29844]='Name',[-0.44848057367895139*17013]='List',[11921-24052]='Button',[0.71792270085785448*32523]='Side',[42346-11247]='Left',[-40- -29279]='Name',[-117159987/27039]='<font color=\"rgb(191, 191, 191)\">NOTE: Queue mode teleports only when ended farming </font>',[2921+225]=true,[1.6568779941516829*16073]='Name',[883171886/32099]='Kill Aura',[-28558+27828]='Name',[-1849+-7338]=0,[-44112- -15077]='Callback',[15816+-7981]='Callback',[11304+-3660]='Precise',[15404- -1861]='Unhidden',[-0.063395729745539628*27352]='Value',[605214904/25361]='Knocked Check',[-9399997/-21709]=8593-8213,[59777-32434]='Min',[12693- -19599]='Flag',[333-25912]=false,[-44091494/-8893]='Hidden',[-35610+31202]='Button',[-5462-21887]='AmmoBuyFull',[38193-27324]='Right',[123936608/17312]='Combat',[726713020/25630]='Gun',[-16937752/-29003]='Max',[-0.47803291421913685*20599]='Text',[-156785700/13980]=0},...)
