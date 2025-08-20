@@ -1,6 +1,6 @@
 local module = {}
 
-local quartic = {}
+local quarticm = {}
 local math = math
 
 --[[
@@ -108,7 +108,7 @@ local function solveCubic(c0, c1, c2, c3)
 
 	return s0, s1, s2
 end
-function quartic.solveQuartic(c0, c1, c2, c3, c4)
+function quarticm.solveQuartic(c0, c1, c2, c3, c4)
 	local s0, s1, s2, s3
 
 	local coeffs = {}
